@@ -1,0 +1,29 @@
+
+{
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "sourceType": "module",
+        "allowImportExportEverywhere": false,
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "react/prop-types": "off",
+        "no-unused-vars": "warn",
+        "no-debugger": "warn",
+        "no-console":"warn"
+    }
+}

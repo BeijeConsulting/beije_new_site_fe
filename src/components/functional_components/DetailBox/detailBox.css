@@ -1,0 +1,15 @@
+.detailBox_title {
+    height: 35px;
+    background-color: #002654;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+.detailBox_content-box {
+    box-sizing: border-box;
+    background-color: #fafafa;
+    padding: 15px;
+    min-height: 70px;
+}
