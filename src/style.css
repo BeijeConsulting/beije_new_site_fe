@@ -75,11 +75,6 @@ body {
   padding: 25px;
 }
 
-.ant-input {
-  border: none;
-  border-bottom: 1px solid black;
-}
-
 .ant-list-item-meta-title {
   margin: 0;
 }
