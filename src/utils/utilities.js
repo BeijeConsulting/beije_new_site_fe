@@ -4,13 +4,9 @@ import { getTranslation } from '../i18n/i18n-config';
 import { replace, toNumber } from 'lodash';
 import NumberFormat from 'react-number-format';
 
-export const getUserInfoLocal = (key = '', master = false) => {
+export const getUserInfoLocal = (key = '') => {
   let userInfoLocal = {};
-  if (master) {
-    userInfoLocal = localStorage.getItem('userMaster');
-  } else {
-    userInfoLocal = localStorage.getItem('userInfo');
-  }
+  userInfoLocal = localStorage.getItem('userInfo');
   const userInfo = JSON.parse(userInfoLocal);
   let dataReturn = null;
   if (key !== '' && userInfo !== null && userInfo[key]) {

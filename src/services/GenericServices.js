@@ -116,7 +116,7 @@ export const deleteApi = async (path, obj = {}) => {
 
 export const post = async (path, obj = {}) => {
   try {
-    const token = getUserInfoLocal('token', /change-user/.test(path));
+    const token = getUserInfoLocal('token');
     if (token !== null) {
       defaultHeaders.Authorization = `Bearer ${token}`;
     }
