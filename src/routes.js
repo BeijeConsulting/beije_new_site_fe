@@ -20,7 +20,7 @@ export default [
     ]
   },
   {
-    path: `${ENVIRONMENT.ROUTING.HOME_URL}`,
+    path: `${ENVIRONMENT.ROUTING.BASE_URL}`,
     element: <BasicLayout />,
     children: [
       { index: true, element: <Home /> },
@@ -28,19 +28,19 @@ export default [
     ]
   },
   {
-    path: `${ENVIRONMENT.ROUTING.ROUTE_A_URL}`,
+    path: `${ENVIRONMENT.ROUTING.BASE_URL}routeA`,
     element: <BasicLayout />,
     children: [
       { index: true, element: <RouteA /> },
       {
-        path: `${ENVIRONMENT.ROUTING.ROUTE_A_DETAIL_URL}`,
+        path: `${ENVIRONMENT.ROUTING.BASE_URL}routeA/:id`,
         element: <RouteADetail />
       },
       { path: "*", element: <NoMatch /> }
     ]
   },
   {
-    path: `${ENVIRONMENT.ROUTING.ROUTE_B_URL}`,
+    path: `${ENVIRONMENT.ROUTING.BASE_URL}routeB`,
     element: <BasicLayout />,
     children: [
       { index: true, element: <RequireAuth><RouteB /></RequireAuth> },

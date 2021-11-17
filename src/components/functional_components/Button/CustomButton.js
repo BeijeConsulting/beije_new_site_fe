@@ -10,26 +10,14 @@ import { Button } from "antd";
  * size can be "small", "middle", "large"
  * when block is true button takes the width.
  * */
-const CustomButton = ({
-                    isDisabled = false,
-                    type = "primary",
-                    content,
-                    clickCallback,
-                    isLoading,
-                    isBlock = false,
-                    currentSize,
-                    currentIcon,
-                    currentWidth,
-                    floatRight = false,
-                    className = ''
-                  }) => {
+const CustomButton = (props) => {
 
   /**
    * this method returns a class for styling the button
    * */
   const getCurrentClassName = () => {
     let currentClassName = null;
-    switch (type) {
+    switch (props.type) {
       case "primary":
         currentClassName = ""
         break;
@@ -48,24 +36,33 @@ const CustomButton = ({
 
   return (
     <div style={
-      {width: isBlock ? currentWidth : null, float: floatRight ? 'right' : null}
+      { width: props.isBlock ? props.currentWidth : null, float: props.floatRight ? 'right' : null }
     }
-         className={className}
+      className={props.className}
     >
       <Button
-        disabled={isDisabled}
-        type={type}
-        loading={isLoading}
-        onClick={event => !isDisabled && !!clickCallback ? clickCallback(event) : null}
-        size={currentSize}
+        disabled={props.isDisabled}
+        type={props.type}
+        loading={props.isLoading}
+        onClick={event => !props.isDisabled && !!props.clickCallback ? props.clickCallback(event) : null}
+        size={props.currentSize}
         className={getCurrentClassName()}
-        block={isBlock}
-        icon={currentIcon}
+        block={props.isBlock}
+        icon={props.currentIcon}
       >
-        {content}
+        {props.content}
       </Button>
     </div>
   )
+}
+
+CustomButton.defaultProps = {
+  isDisabled: false,
+  type: "primary",
+  isBlock: false,
+  currentSize: 'small',
+  floatRight: false,
+  className: ''
 }
 
 export default CustomButton;
