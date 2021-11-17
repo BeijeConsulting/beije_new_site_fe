@@ -8,10 +8,11 @@ import RouteB from "./screens/RouteB";
 import RouteADetail from "./screens/RouteA/RouteADetail";
 import NoMatch from "./screens/NoMatch";
 import BasicLayout from "./layout/BasicLayout";
+import { setLanguage } from "./redux/ducks/Language";
 
 export default [
   {
-    path: `${ENVIRONMENT.BASE_URL}login`,
+    path: `${ENVIRONMENT.ROUTING.LOGIN_URL}`,
     element: <Outlet />,
     children: [
       { index: true, element: <Login /> },
@@ -19,7 +20,7 @@ export default [
     ]
   },
   {
-    path: `${ENVIRONMENT.BASE_URL}`,
+    path: `${ENVIRONMENT.ROUTING.HOME_URL}`,
     element: <BasicLayout />,
     children: [
       { index: true, element: <Home /> },
@@ -27,19 +28,19 @@ export default [
     ]
   },
   {
-    path: `${ENVIRONMENT.BASE_URL}routeA`,
+    path: `${ENVIRONMENT.ROUTING.ROUTE_A_URL}`,
     element: <BasicLayout />,
     children: [
       { index: true, element: <RouteA /> },
       {
-        path: `${ENVIRONMENT.BASE_URL}routeA/:id`,
+        path: `${ENVIRONMENT.ROUTING.ROUTE_A_DETAIL_URL}`,
         element: <RouteADetail />
       },
       { path: "*", element: <NoMatch /> }
     ]
   },
   {
-    path: `${ENVIRONMENT.BASE_URL}routeB`,
+    path: `${ENVIRONMENT.ROUTING.ROUTE_B_URL}`,
     element: <BasicLayout />,
     children: [
       { index: true, element: <RequireAuth><RouteB /></RequireAuth> },
