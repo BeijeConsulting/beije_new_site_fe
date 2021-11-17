@@ -5,7 +5,7 @@ import { LoginOutlined } from '@ant-design/icons';
 import {  useNavigate  } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { doLogin } from '../../redux/actions/actions';
-import Button from "../../components/hooks_components/Button/CustomButton";
+import Button from "../../components/functional_components/Button/CustomButton";
 import './login.css';
 import { useTranslation } from 'react-i18next';
 

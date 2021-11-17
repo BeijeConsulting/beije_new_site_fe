@@ -11,7 +11,7 @@ import BasicLayout from "./layout/basicLayout/BasicLayout";
 
 export default [
   {
-    path: `${ENVIRONMENT.BASE_URL}login`,
+    path: `${ENVIRONMENT.ROUTING.LOGIN_URL}`,
     element: <Outlet />,
     children: [
       { index: true, element: <Login /> },
@@ -19,7 +19,7 @@ export default [
     ]
   },
   {
-    path: `${ENVIRONMENT.BASE_URL}`,
+    path: `${ENVIRONMENT.ROUTING.BASE_URL}`,
     element: <BasicLayout />,
     children: [
       { index: true, element: <Home /> },
@@ -27,19 +27,19 @@ export default [
     ]
   },
   {
-    path: `${ENVIRONMENT.BASE_URL}routeA`,
+    path: `${ENVIRONMENT.ROUTING.BASE_URL}routeA`,
     element: <BasicLayout />,
     children: [
       { index: true, element: <RouteA /> },
       {
-        path: `${ENVIRONMENT.BASE_URL}routeA/:id`,
+        path: `${ENVIRONMENT.ROUTING.BASE_URL}routeA/:id`,
         element: <RouteADetail />
       },
       { path: "*", element: <NoMatch /> }
     ]
   },
   {
-    path: `${ENVIRONMENT.BASE_URL}routeB`,
+    path: `${ENVIRONMENT.ROUTING.BASE_URL}routeB`,
     element: <BasicLayout />,
     children: [
       { index: true, element: <RequireAuth><RouteB /></RequireAuth> },

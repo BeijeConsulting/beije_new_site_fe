@@ -5,7 +5,7 @@ import { Row, Col, Image, Modal, Typography } from 'antd';
 import { get } from 'lodash';
 import { UserOutlined, LogoutOutlined, QuestionCircleOutlined } from '@ant-design/icons';
 import Flags from './Flags/Flags';
-import Button from './Button/CustomButton';
+import Button from '../functional_components/Button/CustomButton';
 import { ENVIRONMENT } from '../../utils/properties';
 
 const { confirm } = Modal;
