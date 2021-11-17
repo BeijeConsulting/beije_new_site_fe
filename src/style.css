@@ -1,3 +1,12 @@
+:root{
+  --first-color :#323e48;
+  --second-color : #52798e;
+  --third-color: #9ec1db;
+  --fourth-color: #d6e3e5;
+  --fifth-color: #feef87;
+  --sixth-color: #b12009;
+}
+
 @font-face {
   font-family: 'Roboto';
   src: url('./assets/font/Roboto-Regular.ttf');
@@ -16,6 +25,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Added classes */
+/* ex. ad classes for title weight */
 
 /* Notification error class */
 .notification-error {
@@ -46,6 +58,7 @@ body {
   background-color: #FAFAFA;
 }
 
+/* Menu */
 @media only screen and (max-width: 767px) {
   .ant-layout-has-sider > aside {
     z-index: 10;
@@ -71,6 +84,8 @@ body {
   }
 }
 
+
+/* General classes */
 .ant-layout-content {
   padding: 25px;
 }

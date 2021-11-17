@@ -7,7 +7,7 @@ import RouteA from "./screens/RouteA/RouteA";
 import RouteB from "./screens/RouteB";
 import RouteADetail from "./screens/RouteA/RouteADetail";
 import NoMatch from "./screens/NoMatch";
-import BasicLayout from "./layout/BasicLayout";
+import BasicLayout from "./layout/basicLayout/BasicLayout";
 
 export default [
   {
