@@ -1,22 +1,3 @@
 .home-container{
   padding-top: 1em;
 }
-
-.test-style-card1{
-  background-color: var(--charcoal);
-}
-.test-style-card2{
-  background-color: var(--blue-yonder);
-}
-.test-style-card3{
-  background-color: var(--pale-cerulean);
-}
-.test-style-card4{
-  background-color: var(--gainsboro);
-}
-.test-style-card5{
-  background-color: var(--yellow-crayola);
-}
-.test-style-card6{
-  background-color: var(--orange-engeneering);
-}

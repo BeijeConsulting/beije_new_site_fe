@@ -1,21 +1,3 @@
-:root{
-  --charcoal :#323e48;
-  --blue-yonder : #52798e;
-  --pale-cerulean: #9ec1db;
-  --gainsboro: #d6e3e5;
-  --yellow-crayola: #feef87;
-  --orange-engeneering: #b12009;
-}
-
-/* :root{
-  --first-color:#323e48;
-  --second-color: #52798e;
-  --third-color: #9ec1db;
-  --fourth-color: #d6e3e5;
-  --fifth-color: #feef87;
-  --sixth-color: #b12009;
-} */
-
 @font-face {
   font-family: 'Roboto';
   src: url('./assets/font/Roboto-Regular.ttf');
