@@ -76,11 +76,11 @@ const CustomFooter = (props) => {
                     {/* this row is shown only when the device is smaller than 1024px */}
                     <CustomCard>
                         <p className='txt-align-r txt-color-light custom-footer-translation-mobile'>
-                            <span className={selected === 'IT' ? 'custom-footer-title' : ''} onClick={selectLanguage('IT')}>
+                            <span className={selected === 'IT' ? 'custom-footer-title cursor-pointer' : 'cursor-pointer'} onClick={selectLanguage('IT')}>
                                 IT
                             </span>
                             <span className={'mr-10 ml-10'}>|</span>
-                            <span className={selected === 'GB' ? 'custom-footer-title' : ''} onClick={selectLanguage('GB')}>
+                            <span className={selected === 'GB' ? 'custom-footer-title cursor-pointer' : 'cursor-pointer'} onClick={selectLanguage('GB')}>
                                 EN
                             </span>
                         </p>
@@ -107,11 +107,11 @@ const CustomFooter = (props) => {
             <Row className={'container-flex-row jusify-content-l align-items-c custom-footer-translation-desktop'}>
                 <CustomCard>
                     <p className='txt-align-r txt-color-light'>
-                        <span className={selected === 'IT' ? 'custom-footer-title' : ''} onClick={selectLanguage('IT')}>
+                        <span className={selected === 'IT' ? 'custom-footer-title cursor-pointer' : 'cursor-pointer'} onClick={selectLanguage('IT')}>
                             IT
                         </span>
                         <span className={'mr-10 ml-10'}>|</span>
-                        <span className={selected === 'GB' ? 'custom-footer-title' : ''} onClick={selectLanguage('GB')}>
+                        <span className={selected === 'GB' ? 'custom-footer-title cursor-pointer' : 'cursor-pointer'} onClick={selectLanguage('GB')}>
                             EN
                         </span>
                     </p>

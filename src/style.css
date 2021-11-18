@@ -302,3 +302,7 @@ body {
 .bold-700{
   font-weight: 700;
 }
+
+.cursor-pointer{
+  cursor: pointer;
+}
