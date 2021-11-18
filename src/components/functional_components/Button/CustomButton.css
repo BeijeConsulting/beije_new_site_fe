@@ -1,0 +1,11 @@
+:root {
+    --primary-btn-color: var(--first-color);
+    --secondary-btn-color: var(--fourth-color)
+}
+
+.custom-button-social {
+    background-color: var(--secondary-btn-color);
+    height: 30px!important;
+    width: 30px!important;
+    line-height: 30px !important;
+}

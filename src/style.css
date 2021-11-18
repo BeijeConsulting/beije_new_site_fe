@@ -1,6 +1,6 @@
-:root{
-  --first-color :#323e48;
-  --second-color : #52798e;
+:root {
+  --first-color: #323e48;
+  --second-color: #52798e;
   --third-color: #9ec1db;
   --fourth-color: #d6e3e5;
   --fifth-color: #feef87;
@@ -60,7 +60,7 @@ body {
 
 /* Menu */
 @media only screen and (max-width: 767px) {
-  .ant-layout-has-sider > aside {
+  .ant-layout-has-sider>aside {
     z-index: 10;
     position: fixed;
     top: 0px;
@@ -68,7 +68,7 @@ body {
     height: 100%;
   }
 
-  .ant-layout-sider-collapsed ~ .menu-left-overlay {
+  .ant-layout-sider-collapsed~.menu-left-overlay {
     display: none;
   }
 
@@ -122,6 +122,10 @@ body {
   margin-right: 10px;
 }
 
+.ml-10 {
+  margin-left: 10px;
+} 
+
 .w-100 {
   width: 100%;
 }
@@ -165,7 +169,7 @@ body {
   font-weight: bold;
 }
 
-.user-right > span {
+.user-right>span {
   margin: 5px;
 }
 
@@ -225,4 +229,76 @@ body {
 
 .mr-10px {
   margin-right: 10px;
+}
+
+/* Added classes */
+
+.txt-align-r {
+  text-align: right;
+}
+
+.txt-align-l {
+  text-align: left;
+}
+
+.txt-align-c {
+  text-align: center;
+}
+
+.txt-color-light {
+  color: #fff;
+}
+
+.txt-color-dark {
+  color: var(--first-color);
+}
+
+.container-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.align-items-r {
+  align-items: flex-start;
+}
+
+.align-items-c {
+  align-items: center;
+}
+
+.align-items-l {
+  align-items: flex-end;
+}
+
+.jusify-content-r {
+  justify-content: flex-start;
+}
+
+.jusify-content-c {
+  justify-content: center;
+}
+
+.jusify-content-l {
+  justify-content: flex-end;
+}
+
+.circular-btn {
+  border-radius: 50% !important;
+}
+
+.bold-400{
+  font-weight: 400;
+}
+
+.bold-500{
+  font-weight: 500;
+}
+
+.bold-700{
+  font-weight: 700;
 }

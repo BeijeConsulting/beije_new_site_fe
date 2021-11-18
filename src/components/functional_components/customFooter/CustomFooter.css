@@ -1,3 +1,22 @@
-.custom-footer-container {
-    background-color: var(--fifth-color);
+.custom-footer-col {
+    padding: 0 20px 0 0;
+}
+
+.custom-footer-right-col {
+    justify-self: flex-end;
+    padding: 0 0 0 20px;
+}
+
+.custom-footer-title {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.custom-footer-description {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.custom-footer-copyright{
+    font-size: 10px;
 }

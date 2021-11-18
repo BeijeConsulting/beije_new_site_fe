@@ -27,6 +27,9 @@ const CustomButton = (props) => {
       case "transparent":
         currentClassName = ""
         break;
+      case "social":
+        currentClassName = "custom-button-social circular-btn d-flex align-items-c jusify-content-c"
+        break;
       default:
         currentClassName = ""
         break;
@@ -36,7 +39,12 @@ const CustomButton = (props) => {
 
   return (
     <div style={
-      { width: props.isBlock ? props.currentWidth : null, float: props.floatRight ? 'right' : null }
+      {
+        width: props.isBlock ? props.currentWidth : null,
+        float: props.floatRight ? 'right' : null,
+        margin: props.currentMargin,
+        padding: props.currentPadding
+      }
     }
       className={props.className}
     >
@@ -49,6 +57,7 @@ const CustomButton = (props) => {
         className={getCurrentClassName()}
         block={props.isBlock}
         icon={props.currentIcon}
+        href={props.href}
       >
         {props.content}
       </Button>
