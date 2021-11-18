@@ -27,8 +27,8 @@ const CustomButton = (props) => {
       case "transparent":
         currentClassName = ""
         break;
-      case "social":
-        currentClassName = "custom-button-social circular-btn d-flex align-items-c jusify-content-c"
+      case "primary-social":
+        currentClassName = "custom-btn-primary-social circular-btn d-flex align-items-c jusify-content-c"
         break;
       default:
         currentClassName = ""

@@ -55,7 +55,7 @@ const Header = () => {
             />
           </span>
         </Col>
-        <Col xs={24} sm={24} md={6}>
+        {/* <Col xs={24} sm={24} md={6}>
           <Row type="flex" align="middle" justify="end">
             <Col className="right">
             </Col>
@@ -63,7 +63,7 @@ const Header = () => {
               <Flags />
             </Col>
           </Row>
-        </Col>
+        </Col> */}
       </Row>
     );
 }

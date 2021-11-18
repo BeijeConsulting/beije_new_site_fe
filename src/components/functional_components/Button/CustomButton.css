@@ -3,9 +3,31 @@
     --secondary-btn-color: var(--fourth-color)
 }
 
-.custom-button-social {
+.custom-btn-primary-social {
     background-color: var(--secondary-btn-color);
-    height: 30px!important;
-    width: 30px!important;
+    height: 30px !important;
+    width: 30px !important;
     line-height: 30px !important;
+    outline: none !important;
+    border: none;
+}
+
+.custom-btn-primary-social:hover {
+    background-color: var(--primary-btn-color);
+    outline: none !important;
+    border: none;
+}
+
+.custom-btn-primary-social:hover > .icon-social{
+    filter:brightness(0) invert(1)
+}
+
+.custom-btn-primary-social:active {
+    background-color: var(--primary-btn-color);
+    outline: none !important;
+    border: none;
+}
+
+.custom-btn-primary-social:active > .icon-social{
+    filter:brightness(0) invert(1)
 }
