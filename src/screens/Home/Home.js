@@ -3,13 +3,14 @@ import { useSelector } from "react-redux";
 import { useTranslation } from 'react-i18next';
 import { get } from 'lodash';
 import { Col, Row, Typography, Card } from "antd";
-import './Home.css';
-import '../../style.css'
+
 import { Helmet } from "react-helmet";
 
+//import style
+import './Home.css';
+import '../../style.css'
+
 const { Title } = Typography;
-
-
 
 const Home = () => {
   const { t } = useTranslation();

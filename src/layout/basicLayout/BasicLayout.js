@@ -8,7 +8,7 @@ import './BasicLayout.css'
 
 //Import Components
 import CustomHeader from "../../components/hooks_components/Header";
-import CustomFooter from "../../components/functional_components/customFooter/CustomFooter";
+import CustomFooter from "../../components/hooks_components/customFooter/CustomFooter";
 
 const { Header, Footer, Content } = Layout;
 

@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { Row, Col } from "antd"
-import { useDispatch, useSelector } from 'react-redux';
-import { switchLang } from "../../../i18n/i18n-config";
-import { setLanguage } from "../../../redux/ducks/Language";
 import { get as __get } from 'lodash';
-
+import { useTranslation } from 'react-i18next';
 
 //import style and assets
 import '../../../style.css'
@@ -13,22 +10,12 @@ import icon_facebook from '../../../assets/icons/social_icon/f_facebook_dark.png
 import icon_instagram from '../../../assets/icons/social_icon/in_instagram_dark.png'
 
 //Import components
-import CustomCard from "../customCard/CustomCard"
-import CustomButton from "../Button/CustomButton"
+import CustomCard from "../../functional_components/customCard/CustomCard"
+import CustomButton from "../../functional_components/Button/CustomButton"
+import CustomSwitchLanguage from "../switchLanguage/CustomSwitchLanguage";
 
 const CustomFooter = (props) => {
-    const dispatch = useDispatch();
-    const [selected, setSelected] = useState('IT');
-    const currentLanguage = useSelector((state) => __get(state.languageDuck, 'currentLanguage', {}));
-
-    useEffect(() => {
-        setSelected(currentLanguage);
-    }, [currentLanguage]);
-
-    const selectLanguage = (code) => () => {
-        switchLang(code);
-        dispatch(setLanguage(code));
-    }
+    const { t } = useTranslation();
 
     return (
         <footer className={props.classNameFooter}>
@@ -37,7 +24,7 @@ const CustomFooter = (props) => {
                     <Col xs={24} sm={24} md={12} lg={12} className='custom-footer-l-col-first-el'>
                         <CustomCard
                             titleClassName={'custom-footer-title txt-color-light'}
-                            cardTitle={'DOVE SIAMO'}
+                            cardTitle={t('footer.location')}
                             descriptionClassName={'footer-description'}
                             cardDescription={'Via Varese, 27/38'}
                             cardDescription2={'Lissone (MB)'}
@@ -46,7 +33,7 @@ const CustomFooter = (props) => {
                     <Col xs={24} sm={24} md={12} lg={12}>
                         <CustomCard
                             titleClassName={'custom-footer-title txt-color-light'}
-                            cardTitle={'ORARI'}
+                            cardTitle={t('footer.hours')}
                             descriptionClassName={'custom-footer-description'}
                             cardDescription={'Lunedì - Venerdì'}
                             cardDescription2={'09:00 18:00'}
@@ -55,7 +42,7 @@ const CustomFooter = (props) => {
                     <Col span={24}>
                         <CustomCard
                             titleClassName={'custom-footer-title txt-color-light'}
-                            cardTitle={'CONTATTACI'}
+                            cardTitle={t('footer.contacts')}
                             descriptionClassName={'custom-footer-description'}
                             cardDescription={'job@beije.it'}
                             cardDescription2={'commerciale@beije.it'}
@@ -71,18 +58,12 @@ const CustomFooter = (props) => {
 
                     <CustomCard
                         titleClassName={'custom-footer-title txt-align-r txt-color-light'}
-                        cardTitle={'NOTE LEGALI'}
+                        cardTitle={t('footer.legalNotes')}
                     />
                     {/* this row is shown only when the device is smaller than 1024px */}
                     <CustomCard>
                         <p className='txt-align-r txt-color-light custom-footer-translation-mobile'>
-                            <span className={selected === 'IT' ? 'custom-footer-title cursor-pointer' : 'cursor-pointer'} onClick={selectLanguage('IT')}>
-                                IT
-                            </span>
-                            <span className={'mr-10 ml-10'}>|</span>
-                            <span className={selected === 'GB' ? 'custom-footer-title cursor-pointer' : 'cursor-pointer'} onClick={selectLanguage('GB')}>
-                                EN
-                            </span>
+                            <CustomSwitchLanguage/>
                         </p>
                     </CustomCard>
                 </Col>
@@ -107,20 +88,14 @@ const CustomFooter = (props) => {
             <Row className={'container-flex-row jusify-content-l align-items-c custom-footer-translation-desktop'}>
                 <CustomCard>
                     <p className='txt-align-r txt-color-light'>
-                        <span className={selected === 'IT' ? 'custom-footer-title cursor-pointer' : 'cursor-pointer'} onClick={selectLanguage('IT')}>
-                            IT
-                        </span>
-                        <span className={'mr-10 ml-10'}>|</span>
-                        <span className={selected === 'GB' ? 'custom-footer-title cursor-pointer' : 'cursor-pointer'} onClick={selectLanguage('GB')}>
-                            EN
-                        </span>
+                        <CustomSwitchLanguage/>
                     </p>
                 </CustomCard>
             </Row>
             <Row>
                 <CustomCard
                     descriptionClassName={'custom-footer-copyright txt-color-light mt-10'}
-                    cardDescription={'© Copyright 2019 - Beije Consulting S.r.l - Partita IVA 08057530969'}
+                    cardDescription={'© Copyright 2019 - Beije Consulting S.r.l - ' + t('footer.vatNumber') + ' 08057530969'}
                 />
             </Row>
         </footer >

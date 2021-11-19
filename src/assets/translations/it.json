@@ -8,5 +8,12 @@
     "Password": "Password",
     "youWantLogout": "Vuoi uscire dal portale?",
     "cancel": "Annulla"
+  },
+  "footer": {
+    "location": "DOVE SIAMO",
+    "hours": "ORARI",
+    "contacts": "CONTATTACI",
+    "legalNotes": "NOTE LEGALI",
+    "vatNumber": "Partita IVA"
   }
 }
