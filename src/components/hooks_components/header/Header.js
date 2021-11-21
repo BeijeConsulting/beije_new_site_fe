@@ -2,15 +2,7 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Row, Col, Image, Modal, Typography, Menu } from 'antd';
 import { ENVIRONMENT } from '../../../utils/properties';
-import {
-  MenuOutlined,
-  CloseOutlined,
-  PieChartOutlined,
-  DesktopOutlined,
-  ContainerOutlined
-} from '@ant-design/icons';
 
-const { confirm } = Modal;
 const { Link } = Typography;
 
 //import style
@@ -19,26 +11,15 @@ import './Header.css'
 
 //import assets
 import logo from '../../../assets/images/logo/logo_offivial_dark_noBg.png'
-// import logo from '../../../assets/images/logo.png'
-import menu_icon_dark from '../../../assets/icons/icon_menu_dark.png'
 
 //import components
 import SwitchLanguage from '../switchLanguage/SwitchLanguage'
-import CustomButton from '../../functional_components/Button/CustomButton';
-import BurgerMenu from '../../hooks_components/burgerMenu/BurgerMenu';
+import CustomMenu from '../customMenu/CustomMenu';
 
 const Header = () => {
 
   const { t } = useTranslation();
-  const [state, setState] = useState({
-    collapsed: false,
-  });
 
-  const toggleCollapsed = () => {
-    setState({
-      collapsed: !state.collapsed,
-    });
-  };
 
 
   return (
@@ -58,7 +39,7 @@ const Header = () => {
           <SwitchLanguage
             classNameContainer={'header-switch-language'}
           />
-          <BurgerMenu />
+          <CustomMenu />
         </Col>
       </Row>
     </>
