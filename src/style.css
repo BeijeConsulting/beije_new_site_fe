@@ -233,57 +233,57 @@ body {
 
 /* Added classes */
 
-.txt-align-r {
+.txt-right {
   text-align: right;
 }
 
-.txt-align-l {
+.txt-left {
   text-align: left;
 }
 
-.txt-align-c {
+.txt-center {
   text-align: center;
 }
 
-.txt-color-light {
+.txt-light {
   color: #fff;
 }
 
-.txt-color-dark {
+.txt-dark {
   color: var(--first-color);
 }
 
-.container-flex-column {
+.container-column {
   display: flex;
   flex-direction: column;
 }
 
-.container-flex-row {
+.container-row {
   display: flex;
   flex-direction: row;
 }
 
-.align-items-r {
+.items-right {
   align-items: flex-start;
 }
 
-.align-items-c {
+.items-center {
   align-items: center;
 }
 
-.align-items-l {
+.items-left {
   align-items: flex-end;
 }
 
-.jusify-content-r {
+.jusify-right {
   justify-content: flex-start;
 }
 
-.jusify-content-c {
+.jusify-center {
   justify-content: center;
 }
 
-.jusify-content-l {
+.jusify-left {
   justify-content: flex-end;
 }
 

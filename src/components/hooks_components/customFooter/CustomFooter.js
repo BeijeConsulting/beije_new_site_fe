@@ -12,18 +12,18 @@ import icon_instagram from '../../../assets/icons/social_icon/in_instagram_dark.
 //Import components
 import CustomCard from "../../functional_components/customCard/CustomCard"
 import CustomButton from "../../functional_components/Button/CustomButton"
-import CustomSwitchLanguage from "../switchLanguage/CustomSwitchLanguage";
+import SwitchLanguage from "../switchLanguage/SwitchLanguage";
 
 const CustomFooter = (props) => {
     const { t } = useTranslation();
 
     return (
         <footer className={props.classNameFooter}>
-            <Row className={'txt-color-light custom-footer-first-row'}>
+            <Row className={'txt-light custom-footer-first-row'}>
                 <Col span={12} className='custom-footer-left-col'>
                     <Col xs={24} sm={24} md={12} lg={12} className='custom-footer-l-col-first-el'>
                         <CustomCard
-                            titleClassName={'custom-footer-title txt-color-light'}
+                            titleClassName={'custom-footer-title txt-light'}
                             cardTitle={t('footer.location')}
                             descriptionClassName={'footer-description'}
                             cardDescription={'Via Varese, 27/38'}
@@ -32,7 +32,7 @@ const CustomFooter = (props) => {
                     </Col>
                     <Col xs={24} sm={24} md={12} lg={12}>
                         <CustomCard
-                            titleClassName={'custom-footer-title txt-color-light'}
+                            titleClassName={'custom-footer-title txt-light'}
                             cardTitle={t('footer.hours')}
                             descriptionClassName={'custom-footer-description'}
                             cardDescription={'Lunedì - Venerdì'}
@@ -41,7 +41,7 @@ const CustomFooter = (props) => {
                     </Col>
                     <Col span={24}>
                         <CustomCard
-                            titleClassName={'custom-footer-title txt-color-light'}
+                            titleClassName={'custom-footer-title txt-light'}
                             cardTitle={t('footer.contacts')}
                             descriptionClassName={'custom-footer-description'}
                             cardDescription={'job@beije.it'}
@@ -50,26 +50,26 @@ const CustomFooter = (props) => {
                         />
                     </Col>
                 </Col>
-                <Col span={12} className={'container-flex-column footer-right-col'}>
+                <Col span={12} className={'container-column footer-right-col'}>
                     <CustomCard
-                        titleClassName={'custom-footer-title txt-align-r txt-color-light'}
+                        titleClassName={'custom-footer-title txt-right txt-light'}
                         cardTitle={'PRIVACY AND COOKIE POLICY'}
                     />
 
                     <CustomCard
-                        titleClassName={'custom-footer-title txt-align-r txt-color-light'}
+                        titleClassName={'custom-footer-title txt-right txt-light'}
                         cardTitle={t('footer.legalNotes')}
                     />
                     {/* this row is shown only when the device is smaller than 1024px */}
                     <CustomCard>
-                        <p className='txt-align-r txt-color-light custom-footer-translation-mobile'>
-                            <CustomSwitchLanguage/>
+                        <p className='txt-right txt-light custom-footer-translation-mobile'>
+                            <SwitchLanguage/>
                         </p>
                     </CustomCard>
                 </Col>
             </Row >
             {/* this row is shown only when the device is smaller than 1024px */}
-            <Row className={'container-flex-row jusify-content-l align-items-c custom-footer-social'}>
+            <Row className={'container-row jusify-left items-center custom-footer-social'}>
                 <div style={{ marginRight: 20 }}>
                     <CustomButton
                         type={'primary-social'}
@@ -85,16 +85,16 @@ const CustomFooter = (props) => {
                 />
             </Row>
             {/* this row is shown only when the device is bigger than 1024px */}
-            <Row className={'container-flex-row jusify-content-l align-items-c custom-footer-translation-desktop'}>
+            <Row className={'container-row jusify-left items-center custom-footer-translation-desktop'}>
                 <CustomCard>
-                    <p className='txt-align-r txt-color-light'>
-                        <CustomSwitchLanguage/>
+                    <p className='txt-right txt-light'>
+                        <SwitchLanguage/>
                     </p>
                 </CustomCard>
             </Row>
             <Row>
                 <CustomCard
-                    descriptionClassName={'custom-footer-copyright txt-color-light mt-10'}
+                    descriptionClassName={'custom-footer-copyright txt-light mt-10'}
                     cardDescription={'© Copyright 2019 - Beije Consulting S.r.l - ' + t('footer.vatNumber') + ' 08057530969'}
                 />
             </Row>

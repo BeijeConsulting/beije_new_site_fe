@@ -7,24 +7,27 @@ import './BasicLayout.css'
 
 
 //Import Components
-import CustomHeader from "../../components/hooks_components/Header";
+import CustomHeader from "../../components/hooks_components/header/Header";
 import CustomFooter from "../../components/hooks_components/customFooter/CustomFooter";
 
 const { Header, Footer, Content } = Layout;
 
 const BasicLayout = () => {
   return (
-    <Layout className="min-h-100vh">
-      <Header><CustomHeader /></Header>
+    <Layout>
+      <Layout className="min-h-100vh">
+        <Header className='basicLayout-header'>
+          <CustomHeader />
+        </Header>
 
-      <Layout className="h-100">
-        <Content>
-          <div >
-            <Outlet />
-          </div>
-        </Content>
+        <Layout className="h-100">
+          <Content>
+            <div >
+              <Outlet />
+            </div>
+          </Content>
+        </Layout>
       </Layout>
-
       <Footer className={'basicLayout-footer'}>
         <CustomFooter />
       </Footer>

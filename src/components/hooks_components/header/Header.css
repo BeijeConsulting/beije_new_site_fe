@@ -1,0 +1,26 @@
+:root {
+    --primary-menu-color: var(--first-color);
+    --secondary-menu-color: #fff
+}
+
+.header-switch-language {
+    display: none;
+}
+
+.header-logo{
+    width: 100px;
+    display: inline !important;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .header-switch-language {
+        display: block;
+    }
+
+    .header-logo{
+        width: 150px;
+        display: inline !important;
+    }
+    
+}

@@ -3,6 +3,12 @@
     --secondary-btn-color: var(--fourth-color)
 }
 
+.ustom-btn-primary-menu{
+    background-color: transparent;
+    border: none;
+    margin-left: 20px;
+}
+
 .custom-btn-primary-social {
     background-color: var(--secondary-btn-color);
     height: 30px !important;
@@ -31,3 +37,4 @@
 .custom-btn-primary-social:active > .icon-social{
     filter:brightness(0) invert(1)
 }
+

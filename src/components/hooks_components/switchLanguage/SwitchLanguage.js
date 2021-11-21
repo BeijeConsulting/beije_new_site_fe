@@ -4,7 +4,7 @@ import { switchLang } from "../../../i18n/i18n-config";
 import { setLanguage } from "../../../redux/ducks/Language";
 import { get as __get } from 'lodash';
 
-import './CustomSwitchLanguage.css'
+import './SwitchLanguage.css'
 
 
 const SwitchLanguage = (props) => {
@@ -22,15 +22,21 @@ const SwitchLanguage = (props) => {
     }
 
     return (
-        <>
-            <span className={selected === 'IT' ? props.classNameSelectedLang : props.classNameUnSelectedLang} onClick={selectLanguage('IT')}>
+        <span className={props.classNameContainer}>
+            <span
+                className={selected === 'IT' ? props.classNameSelectedLang : props.classNameUnSelectedLang}
+                onClick={selectLanguage('IT')}
+            >
                 IT
             </span>
             <span className={props.classNameSeparator}>|</span>
-            <span className={selected === 'GB' ? props.classNameSelectedLang : props.classNameUnSelectedLang} onClick={selectLanguage('GB')}>
+            <span
+                className={selected === 'GB' ? props.classNameSelectedLang : props.classNameUnSelectedLang}
+                onClick={selectLanguage('GB')}
+            >
                 EN
             </span>
-        </>
+        </span>
     )
 }
 

@@ -18,8 +18,8 @@ const CustomButton = (props) => {
   const getCurrentClassName = () => {
     let currentClassName = null;
     switch (props.type) {
-      case "primary":
-        currentClassName = ""
+      case "primary-menu":
+        currentClassName = "ustom-btn-primary-menu"
         break;
       case "secondary":
         currentClassName = ""
@@ -28,7 +28,7 @@ const CustomButton = (props) => {
         currentClassName = ""
         break;
       case "primary-social":
-        currentClassName = "custom-btn-primary-social circular-btn d-flex align-items-c jusify-content-c"
+        currentClassName = "custom-btn-primary-social circular-btn d-flex items-center jusify-center"
         break;
       default:
         currentClassName = ""
