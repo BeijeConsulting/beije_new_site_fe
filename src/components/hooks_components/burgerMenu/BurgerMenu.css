@@ -1,6 +1,6 @@
 :root {
     --primary-burger-menu: var(--first-color);
-    --secondary-burger-menu: green;
+    --secondary-burger-menu: #fff;
 }
 
 .burger-menu-nav {
@@ -8,12 +8,15 @@
     align-items: center;
     width: 100vw;
     height: 4em;
+    position: fixed;
+    z-index: 666;
 }
 
 .burger-menu-container {
     display: flex;
     flex-direction: column;
     margin-left: 20px;
+    z-index: 100;
 }
 
 .burger-menu-container i {
@@ -24,7 +27,7 @@
     transition: all ease 0.5s;
 }
 
-.burger-menu-middle-line{
+.burger-menu-middle-line {
     align-self: flex-end;
     height: 3.2px !important;
     width: 15px !important;
@@ -66,11 +69,11 @@
         transition: all ease 0.5s;
     }
 
-    .burger-menu-middle-line{
+    .burger-menu-middle-line {
         align-self: flex-end;
         height: 4.2px !important;
         width: 20px !important;
-    }    
+    }
 
     .burger-menu-open:nth-child(1) {
         transform: rotate(-45deg) translateY(17px);
@@ -79,4 +82,71 @@
     .burger-menu-open:nth-child(3) {
         transform: rotate(45deg) translateY(-17px);
     }
+}
+
+
+
+
+/* overlay menu */
+.menu-overlay {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: var(--primary-burger-menu);
+    color: white;
+    /* transform: translateX(0%);
+    transition: all 0.6s ease-in-out; */
+    z-index: 1;
+}
+
+.burger-menu-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+.burger-menu-social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.burger-menu-title {
+    font-size: 20px !important;
+    font-weight: 400 !important;
+}
+
+.burger-menu-title2 {
+    font-size: 17px !important;
+    font-weight: 400 !important;
+}
+
+.burger-menu-lang {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (min-width: 1024px) {
+    .burger-menu-lang {
+        display: none;
+    }
+
+    .burger-menu-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around
+    }
+
+    .burger-menu-title {
+        font-size: 35px !important;
+        align-self: flex-end;
+    }
+
+    .burger-menu-title2 {
+        font-size: 25px !important;
+        align-self: flex-end;
+    }
+
 }

@@ -124,7 +124,7 @@ body {
 
 .ml-10 {
   margin-left: 10px;
-} 
+}
 
 .w-100 {
   width: 100%;
@@ -246,7 +246,7 @@ body {
 }
 
 .txt-light {
-  color: #fff;
+  color: #fff !important;
 }
 
 .txt-dark {
@@ -291,18 +291,24 @@ body {
   border-radius: 50% !important;
 }
 
-.bold-400{
+.bold-400 {
   font-weight: 400;
 }
 
-.bold-500{
+.bold-500 {
   font-weight: 500;
 }
 
-.bold-700{
+.bold-700 {
   font-weight: 700;
 }
 
-.cursor-pointer{
+.cursor-pointer {
   cursor: pointer;
+}
+
+.header-ant-style {
+  padding: 5px 10px;
+  background-color: transparent;
+  position: relative;
 }

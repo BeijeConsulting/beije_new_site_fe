@@ -1,13 +1,14 @@
-:root{
+:root {
     --primary-color-footer: var(--first-color)
 }
 
-.basicLayout-header{
+.basicLayout-header {
     padding: 5px 10px;
     background-color: transparent;
+    position: relative;
 }
 
-.basicLayout-footer{
+.basicLayout-footer {
     background-color: var(--primary-color-footer);
     padding: 20px 20px 0 20px;
 }

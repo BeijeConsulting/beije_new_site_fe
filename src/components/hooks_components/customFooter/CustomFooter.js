@@ -6,8 +6,7 @@ import { useTranslation } from 'react-i18next';
 //import style and assets
 import '../../../style.css'
 import './CustomFooter.css'
-import icon_facebook from '../../../assets/icons/social_icon/f_facebook_dark.png'
-import icon_instagram from '../../../assets/icons/social_icon/in_instagram_dark.png'
+import { social } from '../../../utils/properties'
 
 //Import components
 import CustomCard from "../../functional_components/customCard/CustomCard"
@@ -63,7 +62,7 @@ const CustomFooter = (props) => {
                     {/* this row is shown only when the device is smaller than 1024px */}
                     <CustomCard>
                         <p className='txt-right txt-light custom-footer-translation-mobile'>
-                            <SwitchLanguage/>
+                            <SwitchLanguage />
                         </p>
                     </CustomCard>
                 </Col>
@@ -73,22 +72,22 @@ const CustomFooter = (props) => {
                 <div style={{ marginRight: 20 }}>
                     <CustomButton
                         type={'primary-social'}
-                        href={'https://it-it.facebook.com/'}
-                        currentIcon={<img src={icon_facebook} style={{ height: 16 }} className={'icon-social'} />}
+                        href={social.url.url_facebook}
+                        currentIcon={<img src={social.icon.icon_facebook} style={{ height: 16 }} className={'icon-social'} />}
                     />
                 </div>
 
                 <CustomButton
                     type={'primary-social'}
-                    href={'https://www.instagram.com/'}
-                    currentIcon={<img src={icon_instagram} style={{ height: 16 }} className={'icon-social'} />}
+                    href={social.url.url_linkedIn}
+                    currentIcon={<img src={social.icon.icon_linkedIn} style={{ height: 16 }} className={'icon-social'} />}
                 />
             </Row>
             {/* this row is shown only when the device is bigger than 1024px */}
             <Row className={'container-row jusify-left items-center custom-footer-translation-desktop'}>
                 <CustomCard>
                     <p className='txt-right txt-light'>
-                        <SwitchLanguage/>
+                        <SwitchLanguage />
                     </p>
                 </CustomCard>
             </Row>

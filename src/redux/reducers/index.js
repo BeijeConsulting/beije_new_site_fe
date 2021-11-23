@@ -3,6 +3,7 @@ import { combineReducers } from 'redux';
 import userInfoDuck from "../ducks/UserInfo";
 import languageDuck from "../ducks/Language";
 import loadingDuck from "../ducks/Loading";
+import menuDuck from '../ducks/menuDuck';
 
 // const rootReducer = combineReducers({
 
@@ -11,7 +12,8 @@ import loadingDuck from "../ducks/Loading";
 const appReducer = combineReducers({
   userInfoDuck,
   languageDuck,
-  loadingDuck
+  loadingDuck,
+  menuDuck
 })
 
 const rootReducer = (state, action) => {

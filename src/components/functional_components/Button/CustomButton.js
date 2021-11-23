@@ -52,7 +52,7 @@ const CustomButton = (props) => {
         disabled={props.isDisabled}
         type={props.type}
         loading={props.isLoading}
-        onClick={event => !props.isDisabled && !!props.clickCallback ? props.clickCallback(event) : null}
+        onClick={event => !props.isDisabled && !!props.clickCallback ? props.clickCallback(event) : null} // *ga*
         size={props.currentSize}
         className={getCurrentClassName()}
         block={props.isBlock}

@@ -7,20 +7,33 @@
     display: none;
 }
 
-.header-logo{
+.header-logo {
     width: 100px;
     display: inline !important;
+    z-index: 100;
+}
+
+/* .ant-image {
+    z-index: 100;
+} */
+
+.header-img-container {
+    z-index: 100;
+}
+
+.header-logo-light {
+    width: 80px;
 }
 
 
 @media screen and (min-width: 1024px) {
     .header-switch-language {
         display: block;
+        z-index: 100;
     }
 
-    .header-logo{
+    .header-logo {
         width: 150px;
-        display: inline !important;
     }
-    
+
 }

@@ -1,22 +1,26 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import { Layout } from 'antd';
+import { connect } from "react-redux";
 
 import '../../style.css'
 import './BasicLayout.css'
 
 
 //Import Components
-import CustomHeader from "../../components/hooks_components/header/Header";
+import CustomHeader from "../../components/hooks_components/customHeader/CustomHeader";
 import CustomFooter from "../../components/hooks_components/customFooter/CustomFooter";
 
 const { Header, Footer, Content } = Layout;
 
-const BasicLayout = () => {
+const BasicLayout = (props) => {
+
+  console.log('map state to props: ', props.menuDuck.menuOpen)
   return (
     <Layout>
+
       <Layout className="min-h-100vh">
-        <Header className='basicLayout-header'>
+        <Header className='header-ant-style'>
           <CustomHeader />
         </Header>
 
@@ -28,11 +32,19 @@ const BasicLayout = () => {
           </Content>
         </Layout>
       </Layout>
-      <Footer className={'basicLayout-footer'}>
-        <CustomFooter />
-      </Footer>
+      {
+        !props.menuDuck.menuOpen &&
+        <Footer className={'basicLayout-footer'}>
+          <CustomFooter />
+        </Footer>
+      }
     </Layout>
   );
 }
 
-export default BasicLayout;
+
+const mapStateToProps = state => ({
+  menuDuck: state.menuDuck
+})
+
+export default connect(mapStateToProps)(BasicLayout);

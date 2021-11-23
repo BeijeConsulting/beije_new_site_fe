@@ -6,7 +6,6 @@ import { get as __get } from 'lodash';
 
 import './SwitchLanguage.css'
 
-
 const SwitchLanguage = (props) => {
     const dispatch = useDispatch();
     const [selected, setSelected] = useState('IT');
@@ -17,6 +16,7 @@ const SwitchLanguage = (props) => {
     }, [currentLanguage]);
 
     const selectLanguage = (code) => () => {
+        // *ga*
         switchLang(code);
         dispatch(setLanguage(code));
     }
