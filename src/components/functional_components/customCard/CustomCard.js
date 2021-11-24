@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 
 import { Image, Typography } from "antd"
 
@@ -9,8 +9,25 @@ import CustomButton from "../../functional_components/Button/CustomButton"
 
 const CustomCard = (props) => {
 
+    const mouseEnter = () => {
+        if (props.callbackMouseEnter != undefined) {
+            props.callbackMouseEnter()
+        }
+    }
+
+    const mouseLeave = () => {
+        if (props.callbackMouseEnter != undefined) {
+            props.callbackMouseLeave()
+        }
+    }
+
     return (
-        <div style={props.cardStyle} className={props.cardClassName} >
+        <div
+            style={props.cardStyle}
+            className={props.cardClassName}
+            onMouseEnter={mouseEnter}
+            onMouseLeave={mouseLeave}
+        >
             {
                 !!props.cardTitle &&
                 <Title
@@ -55,7 +72,6 @@ const CustomCard = (props) => {
                     preview={props.imgPreview}
                     src={props.imgSrc}
                     onError={props.imgOnError}
-                // className={imgClassName}
                 />
             }
             {props.children}

@@ -28,7 +28,6 @@ const Flags = () => {
     switchLang(code);
     dispatch(setLanguage(code));
 
-    console.log('code language: ', code)
   } 
 
   return (

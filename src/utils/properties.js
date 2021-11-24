@@ -2,9 +2,22 @@ import 'moment/locale/en-gb';
 import 'moment/locale/it';
 import localeGB from 'antd/es/date-picker/locale/en_GB';
 import localeIT from 'antd/es/date-picker/locale/it_IT';
+
+//Icon for social
 import icon_facebook from '../assets/icons/social_icon/f_facebook_dark.png'
 import icon_instagram from '../assets/icons/social_icon/in_instagram_dark.png'
 import icon_youTube from '../assets/icons/social_icon/youtube_dark.png'
+
+//Image for bg menu
+import bg_consulting from '../assets/images/beije_team_office/ITA_2639_Web.jpg'
+import bg_academy from '../assets/images/beije_team_office/ITA_2626_Web.jpg'
+import bg_up from '../assets/images/beije_team_office/ITA_2651_Web.jpg'
+import bg_career from '../assets/images/beije_team_office/ITA_2731_Web.jpg'
+import bg_whoWeAre from '../assets/images/beije_team_office/ITA_2887_Web.jpg'
+import bg_contacts from '../assets/images/beije_team_office/ITA_2642_Web.jpg'
+import bg_blog from '../assets/images/beije_team_office/ITA_2549_Web.jpg'
+import bg_community from '../assets/images/beije_team_office/ITA_2045-Modifica-Modifica_Web.jpg'
+
 
 const getBaseURL = () => {
   const env = process.env.REACT_APP_ENV;
@@ -62,3 +75,139 @@ export const social = {
     url_youTube: 'https://www.youtube.com/'
   }
 }
+
+export const siteMenu = [
+  {
+    key: 'consulting',
+    typeMenu: 'primary',
+    title: 'CONSULTING',
+    titleStyle: 'burger-menu-title txt-light',
+    titleStyleHover: 'burger-menu-title txt-light2',
+    bgMenu: bg_consulting,
+    linkTo: 'https://www.google.it/'
+  },
+  {
+    key: 'academy',
+    typeMenu: 'primary',
+    title: 'ACADEMY',
+    titleStyle: 'burger-menu-title txt-light',
+    titleStyleHover: 'burger-menu-title txt-light2',
+    bgMenu: bg_academy,
+    linkTo: 'https://www.google.it/'
+  },
+  {
+    key: 'up',
+    typeMenu: 'primary',
+    title: 'UP',
+    titleStyle: 'burger-menu-title txt-light',
+    titleStyleHover: 'burger-menu-title txt-light2',
+    bgMenu: bg_up,
+    linkTo: 'https://www.google.it/'
+  },
+  {
+    key: 'career',
+    typeMenu: 'primary',
+    title: 'CAREER',
+    titleStyle: 'burger-menu-title txt-light',
+    titleStyleHover: 'burger-menu-title txt-light2',
+    bgMenu: bg_career,
+    linkTo: 'https://www.google.it/'
+  },
+  {
+    key: 'whoWeAre',
+    typeMenu: 'primary',
+    title: 'CHI SIAMO',
+    titleStyle: 'burger-menu-title txt-light',
+    titleStyleHover: 'burger-menu-title txt-light2',
+    bgMenu: bg_career,
+    linkTo: 'https://www.google.it/'
+  },
+  {
+    key: 'contacts',
+    typeMenu: 'primary',
+    title: 'CONTATTI',
+    titleStyle: 'burger-menu-title txt-light',
+    titleStyleHover: 'burger-menu-title txt-light2',
+    bgMenu: bg_career,
+    linkTo: 'https://www.google.it/'
+  },
+  {
+    key: 'blog',
+    typeMenu: 'secondary',
+    title: 'BLOG',
+    titleStyle: 'burger-menu-title2 txt-light',
+    titleStyleHover: 'burger-menu-title2 txt-light2',
+    bgMenu: bg_blog,
+    linkTo: 'https://www.google.it/'
+  },
+  {
+    key: 'community',
+    typeMenu: 'secondary',
+    title: 'COMMUNITY',
+    titleStyle: 'burger-menu-title2 txt-light',
+    titleStyleHover: 'burger-menu-title2 txt-light2',
+    bgMenu: bg_community,
+    linkTo: 'https://www.google.it/'
+  }
+]
+
+
+// const blog = [
+//   {
+//     id: 1,
+//     title: 'title news',
+//     subtitle: 'subtitle news',
+//     mediaBg: 'image.jpg o video.mp4',
+//     description: 'long paragraph',
+//     articleMedia: [
+//       {
+//         id: 1,
+//         media: 'image.jpg o video.mp4'
+//       },
+//       {
+//         id: 2,
+//         media: 'image.jpg o video.mp4'
+//       },
+//       {
+//         id: 3,
+//         media: 'vimage.jpg o video.mp4'
+//       }
+//     ],
+//     hashtags: ['learn', 'beije', 'together']
+//   }
+// ]
+
+
+
+
+// const COMMUNITY = [
+//   {
+//     id: 1,
+//     title: 'title news',
+//     mediaBg: 'image.jpg o video.mp4',
+//     description: 'long paragraph'
+//   }
+// ]
+
+
+
+// const JOB_APPLICATION = [
+//   {
+//     id: 1,
+//     title: 'react developer', //string
+//     type: 'frontend', //string
+//     mode: 'remoto', //string
+//     academy: true, //bool - indica se la posizione è per academy o lavorativa
+//     date_creation: '2021-11-24' //date
+//   },
+//   {
+//     id: 2,
+//     title: 'java developer', //string
+//     type: 'backend', //string
+//     mode: 'milano', //string
+//     academy: true, //bool - indica se la posizione è per academy o lavorativa
+//     date_creation: '2021-11-24' //date
+//   },
+// ]
+
+

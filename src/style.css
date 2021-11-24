@@ -249,8 +249,12 @@ body {
   color: #fff !important;
 }
 
+.txt-light2 {
+  color: var(--third-color) !important;
+}
+
 .txt-dark {
-  color: var(--first-color);
+  color: var(--first-color) !important;
 }
 
 .container-column {
@@ -311,4 +315,8 @@ body {
   padding: 5px 10px;
   background-color: transparent;
   position: relative;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
 }

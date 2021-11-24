@@ -15,5 +15,9 @@
     "contacts": "CONTATTACI",
     "legalNotes": "NOTE LEGALI",
     "vatNumber": "Partita IVA"
+  },
+  "burgerMenu": {
+    "whoWeAre": "CHI SIAMO",
+    "contacts": "CONTATTI"
   }
 }

@@ -15,5 +15,9 @@
     "contacts": "CONTACT US",
     "legalNotes": "LEGAL NOTES",
     "vatNumber": "VAT Number"
+  },
+  "burgerMenu": {
+    "whoWeAre": "WHO WE ARE",
+    "contacts": "CONTACTS"
   }
 }

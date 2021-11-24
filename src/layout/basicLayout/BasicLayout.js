@@ -15,7 +15,6 @@ const { Header, Footer, Content } = Layout;
 
 const BasicLayout = (props) => {
 
-  console.log('map state to props: ', props.menuDuck.menuOpen)
   return (
     <Layout>
 
