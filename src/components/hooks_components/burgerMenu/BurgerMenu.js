@@ -149,23 +149,23 @@ const BurgerMenu = (props) => {
                         <Header className='header-ant-style' />
                         <Content className={'burger-menu-content'} >
                             <Row>
-                                <Col xs={0} md={4} />
-                                <Col xs={24} md={5} className='mb-20'>
+                                <Col xs={0} lg={4} />
+                                <Col xs={24} lg={5} className='mb-20'>
                                     {
                                         siteMenu.map(printPrimaryMenu)
                                     }
                                 </Col>
-                                <Col xs={0} md={5} />
-                                <Col xs={24} md={5} >
+                                <Col xs={0} lg={5} />
+                                <Col xs={24} lg={5} >
                                     {
                                         siteMenu.map(printSecondaryMenu)
                                     }
                                 </Col>
-                                <Col xs={0} md={5} />
+                                <Col xs={0} lg={5} />
                             </Row>
                             <Row className={'burger-menu-social'}>
 
-                                <Col sx={12} md={24} className='container-row jusify-left items-center'>
+                                <Col sx={12} lg={24} className='container-row jusify-left items-center'>
                                     <CustomButton
                                         type={'primary-social'}
                                         href={social.url.url_linkedIn}

@@ -169,7 +169,7 @@
 }
 
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
     .burger-menu-container i {
         width: 32px;
         height: 4px;
@@ -202,13 +202,25 @@
     }
 
     .burger-menu-title {
-        font-size: 35px !important;
+        font-size: 30px !important;
         align-self: flex-end;
     }
 
     .burger-menu-title2 {
-        font-size: 25px !important;
+        font-size: 20px !important;
         align-self: flex-end;
     }
 
+}
+
+@media screen and (min-width: 1024px) {
+    .burger-menu-title {
+        font-size: 34px !important;
+        align-self: flex-end;
+    }
+
+    .burger-menu-title2 {
+        font-size: 24px !important;
+        align-self: flex-end;
+    }
 }
