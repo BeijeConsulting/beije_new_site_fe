@@ -8,16 +8,6 @@ import icon_facebook from '../assets/icons/social_icon/f_facebook_dark.png'
 import icon_instagram from '../assets/icons/social_icon/in_instagram_dark.png'
 import icon_youTube from '../assets/icons/social_icon/youtube_dark.png'
 
-//Image for bg menu
-import bg_consulting from '../assets/images/beije_team_office/ITA_2639_Web.jpg'
-import bg_academy from '../assets/images/beije_team_office/ITA_2626_Web.jpg'
-import bg_up from '../assets/images/beije_team_office/ITA_2651_Web.jpg'
-import bg_career from '../assets/images/beije_team_office/ITA_2731_Web.jpg'
-import bg_whoWeAre from '../assets/images/beije_team_office/ITA_2887_Web.jpg'
-import bg_contacts from '../assets/images/beije_team_office/ITA_2642_Web.jpg'
-import bg_blog from '../assets/images/beije_team_office/ITA_2549_Web.jpg'
-import bg_community from '../assets/images/beije_team_office/ITA_2045-Modifica-Modifica_Web.jpg'
-
 
 const getBaseURL = () => {
   const env = process.env.REACT_APP_ENV;
@@ -83,7 +73,6 @@ export const siteMenu = [
     title: 'CONSULTING',
     titleStyle: 'burger-menu-title txt-light',
     titleStyleHover: 'burger-menu-title txt-light2',
-    bgMenu: bg_consulting,
     linkTo: 'https://www.google.it/'
   },
   {
@@ -92,7 +81,6 @@ export const siteMenu = [
     title: 'ACADEMY',
     titleStyle: 'burger-menu-title txt-light',
     titleStyleHover: 'burger-menu-title txt-light2',
-    bgMenu: bg_academy,
     linkTo: 'https://www.google.it/'
   },
   {
@@ -101,7 +89,6 @@ export const siteMenu = [
     title: 'UP',
     titleStyle: 'burger-menu-title txt-light',
     titleStyleHover: 'burger-menu-title txt-light2',
-    bgMenu: bg_up,
     linkTo: 'https://www.google.it/'
   },
   {
@@ -110,7 +97,6 @@ export const siteMenu = [
     title: 'CAREER',
     titleStyle: 'burger-menu-title txt-light',
     titleStyleHover: 'burger-menu-title txt-light2',
-    bgMenu: bg_career,
     linkTo: 'https://www.google.it/'
   },
   {
@@ -119,7 +105,6 @@ export const siteMenu = [
     title: 'CHI SIAMO',
     titleStyle: 'burger-menu-title txt-light',
     titleStyleHover: 'burger-menu-title txt-light2',
-    bgMenu: bg_career,
     linkTo: 'https://www.google.it/'
   },
   {
@@ -128,7 +113,6 @@ export const siteMenu = [
     title: 'CONTATTI',
     titleStyle: 'burger-menu-title txt-light',
     titleStyleHover: 'burger-menu-title txt-light2',
-    bgMenu: bg_career,
     linkTo: 'https://www.google.it/'
   },
   {
@@ -137,7 +121,6 @@ export const siteMenu = [
     title: 'BLOG',
     titleStyle: 'burger-menu-title2 txt-light',
     titleStyleHover: 'burger-menu-title2 txt-light2',
-    bgMenu: bg_blog,
     linkTo: 'https://www.google.it/'
   },
   {
@@ -146,7 +129,6 @@ export const siteMenu = [
     title: 'COMMUNITY',
     titleStyle: 'burger-menu-title2 txt-light',
     titleStyleHover: 'burger-menu-title2 txt-light2',
-    bgMenu: bg_community,
     linkTo: 'https://www.google.it/'
   }
 ]
