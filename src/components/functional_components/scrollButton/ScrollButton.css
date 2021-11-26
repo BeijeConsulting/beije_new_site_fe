@@ -1,0 +1,12 @@
+.scroll-btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+
+.scroll-btn-text {
+    margin-bottom: -22px;
+    color: #fff;
+}

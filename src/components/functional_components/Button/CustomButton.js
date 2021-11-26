@@ -19,10 +19,10 @@ const CustomButton = (props) => {
     let currentClassName = null;
     switch (props.type) {
       case "primary-menu":
-        currentClassName = "ustom-btn-primary-menu"
+        currentClassName = "custom-btn-primary-menu"
         break;
-      case "secondary":
-        currentClassName = ""
+      case "scroll-page":
+        currentClassName = "bustom-btn-scroll"
         break;
       case "transparent":
         currentClassName = ""

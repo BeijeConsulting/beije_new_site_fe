@@ -30,13 +30,15 @@ const BasicLayout = (props) => {
             </div>
           </Content>
         </Layout>
+
+
       </Layout>
-      {
+      {/* {
         !props.menuDuck.menuOpen &&
         <Footer className={'basicLayout-footer'}>
           <CustomFooter />
         </Footer>
-      }
+      } */}
     </Layout>
   );
 }

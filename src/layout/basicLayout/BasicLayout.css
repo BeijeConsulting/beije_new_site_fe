@@ -5,10 +5,14 @@
 .basicLayout-header {
     padding: 5px 10px;
     background-color: transparent;
-    position: relative;
 }
 
 .basicLayout-footer {
     background-color: var(--primary-color-footer);
-    padding: 20px 20px 0 20px;
+    padding: 20px 30px 0 20px;
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }

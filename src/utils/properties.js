@@ -134,6 +134,25 @@ export const siteMenu = [
 ]
 
 
+export const navbar = [
+  {
+    text: 'CONSULTING',
+    classNameLink: 'navbar-link',
+    href: 'https://www.google.it/',
+  },
+  {
+    text: 'ACADEMY',
+    classNameLink: 'navbar-link',
+    href: 'https://www.google.it/',
+  },
+  {
+    text: 'UP',
+    classNameLink: 'navbar-link',
+    href: 'https://www.google.it/',
+  }
+]
+
+
 // const blog = [
 //   {
 //     id: 1,
@@ -172,24 +191,26 @@ export const siteMenu = [
 // ]
 
 
-
-// const JOB_APPLICATION = [
-//   {
-//     id: 1,
-//     title: 'react developer', //string
-//     type: 'frontend', //string
-//     mode: 'remoto', //string
-//     academy: true, //bool - indica se la posizione è per academy o lavorativa
-//     date_creation: '2021-11-24' //date
-//   },
-//   {
-//     id: 2,
-//     title: 'java developer', //string
-//     type: 'backend', //string
-//     mode: 'milano', //string
-//     academy: true, //bool - indica se la posizione è per academy o lavorativa
-//     date_creation: '2021-11-24' //date
-//   },
-// ]
-
+/*
+const JOB_APPLICATION = [
+  {
+    id: 1,
+    title: 'react developer', //string
+    type: 'frontend', //string
+    mode: 'remoto', //string
+    academy: true, //bool - indica se la posizione è per academy o lavorativa
+    description: '<p>Long description</p>', //long string
+    date_creation: '2021-11-24' //date
+  },
+  {
+    id: 2,
+    title: 'java developer', //string
+    type: 'backend', //string
+    mode: 'milano', //string
+    academy: true, //bool - indica se la posizione è per academy o lavorativa
+    description: '<p>Long description</p>', //long string
+    date_creation: '2021-11-24' //date
+  },
+]
+*/
 

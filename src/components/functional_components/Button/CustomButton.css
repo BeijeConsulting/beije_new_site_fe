@@ -3,7 +3,7 @@
     --secondary-btn-color: var(--fourth-color)
 }
 
-.ustom-btn-primary-menu{
+.custom-btn-primary-menu {
     background-color: transparent;
     border: none;
     margin-left: 20px;
@@ -24,8 +24,8 @@
     border: none;
 }
 
-.custom-btn-primary-social:hover > .icon-social{
-    filter:brightness(0) invert(1)
+.custom-btn-primary-social:hover>.icon-social {
+    filter: brightness(0) invert(1)
 }
 
 .custom-btn-primary-social:active {
@@ -34,7 +34,28 @@
     border: none;
 }
 
-.custom-btn-primary-social:active > .icon-social{
-    filter:brightness(0) invert(1)
+.custom-btn-primary-social:active>.icon-social {
+    filter: brightness(0) invert(1)
 }
 
+.bustom-btn-scroll {
+    background-color: transparent;
+    border: none;
+    z-index: 2;
+    width: 100px;
+    height: 100px;
+    color: #fff !important;
+    outline: none !important;
+}
+
+.bustom-btn-scroll:focus {
+    background-color: transparent;
+    border: none;
+    outline: none !important;
+}
+
+.bustom-btn-scroll:active {
+    background-color: transparent;
+    border: none;
+    outline: none !important;
+}
