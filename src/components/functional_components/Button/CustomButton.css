@@ -38,7 +38,7 @@
     filter: brightness(0) invert(1)
 }
 
-.bustom-btn-scroll {
+.custom-btn-scroll {
     background-color: transparent;
     border: none;
     z-index: 2;
@@ -48,14 +48,20 @@
     outline: none !important;
 }
 
-.bustom-btn-scroll:focus {
+.custom-btn-scroll:focus {
     background-color: transparent;
     border: none;
     outline: none !important;
 }
 
-.bustom-btn-scroll:active {
+.custom-btn-scroll:active {
     background-color: transparent;
     border: none;
     outline: none !important;
+}
+
+.detail-btn {
+    width: 40px!important;
+    height: 40px!important;
+    background-color: #fff;
 }

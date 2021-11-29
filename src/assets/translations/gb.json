@@ -17,7 +17,23 @@
     "vatNumber": "VAT Number"
   },
   "burgerMenu": {
+    "consulting": "CONSULTING",
+    "academy": "ACADEMY",
+    "up": "UP",
+    "career": "CAREER",
     "whoWeAre": "WHO WE ARE",
-    "contacts": "CONTACTS"
+    "contacts": "CONTACTS",
+    "blog": "BLOG",
+    "community": "COMMUNITY"
+  },
+  "home": {
+    "firstSection": {
+      "title": "We help companies with digital transformation by building Value Teams"
+    },
+    "secondSection": {
+      "title_value": "VALUE",
+      "title_history": "HISTORY",
+      "title_mission": "MISSION"
+    }
   }
 }

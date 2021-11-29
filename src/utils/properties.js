@@ -70,7 +70,7 @@ export const siteMenu = [
   {
     key: 'consulting',
     typeMenu: 'primary',
-    title: 'CONSULTING',
+    title: 'consulting',
     titleStyle: 'burger-menu-title txt-light',
     titleStyleHover: 'burger-menu-title txt-light2',
     linkTo: 'https://www.google.it/'
@@ -78,7 +78,7 @@ export const siteMenu = [
   {
     key: 'academy',
     typeMenu: 'primary',
-    title: 'ACADEMY',
+    title: 'academy',
     titleStyle: 'burger-menu-title txt-light',
     titleStyleHover: 'burger-menu-title txt-light2',
     linkTo: 'https://www.google.it/'
@@ -86,7 +86,7 @@ export const siteMenu = [
   {
     key: 'up',
     typeMenu: 'primary',
-    title: 'UP',
+    title: 'up',
     titleStyle: 'burger-menu-title txt-light',
     titleStyleHover: 'burger-menu-title txt-light2',
     linkTo: 'https://www.google.it/'
@@ -94,7 +94,7 @@ export const siteMenu = [
   {
     key: 'career',
     typeMenu: 'primary',
-    title: 'CAREER',
+    title: 'career',
     titleStyle: 'burger-menu-title txt-light',
     titleStyleHover: 'burger-menu-title txt-light2',
     linkTo: 'https://www.google.it/'
@@ -102,7 +102,7 @@ export const siteMenu = [
   {
     key: 'whoWeAre',
     typeMenu: 'primary',
-    title: 'CHI SIAMO',
+    title: 'whoWeAre',
     titleStyle: 'burger-menu-title txt-light',
     titleStyleHover: 'burger-menu-title txt-light2',
     linkTo: 'https://www.google.it/'
@@ -110,7 +110,7 @@ export const siteMenu = [
   {
     key: 'contacts',
     typeMenu: 'primary',
-    title: 'CONTATTI',
+    title: 'contacts',
     titleStyle: 'burger-menu-title txt-light',
     titleStyleHover: 'burger-menu-title txt-light2',
     linkTo: 'https://www.google.it/'
@@ -118,78 +118,89 @@ export const siteMenu = [
   {
     key: 'blog',
     typeMenu: 'secondary',
-    title: 'BLOG',
-    titleStyle: 'burger-menu-title2 txt-light',
-    titleStyleHover: 'burger-menu-title2 txt-light2',
+    title: 'blog',
+    titleStyle: 'burger-menu-title txt-light',
+    titleStyleHover: 'burger-menu-title txt-light2',
     linkTo: 'https://www.google.it/'
   },
   {
     key: 'community',
     typeMenu: 'secondary',
-    title: 'COMMUNITY',
-    titleStyle: 'burger-menu-title2 txt-light',
-    titleStyleHover: 'burger-menu-title2 txt-light2',
+    title: 'community',
+    titleStyle: 'burger-menu-title txt-light',
+    titleStyleHover: 'burger-menu-title txt-light2',
     linkTo: 'https://www.google.it/'
   }
 ]
 
-
-export const navbar = [
+export const cardWhoWeAre = [
   {
-    text: 'CONSULTING',
-    classNameLink: 'navbar-link',
-    href: 'https://www.google.it/',
+    cardClassName: 'container-column width-100 height-100 justify-center',
+    titleLevel: 1,
+    classNameSquare: 'sec-section-square',
+    cardTitle: 'title_value',
+    titleClassName: 'sec-section-title'
   },
   {
-    text: 'ACADEMY',
-    classNameLink: 'navbar-link',
-    href: 'https://www.google.it/',
+    cardClassName: 'container-column width-100 height-100 justify-center',
+    titleLevel: 1,
+    classNameSquare: 'sec-section-square',
+    cardTitle: 'title_history',
+    titleClassName: 'sec-section-title'
   },
   {
-    text: 'UP',
-    classNameLink: 'navbar-link',
-    href: 'https://www.google.it/',
+    cardClassName: 'container-column width-100 height-100 justify-center',
+    titleLevel: 1,
+    classNameSquare: 'sec-section-square',
+    cardTitle: 'title_mission',
+    titleClassName: 'sec-section-title'
   }
 ]
 
 
-// const blog = [
-//   {
-//     id: 1,
-//     title: 'title news',
-//     subtitle: 'subtitle news',
-//     mediaBg: 'image.jpg o video.mp4',
-//     description: 'long paragraph',
-//     articleMedia: [
-//       {
-//         id: 1,
-//         media: 'image.jpg o video.mp4'
-//       },
-//       {
-//         id: 2,
-//         media: 'image.jpg o video.mp4'
-//       },
-//       {
-//         id: 3,
-//         media: 'vimage.jpg o video.mp4'
-//       }
-//     ],
-//     hashtags: ['learn', 'beije', 'together']
-//   }
-// ]
+/*
+const blog = [
+  {
+    id: 1,
+    title: 'title news',
+    subtitle: 'subtitle news',
+    mediaBg: 'image.jpg o video.mp4',
+    description: 'long paragraph',
+    articleMedia: [
+      {
+        id: 1,
+        media: 'image.jpg o video.mp4'
+      },
+      {
+        id: 2,
+        media: 'image.jpg o video.mp4'
+      },
+      {
+        id: 3,
+        media: 'vimage.jpg o video.mp4'
+      }
+    ],
+    hashtags: ['learn', 'beije', 'together'],
+    permalink: 'titolo-news' //parte finale dell'url univoca
+  }
+]
+*/
 
+//almeno un titolo ita e en 
+// hashtags ita o en?
+//oggetto con due sotto-oggetti italiano e inglese
 
-
-
-// const COMMUNITY = [
-//   {
-//     id: 1,
-//     title: 'title news',
-//     mediaBg: 'image.jpg o video.mp4',
-//     description: 'long paragraph'
-//   }
-// ]
-
+/*
+const COMMUNITY = [
+  {
+    id: 1,
+    title: 'title news',
+    mediaBg: 'image.jpg o video.mp4',
+    description: 'long paragraph',
+    permalink: 'titolo-news' //parte finale dell'url univoca
+  }
+]
+*/
 
 /*
 const JOB_APPLICATION = [
@@ -200,7 +211,8 @@ const JOB_APPLICATION = [
     mode: 'remoto', //string
     academy: true, //bool - indica se la posizione è per academy o lavorativa
     description: '<p>Long description</p>', //long string
-    date_creation: '2021-11-24' //date
+    date_creation: '2021-11-24', //date
+    permalink: 'titolo-news' //parte finale dell'url univoca
   },
   {
     id: 2,
@@ -209,7 +221,8 @@ const JOB_APPLICATION = [
     mode: 'milano', //string
     academy: true, //bool - indica se la posizione è per academy o lavorativa
     description: '<p>Long description</p>', //long string
-    date_creation: '2021-11-24' //date
+    date_creation: '2021-11-24', //date
+    permalink: 'titolo-news' //parte finale dell'url univoca
   },
 ]
 */

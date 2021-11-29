@@ -11,11 +11,20 @@
   border-bottom: 1px solid #fff !important;
 }
 
+.home-container-section2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
 
 @media screen and (min-width: 992px) {
   .home-video-filter {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .home-container-section2 {
+    flex-direction: row;
   }
 }

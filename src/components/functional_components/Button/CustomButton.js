@@ -22,13 +22,13 @@ const CustomButton = (props) => {
         currentClassName = "custom-btn-primary-menu"
         break;
       case "scroll-page":
-        currentClassName = "bustom-btn-scroll"
+        currentClassName = "custom-btn-scroll"
         break;
-      case "transparent":
-        currentClassName = ""
+      case "detail-btn":
+        currentClassName = `detail-btn circular-btn d-flex items-center justify-center ${props.classNameBtn}`
         break;
       case "primary-social":
-        currentClassName = "custom-btn-primary-social circular-btn d-flex items-center jusify-center"
+        currentClassName = "custom-btn-primary-social circular-btn d-flex items-center justify-center"
         break;
       default:
         currentClassName = ""

@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { connect } from "react-redux";
+import { setColor, initColor } from "../../redux/ducks/colorDuck";
+import { setVisibility, initVisibility } from "../../redux/ducks/visibilityDuck"
 
 import { useTranslation } from 'react-i18next';
 import ReactFullpage from "@fullpage/react-fullpage";
@@ -21,36 +23,57 @@ import video_trial from '../../assets/videos/trial_video.mp4'
 
 //import components
 import CustomFooter from "../../components/hooks_components/customFooter/CustomFooter";
-import HomeFirstPage from "../../components/hooks_components/homePages/homeFirstPage/HomeFirstPage";
+import FirstSection from "../../components/hooks_components/homePages/firstSection/FirstSection";
 import BackgroundVideo from "../../components/functional_components/backgroundVideo/BackgroundVideo";
 import CustomButton from "../../components/functional_components/Button/CustomButton";
+import ContainerSectionScroll from "../../components/functional_components/containerSectionScroll/ContainerSectionScroll";
+import CustomCard from "../../components/functional_components/customCard/CustomCard";
+import SecondSection from "../../components/hooks_components/homePages/secondSection/SecondSection";
 
 
 const Home = (props) => {
   const { t } = useTranslation();
   const userInfo = useSelector((state) => get(state.userInfoDuck, 'userInfo', {}));
+  const colorContactPage = '#d6e3e5'
+
+  useEffect(() => {
+    props.dispatch(setColor(true))
+    props.dispatch(setVisibility(false)) //set visibility of navbar
+  }, [])
 
   const [state, setState] = useState({
     originIndex: 0,
     destinationIndex: null
   })
 
-  const onLeave = (origin) => {
+  //this function need three params: origin, destination, direction. 
+  //Due to we are using both origin and dastination we can't remove one of the two params from the function, 
+  //cause it won't work anymore
+  const onLeave = (origin, destination) => {
 
     setState({
       ...state,
       originIndex: origin.index
     })
   }
-  const afterLoad = (destination) => {
+
+  //this function need three params: origin, destination, direction. 
+  const afterLoad = (origin, destination) => {
+
+    if (destination.index === 0) {
+      props.dispatch(setColor(true))
+      props.dispatch(setVisibility(false)) //set visibility of navbar
+    }
+    else {
+      props.dispatch(initColor())
+      props.dispatch(initVisibility())
+    }
 
     setState({
       ...state,
       destinationIndex: destination.index
     })
   }
-
-
 
   return (
     // <div className="home-container">
@@ -72,14 +95,14 @@ const Home = (props) => {
     <div >
       <ReactFullpage
         scrollOverflow={true}
-        sectionsColor={["transparent", "purple", "green", 'blue']}
+        sectionsColor={["transparent", "#fff", "#fff", colorContactPage]}
         onLeave={onLeave}
         afterLoad={afterLoad}
         render={({ state, fullpageApi }) => {
           return (
             <div style={{ height: '100vh' }}>
               <div className="section section1">
-                
+
                 <div className='home-video-filter'>
                   <BackgroundVideo
                     autoPlay
@@ -87,14 +110,19 @@ const Home = (props) => {
                     loop
                     src={video_trial}
                   />
-                  <HomeFirstPage
+                  <FirstSection
                     callbackScroll={() => fullpageApi.moveTo(2, 0)}
                   />
                 </div>
               </div>
 
               <div className="section section2">
-                <p>Section 2</p>
+                <ContainerSectionScroll
+                  className='home-container-section2'
+                >
+                  <SecondSection />
+
+                </ContainerSectionScroll>
               </div>
               <div className="section">
                 <h3>Section 3</h3>
@@ -121,4 +149,4 @@ const Home = (props) => {
   );
 }
 
-export default Home;
+export default connect()(Home);

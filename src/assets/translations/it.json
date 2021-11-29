@@ -17,7 +17,23 @@
     "vatNumber": "Partita IVA"
   },
   "burgerMenu": {
+    "consulting": "CONSULTING",
+    "academy": "ACADEMY",
+    "up": "UP",
+    "career": "CAREER",
     "whoWeAre": "CHI SIAMO",
-    "contacts": "CONTATTI"
+    "contacts": "CONTATTI",
+    "blog": "BLOG",
+    "community": "COMMUNITY"
+  },
+  "home": {
+    "firstSection": {
+      "title": "Aiutiamo le aziende nella trasformazione digitale costruendo Value Teams"
+    },
+    "secondSection": {
+      "title_value": "VALORI",
+      "title_history": "STORIA",
+      "title_mission": "MISSION"
+    }
   }
 }

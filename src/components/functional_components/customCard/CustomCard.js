@@ -58,7 +58,7 @@ const CustomCard = (props) => {
                     isBlock={props.isBlock}
                     currentIcon={props.currentIcon}
                     content={props.content}
-
+                    classNameBtn={props.classNameBtn}
                 />
             }
             {

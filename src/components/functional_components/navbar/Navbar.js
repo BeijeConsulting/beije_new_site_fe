@@ -8,35 +8,60 @@ import { navbar } from "../../../utils/properties";
 
 const Navbar = (props) => {
 
-    const printNavbar = (item, key) => {
-        return (
-            <Col
-                key={key}
-                xs={item.xs}
-                sm={item.sm}
-                md={item.md}
-                lg={item.lg}
-                className={item.classNameCol}>
-                <Link
-                    href={item.href}
-                    className={item.classNameLink}
-                >
-                    {item.text}
-                </Link>
-            </Col>
-        )
+    const getCurrentClassName = () => {
+        let currentClassName = null;
+        switch (props.classNameLink) {
+            case "navbar-home-link":
+                currentClassName = "navbar-home-link"
+                break;
+            case "nav-general":
+                currentClassName = "navbar-general-link"
+                break;
+            case "nav-light":
+                currentClassName = "navbar-link-light"
+                break;
+            default:
+                currentClassName = "navbar-general-link"
+                break;
+        }
+        return currentClassName;
     }
 
     return (
         <Row className={props.classNameRow}>
-            {props.navbarList.map(printNavbar)}
+            <Col className={props.classNameCol}>
+                <Link
+                    href={props.href_consulting}
+                    type={props.type}
+                    className={getCurrentClassName()}
+                >
+                    CONSULTING
+                </Link>
+            </Col>
+            <Col className={props.classNameCol}>
+                <Link
+                    href={props.href_academy}
+                    type={props.type}
+                    className={getCurrentClassName()}
+                >
+                    ACADEMY
+                </Link>
+            </Col>
+            <Col className={props.classNameCol}>
+                <Link
+                    href={props.href_up}
+                    type={props.type}
+                    className={getCurrentClassName()}
+                >
+                    UP
+                </Link>
+            </Col>
         </Row>
     )
 }
 
 Navbar.defaultProps = {
     classNameRow: 'navbar-row',
-    navbarList: navbar
 }
 
 export default Navbar

@@ -1,6 +1,8 @@
 :root {
     --primary-burger-menu: var(--first-color);
     --secondary-burger-menu: #fff;
+
+    /* all bg images on menu voices hover */
     --bg_consulting: url(../../../assets/images/beije_team_office/ITA_2639_Web.jpg);
     --bg_academy: url(../../../assets/images/beije_team_office/ITA_2626_Web.jpg);
     --bg_up: url(../../../assets/images/beije_team_office/ITA_2651_Web.jpg);
@@ -29,6 +31,21 @@
 
 .burger-menu-container i {
     background-color: var(--primary-burger-menu);
+    width: 25px;
+    height: 3px;
+    margin: 3px 4px;
+    transition: all ease 0.5s;
+}
+
+.burger-menu-container-light {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    z-index: 100;
+}
+
+.burger-menu-container-light i {
+    background-color: var(--secondary-burger-menu);
     width: 25px;
     height: 3px;
     margin: 3px 4px;
@@ -173,6 +190,13 @@
 
 @media screen and (min-width: 992px) {
     .burger-menu-container i {
+        width: 32px;
+        height: 4px;
+        margin: 4px;
+        transition: all ease 0.5s;
+    }
+
+    .burger-menu-container-light i {
         width: 32px;
         height: 4px;
         margin: 4px;

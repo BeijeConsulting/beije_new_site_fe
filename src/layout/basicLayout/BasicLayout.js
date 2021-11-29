@@ -9,9 +9,8 @@ import './BasicLayout.css'
 
 //Import Components
 import CustomHeader from "../../components/hooks_components/customHeader/CustomHeader";
-import CustomFooter from "../../components/hooks_components/customFooter/CustomFooter";
 
-const { Header, Footer, Content } = Layout;
+const { Header, Content } = Layout;
 
 const BasicLayout = (props) => {
 
@@ -45,7 +44,7 @@ const BasicLayout = (props) => {
 
 
 const mapStateToProps = state => ({
-  menuDuck: state.menuDuck
+  menuDuck: state.menuDuck,
 })
 
 export default connect(mapStateToProps)(BasicLayout);

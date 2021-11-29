@@ -1,0 +1,32 @@
+:root {
+    --prmary-color-container: var(--first-color);
+    --btn-color: var(--third-color)
+}
+
+.sec-section-title {
+    font-size: 30px !important;
+}
+
+.sec-section-square {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 7px;
+    height: 80%;
+    width: 90%;
+    border-radius: 10px;
+    border: 1px solid var(--prmary-color-container);
+    margin-bottom: 15px;
+}
+
+.sec-section-detail-btn {
+    background-color: var(--btn-color);
+}
+
+@media screen and (min-width: 1024px) {
+    .sec-section-square {
+        height: 60%;
+
+    }
+
+}

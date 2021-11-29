@@ -268,7 +268,7 @@ body {
   flex-direction: row;
 }
 
-.items-right {
+.items-start {
   align-items: flex-start;
 }
 
@@ -276,19 +276,19 @@ body {
   align-items: center;
 }
 
-.items-left {
+.items-end {
   align-items: flex-end;
 }
 
-.jusify-right {
+.justify-start {
   justify-content: flex-start;
 }
 
-.jusify-center {
+.justify-center {
   justify-content: center;
 }
 
-.jusify-left {
+.justify-end {
   justify-content: flex-end;
 }
 
@@ -318,6 +318,7 @@ body {
   padding: 5px 25px;
   background-color: transparent;
   z-index: 2;
+  line-height: 64px !important;
 }
 
 .mb-20 {
@@ -326,4 +327,20 @@ body {
 
 .p-20 {
   padding: 20px;
+}
+
+.display-none {
+  display: none;
+}
+
+.display-block {
+  display: block;
+}
+
+.width-100 {
+  width: 100%
+}
+
+.height-100 {
+  height: 100%;
 }
