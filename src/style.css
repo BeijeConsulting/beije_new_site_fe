@@ -8,13 +8,18 @@
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url('./assets/font/Roboto-Regular.ttf');
+  font-family: 'Moderat';
+  src: url('./assets/font/Moderat/Moderat-Regular.woff');
+  font-weight: normal;
 }
 
+/* font-style: normal;
+letter-spacing: 0.06em; */
+
+
 @font-face {
-  font-family: 'Roboto';
-  src: url('./assets/font/Roboto-Bold.ttf');
+  font-family: 'Moderat';
+  src: url('./assets/font/Moderat/Moderat-Bold.woff');
   font-weight: bold;
 }
 
@@ -22,9 +27,20 @@ body {
   overflow: overlay;
   background-color: #FAFAFA;
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Moderat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0.06em;
+  font-size: 14px;
+}
+
+h1, h2, h3, h4, h5 {
+  /* font-family: 'SpaceGrotesk-Regular', sans-serif;
+  src: url('./assets/font/Space_Grotesk/SpaceGrotesk-Regular.ttf'); */
+  font-family: 'Moderat';
+  src: url('./assets/font/Moderat/Moderat-Bold.woff');
+  letter-spacing: 0.06em;
+  line-height: 110px;
 }
 
 /* Added classes */
@@ -32,7 +48,7 @@ body {
 
 /* Notification error class */
 .notification-error {
-  background-color: #de5246 !important;
+  background-color: var(--sixth-color) !important;
   color: #FAFAFA;
 }
 
@@ -296,7 +312,7 @@ body {
   border-radius: 50% !important;
 }
 
-.bold-400 {
+/* .bold-400 {
   font-weight: 400;
 }
 
@@ -306,7 +322,7 @@ body {
 
 .bold-700 {
   font-weight: 700;
-}
+} */
 
 .cursor-pointer {
   cursor: pointer;
@@ -319,6 +335,13 @@ body {
   background-color: transparent;
   z-index: 2;
   line-height: 64px !important;
+  max-width: 1400px;
+}
+
+@media screen and (min-width: 1400px) {
+  .header-ant-style {
+    left: calc(50% - 700px);
+  }
 }
 
 .mb-20 {

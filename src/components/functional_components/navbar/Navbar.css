@@ -21,7 +21,6 @@
 .navbar-general-link {
     color: var(--primary-nav-color) !important;
     text-decoration: none !important;
-    font-weight: bold !important;
     height: 37px !important;
 }
 

@@ -25,10 +25,10 @@ import video_trial from '../../assets/videos/trial_video.mp4'
 import CustomFooter from "../../components/hooks_components/customFooter/CustomFooter";
 import FirstSection from "../../components/hooks_components/homePages/firstSection/FirstSection";
 import BackgroundVideo from "../../components/functional_components/backgroundVideo/BackgroundVideo";
-import CustomButton from "../../components/functional_components/Button/CustomButton";
 import ContainerSectionScroll from "../../components/functional_components/containerSectionScroll/ContainerSectionScroll";
-import CustomCard from "../../components/functional_components/customCard/CustomCard";
 import SecondSection from "../../components/hooks_components/homePages/secondSection/SecondSection";
+import ThirdSection from "../../components/hooks_components/homePages/thirdSection/ThirdSection";
+import FourthSection from "../../components/hooks_components/homePages/fourthSection/FourthSection";
 
 
 const Home = (props) => {
@@ -125,13 +125,17 @@ const Home = (props) => {
                 </ContainerSectionScroll>
               </div>
               <div className="section">
-                <h3>Section 3</h3>
-                <button onClick={() => fullpageApi.moveTo(1, 0)}>
-                  Move top
-                </button>
+                <ContainerSectionScroll
+                  className='home-container-section3'
+                >
+                  <ThirdSection />
+
+                </ContainerSectionScroll>
               </div>
               <div className="section">
-                <p>Section 4</p>
+                <ContainerSectionScroll>
+                  <FourthSection />
+                </ContainerSectionScroll>
               </div>
               <div className="section">
                 <Footer className={'basicLayout-footer'}>

@@ -1,13 +1,17 @@
 :root {
     --primary-btn-color: var(--first-color);
-    --secondary-btn-color: var(--fourth-color)
+    --primary-btn-shadow: rgb(50, 62, 72, 0.50);
+    --secondary-btn-color: var(--fourth-color);
 }
 
+/* Menu */
 .custom-btn-primary-menu {
     background-color: transparent;
     border: none;
     margin-left: 20px;
 }
+
+/* Social */
 
 .custom-btn-primary-social {
     background-color: var(--secondary-btn-color);
@@ -38,6 +42,8 @@
     filter: brightness(0) invert(1)
 }
 
+/* Scroll button */
+
 .custom-btn-scroll {
     background-color: transparent;
     border: none;
@@ -46,6 +52,7 @@
     height: 100px;
     color: #fff !important;
     outline: none !important;
+    cursor: pointer !important;
 }
 
 .custom-btn-scroll:focus {
@@ -60,8 +67,47 @@
     outline: none !important;
 }
 
-.detail-btn {
-    width: 40px!important;
-    height: 40px!important;
-    background-color: #fff;
+/* Arrow Button */
+
+.primary-arrow {
+    width: 40px !important;
+    height: 40px !important;
+    background-color: var(--primary-btn-color);
+    border: none !important;
+    color: #fff !important;
+}
+
+.primary-arrow:hover {
+    background-color: var(--primary-btn-color);
+    box-shadow: 4px 4px 6px 0px var(--primary-btn-shadow);
+}
+
+.primary-arrow:focus {
+    background-color: var(--primary-btn-color);
+    box-shadow: 4px 4px 6px 0px var(--primary-btn-shadow);
+}
+
+@media screen and (min-width: 1024px) {
+    .primary-arrow {
+        width: 55px !important;
+        height: 55px !important;
+        background-color: var(--primary-btn-color);
+        border: none !important;
+        color: #fff !important;
+    }
+}
+
+/* Form Button send */
+.custom-btn-form {
+    border-radius: 300px;
+    height: 30px;
+    width: 70px;
+    background-color: transparent;
+    border: 1px solid var(--primary-btn-color) !important;
+    color: var(--primary-btn-color) !important;
+}
+
+.custom-btn-form:hover {
+    border: 1px solid var(--primary-btn-color) !important;
+    color: var(--primary-btn-color) !important;
 }

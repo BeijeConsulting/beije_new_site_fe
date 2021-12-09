@@ -2,7 +2,9 @@
     background-color: transparent;
     height: 100vh;
     width: 100%;
-    padding: 70px 25px 25px 25px
+    padding: 95px 25px 25px 25px;
+    max-width: 1400px;
+    margin: auto;
 }
 
 @media screen and (min-width: 992px) {

@@ -100,22 +100,6 @@ export const siteMenu = [
     linkTo: 'https://www.google.it/'
   },
   {
-    key: 'whoWeAre',
-    typeMenu: 'primary',
-    title: 'whoWeAre',
-    titleStyle: 'burger-menu-title txt-light',
-    titleStyleHover: 'burger-menu-title txt-light2',
-    linkTo: 'https://www.google.it/'
-  },
-  {
-    key: 'contacts',
-    typeMenu: 'primary',
-    title: 'contacts',
-    titleStyle: 'burger-menu-title txt-light',
-    titleStyleHover: 'burger-menu-title txt-light2',
-    linkTo: 'https://www.google.it/'
-  },
-  {
     key: 'blog',
     typeMenu: 'secondary',
     title: 'blog',
@@ -130,74 +114,180 @@ export const siteMenu = [
     titleStyle: 'burger-menu-title txt-light',
     titleStyleHover: 'burger-menu-title txt-light2',
     linkTo: 'https://www.google.it/'
-  }
+  },
+  {
+    key: 'whoWeAre',
+    typeMenu: 'secondary',
+    title: 'whoWeAre',
+    titleStyle: 'burger-menu-title txt-light',
+    titleStyleHover: 'burger-menu-title txt-light2',
+    linkTo: 'https://www.google.it/'
+  },
+  {
+    key: 'contacts',
+    typeMenu: 'secondary',
+    title: 'contacts',
+    titleStyle: 'burger-menu-title txt-light',
+    titleStyleHover: 'burger-menu-title txt-light2',
+    linkTo: 'https://www.google.it/'
+  },
 ]
 
 export const cardWhoWeAre = [
   {
-    cardClassName: 'container-column width-100 height-100 justify-center',
+    cardClassName: 'container-column width-100 height-100 items-center',
     titleLevel: 1,
     classNameSquare: 'sec-section-square',
     cardTitle: 'title_value',
-    titleClassName: 'sec-section-title'
+    titleClassName: 'sec-section-title',
+    squareClassName: 'sec-section-square',
+    show_btn: true,
+    type_btn: 'primary-arrow-btn',
+    orientation: 'left',
+    paragraph: 'paragraph_value'
   },
   {
-    cardClassName: 'container-column width-100 height-100 justify-center',
+    cardClassName: 'container-column width-100 height-100 items-center',
     titleLevel: 1,
     classNameSquare: 'sec-section-square',
     cardTitle: 'title_history',
-    titleClassName: 'sec-section-title'
+    titleClassName: 'sec-section-title',
+    squareClassName: 'sec-section-square',
+    show_btn: true,
+    type_btn: 'primary-arrow-btn',
+    orientation: 'right',
+    paragraph: 'paragraph_history'
   },
   {
-    cardClassName: 'container-column width-100 height-100 justify-center',
+    cardClassName: 'container-column width-100 height-100 items-center',
     titleLevel: 1,
     classNameSquare: 'sec-section-square',
     cardTitle: 'title_mission',
-    titleClassName: 'sec-section-title'
+    titleClassName: 'sec-section-title',
+    squareClassName: 'sec-section-square',
+    show_btn: true,
+    type_btn: 'primary-arrow-btn',
+    paragraph: 'paragraph_mission'
   }
 ]
 
-
-/*
-const blog = [
+export const carouselProfile = [
   {
     id: 1,
+    name: 'Francesco',
+    surname: 'Cesana',
+    role: 'Direttore generale',
+    classNameSingleEl: 'carousel-profile-picture carousel-profile-bg1',
+    classNameSingleElMobile: 'carousel-profile-picture carousel-profile-bg1'
+  },
+  {
+    id: 2,
+    name: 'Erica',
+    surname: 'Mauro',
+    classNameSingleEl: 'carousel-profile-picture picture-middle carousel-profile-bg2',
+    classNameSingleElMobile: 'carousel-profile-picture picture-middle carousel-profile-bg2'
+  },
+  {
+    id: 3,
+    name: 'Marianna',
+    surname: 'Fulginiti',
+    classNameSingleEl: 'carousel-profile-picture picture-bottom carousel-profile-bg3',
+    classNameSingleElMobile: 'carousel-profile-picture carousel-profile-bg3'
+  },
+  {
+    id: 4,
+    name: 'Ivo',
+    surname: 'Mosca',
+    classNameSingleEl: 'carousel-profile-picture picture-middle carousel-profile-bg4',
+    classNameSingleElMobile: 'carousel-profile-picture picture-middle carousel-profile-bg4'
+  },
+  {
+    id: 5,
+    name: 'Monica',
+    surname: 'Industriale',
+    classNameSingleEl: 'carousel-profile-picture carousel-profile-bg5',
+    classNameSingleElMobile: 'carousel-profile-picture carousel-profile-bg5'
+  },
+  {
+    id: 6,
+    name: 'Chiara',
+    surname: 'Balsamini',
+    classNameSingleEl: 'carousel-profile-picture picture-middle carousel-profile-bg6',
+    classNameSingleElMobile: 'carousel-profile-picture picture-middle carousel-profile-bg6'
+  },
+  {
+    id: 7,
+    name: 'Roberto',
+    surname: 'Brogi',
+    classNameSingleEl: 'carousel-profile-picture picture-bottom carousel-profile-bg7',
+    classNameSingleElMobile: 'carousel-profile-picture carousel-profile-bg7'
+  },
+  {
+    id: 8,
+    name: 'Francesca',
+    surname: 'Ferioli',
+    classNameSingleEl: 'carousel-profile-picture picture-middle carousel-profile-bg8',
+    classNameSingleElMobile: 'carousel-profile-picture picture-middle carousel-profile-bg8'
+  },
+  {
+    id: 9,
+    name: 'Francesca',
+    surname: 'Bellini',
+    classNameSingleEl: 'carousel-profile-picture carousel-profile-bg9',
+    classNameSingleElMobile: 'carousel-profile-picture carousel-profile-bg9'
+  },
+  {
+    id: 10,
+    name: 'Maria',
+    surname: 'Amigo Rodrigez',
+    classNameSingleEl: 'carousel-profile-picture picture-middle carousel-profile-bg10',
+    classNameSingleElMobile: 'carousel-profile-picture picture-middle carousel-profile-bg10'
+  },
+]
+
+/*
+//sia per lista sia per detagli
+const blog = [
+  {
     title: 'title news',
     subtitle: 'subtitle news',
-    mediaBg: 'image.jpg o video.mp4',
+    mediaBg: 'path',
     description: 'long paragraph',
-    articleMedia: [
+    images: [
       {
-        id: 1,
-        media: 'image.jpg o video.mp4'
+        thumb: 'path',
+        imgDesktop: 'path',
+        imgMobile: 'path'
       },
       {
-        id: 2,
-        media: 'image.jpg o video.mp4'
+        thumb: 'path',
+        imgDesktop: 'path',
+        imgMobile: 'path'
       },
       {
-        id: 3,
-        media: 'vimage.jpg o video.mp4'
+        thumb: 'path',
+        imgDesktop: 'path',
+        imgMobile: 'path'
       }
     ],
+    video: 'path',
     hashtags: ['learn', 'beije', 'together'],
     permalink: 'titolo-news' //parte finale dell'url univoca
   }
 ]
 */
-
-//almeno un titolo ita e en 
-// hashtags ita o en?
-//oggetto con due sotto-oggetti italiano e inglese
-
 /*
 const COMMUNITY = [
   {
-    id: 1,
     title: 'title news',
-    mediaBg: 'image.jpg o video.mp4',
+    image: {
+      thumb: 'path',
+      imgDesktop: 'path',
+      imgMobile: 'path'
+    },
     description: 'long paragraph',
-    permalink: 'titolo-news' //parte finale dell'url univoca
+    permalink: 'titolo-news' //parte finale dell'url univoca,
+    video: 'link YouTube' //se la stringa è vuota vuol dire che non c'è il video
   }
 ]
 */
@@ -205,7 +295,6 @@ const COMMUNITY = [
 /*
 const JOB_APPLICATION = [
   {
-    id: 1,
     title: 'react developer', //string
     type: 'frontend', //string
     mode: 'remoto', //string
@@ -215,7 +304,6 @@ const JOB_APPLICATION = [
     permalink: 'titolo-news' //parte finale dell'url univoca
   },
   {
-    id: 2,
     title: 'java developer', //string
     type: 'backend', //string
     mode: 'milano', //string
@@ -226,4 +314,3 @@ const JOB_APPLICATION = [
   },
 ]
 */
-

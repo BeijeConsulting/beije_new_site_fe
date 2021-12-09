@@ -17,7 +17,8 @@ const ScrollButton = (props) => {
                 autoplay
                 loop
                 src={scroll_icon}
-                style={{ height: '100px', width: '100px' }}
+                // style={{ height: '100px', width: '100px' }}
+                className={'scroll-btn-lottie cursor-pointer'}
             />
         </div>
     )

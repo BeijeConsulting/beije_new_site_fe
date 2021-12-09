@@ -9,7 +9,7 @@
 
 .basicLayout-footer {
     background-color: var(--primary-color-footer);
-    padding: 20px 30px 0 20px;
+    padding: 20px 20px 0 20px;
     z-index: 2;
     position: absolute;
     bottom: 0;

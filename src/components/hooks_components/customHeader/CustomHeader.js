@@ -12,7 +12,7 @@ import '../../../style.css'
 import './CustomHeader.css'
 
 //import assets
-import logo_dark from '../../../assets/images/logo/logo_official_dark_noBg.png'
+import logo_dark from '../../../assets/images/logo/logo_official_dark_noBg.svg'
 import logo_light from '../../../assets/images/logo/logo_white_written.png'
 
 //import components
