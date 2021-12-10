@@ -168,6 +168,28 @@ export const cardWhoWeAre = [
     show_btn: true,
     type_btn: 'primary-arrow-btn',
     paragraph: 'paragraph_mission'
+  },
+  {
+    cardClassName: 'container-column width-100 height-100 items-center',
+    titleLevel: 1,
+    classNameSquare: 'sec-section-square',
+    cardTitle: 'title_mission',
+    titleClassName: 'sec-section-title',
+    squareClassName: 'sec-section-square',
+    show_btn: true,
+    type_btn: 'primary-arrow-btn',
+    paragraph: 'paragraph_mission'
+  },
+  {
+    cardClassName: 'container-column width-100 height-100 items-center',
+    titleLevel: 1,
+    classNameSquare: 'sec-section-square',
+    cardTitle: 'title_mission',
+    titleClassName: 'sec-section-title',
+    squareClassName: 'sec-section-square',
+    show_btn: true,
+    type_btn: 'primary-arrow-btn',
+    paragraph: 'paragraph_mission'
   }
 ]
 

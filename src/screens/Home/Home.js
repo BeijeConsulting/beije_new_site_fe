@@ -119,6 +119,7 @@ const Home = (props) => {
               <div className="section section2">
                 <ContainerSectionScroll
                   className='home-container-section2'
+                  scrollBar={true}
                 >
                   <SecondSection />
 
@@ -132,9 +133,11 @@ const Home = (props) => {
 
                 </ContainerSectionScroll>
               </div>
-              <div className="section">
+              <div
+                className="section"
+              >
                 <ContainerSectionScroll>
-                  <FourthSection />
+                    <FourthSection />
                 </ContainerSectionScroll>
               </div>
               <div className="section">

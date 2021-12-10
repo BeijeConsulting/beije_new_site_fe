@@ -1,10 +1,11 @@
 import React from "react";
+import { get } from "lodash";
 
 import './ContainerSectionScroll.css'
 
 const ContainerSectionScroll = (props) => {
     return (
-        <div className={`container + ${props.className}`}>
+        <div className={`container ${get(props, 'className', '')}`}>
             {props.children}
         </div>
     )
