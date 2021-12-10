@@ -1,13 +1,19 @@
 import React from "react";
 import { Outlet, useLocation, Navigate } from "react-router-dom";
+
+//import costants
 import { ENVIRONMENT } from './utils/properties';
+
+//import layouts
+import HomeLayout from "./layout/homeLayout/HomeLayout";
+import GeneralLayout from "./layout/generalLayout/GeneralLayout"; 
+
+//import screens
 import Login from './screens/Login/Login';
 import Home from "./screens/Home/Home";
-import RouteA from "./screens/RouteA/RouteA";
 import RouteB from "./screens/RouteB";
-import RouteADetail from "./screens/RouteA/RouteADetail";
+import Consulting from "./screens/Consulting/Consulting";
 import NoMatch from "./screens/NoMatch";
-import BasicLayout from "./layout/basicLayout/BasicLayout";
 
 export default [
   {
@@ -20,27 +26,27 @@ export default [
   },
   {
     path: `${ENVIRONMENT.ROUTING.BASE_URL}`,
-    element: <BasicLayout />,
+    element: <HomeLayout />,
     children: [
       { index: true, element: <Home /> },
       { path: "*", element: <NoMatch /> }
     ]
   },
   {
-    path: `${ENVIRONMENT.ROUTING.BASE_URL}routeA`,
-    element: <BasicLayout />,
+    path: `${ENVIRONMENT.ROUTING.BASE_URL}consulting`,
+    element: <GeneralLayout />,
     children: [
-      { index: true, element: <RouteA /> },
-      {
-        path: `${ENVIRONMENT.ROUTING.BASE_URL}routeA/:id`,
-        element: <RouteADetail />
-      },
+      { index: true, element: <Consulting /> },
+      // {
+      //   path: `${ENVIRONMENT.ROUTING.BASE_URL}routeA/:id`,
+      //   element: <RouteADetail />
+      // },
       { path: "*", element: <NoMatch /> }
     ]
   },
   {
-    path: `${ENVIRONMENT.ROUTING.BASE_URL}routeB`,
-    element: <BasicLayout />,
+    path: `${ENVIRONMENT.ROUTING.BASE_URL}academy`,
+    element: <GeneralLayout />,
     children: [
       { index: true, element: <RequireAuth><RouteB /></RequireAuth> },
       { path: "*", element: <NoMatch /> }
@@ -48,7 +54,7 @@ export default [
   }
 ];
 
-function RequireAuth({children}) {
+function RequireAuth({ children }) {
   const localUserInfo = localStorage.getItem('userInfo');
   const auth = (localUserInfo && localUserInfo !== ''); // !!! Important. Create function that check if user leggd in. This check is provvisory
   const location = useLocation();

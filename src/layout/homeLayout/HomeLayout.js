@@ -4,7 +4,7 @@ import { Layout } from 'antd';
 import { connect } from "react-redux";
 
 import '../../style.css'
-import './BasicLayout.css'
+import './HomeLayout.css'
 
 
 //Import Components
@@ -13,7 +13,7 @@ import CustomFooter from "../../components/hooks_components/customFooter/CustomF
 
 const { Header, Footer, Content } = Layout;
 
-const BasicLayout = (props) => {
+const HomeLayout = (props) => {
 
   return (
     <Layout>
@@ -33,7 +33,7 @@ const BasicLayout = (props) => {
       </Layout>
       {
         !props.menuDuck.menuOpen &&
-        <Footer className={'basicLayout-footer'}>
+        <Footer className={'homeLayout-footer'}>
           <CustomFooter />
         </Footer>
       }
@@ -46,4 +46,4 @@ const mapStateToProps = state => ({
   menuDuck: state.menuDuck
 })
 
-export default connect(mapStateToProps)(BasicLayout);
+export default connect(mapStateToProps)(HomeLayout);
