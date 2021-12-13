@@ -1,11 +1,10 @@
-import React, { useState } from "react"
-
+import React from 'react'
 import { Image, Typography } from "antd"
-
-const { Title, Text, Paragraph } = Typography
 
 //import components
 import CustomButton from "../../functional_components/Button/CustomButton"
+
+const { Title, Paragraph } = Typography
 
 const CustomCard = (props) => {
 
@@ -39,13 +38,6 @@ const CustomCard = (props) => {
             }
             {
                 !!props.cardDescription &&
-                // <Text className={props.descriptionClassName}>
-                //     {props.cardDescription}
-                //     <br />
-                //     {props.cardDescription2}
-                //     <br />
-                //     {props.cardDescription3}
-                // </Text>
                 <p style={props.descriptionStyle} className={props.descriptionClassName}>
                     {props.cardDescription}
                     <br />

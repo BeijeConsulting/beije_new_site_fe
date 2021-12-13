@@ -1,39 +1,35 @@
 import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+// import { Helmet } from "react-helmet";
 import { connect } from "react-redux";
+import ReactFullpage from "@fullpage/react-fullpage";
+import { Layout } from "antd";
+const { Footer } = Layout;
+
+
+//import actions to dispatch
 import { setColor, initColor } from "../../redux/ducks/colorDuck";
 import { setVisibility, initVisibility } from "../../redux/ducks/visibilityDuck"
-
-import { useTranslation } from 'react-i18next';
-import ReactFullpage from "@fullpage/react-fullpage";
-import { get } from 'lodash';
-import { Helmet } from "react-helmet";
-import { Typography, Layout } from "antd";
-const { Title } = Typography;
-const { Header, Footer, Content } = Layout;
 
 
 //import style
 import './Home.css';
 import '../../style.css'
-import '../../layout/basicLayout/BasicLayout.css'
+import '../../layout/homeLayout/HomeLayout'
 
 //import assets
 import video_trial from '../../assets/videos/trial_video.mp4'
 
 //import components
-import CustomFooter from "../../components/hooks_components/customFooter/CustomFooter";
-import FirstSection from "../../components/hooks_components/homePages/firstSection/FirstSection";
+import CustomFooter from "../../components/functional_components/customFooter/CustomFooter";
+import FirstSection from "../../components/homeSections/firstSection/FirstSection";
 import BackgroundVideo from "../../components/functional_components/backgroundVideo/BackgroundVideo";
 import ContainerSectionScroll from "../../components/functional_components/containerSectionScroll/ContainerSectionScroll";
-import SecondSection from "../../components/hooks_components/homePages/secondSection/SecondSection";
-import ThirdSection from "../../components/hooks_components/homePages/thirdSection/ThirdSection";
-import FourthSection from "../../components/hooks_components/homePages/fourthSection/FourthSection";
+import SecondSection from "../../components/homeSections/secondSection/SecondSection";
+import ThirdSection from "../../components/homeSections/thirdSection/ThirdSection";
+import FourthSection from "../../components/homeSections/fourthSection/FourthSection";
 
 
 const Home = (props) => {
-  const { t } = useTranslation();
-  const userInfo = useSelector((state) => get(state.userInfoDuck, 'userInfo', {}));
   const colorContactPage = '#d6e3e5'
 
   useEffect(() => {
@@ -76,8 +72,7 @@ const Home = (props) => {
   }
 
   return (
-    // <div className="home-container">
-    //   {/* *he* */}
+    /* *he* */
     //   {/* 
     //     <Helmet>
     //         <title>Beije People First</title>
@@ -86,12 +81,6 @@ const Home = (props) => {
     //     </Helmet> 
     //   */}
 
-    //   <Row justify="center">
-    //     <Col className="center">
-    //       <Title level={2}>{t('general.Welcome')} {userInfo.name}</Title>
-    //     </Col>
-    //   </Row>
-    // </div>
     <div >
       <ReactFullpage
         scrollOverflow={true}
@@ -125,6 +114,7 @@ const Home = (props) => {
 
                 </ContainerSectionScroll>
               </div>
+
               <div className="section">
                 <ContainerSectionScroll
                   className='home-container-section3'
@@ -133,18 +123,19 @@ const Home = (props) => {
 
                 </ContainerSectionScroll>
               </div>
-              <div
-                className="section"
-              >
+
+              <div className="section">
                 <ContainerSectionScroll>
-                    <FourthSection />
+                  <FourthSection />
                 </ContainerSectionScroll>
               </div>
+
               <div className="section">
-                <Footer className={'basicLayout-footer'}>
+                <Footer className={'homeLayout-footer'}>
                   <CustomFooter />
                 </Footer>
               </div>
+
             </div>
           );
         }}

@@ -1,5 +1,3 @@
-import { switchLang } from "../../i18n/i18n-config";
-
 const SET_MENU = 'WEB/MENU/SET_MENU'
 const INIT_MENU = 'WEB/MENU/INIT_MENU'
 

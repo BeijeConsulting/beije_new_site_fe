@@ -11,7 +11,6 @@ import GeneralLayout from "./layout/generalLayout/GeneralLayout";
 //import screens
 import Login from './screens/Login/Login';
 import Home from "./screens/Home/Home";
-import RouteB from "./screens/RouteB";
 import Consulting from "./screens/Consulting/Consulting";
 import NoMatch from "./screens/NoMatch";
 
@@ -48,7 +47,7 @@ export default [
     path: `${ENVIRONMENT.ROUTING.BASE_URL}academy`,
     element: <GeneralLayout />,
     children: [
-      { index: true, element: <RequireAuth><RouteB /></RequireAuth> },
+      { index: true, element: <RequireAuth><Consulting /></RequireAuth> },
       { path: "*", element: <NoMatch /> }
     ]
   }

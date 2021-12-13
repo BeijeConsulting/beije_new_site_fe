@@ -1,11 +1,10 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
-import { Row, Col, Image, Typography } from 'antd';
-import { ENVIRONMENT } from '../../../utils/properties';
 import { connect } from "react-redux";
-
-
+import { Row, Col, Image, Typography } from 'antd';
 const { Link } = Typography;
+
+//import constats
+import { ENVIRONMENT } from '../../../utils/properties';
 
 //import style
 import '../../../style.css'
@@ -21,11 +20,6 @@ import BurgerMenu from '../burgerMenu/BurgerMenu';
 import Navbar from '../../functional_components/navbar/Navbar';
 
 const CustomHeader = (props) => {
-
-  const { t } = useTranslation();
-
-  console.log('menu props', props.menuDuck.menuOpen)
-  console.log('burger color props', props.colorDuck.lightColor)
 
   return (
     <>

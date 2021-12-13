@@ -1,5 +1,3 @@
-import { switchLang } from "../../i18n/i18n-config";
-
 //this duck set the color of the hamburger menu. When the value is false the hamburger menu is dark, 
 //when the value is true the hamburger menu is white
 const SET_COLOR = 'WEB/COLOR/SET_COLOR'

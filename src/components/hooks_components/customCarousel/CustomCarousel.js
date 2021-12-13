@@ -3,11 +3,10 @@ import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 
-import { Typography } from 'antd';
-const { Text } = Typography;
-
+//import style
 import './CustomCarousel.css'
 
+//import constants
 import { carouselProfile } from "../../../utils/properties";
 
 const ImageCarousel = (props) => {
@@ -47,9 +46,6 @@ const ImageCarousel = (props) => {
         else if (dimensionDevice >= 768 && dimensionDevice < 1024) {
             numItem = 3.2
         }
-        // else if (dimensionDevice >= 1024) {
-        //     numItem = 4.5
-        // }
         return numItem
     }
 
@@ -60,7 +56,7 @@ const ImageCarousel = (props) => {
                 className={`item ${item.classNameSingleEl}`}
             >
                 <div className={'custom-carousel-lable'}>
-                    
+
                 </div>
             </div>
         )

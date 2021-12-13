@@ -35,12 +35,22 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
-  /* font-family: 'SpaceGrotesk-Regular', sans-serif;
-  src: url('./assets/font/Space_Grotesk/SpaceGrotesk-Regular.ttf'); */
-  font-family: 'Moderat';
-  src: url('./assets/font/Moderat/Moderat-Bold.woff');
+  font-family: 'SpaceGrotesk-Regular', sans-serif !important;
+  src: url('./assets/font/Space_Grotesk/SpaceGrotesk-Regular.ttf') !important;
+  /* font-family: 'Moderat';
+  src: url('./assets/font/Moderat/Moderat-Bold.woff'); */
   letter-spacing: 0.06em;
-  line-height: 110px;
+}
+
+h1 {
+  font-weight: 500 !important;
+  font-size: 40px !important;
+  line-height: 45px !important;
+}
+
+.grotesk-font {
+  font-family: 'SpaceGrotesk-Regular', sans-serif;
+  src: url('./assets/font/Space_Grotesk/SpaceGrotesk-Regular.ttf');
 }
 
 /* Added classes */
@@ -334,6 +344,14 @@ h1, h2, h3, h4, h5 {
   padding: 5px 25px;
   background-color: transparent;
   z-index: 2;
+  line-height: 64px !important;
+  max-width: 1400px;
+}
+
+.header-ant-general-style {
+  width: 100%;
+  padding: 5px 25px;
+  background-color: transparent;
   line-height: 64px !important;
   max-width: 1400px;
 }

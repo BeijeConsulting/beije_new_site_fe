@@ -7,7 +7,7 @@ import '../../style.css'
 import './GeneralLayout.css'
 
 import CustomHeader from "../../components/hooks_components/customHeader/CustomHeader";
-import CustomFooter from "../../components/hooks_components/customFooter/CustomFooter";
+import CustomFooter from "../../components/functional_components/customFooter/CustomFooter";
 
 const { Header, Footer, Content } = Layout;
 
@@ -16,11 +16,11 @@ const GeneralLayout = (props) => {
         <Layout style={{ backgroundColor: 'red' }}>
 
             <Layout>
-                <Header className='header-ant-style'>
+                <Header className= {!props.menuDuck.menuOpen? 'header-ant-general-style' : 'header-ant-style'}>
                     <CustomHeader />
                 </Header>
 
-                <Layout>
+                <Layout className='generalLayout-content'>
                     <Content>
                         <div >
                             <Outlet />

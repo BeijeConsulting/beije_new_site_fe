@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { cardWhoWeAre } from '../../../../utils/properties'
-import { Divider, Image, Layout, Row, Col } from "antd";
+import { Row, Col } from "antd";
 import { truncate as _truncate } from 'lodash'
 
+//import style
 import './SecondSection.css'
 
 //import assets
@@ -11,8 +11,11 @@ import {
     ArrowRightOutlined
 } from '@ant-design/icons';
 
+//import costants
+import { cardWhoWeAre } from '../../../utils/properties'
+
 //import components
-import CustomCard from "../../../functional_components/customCard/CustomCard";
+import CustomCard from "../../functional_components/customCard/CustomCard";
 
 const SecondSection = () => {
     const [state, setState] = useState({
@@ -56,42 +59,30 @@ const SecondSection = () => {
 
     const printCard = (item, key) => {
         return (
-            <>
-                <Col xs={24} md={7}>
+            <Col xs={24} md={7} key={key}>
 
+                <CustomCard
+                    key={key}
+                    cardClassName={item.cardClassName}
+                    level={item.titleLevel}
+                    cardTitle={t('home.secondSection.' + item.cardTitle)}
+                    titleClassName={item.titleClassName}
+                >
                     <CustomCard
-                        key={key}
-                        cardClassName={item.cardClassName}
-                        level={item.titleLevel}
-                        cardTitle={t('home.secondSection.' + item.cardTitle)}
-                        titleClassName={item.titleClassName}
-                    >
-                        <CustomCard
-                            cardClassName={item.squareClassName}
-                            cardParagraph={_truncate(t(`home.secondSection.${item.paragraph}`),
-                                {
-                                    length: changeLength(),
-                                    separator: '...'
-                                }
-                            )}
-                            paragraphClassName={'sec-section-paragraph'}
-                            cardButton={item.show_btn}
-                            type={item.type_btn}
-                            currentIcon={<ArrowRightOutlined />}
-                        />
-                    </CustomCard>
-
-                </Col>
-
-                {key !== 2 &&
-                    <Divider orientation={item.orientation} type={state.dimensionDevice <= 320 ? 'horizontal' : 'vertical'} className='sec-section-divider'>
-                        {/* <Image 
-                      
-                         alt={props.imgAlt}
-                        /> */}
-                    </Divider>
-                }
-            </>
+                        cardClassName={item.squareClassName}
+                        cardParagraph={_truncate(t(`home.secondSection.${item.paragraph}`),
+                            {
+                                length: changeLength(),
+                                separator: '...'
+                            }
+                        )}
+                        paragraphClassName={'sec-section-paragraph'}
+                        cardButton={item.show_btn}
+                        type={item.type_btn}
+                        currentIcon={<ArrowRightOutlined />}
+                    />
+                </CustomCard>
+            </Col>
         )
     }
 

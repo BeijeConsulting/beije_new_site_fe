@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import { Row, Col } from "antd"
-import { get as __get } from 'lodash';
 import { useTranslation } from 'react-i18next';
 
 //import style and assets
@@ -9,9 +8,9 @@ import './CustomFooter.css'
 import { social } from '../../../utils/properties'
 
 //Import components
-import CustomCard from "../../functional_components/customCard/CustomCard"
-import CustomButton from "../../functional_components/Button/CustomButton"
-import SwitchLanguage from "../switchLanguage/SwitchLanguage";
+import CustomCard from "../customCard/CustomCard"
+import CustomButton from "../Button/CustomButton"
+import SwitchLanguage from "../../hooks_components/switchLanguage/SwitchLanguage";
 
 const CustomFooter = (props) => {
     const { t } = useTranslation();

@@ -5,3 +5,10 @@
 .consulting-container {
     background-color: var(--bg-color-primary) !important;
 }
+
+.consulting-intro {
+    font-weight: 400px;
+    font-size: 26px;
+    line-height: 42px;
+    letter-spacing: 6%;
+}

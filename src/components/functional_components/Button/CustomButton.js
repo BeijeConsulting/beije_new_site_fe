@@ -1,20 +1,19 @@
 import React from 'react';
-import './CustomButton.css';
-import '../../../style.css';
 import { Button } from "antd";
 
+//import style
+import './CustomButton.css';
+import '../../../style.css';
 
-/**
+/*
  * CustomButton takes in some props: isDisabled, content (when it's a text button), clickCallback, isLoading, isBlock, currentSize, currentIcon, currentWidth, currentHeight width and heigth
  * block is a boolean prop that we need when we don't have size prop populated
  * size can be "small", "middle", "large"
  * when block is true button takes the width.
- * */
+ */
 const CustomButton = (props) => {
 
-  /**
-   * this method returns a class for styling the button
-   * */
+  /* this method returns a class for styling the button*/
   const getCurrentClassName = () => {
     let currentClassName = null;
     switch (props.type) {

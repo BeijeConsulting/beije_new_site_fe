@@ -1,13 +1,13 @@
 import React, { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import 'antd/dist/antd.css';
 import { Form, Input, Checkbox, Row, Col } from 'antd';
 
-/* eslint-disable no-template-curly-in-string */
-
+//import style
+import 'antd/dist/antd.css';
 import './CustomForm.css'
 
-import CustomButton from "../Button/CustomButton";
+//import components
+import CustomButton from "../../functional_components/Button/CustomButton";
 
 
 const CustomForm = (props) => {
@@ -24,7 +24,6 @@ const CustomForm = (props) => {
     const { t } = useTranslation()
 
     const onFinish = (values) => {
-        console.log(values);
         formRef.current.resetFields();
     };
 

@@ -1,6 +1,6 @@
-import { PROPERTY_TYPES } from "@babel/types";
 import React from "react";
 
+//import style
 import './BackgroundVideo.css'
 
 const BackgroundVideo = (props) => {

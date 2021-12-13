@@ -62,5 +62,9 @@
       "agreement": "Ho letto e accetto il trattamento dei miei dati personali*",
       "send_btn": "Invia"
     }
+  },
+  "Consulting": {
+    "intro": "Aiutiamo le aziende a sviluppare progetti per la digital transformation, costruendo team di valore",
+    "description":"Abbiamo sempre pensato che le persone vengano prima di tutto e che il team sia più importante dell’individuo. Per questo, giorno dopo giorno, costruiamo una community che riesca a fornire ai nostri clienti le persone giuste al momento giusto. Persone capaci, professionali e che abbiano le skills che più si adattano ai nostri progetti."
   }
 }

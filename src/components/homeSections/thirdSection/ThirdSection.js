@@ -1,11 +1,13 @@
 import React from "react";
-
+import { useTranslation } from "react-i18next";
 import { Row, Col, Layout } from "antd";
 
+//import style
 import './ThirdSection.css'
-import CustomCard from "../../../functional_components/customCard/CustomCard";
-import { useTranslation } from "react-i18next";
-import ImageCarousel from "../../../functional_components/customCarousel/CustomCarousel";
+
+//import components
+import CustomCard from "../../functional_components/customCard/CustomCard";
+import ImageCarousel from "../../hooks_components/customCarousel/CustomCarousel";
 
 const ThirdSection = () => {
 
@@ -20,7 +22,7 @@ const ThirdSection = () => {
                         cardDescription={t('home.thirdSection.description')}
                     />
                 </Col>
-                <Col md={1} lg={2}/>
+                <Col md={1} lg={2} />
                 <Col sx={24} md={15} className={'third-sec-col2'}>
                     <ImageCarousel />
                 </Col>

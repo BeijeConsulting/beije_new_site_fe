@@ -2,9 +2,8 @@ import React from "react";
 import { Row, Col, Typography } from "antd";
 const { Link } = Typography;
 
+//import style
 import './Navbar.css'
-
-import { navbar } from "../../../utils/properties";
 
 const Navbar = (props) => {
 

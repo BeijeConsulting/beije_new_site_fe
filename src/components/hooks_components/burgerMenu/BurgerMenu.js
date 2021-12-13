@@ -1,11 +1,13 @@
 import { Layout } from 'antd'
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
-import { setMenu, initMenu } from '../../../redux/ducks/menuDuck'
 
 import { Row, Col, Typography } from 'antd';
 const { Header, Content } = Layout;
 const { Link } = Typography;
+
+//action dispatched
+import { setMenu, initMenu } from '../../../redux/ducks/menuDuck'
 
 //import assets and obj
 import { social } from '../../../utils/properties';

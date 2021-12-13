@@ -6,9 +6,9 @@ const { Title } = Typography;
 import './FourthSection.css'
 
 //import components
-import CustomCard from '../../../functional_components/customCard/CustomCard'
+import CustomCard from '../../functional_components/customCard/CustomCard'
 import { useTranslation } from "react-i18next";
-import CustomForm from "../../../functional_components/customForm/CustomForm";
+import CustomForm from "../../hooks_components/customForm/CustomForm";
 
 const FourthSection = () => {
 

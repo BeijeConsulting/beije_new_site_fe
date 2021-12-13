@@ -1,12 +1,16 @@
 import React from "react";
-import { Player, Controls } from '@lottiefiles/react-lottie-player';
+import { Player } from '@lottiefiles/react-lottie-player';
 
+//import style
 import './ScrollButton.css'
+
+//import assets
 import scroll_icon from '../../../assets/lottie/scroll.json'
 
 const ScrollButton = (props) => {
 
     const handleClick = () => {
+        // *ga*
         props.callback()
     }
 
@@ -17,7 +21,6 @@ const ScrollButton = (props) => {
                 autoplay
                 loop
                 src={scroll_icon}
-                // style={{ height: '100px', width: '100px' }}
                 className={'scroll-btn-lottie cursor-pointer'}
             />
         </div>

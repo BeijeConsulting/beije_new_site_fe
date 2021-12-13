@@ -1,6 +1,8 @@
 import React from 'react';
+import { Row, Col } from "antd";
+
+//import style
 import './detailBox.css';
-import {Row, Col} from "antd";
 
 const DetailBox = (props) => {
 
