@@ -9,9 +9,8 @@ import './HomeLayout.css'
 
 //Import Components
 import CustomHeader from "../../components/hooks_components/customHeader/CustomHeader";
-import CustomFooter from "../../components/hooks_components/customFooter/CustomFooter";
 
-const { Header, Footer, Content } = Layout;
+const { Header, Content } = Layout;
 
 const HomeLayout = (props) => {
 
@@ -30,20 +29,22 @@ const HomeLayout = (props) => {
             </div>
           </Content>
         </Layout>
+
+
       </Layout>
-      {
+      {/* {
         !props.menuDuck.menuOpen &&
         <Footer className={'homeLayout-footer'}>
           <CustomFooter />
         </Footer>
-      }
+      } */}
     </Layout>
   );
 }
 
 
 const mapStateToProps = state => ({
-  menuDuck: state.menuDuck
+  menuDuck: state.menuDuck,
 })
 
 export default connect(mapStateToProps)(HomeLayout);

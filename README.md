@@ -12,8 +12,9 @@ Library:
   Eslint - https://eslint.org/
   Number format - https://www.npmjs.com/package/react-number-format
   helmet - https://www.npmjs.com/package/react-helmet
-  spring - https://react-spring.io/
   lottie - https://www.npmjs.com/package/@lottiefiles/react-lottie-player
+  react fullpage - https://github.com/alvarotrigo/react-fullpage
+  react-owl-carousel - https://www.npmjs.com/package/react-owl-carousel 
 
 # look for google analytics
 to find google analytics search for the following comment: *ga*

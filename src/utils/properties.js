@@ -70,7 +70,7 @@ export const siteMenu = [
   {
     key: 'consulting',
     typeMenu: 'primary',
-    title: 'CONSULTING',
+    title: 'consulting',
     titleStyle: 'burger-menu-title txt-light',
     titleStyleHover: 'burger-menu-title txt-light2',
     linkTo: 'https://www.google.it/'
@@ -78,7 +78,7 @@ export const siteMenu = [
   {
     key: 'academy',
     typeMenu: 'primary',
-    title: 'ACADEMY',
+    title: 'academy',
     titleStyle: 'burger-menu-title txt-light',
     titleStyleHover: 'burger-menu-title txt-light2',
     linkTo: 'https://www.google.it/'
@@ -86,7 +86,7 @@ export const siteMenu = [
   {
     key: 'up',
     typeMenu: 'primary',
-    title: 'UP',
+    title: 'up',
     titleStyle: 'burger-menu-title txt-light',
     titleStyleHover: 'burger-menu-title txt-light2',
     linkTo: 'https://www.google.it/'
@@ -94,23 +94,7 @@ export const siteMenu = [
   {
     key: 'career',
     typeMenu: 'primary',
-    title: 'CAREER',
-    titleStyle: 'burger-menu-title txt-light',
-    titleStyleHover: 'burger-menu-title txt-light2',
-    linkTo: 'https://www.google.it/'
-  },
-  {
-    key: 'whoWeAre',
-    typeMenu: 'primary',
-    title: 'CHI SIAMO',
-    titleStyle: 'burger-menu-title txt-light',
-    titleStyleHover: 'burger-menu-title txt-light2',
-    linkTo: 'https://www.google.it/'
-  },
-  {
-    key: 'contacts',
-    typeMenu: 'primary',
-    title: 'CONTATTI',
+    title: 'career',
     titleStyle: 'burger-menu-title txt-light',
     titleStyleHover: 'burger-menu-title txt-light2',
     linkTo: 'https://www.google.it/'
@@ -118,78 +102,237 @@ export const siteMenu = [
   {
     key: 'blog',
     typeMenu: 'secondary',
-    title: 'BLOG',
-    titleStyle: 'burger-menu-title2 txt-light',
-    titleStyleHover: 'burger-menu-title2 txt-light2',
+    title: 'blog',
+    titleStyle: 'burger-menu-title txt-light',
+    titleStyleHover: 'burger-menu-title txt-light2',
     linkTo: 'https://www.google.it/'
   },
   {
     key: 'community',
     typeMenu: 'secondary',
-    title: 'COMMUNITY',
-    titleStyle: 'burger-menu-title2 txt-light',
-    titleStyleHover: 'burger-menu-title2 txt-light2',
+    title: 'community',
+    titleStyle: 'burger-menu-title txt-light',
+    titleStyleHover: 'burger-menu-title txt-light2',
     linkTo: 'https://www.google.it/'
+  },
+  {
+    key: 'whoWeAre',
+    typeMenu: 'secondary',
+    title: 'whoWeAre',
+    titleStyle: 'burger-menu-title txt-light',
+    titleStyleHover: 'burger-menu-title txt-light2',
+    linkTo: 'https://www.google.it/'
+  },
+  {
+    key: 'contacts',
+    typeMenu: 'secondary',
+    title: 'contacts',
+    titleStyle: 'burger-menu-title txt-light',
+    titleStyleHover: 'burger-menu-title txt-light2',
+    linkTo: 'https://www.google.it/'
+  },
+]
+
+export const cardWhoWeAre = [
+  {
+    cardClassName: 'container-column width-100 height-100 items-center',
+    titleLevel: 1,
+    classNameSquare: 'sec-section-square',
+    cardTitle: 'title_value',
+    titleClassName: 'sec-section-title',
+    squareClassName: 'sec-section-square',
+    show_btn: true,
+    type_btn: 'primary-arrow-btn',
+    orientation: 'left',
+    paragraph: 'paragraph_value'
+  },
+  {
+    cardClassName: 'container-column width-100 height-100 items-center',
+    titleLevel: 1,
+    classNameSquare: 'sec-section-square',
+    cardTitle: 'title_history',
+    titleClassName: 'sec-section-title',
+    squareClassName: 'sec-section-square',
+    show_btn: true,
+    type_btn: 'primary-arrow-btn',
+    orientation: 'right',
+    paragraph: 'paragraph_history'
+  },
+  {
+    cardClassName: 'container-column width-100 height-100 items-center',
+    titleLevel: 1,
+    classNameSquare: 'sec-section-square',
+    cardTitle: 'title_mission',
+    titleClassName: 'sec-section-title',
+    squareClassName: 'sec-section-square',
+    show_btn: true,
+    type_btn: 'primary-arrow-btn',
+    paragraph: 'paragraph_mission'
+  },
+  {
+    cardClassName: 'container-column width-100 height-100 items-center',
+    titleLevel: 1,
+    classNameSquare: 'sec-section-square',
+    cardTitle: 'title_mission',
+    titleClassName: 'sec-section-title',
+    squareClassName: 'sec-section-square',
+    show_btn: true,
+    type_btn: 'primary-arrow-btn',
+    paragraph: 'paragraph_mission'
+  },
+  {
+    cardClassName: 'container-column width-100 height-100 items-center',
+    titleLevel: 1,
+    classNameSquare: 'sec-section-square',
+    cardTitle: 'title_mission',
+    titleClassName: 'sec-section-title',
+    squareClassName: 'sec-section-square',
+    show_btn: true,
+    type_btn: 'primary-arrow-btn',
+    paragraph: 'paragraph_mission'
   }
 ]
 
+export const carouselProfile = [
+  {
+    id: 1,
+    name: 'Francesco',
+    surname: 'Cesana',
+    role: 'Direttore generale',
+    classNameSingleEl: 'carousel-profile-picture carousel-profile-bg1',
+    classNameSingleElMobile: 'carousel-profile-picture carousel-profile-bg1'
+  },
+  {
+    id: 2,
+    name: 'Erica',
+    surname: 'Mauro',
+    classNameSingleEl: 'carousel-profile-picture picture-middle carousel-profile-bg2',
+    classNameSingleElMobile: 'carousel-profile-picture picture-middle carousel-profile-bg2'
+  },
+  {
+    id: 3,
+    name: 'Marianna',
+    surname: 'Fulginiti',
+    classNameSingleEl: 'carousel-profile-picture picture-bottom carousel-profile-bg3',
+    classNameSingleElMobile: 'carousel-profile-picture carousel-profile-bg3'
+  },
+  {
+    id: 4,
+    name: 'Ivo',
+    surname: 'Mosca',
+    classNameSingleEl: 'carousel-profile-picture picture-middle carousel-profile-bg4',
+    classNameSingleElMobile: 'carousel-profile-picture picture-middle carousel-profile-bg4'
+  },
+  {
+    id: 5,
+    name: 'Monica',
+    surname: 'Industriale',
+    classNameSingleEl: 'carousel-profile-picture carousel-profile-bg5',
+    classNameSingleElMobile: 'carousel-profile-picture carousel-profile-bg5'
+  },
+  {
+    id: 6,
+    name: 'Chiara',
+    surname: 'Balsamini',
+    classNameSingleEl: 'carousel-profile-picture picture-middle carousel-profile-bg6',
+    classNameSingleElMobile: 'carousel-profile-picture picture-middle carousel-profile-bg6'
+  },
+  {
+    id: 7,
+    name: 'Roberto',
+    surname: 'Brogi',
+    classNameSingleEl: 'carousel-profile-picture picture-bottom carousel-profile-bg7',
+    classNameSingleElMobile: 'carousel-profile-picture carousel-profile-bg7'
+  },
+  {
+    id: 8,
+    name: 'Francesca',
+    surname: 'Ferioli',
+    classNameSingleEl: 'carousel-profile-picture picture-middle carousel-profile-bg8',
+    classNameSingleElMobile: 'carousel-profile-picture picture-middle carousel-profile-bg8'
+  },
+  {
+    id: 9,
+    name: 'Francesca',
+    surname: 'Bellini',
+    classNameSingleEl: 'carousel-profile-picture carousel-profile-bg9',
+    classNameSingleElMobile: 'carousel-profile-picture carousel-profile-bg9'
+  },
+  {
+    id: 10,
+    name: 'Maria',
+    surname: 'Amigo Rodrigez',
+    classNameSingleEl: 'carousel-profile-picture picture-middle carousel-profile-bg10',
+    classNameSingleElMobile: 'carousel-profile-picture picture-middle carousel-profile-bg10'
+  },
+]
 
-// const blog = [
-//   {
-//     id: 1,
-//     title: 'title news',
-//     subtitle: 'subtitle news',
-//     mediaBg: 'image.jpg o video.mp4',
-//     description: 'long paragraph',
-//     articleMedia: [
-//       {
-//         id: 1,
-//         media: 'image.jpg o video.mp4'
-//       },
-//       {
-//         id: 2,
-//         media: 'image.jpg o video.mp4'
-//       },
-//       {
-//         id: 3,
-//         media: 'vimage.jpg o video.mp4'
-//       }
-//     ],
-//     hashtags: ['learn', 'beije', 'together']
-//   }
-// ]
+/*
+//sia per lista sia per detagli
+const blog = [
+  {
+    title: 'title news',
+    subtitle: 'subtitle news',
+    mediaBg: 'path',
+    description: 'long paragraph',
+    images: [
+      {
+        thumb: 'path',
+        imgDesktop: 'path',
+        imgMobile: 'path'
+      },
+      {
+        thumb: 'path',
+        imgDesktop: 'path',
+        imgMobile: 'path'
+      },
+      {
+        thumb: 'path',
+        imgDesktop: 'path',
+        imgMobile: 'path'
+      }
+    ],
+    video: 'path',
+    hashtags: ['learn', 'beije', 'together'],
+    permalink: 'titolo-news' //parte finale dell'url univoca
+  }
+]
+*/
+/*
+const COMMUNITY = [
+  {
+    title: 'title news',
+    image: {
+      thumb: 'path',
+      imgDesktop: 'path',
+      imgMobile: 'path'
+    },
+    description: 'long paragraph',
+    permalink: 'titolo-news' //parte finale dell'url univoca,
+    video: 'link YouTube' //se la stringa è vuota vuol dire che non c'è il video
+  }
+]
+*/
 
-
-
-
-// const COMMUNITY = [
-//   {
-//     id: 1,
-//     title: 'title news',
-//     mediaBg: 'image.jpg o video.mp4',
-//     description: 'long paragraph'
-//   }
-// ]
-
-
-
-// const JOB_APPLICATION = [
-//   {
-//     id: 1,
-//     title: 'react developer', //string
-//     type: 'frontend', //string
-//     mode: 'remoto', //string
-//     academy: true, //bool - indica se la posizione è per academy o lavorativa
-//     date_creation: '2021-11-24' //date
-//   },
-//   {
-//     id: 2,
-//     title: 'java developer', //string
-//     type: 'backend', //string
-//     mode: 'milano', //string
-//     academy: true, //bool - indica se la posizione è per academy o lavorativa
-//     date_creation: '2021-11-24' //date
-//   },
-// ]
-
-
+/*
+const JOB_APPLICATION = [
+  {
+    title: 'react developer', //string
+    type: 'frontend', //string
+    mode: 'remoto', //string
+    academy: true, //bool - indica se la posizione è per academy o lavorativa
+    description: '<p>Long description</p>', //long string
+    date_creation: '2021-11-24', //date
+    permalink: 'titolo-news' //parte finale dell'url univoca
+  },
+  {
+    title: 'java developer', //string
+    type: 'backend', //string
+    mode: 'milano', //string
+    academy: true, //bool - indica se la posizione è per academy o lavorativa
+    description: '<p>Long description</p>', //long string
+    date_creation: '2021-11-24', //date
+    permalink: 'titolo-news' //parte finale dell'url univoca
+  },
+]
+*/

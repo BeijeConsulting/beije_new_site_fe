@@ -68,7 +68,7 @@ const CustomFooter = (props) => {
                 </Col>
             </Row >
             {/* this row is shown only when the device is smaller than 1024px */}
-            <Row className={'container-row jusify-left items-center custom-footer-social'}>
+            <Row className={'container-row justify-end items-center custom-footer-social'}>
                 <div style={{ marginRight: 20 }}>
                     <CustomButton
                         type={'primary-social'}
@@ -84,7 +84,7 @@ const CustomFooter = (props) => {
                 />
             </Row>
             {/* this row is shown only when the device is bigger than 1024px */}
-            <Row className={'container-row jusify-left items-center custom-footer-translation-desktop'}>
+            <Row className={'container-row justify-end items-center custom-footer-translation-desktop'}>
                 <CustomCard>
                     <p className='txt-right txt-light'>
                         <SwitchLanguage />
@@ -104,5 +104,6 @@ const CustomFooter = (props) => {
 CustomFooter.defaultProps = {
     classNameFooter: 'w-100 h-100'
 }
+
 
 export default CustomFooter

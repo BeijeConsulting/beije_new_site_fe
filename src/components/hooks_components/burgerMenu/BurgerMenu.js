@@ -18,6 +18,7 @@ import './BurgerMenu.css'
 import CustomButton from '../../functional_components/Button/CustomButton';
 import SwitchLanguage from '../switchLanguage/SwitchLanguage';
 import CustomCard from '../../functional_components/customCard/CustomCard';
+import { useTranslation } from 'react-i18next';
 
 
 
@@ -27,6 +28,8 @@ const BurgerMenu = (props) => {
         stateLink: false,
         idElement: null
     })
+
+    const { t } = useTranslation()
 
     const changeStateMenu = () => {
         // *ga*
@@ -70,7 +73,7 @@ const BurgerMenu = (props) => {
                 >
                     <CustomCard
                         titleClassName={state.stateLink && state.idElement === key ? item.titleStyleHover : item.titleStyle}
-                        cardTitle={item.title}
+                        cardTitle={t(`burgerMenu.${item.title}`)}
                         callbackMouseEnter={mouseOver(key, item.key)}
                         callbackMouseLeave={mouseLeave(key, item.key)}
                     />
@@ -88,7 +91,7 @@ const BurgerMenu = (props) => {
                 >
                     <CustomCard
                         titleClassName={state.stateLink && state.idElement === key ? item.titleStyleHover : item.titleStyle}
-                        cardTitle={item.title}
+                        cardTitle={t(`burgerMenu.${item.title}`)}
                         callbackMouseEnter={mouseOver(key, item.key)}
                         callbackMouseLeave={mouseLeave(key, item.key)}
                     />
@@ -133,7 +136,8 @@ const BurgerMenu = (props) => {
 
     return (
         <>
-            <div className={'burger-menu-container'} onClick={changeStateMenu}>
+            {/* 'burger-menu-container' */}
+            <div className={!props.colorDuck.lightColor ? 'burger-menu-container' : 'burger-menu-container-light'} onClick={changeStateMenu}>
                 <i className={state.openMenu ? 'burger-menu-open' : 'burger-menu-close'}></i>
                 <i className={state.openMenu ? 'burger-menu-open' : 'burger-menu-close burger-menu-middle-line'}></i>
                 <i className={state.openMenu ? 'burger-menu-open' : 'burger-menu-close'}></i>
@@ -165,7 +169,7 @@ const BurgerMenu = (props) => {
                             </Row>
                             <Row className={'burger-menu-social'}>
 
-                                <Col sx={12} lg={24} className='container-row jusify-left items-center'>
+                                <Col sx={12} lg={24} className='container-row justify-end items-center'>
                                     <CustomButton
                                         type={'primary-social'}
                                         href={social.url.url_linkedIn}
@@ -198,5 +202,8 @@ const BurgerMenu = (props) => {
     )
 }
 
+const mapStateToProps = state => ({
+    colorDuck: state.colorDuck
+})
 
-export default connect()(BurgerMenu)
+export default connect(mapStateToProps)(BurgerMenu)

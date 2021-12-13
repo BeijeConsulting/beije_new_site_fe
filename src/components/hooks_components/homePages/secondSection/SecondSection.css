@@ -1,0 +1,56 @@
+:root {
+    --prmary-color-divider: var(--first-color);
+}
+
+.sec-section-container {
+    background-color: #fff;
+    border: 2px solid blue;
+}
+
+.sec-section-title {
+    font-size: 22px !important;
+    align-self: flex-start;
+    border: 2px solid green;
+}
+
+.sec-section-square {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 20px;
+    border: 2px solid red;
+}
+
+.sec-section-divider {
+    color: var(--prmary-color-divider);
+}
+
+.sec-section-paragraph {
+    height: 100%;
+    margin-bottom: 0px !important;
+}
+
+@media screen and (min-width: 768px) {
+    .sec-section-square {
+        height: 45%;
+    }
+
+    .sec-section-title {
+        font-size: 25px !important;
+    }
+
+    .sec-section-divider {
+        height: 80%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .sec-section-square {
+        height: 60%;
+    }
+
+    .sec-section-title {
+        font-size: 30px !important;
+    }
+
+}

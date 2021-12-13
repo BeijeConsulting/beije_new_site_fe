@@ -2,7 +2,7 @@ import React, { useState } from "react"
 
 import { Image, Typography } from "antd"
 
-const { Title } = Typography
+const { Title, Text, Paragraph } = Typography
 
 //import components
 import CustomButton from "../../functional_components/Button/CustomButton"
@@ -39,6 +39,13 @@ const CustomCard = (props) => {
             }
             {
                 !!props.cardDescription &&
+                // <Text className={props.descriptionClassName}>
+                //     {props.cardDescription}
+                //     <br />
+                //     {props.cardDescription2}
+                //     <br />
+                //     {props.cardDescription3}
+                // </Text>
                 <p style={props.descriptionStyle} className={props.descriptionClassName}>
                     {props.cardDescription}
                     <br />
@@ -46,6 +53,14 @@ const CustomCard = (props) => {
                     <br />
                     {props.cardDescription3}
                 </p>
+            }
+            {
+                !!props.cardParagraph &&
+                <Paragraph
+                    className={props.paragraphClassName}
+                    ellipsis={props.ellipsis}>
+                    {props.cardParagraph}
+                </Paragraph>
             }
             {
                 props.cardButton &&
@@ -58,7 +73,7 @@ const CustomCard = (props) => {
                     isBlock={props.isBlock}
                     currentIcon={props.currentIcon}
                     content={props.content}
-
+                    classNameBtn={props.classNameBtn}
                 />
             }
             {

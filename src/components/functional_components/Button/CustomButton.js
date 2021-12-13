@@ -19,16 +19,34 @@ const CustomButton = (props) => {
     let currentClassName = null;
     switch (props.type) {
       case "primary-menu":
-        currentClassName = "ustom-btn-primary-menu"
+        currentClassName = "custom-btn-primary-menu"
         break;
-      case "secondary":
+      case "secondary-menu":
         currentClassName = ""
         break;
-      case "transparent":
+      case "primary-plus":
         currentClassName = ""
+        break;
+      case "secondary-plus":
+        currentClassName = ""
+        break;
+      case "primary-minus":
+        currentClassName = ""
+        break;
+      case "secondary-minus":
+        currentClassName = ""
+        break;
+      case "scroll-page":
+        currentClassName = "custom-btn-scroll"
+        break;
+      case "primary-arrow-btn":
+        currentClassName = 'primary-arrow circular-btn d-flex items-center justify-center'
         break;
       case "primary-social":
-        currentClassName = "custom-btn-primary-social circular-btn d-flex items-center jusify-center"
+        currentClassName = "custom-btn-primary-social circular-btn d-flex items-center justify-center"
+        break;
+      case "form-btn":
+        currentClassName = "custom-btn-form"
         break;
       default:
         currentClassName = ""
@@ -58,6 +76,7 @@ const CustomButton = (props) => {
         block={props.isBlock}
         icon={props.currentIcon}
         href={props.href}
+        htmlType={props.htmlType}
       >
         {props.content}
       </Button>
