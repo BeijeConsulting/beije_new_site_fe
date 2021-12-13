@@ -2,12 +2,6 @@
     --primary-color-footer: var(--first-color)
 }
 
-/* .homeLayout-header {
-    padding: 5px 10px;
-    background-color: transparent;
-    position: relative;
-} */
-
 .homeLayout-footer {
     background-color: var(--primary-color-footer);
     padding: 20px 20px 0 20px;

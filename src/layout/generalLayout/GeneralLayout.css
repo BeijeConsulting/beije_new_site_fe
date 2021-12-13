@@ -1,0 +1,8 @@
+:root {
+    --primary-color-footer: var(--first-color)
+}
+
+.generalLayout-footer {
+    background-color: var(--primary-color-footer);
+    padding: 20px 20px 0 20px;
+}

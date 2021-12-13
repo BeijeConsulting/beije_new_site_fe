@@ -13,14 +13,14 @@ const { Header, Footer, Content } = Layout;
 
 const GeneralLayout = (props) => {
     return (
-        <Layout>
+        <Layout style={{ backgroundColor: 'red' }}>
 
-            <Layout className="min-h-100vh">
+            <Layout>
                 <Header className='header-ant-style'>
                     <CustomHeader />
                 </Header>
 
-                <Layout className="h-100">
+                <Layout>
                     <Content>
                         <div >
                             <Outlet />
@@ -30,7 +30,7 @@ const GeneralLayout = (props) => {
             </Layout>
             {
                 !props.menuDuck.menuOpen &&
-                <Footer className={'homeLayout-footer'}>
+                <Footer className={'generalLayout-footer'}>
                     <CustomFooter />
                 </Footer>
             }

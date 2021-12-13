@@ -1,0 +1,7 @@
+:root {
+    --bg-color-primary: var(--third-color);
+}
+
+.consulting-container {
+    background-color: var(--bg-color-primary) !important;
+}
