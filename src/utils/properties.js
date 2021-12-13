@@ -8,6 +8,13 @@ import icon_facebook from '../assets/icons/social_icon/f_facebook_dark.png'
 import icon_instagram from '../assets/icons/social_icon/in_instagram_dark.png'
 import icon_youTube from '../assets/icons/social_icon/youtube_dark.png'
 
+//images to use in website
+import img1_consulting from '../assets/images/beije_team_office/ITA_1975_Web.jpg'
+import img2_consulting from '../assets/images/beije_team_office/ITA_2633_Web.jpg'
+
+
+export const consulting1 = img1_consulting;
+export const consulting2 = img2_consulting;
 
 const getBaseURL = () => {
   const env = process.env.REACT_APP_ENV;
@@ -199,6 +206,7 @@ export const carouselProfile = [
     name: 'Francesco',
     surname: 'Cesana',
     role: 'Direttore generale',
+    alt: 'FrancescoCesana',
     classNameSingleEl: 'carousel-profile-picture carousel-profile-bg1',
     classNameSingleElMobile: 'carousel-profile-picture carousel-profile-bg1'
   },
@@ -206,6 +214,7 @@ export const carouselProfile = [
     id: 2,
     name: 'Erica',
     surname: 'Mauro',
+    alt: 'EricaMauro',
     classNameSingleEl: 'carousel-profile-picture picture-middle carousel-profile-bg2',
     classNameSingleElMobile: 'carousel-profile-picture picture-middle carousel-profile-bg2'
   },
@@ -213,6 +222,7 @@ export const carouselProfile = [
     id: 3,
     name: 'Marianna',
     surname: 'Fulginiti',
+    alt: 'MariannaFulginiti',
     classNameSingleEl: 'carousel-profile-picture picture-bottom carousel-profile-bg3',
     classNameSingleElMobile: 'carousel-profile-picture carousel-profile-bg3'
   },
@@ -220,6 +230,7 @@ export const carouselProfile = [
     id: 4,
     name: 'Ivo',
     surname: 'Mosca',
+    alt: 'IvoMosca',
     classNameSingleEl: 'carousel-profile-picture picture-middle carousel-profile-bg4',
     classNameSingleElMobile: 'carousel-profile-picture picture-middle carousel-profile-bg4'
   },
@@ -227,6 +238,7 @@ export const carouselProfile = [
     id: 5,
     name: 'Monica',
     surname: 'Industriale',
+    alt: 'MonicaIndustriale',
     classNameSingleEl: 'carousel-profile-picture carousel-profile-bg5',
     classNameSingleElMobile: 'carousel-profile-picture carousel-profile-bg5'
   },
@@ -234,6 +246,7 @@ export const carouselProfile = [
     id: 6,
     name: 'Chiara',
     surname: 'Balsamini',
+    alt: 'ChiaraBalsamini',
     classNameSingleEl: 'carousel-profile-picture picture-middle carousel-profile-bg6',
     classNameSingleElMobile: 'carousel-profile-picture picture-middle carousel-profile-bg6'
   },
@@ -241,6 +254,7 @@ export const carouselProfile = [
     id: 7,
     name: 'Roberto',
     surname: 'Brogi',
+    alt: 'RobertoBrogi',
     classNameSingleEl: 'carousel-profile-picture picture-bottom carousel-profile-bg7',
     classNameSingleElMobile: 'carousel-profile-picture carousel-profile-bg7'
   },
@@ -248,6 +262,7 @@ export const carouselProfile = [
     id: 8,
     name: 'Francesca',
     surname: 'Ferioli',
+    alt: 'FrancescaFerioli',
     classNameSingleEl: 'carousel-profile-picture picture-middle carousel-profile-bg8',
     classNameSingleElMobile: 'carousel-profile-picture picture-middle carousel-profile-bg8'
   },
@@ -255,6 +270,7 @@ export const carouselProfile = [
     id: 9,
     name: 'Francesca',
     surname: 'Bellini',
+    alt: 'FrancescaBellini',
     classNameSingleEl: 'carousel-profile-picture carousel-profile-bg9',
     classNameSingleElMobile: 'carousel-profile-picture carousel-profile-bg9'
   },
@@ -262,6 +278,7 @@ export const carouselProfile = [
     id: 10,
     name: 'Maria',
     surname: 'Amigo Rodrigez',
+    alt: 'MariaAmigoRodrigez',
     classNameSingleEl: 'carousel-profile-picture picture-middle carousel-profile-bg10',
     classNameSingleElMobile: 'carousel-profile-picture picture-middle carousel-profile-bg10'
   },

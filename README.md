@@ -24,3 +24,7 @@ to find helmet search for the following comment: *he*
 
 # look for seo script
 to find seo script search for the following comment: *seo*
+
+# look for alt img
+to find alt img search for the following comment: *alt*
+

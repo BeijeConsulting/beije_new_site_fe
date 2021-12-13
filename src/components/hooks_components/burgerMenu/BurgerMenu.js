@@ -175,19 +175,37 @@ const BurgerMenu = (props) => {
                                     <CustomButton
                                         type={'primary-social'}
                                         href={social.url.url_linkedIn}
-                                        currentIcon={<img src={social.icon.icon_linkedIn} style={{ height: 16 }} className={'icon-social'} />}
+                                        currentIcon={
+                                            <img
+                                                src={social.icon.icon_linkedIn}
+                                                alt={t('imgAlt.social.in')}
+                                                style={{ height: 16 }}
+                                                className={'icon-social'}
+                                            />}
                                     />
                                     <div style={{ margin: 20 }}>
                                         <CustomButton
                                             type={'primary-social'}
                                             href={social.url.url_youTube}
-                                            currentIcon={<img src={social.icon.icon_youTube} style={{ height: 16 }} className={'icon-social'} />}
+                                            currentIcon={
+                                                <img
+                                                    src={social.icon.icon_youTube}
+                                                    alt={t('imgAlt.social.youTube')}
+                                                    style={{ height: 16 }}
+                                                    className={'icon-social'}
+                                                />}
                                         />
                                     </div>
                                     <CustomButton
                                         type={'primary-social'}
                                         href={social.url.url_facebook}
-                                        currentIcon={<img src={social.icon.icon_facebook} style={{ height: 16 }} className={'icon-social'} />}
+                                        currentIcon={
+                                            <img
+                                                src={social.icon.icon_facebook}
+                                                alt={t('imgAlt.social.fb')}
+                                                style={{ height: 16 }}
+                                                className={'icon-social'}
+                                            />}
                                     />
 
                                 </Col>

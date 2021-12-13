@@ -55,7 +55,7 @@ const ImageCarousel = (props) => {
                 key={key}
                 className={`item ${item.classNameSingleEl}`}
             >
-                <div className={'custom-carousel-lable'}>
+                <div className={'custom-carousel-lable'} role={props.roleDiv} aria-label={item.alt}>
 
                 </div>
             </div>
@@ -84,7 +84,8 @@ ImageCarousel.defaultProps = {
     mergeFit: true,
     classNameContainer: 'carousel-container',
     itemsCarousel: carouselProfile,
-    dots: false
+    dots: false,
+    roleDiv: 'img'
 }
 
 export default ImageCarousel

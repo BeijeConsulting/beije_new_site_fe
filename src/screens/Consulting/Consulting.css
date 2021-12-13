@@ -12,3 +12,14 @@
     line-height: 42px;
     letter-spacing: 6%;
 }
+
+.consulting-images {
+    width: 382px;
+    height: 257px;
+    border-radius: 30px;
+}
+
+.consulting-description {
+    font-size: 18px;
+    line-height: 26px;
+}

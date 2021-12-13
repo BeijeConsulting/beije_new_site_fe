@@ -14,6 +14,13 @@
     "not_valid_msg": "Not valid field",
     "agreement": "Should accept agreement"
   },
+  "imgAlt": {
+    "social": {
+      "fb": "link to Facebook",
+      "in": "link to LinkedIn",
+      "youTube": "Link to YouTube"
+    }
+  },
   "footer": {
     "location": "WHERE WE ARE",
     "hours": "HOURS",
@@ -65,6 +72,6 @@
   },
   "Consulting": {
     "intro": "Aiutiamo le aziende a sviluppare progetti per la digital transformation, costruendo team di valore",
-    "description":"Abbiamo sempre pensato che le persone vengano prima di tutto e che il team sia più importante dell’individuo. Per questo, giorno dopo giorno, costruiamo una community che riesca a fornire ai nostri clienti le persone giuste al momento giusto. Persone capaci, professionali e che abbiano le skills che più si adattano ai nostri progetti."
+    "description": "Abbiamo sempre pensato che le persone vengano prima di tutto e che il team sia più importante dell’individuo. Per questo, giorno dopo giorno, costruiamo una community che riesca a fornire ai nostri clienti le persone giuste al momento giusto. Persone capaci, professionali e che abbiano le skills che più si adattano ai nostri progetti."
   }
 }

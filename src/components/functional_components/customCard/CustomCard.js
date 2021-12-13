@@ -79,6 +79,7 @@ const CustomCard = (props) => {
                     preview={props.imgPreview}
                     src={props.imgSrc}
                     onError={props.imgOnError}
+                    className={props.imgClassName}
                 />
             }
             {props.children}

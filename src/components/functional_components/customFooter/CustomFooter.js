@@ -72,14 +72,28 @@ const CustomFooter = (props) => {
                     <CustomButton
                         type={'primary-social'}
                         href={social.url.url_facebook}
-                        currentIcon={<img src={social.icon.icon_facebook} style={{ height: 16 }} className={'icon-social'} />}
+                        currentIcon={
+                            <img
+                                src={social.icon.icon_facebook}
+                                alt={t('imgAlt.social.fb')}
+                                style={{ height: 16 }}
+                                className={'icon-social'}
+                            />
+                        }
                     />
                 </div>
 
                 <CustomButton
                     type={'primary-social'}
                     href={social.url.url_linkedIn}
-                    currentIcon={<img src={social.icon.icon_linkedIn} style={{ height: 16 }} className={'icon-social'} />}
+                    currentIcon={
+                        <img
+                            src={social.icon.icon_linkedIn}
+                            alt={t('imgAlt.social.in')}
+                            style={{ height: 16 }}
+                            className={'icon-social'}
+                        />
+                    }
                 />
             </Row>
             {/* this row is shown only when the device is bigger than 1024px */}

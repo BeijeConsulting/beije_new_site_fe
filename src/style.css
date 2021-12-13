@@ -9,23 +9,40 @@
 
 @font-face {
   font-family: 'Moderat';
-  src: url('./assets/font/Moderat/Moderat-Regular.woff');
-  font-weight: normal;
+  src: local('Moderat-regular'), url('./assets/font/Moderat/Moderat-Regular.woff') format('woff');
+  /* font-weight: normal; */
 }
-
-/* font-style: normal;
-letter-spacing: 0.06em; */
-
 
 @font-face {
   font-family: 'Moderat';
   src: url('./assets/font/Moderat/Moderat-Bold.woff');
-  font-weight: bold;
+  /* font-weight: bold; */
+}
+
+@font-face {
+  font-family: 'SpaceGrotesk-Regular';
+  src: url('./assets/font/Space_Grotesk/SpaceGrotesk-Regular.ttf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'SpaceGrotesk-Medium';
+  src: url('./assets/font/Space_Grotesk/SpaceGrotesk-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'SpaceGrotesk-Light';
+  src: url('./assets/font/Space_Grotesk/SpaceGrotesk-Light.ttf');
+}
+
+@font-face {
+  font-family: 'SpaceGrotesk-SemiBold';
+  src: url('./assets/font/Space_Grotesk/SpaceGrotesk-SemiBold.ttf'); 
 }
 
 body {
   overflow: overlay;
-  background-color: #FAFAFA;
+  background-color: #fff;
   margin: 0;
   font-family: 'Moderat', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -35,22 +52,12 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: 'SpaceGrotesk-Regular', sans-serif !important;
-  src: url('./assets/font/Space_Grotesk/SpaceGrotesk-Regular.ttf') !important;
-  /* font-family: 'Moderat';
-  src: url('./assets/font/Moderat/Moderat-Bold.woff'); */
+  font-family: 'SpaceGrotesk-Medium', sans-serif;
   letter-spacing: 0.06em;
 }
 
-h1 {
-  font-weight: 500 !important;
-  font-size: 40px !important;
-  line-height: 45px !important;
-}
-
 .grotesk-font {
-  font-family: 'SpaceGrotesk-Regular', sans-serif;
-  src: url('./assets/font/Space_Grotesk/SpaceGrotesk-Regular.ttf');
+  font-family: 'SpaceGrotesk-Regular', serif;
 }
 
 /* Added classes */
@@ -82,7 +89,11 @@ h1 {
 
 .ant-layout-header {
   line-height: 50px;
-  background-color: #FAFAFA;
+  background-color: #fff;
+}
+
+.ant-layout {
+  background-color: #fff;
 }
 
 /* Menu */
