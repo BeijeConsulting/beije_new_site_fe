@@ -1,8 +1,7 @@
-import { Layout } from 'antd'
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
 
-import { Row, Col, Typography } from 'antd';
+import { Row, Col, Typography, Layout } from 'antd';
 const { Header, Content } = Layout;
 const { Link } = Typography;
 
@@ -135,11 +134,12 @@ const BurgerMenu = (props) => {
         return className
     }
 
-
     return (
         <>
             {/* 'burger-menu-container' */}
-            <div className={!props.colorDuck.lightColor ? 'burger-menu-container' : 'burger-menu-container-light'} onClick={changeStateMenu}>
+            <div
+                className={!props.colorDuck.lightColor ? 'burger-menu-container' : 'burger-menu-container-light'}
+                onClick={changeStateMenu}>
                 <i className={state.openMenu ? 'burger-menu-open' : 'burger-menu-close'}></i>
                 <i className={state.openMenu ? 'burger-menu-open' : 'burger-menu-close burger-menu-middle-line'}></i>
                 <i className={state.openMenu ? 'burger-menu-open' : 'burger-menu-close'}></i>
@@ -149,29 +149,27 @@ const BurgerMenu = (props) => {
                 state.openMenu &&
                 <nav className="menu-overlay">
                     <Layout
-                        className={state.stateLink ? switchBgMenu() : "menu-overlay"}
-
-                    >
-                        <Header className='header-ant-style' />
+                        className={state.stateLink ? switchBgMenu() : "menu-overlay"}>
+                        <Header className='header-ant-style-transparent' />
                         <Content className={'burger-menu-content'} >
-                            <Row>
-                                <Col xs={0} lg={4} />
-                                <Col xs={24} lg={5} className='mb-20'>
+                            <Row className='burger-menu-row-content'>
+                                <Col xs={0} md={3} />
+                                <Col xs={24} md={6} className='mb-20'>
                                     {
                                         siteMenu.map(printPrimaryMenu)
                                     }
                                 </Col>
-                                <Col xs={0} lg={5} />
-                                <Col xs={24} lg={5} >
+                                <Col xs={0} md={5} />
+                                <Col xs={24} md={6} >
                                     {
                                         siteMenu.map(printSecondaryMenu)
                                     }
                                 </Col>
-                                <Col xs={0} lg={5} />
+                                <Col xs={0} md={4} />
                             </Row>
                             <Row className={'burger-menu-social'}>
 
-                                <Col sx={12} lg={24} className='container-row justify-end items-center'>
+                                <Col xs={12} md={24} className='burger-menu-social-col container-row items-center'>
                                     <CustomButton
                                         type={'primary-social'}
                                         href={social.url.url_linkedIn}
@@ -209,7 +207,7 @@ const BurgerMenu = (props) => {
                                     />
 
                                 </Col>
-                                <Col sx={12} md={0} className='burger-menu-lang'>
+                                <Col xs={12} sm={0} className='burger-menu-lang'>
                                     <SwitchLanguage />
                                 </Col>
                             </Row>

@@ -8,15 +8,13 @@
 }
 
 @font-face {
-  font-family: 'Moderat';
-  src: local('Moderat-regular'), url('./assets/font/Moderat/Moderat-Regular.woff') format('woff');
-  /* font-weight: normal; */
+  font-family: 'Moderat-Regular';
+  src: url('./assets/font/Moderat/Moderat-Regular.woff');
 }
 
 @font-face {
-  font-family: 'Moderat';
+  font-family: 'Moderat-Bold';
   src: url('./assets/font/Moderat/Moderat-Bold.woff');
-  /* font-weight: bold; */
 }
 
 @font-face {
@@ -37,7 +35,7 @@
 
 @font-face {
   font-family: 'SpaceGrotesk-SemiBold';
-  src: url('./assets/font/Space_Grotesk/SpaceGrotesk-SemiBold.ttf'); 
+  src: url('./assets/font/Space_Grotesk/SpaceGrotesk-SemiBold.ttf');
 }
 
 body {
@@ -48,16 +46,32 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   letter-spacing: 0.06em;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 h1, h2, h3, h4, h5 {
   font-family: 'SpaceGrotesk-Medium', sans-serif;
+  font-size: 35.5px !important;
+  line-height: 40px !important;
   letter-spacing: 0.06em;
+  font-weight: 500 !important;
 }
 
-.grotesk-font {
+.grotesk-font-regular {
   font-family: 'SpaceGrotesk-Regular', serif;
+}
+
+.grotesk-font-medium {
+  font-family: 'SpaceGrotesk-Medium', serif;
+}
+
+
+.grotesk-font-light {
+  font-family: 'SpaceGrotesk-Light', serif;
+}
+
+.grotesk-font-semibold {
+  font-family: 'SpaceGrotesk-SemiBold', serif;
 }
 
 /* Added classes */
@@ -88,12 +102,16 @@ h1, h2, h3, h4, h5 {
 }
 
 .ant-layout-header {
+  height: 79px !important;
   line-height: 50px;
   background-color: #fff;
 }
 
+
+
 .ant-layout {
   background-color: #fff;
+  /* align-items: center; */
 }
 
 /* Menu */
@@ -329,6 +347,10 @@ h1, h2, h3, h4, h5 {
   justify-content: flex-end;
 }
 
+.justify-around {
+  justify-content: space-around;
+}
+
 .circular-btn {
   border-radius: 50% !important;
 }
@@ -349,14 +371,22 @@ h1, h2, h3, h4, h5 {
   cursor: pointer;
 }
 
-.header-ant-style {
+.header-ant-style-transparent {
   position: fixed;
   width: 100%;
   padding: 5px 25px;
   background-color: transparent;
   z-index: 2;
-  line-height: 64px !important;
-  max-width: 1400px;
+  line-height: 53px !important;
+}
+
+.header-ant-style {
+  position: fixed;
+  width: 100%;
+  padding: 5px 25px;
+  background-color: #fff;
+  z-index: 2;
+  line-height: 53px !important;
 }
 
 .header-ant-general-style {
@@ -365,12 +395,6 @@ h1, h2, h3, h4, h5 {
   background-color: transparent;
   line-height: 64px !important;
   max-width: 1400px;
-}
-
-@media screen and (min-width: 1400px) {
-  .header-ant-style {
-    left: calc(50% - 700px);
-  }
 }
 
 .mb-20 {

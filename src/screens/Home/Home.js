@@ -20,13 +20,20 @@ import '../../layout/homeLayout/HomeLayout'
 import video_trial from '../../assets/videos/trial_video.mp4'
 
 //import components
-import CustomFooter from "../../components/functional_components/customFooter/CustomFooter";
+import ContainerSectionScroll from "../../components/functional_components/containerSectionScroll/ContainerSectionScroll";
 import FirstSection from "../../components/homeSections/firstSection/FirstSection";
 import BackgroundVideo from "../../components/functional_components/backgroundVideo/BackgroundVideo";
-import ContainerSectionScroll from "../../components/functional_components/containerSectionScroll/ContainerSectionScroll";
-import SecondSection from "../../components/homeSections/secondSection/SecondSection";
+import SecondSectionDesktop from "../../components/homeSections/secondSection/secondSectionDesktop/SecondSectionDesktop";
+import SecondSectionMobile from "../../components/homeSections/secondSection/secondSectionMobile/SecondSectionMobile";
 import ThirdSection from "../../components/homeSections/thirdSection/ThirdSection";
 import FourthSection from "../../components/homeSections/fourthSection/FourthSection";
+import CustomFooter from "../../components/functional_components/customFooter/CustomFooter";
+
+//import constats
+import { cardWhoWeAre } from "../../utils/properties";
+const historyObj = cardWhoWeAre[1];
+const missionObj = cardWhoWeAre[2];
+const visionObj = cardWhoWeAre[3];
 
 
 const Home = (props) => {
@@ -35,12 +42,23 @@ const Home = (props) => {
   useEffect(() => {
     props.dispatch(setColor(true))
     props.dispatch(setVisibility(false)) //set visibility of navbar
+    window.addEventListener("resize", updateMedia);
+    return () => window.removeEventListener("resize", updateMedia);
   }, [])
 
-  const [state, setState] = useState({
+  const [myState, setState] = useState({
     originIndex: 0,
-    destinationIndex: null
+    destinationIndex: null,
+    isDesktop: window.innerWidth >= 1024
   })
+
+  const updateMedia = () => {
+    setState({
+      ...myState,
+      isDesktop: window.innerWidth >= 1024
+    });
+  };
+
 
   //this function need three params: origin, destination, direction. 
   //Due to we are using both origin and dastination we can't remove one of the two params from the function, 
@@ -48,7 +66,7 @@ const Home = (props) => {
   const onLeave = (origin, destination) => {
 
     setState({
-      ...state,
+      ...myState,
       originIndex: origin.index
     })
   }
@@ -66,7 +84,7 @@ const Home = (props) => {
     }
 
     setState({
-      ...state,
+      ...myState,
       destinationIndex: destination.index
     })
   }
@@ -84,7 +102,7 @@ const Home = (props) => {
     <div >
       <ReactFullpage
         scrollOverflow={true}
-        sectionsColor={["transparent", "#fff", "#fff", colorContactPage]}
+        sectionsColor={myState.isDesktop ? ["transparent", "#fff", "#fff", colorContactPage] : ["transparent", "#fff", "#fff", "#fff", "#fff", "#fff", colorContactPage]}
         onLeave={onLeave}
         afterLoad={afterLoad}
         render={({ state, fullpageApi }) => {
@@ -99,9 +117,11 @@ const Home = (props) => {
                     loop
                     src={video_trial}
                   />
-                  <FirstSection
-                    callbackScroll={() => fullpageApi.moveTo(2, 0)}
-                  />
+                  <ContainerSectionScroll>
+                    <FirstSection
+                      callbackScroll={() => fullpageApi.moveTo(2, 0)}
+                    />
+                  </ContainerSectionScroll>
                 </div>
               </div>
 
@@ -110,10 +130,57 @@ const Home = (props) => {
                   className='home-container-section2'
                   scrollBar={true}
                 >
-                  <SecondSection />
+                  {myState.isDesktop &&
+                    <SecondSectionDesktop />
+                  }
+                  {!myState.isDesktop &&
+                    <SecondSectionMobile />
+                  }
 
                 </ContainerSectionScroll>
               </div>
+
+              {!myState.isDesktop &&
+
+                <div className="section">
+                  <ContainerSectionScroll
+                    className='home-container-section2'
+                    scrollBar={true}
+                  >
+                    <SecondSectionMobile
+                      obj={historyObj}
+                    />
+                  </ContainerSectionScroll>
+                </div>
+              }
+
+              {!myState.isDesktop &&
+
+                <div className="section">
+                  <ContainerSectionScroll
+                    className='home-container-section2'
+                    scrollBar={true}
+                  >
+                    <SecondSectionMobile
+                      obj={missionObj}
+                    />
+                  </ContainerSectionScroll>
+                </div>
+              }
+
+              {!myState.isDesktop &&
+
+                <div className="section">
+                  <ContainerSectionScroll
+                    className='home-container-section2'
+                    scrollBar={true}
+                  >
+                    <SecondSectionMobile
+                      obj={visionObj}
+                    />
+                  </ContainerSectionScroll>
+                </div>
+              }
 
               <div className="section">
                 <ContainerSectionScroll
@@ -141,7 +208,7 @@ const Home = (props) => {
         }}
       />
 
-    </div>
+    </div >
 
 
   );

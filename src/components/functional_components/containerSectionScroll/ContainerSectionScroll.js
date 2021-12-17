@@ -6,7 +6,7 @@ import './ContainerSectionScroll.css'
 
 const ContainerSectionScroll = (props) => {
     return (
-        <div className={`container ${get(props, 'className', '')}`}>
+        <div className={`content-container-scroll ${get(props, 'className', '')}`}>
             {props.children}
         </div>
     )

@@ -142,61 +142,46 @@ export const siteMenu = [
 
 export const cardWhoWeAre = [
   {
-    cardClassName: 'container-column width-100 height-100 items-center',
+    cardClassName: 'container-column width-100 height-100 items-center justify-around',
     titleLevel: 1,
-    classNameSquare: 'sec-section-square',
     cardTitle: 'title_value',
     titleClassName: 'sec-section-title',
-    squareClassName: 'sec-section-square',
+    paragraph: 'paragraph_value',
+    bgImage: 'sec-section-bgImg sec-section-bg1',
     show_btn: true,
     type_btn: 'primary-arrow-btn',
     orientation: 'left',
-    paragraph: 'paragraph_value'
   },
   {
-    cardClassName: 'container-column width-100 height-100 items-center',
+    cardClassName: 'container-column width-100 height-100 items-center justify-around',
     titleLevel: 1,
-    classNameSquare: 'sec-section-square',
     cardTitle: 'title_history',
     titleClassName: 'sec-section-title',
-    squareClassName: 'sec-section-square',
+    paragraph: 'paragraph_history',
+    bgImage: 'sec-section-bgImg sec-section-bg2',
     show_btn: true,
     type_btn: 'primary-arrow-btn',
     orientation: 'right',
-    paragraph: 'paragraph_history'
   },
   {
-    cardClassName: 'container-column width-100 height-100 items-center',
+    cardClassName: 'container-column width-100 height-100 items-center justify-around',
     titleLevel: 1,
-    classNameSquare: 'sec-section-square',
     cardTitle: 'title_mission',
     titleClassName: 'sec-section-title',
-    squareClassName: 'sec-section-square',
+    paragraph: 'paragraph_mission',
+    bgImage: 'sec-section-bgImg sec-section-bg3',
     show_btn: true,
     type_btn: 'primary-arrow-btn',
-    paragraph: 'paragraph_mission'
   },
   {
-    cardClassName: 'container-column width-100 height-100 items-center',
+    cardClassName: 'container-column width-100 height-100 items-center justify-around',
     titleLevel: 1,
-    classNameSquare: 'sec-section-square',
-    cardTitle: 'title_mission',
+    cardTitle: 'title_vision',
     titleClassName: 'sec-section-title',
-    squareClassName: 'sec-section-square',
+    paragraph: 'paragraph_vision',
+    bgImage: 'sec-section-bgImg sec-section-bg4',
     show_btn: true,
     type_btn: 'primary-arrow-btn',
-    paragraph: 'paragraph_mission'
-  },
-  {
-    cardClassName: 'container-column width-100 height-100 items-center',
-    titleLevel: 1,
-    classNameSquare: 'sec-section-square',
-    cardTitle: 'title_mission',
-    titleClassName: 'sec-section-title',
-    squareClassName: 'sec-section-square',
-    show_btn: true,
-    type_btn: 'primary-arrow-btn',
-    paragraph: 'paragraph_mission'
   }
 ]
 
@@ -207,80 +192,80 @@ export const carouselProfile = [
     surname: 'Cesana',
     role: 'Direttore generale',
     alt: 'FrancescoCesana',
-    classNameSingleEl: 'carousel-profile-picture carousel-profile-bg1',
-    classNameSingleElMobile: 'carousel-profile-picture carousel-profile-bg1'
+    classNameSingleEl: 'carousel-profile-single-el picture-top',
+    classNameBgImg: 'carousel-profile-picture carousel-profile-bg1'
   },
   {
     id: 2,
     name: 'Erica',
     surname: 'Mauro',
     alt: 'EricaMauro',
-    classNameSingleEl: 'carousel-profile-picture picture-middle carousel-profile-bg2',
-    classNameSingleElMobile: 'carousel-profile-picture picture-middle carousel-profile-bg2'
+    classNameSingleEl: 'carousel-profile-single-el picture-middle',
+    classNameBgImg: 'carousel-profile-picture carousel-profile-bg2'
   },
   {
     id: 3,
     name: 'Marianna',
     surname: 'Fulginiti',
     alt: 'MariannaFulginiti',
-    classNameSingleEl: 'carousel-profile-picture picture-bottom carousel-profile-bg3',
-    classNameSingleElMobile: 'carousel-profile-picture carousel-profile-bg3'
+    classNameSingleEl: 'carousel-profile-single-el picture-bottom',
+    classNameBgImg: 'carousel-profile-picture carousel-profile-bg3'
   },
   {
     id: 4,
     name: 'Ivo',
     surname: 'Mosca',
     alt: 'IvoMosca',
-    classNameSingleEl: 'carousel-profile-picture picture-middle carousel-profile-bg4',
-    classNameSingleElMobile: 'carousel-profile-picture picture-middle carousel-profile-bg4'
+    classNameSingleEl: 'carousel-profile-single-el picture-middle',
+    classNameBgImg: 'carousel-profile-picture carousel-profile-bg4'
   },
   {
     id: 5,
     name: 'Monica',
     surname: 'Industriale',
     alt: 'MonicaIndustriale',
-    classNameSingleEl: 'carousel-profile-picture carousel-profile-bg5',
-    classNameSingleElMobile: 'carousel-profile-picture carousel-profile-bg5'
+    classNameSingleEl: 'carousel-profile-single-el picture-top',
+    classNameBgImg: 'carousel-profile-picture carousel-profile-bg5'
   },
   {
     id: 6,
     name: 'Chiara',
     surname: 'Balsamini',
     alt: 'ChiaraBalsamini',
-    classNameSingleEl: 'carousel-profile-picture picture-middle carousel-profile-bg6',
-    classNameSingleElMobile: 'carousel-profile-picture picture-middle carousel-profile-bg6'
+    classNameSingleEl: 'carousel-profile-single-el picture-middle',
+    classNameBgImg: 'carousel-profile-picture carousel-profile-bg6'
   },
   {
     id: 7,
     name: 'Roberto',
     surname: 'Brogi',
     alt: 'RobertoBrogi',
-    classNameSingleEl: 'carousel-profile-picture picture-bottom carousel-profile-bg7',
-    classNameSingleElMobile: 'carousel-profile-picture carousel-profile-bg7'
+    classNameSingleEl: 'carousel-profile-single-el picture-bottom',
+    classNameBgImg: 'carousel-profile-picture carousel-profile-bg7'
   },
   {
     id: 8,
     name: 'Francesca',
     surname: 'Ferioli',
     alt: 'FrancescaFerioli',
-    classNameSingleEl: 'carousel-profile-picture picture-middle carousel-profile-bg8',
-    classNameSingleElMobile: 'carousel-profile-picture picture-middle carousel-profile-bg8'
+    classNameSingleEl: 'carousel-profile-single-el picture-middle',
+    classNameBgImg: 'carousel-profile-picture carousel-profile-bg8'
   },
   {
     id: 9,
     name: 'Francesca',
     surname: 'Bellini',
     alt: 'FrancescaBellini',
-    classNameSingleEl: 'carousel-profile-picture carousel-profile-bg9',
-    classNameSingleElMobile: 'carousel-profile-picture carousel-profile-bg9'
+    classNameSingleEl: 'carousel-profile-single-el picture-top',
+    classNameBgImg: 'carousel-profile-picture carousel-profile-bg9'
   },
   {
     id: 10,
     name: 'Maria',
     surname: 'Amigo Rodrigez',
     alt: 'MariaAmigoRodrigez',
-    classNameSingleEl: 'carousel-profile-picture picture-middle carousel-profile-bg10',
-    classNameSingleElMobile: 'carousel-profile-picture picture-middle carousel-profile-bg10'
+    classNameSingleEl: 'carousel-profile-single-el picture-middle',
+    classNameBgImg: 'carousel-profile-picture carousel-profile-bg10'
   },
 ]
 

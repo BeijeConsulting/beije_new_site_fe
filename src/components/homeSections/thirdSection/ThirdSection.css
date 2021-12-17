@@ -3,7 +3,7 @@
     height: 100%;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .third-sec-row {
@@ -22,6 +22,9 @@
 }
 
 @media screen and (min-width: 768px) {
+    .third-sec-container {
+        justify-content: center;
+    }
     .third-sec-col1 {
         /* width: 40%; */
         height: 100%

@@ -46,9 +46,11 @@
       "title_value": "VALUE",
       "title_history": "HISTORY",
       "title_mission": "MISSION",
+      "title_vision": "VISION",
       "paragraph_value": "-Crediamo in quello che facciamo e abbiamo un profondo RISPETTO per gli altri -Mostriamo GRATITUDINE, l’impegno che ogni giorno mettiamo nel nostro lavoro -Prima viene la squadra e poi l’individuo, il nostro è un lavoro di TEAM -La base per costruire la nostra community è sviluppare un SENSO DI APPARTENENZA. ",
       "paragraph_history": "Da un ideale ad un business: da più di 10 anni ci impegniamo costantemente per aggiornare il nostro know-how e siamo in grado di fornire le metodologie più moderne e le tecnologie più innovative per la realizzazione di progetti altamente specializzati. Al centro del modello Beije c’è una vision people first: le persone al centro per la creazione di un’azienda di valore. ",
-      "paragraph_mission": "Aiutiamo le aziende a realizzare progetti innovativi attraverso Team di Valore"
+      "paragraph_mission": "Aiutiamo le aziende a realizzare progetti innovativi attraverso Team di Valore",
+      "paragraph_vision": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec arcu felis, tristique ut ex consequat, volutpat maximus ipsum."
     },
     "thirdSection": {
       "title": "WHO WE ARE",

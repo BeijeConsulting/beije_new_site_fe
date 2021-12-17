@@ -66,56 +66,61 @@ const CustomFooter = (props) => {
                     </CustomCard>
                 </Col>
             </Row >
-            {/* this row is shown only when the device is smaller than 1024px */}
-            <Row className={'container-row justify-end items-center custom-footer-social'}>
-                <div style={{ marginRight: 20 }}>
+
+            <div>
+                {/* this row is shown only when the device is smaller than 1024px */}
+                <Row className={'container-row justify-end items-center custom-footer-social'}>
+                    <div style={{ marginRight: 20 }}>
+                        <CustomButton
+                            type={'primary-social'}
+                            href={social.url.url_facebook}
+                            currentIcon={
+                                <img
+                                    src={social.icon.icon_facebook}
+                                    alt={t('imgAlt.social.fb')}
+                                    style={{ height: 16 }}
+                                    className={'icon-social'}
+                                />
+                            }
+                        />
+                    </div>
+
                     <CustomButton
                         type={'primary-social'}
-                        href={social.url.url_facebook}
+                        href={social.url.url_linkedIn}
                         currentIcon={
                             <img
-                                src={social.icon.icon_facebook}
-                                alt={t('imgAlt.social.fb')}
+                                src={social.icon.icon_linkedIn}
+                                alt={t('imgAlt.social.in')}
                                 style={{ height: 16 }}
                                 className={'icon-social'}
                             />
                         }
                     />
-                </div>
+                </Row>
 
-                <CustomButton
-                    type={'primary-social'}
-                    href={social.url.url_linkedIn}
-                    currentIcon={
-                        <img
-                            src={social.icon.icon_linkedIn}
-                            alt={t('imgAlt.social.in')}
-                            style={{ height: 16 }}
-                            className={'icon-social'}
-                        />
-                    }
-                />
-            </Row>
-            {/* this row is shown only when the device is bigger than 1024px */}
-            <Row className={'container-row justify-end items-center custom-footer-translation-desktop'}>
-                <CustomCard>
-                    <p className='txt-right txt-light'>
-                        <SwitchLanguage />
-                    </p>
-                </CustomCard>
-            </Row>
-            <Row>
-                <CustomCard
-                    descriptionClassName={'custom-footer-copyright txt-light mt-10'}
-                    cardDescription={'© Copyright 2019 - Beije Consulting S.r.l - ' + t('footer.vatNumber') + ' 08057530969'}
-                />
-            </Row>
+                {/* this row is shown only when the device is bigger than 1024px */}
+                <Row className={'container-row justify-end items-center custom-footer-translation-desktop'}>
+                    <CustomCard>
+                        <p className='txt-right txt-light'>
+                            <SwitchLanguage />
+                        </p>
+                    </CustomCard>
+                </Row>
+
+                <Row>
+                    <CustomCard
+                        descriptionClassName={'custom-footer-copyright txt-light mt-10'}
+                        cardDescription={'© Copyright 2019 - Beije Consulting S.r.l - ' + t('footer.vatNumber') + ' 08057530969'}
+                    />
+                </Row>
+            </div>
         </footer >
     )
 }
 
 CustomFooter.defaultProps = {
-    classNameFooter: 'w-100 h-100'
+    classNameFooter: 'custom-footer-container w-100 h-100'
 }
 
 

@@ -1,5 +1,7 @@
-.custom-footer-first-row {
-    margin-bottom: 70px;
+.custom-footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .custom-footer-right-col {

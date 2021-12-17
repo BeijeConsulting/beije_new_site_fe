@@ -1,5 +1,5 @@
 import React from "react"
-import { Layout, Row } from "antd"
+import { Layout, Row, Col } from "antd"
 import { useTranslation } from "react-i18next"
 
 //import style
@@ -16,16 +16,27 @@ const FirstSection = (props) => {
     return (
         <Layout className={'home-fp-container'}>
             <div>
-                <Row className={'home-fp-title-container'}>
-                    <CustomCard
-                        titleClassName={'home-fp-title'}
-                        titleLevel={1}
-                        cardTitle={t('home.firstSection.title')}
-                    />
+                <Row>
+                    <Col xs={0} md={4} />
+                    <Col xs={24} md={16}>
+                        <CustomCard
+                            titleClassName={'home-fp-title'}
+                            titleLevel={1}
+                            cardTitle={t('home.firstSection.title')}
+                        />
+                    </Col>
+                    <Col xs={0} md={4} />
                 </Row>
-                <Navbar
-                    classNameLink={'navbar-home-link'}
-                />
+                <Row>
+                    <Col xs={0} md={4} />
+                    <Col xs={0} md={16}>
+                        <Navbar
+                            classNameLink={'navbar-home-link'}
+                        />
+                    </Col>
+                    <Col xs={0} md={4} />
+                </Row>
+
             </div>
             <div>
                 <ScrollButton

@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from "react";
+
+import { get } from "lodash";
+
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
+
+import { Typography } from "antd";
+const { Text } = Typography
 
 //import style
 import './CustomCarousel.css'
@@ -12,8 +18,13 @@ import { carouselProfile } from "../../../utils/properties";
 const ImageCarousel = (props) => {
 
     const [state, setState] = useState({
-        dimensionDevice: window.innerWidth
+        dimensionDevice: window.innerWidth,
     })
+
+    useEffect(() => {
+        window.addEventListener("resize", updateMedia);
+        return () => window.removeEventListener("resize", updateMedia);
+    });
 
     const updateMedia = () => {
         setState({
@@ -22,43 +33,55 @@ const ImageCarousel = (props) => {
         });
     };
 
-    useEffect(() => {
-        window.addEventListener("resize", updateMedia);
-        return () => window.removeEventListener("resize", updateMedia);
-    });
-
     const switchMrgin = () => {
         let marginEl = 20
         let dimensionDevice = state.dimensionDevice
         if (dimensionDevice < 768) {
-            marginEl = -5
+            marginEl = props.marginMobile
         }
         return marginEl
     }
 
     const switchNumItems = () => {
-        let numItem = 4.5
+        let numItem = props.numItemDefault
         let dimensionDevice = state.dimensionDevice
 
-        if (dimensionDevice < 768) {
-            numItem = 1.5
+        if (dimensionDevice <= 320) {
+            numItem = props.numItemMobile
+        }
+        else if (dimensionDevice > 320 && dimensionDevice < 768) {
+            numItem = props.numItemMore320Less768
         }
         else if (dimensionDevice >= 768 && dimensionDevice < 1024) {
-            numItem = 3.2
+            numItem = props.numItemMore768
         }
         return numItem
     }
 
     const printItems = (item, key) => {
         return (
-            <div
-                key={key}
-                className={`item ${item.classNameSingleEl}`}
-            >
-                <div className={'custom-carousel-lable'} role={props.roleDiv} aria-label={item.alt}>
 
+            < div
+                key={key}
+                className={get(item, 'classNameSingleEl', '')}
+            >
+                <div
+                    className={`item ${item.classNameBgImg}`}
+                >
                 </div>
-            </div>
+
+                <div className={'custom-carousel-lable'} role={props.roleDiv} aria-label={item.alt}>
+                    <Text strong className='custom-carousel-lable-text'>
+                        {item.name}
+                    </Text>
+                    <Text strong className='custom-carousel-lable-text'>
+                        {item.surname}
+                    </Text>
+                </div>
+
+            </div >
+
+
         )
     }
 
@@ -85,7 +108,12 @@ ImageCarousel.defaultProps = {
     classNameContainer: 'carousel-container',
     itemsCarousel: carouselProfile,
     dots: false,
-    roleDiv: 'img'
+    roleDiv: 'img',
+    marginMobile: 0,
+    numItemMobile: 1.5,
+    numItemMore320Less768: 2.3,
+    numItemMore768: 3.2,
+    numItemDefault: 4.5
 }
 
 export default ImageCarousel

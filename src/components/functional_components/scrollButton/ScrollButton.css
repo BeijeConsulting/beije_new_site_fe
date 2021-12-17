@@ -7,6 +7,9 @@
 }
 
 .scroll-btn-text {
+    font-family: 'SpaceGrotesk-SemiBold', sans-serif;
+    font-size: 16px;
+    line-height: 63px;
     margin-bottom: -22px;
     color: #fff;
 }

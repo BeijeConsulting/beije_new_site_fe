@@ -80,8 +80,9 @@ const CustomForm = (props) => {
                     className='form-input'
                 />
             </Form.Item>
+
             <Row>
-                <Col xs={0} md={24} lg={12}>
+                <Col xs={0} md={11}>
                     <Form.Item
                         name={["info_message", "address"]}
                     >
@@ -91,8 +92,8 @@ const CustomForm = (props) => {
                         />
                     </Form.Item>
                 </Col>
-                <Col xs={0} md={0} lg={1} />
-                <Col xs={0} md={16} lg={6}>
+                <Col xs={0} md={1} />
+                <Col xs={0} md={6}>
                     <Form.Item
 
                         name={["info_message", "municipality"]}
@@ -106,8 +107,8 @@ const CustomForm = (props) => {
                         />
                     </Form.Item>
                 </Col>
-                <Col xs={0} md={1} lg={1} />
-                <Col xs={0} md={7} lg={4}>
+                <Col xs={0} md={1}/>
+                <Col xs={0} md={5}>
                     <Form.Item
 
                         name={["info_message", "province"]}
