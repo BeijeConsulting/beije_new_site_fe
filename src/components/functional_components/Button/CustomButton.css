@@ -111,3 +111,10 @@
     border: 1px solid var(--primary-btn-color) !important;
     color: var(--primary-btn-color) !important;
 }
+
+/* Carousel btn front back */
+.custom-btn-carousel {
+    color: var(--primary-btn-color) !important;
+    background-color: transparent !important;
+    
+}

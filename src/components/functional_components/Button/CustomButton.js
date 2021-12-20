@@ -20,21 +20,6 @@ const CustomButton = (props) => {
       case "primary-menu":
         currentClassName = "custom-btn-primary-menu"
         break;
-      case "secondary-menu":
-        currentClassName = ""
-        break;
-      case "primary-plus":
-        currentClassName = ""
-        break;
-      case "secondary-plus":
-        currentClassName = ""
-        break;
-      case "primary-minus":
-        currentClassName = ""
-        break;
-      case "secondary-minus":
-        currentClassName = ""
-        break;
       case "scroll-page":
         currentClassName = "custom-btn-scroll"
         break;
@@ -46,6 +31,9 @@ const CustomButton = (props) => {
         break;
       case "form-btn":
         currentClassName = "custom-btn-form"
+        break;
+      case "carousel-btn":
+        currentClassName = "custom-btn-carousel"
         break;
       default:
         currentClassName = ""

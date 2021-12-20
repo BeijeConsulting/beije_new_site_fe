@@ -8,10 +8,10 @@ import icon_facebook from '../assets/icons/social_icon/f_facebook_dark.png'
 import icon_instagram from '../assets/icons/social_icon/in_instagram_dark.png'
 import icon_youTube from '../assets/icons/social_icon/youtube_dark.png'
 
-//images to use in website
+//images used in consulting page
 import img1_consulting from '../assets/images/beije_team_office/ITA_1975_Web.jpg'
 import img2_consulting from '../assets/images/beije_team_office/ITA_2633_Web.jpg'
-
+import icon1_consulting from '../assets/icons/icon_pc.svg'
 
 export const consulting1 = img1_consulting;
 export const consulting2 = img2_consulting;
@@ -166,20 +166,20 @@ export const cardWhoWeAre = [
   {
     cardClassName: 'container-column width-100 height-100 items-center justify-around',
     titleLevel: 1,
-    cardTitle: 'title_mission',
+    cardTitle: 'title_vision',
     titleClassName: 'sec-section-title',
-    paragraph: 'paragraph_mission',
-    bgImage: 'sec-section-bgImg sec-section-bg3',
+    paragraph: 'paragraph_vision',
+    bgImage: 'sec-section-bgImg sec-section-bg4',
     show_btn: true,
     type_btn: 'primary-arrow-btn',
   },
   {
     cardClassName: 'container-column width-100 height-100 items-center justify-around',
     titleLevel: 1,
-    cardTitle: 'title_vision',
+    cardTitle: 'title_mission',
     titleClassName: 'sec-section-title',
-    paragraph: 'paragraph_vision',
-    bgImage: 'sec-section-bgImg sec-section-bg4',
+    paragraph: 'paragraph_mission',
+    bgImage: 'sec-section-bgImg sec-section-bg3',
     show_btn: true,
     type_btn: 'primary-arrow-btn',
   }
@@ -267,6 +267,28 @@ export const carouselProfile = [
     classNameSingleEl: 'carousel-profile-single-el picture-middle',
     classNameBgImg: 'carousel-profile-picture carousel-profile-bg10'
   },
+]
+
+
+export const consulting_carousel_client = [
+  {
+    carouselTitle: 'title_carousel_client',
+    iconSrc: icon1_consulting,
+    titlePenrcentage: '100%',
+    carouselDesc: 'paragraph1_carousel_client'
+  },
+  {
+    carouselTitle: 'title_carousel_client',
+    iconSrc: icon1_consulting,
+    titlePenrcentage: '94%',
+    carouselDesc: 'paragraph2_carousel_client'
+  },
+  {
+    carouselTitle: 'title_carousel_client',
+    iconSrc: icon1_consulting,
+    titlePenrcentage: '100%',
+    carouselDesc: 'paragraph3_carousel_client'
+  }
 ]
 
 /*

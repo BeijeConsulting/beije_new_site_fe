@@ -1,25 +1,94 @@
 :root {
     --bg-color-primary: var(--third-color);
+    --bg-color-secondary: var(--fourth-color);
 }
 
 .consulting-container {
-    background-color: var(--bg-color-primary) !important;
+    background-color: var(--bg-color-secondary) !important;
+    padding-top: 80px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.consulting-section1 {
+    background-color: var(--bg-color-primary);
+    padding-top: 20px;
+    clip-path: polygon(0 0,
+            100% 0,
+            100% 100%,
+            0 calc(100% - 10vw));
+    padding-bottom: 157px;
+    margin-bottom: -50px;
+}
+
+.consulting-title-container {
+    padding: 0 20px;
+}
+
+
+.consulting-intro-container {
+    /* height: 273px; */
+    width: 100%;
+    padding: 0 20px;
 }
 
 .consulting-intro {
     font-weight: 400px;
     font-size: 26px;
     line-height: 42px;
-    letter-spacing: 6%;
+    letter-spacing: 0.06em;
+    margin: 0 !important;
+}
+
+.consulting-images-container {
+    height: 257px;
+    width: 100%;
+}
+
+.consulting-img1-container .ant-image {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .consulting-images {
-    width: 382px;
+    width: 90%;
     height: 257px;
-    border-radius: 30px;
 }
 
-.consulting-description {
+.consulting-img1 {
+    border-radius: 30px 0 0 30px;
+}
+
+.consulting-desc-container {
+    letter-spacing: 6%;
     font-size: 18px;
     line-height: 26px;
+    padding: 20px;
+}
+
+.consulting-img2 {
+    border-radius: 0 30px 30px 0;
+}
+
+.consulting-section2 {
+    padding: 0 20px;
+}
+
+.consulting-carousel1-mobile {
+    display: block;
+}
+
+.consulting-card1-desktop {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .consulting-carousel1-mobile {
+        display: none;
+    }
+
+    .consulting-card1-desktop {
+        display: flex;
+    }
 }

@@ -7,7 +7,7 @@ import './ThirdSection.css'
 
 //import components
 import CustomCard from "../../functional_components/customCard/CustomCard";
-import ImageCarousel from "../../hooks_components/customCarousel/CustomCarousel";
+import ImageCarousel from "../../hooks_components/customOwlCarousel/CustomOwlCarousel";
 
 const ThirdSection = () => {
 

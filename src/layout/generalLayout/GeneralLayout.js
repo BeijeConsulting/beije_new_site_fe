@@ -13,14 +13,18 @@ const { Header, Footer, Content } = Layout;
 
 const GeneralLayout = (props) => {
     return (
-        <Layout style={{ backgroundColor: 'red' }}>
+        <Layout style={{ backgroundColor: 'blue' }}>
 
             <Layout>
-                <Header className= {!props.menuDuck.menuOpen? 'header-ant-general-style' : 'header-ant-style'}>
+                <Header
+                    className={!props.menuDuck.menuOpen ? 'header-ant-general-style' : 'header-ant-style'}
+                >
                     <CustomHeader />
                 </Header>
 
-                <Layout className='generalLayout-content'>
+                <Layout
+                    className='generalLayout-content'
+                >
                     <Content>
                         <div >
                             <Outlet />
@@ -34,7 +38,7 @@ const GeneralLayout = (props) => {
                     <CustomFooter />
                 </Footer>
             }
-        </Layout>
+        </Layout >
     )
 }
 

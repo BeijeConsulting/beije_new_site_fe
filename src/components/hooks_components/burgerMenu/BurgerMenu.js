@@ -184,23 +184,24 @@ const BurgerMenu = (props) => {
                                     <div style={{ margin: 20 }}>
                                         <CustomButton
                                             type={'primary-social'}
-                                            href={social.url.url_youTube}
+                                            href={social.url.url_facebook}
                                             currentIcon={
                                                 <img
-                                                    src={social.icon.icon_youTube}
-                                                    alt={t('imgAlt.social.youTube')}
+                                                    src={social.icon.icon_facebook}
+                                                    alt={t('imgAlt.social.fb')}
                                                     style={{ height: 16 }}
                                                     className={'icon-social'}
                                                 />}
                                         />
                                     </div>
+
                                     <CustomButton
                                         type={'primary-social'}
-                                        href={social.url.url_facebook}
+                                        href={social.url.url_youTube}
                                         currentIcon={
                                             <img
-                                                src={social.icon.icon_facebook}
-                                                alt={t('imgAlt.social.fb')}
+                                                src={social.icon.icon_youTube}
+                                                alt={t('imgAlt.social.youTube')}
                                                 style={{ height: 16 }}
                                                 className={'icon-social'}
                                             />}

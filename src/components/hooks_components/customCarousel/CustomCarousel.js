@@ -1,119 +1,118 @@
-import React, { useState, useEffect } from "react";
+import React, { useRef } from "react";
 
-import { get } from "lodash";
+import { useTranslation } from "react-i18next";
 
-import OwlCarousel from 'react-owl-carousel';
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
-
-import { Typography } from "antd";
-const { Text } = Typography
+import { Carousel, Row, Col } from 'antd';
+import {
+    ArrowLeftOutlined,
+    ArrowRightOutlined
+} from '@ant-design/icons';
 
 //import style
 import './CustomCarousel.css'
 
 //import constants
-import { carouselProfile } from "../../../utils/properties";
+import { consulting_carousel_client } from "../../../utils/properties";
 
-const ImageCarousel = (props) => {
+//import components
+import CustomCard from "../../functional_components/customCard/CustomCard";
 
-    const [state, setState] = useState({
-        dimensionDevice: window.innerWidth,
-    })
+const CustomCarousel = (props) => {
 
-    useEffect(() => {
-        window.addEventListener("resize", updateMedia);
-        return () => window.removeEventListener("resize", updateMedia);
-    });
+    const { t } = useTranslation()
 
-    const updateMedia = () => {
-        setState({
-            ...state,
-            dimensionDevice: window.innerWidth
-        });
-    };
+    // const carouselRef = React.createRef();
+    const carouselRef = useRef()
 
-    const switchMrgin = () => {
-        let marginEl = 20
-        let dimensionDevice = state.dimensionDevice
-        if (dimensionDevice < 768) {
-            marginEl = props.marginMobile
-        }
-        return marginEl
-    }
-
-    const switchNumItems = () => {
-        let numItem = props.numItemDefault
-        let dimensionDevice = state.dimensionDevice
-
-        if (dimensionDevice <= 320) {
-            numItem = props.numItemMobile
-        }
-        else if (dimensionDevice > 320 && dimensionDevice < 768) {
-            numItem = props.numItemMore320Less768
-        }
-        else if (dimensionDevice >= 768 && dimensionDevice < 1024) {
-            numItem = props.numItemMore768
-        }
-        return numItem
-    }
-
-    const printItems = (item, key) => {
+    const printElCarousel = (item, key) => {
         return (
+            <div key={key}>
+                <Row>
+                    <Col xs={4} className={'custom-carousel-col-arrow'}>
+                        <CustomCard
+                            cardButton
+                            currentIcon={
+                                <ArrowLeftOutlined
+                                    className={'custom-carousel-arrow'}
+                                />}
+                            type={'carousel-btn'}
 
-            < div
-                key={key}
-                className={get(item, 'classNameSingleEl', '')}
-            >
-                <div
-                    className={`item ${item.classNameBgImg}`}
-                >
-                </div>
+                            clickCallback={() => {
+                                carouselRef.current.prev();
+                            }}
+                        />
+                    </Col>
+                    <Col xs={16} className={'container-column items-center justify-center'}>
+                        <CustomCard
+                            cardClassName={'custom-carousel-icon'}
+                            imgPreview={false}
+                            cardImg
+                            imgSrc={item.iconSrc}
+                            imgHeight={42}
+                            imgWidth={56}
+                        />
+                        <div className='separator-line-vertical'></div>
+                        <CustomCard
+                            titleLevel={1}
+                            cardTitle={item.titlePenrcentage}
+                            titleClassName={'center'}
+                        />
+                    </Col>
+                    <Col xs={4} className={'custom-carousel-col-arrow'}>
+                        <CustomCard
+                            cardButton
+                            currentIcon={
+                                <ArrowRightOutlined
+                                    className={'custom-carousel-arrow'}
+                                />}
+                            type={'carousel-btn'}
+                            clickCallback={() => {
+                                carouselRef.current.next();
+                            }}
 
-                <div className={'custom-carousel-lable'} role={props.roleDiv} aria-label={item.alt}>
-                    <Text strong className='custom-carousel-lable-text'>
-                        {item.name}
-                    </Text>
-                    <Text strong className='custom-carousel-lable-text'>
-                        {item.surname}
-                    </Text>
-                </div>
+                        />
+                    </Col>
 
-            </div >
-
-
+                </Row>
+                <Row>
+                    <Col xs={4}>
+                    </Col>
+                    <Col xs={16}>
+                        <CustomCard
+                            cardParagraph={t(`Consulting.${item.carouselDesc}`)}
+                            paragraphClassName={'custom-carousel-paragraph'}
+                        />
+                    </Col>
+                    <Col xs={4}>
+                    </Col>
+                </Row>
+            </div>
         )
     }
 
     return (
-
-        < OwlCarousel
-            loop={props.loop}
-            margin={switchMrgin()}
-            mergeFit={props.mergeFit}
-            items={switchNumItems()}
+        <Carousel
+            effect={props.effect}
             dots={props.dots}
-            className={`owl-theme owl-drag owl-stage ${props.classNameContainer}`
-            }
+            ref={carouselRef}
         >
-            {props.itemsCarousel.map(printItems)}
-        </OwlCarousel >
+            {
+                !!props.obj &&
+                props.obj.map(printElCarousel)
+            }
+            {
+                props.obj === undefined || props.obj == [] &&
+                props.children
+            }
+
+        </Carousel>
     )
-
 }
 
-ImageCarousel.defaultProps = {
-    loop: true,
-    mergeFit: true,
-    classNameContainer: 'carousel-container',
-    itemsCarousel: carouselProfile,
+CustomCarousel.defaultProps = {
     dots: false,
-    roleDiv: 'img',
-    marginMobile: 0,
-    numItemMobile: 1.5,
-    numItemMore320Less768: 2.3,
-    numItemMore768: 3.2,
-    numItemDefault: 4.5
+    effect: 'scrollx',
+    obj: consulting_carousel_client
 }
 
-export default ImageCarousel
+export default CustomCarousel

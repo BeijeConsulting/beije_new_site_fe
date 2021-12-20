@@ -42,19 +42,31 @@ body {
   overflow: overlay;
   background-color: #fff;
   margin: 0;
-  font-family: 'Moderat', sans-serif;
+  font-family: 'Moderat-Regular', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   letter-spacing: 0.06em;
-  font-size: 15px;
+  font-size: 20px;
+  line-height: 35px;
+  font-weight: 400 !important;
+  color: var(--first-color) !important;
 }
 
 h1, h2, h3, h4, h5 {
   font-family: 'SpaceGrotesk-Medium', sans-serif;
-  font-size: 35.5px !important;
-  line-height: 40px !important;
+  font-size: 40px !important;
+  line-height: 45px !important;
   letter-spacing: 0.06em;
   font-weight: 500 !important;
+  color: var(--first-color) !important;
+}
+
+h2 {
+  font-family: 'SpaceGrotesk-Medium', sans-serif;
+  font-size: 30px !important;
+  line-height: 38px !important;
+  letter-spacing: 6%;
+  font-weight: 700 !important;
 }
 
 .grotesk-font-regular {
@@ -64,7 +76,6 @@ h1, h2, h3, h4, h5 {
 .grotesk-font-medium {
   font-family: 'SpaceGrotesk-Medium', serif;
 }
-
 
 .grotesk-font-light {
   font-family: 'SpaceGrotesk-Light', serif;
@@ -355,18 +366,6 @@ h1, h2, h3, h4, h5 {
   border-radius: 50% !important;
 }
 
-/* .bold-400 {
-  font-weight: 400;
-}
-
-.bold-500 {
-  font-weight: 500;
-}
-
-.bold-700 {
-  font-weight: 700;
-} */
-
 .cursor-pointer {
   cursor: pointer;
 }
@@ -390,11 +389,14 @@ h1, h2, h3, h4, h5 {
 }
 
 .header-ant-general-style {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   padding: 5px 25px;
-  background-color: transparent;
+  background-color: #fff;
   line-height: 64px !important;
-  max-width: 1400px;
+  z-index: 2;
 }
 
 .mb-20 {

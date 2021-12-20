@@ -1,14 +1,9 @@
 :root {
-    --primary-color-footer: var(--first-color)
+    --primary-color-footer: var(--first-color);
 }
 
-/* .basicLayout-header {
-    padding: 5px 10px;
-    background-color: transparent;
-} */
-
 .generalLayout-content {
-    padding: 20px 20px 20px;
+    margin-top: calc(100% - 280);
 }
 
 .generalLayout-footer {
