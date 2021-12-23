@@ -70,8 +70,8 @@
 /* Arrow Button */
 
 .primary-arrow {
-    width: 40px !important;
-    height: 40px !important;
+    width: 55px !important;
+    height: 55px !important;
     background-color: var(--primary-btn-color);
     border: none !important;
     color: #fff !important;
@@ -87,13 +87,23 @@
     box-shadow: 4px 4px 6px 0px var(--primary-btn-shadow);
 }
 
+.arrow-icon-btn {
+    font-size: 18px !important;
+    line-height: 26px !important;
+}
+
 @media screen and (min-width: 1024px) {
     .primary-arrow {
-        width: 55px !important;
-        height: 55px !important;
+        width: 84px !important;
+        height: 84px !important;
         background-color: var(--primary-btn-color);
         border: none !important;
         color: #fff !important;
+    }
+
+    .arrow-icon-btn {
+        font-size: 20px !important;
+        line-height: 35px !important;
     }
 }
 
@@ -116,5 +126,67 @@
 .custom-btn-carousel {
     color: var(--primary-btn-color) !important;
     background-color: transparent !important;
-    
+}
+
+
+/* View more btn */
+.custom-btn-view-all {
+    font-family: 'SpaceGrotesk-SemiBold', sans-serif !important;
+    font-size: 18px !important;
+    line-height: 60px !important;
+    font-weight: bold;
+    color: var(--primary-btn-color) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none !important;
+}
+
+/* .custom-btn-view-all:hover {
+    box-shadow: 4px 4px 6px 0px var(--primary-btn-shadow);
+}
+
+.custom-btn-view-all:focus {
+    box-shadow: 4px 4px 6px 0px var(--primary-btn-shadow);
+} */
+
+/* Drag for more btn */
+.custom-btn-drag-more {
+    width: 110px;
+    height: 110px;
+    background-color: var(--primary-btn-color);
+    position: absolute;
+    top: 20%;
+    right: 0;
+    z-index: 1;
+    color: #fff;
+    border-radius: 100%;
+    font-family: 'SpaceGrotesk-SemiBold', sans-serif !important;
+    font-weight: bold;
+    font-size: 15px !important;
+    line-height: 20px !important;
+    border: none !important;
+}
+
+.custom-btn-drag-more:hover {
+    background-color: var(--primary-btn-color);
+    box-shadow: 4px 4px 6px 0px var(--primary-btn-shadow);
+    color: #fff;
+}
+
+.custom-btn-drag-more:focus {
+    background-color: var(--primary-btn-color);
+    box-shadow: 4px 4px 6px 0px var(--primary-btn-shadow);
+    color: #fff;
+}
+
+@media screen and (min-width: 1024px) {
+    .custom-btn-drag-more {
+        width: 134px;
+        height: 134px;
+        top: 0;
+        right: 30%;
+        font-size: 18px !important;
+        line-height: 27px !important;
+    }
 }

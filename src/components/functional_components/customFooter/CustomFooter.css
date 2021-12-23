@@ -11,12 +11,15 @@
 
 .custom-footer-title {
     font-size: 15px !important;
-    /* font-weight: 700 !important; */
+    line-height: 30px !important;
+    font-weight: bold;
+    color: #fff;
 }
 
 .custom-footer-description {
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 15px !important;
+    line-height: 25px !important;
+    color: #fff;
 }
 
 .custom-footer-copyright {

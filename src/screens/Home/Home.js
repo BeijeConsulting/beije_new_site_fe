@@ -16,8 +16,8 @@ import './Home.css';
 import '../../style.css'
 import '../../layout/homeLayout/HomeLayout'
 
-//import assets
-import video_trial from '../../assets/videos/trial_video.mp4'
+//import constants
+import { video_home } from "../../utils/properties";
 
 //import components
 import ContainerSectionScroll from "../../components/functional_components/containerSectionScroll/ContainerSectionScroll";
@@ -108,24 +108,24 @@ const Home = (props) => {
         render={({ state, fullpageApi }) => {
           return (
             <div style={{ height: '100vh' }}>
-              <div className="section section1">
+              <section className="section section1">
 
                 <div className='home-video-filter'>
-                  <BackgroundVideo
+                  {/* <BackgroundVideo
                     autoPlay
                     muted
                     loop
-                    src={video_trial}
-                  />
+                    src={video_home}
+                  /> */}
                   <ContainerSectionScroll>
                     <FirstSection
                       callbackScroll={() => fullpageApi.moveTo(2, 0)}
                     />
                   </ContainerSectionScroll>
                 </div>
-              </div>
+              </section>
 
-              <div className="section section2">
+              <section className="section section2">
                 <ContainerSectionScroll
                   className='home-container-section2'
                   scrollBar={true}
@@ -138,11 +138,11 @@ const Home = (props) => {
                   }
 
                 </ContainerSectionScroll>
-              </div>
+              </section>
 
               {!myState.isDesktop &&
 
-                <div className="section">
+                <section className="section">
                   <ContainerSectionScroll
                     className='home-container-section2'
                     scrollBar={true}
@@ -151,12 +151,12 @@ const Home = (props) => {
                       obj={historyObj}
                     />
                   </ContainerSectionScroll>
-                </div>
+                </section>
               }
 
               {!myState.isDesktop &&
 
-                <div className="section">
+                <section className="section">
                   <ContainerSectionScroll
                     className='home-container-section2'
                     scrollBar={true}
@@ -165,12 +165,12 @@ const Home = (props) => {
                       obj={missionObj}
                     />
                   </ContainerSectionScroll>
-                </div>
+                </section>
               }
 
               {!myState.isDesktop &&
 
-                <div className="section">
+                <section className="section">
                   <ContainerSectionScroll
                     className='home-container-section2'
                     scrollBar={true}
@@ -179,29 +179,29 @@ const Home = (props) => {
                       obj={visionObj}
                     />
                   </ContainerSectionScroll>
-                </div>
+                </section>
               }
 
-              <div className="section">
+              <section className="section">
                 <ContainerSectionScroll
                   className='home-container-section3'
                 >
                   <ThirdSection />
 
                 </ContainerSectionScroll>
-              </div>
+              </section>
 
-              <div className="section">
+              <section className="section">
                 <ContainerSectionScroll>
                   <FourthSection />
                 </ContainerSectionScroll>
-              </div>
+              </section>
 
-              <div className="section">
+              <section className="section">
                 <Footer className={'homeLayout-footer'}>
                   <CustomFooter />
                 </Footer>
-              </div>
+              </section>
 
             </div>
           );

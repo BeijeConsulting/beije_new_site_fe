@@ -7,24 +7,37 @@
 }
 
 .third-sec-row {
-    height: 90%;
+    height: 100%;
     width: 100%;
 }
 
 .third-sec-col1 {
     width: 100%;
-    height: 30%
 }
 
 .third-sec-col2 {
     width: 100%;
-    height: 80%
+    /* height: 80%; */
+    position:relative
+}
+
+.third-sec-col3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 10px;
+}
+
+.third-sec-description {
+    display: none;
 }
 
 @media screen and (min-width: 768px) {
     .third-sec-container {
         justify-content: center;
     }
+
     .third-sec-col1 {
         /* width: 40%; */
         height: 100%
@@ -34,4 +47,9 @@
         /* width: 60%; */
         height: 100%
     }
+
+    .third-sec-description {
+        display: block;
+    }
+
 }

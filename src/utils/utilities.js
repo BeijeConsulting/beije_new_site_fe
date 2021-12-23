@@ -26,7 +26,7 @@ export const showError = (error) => {
   });
 }
 
-export const showSuccess = (message ="SuccessNotificationContent") => {
+export const showSuccess = (message = "SuccessNotificationContent") => {
   notification.open({
     duration: 5,
     className: 'notification-success',
@@ -41,9 +41,9 @@ export const buildQueryString = (actQS, data) => {
     actQS[k] = data[k];
   });
   Object.keys(actQS).forEach((k, i) => {
-    newQueryString = newQueryString + (i !== 0 ? `&${k}=${!actQS[k] ? '' :  actQS[k]}` : `${k}=${actQS[k]}`);
+    newQueryString = newQueryString + (i !== 0 ? `&${k}=${!actQS[k] ? '' : actQS[k]}` : `${k}=${actQS[k]}`);
   });
-  return { string: newQueryString, obj: actQS};
+  return { string: newQueryString, obj: actQS };
 }
 
 
@@ -64,23 +64,23 @@ export const formatNumber = (props) => {
       break;
   }
   return <NumberFormat
-                  id={props.id}
-                  name={props.name}
-                  value={props.value}
-                  key={props.key}
-                  displayType={props.displayType ? props.displayType : 'text'}
-                  thousandSeparator={props.lang === 'GB' ? ',' : '.'}
-                  decimalSeparator={props.lang === 'GB' ? '.' : ','}
-                  decimalScale={2}
-                  fixedDecimalScale
-                  suffix={numberSuffix}
-                  customInput={props.customInput}
-                  onChange={props.onChange}
-                  onBlur={props.onBlur}
-                  isAllowed={props.isAllowed}
-                  disabled={props.disabled}
-                  allowEmptyFormatting={props.displayType === 'input'}
-          />
+    id={props.id}
+    name={props.name}
+    value={props.value}
+    key={props.key}
+    displayType={props.displayType ? props.displayType : 'text'}
+    thousandSeparator={props.lang === 'GB' ? ',' : '.'}
+    decimalSeparator={props.lang === 'GB' ? '.' : ','}
+    decimalScale={2}
+    fixedDecimalScale
+    suffix={numberSuffix}
+    customInput={props.customInput}
+    onChange={props.onChange}
+    onBlur={props.onBlur}
+    isAllowed={props.isAllowed}
+    disabled={props.disabled}
+    allowEmptyFormatting={props.displayType === 'input'}
+  />
 }
 
 export const unformatNumber = (value, lang) => {
@@ -89,4 +89,10 @@ export const unformatNumber = (value, lang) => {
   let number = replace(value, regexThousand, '');
   number = replace(number, regexDecimal, '.');
   return toNumber(number);
+}
+
+
+export const turnToUppercase = (sentence) => {
+  let new_sentence = sentence
+  return (new_sentence.toUpperCase())
 }

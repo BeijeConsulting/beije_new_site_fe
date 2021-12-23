@@ -1,10 +1,13 @@
 import React from 'react'
 import { Image, Typography } from "antd"
 
+//import style
+import './CustomCard.css'
+
 //import components
 import CustomButton from "../../functional_components/Button/CustomButton"
 
-const { Title, Paragraph } = Typography
+const { Title, Paragraph, Text } = Typography
 
 const CustomCard = (props) => {
 
@@ -38,13 +41,20 @@ const CustomCard = (props) => {
             }
             {
                 !!props.cardDescription &&
-                <p style={props.descriptionStyle} className={props.descriptionClassName}>
+                // <p style={props.descriptionStyle} className={props.descriptionClassName}>
+                //     {props.cardDescription}
+                //     <br />
+                //     {props.cardDescription2}
+                //     <br />
+                //     {props.cardDescription3}
+                // </p>
+                <Text style={props.descriptionStyle} className={`custom-card-description ${props.descriptionClassName}`}>
                     {props.cardDescription}
                     <br />
                     {props.cardDescription2}
                     <br />
                     {props.cardDescription3}
-                </p>
+                </Text>
             }
             {
                 !!props.cardParagraph &&

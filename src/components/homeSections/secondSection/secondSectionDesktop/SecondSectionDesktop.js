@@ -35,17 +35,21 @@ const SecondSectionDesktop = () => {
                     titleClassName={item.titleClassName}
                     cardParagraph={_truncate(t(`home.secondSection.${item.paragraph}`),
                         {
-                            length: 100,
+                            length: 80,
                             separator: '...'
                         }
                     )}
+                    // cardParagraph={t(`home.secondSection.${item.paragraph}`)}
                     paragraphClassName={'sec-section-paragraph'}
                 >
                     <CustomCard
                         cardClassName={item.bgImage}
                         cardButton={item.show_btn}
                         type={item.type_btn}
-                        currentIcon={<ArrowRightOutlined />}
+                        currentIcon={
+                            <ArrowRightOutlined
+                                className='arrow-icon-btn' />
+                        }
                     />
                 </CustomCard>
             </Col>

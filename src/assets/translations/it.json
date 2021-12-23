@@ -14,6 +14,10 @@
     "not_valid_msg": "Campo non valido",
     "agreement": "Accetta le condizioni"
   },
+  "btn": {
+    "viewAll": "Vedi tutti",
+    "drag": "Drag for more"
+  },
   "imgAlt": {
     "social": {
       "fb": "Link a Facebook",
@@ -90,6 +94,8 @@
     "title_carousel_client": "SODDISFAZIONE CLIENTI",
     "paragraph1_carousel_client": "Reputa che Beije Consulting sia un’azienda affidabile",
     "paragraph2_carousel_client": "Pensa che i nostri consulenti dispongano di una preparazione tecnica adeguata e in linea con la loro seniority",
-    "paragraph3_carousel_client": "Raccomanderebbe la società Beije Consulting ai propri partners"
+    "paragraph3_carousel_client": "Raccomanderebbe la società Beije Consulting ai propri partners",
+    "title_add_info": "RICHIEDI MAGGIORI INFORMAZIONI",
+    "description_add_info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan lacus quis nibh porta, eget porttitor neque feugiat."
   }
 }

@@ -8,11 +8,17 @@ import icon_facebook from '../assets/icons/social_icon/f_facebook_dark.png'
 import icon_instagram from '../assets/icons/social_icon/in_instagram_dark.png'
 import icon_youTube from '../assets/icons/social_icon/youtube_dark.png'
 
-//images used in consulting page
+//assets used in home page
+// import official_video_home from '../assets/videos/official_video_home.mp4'
+
+//assets used in consulting page
 import img1_consulting from '../assets/images/beije_team_office/ITA_1975_Web.jpg'
 import img2_consulting from '../assets/images/beije_team_office/ITA_2633_Web.jpg'
 import icon1_consulting from '../assets/icons/icon_pc.svg'
 
+
+//export assets
+// export const video_home = official_video_home;
 export const consulting1 = img1_consulting;
 export const consulting2 = img2_consulting;
 
@@ -143,7 +149,7 @@ export const siteMenu = [
 export const cardWhoWeAre = [
   {
     cardClassName: 'container-column width-100 height-100 items-center justify-around',
-    titleLevel: 1,
+    titleLevel: 2,
     cardTitle: 'title_value',
     titleClassName: 'sec-section-title',
     paragraph: 'paragraph_value',
@@ -154,7 +160,7 @@ export const cardWhoWeAre = [
   },
   {
     cardClassName: 'container-column width-100 height-100 items-center justify-around',
-    titleLevel: 1,
+    titleLevel: 2,
     cardTitle: 'title_history',
     titleClassName: 'sec-section-title',
     paragraph: 'paragraph_history',
@@ -165,7 +171,7 @@ export const cardWhoWeAre = [
   },
   {
     cardClassName: 'container-column width-100 height-100 items-center justify-around',
-    titleLevel: 1,
+    titleLevel: 2,
     cardTitle: 'title_vision',
     titleClassName: 'sec-section-title',
     paragraph: 'paragraph_vision',
@@ -175,7 +181,7 @@ export const cardWhoWeAre = [
   },
   {
     cardClassName: 'container-column width-100 height-100 items-center justify-around',
-    titleLevel: 1,
+    titleLevel: 2,
     cardTitle: 'title_mission',
     titleClassName: 'sec-section-title',
     paragraph: 'paragraph_mission',
@@ -193,71 +199,88 @@ export const carouselProfile = [
     role: 'Direttore generale',
     alt: 'FrancescoCesana',
     classNameSingleEl: 'carousel-profile-single-el picture-top',
-    classNameBgImg: 'carousel-profile-picture carousel-profile-bg1'
+    classNameBgImg: 'carousel-profile-picture carousel-profile-bg1',
+    classNameLable: 'custom-carousel-lable lable-picture-top'
   },
   {
     id: 2,
     name: 'Erica',
     surname: 'Mauro',
+    role: 'Direttore generale',
     alt: 'EricaMauro',
     classNameSingleEl: 'carousel-profile-single-el picture-middle',
-    classNameBgImg: 'carousel-profile-picture carousel-profile-bg2'
+    classNameBgImg: 'carousel-profile-picture carousel-profile-bg2',
+    classNameLable: 'custom-carousel-lable lable-picture-middle'
   },
   {
     id: 3,
     name: 'Marianna',
     surname: 'Fulginiti',
+    role: 'Direttore generale',
     alt: 'MariannaFulginiti',
     classNameSingleEl: 'carousel-profile-single-el picture-bottom',
-    classNameBgImg: 'carousel-profile-picture carousel-profile-bg3'
+    classNameBgImg: 'carousel-profile-picture carousel-profile-bg3',
+    classNameLable: 'custom-carousel-lable lable-picture-bottom'
   },
   {
     id: 4,
     name: 'Ivo',
     surname: 'Mosca',
+    role: 'Direttore generale',
     alt: 'IvoMosca',
     classNameSingleEl: 'carousel-profile-single-el picture-middle',
-    classNameBgImg: 'carousel-profile-picture carousel-profile-bg4'
+    classNameBgImg: 'carousel-profile-picture carousel-profile-bg4',
+    classNameLable: 'custom-carousel-lable lable-picture-middle'
   },
   {
     id: 5,
-    name: 'Monica',
-    surname: 'Industriale',
-    alt: 'MonicaIndustriale',
+    name: 'XXXX',
+    surname: 'XXXXXX',
+    role: 'Direttore generale',
+    alt: 'XXXXXXXXXX',
     classNameSingleEl: 'carousel-profile-single-el picture-top',
-    classNameBgImg: 'carousel-profile-picture carousel-profile-bg5'
+    classNameBgImg: 'carousel-profile-picture carousel-profile-bg5',
+    classNameLable: 'custom-carousel-lable lable-picture-top'
   },
   {
     id: 6,
     name: 'Chiara',
     surname: 'Balsamini',
+    role: 'Direttore generale',
     alt: 'ChiaraBalsamini',
     classNameSingleEl: 'carousel-profile-single-el picture-middle',
-    classNameBgImg: 'carousel-profile-picture carousel-profile-bg6'
+    classNameBgImg: 'carousel-profile-picture carousel-profile-bg6',
+    classNameLable: 'custom-carousel-lable lable-picture-middle'
   },
   {
     id: 7,
     name: 'Roberto',
     surname: 'Brogi',
+    role: 'Direttore generale',
     alt: 'RobertoBrogi',
     classNameSingleEl: 'carousel-profile-single-el picture-bottom',
-    classNameBgImg: 'carousel-profile-picture carousel-profile-bg7'
+    classNameBgImg: 'carousel-profile-picture carousel-profile-bg7',
+    classNameLable: 'custom-carousel-lable lable-picture-bottom'
   },
   {
     id: 8,
     name: 'Francesca',
     surname: 'Ferioli',
+    role: 'Direttore generale',
     alt: 'FrancescaFerioli',
     classNameSingleEl: 'carousel-profile-single-el picture-middle',
-    classNameBgImg: 'carousel-profile-picture carousel-profile-bg8'
+    classNameBgImg: 'carousel-profile-picture carousel-profile-bg8',
+    classNameLable: 'custom-carousel-lable lable-picture-middle'
   },
   {
     id: 9,
     name: 'Francesca',
     surname: 'Bellini',
+    role: 'Direttore generale',
     alt: 'FrancescaBellini',
     classNameSingleEl: 'carousel-profile-single-el picture-top',
-    classNameBgImg: 'carousel-profile-picture carousel-profile-bg9'
+    classNameBgImg: 'carousel-profile-picture carousel-profile-bg9',
+    classNameLable: 'custom-carousel-lable lable-picture-top'
   },
   {
     id: 10,
@@ -265,7 +288,8 @@ export const carouselProfile = [
     surname: 'Amigo Rodrigez',
     alt: 'MariaAmigoRodrigez',
     classNameSingleEl: 'carousel-profile-single-el picture-middle',
-    classNameBgImg: 'carousel-profile-picture carousel-profile-bg10'
+    classNameBgImg: 'carousel-profile-picture carousel-profile-bg10',
+    classNameLable: 'custom-carousel-lable lable-picture-middle'
   },
 ]
 

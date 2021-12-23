@@ -14,7 +14,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 310px;
+    width: 450px;
     align-items: center !important;
 }
 
@@ -27,7 +27,9 @@
 .navbar-home-link {
     color: var(--secondary-nav-color) !important;
     text-decoration: none !important;
-    font-size: 17px !important;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
 }
 
 .navbar-home-link::after {

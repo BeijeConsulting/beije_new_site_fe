@@ -18,12 +18,12 @@ const CustomFooter = (props) => {
     return (
         <footer className={props.classNameFooter}>
             <Row className={'txt-light custom-footer-first-row'}>
-                <Col span={12} className='custom-footer-left-col'>
+                <Col span={15} className='custom-footer-left-col'>
                     <Col xs={24} sm={24} md={12} lg={12} className='custom-footer-l-col-first-el'>
                         <CustomCard
                             titleClassName={'custom-footer-title txt-light'}
                             cardTitle={t('footer.location')}
-                            descriptionClassName={'footer-description'}
+                            descriptionClassName={'custom-footer-description'}
                             cardDescription={'Via Varese, 27/38'}
                             cardDescription2={'Lissone (MB)'}
                         />
@@ -48,7 +48,7 @@ const CustomFooter = (props) => {
                         />
                     </Col>
                 </Col>
-                <Col span={12} className={'container-column footer-right-col'}>
+                <Col span={9} className={'container-column footer-right-col'}>
                     <CustomCard
                         titleClassName={'custom-footer-title txt-right txt-light'}
                         cardTitle={'PRIVACY AND COOKIE POLICY'}

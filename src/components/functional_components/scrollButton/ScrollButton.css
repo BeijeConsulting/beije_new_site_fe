@@ -8,13 +8,19 @@
 
 .scroll-btn-text {
     font-family: 'SpaceGrotesk-SemiBold', sans-serif;
-    font-size: 16px;
-    line-height: 63px;
-    margin-bottom: -22px;
+    font-size: 18px;
+    line-height: 60px;
+    margin-bottom: -50px;
     color: #fff;
 }
 
-.scroll-btn-lottie{
+.scroll-btn-lottie {
     height: 100px;
     width: 100px
+}
+
+@media screen and (min-width: 1024px) {
+    .scroll-btn-text {
+        font-size: 20px;
+    }
 }

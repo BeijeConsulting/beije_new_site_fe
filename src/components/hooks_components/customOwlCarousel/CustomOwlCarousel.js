@@ -9,6 +9,9 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 import { Typography } from "antd";
 const { Text } = Typography
 
+//import functions
+import { turnToUppercase } from "../../../utils/utilities";
+
 //import style
 import './CustomOwlCarousel.css'
 
@@ -68,16 +71,21 @@ const ImageCarousel = (props) => {
                 <div
                     className={`item ${item.classNameBgImg}`}
                 >
+
+                    <div className={item.classNameLable} role={props.roleDiv} aria-label={item.alt}>
+                        <Text strong className='custom-carousel-lable-text'>
+                            {turnToUppercase(item.name)}
+                        </Text>
+                        <Text strong className='custom-carousel-lable-text'>
+                            {turnToUppercase(item.surname)}
+                        </Text>
+                        <Text strong className='custom-carousel-lable-role'>
+                            {item.role}
+                        </Text>
+                    </div>
                 </div>
 
-                <div className={'custom-carousel-lable'} role={props.roleDiv} aria-label={item.alt}>
-                    <Text strong className='custom-carousel-lable-text'>
-                        {item.name}
-                    </Text>
-                    <Text strong className='custom-carousel-lable-text'>
-                        {item.surname}
-                    </Text>
-                </div>
+
 
             </div >
 
@@ -111,9 +119,9 @@ ImageCarousel.defaultProps = {
     roleDiv: 'img',
     marginMobile: 0,
     numItemMobile: 1.5,
-    numItemMore320Less768: 2.3,
-    numItemMore768: 3.2,
-    numItemDefault: 4.5
+    numItemMore320Less768: 2.2,
+    numItemMore768: 3,
+    numItemDefault: 4
 }
 
 export default ImageCarousel

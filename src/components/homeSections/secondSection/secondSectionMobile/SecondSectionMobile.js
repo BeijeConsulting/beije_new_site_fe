@@ -39,7 +39,7 @@ const SecondSectionMobile = (props) => {
                     titleClassName={props.obj.titleClassName}
                     cardParagraph={_truncate(t(`home.secondSection.${props.obj.paragraph}`),
                         {
-                            length: 100,
+                            length: 70,
                             separator: '...'
                         }
                     )}
@@ -49,7 +49,10 @@ const SecondSectionMobile = (props) => {
                         cardClassName={props.obj.bgImage}
                         cardButton={props.obj.show_btn}
                         type={props.obj.type_btn}
-                        currentIcon={<ArrowRightOutlined />}
+                        currentIcon={
+                            <ArrowRightOutlined
+                                className='arrow-icon-btn' />
+                        }
                     />
                 </CustomCard>
             </Col>

@@ -1,31 +1,34 @@
 .home-fp-container {
     background-color: transparent;
-    /* margin-top: 70px; */
     z-index: 2;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     height: 100%;
 }
 
 .home-fp-title {
     font-weight: 500 !important;
-    font-size: 31px !important;
+    font-size: 35px !important;
     color: #fff !important;
+    line-height: 45px !important;
+}
+
+@media screen and (min-width: 768px) {
+    .home-fp-container {
+        padding-top: 70px;
+    }
 }
 
 @media screen and (min-width: 992px) {
-
     .home-fp-title {
-        font-size: 64px !important;
-        line-height: 60px !important;
+        font-size: 60px !important;
+        line-height: 70px !important;
     }
 }
 
 @media screen and (min-width: 1024px) {
-
-    .home-fp-title {
-        font-size: 50px !important;
-        line-height: 60px !important;
+    .home-fp-container {
+        padding-top: 50px;
     }
 }

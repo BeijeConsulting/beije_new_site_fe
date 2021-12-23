@@ -184,9 +184,12 @@
     padding: 110px 25px 25px 25px;
     width: 100vw;
     height: 100vh;
-    position: absolute;
+    /* position: absolute;
     top: 50%;
-    right: 50%;
+    right: 50%; */
+    position: fixed;
+    top: 0;
+    right: 0;
     animation: menu-fadeIn 0.5s forwards;
     opacity: 0;
 }
@@ -233,12 +236,8 @@
 }
 
 @media screen and (min-width: 768px) {
-    .burger-menu-lang {
-        display: none;
-    }
-
-    .burger-menu-social-col {
-        justify-content: end;
+    .burger-menu-row-content {
+        padding-top: 50px;
     }
 
     .menu-overlay {
@@ -278,7 +277,15 @@
     .burger-menu-content {
         display: flex;
         flex-direction: column;
-        justify-content: space-around
+        justify-content: space-between;
+    }
+
+    .burger-menu-lang {
+        display: none;
+    }
+
+    .burger-menu-social-col {
+        justify-content: end;
     }
 
     .burger-menu-title {

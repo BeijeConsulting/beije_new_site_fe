@@ -15,8 +15,8 @@ import { consulting1, consulting_carousel_client } from "../../utils/properties"
 //import components
 import CustomCard from '../../components/functional_components/customCard/CustomCard';
 import CustomCarousel from "../../components/hooks_components/customCarousel/CustomCarousel";
-
-
+import SectionSubtitle from "../../components/functional_components/sectionSubtitle/SectionSubtitle";
+import CustomForm from "../../components/hooks_components/customForm/CustomForm";
 
 const Consulting = (props) => {
 
@@ -50,8 +50,8 @@ const Consulting = (props) => {
         /* *he* */
         <div className={'consulting-container'}>
 
-            <div className={'consulting-section1'}>
-                <Row style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <section className={'consulting-section1'}>
+                <Row>
                     <Col xs={24} md={12}>
                         <Row className="consulting-title-container">
                             <Title
@@ -94,56 +94,65 @@ const Consulting = (props) => {
                         />
                     </Col>
                 </Row>
-            </div>
+            </section>
 
             <div className={'consulting-section2'}>
-                <Row>
-                    <Col xs={24}>
-                        <CustomCard
-                            titleLevel={2}
-                            cardTitle={t('Consulting.title_carousel_client')}
-                        />
-                    </Col>
-                    <Col xs={24}>
-                        <div className='separator-line-horizontal'></div>
-                    </Col>
-                </Row>
-                <Row className={'consulting-carousel1-mobile'}>
-                    <CustomCarousel />
-                </Row>
-                <Row className={'consulting-card1-desktop'}>
-                    {consulting_carousel_client.map(printPercentage)}
-                </Row>
+                <section>
+                    <SectionSubtitle
+                        title={t('Consulting.title_carousel_client')}
+                        shortLineBelow
+                    />
+                    <Row className={'consulting-carousel-mobile'}>
+                        <CustomCarousel />
+                    </Row>
+                    <Row className={'consulting-card-desktop'}>
+                        {consulting_carousel_client.map(printPercentage)}
+                    </Row>
+                </section>
 
-                <Row>
-                    <Col xs={24}>
-                        <CustomCard
-                            titleLevel={2}
-                            cardTitle={t('Consulting.title_carousel_client')}
+                <section>
+                    <SectionSubtitle
+                        title={t('Consulting.title_carousel_client')}
+                        shortLineBelow
+                    />
+                    <Row className={'consulting-carousel-mobile'}>
+                        <CustomCarousel />
+                    </Row>
+                    <Row className={'consulting-card-desktop'}>
+                        {consulting_carousel_client.map(printPercentage)}
+                    </Row>
+                    <Row>
+                        <SectionSubtitle
+                            styleContainer={{ marginBottom: 0 }}
+                            shortLineAbove
+                            description={'Dati survery 2019'}
                         />
-                    </Col>
-                    <Col xs={24}>
-                        <div className='separator-line-horizontal'></div>
-                    </Col>
-                </Row>
-                <Row className={'consulting-carousel1-mobile'}>
-                    <CustomCarousel />
-                </Row>
-                <Row className={'consulting-card1-desktop'}>
-                    {consulting_carousel_client.map(printPercentage)}
-                </Row>
+                    </Row>
+                </section>
 
-                <Row style={{ height: '600px' }}>
-                    <Col xs={24} style={{ backgroundColor: 'turquoise' }}>
-                        <p>Titolo</p>
-                    </Col>
-                    <Col xs={24} md={12} style={{ backgroundColor: 'teal' }}>
-                        <p>Testo</p>
-                    </Col>
-                    <Col xs={24} md={12} style={{ backgroundColor: 'steelblue' }}>
-                        <p>Form</p>
-                    </Col>
-                </Row>
+                <section>
+                    <Row>
+                        <Col xs={24}>
+                            <SectionSubtitle
+                                styleContainer={{ marginBottom: '10px' }}
+                                LongLineAbove
+                                title={t('Consulting.title_add_info')}
+                            />
+                        </Col>
+                        <Col xs={24} md={12}>
+                            <CustomCard
+                                cardParagraph={t(`Consulting.description_add_info`)}
+                                paragraphClassName={'consulting-info-desc'}
+                            />
+                        </Col>
+                        <Col xs={24} md={12}>
+                            <CustomForm
+                                moreInfo={false}
+                                agreement={false}
+                            />
+                        </Col>
+                    </Row>
+                </section>
             </div>
         </div>
     )

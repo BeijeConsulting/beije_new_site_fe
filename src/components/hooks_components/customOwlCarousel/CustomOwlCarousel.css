@@ -1,9 +1,9 @@
 :root {
     --profile_bg1: url(../../../assets/images/profile_picture/franceso.jpg);
-    --profile_bg2: url(../../../assets/images/profile_picture/monica.jpg);
+    --profile_bg2: url(../../../assets/images/profile_picture/maria.jpg);
     --profile_bg3: url(../../../assets/images/profile_picture/marianna.jpg);
     --profile_bg4: url(../../../assets/images/profile_picture/Ivo.jpg);
-    --profile_bg5: url(../../../assets/images/profile_picture/monica.jpg);
+    --profile_bg5: url(../../../assets/images/profile_picture/maria.jpg);
     --profile_bg6: url(../../../assets/images/profile_picture/Chiara.jpg);
     --profile_bg7: url(../../../assets/images/profile_picture/roberto.jpg);
     --profile_bg8: url(../../../assets/images/profile_picture/francesca_ferioli.jpg);
@@ -21,6 +21,7 @@
     height: 100%;
     display: flex;
     align-items: flex-end;
+    z-index: 0;
 }
 
 .owl-stage-outer, .owl-stage, .owl-item {
@@ -33,17 +34,12 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 72% !important;
-    width: 125px;
+    width: 118px;
+    height: 296px !important;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
-}
-
-.carousel-profile-picture:hover {
-    height: 77% !important;
-    width: 130px;
 }
 
 .picture-top {
@@ -164,33 +160,70 @@
 }
 
 .carousel-profile-single-el:hover .custom-carousel-lable {
-    /* display: block; */
     position: absolute;
-    bottom: 20%;
-    left: 0;
-    height: 79px;
-    width: 137px;
+    bottom: -10px;
+    right: -10px;
+    width: 128px;
+    height: 91px;
     background-color: var(--lable-color);
+    padding: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding-left: 15px;
+    justify-content: flex-start;
 }
 
 .custom-carousel-lable-text {
     font-family: 'SpaceGrotesk-Regular', sans-serif !important;
     font-size: 16px !important;
+    line-height: 25px !important;
     color: #fff;
+}
+
+.custom-carousel-lable-role {
+    display: none;
 }
 
 @media screen and (min-width: 768px) {
     .carousel-profile-picture {
-        height: 75% !important;
+        width: 140px;
+        height: 500px !important;
     }
 
     .custom-carousel-lable {
         height: 86px;
         width: 126px;
         background-color: var(--lable-color);
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    .custom-carousel-lable-role {
+        display: block;
+        color: #fff;
+        font-size: 18px;
+        line-height: 25px;
+        font-weight: normal;
+        padding-top: 10px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .carousel-profile-picture {
+        width: 205px;
+        height: 500px !important;
+    }
+
+    .carousel-profile-single-el:hover .custom-carousel-lable {
+        width: 205px;
+        height: 140px;
+    }
+
+    .custom-carousel-lable-text {
+        font-family: 'SpaceGrotesk-Regular', sans-serif !important;
+        font-size: 20px !important;
+        line-height: 25px !important;
+        color: #fff;
+        font-weight: 700;
     }
 }

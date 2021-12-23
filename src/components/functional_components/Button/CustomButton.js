@@ -35,6 +35,12 @@ const CustomButton = (props) => {
       case "carousel-btn":
         currentClassName = "custom-btn-carousel"
         break;
+      case "view-all-btn":
+        currentClassName = "custom-btn-view-all"
+        break;
+      case "drag-more-btn":
+        currentClassName = "custom-btn-drag-more"
+        break;
       default:
         currentClassName = ""
         break;

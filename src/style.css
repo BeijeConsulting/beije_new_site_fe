@@ -45,10 +45,10 @@ body {
   font-family: 'Moderat-Regular', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  letter-spacing: 0.06em;
-  font-size: 20px;
-  line-height: 35px;
-  font-weight: 400 !important;
+  letter-spacing: 0.06em !important;
+  font-size: 18px !important;
+  line-height: 26px !important;
+  font-weight: normal !important;
   color: var(--first-color) !important;
 }
 
@@ -61,7 +61,7 @@ h1, h2, h3, h4, h5 {
   color: var(--first-color) !important;
 }
 
-h2 {
+h3 {
   font-family: 'SpaceGrotesk-Medium', sans-serif;
   font-size: 30px !important;
   line-height: 38px !important;
@@ -83,6 +83,25 @@ h2 {
 
 .grotesk-font-semibold {
   font-family: 'SpaceGrotesk-SemiBold', serif;
+}
+
+@media screen and (min-width: 992px) {
+  body {
+    letter-spacing: 0.06em !important;
+    font-size: 20px !important;
+    line-height: 35px !important;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-size: 90px !important;
+    line-height: 110px !important;
+  }
+
+  h2 {
+    font-size: 50px !important;
+    line-height: 70px !important;
+    font-weight: 500 !important;
+  }
 }
 
 /* Added classes */
