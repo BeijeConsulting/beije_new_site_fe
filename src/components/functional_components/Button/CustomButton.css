@@ -92,6 +92,14 @@
     line-height: 26px !important;
 }
 
+.secondary-arrow {
+    width: 55px !important;
+    height: 55px !important;
+    background-color: #fff;
+    border: none !important;
+    color: var(--primary-btn-color) !important;
+}
+
 @media screen and (min-width: 1024px) {
     .primary-arrow {
         width: 84px !important;
@@ -109,18 +117,46 @@
 
 /* Form Button send */
 .custom-btn-form {
-    border-radius: 300px;
-    height: 30px;
-    width: 70px;
+    border-radius: 50px;
+    height: 50px;
+    width: 137px;
     background-color: transparent;
     border: 1px solid var(--primary-btn-color) !important;
     color: var(--primary-btn-color) !important;
+    font-family: 'SpaceGrotesk-Regular', sans-serif !important;
+    font-style: normal !important;
+    font-weight: bold !important;
+    font-size: 18px !important;
+    line-height: 60px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
 }
 
 .custom-btn-form:hover {
     border: 1px solid var(--primary-btn-color) !important;
     color: var(--primary-btn-color) !important;
+    background-color: transparent !important;
 }
+
+.custom-btn-form:focus {
+    border: 1px solid var(--primary-btn-color) !important;
+    color: var(--primary-btn-color) !important;
+    background-color: transparent !important;
+}
+
+@media screen and (min-width: 1440px) {
+    .custom-btn-form {
+        width: 165px;
+        height: 60px;
+        font-size: 20px !important;
+    }
+
+}
+
 
 /* Carousel btn front back */
 .custom-btn-carousel {
@@ -129,13 +165,14 @@
 }
 
 
-/* View more btn */
+/* View all btn */
 .custom-btn-view-all {
     font-family: 'SpaceGrotesk-SemiBold', sans-serif !important;
     font-size: 18px !important;
     line-height: 60px !important;
     font-weight: bold;
     color: var(--primary-btn-color) !important;
+    background-color: transparent !important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -151,6 +188,10 @@
 } */
 
 /* Drag for more btn */
+.owl-drag .custom-btn-drag-more {
+    display: none;
+}
+
 .custom-btn-drag-more {
     width: 110px;
     height: 110px;
@@ -166,6 +207,12 @@
     font-size: 15px !important;
     line-height: 20px !important;
     border: none !important;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .custom-btn-drag-more:hover {

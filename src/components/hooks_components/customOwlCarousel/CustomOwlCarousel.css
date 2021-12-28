@@ -9,8 +9,9 @@
     --profile_bg8: url(../../../assets/images/profile_picture/francesca_ferioli.jpg);
     --profile_bg9: url(../../../assets/images/profile_picture/francesca.jpg);
     --profile_bg10: url(../../../assets/images/profile_picture/maria.jpg);
-    --white-filter: linear-gradient(360deg, rgba(255, 255, 255, 0.29) 0%, rgba(255, 255, 255, 0.29) 54.69%, rgba(255, 255, 255, 0.29) 100%);
+    ----white-filter-profile-picture: linear-gradient(360deg, rgba(255, 255, 255, 0.29) 0%, rgba(255, 255, 255, 0.29) 54.69%, rgba(255, 255, 255, 0.29) 100%);
     --lable-color: var(--second-color);
+    --name-lable-color: var(--first-color);
 }
 
 .owl-item {
@@ -57,17 +58,17 @@
 
 .carousel-profile-bg1 {
     background-image:
-        var(--white-filter),
+        var(----white-filter-profile-picture),
         var(--profile_bg1);
 }
 
-.carousel-profile-bg1:hover {
+.carousel-profile-bg2:hover {
     background-image: var(--profile_bg1);
 }
 
 .carousel-profile-bg2 {
     background-image:
-        var(--white-filter),
+        var(----white-filter-profile-picture),
         var(--profile_bg2);
 }
 
@@ -77,7 +78,7 @@
 
 .carousel-profile-bg3 {
     background-image:
-        var(--white-filter),
+        var(----white-filter-profile-picture),
         var(--profile_bg3);
 }
 
@@ -87,7 +88,7 @@
 
 .carousel-profile-bg4 {
     background-image:
-        var(--white-filter),
+        var(----white-filter-profile-picture),
         var(--profile_bg4);
 }
 
@@ -97,7 +98,7 @@
 
 .carousel-profile-bg5 {
     background-image:
-        var(--white-filter),
+        var(----white-filter-profile-picture),
         var(--profile_bg5);
 }
 
@@ -107,7 +108,7 @@
 
 .carousel-profile-bg6 {
     background-image:
-        var(--white-filter),
+        var(----white-filter-profile-picture),
         var(--profile_bg6);
 }
 
@@ -117,7 +118,7 @@
 
 .carousel-profile-bg7 {
     background-image:
-        var(--white-filter),
+        var(----white-filter-profile-picture),
         var(--profile_bg7);
 }
 
@@ -127,7 +128,7 @@
 
 .carousel-profile-bg8 {
     background-image:
-        var(--white-filter),
+        var(----white-filter-profile-picture),
         var(--profile_bg8);
 }
 
@@ -137,7 +138,7 @@
 
 .carousel-profile-bg9 {
     background-image:
-        var(--white-filter),
+        var(----white-filter-profile-picture),
         var(--profile_bg9);
 }
 
@@ -147,7 +148,7 @@
 
 .carousel-profile-bg10 {
     background-image:
-        var(--white-filter),
+        var(----white-filter-profile-picture),
         var(--profile_bg10);
 }
 
@@ -177,6 +178,7 @@
     font-size: 16px !important;
     line-height: 25px !important;
     color: #fff;
+    font-weight: normal !important;
 }
 
 .custom-carousel-lable-role {
@@ -198,13 +200,23 @@
 
 @media screen and (min-width: 992px) {
 
+    .carousel-profile-single-el:hover .custom-carousel-lable {
+        height: 149px;
+        width: 140px;
+    }
+
+    .custom-carousel-lable-text {
+        font-size: 18px !important;
+        line-height: 25px !important;
+    }
+
     .custom-carousel-lable-role {
         display: block;
-        color: #fff;
-        font-size: 18px;
-        line-height: 25px;
-        font-weight: normal;
         padding-top: 10px;
+    }
+
+    .custom-carousel-lable-name {
+        color: var(--name-lable-color);
     }
 }
 
@@ -220,10 +232,11 @@
     }
 
     .custom-carousel-lable-text {
-        font-family: 'SpaceGrotesk-Regular', sans-serif !important;
         font-size: 20px !important;
         line-height: 25px !important;
-        color: #fff;
-        font-weight: 700;
+    }
+
+    .custom-carousel-lable-name {
+        color: var(--name-lable-color);
     }
 }

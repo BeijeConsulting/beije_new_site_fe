@@ -18,7 +18,7 @@ import CustomCarousel from "../../components/hooks_components/customCarousel/Cus
 import SectionSubtitle from "../../components/functional_components/sectionSubtitle/SectionSubtitle";
 import CustomForm from "../../components/hooks_components/customForm/CustomForm";
 
-const Consulting = (props) => {
+const Consulting = () => {
 
     const { t } = useTranslation()
 

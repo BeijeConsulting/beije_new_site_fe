@@ -2,9 +2,9 @@
     --saparator-line: var(--first-color);
 }
 
-.sec-subtitle-container {
+/* .sec-subtitle-container {
     margin-bottom: 40px;
-}
+} */
 
 .separator-short-horizontal-line {
     border-top: 3px solid var(--saparator-line);

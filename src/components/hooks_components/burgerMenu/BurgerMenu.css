@@ -232,7 +232,7 @@
 .burger-menu-lang {
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: flex-end;
 }
 
 @media screen and (min-width: 768px) {

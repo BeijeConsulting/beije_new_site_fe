@@ -10,8 +10,8 @@ import GeneralLayout from "./layout/generalLayout/GeneralLayout";
 
 //import screens
 import Login from './screens/Login/Login';
-import Home from "./screens/home/Home";
-import Consulting from "./screens/consulting/Consulting";
+import Home from './screens/home/Home'
+import Consulting from './screens/consulting/Consulting'
 import Academy from "./screens/academy/Academy";
 import NoMatch from "./screens/NoMatch";
 

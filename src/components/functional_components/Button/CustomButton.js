@@ -26,6 +26,9 @@ const CustomButton = (props) => {
       case "primary-arrow-btn":
         currentClassName = 'primary-arrow circular-btn d-flex items-center justify-center'
         break;
+      case "secondary-arrow-btn":
+        currentClassName = 'secondary-arrow circular-btn d-flex items-center justify-center'
+        break;
       case "primary-social":
         currentClassName = "custom-btn-primary-social circular-btn d-flex items-center justify-center"
         break;

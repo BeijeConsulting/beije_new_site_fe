@@ -30,7 +30,7 @@ const SecondSectionDesktop = () => {
 
                 <CustomCard
                     cardClassName={item.cardClassName}
-                    level={item.titleLevel}
+                    titleLevel={item.titleLevel}
                     cardTitle={t('home.secondSection.' + item.cardTitle)}
                     titleClassName={item.titleClassName}
                     cardParagraph={_truncate(t(`home.secondSection.${item.paragraph}`),

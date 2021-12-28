@@ -61,28 +61,13 @@ h1, h2, h3, h4, h5 {
   color: var(--first-color) !important;
 }
 
-h3 {
+h2 {
   font-family: 'SpaceGrotesk-Medium', sans-serif;
   font-size: 30px !important;
   line-height: 38px !important;
   letter-spacing: 6%;
-  font-weight: 700 !important;
-}
-
-.grotesk-font-regular {
-  font-family: 'SpaceGrotesk-Regular', serif;
-}
-
-.grotesk-font-medium {
-  font-family: 'SpaceGrotesk-Medium', serif;
-}
-
-.grotesk-font-light {
-  font-family: 'SpaceGrotesk-Light', serif;
-}
-
-.grotesk-font-semibold {
-  font-family: 'SpaceGrotesk-SemiBold', serif;
+  font-weight: bold !important;
+  font-style: normal !important;
 }
 
 @media screen and (min-width: 992px) {
@@ -136,8 +121,6 @@ h3 {
   line-height: 50px;
   background-color: #fff;
 }
-
-
 
 .ant-layout {
   background-color: #fff;

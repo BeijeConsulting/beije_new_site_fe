@@ -17,12 +17,11 @@ import '../../style.css'
 import '../../layout/homeLayout/HomeLayout'
 
 //import constants
-import { video_home } from "../../utils/properties";
+// import { video_home } from "../../utils/properties";
 
 //import components
 import ContainerSectionScroll from "../../components/functional_components/containerSectionScroll/ContainerSectionScroll";
 import FirstSection from "../../components/homeSections/firstSection/FirstSection";
-import BackgroundVideo from "../../components/functional_components/backgroundVideo/BackgroundVideo";
 import SecondSectionDesktop from "../../components/homeSections/secondSection/secondSectionDesktop/SecondSectionDesktop";
 import SecondSectionMobile from "../../components/homeSections/secondSection/secondSectionMobile/SecondSectionMobile";
 import ThirdSection from "../../components/homeSections/thirdSection/ThirdSection";

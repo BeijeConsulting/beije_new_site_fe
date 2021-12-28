@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { Row, Col, Typography } from "antd";
+import { Row, Col, Typography, Carousel } from "antd";
 const { Title } = Typography;
 
 //import style
@@ -17,13 +17,16 @@ import {
 import { turnToUppercase } from "../../utils/utilities";
 
 //import constants
-import { consulting1, consulting_carousel_client } from "../../utils/properties";
+import { academy1, consulting_carousel_client, academy2, academy_comments } from "../../utils/properties";
 
 //import components
 import CustomCard from "../../components/functional_components/customCard/CustomCard";
 import SectionSubtitle from "../../components/functional_components/sectionSubtitle/SectionSubtitle";
 import CustomCarousel from "../../components/hooks_components/customCarousel/CustomCarousel";
 import CustomForm from "../../components/hooks_components/customForm/CustomForm";
+import ViewAllButton from "../../components/functional_components/viewAllButton/ViewAllButton"
+import CustomButton from "../../components/functional_components/Button/CustomButton";
+import Comments from "../../components/functional_components/comments/Comments";
 
 const Academy = (props) => {
 
@@ -53,62 +56,84 @@ const Academy = (props) => {
         )
     }
 
+    const printComments = (item, key) => {
+        return (
+            <Comments
+                key={key}
+                commentsText={item.commentsText}
+                name={item.name}
+                surname={item.surname}
+                imgAlt={item.name}  // *alt*
+                imgSrc={item.imgSrc}
+                imgClassName={item.imgClassName}
+            />
+        )
+    }
+
     return (
         <div className={'academy-container'}>
 
-            <div className={'academy-section1'}>
+            {/* Yellow part */}
+            <div className={'academy-first-part'}>
 
+                {/* Introductive section */}
                 <section>
                     <Row>
-                        <Col xs={24} md={12}>
-                            <Row className="academy-title-container">
+                        <Col xs={24} md={12} className={'academy-introductive-section-intro-col1'}>
+                            <Row>
                                 <Title
                                     level={1}
                                 >{turnToUppercase('academy')}</Title>
                             </Row>
-                            <Row className="academy-intro-container">
+                            <Row className="academy-introductive-section-intro-container">
                                 <CustomCard
-                                    cardDescription={t('Consulting.intro')}
-                                    descriptionClassName='academy-intro grotesk-font'
+                                    cardDescription={t('Academy.intro')}
+                                    descriptionClassName='academy-introductive-section-academy-intro grotesk-font'
                                 />
                                 <CustomCard
-                                    cardDescription={'Si vede solo su desktop'}
-                                // descriptionClassName='consulting-intro grotesk-font'
+                                    cardDescription={t('Academy.page_description')}
+                                    descriptionClassName={'academy-introductive-section-desc-desktop'}
                                 />
                             </Row>
                         </Col>
-                        <Col xs={24} md={12} className="academy-images-container academy-img1-container">
+                        <Col xs={24} md={12} className={'academy-introductive-section-img1-container'}>
                             <CustomCard
                                 cardImg
+                                imgPreview={false}
                                 // alt={*alt*} 
-                                imgClassName={'academy-images academy-img1'}
-                                imgSrc={consulting1}
+                                imgClassName={'academy-introductive-section-img1'}
+                                imgSrc={academy1}
                             />
                         </Col>
                         <Col xs={24} md={0}>
                             <CustomCard
-                                cardDescription={'si vede solo su mobile'}
+                                cardDescription={t('Academy.page_description')}
+                                descriptionClassName={'academy-introductive-section-desc-mobile'}
                             />
                         </Col>
                     </Row>
                 </section>
 
-                <section>
+                {/* Our courses section */}
+                <section className={'academy-ourCourses-section'}>
                     <Row>
                         <Col xs={24}>
-                            <SectionSubtitle
-                                title={'I NOSTRI CORSI'}
+                            <CustomCard
+                                cardTitle={turnToUppercase(t('Academy.our_courses_title'))}
+                                titleLevel={2}
                             />
                         </Col>
                     </Row>
-                    <Row style={{ borderTop: '1px solid black', borderBottom: '1px solid black' }}>
+                    <Row className={'academy-ourCourses-section-singleCourse-container academy-ourCourses-section-java-container'}>
                         <Col xs={18}>
-                            <SectionSubtitle
-                                title={turnToUppercase('Academy Java')}
-                                level={1}
+                            <CustomCard
+                                cardClassName={'academy-ourCourses-section-course-title-container'}
+                                cardTitle={turnToUppercase(t('Academy.title_academy_java'))}
+                                titleLevel={3}
+                                titleClassName={'academy-ourCourses-section-course-title'}
                             />
                         </Col>
-                        <Col xs={6}>
+                        <Col xs={6} className={'academy-courses-detail-btn'}>
                             <CustomCard
                                 cardButton
                                 type={'primary-arrow-btn'}
@@ -119,14 +144,16 @@ const Academy = (props) => {
                             />
                         </Col>
                     </Row>
-                    <Row style={{ borderBottom: '1px solid black' }}>
+                    <Row className={'academy-ourCourses-section-singleCourse-container academy-ourCourses-section-frontend-container'}>
                         <Col xs={18}>
-                            <SectionSubtitle
-                                title={turnToUppercase('Academy sviluppo web - front end')}
-                                level={1}
+                            <CustomCard
+                                cardClassName={'academy-ourCourses-section-course-title-container'}
+                                cardTitle={turnToUppercase(t('Academy.title_academy_frontend'))}
+                                titleLevel={3}
+                                titleClassName={'academy-ourCourses-section-course-title'}
                             />
                         </Col>
-                        <Col xs={6}>
+                        <Col xs={6} className={'academy-courses-detail-btn'}>
                             <CustomCard
                                 cardButton
                                 type={'primary-arrow-btn'}
@@ -138,57 +165,70 @@ const Academy = (props) => {
                         </Col>
                     </Row>
                     <Row>
-                        <Col xs={24} md={0} className="academy-desc-container txt-light">
+                        <Col xs={24} md={0}>
                             <CustomCard
-                                cardDescription={t('Consulting.description')}
+                                cardDescription={t('Academy.course_description')}
                             />
                         </Col>
-                        <Col xs={24} md={12} className="academy-images-container">
+                        <Col xs={24} md={12} className={"academy-ourCourses-section-img-container"}>
                             <CustomCard
                                 cardImg
+                                imgPreview={false}
                                 // alt={*alt*} 
-                                imgClassName={'academy-images academy-img2'}
-                                imgSrc={consulting1}
+                                imgClassName={'academy-ourCourses-section-img'}
+                                imgSrc={academy2}
                             />
-                            <div>
-                                <p>Div con freccetta</p>
+                            <div className={'academy-ourCourses-section-youtube-container'}>
+                                <CustomCard
+                                    cardDescription={t('Academy.send_to_youtube')}
+                                    cardButton
+                                    type={'secondary-arrow-btn'}
+                                    currentIcon={
+                                        <ArrowRightOutlined
+                                            className='arrow-icon-btn' />
+                                    }
+                                />
                             </div>
                         </Col>
-                        <Col xs={0} md={12} className="academy-desc-container">
+                        <Col xs={0} md={2} lg={4}></Col>
+                        <Col xs={0} md={10} lg={8}>
                             <CustomCard
-                                cardDescription={t('Consulting.description')}
+                                cardDescription={t('Academy.course_description')}
                             />
                         </Col>
                     </Row>
                 </section>
 
-                <section>
+                {/* Next Courses section */}
+                <section className='academy-next-courses-section'>
                     <Row>
                         <Col xs={24}>
                             <SectionSubtitle
-                                title={'I PROSSIMI CORSI'}
+                                title={turnToUppercase(t('Academy.next_courses_title'))}
                             />
                         </Col>
                     </Row>
-                    <Row style={{ borderTop: '1px solid black', borderBottom: '1px solid black' }}>
-                        <Col xs={18} md={8}>
-                            <div>
-                                <CustomCard
-                                    cardDescription={'Stage java'}
-                                />
-                            </div>
-                            <div style={{ display: 'none' }}>
-                                <CustomCard
-                                    cardDescription={'Data mostrata solo su mobile'}
-                                />
-                            </div>
+                    <Row className={'academy-next-courses-section-list academy-next-courses-section-course1-container'}>
+                        <Col xs={18} md={0}>
+                            <CustomCard
+                                cardDescription={t('Academy.next_course_1')}
+                                cardDescription2={t('Academy.date_next_course_1')}
+                                descriptionClassName='academy-next-courses-section-course-info'
+                            />
                         </Col>
                         <Col xs={0} md={8}>
                             <CustomCard
-                                cardDescription={'Data mostrata solo su mobile'}
+                                cardDescription={t('Academy.next_course_1')}
+                                descriptionClassName='academy-next-courses-section-course-info'
                             />
                         </Col>
-                        <Col xs={6} md={8}>
+                        <Col xs={0} md={8}>
+                            <CustomCard
+                                cardDescription={t('Academy.date_next_course_1')}
+                                descriptionClassName='academy-next-courses-section-course-info'
+                            />
+                        </Col>
+                        <Col xs={6} md={8} className={'academy-courses-detail-btn'}>
                             <CustomCard
                                 cardButton
                                 type={'primary-arrow-btn'}
@@ -199,25 +239,27 @@ const Academy = (props) => {
                             />
                         </Col>
                     </Row>
-                    <Row style={{ borderBottom: '1px solid black' }}>
-                        <Col xs={18} md={8}>
-                            <div>
-                                <CustomCard
-                                    cardDescription={'Stage java'}
-                                />
-                            </div>
-                            <div style={{ display: 'none' }}>
-                                <CustomCard
-                                    cardDescription={'Data mostrata solo su mobile'}
-                                />
-                            </div>
+                    <Row className={'academy-next-courses-section-list academy-next-courses-section-course2-container'}>
+                        <Col xs={18} md={0}>
+                            <CustomCard
+                                cardDescription={t('Academy.next_course_2')}
+                                cardDescription2={t('Academy.date_next_course_1')}
+                                descriptionClassName='academy-next-courses-section-course-info'
+                            />
                         </Col>
                         <Col xs={0} md={8}>
                             <CustomCard
-                                cardDescription={'Data mostrata solo su mobile'}
+                                cardDescription={t('Academy.next_course_2')}
+                                descriptionClassName='academy-next-courses-section-course-info'
                             />
                         </Col>
-                        <Col xs={6} md={8}>
+                        <Col xs={0} md={8}>
+                            <CustomCard
+                                cardDescription={t('Academy.date_next_course_1')}
+                                descriptionClassName='academy-next-courses-section-course-info'
+                            />
+                        </Col>
+                        <Col xs={6} md={8} className={'academy-courses-detail-btn'}>
                             <CustomCard
                                 cardButton
                                 type={'primary-arrow-btn'}
@@ -229,69 +271,82 @@ const Academy = (props) => {
                         </Col>
                     </Row>
                     <Row>
-                        <Col xs={24}>
-                            <CustomCard
-                                cardButton
-                                type={'primary-arrow-btn'}
-                                currentIcon={
-                                    <ArrowRightOutlined
-                                        className='arrow-icon-btn' />
-                                }
+                        <Col xs={24} className={'academy-next-courses-view-all-btn'}>
+                            <CustomButton
+                                type={'view-all-btn'}
+                                content={<ViewAllButton />}
                             />
                         </Col>
                     </Row>
                 </section>
             </div>
-            <div className={'academy-section2'}>
-                <section>
+
+            {/* Second Part */}
+            <div className={'academy-second-part'}>
+
+                {/* Percentage Section */}
+                <section className="academy-percentage-section">
                     <SectionSubtitle
-                        title={t('Consulting.title_carousel_client')}
+                        title={turnToUppercase(t('Academy.percentage_client_satisfaction_title'))}
                         shortLineBelow
                     />
-                    <Row className={'academy-carousel-mobile'}>
+                    <Row className={'academy-percentage-section-carousel'}>
                         <CustomCarousel />
                     </Row>
-                    <Row className={'academy-card-desktop'}>
+                    <Row className={'academy-percentage-section-card'}>
                         {consulting_carousel_client.map(printPercentage)}
                     </Row>
                 </section>
 
+                {/* Comments section */}
                 <section>
                     <Row>
-                        <Col xs={24}>
+                        <Col xs={24} className="academy-comments-title-container">
                             <SectionSubtitle
-                                title={'Dicono di noi'}
+                                title={turnToUppercase(t('Academy.comments_title'))}
                                 shortLineBelow
                             />
                         </Col>
-                        <Col xs={24} md={12}>
-                            <p>Inserire commento</p>
+                        <Col xs={24} lg={0}>
+                            <Carousel
+                                autoplay
+                                dots={false}
+                                className="academy-comments-carousel-ant"
+                            >
+                                {academy_comments.map(printComments)}
+                            </Carousel>
                         </Col>
-                        <Col xs={0} md={12}>
-                            <p>Inserire commento</p>
+                        <Col xs={0} lg={12}>
+                            <Comments />
+                        </Col>
+                        <Col xs={0} lg={12} className={'academy-comments-section-second-comment-col'}>
+                            <Comments />
                         </Col>
                     </Row>
                 </section>
 
-                <section>
+                {/* Form section */}
+                <section className={'academy-form-section'}>
                     <Row>
                         <Col xs={24}>
                             <SectionSubtitle
                                 styleContainer={{ marginBottom: '10px' }}
                                 LongLineAbove
-                                title={t('Consulting.title_add_info')}
+                                title={turnToUppercase(t('Academy.form_message_title'))}
                             />
                         </Col>
-                        <Col xs={24} md={12}>
+                        <Col xs={24} md={8}>
                             <CustomCard
-                                cardParagraph={t(`Consulting.description_add_info`)}
+                                cardParagraph={t(`Academy.form_message_desc`)}
                                 paragraphClassName={'academy-info-desc'}
                             />
                         </Col>
+                        <Col xs={0} md={4}></Col>
                         <Col xs={24} md={12}>
                             <CustomForm
                                 moreInfo={false}
                                 agreement={false}
+                                positionBtn={'flex-end'}
                             />
                         </Col>
                     </Row>

@@ -16,11 +16,18 @@ import img1_consulting from '../assets/images/beije_team_office/ITA_1975_Web.jpg
 import img2_consulting from '../assets/images/beije_team_office/ITA_2633_Web.jpg'
 import icon1_consulting from '../assets/icons/icon_pc.svg'
 
+//assets used in academy page
+import img1_academy from '../assets/images/academy/academy1.svg'
+import img2_academy from '../assets/images/academy/academy2.svg'
+import img_comments from '../assets/images/comments/img_comments.png'
+
 
 //export assets
 // export const video_home = official_video_home;
 export const consulting1 = img1_consulting;
 export const consulting2 = img2_consulting;
+export const academy1 = img1_academy;
+export const academy2 = img2_academy;
 
 const getBaseURL = () => {
   const env = process.env.REACT_APP_ENV;
@@ -312,6 +319,25 @@ export const consulting_carousel_client = [
     iconSrc: icon1_consulting,
     titlePenrcentage: '100%',
     carouselDesc: 'paragraph3_carousel_client'
+  }
+]
+
+export const academy_comments = [
+  {
+    commentsText: 'Trial comments to see if everything is working properly',
+    name: 'Name',
+    surname: 'surname',
+    imgAlt: 'alt img',
+    imgSrc: img_comments,
+    imgClassName: 'trial'
+  },
+  {
+    commentsText: 'Trial comments to see if everything is working properly',
+    name: 'Name',
+    surname: 'surname',
+    imgAlt: 'alt img',
+    imgSrc: img_comments,
+    imgClassName: 'trial'
   }
 ]
 

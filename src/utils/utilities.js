@@ -96,3 +96,21 @@ export const turnToUppercase = (sentence) => {
   let new_sentence = sentence
   return (new_sentence.toUpperCase())
 }
+
+export const divideText = (sentence, division) => {
+  let type_division = division;
+  let new_sentence = sentence.split(type_division);
+
+  const printNewSentence = (item, key) => {
+    return (
+      <span key={key}>
+        {item}
+      </span>
+    )
+  }
+
+  return (
+    new_sentence.map(printNewSentence)
+  )
+
+}

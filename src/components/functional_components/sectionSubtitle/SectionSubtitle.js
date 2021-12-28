@@ -28,6 +28,7 @@ const SectionSubtitle = (props) => {
                     <CustomCard
                         titleLevel={props.level}
                         cardTitle={props.title}
+                        titleClassName={props.classNameTitle}
                     />
                 </Col>
             }
@@ -57,7 +58,7 @@ const SectionSubtitle = (props) => {
 }
 
 SectionSubtitle.defaultProps = {
-    classNameContainer: 'sec-subtitle-container',
+    // classNameContainer: 'sec-subtitle-container',
     level: 2,
     classNameShortLine: 'separator-short-horizontal-line',
     classNameLongLine: 'separator-long-horizontal-line'

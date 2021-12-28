@@ -18,10 +18,10 @@ import './CustomOwlCarousel.css'
 //import constants
 import { carouselProfile } from "../../../utils/properties";
 
-const ImageCarousel = (props) => {
+const CustomOwlCarousel = (props) => {
 
     const [state, setState] = useState({
-        dimensionDevice: window.innerWidth,
+        dimensionDevice: window.innerWidth
     })
 
     useEffect(() => {
@@ -73,13 +73,13 @@ const ImageCarousel = (props) => {
                 >
 
                     <div className={item.classNameLable} role={props.roleDiv} aria-label={item.alt}>
-                        <Text strong className='custom-carousel-lable-text'>
+                        <Text className='custom-carousel-lable-text custom-carousel-lable-name'>
                             {turnToUppercase(item.name)}
                         </Text>
-                        <Text strong className='custom-carousel-lable-text'>
+                        <Text className='custom-carousel-lable-text custom-carousel-lable-name'>
                             {turnToUppercase(item.surname)}
                         </Text>
-                        <Text strong className='custom-carousel-lable-role'>
+                        <Text className='custom-carousel-lable-text custom-carousel-lable-role'>
                             {item.role}
                         </Text>
                     </div>
@@ -93,6 +93,14 @@ const ImageCarousel = (props) => {
         )
     }
 
+    const isDragging = () => {
+        console.log('is dragging')
+    }
+
+    const stopDragging = () => {
+        console.log('stop dragging')
+    }
+
     return (
 
         < OwlCarousel
@@ -101,16 +109,27 @@ const ImageCarousel = (props) => {
             mergeFit={props.mergeFit}
             items={switchNumItems()}
             dots={props.dots}
-            className={`owl-theme owl-drag owl-stage ${props.classNameContainer}`
+            className={`owl-theme owl-drag owl-grab owl-stage  ${props.classNameContainer}`
             }
+            mouseDrag={true}
+            autoplay
+            onDrag={props.isDragging}
+            onDragged={props.stopDragging}
         >
-            {props.itemsCarousel.map(printItems)}
+            {
+                props.objCarousel &&
+                props.itemsCarousel.map(printItems)
+            }
+            {
+                !props.objCarousel &&
+                props.children
+            }
         </OwlCarousel >
     )
 
 }
 
-ImageCarousel.defaultProps = {
+CustomOwlCarousel.defaultProps = {
     loop: true,
     mergeFit: true,
     classNameContainer: 'carousel-container',
@@ -121,7 +140,8 @@ ImageCarousel.defaultProps = {
     numItemMobile: 1.5,
     numItemMore320Less768: 2.2,
     numItemMore768: 3,
-    numItemDefault: 4
+    numItemDefault: 4,
+    objCarousel: true
 }
 
-export default ImageCarousel
+export default CustomOwlCarousel

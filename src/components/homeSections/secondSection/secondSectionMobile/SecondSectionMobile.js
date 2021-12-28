@@ -20,8 +20,6 @@ import CustomCard from "../../../functional_components/customCard/CustomCard";
 
 const SecondSectionMobile = (props) => {
 
-
-    console.log('valueObj', valueObj)
     const { t } = useTranslation()
 
     return (

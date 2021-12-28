@@ -11,10 +11,15 @@
 
 .view-all-btn-arrow {
     font-size: 35px;
+}
 
+.view-all-btn-container:hover .view-all-btn-arrow {
     -webkit-filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, .7));
     filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, .7));
-    /* Similar syntax to box-shadow */
+    /* box-shadow: 4px 4px 6px 0px var(--primary-btn-shadow); */
+}
 
-
+.view-all-btn-container:hover .view-all-btn-txt {
+    -webkit-filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, .7));
+    filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, .7));
 }

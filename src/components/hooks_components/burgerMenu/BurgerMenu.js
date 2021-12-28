@@ -131,7 +131,6 @@ const BurgerMenu = (props) => {
             default:
                 break
         }
-        console.log('bg menu className', className)
         return className
     }
 

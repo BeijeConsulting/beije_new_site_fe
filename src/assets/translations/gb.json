@@ -16,7 +16,7 @@
   },
   "btn": {
     "viewAll": "View All",
-    "drag": "Drag for more"
+    "drag": "Drag -br- for more"
   },
   "imgAlt": {
     "social": {
@@ -85,5 +85,23 @@
     "paragraph3_carousel_client": "Raccomanderebbe la società Beije Consulting ai propri partners",
     "title_add_info": "RICHIEDI MAGGIORI INFORMAZIONI",
     "description_add_info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan lacus quis nibh porta, eget porttitor neque feugiat."
+  },
+  "Academy": {
+    "intro": "Formarsi per costruire il proprio futuro",
+    "page_description": "Beije Academy offre percorsi formativi teorico-pratici specializzati per farti diventare uno Sviluppatore Junior.",
+    "our_courses_title": "Our courses",
+    "title_academy_java": "Academy Java",
+    "title_academy_frontend": "Academy web develop - front end",
+    "course_description": "I corsi hanno una durata di 3 mesi, sono retribuiti e hanno come scopo l’inserimento in azienda con contratto a tempo indeterminato. Il nostro docente ti accompagnerà durante tutto il percorso, attraverso lezioni frontali, esercitazioni, valutazioni e progetti reali.",
+    "send_to_youtube": "Guarda le pillole dei nostri docenti sul canale Youtube di Beije",
+    "next_courses_title": "Next courses",
+    "next_course_1": "Stage java",
+    "date_next_course_1": "Gen. – Apr. 2021",
+    "next_course_2": "Stage java",
+    "date_next_course_2": "Gen. – Apr. 2021",
+    "percentage_client_satisfaction_title": "Client satisfaction",
+    "comments_title": "Dicono di noi",
+    "form_message_title": "Richiedi maggiori informazioni",
+    "form_message_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan lacus quis nibh porta, eget porttitor neque feugiat."
   }
 }

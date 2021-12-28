@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { Form, Input, Checkbox, Row, Col } from 'antd';
 
@@ -13,17 +13,10 @@ import CustomButton from "../../functional_components/Button/CustomButton";
 const CustomForm = (props) => {
     const formRef = useRef()
 
-    const [state, setState] = useState({
-        nameError: false,
-        emailError: false,
-        municipalityError: false,
-        provinceError: false,
-        agreementError: false
-    })
-
     const { t } = useTranslation()
 
-    const onFinish = (values) => {
+    // to see the values pass "values" as parameter of this function
+    const onFinish = () => {
         formRef.current.resetFields();
     };
 
@@ -168,7 +161,7 @@ const CustomForm = (props) => {
                     </Col>
                 </Row>
             }
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%' }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: props.positionBtn, width: '100%' }}>
                 <CustomButton
                     content={t('home.fourthSection.send_btn')}
                     htmlType='submit'
@@ -184,7 +177,8 @@ CustomForm.defaultProps = {
     email: true,
     moreInfo: true,
     message: true,
-    agreement: true
+    agreement: true,
+    positionBtn: 'center'
 }
 
 export default CustomForm
