@@ -102,8 +102,8 @@
 
 @media screen and (min-width: 1024px) {
     .primary-arrow {
-        width: 84px !important;
-        height: 84px !important;
+        width: 60px !important;
+        height: 60px !important;
         background-color: var(--primary-btn-color);
         border: none !important;
         color: #fff !important;
@@ -179,13 +179,20 @@
     border: none !important;
 }
 
-/* .custom-btn-view-all:hover {
-    box-shadow: 4px 4px 6px 0px var(--primary-btn-shadow);
-}
+/* Go back btn */
 
-.custom-btn-view-all:focus {
-    box-shadow: 4px 4px 6px 0px var(--primary-btn-shadow);
-} */
+.custom-btn-go-back {
+    font-family: 'SpaceGrotesk-SemiBold', sans-serif !important;
+    font-size: 18px !important;
+    line-height: 60px !important;
+    font-weight: bold;
+    color: var(--primary-btn-color) !important;
+    background-color: transparent !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none !important;
+}
 
 /* Drag for more btn */
 .owl-drag .custom-btn-drag-more {

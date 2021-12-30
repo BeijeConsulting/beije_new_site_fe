@@ -13,6 +13,7 @@ import Login from './screens/Login/Login';
 import Home from './screens/home/Home'
 import Consulting from './screens/consulting/Consulting'
 import Academy from "./screens/academy/Academy";
+import AcademyJava from "./screens/academyJava/AcademyJava"
 import NoMatch from "./screens/NoMatch";
 
 export default [
@@ -49,10 +50,10 @@ export default [
     element: <GeneralLayout />,
     children: [
       { index: true, element: <Academy /> },
-      // {
-      //   path: `${ENVIRONMENT.ROUTING.BASE_URL}routeA/:id`,
-      //   element: <RouteADetail />
-      // },
+      {
+        path: `${ENVIRONMENT.ROUTING.BASE_URL}academy/java`,
+        element: <AcademyJava />
+      },
       { path: "*", element: <NoMatch /> }
     ]
   },

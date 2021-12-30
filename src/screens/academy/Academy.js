@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Row, Col, Typography, Carousel } from "antd";
 const { Title } = Typography;
+
+// import redux
+import { connect } from "react-redux";
+import { setColorHeader } from "../../redux/ducks/colorHeaderDuck";
 
 //import style
 import './Academy.css'
@@ -30,7 +34,26 @@ import Comments from "../../components/functional_components/comments/Comments";
 
 const Academy = (props) => {
 
+    const primary_bg_page_academy = '#feef87'
+    const secondary_bg_page_academy = '#d6e3e5'
+
     const { t } = useTranslation()
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    });
+
+    const handleScroll = () => {
+        if (window.pageYOffset == 0 || (window.pageYOffset > 0 && window.pageYOffset < 2200)) {
+            props.dispatch(setColorHeader(primary_bg_page_academy))
+            console.log('window pageYOffset: ', window.pageYOffset)
+        }
+        else {
+            props.dispatch(setColorHeader(secondary_bg_page_academy))
+            console.log('window pageYOffset: ', window.pageYOffset)
+        }
+    }
 
     const printPercentage = (item, key) => {
         return (
@@ -335,14 +358,14 @@ const Academy = (props) => {
                                 title={turnToUppercase(t('Academy.form_message_title'))}
                             />
                         </Col>
-                        <Col xs={24} md={8}>
+                        <Col xs={24} md={6}>
                             <CustomCard
                                 cardParagraph={t(`Academy.form_message_desc`)}
                                 paragraphClassName={'academy-info-desc'}
                             />
                         </Col>
                         <Col xs={0} md={4}></Col>
-                        <Col xs={24} md={12}>
+                        <Col xs={24} md={14}>
                             <CustomForm
                                 moreInfo={false}
                                 agreement={false}
@@ -357,4 +380,4 @@ const Academy = (props) => {
     )
 }
 
-export default Academy
+export default connect()(Academy)

@@ -112,5 +112,26 @@ export const divideText = (sentence, division) => {
   return (
     new_sentence.map(printNewSentence)
   )
-
 }
+
+
+export const addBreakPoint = (sentence, division) => {
+  let type_division = division;
+  let new_sentence = sentence.split(type_division);
+
+  const printNewSentence = (item, key) => {
+    return (
+      <div key={key}>
+        <p>
+          {item}
+        </p>
+        <br />
+      </div>
+    )
+  }
+
+  return (
+    new_sentence.map(printNewSentence)
+  )
+}
+

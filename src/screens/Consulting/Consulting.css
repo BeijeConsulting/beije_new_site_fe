@@ -5,31 +5,37 @@
 
 .consulting-container {
     background-color: var(--bg-color-secondary-consulting) !important;
-    padding-top: 80px;
     overflow-x: hidden;
     position: relative;
 }
 
-.consulting-section1 {
+/* Introductive section */
+.consulting-introductive-section {
     background-color: var(--bg-color-primary-consulting);
-    padding-top: 20px;
+    padding-top: 100px;
     clip-path: polygon(0 0,
             100% 0,
             100% 100%,
             0 calc(100% - 10vw));
+    padding-bottom: 30px;
 }
 
-.consulting-title-container {
+.consulting-introductive-section-container1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.consulting-introductive-section-title-container {
     padding: 0 20px;
 }
 
 
-.consulting-intro-container {
+.consulting-introductive-section-intro-container {
     width: 100%;
     padding: 0 20px;
 }
 
-.consulting-intro {
+.consulting-introductive-section-intro {
     font-weight: 400px;
     font-size: 26px;
     line-height: 42px;
@@ -37,93 +43,100 @@
     margin: 0 !important;
 }
 
-.consulting-images-container {
+.consulting-introductive-section-images-container {
     height: 257px;
     width: 100%;
 }
 
-.consulting-img1-container .ant-image {
+.consulting-introductive-section-img1-container .ant-image {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
 
-.consulting-images {
+.consulting-introductive-section-images {
     width: 95%;
     height: 257px;
 }
 
-.consulting-img1 {
+.consulting-introductive-section-img1 {
     border-radius: 30px 0 0 30px;
 }
 
-.consulting-desc-container {
+.consulting-introductive-section-desc-container {
     padding: 20px;
     color: #fff
 }
 
-.consulting-img2 {
+.consulting-introductive-section-img2 {
     border-radius: 0 30px 30px 0;
 }
 
-.consulting-section2 {
+/* Percentage section */
+.consulting-percentage1-section {
     padding: 0 20px;
     margin-bottom: 30px;
 }
 
-.consulting-carousel-mobile {
+.consulting-percentage-section-carousel {
+    margin: 30px 0;
     display: block;
 }
 
-.consulting-card-desktop {
+.consulting-percentage-section-card {
     display: none;
+}
+
+.consulting-percentage2-section {
+    margin-bottom: 30px;
 }
 
 @media screen and (min-width: 768px) {
 
-    .consulting-images-container {
+    .consulting-introductive-section-images-container {
         height: 350px;
     }
 
-    .consulting-images {
+    .consulting-introductive-section-images {
         height: 350px;
     }
 
-    .consulting-carousel-mobile {
+    .consulting-percentage-section-carousel {
         display: none;
     }
 
-    .consulting-card-desktop {
+    .consulting-percentage-section-card {
         display: flex;
     }
 }
 
 @media screen and (min-width: 992px) {
 
-    .consulting-section1 {
+    .consulting-introductive-section {
         padding-bottom: 30px;
         margin-bottom: -50px;
     }
 
-    .consulting-intro-container {
+    .consulting-introductive-section-intro-container {
         width: 80%;
-        padding: 0 20px;
+        padding-top: 60px;
+        align-self: flex-end;
     }
 
-    .consulting-intro {
+    .consulting-introductive-section-intro {
         font-size: 35px;
         line-height: 50px;
     }
 
-    .consulting-desc-container {
-        width: 60%;
+    .consulting-introductive-section-desc-container {
+        padding-top: 60px;
     }
 
-    .consulting-images-container {
+    .consulting-introductive-section-images-container {
         height: 740px;
     }
 
-    .consulting-images {
+    .consulting-introductive-section-images {
         height: 604px;
     }
 }

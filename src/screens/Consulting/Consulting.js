@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 //import ant design
 import { Row, Typography, Col } from "antd";
 const { Title } = Typography;
+
+// import redux
+import { connect } from "react-redux";
+import { setColorHeader } from "../../redux/ducks/colorHeaderDuck";
 
 //import style
 import './Consulting.css';
@@ -12,15 +16,37 @@ import '../../components/hooks_components/customCarousel/CustomCarousel.css'
 //import constants
 import { consulting1, consulting_carousel_client } from "../../utils/properties";
 
+//import functions
+import { turnToUppercase } from "../../utils/utilities";
+
 //import components
 import CustomCard from '../../components/functional_components/customCard/CustomCard';
 import CustomCarousel from "../../components/hooks_components/customCarousel/CustomCarousel";
 import SectionSubtitle from "../../components/functional_components/sectionSubtitle/SectionSubtitle";
 import CustomForm from "../../components/hooks_components/customForm/CustomForm";
 
-const Consulting = () => {
+
+const Consulting = (props) => {
+
+    const primary_bg_page_consulting = '#9ec1db'
+    const secondary_bg_page_consulting = '#d6e3e5'
 
     const { t } = useTranslation()
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    });
+
+    const handleScroll = () => {
+        if (window.pageYOffset == 0 || (window.pageYOffset > 0 && window.pageYOffset < 1297)) {
+            props.dispatch(setColorHeader(primary_bg_page_consulting))
+            console.log('window pageYOffset: ', window.pageYOffset)
+        }
+        else {
+            props.dispatch(setColorHeader(secondary_bg_page_consulting))
+        }
+    }
 
     const printPercentage = (item, key) => {
         return (
@@ -50,82 +76,91 @@ const Consulting = () => {
         /* *he* */
         <div className={'consulting-container'}>
 
-            <section className={'consulting-section1'}>
+            <section className={'consulting-introductive-section'}>
                 <Row>
-                    <Col xs={24} md={12}>
-                        <Row className="consulting-title-container">
+                    <Col
+                        xs={24}
+                        md={12}
+                        className="consulting-introductive-section-container1"
+                    >
+                        <Row className="consulting-introductive-section-title-container">
                             <Title
                                 level={1}
-                            >CONSULTING</Title>
+                            >{turnToUppercase('Consulting')}</Title>
                         </Row>
-                        <Row className="consulting-intro-container">
+                        <Row className="consulting-introductive-section-intro-container">
                             <CustomCard
                                 cardDescription={t('Consulting.intro')}
-                                descriptionClassName='consulting-intro grotesk-font txt-light'
+                                descriptionClassName='consulting-introductive-section-intro grotesk-font txt-light'
                             />
                         </Row>
                     </Col>
-                    <Col xs={24} md={12} className="consulting-images-container consulting-img1-container">
+                    <Col xs={24} md={12} className="consulting-introductive-section-images-container consulting-introductive-section-img1-container">
                         <CustomCard
+                            imgPreview={false}
                             cardImg
                             // alt={*alt*} 
-                            imgClassName={'consulting-images consulting-img1'}
+                            imgClassName={'consulting-introductive-section-images consulting-introductive-section-img1'}
                             imgSrc={consulting1}
                         />
                     </Col>
                 </Row>
                 <Row>
-                    <Col xs={24} md={0} className="consulting-desc-container txt-light">
+                    <Col xs={24} md={0} className="consulting-introductive-section-desc-container">
                         <CustomCard
                             cardDescription={t('Consulting.description')}
+                            descriptionClassName={'txt-light'}
                         />
                     </Col>
-                    <Col xs={24} md={12} className="consulting-images-container">
+                    <Col xs={24} md={12} className="consulting-introductive-section-images-container">
                         <CustomCard
+                            imgPreview={false}
                             cardImg
                             // alt={*alt*} 
-                            imgClassName={'consulting-images consulting-img2'}
+                            imgClassName={'consulting-introductive-section-images consulting-introductive-section-img2'}
                             imgSrc={consulting1}
                         />
                     </Col>
-                    <Col xs={0} md={12} className="consulting-desc-container">
+                    <Col xs={0} md={8} className="consulting-introductive-section-desc-container">
                         <CustomCard
                             cardDescription={t('Consulting.description')}
+                            descriptionClassName={'txt-light'}
                         />
                     </Col>
+                    <Col xs={0} md={16}></Col>
                 </Row>
             </section>
 
-            <div className={'consulting-section2'}>
+            <div className={'consulting-percentage1-section'}>
                 <section>
                     <SectionSubtitle
-                        title={t('Consulting.title_carousel_client')}
+                        title={turnToUppercase(t('Consulting.title_carousel_client'))}
                         shortLineBelow
                     />
-                    <Row className={'consulting-carousel-mobile'}>
+                    <Row className={'consulting-percentage-section-carousel'}>
                         <CustomCarousel />
                     </Row>
-                    <Row className={'consulting-card-desktop'}>
+                    <Row className={'consulting-percentage-section-card'}>
                         {consulting_carousel_client.map(printPercentage)}
                     </Row>
                 </section>
 
-                <section>
+                <section className="consulting-percentage2-section">
                     <SectionSubtitle
-                        title={t('Consulting.title_carousel_client')}
+                        title={turnToUppercase(t('Consulting.title_carousel_client'))}
                         shortLineBelow
                     />
-                    <Row className={'consulting-carousel-mobile'}>
+                    <Row className={'consulting-percentage-section-carousel'}>
                         <CustomCarousel />
                     </Row>
-                    <Row className={'consulting-card-desktop'}>
+                    <Row className={'consulting-percentage-section-card'}>
                         {consulting_carousel_client.map(printPercentage)}
                     </Row>
                     <Row>
                         <SectionSubtitle
                             styleContainer={{ marginBottom: 0 }}
                             shortLineAbove
-                            description={'Dati survery 2019'}
+                            description={t('Consulting.data_survey')}
                         />
                     </Row>
                 </section>
@@ -136,19 +171,20 @@ const Consulting = () => {
                             <SectionSubtitle
                                 styleContainer={{ marginBottom: '10px' }}
                                 LongLineAbove
-                                title={t('Consulting.title_add_info')}
+                                title={turnToUppercase(t('Consulting.title_add_info'))}
                             />
                         </Col>
-                        <Col xs={24} md={12}>
+                        <Col xs={24} md={6}>
                             <CustomCard
                                 cardParagraph={t(`Consulting.description_add_info`)}
-                                paragraphClassName={'consulting-info-desc'}
                             />
                         </Col>
-                        <Col xs={24} md={12}>
+                        <Col xs={0} md={4}></Col>
+                        <Col xs={24} md={14}>
                             <CustomForm
                                 moreInfo={false}
                                 agreement={false}
+                                positionBtn={'flex-end'}
                             />
                         </Col>
                     </Row>
@@ -158,4 +194,4 @@ const Consulting = () => {
     )
 }
 
-export default Consulting
+export default connect()(Consulting)

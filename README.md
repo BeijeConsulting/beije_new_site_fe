@@ -14,7 +14,8 @@ Library:
   helmet - https://www.npmjs.com/package/react-helmet
   lottie - https://www.npmjs.com/package/@lottiefiles/react-lottie-player
   react fullpage - https://github.com/alvarotrigo/react-fullpage
-  react-owl-carousel - https://www.npmjs.com/package/react-owl-carousel 
+  react-owl-carousel - https://www.npmjs.com/package/react-owl-carousel,
+  gsap - https://www.npmjs.com/package/gsap
 
 # look for google analytics
 to find google analytics search for the following comment: *ga*

@@ -39,7 +39,7 @@
 }
 
 body {
-  overflow: overlay;
+  /* overflow: overlay; */
   background-color: #fff;
   margin: 0;
   font-family: 'Moderat-Regular', sans-serif;
@@ -397,7 +397,7 @@ h2 {
   width: 100%;
   padding: 5px 25px;
   background-color: #fff;
-  line-height: 64px !important;
+  line-height: 53px !important;
   z-index: 2;
 }
 

@@ -1,0 +1,25 @@
+.go-back-btn-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.go-back-btn-txt {
+    padding-left: 10px;
+}
+
+.go-back-btn-arrow {
+    font-size: 35px;
+}
+
+.go-back-btn-container:hover .go-back-btn-arrow {
+    -webkit-filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, .7));
+    filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, .7));
+    /* box-shadow: 4px 4px 6px 0px var(--primary-btn-shadow); */
+}
+
+.go-back-btn-container:hover .go-back-btn-txt {
+    -webkit-filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, .7));
+    filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, .7));
+}

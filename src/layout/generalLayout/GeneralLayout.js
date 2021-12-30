@@ -13,18 +13,19 @@ const { Header, Footer, Content } = Layout;
 
 const GeneralLayout = (props) => {
     return (
-        <Layout style={{ backgroundColor: 'blue' }}>
-
+        <Layout className="min-h-100vh">
+            <Header
+                className={!props.menuDuck.menuOpen ? 'header-ant-general-style' : 'header-ant-style'}
+                style={{
+                    backgroundColor: props.colorHeaderDuck.colorHeader !== undefined ?
+                        props.colorHeaderDuck.colorHeader : "transparent",
+                    transition: '1.5s'
+                }}
+            >
+                <CustomHeader />
+            </Header>
             <Layout>
-                <Header
-                    className={!props.menuDuck.menuOpen ? 'header-ant-general-style' : 'header-ant-style'}
-                >
-                    <CustomHeader />
-                </Header>
-
-                <Layout
-                    className='generalLayout-content'
-                >
+                <Layout className="h-100">
                     <Content>
                         <div >
                             <Outlet />
@@ -38,13 +39,40 @@ const GeneralLayout = (props) => {
                     <CustomFooter />
                 </Footer>
             }
-        </Layout >
+        </Layout>
+        // <Layout style={{ backgroundColor: 'blue' }}>
+
+        //     <Layout>
+        //         <Header
+        //             className={!props.menuDuck.menuOpen ? 'header-ant-general-style' : 'header-ant-style'}
+        //         >
+        //             <CustomHeader />
+        //         </Header>
+
+        //         <Layout
+        //             className='generalLayout-content'
+        //         >
+        //             <Content>
+        //                 <div >
+        //                     <Outlet />
+        //                 </div>
+        //             </Content>
+        //         </Layout>
+        //     </Layout>
+        //     {
+        //         !props.menuDuck.menuOpen &&
+        //         <Footer className={'generalLayout-footer'}>
+        //             <CustomFooter />
+        //         </Footer>
+        //     }
+        // </Layout >
     )
 }
 
 
 const mapStateToProps = state => ({
-    menuDuck: state.menuDuck
+    menuDuck: state.menuDuck,
+    colorHeaderDuck: state.colorHeaderDuck
 })
 
 export default connect(mapStateToProps)(GeneralLayout)

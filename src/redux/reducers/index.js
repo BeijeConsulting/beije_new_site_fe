@@ -6,6 +6,7 @@ import loadingDuck from "../ducks/Loading";
 import menuDuck from '../ducks/menuDuck';
 import colorDuck from '../ducks/colorDuck'
 import visibilityDuck from '../ducks/visibilityDuck';
+import colorHeaderDuck from '../ducks/colorHeaderDuck';
 
 // const rootReducer = combineReducers({
 
@@ -17,7 +18,8 @@ const appReducer = combineReducers({
   loadingDuck,
   menuDuck,
   colorDuck,
-  visibilityDuck
+  visibilityDuck,
+  colorHeaderDuck
 })
 
 const rootReducer = (state, action) => {

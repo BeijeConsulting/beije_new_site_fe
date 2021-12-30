@@ -341,6 +341,30 @@ export const academy_comments = [
   }
 ]
 
+export const java_program = [
+  {
+    title_subject: 'Java basi e teoria',
+    subtopic_list: 'Fondamenti di Java e di programmazione ad oggetti Variabili: differenza tra tipi primitivi e rifermenti ad oggetti -br- Gli operatori in Java: aritmetici, unari e binari -br- Costrutti condizionali ed iterativi; controllo avanzato del flusso -br- La classe String ed il concetto di immutabilità -br- La classe StringBuilder ed il concetto di “uguaglianza” tra oggetti in Java -br- Gli array mono e multidimensionali in Java; la classe ArrayList -br- La gestione di data ed orario in Java -br- Design dei metodi: modificatori di accesso e passaggio di parametri -br- I metodi “Costruttori” e l’overloading di metodi in una classe -br- Ereditarietà e classi astratte -br- Interfacce e Polimorfismo -br- Gestire le eccezioni in Java -br- Accenni di programmazione funzionale in Java: scrivere semplici funzioni Lambda -br- I Design Patterns: Builder, Factory, Singleton e Decorator'
+  },
+  {
+    title_subject: 'Java basi e teoria',
+    subtopic_list: 'Fondamenti di Java e di programmazione ad oggetti Variabili: differenza tra tipi primitivi e rifermenti ad oggetti -br- Gli operatori in Java: aritmetici, unari e binari -br- Costrutti condizionali ed iterativi; controllo avanzato del flusso -br- La classe String ed il concetto di immutabilità -br- La classe StringBuilder ed il concetto di “uguaglianza” tra oggetti in Java -br- Gli array mono e multidimensionali in Java; la classe ArrayList -br- La gestione di data ed orario in Java -br- Design dei metodi: modificatori di accesso e passaggio di parametri -br- I metodi “Costruttori” e l’overloading di metodi in una classe -br- Ereditarietà e classi astratte -br- Interfacce e Polimorfismo -br- Gestire le eccezioni in Java -br- Accenni di programmazione funzionale in Java: scrivere semplici funzioni Lambda -br- I Design Patterns: Builder, Factory, Singleton e Decorator'
+  },
+  {
+    title_subject: 'Java basi e teoria',
+    subtopic_list: 'Fondamenti di Java e di programmazione ad oggetti Variabili: differenza tra tipi primitivi e rifermenti ad oggetti -br- Gli operatori in Java: aritmetici, unari e binari -br- Costrutti condizionali ed iterativi; controllo avanzato del flusso -br- La classe String ed il concetto di immutabilità -br- La classe StringBuilder ed il concetto di “uguaglianza” tra oggetti in Java -br- Gli array mono e multidimensionali in Java; la classe ArrayList -br- La gestione di data ed orario in Java -br- Design dei metodi: modificatori di accesso e passaggio di parametri -br- I metodi “Costruttori” e l’overloading di metodi in una classe -br- Ereditarietà e classi astratte -br- Interfacce e Polimorfismo -br- Gestire le eccezioni in Java -br- Accenni di programmazione funzionale in Java: scrivere semplici funzioni Lambda -br- I Design Patterns: Builder, Factory, Singleton e Decorator'
+  },
+  {
+    title_subject: 'Java basi e teoria',
+    subtopic_list: 'Fondamenti di Java e di programmazione ad oggetti Variabili: differenza tra tipi primitivi e rifermenti ad oggetti -br- Gli operatori in Java: aritmetici, unari e binari -br- Costrutti condizionali ed iterativi; controllo avanzato del flusso -br- La classe String ed il concetto di immutabilità -br- La classe StringBuilder ed il concetto di “uguaglianza” tra oggetti in Java -br- Gli array mono e multidimensionali in Java; la classe ArrayList -br- La gestione di data ed orario in Java -br- Design dei metodi: modificatori di accesso e passaggio di parametri -br- I metodi “Costruttori” e l’overloading di metodi in una classe -br- Ereditarietà e classi astratte -br- Interfacce e Polimorfismo -br- Gestire le eccezioni in Java -br- Accenni di programmazione funzionale in Java: scrivere semplici funzioni Lambda -br- I Design Patterns: Builder, Factory, Singleton e Decorator'
+  },
+  {
+    title_subject: 'Java basi e teoria',
+    subtopic_list: 'Fondamenti di Java e di programmazione ad oggetti Variabili: differenza tra tipi primitivi e rifermenti ad oggetti -br- Gli operatori in Java: aritmetici, unari e binari -br- Costrutti condizionali ed iterativi; controllo avanzato del flusso -br- La classe String ed il concetto di immutabilità -br- La classe StringBuilder ed il concetto di “uguaglianza” tra oggetti in Java -br- Gli array mono e multidimensionali in Java; la classe ArrayList -br- La gestione di data ed orario in Java -br- Design dei metodi: modificatori di accesso e passaggio di parametri -br- I metodi “Costruttori” e l’overloading di metodi in una classe -br- Ereditarietà e classi astratte -br- Interfacce e Polimorfismo -br- Gestire le eccezioni in Java -br- Accenni di programmazione funzionale in Java: scrivere semplici funzioni Lambda -br- I Design Patterns: Builder, Factory, Singleton e Decorator'
+  }
+
+]
+
 /*
 //sia per lista sia per detagli
 const blog = [
