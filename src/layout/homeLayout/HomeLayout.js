@@ -18,7 +18,14 @@ const HomeLayout = (props) => {
     <Layout>
 
       <Layout className="min-h-100vh">
-        <Header className={!props.visibilityDuck.visibility ? 'header-ant-style-transparent' : 'header-ant-style'} >
+        <Header
+          className={!props.visibilityDuck.visibility ? 'header-ant-style-transparent' : 'header-ant-style'}
+          style={{
+            backgroundColor: props.colorHeaderDuck.colorHeader !== undefined ?
+              props.colorHeaderDuck.colorHeader : "#fff",
+            transition: '1s'
+          }}
+        >
           <CustomHeader />
         </Header>
 
@@ -45,7 +52,8 @@ const HomeLayout = (props) => {
 
 const mapStateToProps = state => ({
   menuDuck: state.menuDuck,
-  visibilityDuck: state.visibilityDuck
+  visibilityDuck: state.visibilityDuck,
+  colorHeaderDuck: state.colorHeaderDuck
 })
 
 export default connect(mapStateToProps)(HomeLayout);

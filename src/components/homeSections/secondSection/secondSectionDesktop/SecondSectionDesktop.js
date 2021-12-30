@@ -26,9 +26,18 @@ const SecondSectionDesktop = () => {
             <Col
                 md={6}
                 key={key}
-                className={'sec-section-card-col'}>
+                className={item.colContainerClassName}
+            >
+                {/* <div className={item.colClassName}> */}
+                    <CustomCard
+                        cardTitle={t('home.secondSection.' + item.cardTitle)}
+                        titleLevel={item.titleLevel}
+                        cardClassName={item.colClassName}
+                    />
 
-                <CustomCard
+                {/* </div> */}
+
+                {/* <CustomCard
                     cardClassName={item.cardClassName}
                     titleLevel={item.titleLevel}
                     cardTitle={t('home.secondSection.' + item.cardTitle)}
@@ -51,14 +60,14 @@ const SecondSectionDesktop = () => {
                                 className='arrow-icon-btn' />
                         }
                     />
-                </CustomCard>
+                </CustomCard> */}
             </Col>
         )
     }
 
     return (
         <>
-            <Row className='d-flex justify-center width-100'>
+            <Row className='d-flex justify-between width-100'>
                 {cardWhoWeAre.map(printCard)}
             </Row>
 

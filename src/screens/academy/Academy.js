@@ -128,7 +128,7 @@ const Academy = (props) => {
                                 imgSrc={academy1}
                             />
                         </Col>
-                        <Col xs={24} md={0}>
+                        <Col xs={24} md={0} className="academy-introductive-section-desc-mobile-container">
                             <CustomCard
                                 cardDescription={t('Academy.page_description')}
                                 descriptionClassName={'academy-introductive-section-desc-mobile'}

@@ -10,11 +10,8 @@
 }
 
 /* Introductive section */
-.aDeteils-introductive-section-container {
-    padding: 20px
-}
-
 .aDeteils-introductive-section-goBack-btn {
+    padding: 0 20px;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
@@ -22,6 +19,7 @@
 }
 
 .aDeteils-introductive-section-title-container {
+    padding: 0 20px;
     margin-top: 20px;
 }
 
@@ -38,6 +36,10 @@
     display: none;
 }
 
+.aDeteils-introductive-section-desc-mobile-container {
+    padding: 0 20px;
+}
+
 .aDeteils-introductive-section-desc-mobile {
     margin-top: 30px;
 }
@@ -45,21 +47,20 @@
 .aDeteils-introductive-section-img1-container {
     height: 300px;
     margin-bottom: 20px;
+    width: 100%;
+}
+
+.aDeteils-introductive-section-img1-container .ant-image {
+    height: 300px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
 
-.aDeteils-introductive-section-img1-container .ant-image {
-    position: absolute;
-    right: -135px;
-    width: 716px;
-}
-
 .aDeteils-introductive-section-img1 {
     height: 300px;
-    /* width: 726px; */
     border-radius: 30px 0 0 30px;
+    width: 100%;
 }
 
 .aDeteils-introductive-section-btn-candidate {
@@ -68,6 +69,7 @@
     align-items: flex-end;
     justify-content: flex-end;
     margin-bottom: 30px;
+    padding: 0 20px;
 }
 
 
@@ -166,11 +168,5 @@
     .aDeteils-introductive-section-intro-container {
         align-self: center;
         width: 50%
-    }
-
-    .aDeteils-introductive-section-img1-container .ant-image {
-        position: absolute;
-        right: -20px;
-        width: 900px;
     }
 }

@@ -1,12 +1,9 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 // import { useTranslation } from "react-i18next";
 
 import { Row, Col, Typography, Collapse } from "antd";
 const { Title } = Typography
 const { Panel } = Collapse;
-
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 // import style
 import './AcademyDetails.css'
@@ -31,35 +28,6 @@ import CustomCard from "../functional_components/customCard/CustomCard";
 import GoBackBtn from "../functional_components/goBackBtn/GoBackBtn";
 
 const AcademyDetails = (props) => {
-
-    const academy_details_ref = useRef(null)
-    const academy_txt_ref = useRef(null)
-
-    gsap.registerPlugin(ScrollTrigger);
-    useEffect(() => {
-        gsap.to(
-            academy_details_ref.current,
-            5,
-            {
-                scrollTrigger: {
-                    trigger: academy_txt_ref.current,
-                    start: "top center",
-                    end: "bottom center",
-                    scrub: true,
-                    markers: true,
-                },
-                yoyo: true,
-                repeat: 1,
-                opacity: 1,
-                y: 0,
-            },
-            0
-        );
-        return () => {
-            ScrollTrigger.kill();
-        };
-    }, []);
-
 
     // const { t } = useTranslation()
 
@@ -105,7 +73,6 @@ const AcademyDetails = (props) => {
     return (
         <div
             className={'aDeteils-container'}
-            ref={academy_details_ref}
         >
 
             <section className={'aDeteils-introductive-section-container'}>
@@ -123,11 +90,10 @@ const AcademyDetails = (props) => {
                         <Row>
                             <Title
                                 level={1}
-                                ref={academy_txt_ref}
                             >{props.pageTitle}</Title>
                         </Row>
                     </Col>
-                    <Col xs={24} md={12} lg={16} className={'aDeteils-introductive-section-intro-col1'}>
+                    <Col xs={24} md={12} lg={12} className={'aDeteils-introductive-section-intro-col1'}>
                         <Row className="aDeteils-introductive-section-intro-container">
                             <CustomCard
                                 cardDescription={props.pageDescription}
@@ -135,7 +101,7 @@ const AcademyDetails = (props) => {
                             />
                         </Row>
                     </Col>
-                    <Col xs={24} md={12} lg={8} className={'aDeteils-introductive-section-img1-container'}>
+                    <Col xs={24} md={12} lg={12} className={'aDeteils-introductive-section-img1-container'}>
                         <CustomCard
                             cardImg
                             imgPreview={false}
@@ -152,7 +118,7 @@ const AcademyDetails = (props) => {
                             type={'form-btn'}
                         />
                     </Col>
-                    <Col xs={24} md={0}>
+                    <Col xs={24} md={0} className={'aDeteils-introductive-section-desc-mobile-container'}>
                         <CustomCard
                             cardDescription={props.pageDescription}
                             descriptionClassName={'aDeteils-introductive-section-desc-mobile'}

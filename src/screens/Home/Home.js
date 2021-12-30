@@ -9,6 +9,7 @@ const { Footer } = Layout;
 //import actions to dispatch
 import { setColor, initColor } from "../../redux/ducks/colorDuck";
 import { setVisibility, initVisibility } from "../../redux/ducks/visibilityDuck"
+import { setColorHeader, initColorHeader } from "../../redux/ducks/colorHeaderDuck";
 
 
 //import style
@@ -76,10 +77,18 @@ const Home = (props) => {
     if (destination.index === 0) {
       props.dispatch(setColor(true))
       props.dispatch(setVisibility(false)) //set visibility of navbar
+      props.dispatch(initColorHeader())
+    }
+    else if (destination.index === 6 && !myState.isDesktop) {
+      props.dispatch(setColorHeader(colorContactPage))
+    }
+    else if (destination.index === 3 && myState.isDesktop) {
+      props.dispatch(setColorHeader(colorContactPage))
     }
     else {
       props.dispatch(initColor())
       props.dispatch(initVisibility())
+      props.dispatch(setColorHeader('#fff'))
     }
 
     setState({

@@ -155,6 +155,8 @@ export const siteMenu = [
 
 export const cardWhoWeAre = [
   {
+    colContainerClassName: "sec-section-card-col",
+    colClassName: 'sec-section-card sec-section-card-bg-value sec-section-card-top',
     cardClassName: 'container-column width-100 height-100 items-center justify-around',
     titleLevel: 2,
     cardTitle: 'title_value',
@@ -166,6 +168,8 @@ export const cardWhoWeAre = [
     orientation: 'left',
   },
   {
+    colContainerClassName: "sec-section-card-col",
+    colClassName: 'sec-section-card sec-section-card-bg-history sec-section-card-bottom',
     cardClassName: 'container-column width-100 height-100 items-center justify-around',
     titleLevel: 2,
     cardTitle: 'title_history',
@@ -177,6 +181,8 @@ export const cardWhoWeAre = [
     orientation: 'right',
   },
   {
+    colContainerClassName: "sec-section-card-col",
+    colClassName: 'sec-section-card sec-section-card-bg-mission sec-section-card-top',
     cardClassName: 'container-column width-100 height-100 items-center justify-around',
     titleLevel: 2,
     cardTitle: 'title_vision',
@@ -187,6 +193,8 @@ export const cardWhoWeAre = [
     type_btn: 'primary-arrow-btn',
   },
   {
+    colContainerClassName: "sec-section-card-col",
+    colClassName: 'sec-section-card  sec-section-card-bg-vision sec-section-card-bottom',
     cardClassName: 'container-column width-100 height-100 items-center justify-around',
     titleLevel: 2,
     cardTitle: 'title_mission',

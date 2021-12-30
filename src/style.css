@@ -364,6 +364,10 @@ h2 {
   justify-content: space-around;
 }
 
+.justify-between {
+  justify-content: space-between;
+}
+
 .circular-btn {
   border-radius: 50% !important;
 }
