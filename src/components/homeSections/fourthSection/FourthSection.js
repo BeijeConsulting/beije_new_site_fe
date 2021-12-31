@@ -25,7 +25,7 @@ const FourthSection = () => {
             </Row>
             <Row>
                 <Col xs={0} md={8} className={'fourth-sec-col1 txt-dark'}>
-                    <Row>
+                    <Row className={'fourth-sec-single-row'}>
                         <CustomCard
                             descriptionClassName={'fourth-sec-description'}
                             cardDescription={t('home.fourthSection.location')}
@@ -34,7 +34,7 @@ const FourthSection = () => {
                         />
 
                     </Row>
-                    <Row>
+                    <Row className={'fourth-sec-single-row'}>
                         <CustomCard
                             descriptionClassName={'fourth-sec-description'}
                             cardDescription={t('home.fourthSection.hours')}
@@ -42,7 +42,7 @@ const FourthSection = () => {
                             cardDescription3={'09:00 18:00'}
                         />
                     </Row>
-                    <Row>
+                    <Row className={'fourth-sec-single-row'}>
                         <CustomCard
                             descriptionClassName={'fourth-sec-description'}
                             cardDescription={t('home.fourthSection.contacts')}
@@ -50,7 +50,7 @@ const FourthSection = () => {
                             cardDescription3={'commerciale@beije.it'}
                         />
                     </Row>
-                    <Row>
+                    <Row className={'fourth-sec-single-row'}>
                         <CustomCard
                             descriptionClassName={'fourth-sec-description'}
                             cardDescription={'039 9402904'}
@@ -59,7 +59,9 @@ const FourthSection = () => {
                 </Col>
                 <Col xs={0} md={2} />
                 <Col xs={24} md={14} className={'fourth-sec-col2'}>
-                    <CustomForm />
+                    <CustomForm
+                        classNameTextArea={'fourth-sec-text-area-form'}
+                    />
                 </Col>
             </Row>
         </Layout>

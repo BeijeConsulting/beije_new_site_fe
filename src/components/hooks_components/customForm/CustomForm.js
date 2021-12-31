@@ -133,7 +133,7 @@ const CustomForm = (props) => {
                 >
                     <Input.TextArea
                         placeholder={t('home.fourthSection.placeholder.message')}
-                        className='form-input form-text-area'
+                        className={`form-input ${props.classNameTextArea}`}
                     />
                 </Form.Item>
             }
@@ -178,7 +178,8 @@ CustomForm.defaultProps = {
     moreInfo: true,
     message: true,
     agreement: true,
-    positionBtn: 'center'
+    positionBtn: 'center',
+    classNameTextArea: 'form-text-area'
 }
 
 export default CustomForm

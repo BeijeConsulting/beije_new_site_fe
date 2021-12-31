@@ -2,6 +2,8 @@ import React from "react";
 import { Row, Col, Typography } from "antd";
 const { Link } = Typography;
 
+import ReactCSSTransitionGroup from 'react-transition-group';
+
 //import style
 import './Navbar.css'
 
@@ -27,7 +29,9 @@ const Navbar = (props) => {
     }
 
     return (
-        <Row className={props.classNameRow}>
+        <Row
+            className={props.classNameRow}
+        >
             <Col className={props.classNameCol}>
                 <Link
                     href={props.href_consulting}

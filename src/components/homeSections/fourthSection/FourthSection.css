@@ -1,13 +1,13 @@
+:root {
+    --text-primary-fourth-sec: var(--first-color);
+}
+
 .fourth-sec-container {
     height: 100%;
     background-color: transparent;
     /* width: 100%; */
 }
 
-.fourth-sec-description {
-    font-size: 14px;
-    font-weight: 500;
-}
 
 .fourth-sec-col1 {
     border: 1 solid #000;
@@ -22,8 +22,19 @@
     display: none;
 }
 
-.fourth-sec-col1 div {
-    /* border: 1px solid red; */
+.fourth-sec-single-row {
+    margin-bottom: 10px;
+}
+
+.fourth-sec-text-area-form {
+    background-color: transparent;
+    border: 1px solid var(--text-primary-fourth-sec);
+    border-radius: 25px;
+    height: 165px !important;
+}
+
+.fourth-sec-text-area-form::placeholder {
+    color: var(--text-primary-fourth-sec) !important;
 }
 
 @media screen and (min-width: 768px) {
@@ -39,5 +50,11 @@
         justify-content: space-between;
         width: 100%;
         height: 50%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .fourth-sec-text-area-form {
+        height: 100px !important;
     }
 }

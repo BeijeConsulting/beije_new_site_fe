@@ -100,6 +100,16 @@
     color: var(--primary-btn-color) !important;
 }
 
+.secondary-arrow:hover {
+    background-color: #fff;
+    box-shadow: 4px 4px 6px 0px var(--primary-btn-shadow);
+}
+
+.secondary-arrow:focus {
+    background-color: #fff;
+    box-shadow: 4px 4px 6px 0px var(--primary-btn-shadow);
+}
+
 @media screen and (min-width: 1024px) {
     .primary-arrow {
         width: 60px !important;

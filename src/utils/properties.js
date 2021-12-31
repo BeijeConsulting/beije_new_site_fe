@@ -156,20 +156,22 @@ export const siteMenu = [
 export const cardWhoWeAre = [
   {
     colContainerClassName: "sec-section-card-col",
-    colClassName: 'sec-section-card sec-section-card-bg-value sec-section-card-top',
-    cardClassName: 'container-column width-100 height-100 items-center justify-around',
+    cardContainerClassName: "sec-section-card sec-section-card-bg-value sec-section-card-top",
+    colClassName: '',
+    cardClassName: 'container-column width-100 height-100 items-center justify-around', //rimuovere
     titleLevel: 2,
     cardTitle: 'title_value',
     titleClassName: 'sec-section-title',
-    paragraph: 'paragraph_value',
-    bgImage: 'sec-section-bgImg sec-section-bg1',
-    show_btn: true,
-    type_btn: 'primary-arrow-btn',
-    orientation: 'left',
+    paragraph: 'paragraph_value', //rimuovere
+    bgImage: 'sec-section-bgImg sec-section-bg1', //modificare in caso il mobile sia come desktop
+    show_btn: true, //rimuovere
+    type_btn: 'secondary-arrow-btn',
+    orientation: 'left', //rimuovere
   },
   {
     colContainerClassName: "sec-section-card-col",
-    colClassName: 'sec-section-card sec-section-card-bg-history sec-section-card-bottom',
+    cardContainerClassName: "sec-section-card sec-section-card-bg-history sec-section-card-bottom",
+    colClassName: ' ',
     cardClassName: 'container-column width-100 height-100 items-center justify-around',
     titleLevel: 2,
     cardTitle: 'title_history',
@@ -177,12 +179,13 @@ export const cardWhoWeAre = [
     paragraph: 'paragraph_history',
     bgImage: 'sec-section-bgImg sec-section-bg2',
     show_btn: true,
-    type_btn: 'primary-arrow-btn',
-    orientation: 'right',
+    type_btn: 'secondary-arrow-btn',
+    orientation: 'right', //rimuovere
   },
   {
     colContainerClassName: "sec-section-card-col",
-    colClassName: 'sec-section-card sec-section-card-bg-mission sec-section-card-top',
+    cardContainerClassName: 'sec-section-card sec-section-card-bg-mission sec-section-card-top',
+    colClassName: '',
     cardClassName: 'container-column width-100 height-100 items-center justify-around',
     titleLevel: 2,
     cardTitle: 'title_vision',
@@ -190,11 +193,12 @@ export const cardWhoWeAre = [
     paragraph: 'paragraph_vision',
     bgImage: 'sec-section-bgImg sec-section-bg4',
     show_btn: true,
-    type_btn: 'primary-arrow-btn',
+    type_btn: 'secondary-arrow-btn',
   },
   {
     colContainerClassName: "sec-section-card-col",
-    colClassName: 'sec-section-card  sec-section-card-bg-vision sec-section-card-bottom',
+    cardContainerClassName: 'sec-section-card  sec-section-card-bg-vision sec-section-card-bottom',
+    colClassName: '',
     cardClassName: 'container-column width-100 height-100 items-center justify-around',
     titleLevel: 2,
     cardTitle: 'title_mission',
@@ -202,7 +206,7 @@ export const cardWhoWeAre = [
     paragraph: 'paragraph_mission',
     bgImage: 'sec-section-bgImg sec-section-bg3',
     show_btn: true,
-    type_btn: 'primary-arrow-btn',
+    type_btn: 'secondary-arrow-btn',
   }
 ]
 

@@ -16,6 +16,7 @@ import { cardWhoWeAre } from "../../../../utils/properties";
 
 //import components
 import CustomCard from "../../../functional_components/customCard/CustomCard";
+import CustomButton from "../../../functional_components/Button/CustomButton";
 
 const SecondSectionDesktop = () => {
 
@@ -28,14 +29,23 @@ const SecondSectionDesktop = () => {
                 key={key}
                 className={item.colContainerClassName}
             >
-                {/* <div className={item.colClassName}> */}
-                    <CustomCard
-                        cardTitle={t('home.secondSection.' + item.cardTitle)}
-                        titleLevel={item.titleLevel}
-                        cardClassName={item.colClassName}
-                    />
+                <div className={item.cardContainerClassName}>
+                    <Row className="sec-section-row-title">
+                        <CustomCard
+                            cardTitle={t('home.secondSection.' + item.cardTitle)}
+                            titleLevel={item.titleLevel}
+                            cardClassName={item.colClassName}
+                        />
 
-                {/* </div> */}
+                        <CustomButton
+                            type={item.type_btn}
+                            currentIcon={
+                                <ArrowRightOutlined
+                                    className='arrow-icon-btn' />
+                            }
+                        />
+                    </Row>
+                </div>
 
                 {/* <CustomCard
                     cardClassName={item.cardClassName}
@@ -61,7 +71,7 @@ const SecondSectionDesktop = () => {
                         }
                     />
                 </CustomCard> */}
-            </Col>
+            </Col >
         )
     }
 
