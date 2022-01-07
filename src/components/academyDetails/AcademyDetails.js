@@ -1,9 +1,13 @@
-import React from "react";
-// import { useTranslation } from "react-i18next";
+import React, { useRef, useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
-import { Row, Col, Typography, Collapse } from "antd";
-const { Title } = Typography
+import { Row, Col, Collapse, List } from "antd";
 const { Panel } = Collapse;
+
+//import gsap
+import { gsap } from 'gsap'
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 // import style
 import './AcademyDetails.css'
@@ -17,7 +21,7 @@ import {
 } from '@ant-design/icons';
 
 //import functions
-import { turnToUppercase, addBreakPoint } from "../../utils/utilities";
+import { turnToUppercase } from "../../utils/utilities";
 
 //import constants
 import { java_program } from "../../utils/properties";
@@ -25,15 +29,26 @@ import { java_program } from "../../utils/properties";
 //import components
 import CustomButton from "../functional_components/Button/CustomButton";
 import CustomCard from "../functional_components/customCard/CustomCard";
-import GoBackBtn from "../functional_components/goBackBtn/GoBackBtn";
+import IntroductiveSection from "../functional_components/introductiveSection/IntroductiveSection";
+import CustomList from "../functional_components/customList/CustomList";
 
 const AcademyDetails = (props) => {
 
-    // const { t } = useTranslation()
+    const { t } = useTranslation()
+
+    const navigate = useNavigate()
+
+    const ref = useRef(null);
+
+    //GSAP
+    gsap.registerPlugin(ScrollTrigger);
+
+    useEffect(() => {
+
+
+    })
 
     const changeIcon = (panelProps) => {
-        console.log('panelProps', panelProps)
-        console.log('is active: ', panelProps.isActive)
         if (panelProps.isActive) {
             return (
                 <CustomButton
@@ -58,73 +73,51 @@ const AcademyDetails = (props) => {
     }
 
 
-    const printListTopic = (item, key) => {
+    const printListTopic = (el, key) => {
         return (
             <Panel
                 key={key}
-                header={item.title_subject}
+                header={t(el.title_subject)}
                 className={'aDeteils-program-section-program-panel'}
             >
-                {addBreakPoint(item.subtopic_list, '-br-')}
+                <CustomList
+                    size="large"
+                    // indent={false}
+                    data={el.subtopic_list}
+                    renderItem={item => <List.Item>{item}</List.Item>}
+                />
+
             </Panel >
+
         )
+    }
+
+    const goBackAcademy = () => {
+        navigate(-1)
     }
 
     return (
         <div
             className={'aDeteils-container'}
+            ref={ref}
         >
 
             <section className={'aDeteils-introductive-section-container'}>
-                <Row>
-                    <Col xs={24} className={'aDeteils-introductive-section-goBack-btn'} >
-                        <CustomButton
-                            type={'go-back-btn'}
-                            content={
-                                <GoBackBtn
-                                    goBackContent={"Torna all'academy"}
-                                />}
-                        />
-                    </Col>
-                    <Col xs={12} md={24} className={'aDeteils-introductive-section-title-container'}>
-                        <Row>
-                            <Title
-                                level={1}
-                            >{props.pageTitle}</Title>
-                        </Row>
-                    </Col>
-                    <Col xs={24} md={12} lg={12} className={'aDeteils-introductive-section-intro-col1'}>
-                        <Row className="aDeteils-introductive-section-intro-container">
-                            <CustomCard
-                                cardDescription={props.pageDescription}
-                                descriptionClassName={'aDeteils-introductive-section-desc-desktop'}
-                            />
-                        </Row>
-                    </Col>
-                    <Col xs={24} md={12} lg={12} className={'aDeteils-introductive-section-img1-container'}>
-                        <CustomCard
-                            cardImg
-                            imgPreview={false}
-                            // alt={*alt*} 
-                            imgClassName={'aDeteils-introductive-section-img1'}
-                            imgSrc={props.imgSrc}
-                        />
-                    </Col>
-
-                    <Col xs={24} className={'aDeteils-introductive-section-btn-candidate'}>
-                        <CustomButton
-                            content={props.btnContent}
-                            htmlType='submit'
-                            type={'form-btn'}
-                        />
-                    </Col>
-                    <Col xs={24} md={0} className={'aDeteils-introductive-section-desc-mobile-container'}>
-                        <CustomCard
-                            cardDescription={props.pageDescription}
-                            descriptionClassName={'aDeteils-introductive-section-desc-mobile'}
-                        />
-                    </Col>
-                </Row>
+                <IntroductiveSection
+                    btnGoBack={true}
+                    goBackContent={t('btn.goBackAcademy')}
+                    titleOutColumn={props.pageTitle}
+                    bg1={'academy-bg1'}
+                    candidateBtn={true}
+                    btnContent={t('btn.apply')}
+                    intro={props.pageIntro}
+                    secondRow={false}
+                    detailPage={true}
+                    listDesktop={true}
+                    listMobile={true}
+                    listToPrint={props.listToPrint}
+                    clickCallback={goBackAcademy}
+                />
             </section>
 
             <section className={'aDeteils-program-section'}>
@@ -133,7 +126,7 @@ const AcademyDetails = (props) => {
                         <Row>
                             <CustomCard
                                 titleLevel={2}
-                                cardTitle={'Struttura'}
+                                cardTitle={t('AcademyDedails.structure')}
                             />
                         </Row>
                         <Row className={'aDeteils-program-section-structure-rows'}>
@@ -144,7 +137,7 @@ const AcademyDetails = (props) => {
                             </Col>
                             <Col xs={20}>
                                 <CustomCard
-                                    cardParagraph={turnToUppercase('Stage')}
+                                    cardParagraph={turnToUppercase(t('AcademyDedails.stage'))}
                                     paragraphClassName={'aDeteils-program-section-structure-row-title'}
                                 />
                                 <CustomCard
@@ -161,7 +154,7 @@ const AcademyDetails = (props) => {
                             </Col>
                             <Col xs={20}>
                                 <CustomCard
-                                    cardParagraph={turnToUppercase('Compenso')}
+                                    cardParagraph={turnToUppercase(t('AcademyDedails.compensation'))}
                                     paragraphClassName={'aDeteils-program-section-structure-row-title'}
                                 />
                                 <CustomCard
@@ -178,7 +171,7 @@ const AcademyDetails = (props) => {
                             </Col>
                             <Col xs={20}>
                                 <CustomCard
-                                    cardParagraph={turnToUppercase('Sede del corso')}
+                                    cardParagraph={turnToUppercase(t('AcademyDedails.location'))}
                                     paragraphClassName={'aDeteils-program-section-structure-row-title'}
                                 />
                                 <CustomCard
@@ -193,7 +186,7 @@ const AcademyDetails = (props) => {
                         <Row>
                             <CustomCard
                                 titleLevel={2}
-                                cardTitle={'Programma'}
+                                cardTitle={t('AcademyDedails.program')}
                             />
                         </Row>
                         <Row>
@@ -205,7 +198,7 @@ const AcademyDetails = (props) => {
                                 expandIcon={(panelProps) => changeIcon(panelProps)}
                                 style={{ width: '100%' }}
                             >
-                                {java_program.map(printListTopic)}
+                                {props.academyProgram.map(printListTopic)}
                             </Collapse>
                         </Row>
                     </Col>
@@ -214,6 +207,10 @@ const AcademyDetails = (props) => {
             </section>
         </div>
     )
+}
+
+AcademyDetails.defaultProps = {
+    academyProgram: java_program
 }
 
 export default AcademyDetails

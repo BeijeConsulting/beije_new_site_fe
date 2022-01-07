@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 // import redux
 import { connect } from "react-redux";
@@ -11,7 +12,7 @@ import './AcademyJava.css'
 import { turnToUppercase } from "../../utils/utilities";
 
 // import assets
-import { academy1 } from "../../utils/properties";
+import { academy1, master_backend_list_intro, java_program } from "../../utils/properties";
 
 // import components
 import AcademyDetails from "../../components/academyDetails/AcademyDetails";
@@ -19,6 +20,7 @@ import AcademyDetails from "../../components/academyDetails/AcademyDetails";
 const AcademyJava = (props) => {
 
     const primary_bg_page_academyJava = '#feef87'
+    const { t } = useTranslation()
 
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
@@ -35,13 +37,15 @@ const AcademyJava = (props) => {
         <div>
 
             <AcademyDetails
-                pageTitle={turnToUppercase('Academy Java')}
-                pageDescription={'Permette di arricchire e consolidare le tue competenze e diventare un Java Developer Junior.'}
+                pageTitle={turnToUppercase(t('AcademyBackend.title'))}
+                pageIntro={t('AcademyBackend.intro')}
                 imgSrc={academy1}
-                btnContent={'Candidati'}
-                stageDescription={'Il corso comprende uno stage finale della durata di 3 mesi'}
-                compensationDesc={'è previsto rimborso spese'}
-                locationDesc={'Remoto/Milano'}
+                btnContent={t('btn.apply')}
+                stageDescription={t('AcademyBackend.stageDesc')}
+                compensationDesc={t('AcademyBackend.compensationDesc')}
+                locationDesc={t('AcademyBackend.locationDesc')}
+                listToPrint={master_backend_list_intro}
+                academyProgram={java_program}
             />
 
         </div>

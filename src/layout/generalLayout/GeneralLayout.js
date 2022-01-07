@@ -40,32 +40,6 @@ const GeneralLayout = (props) => {
                 </Footer>
             }
         </Layout>
-        // <Layout style={{ backgroundColor: 'blue' }}>
-
-        //     <Layout>
-        //         <Header
-        //             className={!props.menuDuck.menuOpen ? 'header-ant-general-style' : 'header-ant-style'}
-        //         >
-        //             <CustomHeader />
-        //         </Header>
-
-        //         <Layout
-        //             className='generalLayout-content'
-        //         >
-        //             <Content>
-        //                 <div >
-        //                     <Outlet />
-        //                 </div>
-        //             </Content>
-        //         </Layout>
-        //     </Layout>
-        //     {
-        //         !props.menuDuck.menuOpen &&
-        //         <Footer className={'generalLayout-footer'}>
-        //             <CustomFooter />
-        //         </Footer>
-        //     }
-        // </Layout >
     )
 }
 

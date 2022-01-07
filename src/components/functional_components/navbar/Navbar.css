@@ -18,6 +18,54 @@
     align-items: center !important;
 }
 
+.navbar-link-light {
+    color: var(--secondary-nav-color) !important;
+    text-decoration: none !important;
+    height: 37px !important;
+    font-family: 'Moderat-Regular', sans-serif !important;
+    font-style: normal !important;
+    font-weight: bold !important;
+    font-size: 20px !important;
+    letter-spacing: 0.06em !important;
+    text-transform: uppercase !important;
+}
+
+.navbar-link-light::after {
+    background: none repeat scroll 0 0 transparent !important;
+    bottom: -10px !important;
+    content: "" !important;
+    display: block !important;
+    height: 2px !important;
+    left: 50% !important;
+    position: absolute !important;
+    background: #fff !important;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s !important;
+    width: 0 !important;
+}
+
+.navbar-link-light:hover::after {
+    width: 100% !important;
+    left: 0 !important;
+}
+
+.active-link::after {
+    background: none repeat scroll 0 0 transparent !important;
+    bottom: -10px !important;
+    content: "" !important;
+    display: block !important;
+    height: 2px !important;
+    left: 50% !important;
+    position: absolute !important;
+    background: #fff !important;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s !important;
+    width: 0 !important;
+}
+
+.navbar-link-light:active::after {
+    width: 100% !important;
+    left: 0 !important;
+}
+
 .navbar-general-link {
     color: var(--primary-nav-color) !important;
     text-decoration: none !important;
@@ -30,6 +78,24 @@
     text-transform: uppercase !important;
 }
 
+.navbar-general-link::after {
+    background: none repeat scroll 0 0 transparent !important;
+    bottom: -10px !important;
+    content: "" !important;
+    display: block !important;
+    height: 2px !important;
+    left: 50% !important;
+    position: absolute !important;
+    background: var(--primary-nav-color) !important;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s !important;
+    width: 0 !important;
+}
+
+.navbar-general-link:hover::after {
+    width: 100% !important;
+    left: 0 !important;
+}
+
 .navbar-home-link {
     color: var(--secondary-nav-color) !important;
     text-decoration: none !important;
@@ -40,6 +106,7 @@
 
 .navbar-home-link::after {
     background: none repeat scroll 0 0 transparent !important;
+    /*No bg, repeat bg, attachment, position, bg color*/
     bottom: 0 !important;
     content: "" !important;
     display: block !important;

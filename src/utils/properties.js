@@ -12,8 +12,8 @@ import icon_youTube from '../assets/icons/social_icon/youtube_dark.png'
 // import official_video_home from '../assets/videos/official_video_home.mp4'
 
 //assets used in consulting page
-import img1_consulting from '../assets/images/beije_team_office/ITA_1975_Web.jpg'
-import img2_consulting from '../assets/images/beije_team_office/ITA_2633_Web.jpg'
+import img1_consulting from '../assets/images/consulting/consulting1.svg'
+import img2_consulting from '../assets/images/consulting/consulting2.svg'
 import icon1_consulting from '../assets/icons/icon_pc.svg'
 
 //assets used in academy page
@@ -93,7 +93,7 @@ export const siteMenu = [
     title: 'consulting',
     titleStyle: 'burger-menu-title txt-light',
     titleStyleHover: 'burger-menu-title txt-light2',
-    linkTo: 'https://www.google.it/'
+    linkTo: `${ENVIRONMENT.ROUTING.BASE_URL}consulting`
   },
   {
     key: 'academy',
@@ -101,7 +101,7 @@ export const siteMenu = [
     title: 'academy',
     titleStyle: 'burger-menu-title txt-light',
     titleStyleHover: 'burger-menu-title txt-light2',
-    linkTo: 'https://www.google.it/'
+    linkTo: `${ENVIRONMENT.ROUTING.BASE_URL}academy`
   },
   {
     key: 'up',
@@ -109,7 +109,7 @@ export const siteMenu = [
     title: 'up',
     titleStyle: 'burger-menu-title txt-light',
     titleStyleHover: 'burger-menu-title txt-light2',
-    linkTo: 'https://www.google.it/'
+    linkTo: `${ENVIRONMENT.ROUTING.BASE_URL}up`
   },
   {
     key: 'career',
@@ -158,54 +158,32 @@ export const cardWhoWeAre = [
     colContainerClassName: "sec-section-card-col",
     cardContainerClassName: "sec-section-card sec-section-card-bg-value sec-section-card-top",
     colClassName: '',
-    cardClassName: 'container-column width-100 height-100 items-center justify-around', //rimuovere
     titleLevel: 2,
     cardTitle: 'title_value',
-    titleClassName: 'sec-section-title',
-    paragraph: 'paragraph_value', //rimuovere
-    bgImage: 'sec-section-bgImg sec-section-bg1', //modificare in caso il mobile sia come desktop
-    show_btn: true, //rimuovere
     type_btn: 'secondary-arrow-btn',
-    orientation: 'left', //rimuovere
   },
   {
     colContainerClassName: "sec-section-card-col",
     cardContainerClassName: "sec-section-card sec-section-card-bg-history sec-section-card-bottom",
     colClassName: ' ',
-    cardClassName: 'container-column width-100 height-100 items-center justify-around',
     titleLevel: 2,
     cardTitle: 'title_history',
-    titleClassName: 'sec-section-title',
-    paragraph: 'paragraph_history',
-    bgImage: 'sec-section-bgImg sec-section-bg2',
-    show_btn: true,
     type_btn: 'secondary-arrow-btn',
-    orientation: 'right', //rimuovere
   },
   {
     colContainerClassName: "sec-section-card-col",
     cardContainerClassName: 'sec-section-card sec-section-card-bg-mission sec-section-card-top',
     colClassName: '',
-    cardClassName: 'container-column width-100 height-100 items-center justify-around',
     titleLevel: 2,
     cardTitle: 'title_vision',
-    titleClassName: 'sec-section-title',
-    paragraph: 'paragraph_vision',
-    bgImage: 'sec-section-bgImg sec-section-bg4',
-    show_btn: true,
     type_btn: 'secondary-arrow-btn',
   },
   {
     colContainerClassName: "sec-section-card-col",
     cardContainerClassName: 'sec-section-card  sec-section-card-bg-vision sec-section-card-bottom',
     colClassName: '',
-    cardClassName: 'container-column width-100 height-100 items-center justify-around',
     titleLevel: 2,
     cardTitle: 'title_mission',
-    titleClassName: 'sec-section-title',
-    paragraph: 'paragraph_mission',
-    bgImage: 'sec-section-bgImg sec-section-bg3',
-    show_btn: true,
     type_btn: 'secondary-arrow-btn',
   }
 ]
@@ -215,7 +193,7 @@ export const carouselProfile = [
     id: 1,
     name: 'Francesco',
     surname: 'Cesana',
-    role: 'Direttore generale',
+    role: 'General Manager',
     alt: 'FrancescoCesana',
     classNameSingleEl: 'carousel-profile-single-el picture-top',
     classNameBgImg: 'carousel-profile-picture carousel-profile-bg1',
@@ -225,7 +203,7 @@ export const carouselProfile = [
     id: 2,
     name: 'Erica',
     surname: 'Mauro',
-    role: 'Direttore generale',
+    role: 'Direttore Commerciale',
     alt: 'EricaMauro',
     classNameSingleEl: 'carousel-profile-single-el picture-middle',
     classNameBgImg: 'carousel-profile-picture carousel-profile-bg2',
@@ -235,7 +213,7 @@ export const carouselProfile = [
     id: 3,
     name: 'Marianna',
     surname: 'Fulginiti',
-    role: 'Direttore generale',
+    role: 'Account Manager',
     alt: 'MariannaFulginiti',
     classNameSingleEl: 'carousel-profile-single-el picture-bottom',
     classNameBgImg: 'carousel-profile-picture carousel-profile-bg3',
@@ -245,7 +223,7 @@ export const carouselProfile = [
     id: 4,
     name: 'Ivo',
     surname: 'Mosca',
-    role: 'Direttore generale',
+    role: 'CIO & Master Trainer',
     alt: 'IvoMosca',
     classNameSingleEl: 'carousel-profile-single-el picture-middle',
     classNameBgImg: 'carousel-profile-picture carousel-profile-bg4',
@@ -265,7 +243,7 @@ export const carouselProfile = [
     id: 6,
     name: 'Chiara',
     surname: 'Balsamini',
-    role: 'Direttore generale',
+    role: 'Account',
     alt: 'ChiaraBalsamini',
     classNameSingleEl: 'carousel-profile-single-el picture-middle',
     classNameBgImg: 'carousel-profile-picture carousel-profile-bg6',
@@ -275,7 +253,7 @@ export const carouselProfile = [
     id: 7,
     name: 'Roberto',
     surname: 'Brogi',
-    role: 'Direttore generale',
+    role: 'CTO & Master Trainer',
     alt: 'RobertoBrogi',
     classNameSingleEl: 'carousel-profile-single-el picture-bottom',
     classNameBgImg: 'carousel-profile-picture carousel-profile-bg7',
@@ -285,7 +263,7 @@ export const carouselProfile = [
     id: 8,
     name: 'Francesca',
     surname: 'Ferioli',
-    role: 'Direttore generale',
+    role: 'IT Recruiter Specialist',
     alt: 'FrancescaFerioli',
     classNameSingleEl: 'carousel-profile-single-el picture-middle',
     classNameBgImg: 'carousel-profile-picture carousel-profile-bg8',
@@ -295,7 +273,7 @@ export const carouselProfile = [
     id: 9,
     name: 'Francesca',
     surname: 'Bellini',
-    role: 'Direttore generale',
+    role: 'head of marketin',
     alt: 'FrancescaBellini',
     classNameSingleEl: 'carousel-profile-single-el picture-top',
     classNameBgImg: 'carousel-profile-picture carousel-profile-bg9',
@@ -305,6 +283,7 @@ export const carouselProfile = [
     id: 10,
     name: 'Maria',
     surname: 'Amigo Rodrigez',
+    role: 'Junior IT Recruiter',
     alt: 'MariaAmigoRodrigez',
     classNameSingleEl: 'carousel-profile-single-el picture-middle',
     classNameBgImg: 'carousel-profile-picture carousel-profile-bg10',
@@ -353,28 +332,148 @@ export const academy_comments = [
   }
 ]
 
+export const master_backend_list_intro = [
+  'AcademyBackend.introList.el1',
+  'AcademyBackend.introList.el2',
+  'AcademyBackend.introList.el3'
+]
+
+export const master_frontend_list_intro = [
+  'AcademyFrontend.introList.el1',
+  'AcademyFrontend.introList.el2',
+  'AcademyFrontend.introList.el3'
+]
+
 export const java_program = [
   {
-    title_subject: 'Java basi e teoria',
-    subtopic_list: 'Fondamenti di Java e di programmazione ad oggetti Variabili: differenza tra tipi primitivi e rifermenti ad oggetti -br- Gli operatori in Java: aritmetici, unari e binari -br- Costrutti condizionali ed iterativi; controllo avanzato del flusso -br- La classe String ed il concetto di immutabilità -br- La classe StringBuilder ed il concetto di “uguaglianza” tra oggetti in Java -br- Gli array mono e multidimensionali in Java; la classe ArrayList -br- La gestione di data ed orario in Java -br- Design dei metodi: modificatori di accesso e passaggio di parametri -br- I metodi “Costruttori” e l’overloading di metodi in una classe -br- Ereditarietà e classi astratte -br- Interfacce e Polimorfismo -br- Gestire le eccezioni in Java -br- Accenni di programmazione funzionale in Java: scrivere semplici funzioni Lambda -br- I Design Patterns: Builder, Factory, Singleton e Decorator'
+    title_subject: 'AcademyBackend.program.section1.title',
+    subtopic_list:
+      [
+        'AcademyBackend.program.section1.subsection1',
+        'AcademyBackend.program.section1.subsection2',
+        'AcademyBackend.program.section1.subsection3',
+        'AcademyBackend.program.section1.subsection4',
+        'AcademyBackend.program.section1.subsection5',
+        'AcademyBackend.program.section1.subsection6',
+        'AcademyBackend.program.section1.subsection7',
+        'AcademyBackend.program.section1.subsection8',
+        'AcademyBackend.program.section1.subsection9',
+        'AcademyBackend.program.section1.subsection10',
+        'AcademyBackend.program.section1.subsection11',
+        'AcademyBackend.program.section1.subsection12',
+        'AcademyBackend.program.section1.subsection13',
+        'AcademyBackend.program.section1.subsection14',
+        'AcademyBackend.program.section1.subsection15',
+      ]
   },
   {
-    title_subject: 'Java basi e teoria',
-    subtopic_list: 'Fondamenti di Java e di programmazione ad oggetti Variabili: differenza tra tipi primitivi e rifermenti ad oggetti -br- Gli operatori in Java: aritmetici, unari e binari -br- Costrutti condizionali ed iterativi; controllo avanzato del flusso -br- La classe String ed il concetto di immutabilità -br- La classe StringBuilder ed il concetto di “uguaglianza” tra oggetti in Java -br- Gli array mono e multidimensionali in Java; la classe ArrayList -br- La gestione di data ed orario in Java -br- Design dei metodi: modificatori di accesso e passaggio di parametri -br- I metodi “Costruttori” e l’overloading di metodi in una classe -br- Ereditarietà e classi astratte -br- Interfacce e Polimorfismo -br- Gestire le eccezioni in Java -br- Accenni di programmazione funzionale in Java: scrivere semplici funzioni Lambda -br- I Design Patterns: Builder, Factory, Singleton e Decorator'
+    title_subject: 'AcademyBackend.program.section2.title',
+    subtopic_list:
+      [
+        'AcademyBackend.program.section2.subsection1',
+        'AcademyBackend.program.section2.subsection2',
+        'AcademyBackend.program.section2.subsection3',
+        'AcademyBackend.program.section2.subsection4'
+      ]
   },
   {
-    title_subject: 'Java basi e teoria',
-    subtopic_list: 'Fondamenti di Java e di programmazione ad oggetti Variabili: differenza tra tipi primitivi e rifermenti ad oggetti -br- Gli operatori in Java: aritmetici, unari e binari -br- Costrutti condizionali ed iterativi; controllo avanzato del flusso -br- La classe String ed il concetto di immutabilità -br- La classe StringBuilder ed il concetto di “uguaglianza” tra oggetti in Java -br- Gli array mono e multidimensionali in Java; la classe ArrayList -br- La gestione di data ed orario in Java -br- Design dei metodi: modificatori di accesso e passaggio di parametri -br- I metodi “Costruttori” e l’overloading di metodi in una classe -br- Ereditarietà e classi astratte -br- Interfacce e Polimorfismo -br- Gestire le eccezioni in Java -br- Accenni di programmazione funzionale in Java: scrivere semplici funzioni Lambda -br- I Design Patterns: Builder, Factory, Singleton e Decorator'
+    title_subject: 'AcademyBackend.program.section3.title',
+    subtopic_list:
+      [
+        'AcademyBackend.program.section3.subsection1',
+        'AcademyBackend.program.section3.subsection2',
+        'AcademyBackend.program.section3.subsection3',
+        'AcademyBackend.program.section3.subsection4',
+        'AcademyBackend.program.section3.subsection5',
+        'AcademyBackend.program.section3.subsection6'
+      ]
   },
   {
-    title_subject: 'Java basi e teoria',
-    subtopic_list: 'Fondamenti di Java e di programmazione ad oggetti Variabili: differenza tra tipi primitivi e rifermenti ad oggetti -br- Gli operatori in Java: aritmetici, unari e binari -br- Costrutti condizionali ed iterativi; controllo avanzato del flusso -br- La classe String ed il concetto di immutabilità -br- La classe StringBuilder ed il concetto di “uguaglianza” tra oggetti in Java -br- Gli array mono e multidimensionali in Java; la classe ArrayList -br- La gestione di data ed orario in Java -br- Design dei metodi: modificatori di accesso e passaggio di parametri -br- I metodi “Costruttori” e l’overloading di metodi in una classe -br- Ereditarietà e classi astratte -br- Interfacce e Polimorfismo -br- Gestire le eccezioni in Java -br- Accenni di programmazione funzionale in Java: scrivere semplici funzioni Lambda -br- I Design Patterns: Builder, Factory, Singleton e Decorator'
-  },
-  {
-    title_subject: 'Java basi e teoria',
-    subtopic_list: 'Fondamenti di Java e di programmazione ad oggetti Variabili: differenza tra tipi primitivi e rifermenti ad oggetti -br- Gli operatori in Java: aritmetici, unari e binari -br- Costrutti condizionali ed iterativi; controllo avanzato del flusso -br- La classe String ed il concetto di immutabilità -br- La classe StringBuilder ed il concetto di “uguaglianza” tra oggetti in Java -br- Gli array mono e multidimensionali in Java; la classe ArrayList -br- La gestione di data ed orario in Java -br- Design dei metodi: modificatori di accesso e passaggio di parametri -br- I metodi “Costruttori” e l’overloading di metodi in una classe -br- Ereditarietà e classi astratte -br- Interfacce e Polimorfismo -br- Gestire le eccezioni in Java -br- Accenni di programmazione funzionale in Java: scrivere semplici funzioni Lambda -br- I Design Patterns: Builder, Factory, Singleton e Decorator'
+    title_subject: 'AcademyBackend.program.section4.title',
+    subtopic_list:
+      [
+        'AcademyBackend.program.section4.subsection1',
+        'AcademyBackend.program.section4.subsection2',
+        'AcademyBackend.program.section4.subsection3',
+        'AcademyBackend.program.section4.subsection4',
+        'AcademyBackend.program.section4.subsection5',
+        'AcademyBackend.program.section4.subsection6',
+        'AcademyBackend.program.section4.subsection7',
+        'AcademyBackend.program.section4.subsection8',
+        'AcademyBackend.program.section4.subsection9',
+        'AcademyBackend.program.section4.subsection10'
+      ]
   }
+]
 
+export const frontend_program = [
+  {
+    title_subject: 'AcademyFrontend.program.section1.title',
+    subtopic_list:
+      [
+        'AcademyFrontend.program.section1.subsection1',
+        'AcademyFrontend.program.section1.subsection2',
+        'AcademyFrontend.program.section1.subsection3',
+        'AcademyFrontend.program.section1.subsection4',
+        'AcademyFrontend.program.section1.subsection5',
+        'AcademyFrontend.program.section1.subsection6'
+      ]
+  },
+  {
+    title_subject: 'AcademyFrontend.program.section2.title',
+    subtopic_list:
+      [
+        'AcademyFrontend.program.section2.subsection1',
+        'AcademyFrontend.program.section2.subsection2',
+        'AcademyFrontend.program.section2.subsection3',
+        'AcademyFrontend.program.section2.subsection4',
+        'AcademyFrontend.program.section2.subsection5',
+        'AcademyFrontend.program.section2.subsection6',
+        'AcademyFrontend.program.section2.subsection7',
+        'AcademyFrontend.program.section2.subsection8'
+      ]
+  },
+  {
+    title_subject: 'AcademyFrontend.program.section3.title',
+    subtopic_list:
+      [
+        'AcademyFrontend.program.section3.subsection1',
+        'AcademyFrontend.program.section3.subsection2',
+        'AcademyFrontend.program.section3.subsection3',
+        'AcademyFrontend.program.section3.subsection4',
+        'AcademyFrontend.program.section3.subsection5',
+        'AcademyFrontend.program.section3.subsection6'
+      ]
+  },
+  {
+    title_subject: 'AcademyFrontend.program.section4.title',
+    subtopic_list:
+      [
+        'AcademyFrontend.program.section4.subsection1',
+        'AcademyFrontend.program.section4.subsection2',
+        'AcademyFrontend.program.section4.subsection3'
+      ]
+  }
+]
+
+
+
+export const up_case_studies = [
+  {
+    containerClassName: 'up-case-studies-container d-flex items-end',
+    title: 'Case study 1: sottotitolo case studies',
+    titleClassName: 'up-case-studies-title'
+  },
+  {
+    containerClassName: 'up-case-studies-container d-flex items-end',
+    title: 'Case study 1: sottotitolo case studies',
+    titleClassName: 'up-case-studies-title'
+  },
+  {
+    containerClassName: 'up-case-studies-container d-flex items-end',
+    title: 'Case study 1: sottotitolo case studies',
+    titleClassName: 'up-case-studies-title'
+  }
 ]
 
 /*

@@ -19,22 +19,19 @@ const CustomFooter = (props) => {
         <footer className={props.classNameFooter}>
             <Row className={'txt-light custom-footer-first-row'}>
                 <Col span={15} className='custom-footer-left-col'>
-                    <Col xs={24} sm={24} md={12} lg={12} className='custom-footer-l-col-first-el'>
+                    <Col
+                        xs={24}
+                        sm={24}
+                        md={12}
+                        lg={12}
+                        className='custom-footer-l-col-first-el'
+                    >
                         <CustomCard
                             titleClassName={'custom-footer-title txt-light'}
                             cardTitle={t('footer.location')}
                             descriptionClassName={'custom-footer-description'}
                             cardDescription={'Via Varese, 27/38'}
                             cardDescription2={'Lissone (MB)'}
-                        />
-                    </Col>
-                    <Col xs={24} sm={24} md={12} lg={12}>
-                        <CustomCard
-                            titleClassName={'custom-footer-title txt-light'}
-                            cardTitle={t('footer.hours')}
-                            descriptionClassName={'custom-footer-description'}
-                            cardDescription={'Lunedì - Venerdì'}
-                            cardDescription2={'09:00 18:00'}
                         />
                     </Col>
                     <Col span={24}>
@@ -44,7 +41,6 @@ const CustomFooter = (props) => {
                             descriptionClassName={'custom-footer-description'}
                             cardDescription={'job@beije.it'}
                             cardDescription2={'commerciale@beije.it'}
-                            cardDescription3={'039 9402904'}
                         />
                     </Col>
                 </Col>
@@ -112,7 +108,10 @@ const CustomFooter = (props) => {
                 <Row className={'container-row justify-end items-center custom-footer-translation-desktop'}>
                     <CustomCard>
                         <p className='txt-right txt-light'>
-                            <SwitchLanguage />
+                            <SwitchLanguage
+                                classNameSelectedLang={'custom-footer-language-span custom-footer-language-span-selected cursor-pointer'}
+                                classNameUnSelectedLang={'custom-footer-language-span cursor-pointer'}
+                            />
                         </p>
                     </CustomCard>
                 </Row>

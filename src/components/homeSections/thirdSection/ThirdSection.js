@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 import { Row, Col, Layout } from "antd";
 
@@ -16,14 +16,15 @@ import ViewAllButton from "../../functional_components/viewAllButton/ViewAllButt
 
 const ThirdSection = () => {
 
-    const [state, setState] = useState({
-        showDragBtn: true
-    })
+    // const [state, setState] = useState({
+    //     showDragBtn: true
+    // })
 
     const { t } = useTranslation()
 
     const dragStartOwlCarousel = () => {
         console.log('drag start')
+
         // setState({
         //     ...state,
         //     showDragBtn: false
@@ -31,10 +32,11 @@ const ThirdSection = () => {
     }
 
     const dragEndOwlCarousel = () => {
-        console.log('drag end')
+        console.log('drag end');
+
         // setState({
         //     ...state,
-        //     showDragBtn: true
+        //     showDragBtn: false
         // })
     }
 
@@ -42,14 +44,15 @@ const ThirdSection = () => {
     return (
         <Layout className={'third-sec-container'}>
             <Row className={'third-sec-row'}>
-                <Col xs={24} md={8} lg={6} className={'third-sec-col1'}>
+                <Col xs={24} md={8} lg={7} className={'third-sec-col1'}>
                     <CustomCard
                         cardTitle={t('home.thirdSection.title')}
+                        titleClassName={'third-sec-title'}
                         cardDescription={t('home.thirdSection.description')}
                         descriptionClassName={'third-sec-description'}
                     />
                 </Col>
-                <Col md={1} lg={2} />
+                <Col md={1} lg={1} />
                 <Col
                     xs={24} md={15} lg={16}
                     className={'third-sec-col2'}

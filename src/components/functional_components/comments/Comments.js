@@ -36,7 +36,7 @@ Comments.defaultProps = {
     commentsText: 'Here there is text of the comment',
     name: 'Name',
     surname: 'surname',
-    commentsContainerStyle: 'comments-container',
+    commentsContainerStyle: 'comments-container academy-gsap-single-comment',
     profilePictureStyle: 'comments-profile-picture',
     commentsTextStyle: 'comments-text',
     signatureStyle: 'comments-signature'

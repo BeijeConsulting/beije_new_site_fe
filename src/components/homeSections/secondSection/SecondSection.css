@@ -11,79 +11,76 @@
     padding: 0 20px;
 }
 
-.sec-section-title {
-    align-self: flex-start;
-}
-
-.sec-section-paragraph {
-    font-size: 20px !important;
-    line-height: 35px !important;
-    height: 105px;
-}
-
-.sec-section-bgImg {
-    max-width: 320px;
-    width: 100%;
-    height: 255px;
+.sec-section-card-col {
+    padding: 0 10px;
     display: flex;
-    justify-content: flex-end;
-    border-radius: 50px;
-    padding: 20px;
+    height: 100%;
+}
+
+
+.sec-section-card-col {
+    padding: 0 10px;
+    display: flex;
+    height: 100%;
+}
+
+.sec-section-row-title {
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.sec-section-card {
+    padding: 20px 20px 0 20px;
+    border-radius: 40px;
+    height: 90%;
+    width: 99%;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+    /* flex-start if you want the text at the top*/
 }
 
-.sec-section-bg1 {
+.sec-section-card h2 {
+    font-family: 'SpaceGrotesk-Bold', sans-serif !important;
+    font-style: normal !important;
+    font-weight: bold !important;
+    font-size: 25px !important;
+    line-height: 80px !important;
+    width: 100%;
+    border-top: 1px solid var(--prmary-color-divider);
+    /* border-bottom if you want the text at the top*/
+}
+
+.sec-section-card-bg-value {
     background-image:
-        linear-gradient(180deg, #323E48 0%, rgba(113, 126, 133, 0.726354) 54.69%, rgba(214, 227, 229, 0.29) 100%),
+        linear-gradient(360deg, #D6E3E5 0%, rgba(113, 126, 133, 0.726354) 54.69%, rgba(214, 227, 229, 0.29) 100%),
         var(--value_bg);
 }
 
-.sec-section-bg1:hover {
-    background-image: var(--value_bg);
-}
-
-.sec-section-bg2 {
+.sec-section-card-bg-history {
     background-image:
-        linear-gradient(180deg, #323E48 0%, rgba(113, 126, 133, 0.726354) 54.69%, rgba(214, 227, 229, 0.29) 100%),
+        linear-gradient(360deg, #D6E3E5 0%, rgba(113, 126, 133, 0.726354) 54.69%, rgba(214, 227, 229, 0.29) 100%),
         var(--history_bg);
 }
 
-.sec-section-bg2:hover {
-    background-image: var(--history_bg);
-}
-
-.sec-section-bg3 {
+.sec-section-card-bg-mission {
     background-image:
-        linear-gradient(180deg, #323E48 0%, rgba(113, 126, 133, 0.726354) 54.69%, rgba(214, 227, 229, 0.29) 100%),
+        linear-gradient(360deg, #D6E3E5 0%, rgba(113, 126, 133, 0.726354) 54.69%, rgba(214, 227, 229, 0.29) 100%),
         var(--mission_bg);
 }
 
-.sec-section-bg3:hover {
-    background-image: var(--mission_bg);
-}
-
-.sec-section-bg4 {
+.sec-section-card-bg-vision {
     background-image:
-        linear-gradient(180deg, #323E48 0%, rgba(113, 126, 133, 0.726354) 54.69%, rgba(214, 227, 229, 0.29) 100%),
+        linear-gradient(360deg, #D6E3E5 0%, rgba(113, 126, 133, 0.726354) 54.69%, rgba(214, 227, 229, 0.29) 100%),
         var(--vision_bg);
 }
 
-.sec-section-bg4:hover {
-    background-image: var(--vision_bg);
-}
 
-@media screen and (min-width: 1024px) {
-    .sec-section-title {
-        font-size: 70px !important;
-    }
-
-    .sec-section-bgImg {
-        max-width: 328px;
-        width: 100%;
-        height: 261px;
-    }
+@media screen and (min-width: 768px) {
 
     .sec-section-card-col {
         padding: 0 10px;
@@ -117,30 +114,6 @@
         line-height: 80px !important;
     }
 
-    .sec-section-card-bg-value {
-        background-image:
-            linear-gradient(360deg, #D6E3E5 0%, rgba(113, 126, 133, 0.726354) 54.69%, rgba(214, 227, 229, 0.29) 100%),
-            var(--value_bg);
-    }
-
-    .sec-section-card-bg-history {
-        background-image:
-            linear-gradient(360deg, #D6E3E5 0%, rgba(113, 126, 133, 0.726354) 54.69%, rgba(214, 227, 229, 0.29) 100%),
-            var(--history_bg);
-    }
-
-    .sec-section-card-bg-mission {
-        background-image:
-            linear-gradient(360deg, #D6E3E5 0%, rgba(113, 126, 133, 0.726354) 54.69%, rgba(214, 227, 229, 0.29) 100%),
-            var(--mission_bg);
-    }
-
-    .sec-section-card-bg-vision {
-        background-image:
-            linear-gradient(360deg, #D6E3E5 0%, rgba(113, 126, 133, 0.726354) 54.69%, rgba(214, 227, 229, 0.29) 100%),
-            var(--vision_bg);
-    }
-
     .sec-section-card-top {
         align-self: flex-start;
         align-items: flex-end;
@@ -159,6 +132,19 @@
     .sec-section-card-bottom h2 {
         width: 100%;
         border-bottom: 1px solid var(--prmary-color-divider);
+        border-top: none;
+    }
+
+    .sec-section-card-bg-history {
+        background-image:
+            linear-gradient(180deg, #D6E3E5 0%, rgba(113, 126, 133, 0.726354) 54.69%, rgba(214, 227, 229, 0.29) 100%),
+            var(--history_bg);
+    }
+
+    .sec-section-card-bg-vision {
+        background-image:
+            linear-gradient(180deg, #D6E3E5 0%, rgba(113, 126, 133, 0.726354) 54.69%, rgba(214, 227, 229, 0.29) 100%),
+            var(--vision_bg);
     }
 }
 

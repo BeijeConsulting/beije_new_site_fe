@@ -3,6 +3,8 @@
     --bg-color-secondary-academy: var(--fourth-color);
     --bg-color-youtube-pills: var(--second-color);
     --separator-color-academy: var(--first-color);
+
+    --academy-bg1: url('../../assets/images/academy/academy1.svg')
 }
 
 .academy-container {
@@ -15,61 +17,14 @@
 /* Introductive section */
 .academy-first-part {
     background-color: var(--bg-color-primary-academy);
-    /* padding: 20px; */
-    padding-top: 100px;
     clip-path: polygon(0 0,
             100% 0,
             100% 100%,
             0 calc(100% - 10vw));
-    /* position: relative; */
 }
 
-.academy-introductive-section-intro-col1 {
-    display: flex;
-    flex-direction: column;
-    padding: 0 20px;
-}
-
-.academy-introductive-section-intro-container {
-    width: 100%;
-}
-
-.academy-introductive-section-academy-intro {
-    font-weight: 400px;
-    font-size: 26px;
-    line-height: 42px;
-    letter-spacing: 0.06em;
-    margin: 0 !important;
-}
-
-.academy-introductive-section-desc-desktop {
-    display: none;
-}
-
-.academy-introductive-section-desc-mobile-container {
-    padding: 0 20px;
-}
-
-.academy-introductive-section-img1-container {
-    height: 405px;
-    margin-bottom: 40px;
-    width: 100%;
-}
-
-.academy-introductive-section-img1-container .ant-image {
-    /* position: absolute;
-    right: -20px;
-    width: 100%; */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-
-}
-
-.academy-introductive-section-img1 {
-    height: 405px;
-    border-radius: 30px 0 0 30px;
-    width: 95%;
+.academy-bg1 {
+    background-image: var(--academy-bg1);
 }
 
 /* Our courses section */
@@ -212,19 +167,6 @@
         padding-bottom: 40px;
     }
 
-    .academy-introductive-section-intro-container {
-        width: 80%;
-        align-self: center;
-    }
-
-    .academy-introductive-section-desc-mobile {
-        display: none;
-    }
-
-    .academy-introductive-section-desc-desktop {
-        display: block;
-    }
-
     .academy-percentage-section-carousel {
         display: none;
     }
@@ -241,18 +183,6 @@
         margin-bottom: -20px;
     }
 
-    .academy-introductive-section-intro-container {
-        width: 70%;
-        /* align-self: center; */
-    }
-
-    .academy-introductive-section-img1-container {
-        height: 622px;
-    }
-
-    .academy-introductive-section-img1 {
-        height: 622px;
-    }
 
     .academy-ourCourses-section {
         margin-bottom: 40px;

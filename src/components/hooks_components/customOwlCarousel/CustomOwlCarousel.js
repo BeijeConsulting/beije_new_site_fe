@@ -93,14 +93,6 @@ const CustomOwlCarousel = (props) => {
         )
     }
 
-    const isDragging = () => {
-        console.log('is dragging')
-    }
-
-    const stopDragging = () => {
-        console.log('stop dragging')
-    }
-
     return (
 
         < OwlCarousel

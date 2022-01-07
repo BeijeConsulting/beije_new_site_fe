@@ -37,23 +37,9 @@ const FourthSection = () => {
                     <Row className={'fourth-sec-single-row'}>
                         <CustomCard
                             descriptionClassName={'fourth-sec-description'}
-                            cardDescription={t('home.fourthSection.hours')}
-                            cardDescription2={'Lunedì - Venerdì'}
-                            cardDescription3={'09:00 18:00'}
-                        />
-                    </Row>
-                    <Row className={'fourth-sec-single-row'}>
-                        <CustomCard
-                            descriptionClassName={'fourth-sec-description'}
                             cardDescription={t('home.fourthSection.contacts')}
                             cardDescription2={'job@beije.it'}
                             cardDescription3={'commerciale@beije.it'}
-                        />
-                    </Row>
-                    <Row className={'fourth-sec-single-row'}>
-                        <CustomCard
-                            descriptionClassName={'fourth-sec-description'}
-                            cardDescription={'039 9402904'}
                         />
                     </Row>
                 </Col>

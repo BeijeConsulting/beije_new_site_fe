@@ -1,0 +1,137 @@
+:root {
+    --primary-bg-color-up: var(--second-color);
+    --up-bg1: url('../../assets/images/up/up1.svg');
+    --up-bg2: url('../../assets/images/up/up2.svg');
+    --up-case-studies: url('../../assets/images/up/upCaseStudies.svg')
+}
+
+.up-container {
+    background-color: var(--primary-bg-color-up);
+    padding-bottom: 40px;
+}
+
+.up-bg1 {
+    background-image: var(--up-bg1);
+}
+
+.up-bg2 {
+    background-image: var(--up-bg2);
+}
+
+.up-intro-section-paragraph {
+    padding: 30px 20px;
+
+}
+
+.up-comments-title-container {
+    padding: 0 20px;
+}
+
+.up-comments-title {
+    color: #fff !important;
+}
+
+.up-short-line {
+    border-top: 3px solid #fff;
+    width: 48px;
+}
+
+.up-case-studies-section {
+    padding: 20px 20px 40px 20px;
+}
+
+.up-case-studies-title {
+    color: #fff !important;
+}
+
+.up-long-line {
+    border-top: 2px solid #fff;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.up-case-studies-container {
+    height: 272px;
+    border-radius: 30px;
+    background-image: linear-gradient(360deg, rgba(221, 44, 44, 0.7) 0.4%, rgba(72, 116, 147, 0.7) 94.88%), var(--up-case-studies);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.up-case-studies-title {
+    color: #fff;
+    font-family: 'SpaceGrotesk-Regular', sans-serif !important;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 35px;
+    letter-spacing: 0.06em;
+}
+
+.up-case-studies-desktop {
+    display: none;
+}
+
+.up-case-studies-btn-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.up-case-studies-btn {
+    color: #fff;
+    margin-right: 10px;
+}
+
+.up-form-title {
+    color: #fff !important;
+}
+
+.up-form-desc {
+    color: #fff !important;
+}
+
+.up-form-text-area {
+    background-color: transparent;
+    border: 1px solid #fff;
+    height: 219px !important;
+    border-radius: 25px;
+}
+
+.up-form-text-area::placeholder {
+    color: #fff !important;
+}
+
+
+@media screen and (min-width: 768px) {
+    .up-intro-section-paragraph {
+        width: 60%;
+        margin: auto;
+    }
+
+    .up-case-studies-desktop {
+        display: flex;
+        flex-direction: row;
+        align-items: space-between;
+    }
+
+    .up-case-studies-container {
+        width: 95%;
+        margin: 0 auto 40px auto;
+    }
+
+    .up-case-studies-btn-container {
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    .up-form-text-area {
+        height: 242px !important;
+    }
+}

@@ -32,14 +32,23 @@ const CustomButton = (props) => {
       case "primary-social":
         currentClassName = "custom-btn-primary-social circular-btn d-flex items-center justify-center"
         break;
+      case "secondary-social":
+        currentClassName = `custom-btn-secondary-social ${props.bgIcon} circular-btn d-flex items-center justify-center`
+        break;
       case "form-btn":
         currentClassName = "custom-btn-form"
+        break;
+      case "form-btn-light":
+        currentClassName = "custom-btn-form-light"
         break;
       case "carousel-btn":
         currentClassName = "custom-btn-carousel"
         break;
       case "view-all-btn":
         currentClassName = "custom-btn-view-all"
+        break;
+      case "view-all-btn-light":
+        currentClassName = "custom-btn-view-all-light"
         break;
       case "go-back-btn":
         currentClassName = "custom-btn-go-back"

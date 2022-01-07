@@ -1,0 +1,49 @@
+:root {
+    --primary-color-whoWeAre: var(--fourth-color);
+
+    --who-we-are-value-bg: url('../../assets/images/whoWeAre/whoWeAre_vision.svg');
+}
+
+.whoWeAre-container {
+    background-color: var(--primary-color-whoWeAre);
+    padding-top: 100px;
+    padding-bottom: 60px;
+}
+
+/* Profile section */
+
+.whoWeAre-profile-sec {
+    padding-left: 20px;
+    margin-bottom: 60px;
+}
+
+.whoWeAre-profile-sec-title {
+    text-transform: uppercase;
+}
+
+/* Value section */
+.whoWeAre-value-img {
+    background-image: var(--who-we-are-value-bg);
+}
+
+@media screen and (min-width: 768px) {
+
+    .whoWeAre-sub-section-title {
+        padding-left: calc(50% + 20px);
+    }
+
+    .whoWeAre-sub-section-desc-container {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .whoWeAre-sub-section-title {
+        padding-left: calc(50% + 100px);
+    }
+
+    .whoWeAre-sub-section-desc-container {
+        padding-left: 100px;
+    }
+}

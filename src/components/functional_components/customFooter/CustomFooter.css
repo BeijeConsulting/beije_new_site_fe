@@ -4,26 +4,45 @@
     justify-content: space-between;
 }
 
+.custom-footer-l-col-first-el {
+    margin-bottom: 20px;
+}
+
 .custom-footer-right-col {
     justify-self: flex-end;
     padding: 0 0 0 20px;
 }
 
 .custom-footer-title {
+    font-family: 'SpaceGrotesk-Regular', sans-serif !important;
     font-size: 15px !important;
     line-height: 30px !important;
     font-weight: bold;
     color: #fff;
+    text-transform: uppercase;
 }
 
 .custom-footer-description {
+    font-family: 'SpaceGrotesk-Regular', sans-serif !important;
     font-size: 15px !important;
-    line-height: 25px !important;
+    line-height: 30px !important;
     color: #fff;
 }
 
 .custom-footer-copyright {
     font-size: 10px;
+}
+
+.custom-footer-language-span {
+    font-family: 'SpaceGrotesk-Regular', sans-serif !important;
+    font-size: 15px !important;
+    line-height: 30px !important;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.custom-footer-language-span-selected {
+    font-weight: bold !important;
 }
 
 .custom-footer-translation-desktop {

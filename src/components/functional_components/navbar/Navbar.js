@@ -2,42 +2,24 @@ import React from "react";
 import { Row, Col, Typography } from "antd";
 const { Link } = Typography;
 
-import ReactCSSTransitionGroup from 'react-transition-group';
+//import constants
+import { ENVIRONMENT } from "../../../utils/properties";
 
 //import style
 import './Navbar.css'
 
 const Navbar = (props) => {
 
-    const getCurrentClassName = () => {
-        let currentClassName = null;
-        switch (props.classNameLink) {
-            case "navbar-home-link":
-                currentClassName = "navbar-home-link"
-                break;
-            case "nav-general":
-                currentClassName = "navbar-general-link"
-                break;
-            case "nav-light":
-                currentClassName = "navbar-link-light"
-                break;
-            default:
-                currentClassName = "navbar-general-link"
-                break;
-        }
-        return currentClassName;
-    }
-
     return (
         <Row
             className={props.classNameRow}
         >
             <Col className={props.classNameCol}>
+
                 <Link
                     href={props.href_consulting}
                     type={props.type}
-                    className={getCurrentClassName()}
-                >
+                    className={props.classNameLink}>
                     CONSULTING
                 </Link>
             </Col>
@@ -45,8 +27,7 @@ const Navbar = (props) => {
                 <Link
                     href={props.href_academy}
                     type={props.type}
-                    className={getCurrentClassName()}
-                >
+                    className={props.classNameLink}>
                     ACADEMY
                 </Link>
             </Col>
@@ -54,8 +35,7 @@ const Navbar = (props) => {
                 <Link
                     href={props.href_up}
                     type={props.type}
-                    className={getCurrentClassName()}
-                >
+                    className={props.classNameLink}>
                     UP
                 </Link>
             </Col>
@@ -65,6 +45,11 @@ const Navbar = (props) => {
 
 Navbar.defaultProps = {
     classNameRow: 'navbar-row',
+    href_consulting: `${ENVIRONMENT.ROUTING.BASE_URL}consulting`,
+    href_academy: `${ENVIRONMENT.ROUTING.BASE_URL}academy`,
+    href_up: `${ENVIRONMENT.ROUTING.BASE_URL}up`,
+    classNameLink: 'navbar-general-link'
 }
+
 
 export default Navbar

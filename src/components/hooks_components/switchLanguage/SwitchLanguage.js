@@ -27,22 +27,22 @@ const SwitchLanguage = (props) => {
                 className={selected === 'IT' ? props.classNameSelectedLang : props.classNameUnSelectedLang}
                 onClick={selectLanguage('IT')}
             >
-                IT
+                it
             </span>
             <span className={props.classNameSeparator}>|</span>
             <span
                 className={selected === 'GB' ? props.classNameSelectedLang : props.classNameUnSelectedLang}
                 onClick={selectLanguage('GB')}
             >
-                EN
+                en
             </span>
         </span>
     )
 }
 
 SwitchLanguage.defaultProps = {
-    classNameSelectedLang: 'switch-language-span cursor-pointer',
-    classNameUnSelectedLang: 'cursor-pointer',
+    classNameSelectedLang: 'switch-language-span switch-language-span-selected cursor-pointer',
+    classNameUnSelectedLang: 'switch-language-span cursor-pointer',
     classNameSeparator: 'mr-10 ml-10'
 }
 

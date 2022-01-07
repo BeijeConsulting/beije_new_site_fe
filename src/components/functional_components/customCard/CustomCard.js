@@ -41,13 +41,6 @@ const CustomCard = (props) => {
             }
             {
                 !!props.cardDescription &&
-                // <p style={props.descriptionStyle} className={props.descriptionClassName}>
-                //     {props.cardDescription}
-                //     <br />
-                //     {props.cardDescription2}
-                //     <br />
-                //     {props.cardDescription3}
-                // </p>
                 <Text style={props.descriptionStyle} className={props.descriptionClassName}>
                     {props.cardDescription}
                     <br />

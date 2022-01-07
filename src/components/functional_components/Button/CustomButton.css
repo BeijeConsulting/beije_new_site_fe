@@ -2,6 +2,9 @@
     --primary-btn-color: var(--first-color);
     --primary-btn-shadow: rgb(50, 62, 72, 0.50);
     --secondary-btn-color: var(--fourth-color);
+
+    --social-youtube-light-btn: url('../../../assets/icons/social_icon/youtube_light_circle.png');
+    --social-youtube-btn: url('../../../assets/icons/social_icon/youtube_dark_circle.png')
 }
 
 /* Menu */
@@ -40,6 +43,49 @@
 
 .custom-btn-primary-social:active>.icon-social {
     filter: brightness(0) invert(1)
+}
+
+
+.custom-btn-secondary-social {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 45px !important;
+    width: 45px !important;
+    line-height: 30px !important;
+    outline: none !important;
+    border: none;
+}
+
+.btn-youtube-bg {
+    background-image: var(--social-youtube-light-btn) !important;
+}
+
+.custom-btn-secondary-social:hover {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    outline: none !important;
+    border: none;
+}
+
+.btn-youtube-bg:hover {
+    background-image: var(--social-youtube-btn) !important;
+}
+
+.custom-btn-secondary-social:active {
+    outline: none !important;
+    border: none;
+}
+
+.btn-youtube-bg:active {
+    background-image: var(--social-youtube-btn) !important;
+
+}
+
+.custom-btn-secondary-social:empty {
+    visibility: visible !important;
 }
 
 /* Scroll button */
@@ -158,6 +204,38 @@
     background-color: transparent !important;
 }
 
+.custom-btn-form-light {
+    border-radius: 50px;
+    height: 50px;
+    width: 137px;
+    background-color: transparent;
+    border: 1px solid #fff !important;
+    color: #fff !important;
+    font-family: 'SpaceGrotesk-Regular', sans-serif !important;
+    font-style: normal !important;
+    font-weight: bold !important;
+    font-size: 18px !important;
+    line-height: 60px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
+}
+
+.custom-btn-form-light:hover {
+    border: 1px solid #fff !important;
+    color: #fff !important;
+    background-color: transparent !important;
+}
+
+.custom-btn-form-light:focus {
+    border: 1px solid #fff !important;
+    color: #fff !important;
+    background-color: transparent !important;
+}
+
 @media screen and (min-width: 1440px) {
     .custom-btn-form {
         width: 165px;
@@ -182,6 +260,19 @@
     line-height: 60px !important;
     font-weight: bold;
     color: var(--primary-btn-color) !important;
+    background-color: transparent !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none !important;
+}
+
+.custom-btn-view-all-light {
+    font-family: 'SpaceGrotesk-SemiBold', sans-serif !important;
+    font-size: 18px !important;
+    line-height: 60px !important;
+    font-weight: bold;
+    color: #fff !important;
     background-color: transparent !important;
     display: flex;
     align-items: center;

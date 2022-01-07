@@ -14,7 +14,11 @@ import Home from './screens/home/Home'
 import Consulting from './screens/consulting/Consulting'
 import Academy from "./screens/academy/Academy";
 import AcademyJava from "./screens/academyJava/AcademyJava"
+import Up from "./screens/up/Up";
 import NoMatch from "./screens/NoMatch";
+import AcademyFrontend from "./screens/academyFrontend/AcademyFrontend";
+import Career from "./screens/career/Career";
+import WhoWeAre from "./screens/whoWeAre/WhoWeAre";
 
 export default [
   {
@@ -38,10 +42,6 @@ export default [
     element: <GeneralLayout />,
     children: [
       { index: true, element: <Consulting /> },
-      // {
-      //   path: `${ENVIRONMENT.ROUTING.BASE_URL}routeA/:id`,
-      //   element: <RouteADetail />
-      // },
       { path: "*", element: <NoMatch /> }
     ]
   },
@@ -51,9 +51,37 @@ export default [
     children: [
       { index: true, element: <Academy /> },
       {
-        path: `${ENVIRONMENT.ROUTING.BASE_URL}academy/java`,
+        path: `${ENVIRONMENT.ROUTING.BASE_URL}academy/masterBackend`,
         element: <AcademyJava />
       },
+      {
+        path: `${ENVIRONMENT.ROUTING.BASE_URL}academy/masterFrontend`,
+        element: <AcademyFrontend />
+      },
+      { path: "*", element: <NoMatch /> }
+    ]
+  },
+  {
+    path: `${ENVIRONMENT.ROUTING.BASE_URL}up`,
+    element: <GeneralLayout />,
+    children: [
+      { index: true, element: <Up /> },
+      { path: "*", element: <NoMatch /> }
+    ]
+  },
+  {
+    path: `${ENVIRONMENT.ROUTING.BASE_URL}whoweare`,
+    element: <GeneralLayout />,
+    children: [
+      { index: true, element: <WhoWeAre /> },
+      { path: "*", element: <NoMatch /> }
+    ]
+  },
+  {
+    path: `${ENVIRONMENT.ROUTING.BASE_URL}career`,
+    element: <GeneralLayout />,
+    children: [
+      { index: true, element: <Career /> },
       { path: "*", element: <NoMatch /> }
     ]
   },
@@ -61,7 +89,7 @@ export default [
     path: `${ENVIRONMENT.ROUTING.BASE_URL}cicci`,
     element: <GeneralLayout />,
     children: [
-      { index: true, element: <RequireAuth><Consulting /></RequireAuth> },
+      { index: true, element: <RequireAuth><Up /></RequireAuth> },
       { path: "*", element: <NoMatch /> }
     ]
   }

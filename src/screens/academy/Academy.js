@@ -1,12 +1,16 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
-import { Row, Col, Typography, Carousel } from "antd";
-const { Title } = Typography;
+import { Row, Col, Carousel } from "antd";
 
 // import redux
 import { connect } from "react-redux";
 import { setColorHeader } from "../../redux/ducks/colorHeaderDuck";
+
+//import gsap
+import { gsap } from 'gsap'
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 //import style
 import './Academy.css'
@@ -21,7 +25,7 @@ import {
 import { turnToUppercase } from "../../utils/utilities";
 
 //import constants
-import { academy1, consulting_carousel_client, academy2, academy_comments } from "../../utils/properties";
+import { consulting_carousel_client, academy2, academy_comments, ENVIRONMENT } from "../../utils/properties";
 
 //import components
 import CustomCard from "../../components/functional_components/customCard/CustomCard";
@@ -31,33 +35,197 @@ import CustomForm from "../../components/hooks_components/customForm/CustomForm"
 import ViewAllButton from "../../components/functional_components/viewAllButton/ViewAllButton"
 import CustomButton from "../../components/functional_components/Button/CustomButton";
 import Comments from "../../components/functional_components/comments/Comments";
+import IntroductiveSection from "../../components/functional_components/introductiveSection/IntroductiveSection";
 
 const Academy = (props) => {
+
 
     const primary_bg_page_academy = '#feef87'
     const secondary_bg_page_academy = '#d6e3e5'
 
+    const ref = useRef(null);
+
     const { t } = useTranslation()
+
+    const navigate = useNavigate()
+
+    //GSAP
+    gsap.registerPlugin(ScrollTrigger);
 
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
+
+        const element = ref.current;
+
+        const firstSection = element.querySelector('.intro-sec-gsap');
+        const title = element.querySelector('.intro-sec-gsap-title');
+        const intro = element.querySelector('.intro-sec-gsap-intro');
+        const descDesktop = element.querySelector('.intro-sec-gsap-desc1-desktop');
+        const descMobile = element.querySelector('.intro-sec-gsap-desc-mobile');
+        const img1 = element.querySelector('.intro-sec-gsap-img1')
+
+        const secondSection = element.querySelector('.academy-gsap-second-section');
+        const secSectionTitle = element.querySelector('.academy-gsap-our-courses-title');
+        const secSectionCourse1 = element.querySelector('.academy-gsap-our-courses-el1');
+        const secSectionCourse2 = element.querySelector('.academy-gsap-our-courses-el2');
+
+        const secondSecRow2 = element.querySelector('.academy-gsap-our-courses-row2');
+        const secSectionDescDesktop = element.querySelector('.academy-gsap-our-courses-desc-desktop');
+        const secSectionDescMobile = element.querySelector('.academy-gsap-our-courses-desc-mobile');
+        const secSectionImg = element.querySelector('.academy-gsap-our-courses-img');
+        const secSectionYouTube = element.querySelector('.academy-gsap-our-courses-youTube');
+
+        const thirdSec = element.querySelector('.academy-gsap-third-section');
+        const thirdSecTitle = element.querySelector('.academy-gsap-next-courses-title');
+        const thirdSecCourse1 = element.querySelector('.academy-gsap-next-courses-el1');
+        const thirdSecCourse2 = element.querySelector('.academy-gsap-next-courses-el2');
+        const thirdSecBtn = element.querySelector('.academy-gsap-next-courses-btn');
+
+        const fourthSec = element.querySelector('.academy-gsap-fourth-section');
+        const percentageTitle = element.querySelector('.academy-gsap-percentage-title');
+        const percentageSingleMobile = element.querySelector('.academy-gsap-percentage-single-mobile');
+        const percentageSingleDesktop = element.querySelectorAll('.academy-gsap-percentage-single-desktop');
+
+        const fifthSec = element.querySelector('.academy-gsap-fifth-section');
+        const commentTitle = element.querySelector('.academy-gsap-comment-title');
+        const singleComment = element.querySelector('.academy-gsap-single-comment')
+
+        const sixthSection = element.querySelector('.consulting-gsap-sixth-section');
+        const formTitle = element.querySelector('.academy-gsap-form-title')
+        const formDesc = element.querySelector('.academy-gsap-form-desc')
+
+
+        const t1 = gsap.timeline({
+            scrollTrigger: {
+                trigger: firstSection,
+                markers: true,
+                toggleActions: "restart none none none",
+                start: 'top 75%'
+            }
+        })
+
+        const t1l2 = gsap.timeline({
+            scrollTrigger: {
+                trigger: firstSection,
+                markers: true,
+                toggleActions: "restart none none none",
+                start: 'top 75%'
+            }
+        })
+
+        const t2 = gsap.timeline({
+            scrollTrigger: {
+                trigger: secondSection,
+                markers: true,
+                // scrub: true,
+                toggleActions: "restart none none none",
+                start: 'top 75%'
+            }
+        })
+
+        const t3 = gsap.timeline({
+            scrollTrigger: {
+                trigger: secondSecRow2,
+                markers: true,
+                // scrub: true,
+                toggleActions: "restart none none none",
+                start: 'top 75%'
+            }
+        })
+
+        const t4 = gsap.timeline({
+            scrollTrigger: {
+                trigger: thirdSec,
+                markers: true,
+                // scrub: true,
+                toggleActions: "restart none none none",
+                start: 'top 75%'
+            }
+        })
+
+        const t5 = gsap.timeline({
+            scrollTrigger: {
+                trigger: fourthSec,
+                markers: true,
+                // scrub: true,
+                toggleActions: "restart none none none",
+                start: 'top 75%'
+            }
+        })
+
+        const t6 = gsap.timeline({
+            scrollTrigger: {
+                trigger: fifthSec,
+                markers: true,
+                // scrub: true,
+                toggleActions: "restart none none none",
+                start: 'top 75%'
+            }
+        })
+
+        const t7 = gsap.timeline({
+            scrollTrigger: {
+                trigger: sixthSection,
+                markers: true,
+                toggleActions: "restart none none none",
+                start: 'top 75%',
+                // scrub: true,
+            }
+        })
+
+        t1.from(title, { y: 200, opacity: 0, duration: 1, ease: 'back' })
+        t1.from(intro, { y: 200, opacity: 0, duration: 1, ease: 'baunce.in' })
+        t1.from(descDesktop, { y: 500, opacity: 0, duration: 1, ease: 'baunce.in' })
+        t1l2.from(img1, { opacity: 0, duration: 1.5, ease: 'power2.in' })
+        t1.from(descMobile, { y: 500, opacity: 0, duration: 1, ease: 'baunce.in' })
+
+        t2.from(secSectionTitle, { y: 200, opacity: 0, duration: 1, ease: 'back' })
+        t2.from(secSectionCourse1, { x: -200, opacity: 0, stagger: 0.3, duration: 0.5, ease: 'power2.in' })
+        t2.from(secSectionCourse2, { x: -200, opacity: 0, stagger: 0.3, duration: 0.5, ease: 'power2.in' })
+
+        t3.from(secSectionDescMobile, { y: 500, opacity: 0, duration: 1, ease: 'baunce.in' })
+        t3.from(secSectionImg, { opacity: 0, duration: 1, ease: 'power2.in' })
+        t3.from(secSectionYouTube, { x: -200, opacity: 0, stagger: 0.3, duration: 0.5, ease: 'power2.in' })
+        t3.from(secSectionDescDesktop, { y: 500, opacity: 0, duration: 1, ease: 'baunce.in' })
+
+        t4.from(thirdSecTitle, { y: 200, opacity: 0, duration: 1, ease: 'back' })
+        t4.from(thirdSecCourse1, { x: -200, opacity: 0, stagger: 0.5, duration: 0.5, ease: 'power2.in' })
+        t4.from(thirdSecCourse2, { x: -200, opacity: 0, stagger: 0.5, duration: 0.5, ease: 'power2.in' })
+        t4.from(thirdSecBtn, { opacity: 0, duration: 1, ease: 'power2.in' })
+
+        t5.from(percentageTitle, { y: 500, opacity: 0, duration: 1, ease: 'back' })
+        t5.from(percentageSingleDesktop, { opacity: 0, stagger: 0.3, duration: 0.5, ease: 'power2.in' })
+        t5.from(percentageSingleMobile, { opacity: 0, duration: 1, ease: 'power2.in' })
+
+        t6.from(commentTitle, { y: 500, opacity: 0, duration: 1, ease: 'back' })
+        t6.from(singleComment, { opacity: 0, duration: 0.5, ease: 'power2.in' })
+
+        t7.from(formTitle, { y: 500, opacity: 0, duration: 1, ease: 'back' })
+        t7.from(formDesc, { opacity: 0, duration: 0.5, ease: 'power2.in' })
+
         return () => window.removeEventListener("scroll", handleScroll);
     });
 
     const handleScroll = () => {
         if (window.pageYOffset == 0 || (window.pageYOffset > 0 && window.pageYOffset < 2200)) {
             props.dispatch(setColorHeader(primary_bg_page_academy))
-            console.log('window pageYOffset: ', window.pageYOffset)
         }
         else {
             props.dispatch(setColorHeader(secondary_bg_page_academy))
-            console.log('window pageYOffset: ', window.pageYOffset)
         }
+    }
+
+    const goToMasterBackend = () => {
+        navigate(`${ENVIRONMENT.ROUTING.BASE_URL}academy/masterBackend`)
+    }
+
+    const goToMasterFrontend = () => {
+        navigate(`${ENVIRONMENT.ROUTING.BASE_URL}academy/masterFrontend`)
     }
 
     const printPercentage = (item, key) => {
         return (
-            <Col xs={0} md={8} key={key} className={'container-column items-center padding-30'}>
+            <Col xs={0} md={8} key={key} className={'container-column items-center padding-30 academy-gsap-percentage-single-desktop'}>
                 <CustomCard
                     cardClassName={'custom-carousel-icon'}
                     imgPreview={false}
@@ -94,60 +262,39 @@ const Academy = (props) => {
     }
 
     return (
-        <div className={'academy-container'}>
+        <div
+            className={'academy-container'}
+            ref={ref}
+        >
 
             {/* Yellow part */}
             <div className={'academy-first-part'}>
 
                 {/* Introductive section */}
-                <section>
-                    <Row>
-                        <Col xs={24} md={12} className={'academy-introductive-section-intro-col1'}>
-                            <Row>
-                                <Title
-                                    level={1}
-                                >{turnToUppercase('academy')}</Title>
-                            </Row>
-                            <Row className="academy-introductive-section-intro-container">
-                                <CustomCard
-                                    cardDescription={t('Academy.intro')}
-                                    descriptionClassName='academy-introductive-section-academy-intro grotesk-font'
-                                />
-                                <CustomCard
-                                    cardDescription={t('Academy.page_description')}
-                                    descriptionClassName={'academy-introductive-section-desc-desktop'}
-                                />
-                            </Row>
-                        </Col>
-                        <Col xs={24} md={12} className={'academy-introductive-section-img1-container'}>
-                            <CustomCard
-                                cardImg
-                                imgPreview={false}
-                                // alt={*alt*} 
-                                imgClassName={'academy-introductive-section-img1'}
-                                imgSrc={academy1}
-                            />
-                        </Col>
-                        <Col xs={24} md={0} className="academy-introductive-section-desc-mobile-container">
-                            <CustomCard
-                                cardDescription={t('Academy.page_description')}
-                                descriptionClassName={'academy-introductive-section-desc-mobile'}
-                            />
-                        </Col>
-                    </Row>
+                <section className="academy-gsap-first-section">
+                    <IntroductiveSection
+                        titleInColumn={'Talent Academy'}
+                        bg1={'academy-bg1'}
+                        intro={'Diventa il prossimo Software Ninjaneer!'}
+                        desc1={'Le nostre Talent Academy sono percorsi di formazione teorico-pratici per diventare Software Developer. I Master Trainer Frontend e Backend, Roberto Brogi e Ivo Mosca ti accompagneranno durante tutto il percorso attraverso lezioni frontali, esercitazioni, valutazioni e progetti reali. I corsi hanno una durata di 3 mesi, sono retribuiti ed hanno come scopo l’inserimento in azienda con contratto a tempo indeterminato.'}
+                        secondRow={false}
+                    />
                 </section>
 
                 {/* Our courses section */}
-                <section className={'academy-ourCourses-section'}>
+                <section className={'academy-ourCourses-section academy-gsap-second-section'}>
                     <Row>
-                        <Col xs={24}>
+                        <Col
+                            xs={24}
+                            className={'academy-gsap-our-courses-title'}
+                        >
                             <CustomCard
                                 cardTitle={turnToUppercase(t('Academy.our_courses_title'))}
                                 titleLevel={2}
                             />
                         </Col>
                     </Row>
-                    <Row className={'academy-ourCourses-section-singleCourse-container academy-ourCourses-section-java-container'}>
+                    <Row className={'academy-ourCourses-section-singleCourse-container academy-ourCourses-section-java-container academy-gsap-our-courses-el1'}>
                         <Col xs={18}>
                             <CustomCard
                                 cardClassName={'academy-ourCourses-section-course-title-container'}
@@ -156,7 +303,10 @@ const Academy = (props) => {
                                 titleClassName={'academy-ourCourses-section-course-title'}
                             />
                         </Col>
-                        <Col xs={6} className={'academy-courses-detail-btn'}>
+                        <Col
+                            xs={6}
+                            className={'academy-courses-detail-btn'}
+                        >
                             <CustomCard
                                 cardButton
                                 type={'primary-arrow-btn'}
@@ -164,10 +314,11 @@ const Academy = (props) => {
                                     <ArrowRightOutlined
                                         className='arrow-icon-btn' />
                                 }
+                                clickCallback={goToMasterBackend}
                             />
                         </Col>
                     </Row>
-                    <Row className={'academy-ourCourses-section-singleCourse-container academy-ourCourses-section-frontend-container'}>
+                    <Row className={'academy-ourCourses-section-singleCourse-container academy-ourCourses-section-frontend-container academy-gsap-our-courses-el2'}>
                         <Col xs={18}>
                             <CustomCard
                                 cardClassName={'academy-ourCourses-section-course-title-container'}
@@ -176,7 +327,10 @@ const Academy = (props) => {
                                 titleClassName={'academy-ourCourses-section-course-title'}
                             />
                         </Col>
-                        <Col xs={6} className={'academy-courses-detail-btn'}>
+                        <Col
+                            xs={6}
+                            className={'academy-courses-detail-btn'}
+                        >
                             <CustomCard
                                 cardButton
                                 type={'primary-arrow-btn'}
@@ -184,24 +338,33 @@ const Academy = (props) => {
                                     <ArrowRightOutlined
                                         className='arrow-icon-btn' />
                                 }
+                                clickCallback={goToMasterFrontend}
                             />
                         </Col>
                     </Row>
-                    <Row>
-                        <Col xs={24} md={0}>
+                    <Row className="academy-gsap-our-courses-row2">
+                        <Col
+                            xs={24}
+                            md={0}
+                            className="academy-gsap-our-courses-desc-desktop"
+                        >
                             <CustomCard
                                 cardDescription={t('Academy.course_description')}
                             />
                         </Col>
-                        <Col xs={24} md={12} className={"academy-ourCourses-section-img-container"}>
+                        <Col
+                            xs={24}
+                            md={12}
+                            className={"academy-ourCourses-section-img-container"}
+                        >
                             <CustomCard
                                 cardImg
                                 imgPreview={false}
                                 // alt={*alt*} 
-                                imgClassName={'academy-ourCourses-section-img'}
+                                imgClassName={'academy-ourCourses-section-img academy-gsap-our-courses-img'}
                                 imgSrc={academy2}
                             />
-                            <div className={'academy-ourCourses-section-youtube-container'}>
+                            <div className={'academy-ourCourses-section-youtube-container academy-gsap-our-courses-youTube'}>
                                 <CustomCard
                                     cardDescription={t('Academy.send_to_youtube')}
                                     cardButton
@@ -214,7 +377,12 @@ const Academy = (props) => {
                             </div>
                         </Col>
                         <Col xs={0} md={2} lg={4}></Col>
-                        <Col xs={0} md={10} lg={8}>
+                        <Col
+                            xs={0}
+                            md={10}
+                            lg={8}
+                            className="academy-gsap-our-courses-desc-mobile"
+                        >
                             <CustomCard
                                 cardDescription={t('Academy.course_description')}
                             />
@@ -223,15 +391,18 @@ const Academy = (props) => {
                 </section>
 
                 {/* Next Courses section */}
-                <section className='academy-next-courses-section'>
+                <section className='academy-next-courses-section academy-gsap-third-section'>
                     <Row>
-                        <Col xs={24}>
+                        <Col
+                            xs={24}
+                            className="academy-gsap-next-courses-title"
+                        >
                             <SectionSubtitle
                                 title={turnToUppercase(t('Academy.next_courses_title'))}
                             />
                         </Col>
                     </Row>
-                    <Row className={'academy-next-courses-section-list academy-next-courses-section-course1-container'}>
+                    <Row className={'academy-next-courses-section-list academy-next-courses-section-course1-container academy-gsap-next-courses-el1'}>
                         <Col xs={18} md={0}>
                             <CustomCard
                                 cardDescription={t('Academy.next_course_1')}
@@ -262,7 +433,7 @@ const Academy = (props) => {
                             />
                         </Col>
                     </Row>
-                    <Row className={'academy-next-courses-section-list academy-next-courses-section-course2-container'}>
+                    <Row className={'academy-next-courses-section-list academy-next-courses-section-course2-container academy-gsap-next-courses-el2'}>
                         <Col xs={18} md={0}>
                             <CustomCard
                                 cardDescription={t('Academy.next_course_2')}
@@ -276,13 +447,20 @@ const Academy = (props) => {
                                 descriptionClassName='academy-next-courses-section-course-info'
                             />
                         </Col>
-                        <Col xs={0} md={8}>
+                        <Col
+                            xs={0}
+                            md={8}
+                        >
                             <CustomCard
                                 cardDescription={t('Academy.date_next_course_1')}
                                 descriptionClassName='academy-next-courses-section-course-info'
                             />
                         </Col>
-                        <Col xs={6} md={8} className={'academy-courses-detail-btn'}>
+                        <Col
+                            xs={6}
+                            md={8}
+                            className={'academy-courses-detail-btn'}
+                        >
                             <CustomCard
                                 cardButton
                                 type={'primary-arrow-btn'}
@@ -294,7 +472,10 @@ const Academy = (props) => {
                         </Col>
                     </Row>
                     <Row>
-                        <Col xs={24} className={'academy-next-courses-view-all-btn'}>
+                        <Col
+                            xs={24}
+                            className={'academy-next-courses-view-all-btn academy-gsap-next-courses-btn'}
+                        >
                             <CustomButton
                                 type={'view-all-btn'}
                                 content={<ViewAllButton />}
@@ -308,12 +489,13 @@ const Academy = (props) => {
             <div className={'academy-second-part'}>
 
                 {/* Percentage Section */}
-                <section className="academy-percentage-section">
+                <section className="academy-percentage-section academy-gsap-fourth-section">
                     <SectionSubtitle
                         title={turnToUppercase(t('Academy.percentage_client_satisfaction_title'))}
                         shortLineBelow
+                        classNameContainer={'academy-gsap-percentage-title'}
                     />
-                    <Row className={'academy-percentage-section-carousel'}>
+                    <Row className={'academy-percentage-section-carousel academy-gsap-percentage-single-mobile'}>
                         <CustomCarousel />
                     </Row>
                     <Row className={'academy-percentage-section-card'}>
@@ -322,43 +504,63 @@ const Academy = (props) => {
                 </section>
 
                 {/* Comments section */}
-                <section>
+                <section className="academy-gsap-fifth-section">
                     <Row>
-                        <Col xs={24} className="academy-comments-title-container">
+                        <Col
+                            xs={24}
+                            className="academy-comments-title-container academy-gsap-comment-title"
+                        >
                             <SectionSubtitle
                                 title={turnToUppercase(t('Academy.comments_title'))}
                                 shortLineBelow
                             />
                         </Col>
-                        <Col xs={24} lg={0}>
+                        <Col
+                            xs={24}
+                            lg={0}
+                        >
                             <Carousel
                                 autoplay
                                 dots={false}
-                                className="academy-comments-carousel-ant"
+                                className="academy-comments-carousel-ant academy-gsap-single-comment"
                             >
                                 {academy_comments.map(printComments)}
                             </Carousel>
                         </Col>
-                        <Col xs={0} lg={12}>
+                        <Col
+                            xs={0}
+                            lg={12}
+                        >
                             <Comments />
                         </Col>
-                        <Col xs={0} lg={12} className={'academy-comments-section-second-comment-col'}>
+                        <Col
+                            xs={0}
+                            lg={12}
+                            className={'academy-comments-section-second-comment-col'}
+                        >
                             <Comments />
                         </Col>
                     </Row>
                 </section>
 
                 {/* Form section */}
-                <section className={'academy-form-section'}>
+                <section className={'academy-form-section consulting-gsap-sixth-section'}>
                     <Row>
-                        <Col xs={24}>
+                        <Col
+                            xs={24}
+                        >
                             <SectionSubtitle
                                 styleContainer={{ marginBottom: '10px' }}
                                 LongLineAbove
+                                classNameTitle={'academy-gsap-form-title'}
                                 title={turnToUppercase(t('Academy.form_message_title'))}
                             />
                         </Col>
-                        <Col xs={24} md={6}>
+                        <Col
+                            xs={24}
+                            md={6}
+                            className="academy-gsap-form-desc"
+                        >
                             <CustomCard
                                 cardParagraph={t(`Academy.form_message_desc`)}
                                 paragraphClassName={'academy-info-desc'}

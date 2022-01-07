@@ -5,7 +5,6 @@ import ReactFullpage from "@fullpage/react-fullpage";
 import { Layout } from "antd";
 const { Footer } = Layout;
 
-
 //import actions to dispatch
 import { setColor, initColor } from "../../redux/ducks/colorDuck";
 import { setVisibility, initVisibility } from "../../redux/ducks/visibilityDuck"
@@ -31,6 +30,7 @@ import CustomFooter from "../../components/functional_components/customFooter/Cu
 
 //import constats
 import { cardWhoWeAre } from "../../utils/properties";
+import SecondSectionTablet from "../../components/homeSections/secondSection/secondSectionTablet/SecondSectionTablet";
 const historyObj = cardWhoWeAre[1];
 const missionObj = cardWhoWeAre[2];
 const visionObj = cardWhoWeAre[3];
@@ -49,13 +49,15 @@ const Home = (props) => {
   const [myState, setState] = useState({
     originIndex: 0,
     destinationIndex: null,
-    isDesktop: window.innerWidth >= 1024
+    isDesktop: window.innerWidth >= 1024,
+    isTablet: window.innerWidth >= 768 && window.innerWidth < 1024
   })
 
   const updateMedia = () => {
     setState({
       ...myState,
-      isDesktop: window.innerWidth >= 1024
+      isDesktop: window.innerWidth >= 1024,
+      isTablet: window.innerWidth >= 768 && window.innerWidth < 1024
     });
   };
 
@@ -82,6 +84,9 @@ const Home = (props) => {
     else if (destination.index === 6 && !myState.isDesktop) {
       props.dispatch(setColorHeader(colorContactPage))
     }
+    else if (destination.index === 4 && myState.isTablet) {
+      props.dispatch(setColorHeader(colorContactPage))
+    }
     else if (destination.index === 3 && myState.isDesktop) {
       props.dispatch(setColorHeader(colorContactPage))
     }
@@ -97,6 +102,18 @@ const Home = (props) => {
     })
   }
 
+  const switchColorPage = () => {
+    let pageColorList = ["transparent", "#fff", "#fff", colorContactPage];
+    if (myState.isTablet) {
+      pageColorList = ["transparent", "#fff", "#fff", "#fff", colorContactPage]
+    }
+    else if (!myState.isTablet && !myState.isDesktop) {
+      pageColorList = ["transparent", "#fff", "#fff", "#fff", "#fff", "#fff", colorContactPage]
+    }
+
+    return (pageColorList)
+  }
+
   return (
     /* *he* */
     //   {/* 
@@ -110,7 +127,7 @@ const Home = (props) => {
     <div >
       <ReactFullpage
         scrollOverflow={true}
-        sectionsColor={myState.isDesktop ? ["transparent", "#fff", "#fff", colorContactPage] : ["transparent", "#fff", "#fff", "#fff", "#fff", "#fff", colorContactPage]}
+        sectionsColor={switchColorPage()}
         onLeave={onLeave}
         afterLoad={afterLoad}
         render={({ state, fullpageApi }) => {
@@ -133,22 +150,42 @@ const Home = (props) => {
                 </div>
               </section>
 
-              <section className="section section2">
+              <section className="section section2 ">
                 <ContainerSectionScroll
-                  className='home-container-section2'
+                  className='home-container-section2 home.gsap.second.section'
                   scrollBar={true}
                 >
-                  {myState.isDesktop &&
+                  {
+                    myState.isDesktop &&
                     <SecondSectionDesktop />
                   }
-                  {!myState.isDesktop &&
+                  {
+                    myState.isTablet &&
+                    <SecondSectionTablet />
+                  }
+                  {
+                    !myState.isDesktop && !myState.isTablet &&
                     <SecondSectionMobile />
                   }
-
                 </ContainerSectionScroll>
               </section>
 
-              {!myState.isDesktop &&
+              {
+                myState.isTablet &&
+                <section className="section">
+                  <ContainerSectionScroll
+                    className='home-container-section2'
+                    scrollBar={true}
+                  >
+                    <SecondSectionTablet
+                      card1={2}
+                      card2={4}
+                    />
+                  </ContainerSectionScroll>
+                </section>
+              }
+
+              {!myState.isDesktop && !myState.isTablet &&
 
                 <section className="section">
                   <ContainerSectionScroll
@@ -162,7 +199,7 @@ const Home = (props) => {
                 </section>
               }
 
-              {!myState.isDesktop &&
+              {!myState.isDesktop && !myState.isTablet &&
 
                 <section className="section">
                   <ContainerSectionScroll
@@ -176,7 +213,7 @@ const Home = (props) => {
                 </section>
               }
 
-              {!myState.isDesktop &&
+              {!myState.isDesktop && !myState.isTablet &&
 
                 <section className="section">
                   <ContainerSectionScroll

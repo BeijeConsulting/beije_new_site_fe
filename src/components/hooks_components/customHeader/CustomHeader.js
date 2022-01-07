@@ -25,7 +25,7 @@ const CustomHeader = (props) => {
     <>
       <Row className='d-flex items-center'>
         <Col xs={12} sm={12} lg={5} className='container-row items-center'>
-          <Link href={ENVIRONMENT.BASE_URL} className={'header-img-container'}>
+          <Link href={ENVIRONMENT.ROUTING.BASE_URL} className={'header-img-container'}>
             <Image
               className={'header-logo'}
               preview={false}
@@ -38,7 +38,7 @@ const CustomHeader = (props) => {
           <Navbar
             classNameRow={!props.visibilityDuck.visibility ? 'display-none' : 'navbar-row'}
             classNameCol={'col-link'}
-            classNameLink={'navbar-general-link'}
+            classNameLink={props.colorDuck.lightColor ? 'navbar-link-light' : 'navbar-general-link'}
           />
         </Col>
         <Col xs={0} sm={0} lg={2} className='container-row justify-start items-end'>

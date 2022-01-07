@@ -11,9 +11,10 @@ import CustomButton from "../../functional_components/Button/CustomButton";
 
 
 const CustomForm = (props) => {
-    const formRef = useRef()
+    const formRef = useRef();
 
     const { t } = useTranslation()
+
 
     // to see the values pass "values" as parameter of this function
     const onFinish = () => {
@@ -165,7 +166,7 @@ const CustomForm = (props) => {
                 <CustomButton
                     content={t('home.fourthSection.send_btn')}
                     htmlType='submit'
-                    type={'form-btn'}
+                    type={props.typeBtn}
                 />
             </div>
         </Form >
@@ -179,7 +180,8 @@ CustomForm.defaultProps = {
     message: true,
     agreement: true,
     positionBtn: 'center',
-    classNameTextArea: 'form-text-area'
+    classNameTextArea: 'form-text-area',
+    typeBtn: 'form-btn'
 }
 
 export default CustomForm

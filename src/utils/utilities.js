@@ -134,4 +134,3 @@ export const addBreakPoint = (sentence, division) => {
     new_sentence.map(printNewSentence)
   )
 }
-

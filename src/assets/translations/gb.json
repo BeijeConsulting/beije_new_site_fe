@@ -10,99 +10,218 @@
     "cancel": "Cancel"
   },
   "formValidation": {
-    "required_msg": "Required field",
-    "not_valid_msg": "Not valid field",
-    "agreement": "Should accept agreement"
+    "required_msg": "[en] Required field",
+    "not_valid_msg": "[en] Not valid field",
+    "agreement": "[en] Should accept agreement"
   },
   "btn": {
-    "viewAll": "View All",
-    "drag": "Drag -br- for more"
+    "viewAll": "[en] View All",
+    "drag": "[en] Drag -br- for more",
+    "apply": "[en] Candidati",
+    "goBackAcademy": "[en] Torna all'academy"
   },
   "imgAlt": {
     "social": {
-      "fb": "link to Facebook",
-      "in": "link to LinkedIn",
-      "youTube": "Link to YouTube"
+      "fb": "[en] link to Facebook",
+      "in": "[en] link to LinkedIn",
+      "youTube": "[en] Link to YouTube"
     }
   },
   "footer": {
-    "location": "WHERE WE ARE",
-    "hours": "HOURS",
-    "contacts": "CONTACT US",
-    "legalNotes": "LEGAL NOTES",
-    "vatNumber": "VAT Number"
+    "location": "[en] WHERE WE ARE",
+    "hours": "[en] HOURS",
+    "contacts": "[en] CONTACT US",
+    "legalNotes": "[en] LEGAL NOTES",
+    "vatNumber": "[en] VAT Number"
   },
   "burgerMenu": {
-    "consulting": "CONSULTING",
-    "academy": "ACADEMY",
-    "up": "UP",
-    "career": "CAREER",
-    "whoWeAre": "WHO WE ARE",
-    "contacts": "CONTACTS",
-    "blog": "BLOG",
-    "community": "COMMUNITY"
+    "consulting": "[en] CONSULTING",
+    "academy": "[en] ACADEMY",
+    "up": "[en] UP",
+    "career": "[en] CAREER",
+    "whoWeAre": "[en] WHO WE ARE",
+    "contacts": "[en] CONTACTS",
+    "blog": "[en] BLOG",
+    "community": "[en] COMMUNITY"
   },
   "home": {
     "firstSection": {
-      "title": "We help companies with digital transformation by building Value Teams"
+      "title": "[en] We help companies with digital transformation by building Value Teams"
     },
     "secondSection": {
-      "title_value": "VALUE",
-      "title_history": "HISTORY",
-      "title_mission": "MISSION",
-      "title_vision": "VISION",
-      "paragraph_value": "-Crediamo in quello che facciamo e abbiamo un profondo RISPETTO per gli altri -Mostriamo GRATITUDINE, l’impegno che ogni giorno mettiamo nel nostro lavoro -Prima viene la squadra e poi l’individuo, il nostro è un lavoro di TEAM -La base per costruire la nostra community è sviluppare un SENSO DI APPARTENENZA. ",
-      "paragraph_history": "Da un ideale ad un business: da più di 10 anni ci impegniamo costantemente per aggiornare il nostro know-how e siamo in grado di fornire le metodologie più moderne e le tecnologie più innovative per la realizzazione di progetti altamente specializzati. Al centro del modello Beije c’è una vision people first: le persone al centro per la creazione di un’azienda di valore. ",
-      "paragraph_mission": "Aiutiamo le aziende a realizzare progetti innovativi attraverso Team di Valore",
-      "paragraph_vision": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec arcu felis, tristique ut ex consequat, volutpat maximus ipsum."
+      "title_value": "[en] VALUE",
+      "title_history": "[en] HISTORY",
+      "title_mission": "[en] MISSION",
+      "title_vision": "[en] VISION",
+      "paragraph_value": "[en] Crediamo in quello che facciamo e abbiamo un profondo RISPETTO per gli altri -Mostriamo GRATITUDINE, l’impegno che ogni giorno mettiamo nel nostro lavoro -Prima viene la squadra e poi l’individuo, il nostro è un lavoro di TEAM -La base per costruire la nostra community è sviluppare un SENSO DI APPARTENENZA. ",
+      "paragraph_history": "[en] Da un ideale ad un business: da più di 10 anni ci impegniamo costantemente per aggiornare il nostro know-how e siamo in grado di fornire le metodologie più moderne e le tecnologie più innovative per la realizzazione di progetti altamente specializzati. Al centro del modello Beije c’è una vision people first: le persone al centro per la creazione di un’azienda di valore. ",
+      "paragraph_mission": "[en] Aiutiamo le aziende a realizzare progetti innovativi attraverso Team di Valore",
+      "paragraph_vision": "[en] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec arcu felis, tristique ut ex consequat, volutpat maximus ipsum."
     },
     "thirdSection": {
-      "title": "WHO WE ARE",
-      "description": "English lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      "title": "[en] WHO WE ARE",
+      "description": "[en] English lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
     "fourthSection": {
-      "title": "CONTACT US",
-      "location": "Where we are",
-      "hours": "hours",
-      "contacts": "Contact us",
+      "title": "[en] CONTACT US",
+      "location": "[en] Where we are",
+      "hours": "[en] hours",
+      "contacts": "[en] Contact us",
       "placeholder": {
-        "name": "Name Surname*",
-        "address": "Address",
-        "municipality": "Municipality*",
-        "province": "Province*",
-        "message": "Write here your message"
+        "name": "[en] Name Surname*",
+        "address": "[en] Address",
+        "municipality": "[en] Municipality*",
+        "province": "[en] Province*",
+        "message": "[en] Write here your message"
       },
-      "agreement": "I have read and accept the treatment of my personal data*",
-      "send_btn": "Send"
+      "agreement": "[en] I have read and accept the treatment of my personal data*",
+      "send_btn": "[en] Send"
     }
   },
   "Consulting": {
-    "intro": "Aiutiamo le aziende a sviluppare progetti per la digital transformation, costruendo team di valore",
-    "description": "Abbiamo sempre pensato che le persone vengano prima di tutto e che il team sia più importante dell’individuo. Per questo, giorno dopo giorno, costruiamo una community che riesca a fornire ai nostri clienti le persone giuste al momento giusto. Persone capaci, professionali e che abbiano le skills che più si adattano ai nostri progetti.",
-    "title_carousel_client": "Client satisfaction",
-    "paragraph1_carousel_client": "Reputa che Beije Consulting sia un’azienda affidabile",
-    "paragraph2_carousel_client": "Pensa che i nostri consulenti dispongano di una preparazione tecnica adeguata e in linea con la loro seniority",
-    "paragraph3_carousel_client": "Raccomanderebbe la società Beije Consulting ai propri partners",
-    "data_survey": "Dati survery 2019",
-    "title_add_info": "Richiedi maggiori informazioni",
-    "description_add_info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan lacus quis nibh porta, eget porttitor neque feugiat."
+    "intro": "[en] Aiutiamo le aziende a sviluppare progetti per la digital transformation, costruendo team di valore",
+    "description": "[en] Abbiamo sempre pensato che le persone vengano prima di tutto e che il team sia più importante dell’individuo. Per questo, giorno dopo giorno, costruiamo una community che riesca a fornire ai nostri clienti le persone giuste al momento giusto. Persone capaci, professionali e che abbiano le skills che più si adattano ai nostri progetti.",
+    "title_carousel_client": "[en] Client satisfaction",
+    "paragraph1_carousel_client": "[en] Reputa che Beije Consulting sia un’azienda affidabile",
+    "paragraph2_carousel_client": "[en] Pensa che i nostri consulenti dispongano di una preparazione tecnica adeguata e in linea con la loro seniority",
+    "paragraph3_carousel_client": "[en] Raccomanderebbe la società Beije Consulting ai propri partners",
+    "data_survey": "[en] Dati survery 2019",
+    "title_add_info": "[en] Richiedi maggiori informazioni",
+    "description_add_info": "[en] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan lacus quis nibh porta, eget porttitor neque feugiat."
   },
   "Academy": {
-    "intro": "Formarsi per costruire il proprio futuro",
-    "page_description": "Beije Academy offre percorsi formativi teorico-pratici specializzati per farti diventare uno Sviluppatore Junior.",
-    "our_courses_title": "Our courses",
-    "title_academy_java": "Academy Java",
-    "title_academy_frontend": "Academy web develop - front end",
-    "course_description": "I corsi hanno una durata di 3 mesi, sono retribuiti e hanno come scopo l’inserimento in azienda con contratto a tempo indeterminato. Il nostro docente ti accompagnerà durante tutto il percorso, attraverso lezioni frontali, esercitazioni, valutazioni e progetti reali.",
-    "send_to_youtube": "Guarda le pillole dei nostri docenti sul canale Youtube di Beije",
-    "next_courses_title": "Next courses",
-    "next_course_1": "Stage java",
-    "date_next_course_1": "Gen. – Apr. 2021",
-    "next_course_2": "Stage java",
-    "date_next_course_2": "Gen. – Apr. 2021",
-    "percentage_client_satisfaction_title": "Client satisfaction",
-    "comments_title": "Dicono di noi",
-    "form_message_title": "Richiedi maggiori informazioni",
-    "form_message_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan lacus quis nibh porta, eget porttitor neque feugiat."
+    "intro": "[en] Formarsi per costruire il proprio futuro",
+    "page_description": "[en] Beije Academy offre percorsi formativi teorico-pratici specializzati per farti diventare uno Sviluppatore Junior.",
+    "our_courses_title": "[en] Our courses",
+    "title_academy_java": "[en] Academy Java",
+    "title_academy_frontend": "[en] Academy web develop - front end",
+    "course_description": "[en] I corsi hanno una durata di 3 mesi, sono retribuiti e hanno come scopo l’inserimento in azienda con contratto a tempo indeterminato. Il nostro docente ti accompagnerà durante tutto il percorso, attraverso lezioni frontali, esercitazioni, valutazioni e progetti reali.",
+    "send_to_youtube": "[en] Guarda le pillole dei nostri docenti sul canale Youtube di Beije",
+    "next_courses_title": "[en] Next courses",
+    "next_course_1": "[en] Stage java",
+    "date_next_course_1": "[en] Gen. – Apr. 2021",
+    "next_course_2": "[en] Stage java",
+    "date_next_course_2": "[en] Gen. – Apr. 2021",
+    "percentage_client_satisfaction_title": "[en] Client satisfaction",
+    "comments_title": "[en] Dicono di noi",
+    "form_message_title": "[en] Richiedi maggiori informazioni",
+    "form_message_desc": "[en] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan lacus quis nibh porta, eget porttitor neque feugiat."
+  },
+  "AcademyDedails": {
+    "structure": "[en] Struttura",
+    "stage": "[en] Stage",
+    "compensation": "[en] Compenso",
+    "location": "[en] Modalità",
+    "program": "[en] Program"
+  },
+  "AcademyBackend": {
+    "title": "[en] Master Backend",
+    "intro": "[en] Diventa Web Developer con noi!",
+    "stageDesc": "[en] Il corso comprende uno stage finale della durata di 3 mesi",
+    "compensationDesc": "[en] rimborso spese",
+    "locationDesc": "[en] remoto",
+    "introList": {
+      "el1": "[en] 3 mesi di crescita professionale",
+      "el2": "[en] Formazione costante attraverso progetti individuali e di gruppo",
+      "el3": "[en] Utilizzo delle tecnologie più richieste dal mercato"
+    },
+    "program": {
+      "section1": {
+        "title": "Java basi e teoria",
+        "subsection1": "Fondamenti di Java e di programmazione ad oggetti",
+        "subsection2": "Variabili: differenza tra tipi primitivi e rifermenti ad oggetti",
+        "subsection3": "Gli operatori in Java: aritmetici, unari e binari",
+        "subsection4": "Costrutti condizionali ed iterativi; controllo avanzato del flusso",
+        "subsection5": "La classe String ed il concetto di immutabilità",
+        "subsection6": "La classe StringBuilder ed il concetto di “uguaglianza” tra oggetti in Java",
+        "subsection7": "Gli array mono e multidimensionali in Java; la classe ArrayList",
+        "subsection8": "La gestione di data ed orario in Java",
+        "subsection9": "Design dei metodi: modificatori di accesso e passaggio di parametri",
+        "subsection10": "I metodi “Costruttori” e l’overloading di metodi in una classe",
+        "subsection11": "Ereditarietà e classi astratte",
+        "subsection12": "Interfacce e Polimorfismo",
+        "subsection13": "Gestire le eccezioni in Java",
+        "subsection14": "Accenni di programmazione funzionale in Java: scrivere semplici funzioni Lambda",
+        "subsection15": "I Design Patterns: Builder, Factory, Singleton e Decorator"
+      },
+      "section2": {
+        "title": "Java I/O",
+        "subsection1": "Leggere e scrivere file in Java",
+        "subsection2": "Organizzare dati in file CSV",
+        "subsection3": "Il formato XML e come gestirlo in Java",
+        "subsection4": "Importare ed esportare dati da fonti e formati differenti"
+      },
+      "section3": {
+        "title": "Java e database",
+        "subsection1": "Teoria dei DataBase",
+        "subsection2": "Il linguaggio SQL",
+        "subsection3": "Interfacciarsi ad un database con JDBC",
+        "subsection4": "JPA: Java Persistence Api",
+        "subsection5": "Il framework Hibernate per ORM e JPA",
+        "subsection6": "Usare Maven per la gestione dei progetti"
+      },
+      "section4": {
+        "title": "Java per il web",
+        "subsection1": "Java per il Web: Servlet e JSP, HTML e CSS",
+        "subsection2": "Il concetto di sessione e l’utilizzo di bean per il mantenimento e trasporto dei dati",
+        "subsection3": "Il Design Pattern Model-View-Controller",
+        "subsection4": "Il framework Spring: Inversion of Control & Dependencies Injection",
+        "subsection5": "SpringMVC: DispatcherServlet, controller, model e views",
+        "subsection6": "Spring JPA e Spring Security",
+        "subsection7": "Web Service SOAP: implementazione di un server ed un client",
+        "subsection8": "Web Service REST: il formato JSON ed implementazione di un WS REST con SpringMVC",
+        "subsection9": "DOM e Javascript",
+        "subsection10": "AJAX: utilizzo del comando fetch per le chiamate asincrone"
+      }
+    }
+  },
+  "AcademyFrontend": {
+    "title": "[en] Master Frontend",
+    "intro": "[en] Diventa Web Developer con noi!",
+    "stageDesc": "[en] percorso di stage della durata di 3 mesi",
+    "compensationDesc": "[en] rimborso spese",
+    "locationDesc": "[en] remoto",
+    "introList": {
+      "el1": "[en] 3 mesi di crescita professionale e personale",
+      "el2": "[en] Formazione costante attraverso progetti individuali e di gruppo con sviluppo di Web & Mobile application",
+      "el3": "[en] Utilizzo di librerie e framework più richiesti dal mercato"
+    },
+    "program": {
+      "section1": {
+        "title": "Javascript, HTML5, CSS3",
+        "subsection1": "Javascript",
+        "subsection2": "HTML5",
+        "subsection3": "CSS3",
+        "subsection4": "ES6",
+        "subsection6": "Programmazione generale",
+        "subsection7": "Git"
+      },
+      "section2": {
+        "title": "React",
+        "subsection1": "React, la libreria dedicata al frontend",
+        "subsection2": "React vs JQuery vs AngularJS Vs Vue",
+        "subsection3": "Gestione e organizzazione del Progetto",
+        "subsection4": "Hooks & Class",
+        "subsection5": "Components, State, Props and Lifecycle events",
+        "subsection6": "Routing and Navigation",
+        "subsection7": "Virtual Dom",
+        "subsection8": "Redux"
+      },
+      "section3": {
+        "title": "React Native",
+        "subsection1": "React Vs React Native",
+        "subsection2": "Style and Component",
+        "subsection3": "Expo",
+        "subsection4": "Routing and Navigation",
+        "subsection5": "Build & pubblicazione Store Ios/Android",
+        "subsection6": "Redux"
+      },
+      "section4": {
+        "title": "Approfondimenti",
+        "subsection1": "Npm module custom",
+        "subsection2": "Interactive application (Ar/Vr)",
+        "subsection3": "Games"
+      }
+    }
   }
 }
