@@ -1,5 +1,5 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
 import { Typography } from "antd";
 
 //import assets
@@ -16,7 +16,7 @@ import './GoBackBtn.css'
 
 
 const GoBackBtn = (props) => {
-    const { t } = useTranslation()
+    // const { t } = useTranslation()
 
     return (
         <div className={props.classNameContainer}>

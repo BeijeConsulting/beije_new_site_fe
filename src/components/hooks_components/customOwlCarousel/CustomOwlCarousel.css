@@ -62,7 +62,7 @@
         var(--profile_bg1);
 }
 
-.carousel-profile-bg2:hover {
+.carousel-profile-bg1:hover {
     background-image: var(--profile_bg1);
 }
 

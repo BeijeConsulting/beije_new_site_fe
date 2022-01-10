@@ -23,7 +23,7 @@ const ThirdSection = () => {
     const { t } = useTranslation()
 
     const dragStartOwlCarousel = () => {
-        console.log('drag start')
+        // console.log('drag start')
 
         // setState({
         //     ...state,
@@ -32,7 +32,7 @@ const ThirdSection = () => {
     }
 
     const dragEndOwlCarousel = () => {
-        console.log('drag end');
+        // console.log('drag end');
 
         // setState({
         //     ...state,

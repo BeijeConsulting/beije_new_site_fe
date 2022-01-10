@@ -56,6 +56,9 @@ const CustomButton = (props) => {
       case "drag-more-btn":
         currentClassName = "custom-btn-drag-more"
         break;
+      case "filter-btn":
+        currentClassName = "custom-btn-filter"
+        break;
       default:
         currentClassName = ""
         break;

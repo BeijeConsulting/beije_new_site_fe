@@ -1,11 +1,11 @@
 :root {
-    --primary-color-career: var(--fourth-color);
+    --primary-bg-color-career: var(--fourth-color);
     --first-panel-color-career: var(--fifth-color);
-    --border-color-tab-career: var(--first-color);
+    --primary-color-career: var(--first-color);
 }
 
 .career-container {
-    background-color: var(--primary-color-career);
+    background-color: var(--primary-bg-color-career);
     padding-top: 100px;
 }
 
@@ -32,24 +32,24 @@
     background: transparent;
     border-color: transparent;
     border-radius: 25px 25px 0 0 !important;
-    border: 1px solid var(--border-color-tab-career) !important;
+    border: 1px solid var(--primary-color-career) !important;
     border-bottom: none !important;
+    margin: 0 10px;
 }
 
 .card-container>.ant-tabs-card .ant-tabs-tab-active.career-academy-panel {
     background: var(--first-panel-color-career) !important;
     background: var(--first-panel-color-career) !important;
     border-radius: 25px 25px 0 0;
-    border: 1px solid var(--border-color-tab-career) !important;
+    border: 1px solid var(--primary-color-career) !important;
     border-bottom: none !important;
-    margin: 0 10px;
 }
 
 .card-container>.ant-tabs-card .ant-tabs-tab-active.career-job-panel {
     background: #fff !important;
     border-color: #fff !important;
     border-radius: 25px 25px 0 0;
-    border: 1px solid var(--border-color-tab-career) !important;
+    border: 1px solid var(--primary-color-career) !important;
     border-bottom: none !important;
 }
 
@@ -61,32 +61,12 @@
     background: #fff !important;
 }
 
-
-.code-box-demo {
-    padding: 24px;
-    overflow: hidden;
-    background: #f5f5f5;
-}
-
-[data-theme='compact'] .card-container>.ant-tabs-card .ant-tabs-content {
-    height: 120px;
-    margin-top: -8px;
-}
-
-[data-theme='dark'] .card-container>.ant-tabs-card .ant-tabs-tab {
-    background: transparent;
-    border-color: transparent;
-}
-
-[data-theme='dark'] .code-box-demo {
-    background: #000;
-}
-
-[data-theme='dark'] .card-container>.ant-tabs-card .ant-tabs-content>.ant-tabs-tabpane {
-    background: #141414;
-}
-
-[data-theme='dark'] .card-container>.ant-tabs-card .ant-tabs-tab-active {
-    background: #141414;
-    border-color: #141414;
+.ant-tabs-tab-btn {
+    font-family: 'SpaceGrotesk-Regular', sans-serif !important;
+    font-weight: bold !important;
+    font-size: 18px !important;
+    line-height: 30px !important;
+    letter-spacing: 0.06em !important;
+    text-transform: uppercase;
+    color: var(--primary-color-career) !important;
 }
