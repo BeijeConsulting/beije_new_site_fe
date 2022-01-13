@@ -51,7 +51,7 @@ const GoToDetailRow = (props) => {
             ref={ref}
             className={`go-to-detail-row-container ${props.containerClassName}`}
         >
-            <Col xs={18} md={18}>
+            <Col xs={18} md={20}>
                 {
                     props.numCol === 1 &&
                     <Col
@@ -119,10 +119,10 @@ const GoToDetailRow = (props) => {
                                 {props.text3}
                             </Text>
                         </Col>
-                        <Col xs={0} md={2}></Col>
+                        <Col xs={0} md={1}></Col>
                         <Col
                             xs={24}
-                            md={4}
+                            md={5}
                             className={'go-to-detail-row-col'}
                         >
                             <Text className={props.textClassName}>
@@ -134,7 +134,7 @@ const GoToDetailRow = (props) => {
             </Col>
             <Col
                 xs={6}
-                md={6}
+                md={4}
                 className={`go-to-detail-row-col ${props.btnClassName}`}
             >
                 <CustomCard

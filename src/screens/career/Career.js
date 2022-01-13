@@ -9,7 +9,6 @@ import './Career.css'
 // import components
 // import CustomButton from "../../components/functional_components/Button/CustomButton";
 import GoToDetailRow from '../../components/functional_components/goToDetailRow/GoToDetailRow'
-import Item from "antd/lib/list/Item";
 // import OpenFilterBtn from "../../components/functional_components/openFilterBtn/OpenFilterBtn";
 
 const Career = (props) => {
