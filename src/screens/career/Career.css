@@ -70,3 +70,8 @@
     text-transform: uppercase;
     color: var(--primary-color-career) !important;
 }
+
+.card-container>.ant-tabs-card .ant-tabs-content {
+    height: 100%;
+    width: 100%;
+}

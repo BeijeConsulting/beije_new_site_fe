@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { Row, Col, Layout } from "antd";
+
+//import gsap
+import { gsap } from 'gsap'
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 //import style
 import './ThirdSection.css'
@@ -16,69 +20,81 @@ import ViewAllButton from "../../functional_components/viewAllButton/ViewAllButt
 
 const ThirdSection = () => {
 
-    // const [state, setState] = useState({
-    //     showDragBtn: true
-    // })
+    const [state, setState] = useState({
+        showDragBtn: true
+    })
 
     const { t } = useTranslation()
+    const ref = useRef(null);
 
-    const dragStartOwlCarousel = () => {
-        // console.log('drag start')
-
-        // setState({
-        //     ...state,
-        //     showDragBtn: false
-        // })
+    const draggedCarousel = () => {
+        setState({
+            ...state,
+            showDragBtn: false
+        })
     }
 
-    const dragEndOwlCarousel = () => {
-        // console.log('drag end');
+    //GSAP
+    gsap.registerPlugin(ScrollTrigger);
 
-        // setState({
-        //     ...state,
-        //     showDragBtn: false
-        // })
-    }
+    useEffect(() => {
+        const element = ref.current;
 
+        const singleEl = element.querySelectorAll('.single-el-gsap');
+
+        const t1 = gsap.timeline({
+            scrollTrigger: {
+                trigger: element,
+                start: 'top 75%',
+            }
+        })
+
+        // t1.from(percentage1SingleDesktop, { opacity: 0, stagger: 0.3, duration: 0.5, ease: 'power2.in' });
+        t1.from(singleEl, { y: 200, opacity: 0, stagger: 0.3, duration: 1.5, ease: 'power2.in' })
+
+    }, [])
 
     return (
-        <Layout className={'third-sec-container'}>
-            <Row className={'third-sec-row'}>
-                <Col xs={24} md={8} lg={7} className={'third-sec-col1'}>
-                    <CustomCard
-                        cardTitle={t('home.thirdSection.title')}
-                        titleClassName={'third-sec-title'}
-                        cardDescription={t('home.thirdSection.description')}
-                        descriptionClassName={'third-sec-description'}
-                    />
-                </Col>
-                <Col md={1} lg={1} />
-                <Col
-                    xs={24} md={15} lg={16}
-                    className={'third-sec-col2'}
-                // onDrag={dragStartOwlCarousel}
-                // onMouseLeave={dragEndOwlCarousel}
-                >
-                    {/* {state.showDragBtn && */}
-                    <CustomButton
-                        type='drag-more-btn'
-                        content={divideText(turnToUppercase(t('btn.drag')), '-BR-')}
-                    />
-                    {/* } */}
-                    <CustomOwlCarousel
-                        isDragging={dragStartOwlCarousel}
-                        stopDragging={dragEndOwlCarousel}
-                    />
-                </Col>
-            </Row>
-            <Row>
-                <Col xs={24} className={'third-sec-col3'}>
-                    <CustomButton
-                        type={'view-all-btn'}
-                        content={<ViewAllButton />}
-                    />
-                </Col>
-            </Row>
+        <Layout
+            className={'third-sec-container'}
+        >
+            <div
+                ref={ref}
+            >
+                <Row className={'third-sec-row'}>
+                    <Col xs={24} md={8} lg={7} className={'third-sec-col1'}>
+                        <CustomCard
+                            cardTitle={turnToUppercase(t('home.thirdSection.title'))}
+                            titleClassName={'third-sec-title single-el-gsap'}
+                            cardDescription={t('home.thirdSection.description')}
+                            descriptionClassName={'third-sec-description single-el-gsap'}
+                        />
+                    </Col>
+                    <Col md={1} lg={1} />
+                    <Col
+                        xs={24} md={15} lg={16}
+                        className={'third-sec-col2 single-el-gsap'}
+                    >
+                        {state.showDragBtn &&
+                            <CustomButton
+                                type='drag-more-btn'
+                                content={divideText(turnToUppercase(t('btn.drag')), '-BR-')}
+                            />
+                        }
+                        <CustomOwlCarousel
+                            dragged={draggedCarousel}
+                        />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col xs={24} className={'third-sec-col3 single-el-gsap'}>
+                        <CustomButton
+                            type={'view-all-btn'}
+                            content={<ViewAllButton />}
+                        />
+                    </Col>
+                </Row>
+            </div>
         </Layout>
     )
 }

@@ -46,20 +46,16 @@
   },
   "home": {
     "firstSection": {
-      "title": "[en] We help companies with digital transformation by building Value Teams"
+      "title": "We help companies to implement innovative projects through Valuable Teams"
     },
     "secondSection": {
-      "title_value": "[en] VALUE",
-      "title_history": "[en] HISTORY",
-      "title_mission": "[en] MISSION",
-      "title_vision": "[en] VISION",
-      "paragraph_value": "[en] Crediamo in quello che facciamo e abbiamo un profondo RISPETTO per gli altri -Mostriamo GRATITUDINE, l’impegno che ogni giorno mettiamo nel nostro lavoro -Prima viene la squadra e poi l’individuo, il nostro è un lavoro di TEAM -La base per costruire la nostra community è sviluppare un SENSO DI APPARTENENZA. ",
-      "paragraph_history": "[en] Da un ideale ad un business: da più di 10 anni ci impegniamo costantemente per aggiornare il nostro know-how e siamo in grado di fornire le metodologie più moderne e le tecnologie più innovative per la realizzazione di progetti altamente specializzati. Al centro del modello Beije c’è una vision people first: le persone al centro per la creazione di un’azienda di valore. ",
-      "paragraph_mission": "[en] Aiutiamo le aziende a realizzare progetti innovativi attraverso Team di Valore",
-      "paragraph_vision": "[en] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec arcu felis, tristique ut ex consequat, volutpat maximus ipsum."
+      "title_value": "VALUES",
+      "title_history": "HISTORY",
+      "title_mission": "MISSION",
+      "title_vision": "VISION"
     },
     "thirdSection": {
-      "title": "[en] WHO WE ARE",
+      "title": "Who we are?",
       "description": "[en] English lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
     "fourthSection": {
@@ -79,24 +75,30 @@
     }
   },
   "Consulting": {
-    "intro": "[en] Aiutiamo le aziende a sviluppare progetti per la digital transformation, costruendo team di valore",
-    "description": "[en] Abbiamo sempre pensato che le persone vengano prima di tutto e che il team sia più importante dell’individuo. Per questo, giorno dopo giorno, costruiamo una community che riesca a fornire ai nostri clienti le persone giuste al momento giusto. Persone capaci, professionali e che abbiano le skills che più si adattano ai nostri progetti.",
+    "intro": "we help companies build qualified Teams through highly trained figures to provide specialized IT consulting services.",
+    "description": {
+      "part1": "Quality  ",
+      "part2": " and ",
+      "part3": " best efficiency ",
+      "part4": "come together for the construction of innovative projects."
+    },
     "title_carousel_client": "[en] Client satisfaction",
     "paragraph1_carousel_client": "[en] Reputa che Beije Consulting sia un’azienda affidabile",
     "paragraph2_carousel_client": "[en] Pensa che i nostri consulenti dispongano di una preparazione tecnica adeguata e in linea con la loro seniority",
     "paragraph3_carousel_client": "[en] Raccomanderebbe la società Beije Consulting ai propri partners",
     "data_survey": "[en] Dati survery 2019",
-    "title_add_info": "[en] Richiedi maggiori informazioni",
+    "title_add_info": "Ask for more information",
     "description_add_info": "[en] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan lacus quis nibh porta, eget porttitor neque feugiat."
   },
   "Academy": {
-    "intro": "[en] Formarsi per costruire il proprio futuro",
-    "page_description": "[en] Beije Academy offre percorsi formativi teorico-pratici specializzati per farti diventare uno Sviluppatore Junior.",
+    "title": "Talent Academy",
+    "intro": "Be the next  Software Ninjaneer!",
+    "page_description": "Our Talent Academies are theoretical-practical training courses to become a Software Developer. The Frontend and Backend Master Trainers, Roberto Brogi and Ivo Mosca will teach you through lectures, exercises, assessments and real projects. The courses last 3 months, they are paid courses and have the aim of entering the company with a permanent contract.",
     "our_courses_title": "[en] Our courses",
     "title_academy_java": "[en] Academy Java",
     "title_academy_frontend": "[en] Academy web develop - front end",
-    "course_description": "[en] I corsi hanno una durata di 3 mesi, sono retribuiti e hanno come scopo l’inserimento in azienda con contratto a tempo indeterminato. Il nostro docente ti accompagnerà durante tutto il percorso, attraverso lezioni frontali, esercitazioni, valutazioni e progetti reali.",
-    "send_to_youtube": "[en] Guarda le pillole dei nostri docenti sul canale Youtube di Beije",
+    "course_description": "Your future starts… with Beije!",
+    "send_to_youtube": "Come find us on Youtube: you will find the digital pills of our Frontend / Backend experts, the Webinars and much more… We are waiting for you!",
     "next_courses_title": "[en] Next courses",
     "next_course_1": "[en] Stage java",
     "date_next_course_1": "[en] Gen. – Apr. 2021",
@@ -104,7 +106,7 @@
     "date_next_course_2": "[en] Gen. – Apr. 2021",
     "percentage_client_satisfaction_title": "[en] Client satisfaction",
     "comments_title": "[en] Dicono di noi",
-    "form_message_title": "[en] Richiedi maggiori informazioni",
+    "form_message_title": "Ask for more information",
     "form_message_desc": "[en] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan lacus quis nibh porta, eget porttitor neque feugiat."
   },
   "AcademyDedails": {
@@ -223,5 +225,46 @@
         "subsection3": "Games"
       }
     }
+  },
+  "WhoWeAre": {
+    "title": "Who we are",
+    "value_title": "Values",
+    "value_list": {
+      "el1": "We believe in what we do and have a deep RESPECT for the others",
+      "el2": "We show GRATITUDE for the commitment we put into our work every day",
+      "el3": "First comes the team and then the individual, ours is a TEAM work",
+      "el4": "The basis for building our community is developing a SENSE OF BELONGING"
+    },
+    "history_title": "History",
+    "history_desc": {
+      "part1": "At the heart of the Beije model is a  ",
+      "part2": "people first ",
+      "part3": "vision: people at the center for  a valuable company. From an ideal to a business: for more than 10 years we are constantly committed to update our know-how and we are able to provide the most advanced methodologies and the most innovative technologies for the realization of highly specialized projects."
+    },
+    "vision_title": "Vision",
+    "vision_desc": {
+      "part1": "",
+      "part2": "People ",
+      "part3": "at the heart of our ",
+      "part4": "future",
+      "part5": "."
+    },
+    "mission_title": "Mission",
+    "mission_desc": {
+      "part1": "We help companies to implement innovative projects through ",
+      "part2": "Valuable ",
+      "part3": "Teams."
+    }
+  },
+  "Up": {
+    "title": "Up",
+    "intro": "Our Software Factory",
+    "desc1": "We work with our customers to offer design, implementation, delivery, integration and application maintenance services for software systems. We support and implement projects starting from frontend / backend technical analysis, mockup creation to software implementation through the innovative technologies available on the market.",
+    "desc2": "Through the Agile method, verification and update steps of the product are defined already during development, with frequent releases of versions that can be tested by the customer, in order to optimize improvements or any changes on the agreed activities. From the analysis of the project to the drafting of the documentation up to the implementation: we follow you in every phase.",
+    "paragraph": "the technologies used are Java and .Net for the Backend and Javascript and the main frameworks for the Frontend (React, Angular and Vue). For the infrastructure, we usually base cloud projects on Amazon Web Services.",
+    "comments_title": "Say about us",
+    "case_studies_title": "Case studies",
+    "form_message_title": "Ask for more information",
+    "form_message_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan lacus quis nibh porta, eget porttitor neque feugiat."
   }
 }

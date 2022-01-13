@@ -2,8 +2,8 @@
     --bg-color-primary-consulting: var(--third-color);
     --bg-color-secondary-consulting: var(--fourth-color);
 
-    --consulting-bg1: url('../../assets/images/consulting/consulting1.svg');
-    --consulting-bg2: url('../../assets/images/consulting/consulting2.svg');
+    --consulting-bg1: url('../../assets/images/consulting/consulting1.jpg');
+    --consulting-bg2: url('../../assets/images/consulting/consulting2.jpg');
 }
 
 .consulting-container {

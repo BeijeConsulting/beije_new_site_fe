@@ -11,37 +11,37 @@
 
 
 /* Program section */
-.aDeteils-program-section {
+.aDetails-program-section {
     padding: 20px;
 }
 
 /* structure */
-.aDeteils-program-section-structure-rows {
+.aDetails-program-section-structure-rows {
     margin: 30px 0;
 }
 
-.aDeteils-program-section-structure-arrow-ul {
+.aDetails-program-section-structure-arrow-ul {
     font-weight: bold !important;
     font-size: 25px !important;
 }
 
-.aDeteils-program-section-structure-row-title {
+.aDetails-program-section-structure-row-title {
     font-size: 20px !important;
     font-weight: bold;
 }
 
-.aDeteils-program-section-structure-text {
+.aDetails-program-section-structure-text {
     line-height: 39px !important;
 }
 
 /* program */
-.aDeteils-program-section-program-panel {
+.aDetails-program-section-program-panel {
     border-top: 1px solid var(--text-line-primary-color-aDeteils);
     min-height: 70px;
     padding: 20px 0;
 }
 
-.aDeteils-program-section-program-panel .ant-collapse-header {
+.aDetails-program-section-program-panel .ant-collapse-header {
     font-family: 'Moderat-Regular', sans-serif !important;
     font-style: normal !important;
     font-weight: bold !important;
@@ -50,7 +50,7 @@
     letter-spacing: 0.06em !important;
 }
 
-.aDeteils-program-section-program-panel .ant-collapse-content {
+.aDetails-program-section-program-panel .ant-collapse-content {
     font-family: 'Moderat-Regular', sans-serif !important;
     font-style: normal !important;
     font-weight: normal !important;

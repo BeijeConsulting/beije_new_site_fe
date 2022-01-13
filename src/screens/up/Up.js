@@ -1,7 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Row, Col, Carousel } from 'antd'
+
+//import gsap
+import { gsap } from 'gsap'
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 // import redux
 import { connect } from "react-redux";
@@ -12,7 +16,7 @@ import { setColor } from '../../redux/ducks/colorDuck'
 import { turnToUppercase } from "../../utils/utilities";
 
 // import constants
-import { academy_comments, up_case_studies } from "../../utils/properties";
+import { up_comments, up_case_studies } from "../../utils/properties";
 
 // import style
 import './Up.css'
@@ -25,7 +29,7 @@ import Comments from "../../components/functional_components/comments/Comments";
 import CustomOwlCarousel from "../../components/hooks_components/customOwlCarousel/CustomOwlCarousel";
 import CustomButton from "../../components/functional_components/Button/CustomButton";
 import ViewAllButton from "../../components/functional_components/viewAllButton/ViewAllButton";
-import CustomForm from "../../components/hooks_components/customForm/CustomForm";
+import SectionForm from "../../components/functional_components/sectionForm/SectionForm";
 
 const Up = (props) => {
 
@@ -33,9 +37,61 @@ const Up = (props) => {
 
     const { t } = useTranslation()
 
+    const ref = useRef(null);
+
+    //GSAP
+    gsap.registerPlugin(ScrollTrigger);
+
+
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
         props.dispatch(setColor(true))
+
+        const element = ref.current;
+
+        const desc3Container = element.querySelector('.up-intro-sec-desc3-row-gsap');
+        const desc3 = element.querySelector('.up-intro-sec-desc3-gsap')
+
+        const commentsSection = element.querySelector('.up-comments-gsap');
+        const commentsSecTitle = element.querySelector('.up-comments-title-gsap');
+
+        const caseStudiesSec = element.querySelector('.up-case-studies-gsap');
+        const caseStudiesTitle = element.querySelector('.up-case-studies-title-gsap');
+        const caseStudiesCarousel = element.querySelector('.up-case-studies-carousel-gsap');
+        const caseStudiesSingleCard = element.querySelectorAll('.up-case-studies-single-card-gsap');
+        const caseStudiesBtn = element.querySelector('.up-case-studies-view-all-gsap');
+
+        const t1 = gsap.timeline({
+            scrollTrigger: {
+                trigger: desc3Container,
+                start: 'top 75%',
+            }
+        })
+
+        const t2 = gsap.timeline({
+            scrollTrigger: {
+                trigger: commentsSection,
+                start: 'top 75%',
+            }
+        })
+
+        const t3 = gsap.timeline({
+            scrollTrigger: {
+                trigger: caseStudiesSec,
+                start: 'top 75%',
+            }
+        })
+
+        t1.from(desc3, { y: 200, opacity: 0, duration: 0.5, ease: 'baunce.in' })
+
+        t2.from(commentsSecTitle, { y: 200, opacity: 0, duration: 0.5, ease: 'baunce.in' })
+
+        t3.from(caseStudiesTitle, { y: 200, opacity: 0, duration: 0.5, ease: 'baunce.in' })
+        t3.from(caseStudiesSingleCard, { opacity: 0, stagger: 0.3, duration: 0.5, ease: 'power2.in' })
+        t3.from(caseStudiesCarousel, { opacity: 0, duration: 0.5, ease: 'power2.in' })
+        t3.from(caseStudiesBtn, { opacity: 0, duration: 0.5, ease: 'power2.in' })
+
+
         return () => window.removeEventListener("scroll", handleScroll);
     });
 
@@ -53,8 +109,7 @@ const Up = (props) => {
                 commentsText={item.commentsText}
                 name={item.name}
                 surname={item.surname}
-                imgAlt={item.name}  // *alt*
-                imgSrc={item.imgSrc}
+                profilePictureImg={item.profilePictureImg}
                 imgClassName={item.imgClassName}
             />
         )
@@ -77,6 +132,7 @@ const Up = (props) => {
                 key={key}
                 xs={0}
                 md={8}
+                className="up-case-studies-single-card-gsap"
             >
                 <CustomCard
                     cardClassName={item.containerClassName}
@@ -88,37 +144,40 @@ const Up = (props) => {
     }
 
     return (
-        <div className='up-container'>
+        <div
+            className='up-container'
+            ref={ref}
+        >
             <section>
                 <IntroductiveSection
-                    titleInColumn={'Up'}
+                    titleInColumn={t('Up.title')}
                     titleLight={true}
                     bg1='up-bg1'
                     bg2='up-bg2'
-                    intro={'La nostra Software Factory'}
+                    intro={t('Up.intro')}
                     introLight={true}
-                    desc1={'Con dedizione e professionalità lavoriamo al fianco dei nostri clienti per fornire servizi di progettazione, implementazione, delivery, integration e application maintenance di sistemi software. Diamo supporto e realizziamo progetti partendo dall’analisi tecnica frontend/backend, realizzazione mockup all’implementazione del software attraverso le tecnologie innovative presenti sul mercato.'}
+                    desc1={t('Up.desc1')}
                     desc1Light={true}
-                    desc2={'Attraverso metodologia Agile, verranno definiti step di verifica e di aggiornamento del prodotto già durante lo sviluppo, con frequenti rilasci di versioni testabili dal cliente, in modo da ottimizzare puntualmente miglioramenti o eventuali modifiche sulle attività concordate. Dall’analisi del progetto alla stesura della documentazione fino all’implementazione: vi seguiamo in ogni fase'}
+                    desc2={t('Up.desc2')}
                     desc2Light={true}
                 />
 
-                <Row>
+                <Row className="up-intro-sec-desc3-row-gsap">
                     <CustomCard
-                        cardParagraph={'le tecnologie utilizzate vanno dall’ecosistema Java a quello .Net per il Backend, mentre Javascript e i principali framework per il frontend (React, Angular e Vue). Per l’infrastruttura basiamo abitualmente i progetti in cloud su servizi Amazon Web Services.'}
-                        paragraphClassName={'up-intro-section-paragraph txt-light'}
+                        cardParagraph={t('Up.paragraph')}
+                        paragraphClassName={'up-intro-section-paragraph txt-light up-intro-sec-desc3-gsap'}
                     />
                 </Row>
             </section>
 
-            <section>
+            <section className="up-comments-gsap">
                 <Row>
                     <Col
                         xs={24}
-                        className="up-comments-title-container"
+                        className="up-comments-title-container up-comments-title-gsap"
                     >
                         <SectionSubtitle
-                            title={turnToUppercase(t('Academy.comments_title'))}
+                            title={turnToUppercase(t('Up.comments_title'))}
                             shortLineBelow
                             classNameTitle={'up-comments-title'}
                             classNameShortLine={'up-short-line'}
@@ -133,26 +192,31 @@ const Up = (props) => {
                             dots={false}
                             className="academy-comments-carousel-ant"
                         >
-                            {academy_comments.map(printComments)}
+                            {up_comments.map(printComments)}
                         </Carousel>
                     </Col>
                     <Col
                         xs={0}
                         lg={12}
                     >
-                        <Comments />
+                        <Comments
+                            profilePictureImg={'up-comments-profile-picture1'}
+                        />
                     </Col>
                     <Col
                         xs={0}
                         lg={12}
+
                         className={'academy-comments-section-second-comment-col'}
                     >
-                        <Comments />
+                        <Comments
+                            profilePictureImg={'up-comments-profile-picture2'}
+                        />
                     </Col>
                 </Row>
             </section>
 
-            <section className="up-case-studies-section">
+            <section className="up-case-studies-section up-case-studies-gsap">
                 <Row>
                     <Col
                         xs={24}
@@ -160,20 +224,26 @@ const Up = (props) => {
                         <SectionSubtitle
                             styleContainer={{ marginBottom: '10px' }}
                             LongLineAbove
-                            classNameTitle={'up-case-studies-title'}
-                            title={turnToUppercase('case studies')}
+                            classNameTitle={'up-case-studies-title up-case-studies-title-gsap'}
+                            title={turnToUppercase(t('Up.case_studies_title'))}
                             classNameLongLine={'up-long-line'}
                         />
                     </Col>
                     <Col
                         xs={24}
                         md={0}
+                        className="up-case-studies-carousel-gsap"
                     >
                         <CustomOwlCarousel
                             objCarousel={false}
-                            marginMobile={25}
-                            numItemMobile={1.3}
-                            numItemMore320Less768={1.3}
+                            item_bigMobile={1}
+                            item_mobile={1}
+                            item_smallmobile={1}
+                            item_extraSmallMobile={1}
+                            // showArrows={true}
+                            infinite={true}
+                            autoPlay={true}
+                            autoPlaySpeed={3000}
                         >
                             {up_case_studies.map(printCaseStudies)}
                         </CustomOwlCarousel>
@@ -182,7 +252,7 @@ const Up = (props) => {
                     <Row className={'up-case-studies-desktop'}>
                         {up_case_studies.map(printCaseStudiesDesktop)}
                     </Row>
-                    <Row className="up-case-studies-btn-container">
+                    <Row className="up-case-studies-btn-container up-case-studies-view-all-gsap">
                         <CustomButton
                             type={'view-all-btn-light'}
                             content={<ViewAllButton
@@ -194,38 +264,15 @@ const Up = (props) => {
             </section>
 
             <section className={'academy-form-section consulting-gsap-sixth-section'}>
-                <Row>
-                    <Col
-                        xs={24}
-                    >
-                        <SectionSubtitle
-                            styleContainer={{ marginBottom: '10px' }}
-                            classNameLongLine={'up-long-line'}
-                            LongLineAbove
-                            classNameTitle={'up-form-title'}
-                            title={turnToUppercase(t('Academy.form_message_title'))}
-                        />
-                    </Col>
-                    <Col
-                        xs={24}
-                        md={6}
-                    >
-                        <CustomCard
-                            cardParagraph={t(`Academy.form_message_desc`)}
-                            paragraphClassName={'up-form-desc'}
-                        />
-                    </Col>
-                    <Col xs={0} md={4}></Col>
-                    <Col xs={24} md={14}>
-                        <CustomForm
-                            moreInfo={false}
-                            agreement={false}
-                            positionBtn={'flex-end'}
-                            classNameTextArea={'up-form-text-area'}
-                            typeBtn='form-btn-light'
-                        />
-                    </Col>
-                </Row>
+                <SectionForm
+                    classNameLongLine={'up-long-line'}
+                    classNameTitle={'up-form-title'}
+                    title={turnToUppercase(t('Up.form_message_title'))}
+                    cardParagraph={t(`Up.form_message_desc`)}
+                    paragraphClassName={'up-form-desc'}
+                    classNameTextArea={'up-form-text-area'}
+                    typeBtn='form-btn-light'
+                />
             </section>
 
         </div >

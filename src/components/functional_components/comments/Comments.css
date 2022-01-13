@@ -1,3 +1,7 @@
+:root {
+    --default-comments-profile-picture: url('../../../assets/images/comments/img_comments.jpg');
+}
+
 .comments-container {
     position: relative;
     height: 345px;
@@ -18,8 +22,31 @@
     left: 20px;
     width: 80px;
     height: 80px;
-    background-color: turquoise;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 100%;
+}
+
+.comments-profile-picture-img {
+    background-image: var(--default-comments-profile-picture);
+}
+
+.commets-text-container {
+    height: 70%;
+    overflow-y: scroll;
+}
+
+.commets-text-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.commets-text-container {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }
 
 .comments-text {
@@ -37,7 +64,7 @@
 @media screen and (min-width: 768px) {
     .comments-container {
         height: 308px;
-        padding: 93px 40px 40px 40px;
+        padding: 93px 40px 30px 40px;
     }
 
     .comments-profile-picture {
@@ -58,5 +85,9 @@
         height: 130px;
         top: 50px;
         left: -55px;
+    }
+
+    .commets-text-container {
+        height: 60%;
     }
 }

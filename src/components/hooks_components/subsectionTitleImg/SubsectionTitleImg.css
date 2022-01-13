@@ -28,6 +28,11 @@
     display: block;
 }
 
+.sub-section-list {
+    list-style-type: none;
+    padding: 0px !important;
+}
+
 @media screen and (min-width: 768px) {
 
     .sub-section-desc-desktop-container {

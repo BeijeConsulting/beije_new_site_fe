@@ -1,8 +1,11 @@
 :root {
     --primary-bg-color-up: var(--second-color);
-    --up-bg1: url('../../assets/images/up/up1.svg');
-    --up-bg2: url('../../assets/images/up/up2.svg');
-    --up-case-studies: url('../../assets/images/up/upCaseStudies.svg')
+    --up-bg1: url('../../assets/images/up/up1.jpg');
+    --up-bg2: url('../../assets/images/up/up2.jpg');
+    --up-case-studies: url('../../assets/images/up/upCaseStudies.svg');
+
+    --up-comments-profile-picture1: url('../../assets/images/comments/img_comments.jpg');
+    --up-comments-profile-picture2: url('../../assets/images/comments/img_comments.jpg');
 }
 
 .up-container {
@@ -29,6 +32,14 @@
 
 .up-comments-title {
     color: #fff !important;
+}
+
+.up-comments-profile-picture1 {
+    background-image: var(--up-comments-profile-picture1);
+}
+
+.up-comments-profile-picture2 {
+    background-image: var(--up-comments-profile-picture2);
 }
 
 .up-short-line {

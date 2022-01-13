@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Row, Col, Typography } from "antd";
 const { Title, Paragraph } = Typography
+
+//import gsap
+import { gsap } from 'gsap'
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 // import style
 import './IntroductiveSection.css'
@@ -13,8 +17,80 @@ import GoBackBtn from "../goBackBtn/GoBackBtn";
 
 
 const IntroductiveSection = (props) => {
-
     const { t } = useTranslation()
+    const ref = useRef(null)
+
+    //GSAP
+    gsap.registerPlugin(ScrollTrigger);
+
+    useEffect(() => {
+        const element = ref.current;
+
+        const titleOutRow = element.querySelector('.intro-sec-row-title-out-gsap');
+        const titleOut = element.querySelector('.intro-sec-title-out-gsap');
+
+        const firstRow = element.querySelector('.intro-sec-row1-gsap');
+        const firstRowTitle = element.querySelector('.intro-sec-gsap-title');
+        const firstRowIntro = element.querySelector('.intro-sec-gsap-intro');
+        const firstRowImg1 = element.querySelector('.intro-sec-gsap-img1')
+        const firstRowDesc1Desktop = element.querySelector('.intro-sec-gsap-desc1-desktop')
+        const firstRowDescMobile = element.querySelector('.intro-sec-gsap-desc-mobile')
+        const firstRowListDesktop = element.querySelector('.intro-sec-gsap-list-desktop')
+        const firstRowListMobile = element.querySelector('.intro-sec-gsap-list-mobile')
+
+
+        const secondRow = element.querySelector('.into-sec-row2-gsap');
+        const imgRow2 = element.querySelector('.into-sec-row2-img-gsap');
+        const descDesktopRow2 = element.querySelector('.into-sec-row2-desc-desktop-gsap');
+        const descMobileRow2 = element.querySelector('.into-sec-row2-desc-mobile-gsap');
+
+        const t1 = gsap.timeline({
+            scrollTrigger: {
+                trigger: titleOutRow,
+                start: 'top 75%'
+            }
+        })
+
+        const t2 = gsap.timeline({
+            scrollTrigger: {
+                trigger: firstRow,
+                start: 'top 75%'
+            }
+        })
+
+        const t2_2 = gsap.timeline({
+            scrollTrigger: {
+                trigger: firstRow,
+                start: 'top 75%'
+            }
+        })
+
+        const t3 = gsap.timeline({
+            scrollTrigger: {
+                trigger: secondRow,
+                // markers: true,
+                // scrub: true,
+                // toggleActions: "restart none restart none",
+                start: 'top 75%'
+            }
+        })
+
+        t1.from(titleOut, { y: 500, opacity: 0, duration: 1, ease: 'back' })
+
+        t2.from(firstRowTitle, { y: 200, opacity: 0, duration: 1, ease: 'back' })
+        t2.from(firstRowIntro, { y: 200, opacity: 0, duration: 0.5, ease: 'baunce.in' })
+        t2.from(firstRowDesc1Desktop, { y: 200, opacity: 0, duration: 0.5, ease: 'baunce.in' })
+        t2.from(firstRowListDesktop, { y: 200, opacity: 0, duration: 0.5, ease: 'baunce.in' })
+        t2.from(firstRowDescMobile, { y: 200, opacity: 0, duration: 0.5, ease: 'baunce.in' })
+        t2.from(firstRowListMobile, { y: 200, opacity: 0, duration: 0.5, ease: 'baunce.in' })
+        t2_2.from(firstRowImg1, { opacity: 0, duration: 1.5, ease: 'power2.in' })
+
+
+        t3.from(imgRow2, { opacity: 0, duration: 1.5, ease: 'power2.in' })
+        t3.from(descDesktopRow2, { y: 200, opacity: 0, duration: 0.5, ease: 'baunce.in' })
+        t3.from(descMobileRow2, { y: 200, opacity: 0, duration: 0.5, ease: 'baunce.in' })
+    }, [])
+
 
     const switchClassImg1 = () => {
         let resultClass = `intro-section-single-img-container intro-section-img1-container intro-sec-gsap-img1 ${props.bg1}`
@@ -37,8 +113,14 @@ const IntroductiveSection = (props) => {
         )
     }
 
+
+
     return (
-        <div className={props.classNameContainer}>
+        <div
+            className={props.classNameContainer}
+            ref={ref}
+        >
+            {/* go back button */}
             {
                 props.btnGoBack &&
                 <Row className="intro-sec-go-back-btn-container">
@@ -54,15 +136,18 @@ const IntroductiveSection = (props) => {
             }
             {
                 props.titleOutColumn &&
-                <Row>
+                <Row className="intro-sec-row-title-out-gsap">
                     <Title
                         level={1}
+                        className="intro-sec-title-out-gsap"
                     >
                         {props.titleOutColumn}
                     </Title>
                 </Row>
             }
-            <Row className="intro-section-first-row">
+
+            {/* Start of firt row */}
+            <Row className="intro-section-first-row  intro-sec-row1-gsap">
                 <Col
                     xs={24}
                     md={12}
@@ -97,7 +182,7 @@ const IntroductiveSection = (props) => {
                     {
                         props.listDesktop && props.listToPrint !== undefined &&
                         <Row className={'intro-section-desc1-container intro-section-desc-container'}>
-                            <ul className="intro-section-list">
+                            <ul className="intro-section-list intro-sec-gsap-list-desktop">
                                 {props.listToPrint.map(printList)}
                             </ul>
 
@@ -127,7 +212,7 @@ const IntroductiveSection = (props) => {
                         xs={24}
                         md={0}
                     >
-                        <ul>
+                        <ul className="intro-sec-gsap-list-mobile">
                             {props.listToPrint.map(printList)}
                         </ul>
                     </Col>
@@ -160,11 +245,14 @@ const IntroductiveSection = (props) => {
 
                 }
             </Row >
+
+
+            {/* Start of second row */}
             {
                 props.secondRow &&
-                <Row>
+                <Row className="into-sec-row2-gsap">
                     <div
-                        className={`intro-section-img-container intro-section-img2-container ${props.bg2}`}
+                        className={`intro-section-img-container intro-section-img2-container ${props.bg2} into-sec-row2-img-gsap`}
                     >
                     </div>
                     {
@@ -175,7 +263,7 @@ const IntroductiveSection = (props) => {
                             className="intro-section-desc-container"
                         >
                             <Paragraph
-                                className={`intro-section-desc ${props.desc2Light ? 'txt-light' : ''}`}
+                                className={`intro-section-desc ${props.desc2Light ? 'txt-light' : ''} into-sec-row2-desc-mobile-gsap`}
                             >
                                 {props.desc2}
                             </Paragraph>
@@ -189,7 +277,7 @@ const IntroductiveSection = (props) => {
                             className="intro-section-desc-container"
                         >
                             <Paragraph
-                                className={`intro-section-desc ${props.desc2Light ? 'txt-light' : ''}`}
+                                className={`intro-section-desc ${props.desc2Light ? 'txt-light' : ''} into-sec-row2-desc-desktop-gsap`}
                             >
                                 {props.desc2}
                             </Paragraph>

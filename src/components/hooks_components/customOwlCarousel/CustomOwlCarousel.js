@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 
 import { get } from "lodash";
 
-import OwlCarousel from 'react-owl-carousel';
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
+// multi carousell library
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 import { Typography } from "antd";
 const { Text } = Typography
@@ -26,6 +26,7 @@ const CustomOwlCarousel = (props) => {
 
     useEffect(() => {
         window.addEventListener("resize", updateMedia);
+
         return () => window.removeEventListener("resize", updateMedia);
     });
 
@@ -36,30 +37,37 @@ const CustomOwlCarousel = (props) => {
         });
     };
 
-    const switchMrgin = () => {
-        let marginEl = 20
-        let dimensionDevice = state.dimensionDevice
-        if (dimensionDevice < 768) {
-            marginEl = props.marginMobile
+    const responsive = {
+        superLargeDesktop: {
+            // the naming can be any, depends on you.
+            breakpoint: { max: 4000, min: 1441 },
+            items: props.item_superLargeDesktop
+        },
+        desktop: {
+            breakpoint: { max: 1440, min: 1025 },
+            items: props.item_desktop
+        },
+        tablet: {
+            breakpoint: { max: 1024, min: 769 },
+            items: props.item_tablet
+        },
+        bigMobile: {
+            breakpoint: { max: 768, min: 501 },
+            items: props.item_bigMobile
+        },
+        mobile: {
+            breakpoint: { max: 500, min: 401 },
+            items: props.item_mobile
+        },
+        smallmobile: {
+            breakpoint: { max: 400, min: 361 },
+            items: props.item_smallmobile
+        },
+        extraSmallMobile: {
+            breakpoint: { max: 360, min: 0 },
+            items: props.item_extraSmallMobile
         }
-        return marginEl
-    }
-
-    const switchNumItems = () => {
-        let numItem = props.numItemDefault
-        let dimensionDevice = state.dimensionDevice
-
-        if (dimensionDevice <= 320) {
-            numItem = props.numItemMobile
-        }
-        else if (dimensionDevice > 320 && dimensionDevice < 768) {
-            numItem = props.numItemMore320Less768
-        }
-        else if (dimensionDevice >= 768 && dimensionDevice < 1024) {
-            numItem = props.numItemMore768
-        }
-        return numItem
-    }
+    };
 
     const printItems = (item, key) => {
         return (
@@ -94,19 +102,16 @@ const CustomOwlCarousel = (props) => {
     }
 
     return (
-
-        < OwlCarousel
-            loop={props.loop}
-            margin={switchMrgin()}
-            mergeFit={props.mergeFit}
-            items={switchNumItems()}
-            dots={props.dots}
-            className={`owl-theme owl-drag owl-grab owl-stage  ${props.classNameContainer}`
-            }
-            mouseDrag={true}
-            autoplay
-            onDrag={props.isDragging}
-            onDragged={props.stopDragging}
+        <Carousel
+            responsive={responsive}
+            draggable={props.draggable}
+            showDots={props.showDots}
+            arrows={props.showArrows}
+            keyBoardControl={props.keyBoardControl}
+            infinite={props.infinite}
+            autoPlay={props.autoPlay}
+            autoPlaySpeed={props.autoPlaySpeed}
+            afterChange={props.dragged}
         >
             {
                 props.objCarousel &&
@@ -116,7 +121,8 @@ const CustomOwlCarousel = (props) => {
                 !props.objCarousel &&
                 props.children
             }
-        </OwlCarousel >
+
+        </Carousel>
     )
 
 }
@@ -128,12 +134,21 @@ CustomOwlCarousel.defaultProps = {
     itemsCarousel: carouselProfile,
     dots: false,
     roleDiv: 'img',
-    marginMobile: 0,
-    numItemMobile: 1.5,
-    numItemMore320Less768: 2.2,
-    numItemMore768: 3,
-    numItemDefault: 4,
-    objCarousel: true
+
+    draggable: true,
+    showDots: false,
+    showArrows: false,
+    keyBoardControl: false,
+    infinite: true,
+    item_superLargeDesktop: 4,
+    item_desktop: 4,
+    item_tablet: 4,
+    item_bigMobile: 3,
+    item_mobile: 3,
+    item_smallmobile: 2,
+    item_extraSmallMobile: 2,
+    objCarousel: true,
+    autoPlay: false
 }
 
 export default CustomOwlCarousel

@@ -45,7 +45,50 @@ const AcademyDetails = (props) => {
 
     useEffect(() => {
 
+        const element = ref.current;
 
+        const structureCol = element.querySelector('.aDetals-structure-container-gsap');
+        const structureColTitle = element.querySelector('.aDetals-structure-title-gsap');
+        const sctructureColEl = element.querySelectorAll('.aDetals-structure-el-gsap')
+
+        const programCol = element.querySelector('.aDetals-program-container-gsap');
+        const programColTitle = element.querySelector('.aDetals-program-title-gsap');
+        const programColEl = element.querySelectorAll('.aDetals-program-el-gsap')
+
+        const t1 = gsap.timeline({
+            scrollTrigger: {
+                trigger: structureCol,
+                start: 'top 75%'
+            }
+        })
+
+        const t2 = gsap.timeline({
+            scrollTrigger: {
+                trigger: structureCol,
+                start: 'top 75%'
+            }
+        })
+
+        const t3 = gsap.timeline({
+            scrollTrigger: {
+                trigger: programCol,
+                start: 'top 75%'
+            }
+        })
+
+        const t4 = gsap.timeline({
+            scrollTrigger: {
+                trigger: programCol,
+                start: 'top 75%'
+            }
+        })
+
+
+        t1.from(structureColTitle, { y: 200, opacity: 0, stragger: 0.3, duration: 1, ease: 'back' });
+        t2.from(sctructureColEl, { opacity: 0, stagger: 0.3, duration: 0.5, ease: 'power2.in' })
+
+        t3.from(programColTitle, { y: 200, opacity: 0, stragger: 0.3, duration: 1, ease: 'back' })
+        t4.from(programColEl, { opacity: 0, stagger: 0.3, duration: 0.5, ease: 'power2.in' })
     })
 
     const changeIcon = (panelProps) => {
@@ -78,7 +121,7 @@ const AcademyDetails = (props) => {
             <Panel
                 key={key}
                 header={t(el.title_subject)}
-                className={'aDeteils-program-section-program-panel'}
+                className={'aDetails-program-section-program-panel'}
             >
                 <CustomList
                     size="large"
@@ -120,76 +163,86 @@ const AcademyDetails = (props) => {
                 />
             </section>
 
-            <section className={'aDeteils-program-section'}>
+            <section className={'aDetails-program-section'}>
                 <Row>
-                    <Col xs={24} md={8} lg={6}>
-                        <Row>
+                    <Col
+                        xs={24}
+                        md={8}
+                        lg={6}
+                        className={'aDetals-structure-container-gsap'}
+                    >
+                        <Row className="aDetals-structure-title-gsap">
                             <CustomCard
                                 titleLevel={2}
                                 cardTitle={t('AcademyDedails.structure')}
                             />
                         </Row>
-                        <Row className={'aDeteils-program-section-structure-rows'}>
+                        <Row className={'aDetails-program-section-structure-rows aDetals-structure-el-gsap'}>
                             <Col xs={4}>
                                 <ArrowRightOutlined
-                                    className='aDeteils-program-section-structure-arrow-ul'
+                                    className='aDetails-program-section-structure-arrow-ul'
                                 />
                             </Col>
                             <Col xs={20}>
                                 <CustomCard
                                     cardParagraph={turnToUppercase(t('AcademyDedails.stage'))}
-                                    paragraphClassName={'aDeteils-program-section-structure-row-title'}
+                                    paragraphClassName={'aDetails-program-section-structure-row-title'}
                                 />
                                 <CustomCard
                                     cardParagraph={props.stageDescription}
-                                    paragraphClassName={'aDeteils-program-section-structure-text'}
+                                    paragraphClassName={'aDetails-program-section-structure-text'}
                                 />
                             </Col>
                         </Row>
-                        <Row className={'aDeteils-program-section-structure-rows'}>
+                        <Row className={'aDetails-program-section-structure-rows aDetals-structure-el-gsap'}>
                             <Col xs={4}>
                                 <ArrowRightOutlined
-                                    className='aDeteils-program-section-structure-arrow-ul'
+                                    className='aDetails-program-section-structure-arrow-ul'
                                 />
                             </Col>
                             <Col xs={20}>
                                 <CustomCard
                                     cardParagraph={turnToUppercase(t('AcademyDedails.compensation'))}
-                                    paragraphClassName={'aDeteils-program-section-structure-row-title'}
+                                    paragraphClassName={'aDetails-program-section-structure-row-title'}
                                 />
                                 <CustomCard
                                     cardParagraph={props.compensationDesc}
-                                    paragraphClassName={'aDeteils-program-section-structure-text'}
+                                    paragraphClassName={'aDetails-program-section-structure-text'}
                                 />
                             </Col>
                         </Row>
-                        <Row className={'aDeteils-program-section-structure-rows'}>
+                        <Row className={'aDetails-program-section-structure-rows aDetals-structure-el-gsap'}>
                             <Col xs={4}>
                                 <ArrowRightOutlined
-                                    className='aDeteils-program-section-structure-arrow-ul'
+                                    className='aDetails-program-section-structure-arrow-ul'
                                 />
                             </Col>
                             <Col xs={20}>
                                 <CustomCard
                                     cardParagraph={turnToUppercase(t('AcademyDedails.location'))}
-                                    paragraphClassName={'aDeteils-program-section-structure-row-title'}
+                                    paragraphClassName={'aDetails-program-section-structure-row-title'}
                                 />
                                 <CustomCard
                                     cardParagraph={props.locationDesc}
-                                    paragraphClassName={'aDeteils-program-section-structure-text'}
+                                    paragraphClassName={'aDetails-program-section-structure-text'}
                                 />
                             </Col>
                         </Row>
                     </Col>
                     <Col xs={0} md={2} lg={2}></Col>
-                    <Col xs={24} md={12} lg={12}>
-                        <Row>
+                    <Col
+                        xs={24}
+                        md={12}
+                        lg={12}
+                        className={'aDetals-program-container-gsap'}
+                    >
+                        <Row className="aDetals-program-title-gsap">
                             <CustomCard
                                 titleLevel={2}
                                 cardTitle={t('AcademyDedails.program')}
                             />
                         </Row>
-                        <Row>
+                        <Row className="aDetals-program-el-gsap">
                             <Collapse
                                 bordered={false}
                                 ghost

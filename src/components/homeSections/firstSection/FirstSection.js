@@ -1,5 +1,6 @@
 import React from "react"
-import { Layout, Row, Col } from "antd"
+import { Layout, Row, Col} from "antd"
+
 import { useTranslation } from "react-i18next"
 
 //import style
@@ -33,7 +34,7 @@ const FirstSection = (props) => {
                     <Col xs={0} md={4} />
                     <Col xs={0} md={16}>
                         <Navbar
-                            classNameLink={'navbar-home-link'}
+                            classNameLink={'navbar-home-link animation-text-landing'}
                         />
                     </Col>
                     <Col xs={0} md={4} />
@@ -41,9 +42,11 @@ const FirstSection = (props) => {
 
             </div >
             <div>
+
                 <ScrollButton
-                    callback={props.callbackScroll}
+                // callback={props.callbackScroll}
                 />
+
             </div>
         </Layout >
     )

@@ -1,23 +1,19 @@
 import React, { useEffect, useState } from "react";
 // import { Helmet } from "react-helmet";
 import { connect } from "react-redux";
-import ReactFullpage from "@fullpage/react-fullpage";
 import { Layout } from "antd";
 const { Footer } = Layout;
 
-//import actions to dispatch
-import { setColor, initColor } from "../../redux/ducks/colorDuck";
-import { setVisibility, initVisibility } from "../../redux/ducks/visibilityDuck"
-import { setColorHeader, initColorHeader } from "../../redux/ducks/colorHeaderDuck";
+//import gsap
+import { gsap } from 'gsap'
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/all";
 
+//import actions to dispatch
+import { setVisibility, initVisibility } from "../../redux/ducks/visibilityDuck"
 
 //import style
 import './Home.css';
-import '../../style.css'
-import '../../layout/homeLayout/HomeLayout'
-
-//import constants
-// import { video_home } from "../../utils/properties";
 
 //import components
 import ContainerSectionScroll from "../../components/functional_components/containerSectionScroll/ContainerSectionScroll";
@@ -35,20 +31,13 @@ const historyObj = cardWhoWeAre[1];
 const missionObj = cardWhoWeAre[2];
 const visionObj = cardWhoWeAre[3];
 
+// import BackgroundVideo from '../../components/functional_components/backgroundVideo/BackgroundVideo'
+// import video_home from '../../assets/video/prova.mp4'
+
 
 const Home = (props) => {
-  const colorContactPage = '#d6e3e5'
-
-  useEffect(() => {
-    props.dispatch(setColor(true))
-    props.dispatch(setVisibility(false)) //set visibility of navbar
-    window.addEventListener("resize", updateMedia);
-    return () => window.removeEventListener("resize", updateMedia);
-  }, [])
 
   const [myState, setState] = useState({
-    originIndex: 0,
-    destinationIndex: null,
     isDesktop: window.innerWidth >= 1024,
     isTablet: window.innerWidth >= 768 && window.innerWidth < 1024
   })
@@ -62,197 +51,166 @@ const Home = (props) => {
   };
 
 
-  //this function need three params: origin, destination, direction. 
-  //Due to we are using both origin and dastination we can't remove one of the two params from the function, 
-  //cause it won't work anymore
-  const onLeave = (origin, destination) => {
+  //GSAP
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollToPlugin);
 
-    setState({
-      ...myState,
-      originIndex: origin.index
+  useEffect(() => {
+    window.addEventListener("resize", updateMedia);
+    window.addEventListener("scroll", handleScroll);
+    props.dispatch(setVisibility(false))
+
+    let panels = gsap.utils.toArray(".home-section");
+
+    panels.forEach((panel, i) => {
+      ScrollTrigger.create({
+        trigger: panel,
+        start: "top bottom",
+      });
+    });
+
+    ScrollTrigger.create({
+      start: 0,
+      end: "max",
+      snap: 1 / (panels.length - 1)
     })
-  }
 
-  //this function need three params: origin, destination, direction. 
-  const afterLoad = (origin, destination) => {
+    return () => {
+      window.removeEventListener("resize", updateMedia);
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, []);
 
-    if (destination.index === 0) {
-      props.dispatch(setColor(true))
-      props.dispatch(setVisibility(false)) //set visibility of navbar
-      props.dispatch(initColorHeader())
-    }
-    else if (destination.index === 6 && !myState.isDesktop) {
-      props.dispatch(setColorHeader(colorContactPage))
-    }
-    else if (destination.index === 4 && myState.isTablet) {
-      props.dispatch(setColorHeader(colorContactPage))
-    }
-    else if (destination.index === 3 && myState.isDesktop) {
-      props.dispatch(setColorHeader(colorContactPage))
-    }
-    else {
-      props.dispatch(initColor())
+  const handleScroll = () => {
+    console.log('window.pageYOffset: ', window.pageYOffset)
+    if (window.pageYOffset > 200) {
       props.dispatch(initVisibility())
-      props.dispatch(setColorHeader('#fff'))
     }
-
-    setState({
-      ...myState,
-      destinationIndex: destination.index
-    })
-  }
-
-  const switchColorPage = () => {
-    let pageColorList = ["transparent", "#fff", "#fff", colorContactPage];
-    if (myState.isTablet) {
-      pageColorList = ["transparent", "#fff", "#fff", "#fff", colorContactPage]
-    }
-    else if (!myState.isTablet && !myState.isDesktop) {
-      pageColorList = ["transparent", "#fff", "#fff", "#fff", "#fff", "#fff", colorContactPage]
-    }
-
-    return (pageColorList)
+    else { props.dispatch(setVisibility(false)) }
   }
 
   return (
-    /* *he* */
-    //   {/* 
-    //     <Helmet>
-    //         <title>Beije People First</title>
-    //         <meta name='description' content='beije home page' />
-    //         <meta name='keywords' content='web developer, people first' />
-    //     </Helmet> 
-    //   */}
 
-    <div >
-      <ReactFullpage
-        licenseKey='YOUR_KEY_HERE'
-        scrollOverflow={true}
-        sectionsColor={switchColorPage()}
-        onLeave={onLeave}
-        afterLoad={afterLoad}
-        render={({ state, fullpageApi }) => {
-          return (
-            <div style={{ height: '100vh' }}>
-              <section className="section section1">
+    <div
+      className="gsap-home-container"
+    >
+      <section
+        className="home-section gsap-home-first-section"
+      >
+        <div className='home-video-filter'>
+          {/* <BackgroundVideo
+            autoPlay
+            muted
+            loop
+            src={video_home}
+          /> */}
+          <ContainerSectionScroll>
+            <FirstSection
+            // callbackScroll={ }
+            />
+          </ContainerSectionScroll>
+        </div>
+      </section>
 
-                <div className='home-video-filter'>
-                  {/* <BackgroundVideo
-                    autoPlay
-                    muted
-                    loop
-                    src={video_home}
-                  /> */}
-                  <ContainerSectionScroll>
-                    <FirstSection
-                      callbackScroll={() => fullpageApi.moveTo(2, 0)}
-                    />
-                  </ContainerSectionScroll>
-                </div>
-              </section>
+      <section
+        className="home-section home-second-section gsap-home-second-section"
+      >
+        <ContainerSectionScroll
+          className='home-container-section2'
+          scrollBar={true}
+        >
+          {
+            myState.isDesktop &&
+            <SecondSectionDesktop />
+          }
+          {
+            myState.isTablet &&
+            <SecondSectionTablet />
+          }
+          {
+            !myState.isDesktop && !myState.isTablet &&
+            <SecondSectionMobile />
+          }
+        </ContainerSectionScroll>
+      </section>
 
-              <section className="section section2 ">
-                <ContainerSectionScroll
-                  className='home-container-section2 home.gsap.second.section'
-                  scrollBar={true}
-                >
-                  {
-                    myState.isDesktop &&
-                    <SecondSectionDesktop />
-                  }
-                  {
-                    myState.isTablet &&
-                    <SecondSectionTablet />
-                  }
-                  {
-                    !myState.isDesktop && !myState.isTablet &&
-                    <SecondSectionMobile />
-                  }
-                </ContainerSectionScroll>
-              </section>
+      {
+        myState.isTablet &&
+        <section className="home-section home-second-section">
+          <ContainerSectionScroll
+            className='home-container-section2'
+            scrollBar={true}
+          >
+            <SecondSectionTablet
+              card1={2}
+              card2={4}
+            />
+          </ContainerSectionScroll>
+        </section>
+      }
 
-              {
-                myState.isTablet &&
-                <section className="section">
-                  <ContainerSectionScroll
-                    className='home-container-section2'
-                    scrollBar={true}
-                  >
-                    <SecondSectionTablet
-                      card1={2}
-                      card2={4}
-                    />
-                  </ContainerSectionScroll>
-                </section>
-              }
+      {
+        !myState.isDesktop && !myState.isTablet &&
+        <section className="home-section home-second-section">
+          <ContainerSectionScroll
+            className='home-container-section2'
+            scrollBar={true}
+          >
+            <SecondSectionMobile
+              obj={historyObj}
+            />
+          </ContainerSectionScroll>
+        </section>
+      }
 
-              {!myState.isDesktop && !myState.isTablet &&
+      {!myState.isDesktop && !myState.isTablet &&
 
-                <section className="section">
-                  <ContainerSectionScroll
-                    className='home-container-section2'
-                    scrollBar={true}
-                  >
-                    <SecondSectionMobile
-                      obj={historyObj}
-                    />
-                  </ContainerSectionScroll>
-                </section>
-              }
+        <section className="home-section home-second-section">
+          <ContainerSectionScroll
+            className='home-container-section2'
+            scrollBar={true}
+          >
+            <SecondSectionMobile
+              obj={missionObj}
+            />
+          </ContainerSectionScroll>
+        </section>
+      }
 
-              {!myState.isDesktop && !myState.isTablet &&
+      {!myState.isDesktop && !myState.isTablet &&
 
-                <section className="section">
-                  <ContainerSectionScroll
-                    className='home-container-section2'
-                    scrollBar={true}
-                  >
-                    <SecondSectionMobile
-                      obj={missionObj}
-                    />
-                  </ContainerSectionScroll>
-                </section>
-              }
+        <section className="home-section home-second-section">
+          <ContainerSectionScroll
+            className='home-container-section2'
+            scrollBar={true}
+          >
+            <SecondSectionMobile
+              obj={visionObj}
+            />
+          </ContainerSectionScroll>
+        </section>
+      }
 
-              {!myState.isDesktop && !myState.isTablet &&
+      <section className="home-section home-third-section">
+        <ContainerSectionScroll
+          className='home-container-section3'
+        >
+          <ThirdSection />
 
-                <section className="section">
-                  <ContainerSectionScroll
-                    className='home-container-section2'
-                    scrollBar={true}
-                  >
-                    <SecondSectionMobile
-                      obj={visionObj}
-                    />
-                  </ContainerSectionScroll>
-                </section>
-              }
+        </ContainerSectionScroll>
+      </section>
 
-              <section className="section">
-                <ContainerSectionScroll
-                  className='home-container-section3'
-                >
-                  <ThirdSection />
+      <section className="home-section home-fourth-section">
+        <ContainerSectionScroll>
+          <FourthSection />
+        </ContainerSectionScroll>
+      </section>
 
-                </ContainerSectionScroll>
-              </section>
-
-              <section className="section">
-                <ContainerSectionScroll>
-                  <FourthSection />
-                </ContainerSectionScroll>
-              </section>
-
-              <section className="section">
-                <Footer className={'homeLayout-footer'}>
-                  <CustomFooter />
-                </Footer>
-              </section>
-
-            </div>
-          );
-        }}
-      />
+      <section className="home-section home-last-section">
+        <Footer className={'homeLayout-footer'}>
+          <CustomFooter />
+        </Footer>
+      </section>
 
     </div >
 

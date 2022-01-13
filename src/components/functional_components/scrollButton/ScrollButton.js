@@ -9,13 +9,17 @@ import scroll_icon from '../../../assets/lottie/scroll.json'
 
 const ScrollButton = (props) => {
 
-    const handleClick = () => {
-        // *ga*
-        props.callback()
-    }
+    // const handleClick = () => {
+    //     // *ga*
+    //     props.callback()
+    // }
 
     return (
-        <div className={props.classNameContainer} onClick={handleClick}>
+
+        <div
+            className={props.classNameContainer}
+        // onClick={handleClick}
+        >
             <p className={props.classNameText}>{props.text}</p>
             <Player
                 autoplay

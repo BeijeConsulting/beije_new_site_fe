@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Row, Col } from "antd";
+
+//import gsap
+import { gsap } from 'gsap'
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 //import style
 import '../SecondSection.css'
@@ -24,6 +28,36 @@ const SecondSectionTablet = (props) => {
 
     const { t } = useTranslation()
 
+    const ref = useRef(null)
+
+    //GSAP
+    gsap.registerPlugin(ScrollTrigger);
+
+    useEffect(() => {
+
+        const element = ref.current;
+
+        const container = element.querySelectorAll('.sec-section-container-gsap');
+        const singleEl = element.querySelectorAll('.sec-section-singleEl-gsap');
+
+        const t1 = gsap.timeline({
+            scrollTrigger: {
+                trigger: element,
+                start: 'top 75%',
+            }
+        })
+        const t2 = gsap.timeline({
+            scrollTrigger: {
+                trigger: container,
+                start: 'top 75%',
+            }
+        })
+
+        t1.from(container, { y: 200, opacity: 0, stagger: 0.5, duration: 1, ease: 'power2.in' })
+        t2.from(singleEl, { y: 200, opacity: 0, stagger: 0.5, duration: 1.5, ease: 'power2.in' })
+    }, [])
+
+
     const printCard = (item, key) => {
         return (
             <Col
@@ -45,6 +79,7 @@ const SecondSectionTablet = (props) => {
                                 <ArrowRightOutlined
                                     className='arrow-icon-btn' />
                             }
+                            className={item.btnClassName}
                         />
                     </Row>
                 </div>
@@ -54,7 +89,11 @@ const SecondSectionTablet = (props) => {
 
     return (
         <>
-            <Row className='d-flex justify-between width-100'>
+            <Row
+                className='d-flex justify-between width-100'
+                ref={ref}
+
+            >
                 {cardWhoWeAre.slice(props.card1, props.card2).map(printCard)}
             </Row>
 

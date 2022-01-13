@@ -7,10 +7,64 @@ const { TabPane } = Tabs;
 import './Career.css'
 
 // import components
-import CustomButton from "../../components/functional_components/Button/CustomButton";
+// import CustomButton from "../../components/functional_components/Button/CustomButton";
+import GoToDetailRow from '../../components/functional_components/goToDetailRow/GoToDetailRow'
+import Item from "antd/lib/list/Item";
 // import OpenFilterBtn from "../../components/functional_components/openFilterBtn/OpenFilterBtn";
 
 const Career = (props) => {
+
+    const objAcademy = [
+        {
+            title: 'React developer - Academy',
+            type: 'frontend',
+            location: 'remoto',
+            time: '2 settimane fa'
+        },
+        {
+            title: 'React developer - Academy',
+            type: 'frontend',
+            location: 'remoto',
+            time: '2 settimane fa'
+        },
+        {
+            title: 'React developer - Academy',
+            type: 'frontend',
+            location: 'remoto',
+            time: '2 settimane fa'
+        },
+        {
+            title: 'React developer - Academy',
+            type: 'frontend',
+            location: 'remoto',
+            time: '2 settimane fa'
+        },
+        {
+            title: 'React developer - Academy',
+            type: 'frontend',
+            location: 'remoto',
+            time: '2 settimane fa'
+        },
+        {
+            title: 'React developer - Academy',
+            type: 'frontend',
+            location: 'remoto',
+            time: '2 settimane fa'
+        }
+    ]
+
+    const printListAcademy = (item, key) => {
+        return (
+            <GoToDetailRow
+                key={key}
+                numCol={4}
+                text1={item.title}
+                text2={item.type}
+                text3={item.location}
+                text4={item.time}
+            />
+        )
+    }
 
     // const changeIcon = (panelProps) => {
     //     return (
@@ -23,21 +77,17 @@ const Career = (props) => {
             <div className="card-container">
                 <Tabs type="card" className='career-tabs-container'>
                     <TabPane tab="Academy" key="1" className='career-academy-panel'>
-                        <p>Content of Tab Pane 1</p>
-                        <p>Content of Tab Pane 1</p>
-                        <p>Content of Tab Pane 1</p>
+                        {objAcademy.map(printListAcademy)}
                     </TabPane>
                     <TabPane tab="Job application" key="2" className='career-job-panel'>
-                        <p>Content of Tab Pane 2</p>
-                        <p>Content of Tab Pane 2</p>
-                        <p>Content of Tab Pane 2</p>
+                        {objAcademy.map(printListAcademy)}
                     </TabPane>
                 </Tabs>
             </div>
 
 
 
-            <Collapse
+            {/* <Collapse
                 bordered={false}
                 ghost
                 showArrow={false}
@@ -57,7 +107,7 @@ const Career = (props) => {
                     content={'Filtro'}
                     type={'filter-btn'}
                 />
-            </Collapse>
+            </Collapse> */}
         </div>
     )
 }

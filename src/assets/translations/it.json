@@ -64,11 +64,7 @@
       "title_value": "VALORI",
       "title_history": "STORIA",
       "title_mission": "MISSION",
-      "title_vision": "VISION",
-      "paragraph_value": "-Crediamo in quello che facciamo e abbiamo un profondo RISPETTO per gli altri -Mostriamo GRATITUDINE, l’impegno che ogni giorno mettiamo nel nostro lavoro -Prima viene la squadra e poi l’individuo, il nostro è un lavoro di TEAM -La base per costruire la nostra community è sviluppare un SENSO DI APPARTENENZA. ",
-      "paragraph_history": "Da un ideale ad un business: da più di 10 anni ci impegniamo costantemente per aggiornare il nostro know-how e siamo in grado di fornire le metodologie più moderne e le tecnologie più innovative per la realizzazione di progetti altamente specializzati. Al centro del modello Beije c’è una vision people first: le persone al centro per la creazione di un’azienda di valore. ",
-      "paragraph_mission": "Aiutiamo le aziende a realizzare progetti innovativi attraverso Team di Valore",
-      "paragraph_vision": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec arcu felis, tristique ut ex consequat, volutpat maximus ipsum."
+      "title_vision": "VISION"
     },
     "thirdSection": {
       "title": "CHI SIAMO",
@@ -91,8 +87,13 @@
     }
   },
   "Consulting": {
-    "intro": "Aiutiamo le aziende a sviluppare progetti per la digital transformation, costruendo team di valore",
-    "description": "Abbiamo sempre pensato che le persone vengano prima di tutto e che il team sia più importante dell’individuo. Per questo, giorno dopo giorno, costruiamo una community che riesca a fornire ai nostri clienti le persone giuste al momento giusto. Persone capaci, professionali e che abbiano le skills che più si adattano ai nostri progetti.",
+    "intro": "In ottica people first aiutiamo le aziende a costruire Team di Valore attraverso figure altamente formate per fornire servizi di consulenza informatica specializzati.",
+    "description": {
+      "part1": "Qualità ",
+      "part2": " e ",
+      "part3": " best efficiency ",
+      "part4": "si fondono per la costruzione di progetti innovativi."
+    },
     "title_carousel_client": "Soddisfazione clienti",
     "paragraph1_carousel_client": "Reputa che Beije Consulting sia un’azienda affidabile",
     "paragraph2_carousel_client": "Pensa che i nostri consulenti dispongano di una preparazione tecnica adeguata e in linea con la loro seniority",
@@ -102,13 +103,14 @@
     "description_add_info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan lacus quis nibh porta, eget porttitor neque feugiat."
   },
   "Academy": {
-    "intro": "Formarsi per costruire il proprio futuro",
-    "page_description": "Beije Academy offre percorsi formativi teorico-pratici specializzati per farti diventare uno Sviluppatore Junior.",
+    "title": "Talent Academy",
+    "intro": "Diventa il prossimo Software Ninjaneer!",
+    "page_description": "Le nostre Talent Academy sono percorsi di formazione teorico-pratici per diventare Software Developer. I Master Trainer Frontend e Backend, Roberto Brogi e Ivo Mosca ti accompagneranno durante tutto il percorso attraverso lezioni frontali, esercitazioni, valutazioni e progetti reali. I corsi hanno una durata di 3 mesi, sono retribuiti ed hanno come scopo l’inserimento in azienda con contratto a tempo indeterminato.",
     "our_courses_title": "I nostri corsi",
     "title_academy_java": "Academy Java",
     "title_academy_frontend": "Academy sviluppo web - front end",
-    "course_description": "I corsi hanno una durata di 3 mesi, sono retribuiti e hanno come scopo l’inserimento in azienda con contratto a tempo indeterminato. Il nostro docente ti accompagnerà durante tutto il percorso, attraverso lezioni frontali, esercitazioni, valutazioni e progetti reali.",
-    "send_to_youtube": "Guarda le pillole dei nostri docenti sul canale Youtube di Beije",
+    "course_description": "Il tuo futuro parte…con Beije!",
+    "send_to_youtube": "Vieni a scoprire il nostro canale Youtube: troverai le pillole digitali dei nostri esperti Frontend / Backend, i Webinar e molto altro ancora…Ti aspettiamo! ",
     "next_courses_title": "I prossimi corsi",
     "next_course_1": "Stage java",
     "date_next_course_1": "Gen. – Apr. 2021",
@@ -235,5 +237,46 @@
         "subsection3": "Games"
       }
     }
+  },
+  "WhoWeAre": {
+    "title": "Chi siamo",
+    "value_title": "Valori",
+    "value_list": {
+      "el1": "Crediamo in quello che facciamo e abbiamo un profondo RISPETTO per gli altri",
+      "el2": "Mostriamo GRATITUDINE per l’impegno che ogni giorno mettiamo nel nostro lavoro",
+      "el3": "Prima viene la squadra e poi l’individuo, il nostro è un lavoro di TEAM",
+      "el4": "La base per costruire la nostra community è sviluppare un SENSO DI APPARTENENZA"
+    },
+    "history_title": "Storia",
+    "history_desc": {
+      "part1": "Al centro del modello Beije c’è una vision ",
+      "part2": "people first ",
+      "part3": ": le persone al centro per la creazione di un’azienda di valore. Da un ideale ad un business: da più di 10 anni ci impegniamo costantemente per aggiornare il nostro know-how e siamo in grado di fornire le metodologie più moderne e le tecnologie più innovative per la realizzazione di progetti altamente specializzati."
+    },
+    "vision_title": "Vision",
+    "vision_desc": {
+      "part1": "Le ",
+      "part2": "persone ",
+      "part3": "al centro del nostro ",
+      "part4": "futuro",
+      "part5": "."
+    },
+    "mission_title": "Mission",
+    "mission_desc": {
+      "part1": "Aiutiamo le aziende a realizzare progetti innovativi attraverso Team di ",
+      "part2": "Valore",
+      "part3": "."
+    }
+  },
+  "Up": {
+    "title": "Up",
+    "intro": "La nostra Software Factory",
+    "desc1": "Con dedizione e professionalità lavoriamo al fianco dei nostri clienti per fornire servizi di progettazione, implementazione, delivery, integration e application maintenance di sistemi software. Diamo supporto e realizziamo progetti partendo dall’analisi tecnica frontend/backend, realizzazione mockup all’implementazione del software attraverso le tecnologie innovative presenti sul mercato.",
+    "desc2": "Attraverso metodologia Agile, verranno definiti step di verifica e di aggiornamento del prodotto già durante lo sviluppo, con frequenti rilasci di versioni testabili dal cliente, in modo da ottimizzare puntualmente miglioramenti o eventuali modifiche sulle attività concordate. Dall’analisi del progetto alla stesura della documentazione fino all’implementazione: vi seguiamo in ogni fase",
+    "paragraph": "le tecnologie utilizzate vanno dall’ecosistema Java a quello .Net per il Backend, mentre Javascript e i principali framework per il frontend (React, Angular e Vue). Per l’infrastruttura basiamo abitualmente i progetti in cloud su servizi Amazon Web Services.",
+    "comments_title": "Dicono di noi",
+    "case_studies_title": "Case studies",
+    "form_message_title": "Richiedi maggiori informazioni",
+    "form_message_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan lacus quis nibh porta, eget porttitor neque feugiat."
   }
 }

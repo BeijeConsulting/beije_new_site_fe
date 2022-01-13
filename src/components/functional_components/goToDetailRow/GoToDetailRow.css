@@ -1,0 +1,26 @@
+:root {
+    --border-go-to-deail-color: var(--first-color)
+}
+
+.go-to-detail-row-container {
+    border-top: 1px solid var(--first-color);
+    border-bottom: 1px solid var(--first-color);
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.go-to-detail-row-txt {
+    font-family: 'SpaceGrotesk-Regular', sans-serif !important;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 35px;
+}
+
+.go-to-detail-row-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}

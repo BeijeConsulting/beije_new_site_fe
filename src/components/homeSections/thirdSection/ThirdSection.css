@@ -38,9 +38,9 @@
 }
 
 @media screen and (min-width: 768px) {
-    .third-sec-container {
+    /* .third-sec-container {
         justify-content: center;
-    }
+    } */
 
     .third-sec-col1 {
         /* width: 40%; */

@@ -26,8 +26,8 @@ import { turnToUppercase } from "../../utils/utilities";
 import CustomCard from '../../components/functional_components/customCard/CustomCard';
 import CustomCarousel from "../../components/hooks_components/customCarousel/CustomCarousel";
 import SectionSubtitle from "../../components/functional_components/sectionSubtitle/SectionSubtitle";
-import CustomForm from "../../components/hooks_components/customForm/CustomForm";
 import IntroductiveSection from "../../components/functional_components/introductiveSection/IntroductiveSection";
+import SectionForm from "../../components/functional_components/sectionForm/SectionForm";
 
 
 const Consulting = (props) => {
@@ -47,16 +47,6 @@ const Consulting = (props) => {
 
         const element = ref.current;
 
-        const firstRow = element.querySelector('.intro-sec-gsap');
-        const title = element.querySelector('.intro-sec-gsap-title');
-        const intro = element.querySelector('.intro-sec-gsap-intro');
-        const img1 = element.querySelector('.intro-sec-gsap-img1')
-
-        // const secondRow = element.querySelector('.consulting-gsap-second-row');
-        // const descMobile = element.querySelector('.consulting-gsap-desc-mobile');
-        // const descDesktop = element.querySelector('.consulting-gsap-desc-desktop');
-        // const img2 = element.querySelector('.consulting-gsap-img2')
-
         const secondSection = element.querySelector('.consulting-gsap-second-section');
         const percentage1Title = element.querySelector('.consulting-gsap-percentage1-title')
         const percentage1SingleMobile = element.querySelector('.consulting-gsap-percentage1-single-mobile')
@@ -68,110 +58,41 @@ const Consulting = (props) => {
         const percentage2SingleDesktop = element.querySelectorAll('.consulting-gsap-percentage2-single-desktop')
         const percentage2DataSurvey = element.querySelectorAll('.consulting-gsap-percentage2-data-survey')
 
-        const fourthSection = element.querySelector('.consulting-gsap-fourth-section');
-        const formTitle = element.querySelector('.consulting-gsap-form-title')
-        const formDesc = element.querySelector('.consulting-gsap-form-desc')
-
-
         const t1 = gsap.timeline({
             scrollTrigger: {
-                trigger: firstRow,
-                markers: true,
-                // scrub: true,
-                toggleActions: "restart none restart none",
-                start: 'top 75%'
+                trigger: secondSection,
+                start: 'top 75%',
+            }
+        })
+
+        const t1_2 = gsap.timeline({
+            scrollTrigger: {
+                trigger: secondSection,
+                start: 'top 75%',
             }
         })
 
         const t2 = gsap.timeline({
             scrollTrigger: {
-                trigger: firstRow,
-                markers: true,
-                // scrub: true,
-                toggleActions: "restart none restart none",
-                start: 'top 75%'
-            }
-        })
-
-        // const t3 = gsap.timeline({
-        //     scrollTrigger: {
-        //         trigger: secondRow,
-        //         markers: true,
-        //         // scrub: true,
-        //         toggleActions: "restart none restart none",
-        //         start: 'top 75%',
-        //         // scrub: true,
-        //         end: '70%'
-        //     }
-        // })
-
-        // const t4 = gsap.timeline({
-        //     scrollTrigger: {
-        //         trigger: secondRow,
-        //         markers: true,
-        //         toggleActions: "restart none restart none",
-        //         start: 'top 75%',
-        //         // scrub: true,
-        //         end: '70%'
-        //     }
-        // })
-
-        const t5 = gsap.timeline({
-            scrollTrigger: {
-                trigger: secondSection,
-                markers: true,
-                toggleActions: "restart none restart none",
-                start: 'top 75%',
-                // scrub: true,
-            }
-        })
-
-        const t6 = gsap.timeline({
-            scrollTrigger: {
                 trigger: thirdSection,
-                markers: true,
-                toggleActions: "restart none restart none",
                 start: 'top 75%',
-                // scrub: true,
             }
         })
 
-        const t7 = gsap.timeline({
-            scrollTrigger: {
-                trigger: fourthSection,
-                markers: true,
-                toggleActions: "restart none restart none",
-                start: 'top 75%',
-                // scrub: true,
-            }
-        })
+        t1.from(percentage1Title, { y: 500, opacity: 0, duration: 1, ease: 'back' })
+        t1.from(percentage1SingleDesktop, { opacity: 0, stagger: 0.3, duration: 0.5, ease: 'power2.in' })
+        t1_2.from(percentage1SingleMobile, { opacity: 0, duration: 1, ease: 'power2.in' })
 
-
-        t1.from(title, { y: 200, opacity: 0, duration: 1, ease: 'back' })
-        t1.from(intro, { y: 200, opacity: 0, duration: 1, ease: 'baunce.in' })
-        t2.from(img1, { opacity: 0, duration: 1.5, ease: 'power2.in' })
-
-        // t3.from(descMobile, { y: 500, opacity: 0, duration: 1, ease: 'baunce.in' })
-        // t3.from(descDesktop, { y: 500, opacity: 0, duration: 1, ease: 'baunce.in' })
-        // t4.from(img2, { opacity: 0, duration: 2, ease: 'power2.in' })
-
-        t5.from(percentage1Title, { y: 500, opacity: 0, duration: 1, ease: 'back' })
-        t5.from(percentage1SingleDesktop, { opacity: 0, stagger: 0.3, duration: 0.5, ease: 'power2.in' })
-        t5.from(percentage1SingleMobile, { opacity: 0, duration: 1, ease: 'power2.in' })
-
-        t6.from(percentage2Title, { y: 500, opacity: 0, duration: 1, ease: 'back' })
-        t6.from(percentage2SingleDesktop, { opacity: 0, stagger: 0.3, duration: 0.5, ease: 'power2.in' })
-        t6.from(percentage2SingleMobile, { opacity: 0, duration: 1, ease: 'power2.in' })
-        t6.from(percentage2DataSurvey, { opacity: 0, duration: 1, ease: 'power2.in' })
-
-        t7.from(formTitle, { y: 500, opacity: 0, duration: 1, ease: 'back' })
-        t7.from(formDesc, { opacity: 0, duration: 0.5, ease: 'power2.in' })
-
+        t2.from(percentage2Title, { y: 500, opacity: 0, duration: 1, ease: 'back' })
+        t2.from(percentage2SingleDesktop, { opacity: 0, stagger: 0.3, duration: 0.5, ease: 'power2.in' })
+        t2.from(percentage2SingleMobile, { opacity: 0, duration: 0.5, ease: 'power2.in' })
+        t2.from(percentage2DataSurvey, { opacity: 0, duration: 1, ease: 'power2.in' })
 
         return () => window.removeEventListener("scroll", handleScroll);
     });
 
     const handleScroll = () => {
+        console.log('window.pageYOffset: ', window.pageYOffset)
         if (window.pageYOffset == 0 || (window.pageYOffset > 0 && window.pageYOffset < 1297)) {
             props.dispatch(setColorHeader(primary_bg_page_consulting))
         }
@@ -239,12 +160,33 @@ const Consulting = (props) => {
                     bg1='consulting-bg1'
                     bg2='consulting-bg2'
                     introLight={true}
-                    intro={'In ottica people first aiutiamo le aziende a costruire Team di Valore attraverso figure altamente formate per fornire servizi di consulenza informatica specializzati.'}
+                    intro={t('Consulting.intro')}
                     desc1Light={true}
-                    desc1={'Qualità e best efficiency si fondono per la costruzione di progetti innovativi. '}
+                    // desc1={'Qualità e best efficiency si fondono per la costruzione di progetti innovativi. '}
+                    desc1={
+                        <>
+                            <strong>
+                                {t('Consulting.description.part1')}
+                            </strong>
+                            {t('Consulting.description.part2')}
+                            <strong>
+                                {t('Consulting.description.part3')}
+                            </strong>
+                            {t('Consulting.description.part4')}
+                        </>}
                     desc2Mobile={false}
                     desc2Light={true}
-                    desc2={'Qualità e best efficiency si fondono per la costruzione di progetti innovativi. '}
+                    desc2={
+                        <>
+                            <strong>
+                                {t('Consulting.description.part1')}
+                            </strong>
+                            {t('Consulting.description.part2')}
+                            <strong>
+                                {t('Consulting.description.part3')}
+                            </strong>
+                            {t('Consulting.description.part4')}
+                        </>}
                 />
             </section>
 
@@ -285,30 +227,10 @@ const Consulting = (props) => {
                 </section>
 
                 <section className={'consulting-gsap-fourth-section'}>
-                    <Row>
-                        <Col xs={24}>
-                            <SectionSubtitle
-                                styleContainer={{ marginBottom: '10px' }}
-                                LongLineAbove
-                                title={turnToUppercase(t('Consulting.title_add_info'))}
-                                classNameContainer={'consulting-gsap-form-title'}
-                            />
-                        </Col>
-                        <Col xs={24} md={6}>
-                            <CustomCard
-                                cardParagraph={t(`Consulting.description_add_info`)}
-                                cardClassName={'consulting-gsap-form-desc'}
-                            />
-                        </Col>
-                        <Col xs={0} md={4}></Col>
-                        <Col xs={24} md={14}>
-                            <CustomForm
-                                moreInfo={false}
-                                agreement={false}
-                                positionBtn={'flex-end'}
-                            />
-                        </Col>
-                    </Row>
+                    <SectionForm
+                        title={turnToUppercase(t('Consulting.title_add_info'))}
+                        cardParagraph={t(`Consulting.description_add_info`)}
+                    />
                 </section>
             </div>
         </div>

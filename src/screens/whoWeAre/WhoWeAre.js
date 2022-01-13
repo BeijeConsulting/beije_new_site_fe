@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 import { Row, Col } from "antd";
 
@@ -9,12 +10,17 @@ import { setColorHeader } from "../../redux/ducks/colorHeaderDuck";
 // import style
 import './WhoWeAre.css'
 
+//import constants
+import { whoWeAre_value_list } from "../../utils/properties";
+
 // import components
 import CustomCard from "../../components/functional_components/customCard/CustomCard";
 import CustomOwlCarousel from "../../components/hooks_components/customOwlCarousel/CustomOwlCarousel";
 import SubsectionTitleImg from "../../components/hooks_components/subsectionTitleImg/SubsectionTitleImg";
 
 const WhoWeAre = (props) => {
+
+    const { t } = useTranslation()
 
     const primary_bg_page_academy = '#d6e3e5'
 
@@ -37,17 +43,20 @@ const WhoWeAre = (props) => {
                 <Row>
                     <Col span={24}>
                         <CustomCard
-                            cardTitle={'Chi siamo'}
+                            cardTitle={t('WhoWeAre.title')}
                             titleClassName={'whoWeAre-profile-sec-title'}
                         />
                     </Col>
                     <Col span={24}>
                         <CustomOwlCarousel
-                            numItemMobile={1.8}
-                            numItemMore320Less768={2.5}
-                            numItemMore768={4}
-                            numItemDefault={5.3}
-                            marginEl={5}
+                            item_superLargeDesktop={6}
+                            item_desktop={4}
+                            item_tablet={4}
+                            item_bigMobile={4}
+                            item_mobile={3}
+                            item_smallmobile={2}
+                            item_extraSmallMobile={2}
+                            infinite={true}
                         />
                     </Col>
                 </Row>
@@ -56,7 +65,10 @@ const WhoWeAre = (props) => {
             {/* value */}
             <section>
                 <SubsectionTitleImg
-                    desc='Questa è una descrizione momentanea che inserisco per fare tanto spazio e vedere dove viene inserita la descrizione'
+                    subTitle={t('WhoWeAre.value_title')}
+                    desc={false}
+                    list={true}
+                    listToPrint={whoWeAre_value_list}
                     bg={'whoWeAre-value-img'}
                 />
             </section>
@@ -64,8 +76,19 @@ const WhoWeAre = (props) => {
             {/* history */}
             <section>
                 <SubsectionTitleImg
-                    desc='Questa è una descrizione momentanea che inserisco per fare tanto spazio e vedere dove viene inserita la descrizione'
-                    bg={'whoWeAre-value-img'}
+                    subTitle={t('WhoWeAre.history_title')}
+                    desc={
+                        <>
+                            {t('WhoWeAre.history_desc.part1')}
+                            <strong>
+                                <span className="highlight-txt">
+                                    {t('WhoWeAre.history_desc.part2')}
+                                </span>
+                            </strong>
+                            {t('WhoWeAre.history_desc.part3')}
+                        </>
+                    }
+                    bg={'whoWeAre-history-img'}
                     imgRightDescLeft={false}
                     imgLeftDescRight={true}
                     classNameTitle={'whoWeAre-sub-section-title'}
@@ -73,19 +96,48 @@ const WhoWeAre = (props) => {
                 />
             </section>
 
-            {/* mission */}
-            <section>
-                <SubsectionTitleImg
-                    desc='Questa è una descrizione momentanea che inserisco per fare tanto spazio e vedere dove viene inserita la descrizione'
-                    bg={'whoWeAre-value-img'}
-                />
-            </section>
-
             {/* vision */}
             <section>
                 <SubsectionTitleImg
-                    desc='Questa è una descrizione momentanea che inserisco per fare tanto spazio e vedere dove viene inserita la descrizione'
-                    bg={'whoWeAre-value-img'}
+                    subTitle={t('WhoWeAre.vision_title')}
+                    desc={
+                        <>
+                            {t('WhoWeAre.vision_desc.part1')}
+                            <strong>
+                                <span className="highlight-txt">
+                                    {t('WhoWeAre.vision_desc.part2')}
+                                </span>
+                            </strong>
+                            {t('WhoWeAre.vision_desc.part3')}
+                            <strong>
+                                <span className="highlight-txt">
+                                    {t('WhoWeAre.vision_desc.part4')}
+                                </span>
+                            </strong>
+                            {t('WhoWeAre.vision_desc.part5')}
+                        </>
+                    }
+                    bg={'whoWeAre-vision-img'}
+                />
+            </section>
+
+            {/* mission */}
+            <section>
+                <SubsectionTitleImg
+                    subTitle={t('WhoWeAre.mission_title')}
+                    desc={
+                        <>
+                            {t('WhoWeAre.mission_desc.part1')}
+                            <strong>
+                                <span className="highlight-txt">
+                                    {t('WhoWeAre.mission_desc.part2')}
+                                </span>
+                            </strong>
+                            {t('WhoWeAre.mission_desc.part3')}
+                        </>
+                    }
+
+                    bg={'whoWeAre-mission-img'}
                     imgRightDescLeft={false}
                     imgLeftDescRight={true}
                     classNameTitle={'whoWeAre-sub-section-title'}

@@ -49,18 +49,42 @@ export default [
     path: `${ENVIRONMENT.ROUTING.BASE_URL}academy`,
     element: <GeneralLayout />,
     children: [
-      { index: true, element: <Academy /> },
-      {
-        path: `${ENVIRONMENT.ROUTING.BASE_URL}academy/masterBackend`,
-        element: <AcademyJava />
-      },
-      {
-        path: `${ENVIRONMENT.ROUTING.BASE_URL}academy/masterFrontend`,
-        element: <AcademyFrontend />
-      },
+      { index: true, element: <Academy />  },
       { path: "*", element: <NoMatch /> }
     ]
   },
+  {
+    path: `${ENVIRONMENT.ROUTING.BASE_URL}academy/masterBackend`,
+    element: <GeneralLayout />,
+    children: [
+      { index: true, element: <AcademyJava /> },
+      { path: "*", element: <NoMatch /> }
+    ]
+  },
+  {
+    path: `${ENVIRONMENT.ROUTING.BASE_URL}academy/masterFrontend`,
+    element: <GeneralLayout />,
+    children: [
+      { index: true, element: <AcademyFrontend /> },
+      { path: "*", element: <NoMatch /> }
+    ]
+  },
+  // {
+  //   path: `${ENVIRONMENT.ROUTING.BASE_URL}academy`,
+  //   element: <GeneralLayout />,
+  //   children: [
+  //     { index: true, element: <Academy /> },
+  //     {
+  //       path: `${ENVIRONMENT.ROUTING.BASE_URL}academy/masterBackend`,
+  //       element: <AcademyJava />
+  //     },
+  //     {
+  //       path: `${ENVIRONMENT.ROUTING.BASE_URL}academy/masterFrontend`,
+  //       element: <AcademyFrontend />
+  //     },
+  //     { path: "*", element: <NoMatch /> }
+  //   ]
+  // },
   {
     path: `${ENVIRONMENT.ROUTING.BASE_URL}up`,
     element: <GeneralLayout />,

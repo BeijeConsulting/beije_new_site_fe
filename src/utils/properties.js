@@ -12,14 +12,15 @@ import icon_youTube from '../assets/icons/social_icon/youtube_dark.png'
 // import official_video_home from '../assets/videos/official_video_home.mp4'
 
 //assets used in consulting page
-import img1_consulting from '../assets/images/consulting/consulting1.svg'
-import img2_consulting from '../assets/images/consulting/consulting2.svg'
-import icon1_consulting from '../assets/icons/icon_pc.svg'
+import img1_consulting from '../assets/images/consulting/consulting1.jpg'
+import img2_consulting from '../assets/images/consulting/consulting2.jpg'
+import icon1_consulting from '../assets/icons/percentage_icon/1.png'
+import icon2_consulting from '../assets/icons/percentage_icon/2.png'
+import icon3_consulting from '../assets/icons/percentage_icon/3.png'
 
 //assets used in academy page
-import img1_academy from '../assets/images/academy/academy1.svg'
-import img2_academy from '../assets/images/academy/academy2.svg'
-import img_comments from '../assets/images/comments/img_comments.png'
+import img1_academy from '../assets/images/academy/academy1.jpg'
+import img2_academy from '../assets/images/academy/academy2.jpg'
 
 
 //export assets
@@ -156,38 +157,41 @@ export const siteMenu = [
 export const cardWhoWeAre = [
   {
     colContainerClassName: "sec-section-card-col",
-    cardContainerClassName: "sec-section-card sec-section-card-bg-value sec-section-card-top",
-    colClassName: '',
+    cardContainerClassName: "sec-section-card sec-section-card-bg-value sec-section-card-top sec-section-container-gsap",
+    colClassName: 'sec-section-singleEl-gsap',
     titleLevel: 2,
     cardTitle: 'title_value',
     type_btn: 'secondary-arrow-btn',
+    btnClassName: 'sec-section-singleEl-gsap'
   },
   {
     colContainerClassName: "sec-section-card-col",
-    cardContainerClassName: "sec-section-card sec-section-card-bg-history sec-section-card-bottom",
-    colClassName: ' ',
+    cardContainerClassName: "sec-section-card sec-section-card-bg-history sec-section-card-bottom sec-section-container-gsap",
+    colClassName: 'sec-section-singleEl-gsap',
     titleLevel: 2,
     cardTitle: 'title_history',
     type_btn: 'secondary-arrow-btn',
+    btnClassName: 'sec-section-singleEl-gsap'
   },
   {
     colContainerClassName: "sec-section-card-col",
-    cardContainerClassName: 'sec-section-card sec-section-card-bg-mission sec-section-card-top',
-    colClassName: '',
+    cardContainerClassName: 'sec-section-card sec-section-card-bg-mission sec-section-card-top sec-section-container-gsap',
+    colClassName: 'sec-section-singleEl-gsap',
     titleLevel: 2,
     cardTitle: 'title_vision',
     type_btn: 'secondary-arrow-btn',
+    btnClassName: 'sec-section-singleEl-gsap'
   },
   {
     colContainerClassName: "sec-section-card-col",
-    cardContainerClassName: 'sec-section-card  sec-section-card-bg-vision sec-section-card-bottom',
-    colClassName: '',
+    cardContainerClassName: 'sec-section-card  sec-section-card-bg-vision sec-section-card-bottom sec-section-container-gsap',
+    colClassName: 'sec-section-singleEl-gsap',
     titleLevel: 2,
     cardTitle: 'title_mission',
     type_btn: 'secondary-arrow-btn',
+    btnClassName: 'sec-section-singleEl-gsap'
   }
 ]
-
 export const carouselProfile = [
   {
     id: 1,
@@ -203,7 +207,7 @@ export const carouselProfile = [
     id: 2,
     name: 'Erica',
     surname: 'Mauro',
-    role: 'Direttore Commerciale',
+    role: 'sales manager',
     alt: 'EricaMauro',
     classNameSingleEl: 'carousel-profile-single-el picture-middle',
     classNameBgImg: 'carousel-profile-picture carousel-profile-bg2',
@@ -263,7 +267,7 @@ export const carouselProfile = [
     id: 8,
     name: 'Francesca',
     surname: 'Ferioli',
-    role: 'IT Recruiter Specialist',
+    role: 'HR specialist',
     alt: 'FrancescaFerioli',
     classNameSingleEl: 'carousel-profile-single-el picture-middle',
     classNameBgImg: 'carousel-profile-picture carousel-profile-bg8',
@@ -301,13 +305,13 @@ export const consulting_carousel_client = [
   },
   {
     carouselTitle: 'title_carousel_client',
-    iconSrc: icon1_consulting,
+    iconSrc: icon2_consulting,
     titlePenrcentage: '94%',
     carouselDesc: 'paragraph2_carousel_client'
   },
   {
     carouselTitle: 'title_carousel_client',
-    iconSrc: icon1_consulting,
+    iconSrc: icon3_consulting,
     titlePenrcentage: '100%',
     carouselDesc: 'paragraph3_carousel_client'
   }
@@ -315,19 +319,34 @@ export const consulting_carousel_client = [
 
 export const academy_comments = [
   {
-    commentsText: 'Trial comments to see if everything is working properly',
+    commentsText: 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in.',
     name: 'Name',
     surname: 'surname',
-    imgAlt: 'alt img',
-    imgSrc: img_comments,
+    profilePictureImg: 'academy-comments-profile-picture1',
     imgClassName: 'trial'
   },
   {
-    commentsText: 'Trial comments to see if everything is working properly',
+    commentsText: 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in.',
     name: 'Name',
     surname: 'surname',
-    imgAlt: 'alt img',
-    imgSrc: img_comments,
+    profilePictureImg: 'academy-comments-profile-picture2',
+    imgClassName: 'trial'
+  }
+]
+
+export const up_comments = [
+  {
+    commentsText: 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in.',
+    name: 'Name',
+    surname: 'surname',
+    profilePictureImg: 'up-comments-profile-picture1',
+    imgClassName: 'trial'
+  },
+  {
+    commentsText: 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in.',
+    name: 'Name',
+    surname: 'surname',
+    profilePictureImg: 'up-comments-profile-picture2',
     imgClassName: 'trial'
   }
 ]
@@ -474,6 +493,13 @@ export const up_case_studies = [
     title: 'Case study 1: sottotitolo case studies',
     titleClassName: 'up-case-studies-title'
   }
+]
+
+export const whoWeAre_value_list = [
+  'WhoWeAre.value_list.el1',
+  'WhoWeAre.value_list.el2',
+  'WhoWeAre.value_list.el3',
+  'WhoWeAre.value_list.el4'
 ]
 
 /*
