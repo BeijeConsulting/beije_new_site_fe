@@ -19,6 +19,8 @@ import NoMatch from "./screens/NoMatch";
 import AcademyFrontend from "./screens/academyFrontend/AcademyFrontend";
 import Career from "./screens/career/Career";
 import WhoWeAre from "./screens/whoWeAre/WhoWeAre";
+import CareerDetail from "./screens/careerDetail/CareerDetail";
+import Blog from "./screens/blog/Blog";
 
 export default [
   {
@@ -45,46 +47,46 @@ export default [
       { path: "*", element: <NoMatch /> }
     ]
   },
-  {
-    path: `${ENVIRONMENT.ROUTING.BASE_URL}academy`,
-    element: <GeneralLayout />,
-    children: [
-      { index: true, element: <Academy />  },
-      { path: "*", element: <NoMatch /> }
-    ]
-  },
-  {
-    path: `${ENVIRONMENT.ROUTING.BASE_URL}academy/masterBackend`,
-    element: <GeneralLayout />,
-    children: [
-      { index: true, element: <AcademyJava /> },
-      { path: "*", element: <NoMatch /> }
-    ]
-  },
-  {
-    path: `${ENVIRONMENT.ROUTING.BASE_URL}academy/masterFrontend`,
-    element: <GeneralLayout />,
-    children: [
-      { index: true, element: <AcademyFrontend /> },
-      { path: "*", element: <NoMatch /> }
-    ]
-  },
   // {
   //   path: `${ENVIRONMENT.ROUTING.BASE_URL}academy`,
   //   element: <GeneralLayout />,
   //   children: [
-  //     { index: true, element: <Academy /> },
-  //     {
-  //       path: `${ENVIRONMENT.ROUTING.BASE_URL}academy/masterBackend`,
-  //       element: <AcademyJava />
-  //     },
-  //     {
-  //       path: `${ENVIRONMENT.ROUTING.BASE_URL}academy/masterFrontend`,
-  //       element: <AcademyFrontend />
-  //     },
+  //     { index: true, element: <Academy />  },
   //     { path: "*", element: <NoMatch /> }
   //   ]
   // },
+  // {
+  //   path: `${ENVIRONMENT.ROUTING.BASE_URL}academy/masterBackend`,
+  //   element: <GeneralLayout />,
+  //   children: [
+  //     { index: true, element: <AcademyJava /> },
+  //     { path: "*", element: <NoMatch /> }
+  //   ]
+  // },
+  // {
+  //   path: `${ENVIRONMENT.ROUTING.BASE_URL}academy/masterFrontend`,
+  //   element: <GeneralLayout />,
+  //   children: [
+  //     { index: true, element: <AcademyFrontend /> },
+  //     { path: "*", element: <NoMatch /> }
+  //   ]
+  // },
+  {
+    path: `${ENVIRONMENT.ROUTING.BASE_URL}academy`,
+    element: <GeneralLayout />,
+    children: [
+      { index: true, element: <Academy /> },
+      {
+        path: `${ENVIRONMENT.ROUTING.BASE_URL}academy/masterBackend`,
+        element: <AcademyJava />
+      },
+      {
+        path: `${ENVIRONMENT.ROUTING.BASE_URL}academy/masterFrontend`,
+        element: <AcademyFrontend />
+      },
+      { path: "*", element: <NoMatch /> }
+    ]
+  },
   {
     path: `${ENVIRONMENT.ROUTING.BASE_URL}up`,
     element: <GeneralLayout />,
@@ -106,6 +108,18 @@ export default [
     element: <GeneralLayout />,
     children: [
       { index: true, element: <Career /> },
+      {
+        path: `${ENVIRONMENT.ROUTING.BASE_URL}career/academy`,
+        element: <CareerDetail />
+      },
+      { path: "*", element: <NoMatch /> }
+    ]
+  },
+  {
+    path: `${ENVIRONMENT.ROUTING.BASE_URL}blog`,
+    element: <GeneralLayout />,
+    children: [
+      { index: true, element: <Blog /> },
       { path: "*", element: <NoMatch /> }
     ]
   },

@@ -1,6 +1,7 @@
 import React from "react";
 
-import { Tabs, Collapse } from 'antd';
+import { Tabs, Row, Typography } from 'antd';
+const { Title } = Typography
 const { TabPane } = Tabs;
 
 // import style
@@ -73,6 +74,13 @@ const Career = (props) => {
 
     return (
         <div className="career-container">
+            <Row>
+                <Title
+                    level={1}
+                >
+                    BLOG
+                </Title>
+            </Row>
             <div className="card-container">
                 <Tabs type="card" className='career-tabs-container'>
                     <TabPane tab="Academy" key="1" className='career-academy-panel'>
