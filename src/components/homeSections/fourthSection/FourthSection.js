@@ -7,7 +7,10 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 // import style
-import './FourthSection.css'
+import './FourthSection.css';
+
+// import functions
+import { turnToUppercase } from '../../../utils/utilities'
 
 //import components
 import CustomCard from '../../functional_components/customCard/CustomCard'
@@ -35,7 +38,7 @@ const FourthSection = () => {
             }
         })
 
-        t1.from(singleEl, { y: 200, opacity: 0, stagger: 0.3, duration: 0.5, ease: 'power2.in' })
+        t1.from(singleEl, { y: 50, opacity: 0, stagger: 0.3, duration: 0.5, ease: 'power2.in' })
 
 
     }, [])
@@ -50,7 +53,7 @@ const FourthSection = () => {
                         level={1}
                         className={'singleEl-gsap'}
                     >
-                        {t('home.fourthSection.title')}
+                        {turnToUppercase(t('home.fourthSection.title'))}
                     </Title>
                 </Row>
                 <Row>

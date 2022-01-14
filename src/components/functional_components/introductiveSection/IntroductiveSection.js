@@ -75,20 +75,20 @@ const IntroductiveSection = (props) => {
             }
         })
 
-        t1.from(titleOut, { y: 500, opacity: 0, duration: 1, ease: 'back' })
+        t1.from(titleOut, { y: 100, opacity: 0, duration: 1, ease: 'back' })
 
-        t2.from(firstRowTitle, { y: 200, opacity: 0, duration: 1, ease: 'back' })
-        t2.from(firstRowIntro, { y: 200, opacity: 0, duration: 0.5, ease: 'baunce.in' })
-        t2.from(firstRowDesc1Desktop, { y: 200, opacity: 0, duration: 0.5, ease: 'baunce.in' })
-        t2.from(firstRowListDesktop, { y: 200, opacity: 0, duration: 0.5, ease: 'baunce.in' })
-        t2.from(firstRowDescMobile, { y: 200, opacity: 0, duration: 0.5, ease: 'baunce.in' })
-        t2.from(firstRowListMobile, { y: 200, opacity: 0, duration: 0.5, ease: 'baunce.in' })
+        t2.from(firstRowTitle, { y: 100, opacity: 0, duration: 1, ease: 'back' })
+        t2.from(firstRowIntro, { y: 50, opacity: 0, duration: 0.5, ease: 'baunce.in' })
+        t2.from(firstRowDesc1Desktop, { y: 50, opacity: 0, duration: 0.5, ease: 'baunce.in' })
+        t2.from(firstRowListDesktop, { y: 50, opacity: 0, duration: 0.5, ease: 'baunce.in' })
+        t2.from(firstRowDescMobile, { y: 50, opacity: 0, duration: 0.5, ease: 'baunce.in' })
+        t2.from(firstRowListMobile, { y: 50, opacity: 0, duration: 0.5, ease: 'baunce.in' })
         t2_2.from(firstRowImg1, { opacity: 0, duration: 1.5, ease: 'power2.in' })
 
 
         t3.from(imgRow2, { opacity: 0, duration: 1.5, ease: 'power2.in' })
-        t3.from(descDesktopRow2, { y: 200, opacity: 0, duration: 0.5, ease: 'baunce.in' })
-        t3.from(descMobileRow2, { y: 200, opacity: 0, duration: 0.5, ease: 'baunce.in' })
+        t3.from(descDesktopRow2, { y: 50, opacity: 0, duration: 0.5, ease: 'baunce.in' })
+        t3.from(descMobileRow2, { y: 50, opacity: 0, duration: 0.5, ease: 'baunce.in' })
     }, [])
 
 
@@ -285,7 +285,7 @@ const IntroductiveSection = (props) => {
                         <Col
                             xs={0}
                             md={0}
-                            lg={14}
+                            lg={13}
                             className="intro-section-desc-container"
                         >
                             <Paragraph

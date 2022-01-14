@@ -38,7 +38,7 @@ const SectionForm = (props) => {
             }
         })
 
-        t1.from(title, { y: 500, opacity: 0, duration: 1, ease: 'back' })
+        t1.from(title, { y: 100, opacity: 0, duration: 1, ease: 'back' })
         t1.from(desc, { opacity: 0, stragger: 0.3, duration: 0.5, ease: 'power2.in' })
 
     }, [])
@@ -63,7 +63,7 @@ const SectionForm = (props) => {
                     xs={24}
                     md={6}
                 >
-                    <Row className={'sec-form-row1-desc sec-form-desc-gsap'}>
+                    <Row className={'sec-form-row-desc sec-form-desc-gsap'}>
                         <CustomCard
                             descriptionClassName={props.descClassName}
                             cardDescription={t('home.fourthSection.location')}
@@ -72,7 +72,7 @@ const SectionForm = (props) => {
                         />
 
                     </Row>
-                    <Row className={'sec-form-desc-gsap'}>
+                    <Row className={'sec-form-row-desc sec-form-desc-gsap'}>
                         <CustomCard
                             descriptionClassName={props.descClassName}
                             cardDescription={t('home.fourthSection.contacts')}

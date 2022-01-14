@@ -73,13 +73,11 @@
     "fourthSection": {
       "title": "CONTATTACI",
       "location": "Dove siamo",
-      "hours": "orari",
       "contacts": "Contattaci",
       "placeholder": {
         "name": "Nome Cognome*",
-        "address": "Indirizzo",
-        "municipality": "Comune*",
-        "province": "Provincia*",
+        "state": "Stato*",
+        "town": "Città*",
         "message": "Scrivi qui il tuo messaggio"
       },
       "agreement": "Ho letto e accetto il trattamento dei miei dati personali*",

@@ -15,8 +15,8 @@
     "agreement": "[en] Should accept agreement"
   },
   "btn": {
-    "viewAll": "[en] View All",
-    "drag": "[en] Drag -br- for more",
+    "viewAll": "View All",
+    "drag": "Drag -br- for more",
     "apply": "[en] Candidati",
     "goBackAcademy": "[en] Torna all'academy"
   },
@@ -28,21 +28,20 @@
     }
   },
   "footer": {
-    "location": "[en] WHERE WE ARE",
-    "hours": "[en] HOURS",
-    "contacts": "[en] CONTACT US",
-    "legalNotes": "[en] LEGAL NOTES",
-    "vatNumber": "[en] VAT Number"
+    "location": "WHERE WE ARE",
+    "contacts": "CONTACT US",
+    "legalNotes": "LEGAL NOTES",
+    "vatNumber": "VAT Number"
   },
   "burgerMenu": {
-    "consulting": "[en] CONSULTING",
-    "academy": "[en] ACADEMY",
-    "up": "[en] UP",
-    "career": "[en] CAREER",
-    "whoWeAre": "[en] WHO WE ARE",
-    "contacts": "[en] CONTACTS",
-    "blog": "[en] BLOG",
-    "community": "[en] COMMUNITY"
+    "consulting": "CONSULTING",
+    "academy": "ACADEMY",
+    "up": "UP",
+    "career": "CAREER",
+    "whoWeAre": "WHO WE ARE",
+    "contacts": "CONTACTS",
+    "blog": "BLOG",
+    "community": "COMMUNITY"
   },
   "home": {
     "firstSection": {
@@ -55,23 +54,21 @@
       "title_vision": "VISION"
     },
     "thirdSection": {
-      "title": "Who we are?",
+      "title": "Who we are",
       "description": "[en] English lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
     "fourthSection": {
-      "title": "[en] CONTACT US",
-      "location": "[en] Where we are",
-      "hours": "[en] hours",
-      "contacts": "[en] Contact us",
+      "title": "Contact us",
+      "location": "Where we are",
+      "contacts": "Contact us",
       "placeholder": {
-        "name": "[en] Name Surname*",
-        "address": "[en] Address",
-        "municipality": "[en] Municipality*",
-        "province": "[en] Province*",
-        "message": "[en] Write here your message"
+        "name": "First Name Last Name*",
+        "state": "State*",
+        "town": "Town*",
+        "message": "Write here your message"
       },
       "agreement": "[en] I have read and accept the treatment of my personal data*",
-      "send_btn": "[en] Send"
+      "send_btn": "Send"
     }
   },
   "Consulting": {

@@ -84,10 +84,10 @@ const AcademyDetails = (props) => {
         })
 
 
-        t1.from(structureColTitle, { y: 200, opacity: 0, stragger: 0.3, duration: 1, ease: 'back' });
+        t1.from(structureColTitle, { y: 100, opacity: 0, stragger: 0.3, duration: 1, ease: 'back' });
         t2.from(sctructureColEl, { opacity: 0, stagger: 0.3, duration: 0.5, ease: 'power2.in' })
 
-        t3.from(programColTitle, { y: 200, opacity: 0, stragger: 0.3, duration: 1, ease: 'back' })
+        t3.from(programColTitle, { y: 100, opacity: 0, stragger: 0.3, duration: 1, ease: 'back' })
         t4.from(programColEl, { opacity: 0, stagger: 0.3, duration: 0.5, ease: 'power2.in' })
     })
 

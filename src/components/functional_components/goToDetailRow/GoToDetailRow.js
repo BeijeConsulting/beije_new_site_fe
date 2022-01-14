@@ -41,8 +41,8 @@ const GoToDetailRow = (props) => {
             }
         })
 
-        t1.from(singleCol1, { x: -200, opacity: 0, stagger: 0.5, duration: 0.5, ease: 'power2.in' })
-        t1.from(singleCol2, { x: -200, opacity: 0, stagger: 0.5, duration: 0.5, ease: 'power2.in' })
+        t1.from(singleCol1, { x: -50, opacity: 0, stagger: 0.5, duration: 0.5, ease: 'power2.in' })
+        t1.from(singleCol2, { x: -50, opacity: 0, stagger: 0.5, duration: 0.5, ease: 'power2.in' })
 
 
     }, [])

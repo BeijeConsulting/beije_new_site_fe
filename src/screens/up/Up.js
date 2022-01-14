@@ -82,11 +82,11 @@ const Up = (props) => {
             }
         })
 
-        t1.from(desc3, { y: 200, opacity: 0, duration: 0.5, ease: 'baunce.in' })
+        t1.from(desc3, { y: 50, opacity: 0, duration: 0.5, ease: 'baunce.in' })
 
-        t2.from(commentsSecTitle, { y: 200, opacity: 0, duration: 0.5, ease: 'baunce.in' })
+        t2.from(commentsSecTitle, { y: 50, opacity: 0, duration: 0.5, ease: 'baunce.in' })
 
-        t3.from(caseStudiesTitle, { y: 200, opacity: 0, duration: 0.5, ease: 'baunce.in' })
+        t3.from(caseStudiesTitle, { y: 50, opacity: 0, duration: 0.5, ease: 'baunce.in' })
         t3.from(caseStudiesSingleCard, { opacity: 0, stagger: 0.3, duration: 0.5, ease: 'power2.in' })
         t3.from(caseStudiesCarousel, { opacity: 0, duration: 0.5, ease: 'power2.in' })
         t3.from(caseStudiesBtn, { opacity: 0, duration: 0.5, ease: 'power2.in' })

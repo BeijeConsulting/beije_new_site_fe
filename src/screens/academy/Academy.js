@@ -119,21 +119,21 @@ const Academy = (props) => {
             }
         })
 
-        t1.from(secSectionTitle, { y: 200, opacity: 0, duration: 1, ease: 'back' })
+        t1.from(secSectionTitle, { y: 100, opacity: 0, duration: 1, ease: 'back' })
 
-        t2.from(secSectionDescMobile, { y: 500, opacity: 0, duration: 0.5, ease: 'baunce.in' })
+        t2.from(secSectionDescMobile, { y: 50, opacity: 0, duration: 0.5, ease: 'baunce.in' })
         t2.from(secSectionImg, { opacity: 0, duration: 0.5, ease: 'power2.in' })
-        t2.from(secSectionYouTube, { x: -200, opacity: 0, stagger: 0.3, duration: 0.5, ease: 'power2.in' })
-        t2.from(secSectionDescDesktop, { y: 500, opacity: 0, duration: 0.5, ease: 'baunce.in' })
+        t2.from(secSectionYouTube, { x: -50, opacity: 0, stagger: 0.3, duration: 0.5, ease: 'power2.in' })
+        t2.from(secSectionDescDesktop, { y: 50, opacity: 0, duration: 0.5, ease: 'baunce.in' })
 
-        t3.from(thirdSecTitle, { y: 200, opacity: 0, duration: 1, ease: 'back' })
+        t3.from(thirdSecTitle, { y: 100, opacity: 0, duration: 1, ease: 'back' })
         t3.from(thirdSecBtn, { opacity: 0, duration: 0.5, ease: 'power2.in' })
 
-        t4.from(percentageTitle, { y: 500, opacity: 0, duration: 1, ease: 'back' })
+        t4.from(percentageTitle, { y: 100, opacity: 0, duration: 1, ease: 'back' })
         t4.from(percentageSingleDesktop, { opacity: 0, stagger: 0.3, duration: 0.5, ease: 'power2.in' })
         t4.from(percentageSingleMobile, { opacity: 0, duration: 0.5, ease: 'power2.in' })
 
-        t5.from(commentTitle, { y: 500, opacity: 0, duration: 1, ease: 'back' })
+        t5.from(commentTitle, { y: 100, opacity: 0, duration: 1, ease: 'back' })
         t5.from(singleComment, { opacity: 0, duration: 0.5, ease: 'power2.in' })
 
         return () => window.removeEventListener("scroll", handleScroll);

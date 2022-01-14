@@ -71,9 +71,8 @@ const CustomForm = (props) => {
                     {
                         name: "",
                         email: "",
-                        address: "",
-                        municipality: "",
-                        province: "",
+                        state: "",
+                        town: "",
                         message: ""
                     }
                 }}
@@ -118,7 +117,7 @@ const CustomForm = (props) => {
 
                 {props.moreInfo === true &&
                     <Row>
-                        <Col xs={0} md={11}>
+                        {/* <Col xs={0} md={11}>
                             <Form.Item
                                 name={["info_message", "address"]}
                                 className="form-input-gsap"
@@ -128,35 +127,35 @@ const CustomForm = (props) => {
                                     className='form-input'
                                 />
                             </Form.Item>
-                        </Col>
-                        <Col xs={0} md={1} />
-                        <Col xs={0} md={6}>
+                        </Col> */}
+                        {/* <Col xs={0} md={1} /> */}
+                        <Col xs={0} md={12}>
                             <Form.Item
 
-                                name={["info_message", "municipality"]}
+                                name={["info_message", "state"]}
                                 rules={[
                                     { required: true }
                                 ]}
                                 className="form-input-gsap"
                             >
                                 <Input
-                                    placeholder={t('home.fourthSection.placeholder.municipality')}
+                                    placeholder={t('home.fourthSection.placeholder.state')}
                                     className='form-input'
                                 />
                             </Form.Item>
                         </Col>
                         <Col xs={0} md={1} />
-                        <Col xs={0} md={5}>
+                        <Col xs={0} md={11}>
                             <Form.Item
 
-                                name={["info_message", "province"]}
+                                name={["info_message", "town"]}
                                 rules={[
                                     { required: true }
                                 ]}
                                 className="form-input-gsap"
                             >
                                 <Input
-                                    placeholder={t('home.fourthSection.placeholder.province')}
+                                    placeholder={t('home.fourthSection.placeholder.town')}
                                     className='form-input'
                                 />
                             </Form.Item>

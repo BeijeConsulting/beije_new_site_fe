@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Row, Col } from "antd";
@@ -10,6 +10,9 @@ import { setColorHeader } from "../../redux/ducks/colorHeaderDuck";
 // import style
 import './WhoWeAre.css'
 
+// import functions
+import { divideText, turnToUppercase } from "../../utils/utilities";
+
 //import constants
 import { whoWeAre_value_list } from "../../utils/properties";
 
@@ -17,8 +20,12 @@ import { whoWeAre_value_list } from "../../utils/properties";
 import CustomCard from "../../components/functional_components/customCard/CustomCard";
 import CustomOwlCarousel from "../../components/hooks_components/customOwlCarousel/CustomOwlCarousel";
 import SubsectionTitleImg from "../../components/hooks_components/subsectionTitleImg/SubsectionTitleImg";
+import CustomButton from "../../components/functional_components/Button/CustomButton";
 
 const WhoWeAre = (props) => {
+    const [state, setState] = useState({
+        showDragBtn: true
+    })
 
     const { t } = useTranslation()
 
@@ -35,6 +42,13 @@ const WhoWeAre = (props) => {
         }
     }
 
+    const draggedCarousel = () => {
+        setState({
+            ...state,
+            showDragBtn: false
+        })
+    }
+
     return (
         <div className="whoWeAre-container">
 
@@ -48,6 +62,13 @@ const WhoWeAre = (props) => {
                         />
                     </Col>
                     <Col span={24}>
+                        {state.showDragBtn &&
+
+                            <CustomButton
+                                type='drag-more-btn'
+                                content={divideText(turnToUppercase(t('btn.drag')), '-BR-')}
+                            />
+                        }
                         <CustomOwlCarousel
                             item_superLargeDesktop={6}
                             item_mediumDesktop={4}
@@ -60,6 +81,7 @@ const WhoWeAre = (props) => {
                             infinite={true}
                             showRole={false}
                             showDesc={true}
+                            dragged={draggedCarousel}
 
                             carouselClassName='whoWeAre-carousel-container'
                             singleElClassName='whoWeAre-single-el-carousel'
