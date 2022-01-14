@@ -21,7 +21,7 @@
 }
 
 .home-last-section {
-    background-color: #fff;
+    background-color: var(--home-bg-color-fourth-sec);
 }
 
 
