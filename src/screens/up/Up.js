@@ -154,8 +154,6 @@ const Up = (props) => {
                     titleLight={true}
                     bg1='up-bg1'
                     bg2='up-bg2'
-                    intro={t('Up.intro')}
-                    introLight={true}
                     desc1={t('Up.desc1')}
                     desc1Light={true}
                     desc2={t('Up.desc2')}
@@ -265,11 +263,10 @@ const Up = (props) => {
 
             <section className={'academy-form-section consulting-gsap-sixth-section'}>
                 <SectionForm
+                    descClassName={'up-form-desc'}
                     classNameLongLine={'up-long-line'}
                     classNameTitle={'up-form-title'}
                     title={turnToUppercase(t('Up.form_message_title'))}
-                    cardParagraph={t(`Up.form_message_desc`)}
-                    paragraphClassName={'up-form-desc'}
                     classNameTextArea={'up-form-text-area'}
                     typeBtn='form-btn-light'
                 />

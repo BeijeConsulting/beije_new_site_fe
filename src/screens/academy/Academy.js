@@ -395,8 +395,6 @@ const Academy = (props) => {
                 <section className={'academy-form-section consulting-gsap-sixth-section'}>
                     <SectionForm
                         title={t('Academy.form_message_title')}
-                        cardParagraph={t(`Academy.form_message_desc`)}
-                        paragraphClassName={'academy-info-desc'}
                     />
                 </section>
 

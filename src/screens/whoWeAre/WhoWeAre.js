@@ -50,13 +50,22 @@ const WhoWeAre = (props) => {
                     <Col span={24}>
                         <CustomOwlCarousel
                             item_superLargeDesktop={6}
-                            item_desktop={4}
+                            item_mediumDesktop={4}
+                            item_desktop={3}
                             item_tablet={4}
                             item_bigMobile={4}
                             item_mobile={3}
                             item_smallmobile={2}
                             item_extraSmallMobile={2}
                             infinite={true}
+                            showRole={false}
+                            showDesc={true}
+
+                            carouselClassName='whoWeAre-carousel-container'
+                            singleElClassName='whoWeAre-single-el-carousel'
+                            profilePictureClassName='whoWeAre-profile-picture-carousel'
+                            lableContainerClassName='whoWeAre-carousel-lable-container'
+                            lableTxtDescClassName='whoWeAre-carousel-lable-desc'
                         />
                     </Col>
                 </Row>

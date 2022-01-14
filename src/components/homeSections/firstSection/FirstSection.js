@@ -12,7 +12,7 @@ import Navbar from "../../functional_components/navbar/Navbar"
 import ScrollButton from "../../functional_components/scrollButton/ScrollButton"
 
 
-const FirstSection = (props) => {
+const FirstSection = () => {
 
     const { t } = useTranslation()
 

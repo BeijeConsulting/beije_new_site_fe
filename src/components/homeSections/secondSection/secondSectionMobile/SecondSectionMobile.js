@@ -51,8 +51,8 @@ const SecondSectionMobile = (props) => {
             }
         })
 
-        t1.from(container, { y: 200, opacity: 0, duration: 1, ease: 'power2.in' })
-        t2.from(singleEl, { y: 200, opacity: 0, duration: 1.5, ease: 'power2.in' })
+        t1.from(container, { y: 50, opacity: 0, duration: 1, ease: 'power2.in' })
+        t2.from(singleEl, { y: 50, opacity: 0, duration: 1.5, ease: 'power2.in' })
     }, [])
 
     return (

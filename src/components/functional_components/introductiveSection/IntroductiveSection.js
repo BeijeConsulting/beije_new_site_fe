@@ -148,10 +148,13 @@ const IntroductiveSection = (props) => {
 
             {/* Start of firt row */}
             <Row className="intro-section-first-row  intro-sec-row1-gsap">
+                {/* Text col */}
                 <Col
                     xs={24}
-                    md={12}
+                    md={24}
+                    lg={13}
                 >
+                    {/* Title */}
                     {props.titleInColumn &&
                         <Row>
                             <Title
@@ -162,13 +165,17 @@ const IntroductiveSection = (props) => {
                             </Title>
                         </Row>
                     }
-                    <Row className={'intro-section-intro-container'}>
-                        <Paragraph
-                            className={`intro-section-intro intro-sec-gsap-intro ${props.introLight ? 'txt-light' : ''}`}
-                        >
-                            {props.intro}
-                        </Paragraph>
-                    </Row>
+                    {/* Introduction */}
+                    {props.intro &&
+                        <Row className={'intro-section-intro-container'}>
+                            <Paragraph
+                                className={`intro-section-intro intro-sec-gsap-intro ${props.introLight ? 'txt-light' : ''}`}
+                            >
+                                {props.intro}
+                            </Paragraph>
+                        </Row>
+                    }
+                    {/* Description for desktop - next to img */}
                     {
                         props.desc1Desktop &&
                         <Row className={'intro-section-desc1-container intro-section-desc-container'}>
@@ -189,6 +196,7 @@ const IntroductiveSection = (props) => {
                         </Row>
                     }
                 </Col>
+                {/* Space for Img */}
                 <div
                     className={switchClassImg1()}
                 >
@@ -197,7 +205,8 @@ const IntroductiveSection = (props) => {
 
                 <Col
                     xs={24}
-                    md={0}
+                    md={24}
+                    lg={0}
                 >
                     <Paragraph
                         className={`intro-section-desc intro-sec-gsap-desc-mobile ${props.desc1Light ? 'txt-light' : ''}`}
@@ -210,7 +219,8 @@ const IntroductiveSection = (props) => {
                     props.listMobile && props.listToPrint !== undefined &&
                     <Col
                         xs={24}
-                        md={0}
+                        md={24}
+                        lg={0}
                     >
                         <ul className="intro-sec-gsap-list-mobile">
                             {props.listToPrint.map(printList)}
@@ -259,7 +269,8 @@ const IntroductiveSection = (props) => {
                         props.desc2Mobile &&
                         <Col
                             xs={24}
-                            md={12}
+                            md={24}
+                            lg={13}
                             className="intro-section-desc-container"
                         >
                             <Paragraph
@@ -273,7 +284,8 @@ const IntroductiveSection = (props) => {
                         !props.desc2Mobile &&
                         <Col
                             xs={0}
-                            md={12}
+                            md={0}
+                            lg={14}
                             className="intro-section-desc-container"
                         >
                             <Paragraph

@@ -24,6 +24,9 @@
     text-transform: uppercase;
 }
 
+.whoWeAre-single-el-carousel {}
+
+
 /* Value section */
 .whoWeAre-value-img {
     background-image: var(--who-we-are-value-bg);
@@ -55,6 +58,9 @@
 }
 
 @media screen and (min-width: 1024px) {
+    .whoWeAre-profile-sec {
+        margin-bottom: -30px;
+    }
 
     .whoWeAre-sub-section-title {
         padding-left: calc(50% + 100px);
@@ -62,5 +68,24 @@
 
     .whoWeAre-sub-section-desc-container {
         padding-left: 100px;
+    }
+
+    .whoWeAre-carousel-container .react-multi-carousel-track {
+        margin-bottom: 210px !important;
+    }
+
+    .whoWeAre-profile-picture-carousel {
+        width: 270px;
+        height: 700px !important;
+    }
+
+    .whoWeAre-single-el-carousel:hover .whoWeAre-carousel-lable-container {
+        width: 270px;
+        height: 380px;
+        bottom: -198px;
+    }
+
+    .whoWeAre-carousel-lable-desc {
+        font-size: 15px !important;
     }
 }

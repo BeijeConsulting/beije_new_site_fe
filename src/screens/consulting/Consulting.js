@@ -229,7 +229,6 @@ const Consulting = (props) => {
                 <section className={'consulting-gsap-fourth-section'}>
                     <SectionForm
                         title={turnToUppercase(t('Consulting.title_add_info'))}
-                        cardParagraph={t(`Consulting.description_add_info`)}
                     />
                 </section>
             </div>

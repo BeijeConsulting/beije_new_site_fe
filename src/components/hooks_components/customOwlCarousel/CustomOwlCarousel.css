@@ -1,33 +1,26 @@
 :root {
     --profile_bg1: url(../../../assets/images/profile_picture/francesco_cesana.jpg);
     --profile_bg2: url(../../../assets/images/profile_picture/erica_mauro.jpg);
-    --profile_bg3: url(../../../assets/images/profile_picture/marianna_fulginiti.jpg);
-    --profile_bg4: url(../../../assets/images/profile_picture/ivo_mosca.jpg);
-    --profile_bg5: url(../../../assets/images/profile_picture/maria_rodrigez.jpg);
-    --profile_bg6: url(../../../assets/images/profile_picture/chiara_balsamini.jpg);
-    --profile_bg7: url(../../../assets/images/profile_picture/roberto_brogi.jpg);
-    --profile_bg8: url(../../../assets/images/profile_picture/francesca_ferioli.jpg);
+    --profile_bg3: url(../../../assets/images/profile_picture/chiara_balsamini.jpg);
+    --profile_bg4: url(../../../assets/images/profile_picture/marianna_fulginiti.jpg);
+    --profile_bg5: url(../../../assets/images/profile_picture/roberto_brogi.jpg);
+    --profile_bg6: url(../../../assets/images/profile_picture/ivo_mosca.jpg);
+    --profile_bg7: url(../../../assets/images/profile_picture/francesca_ferioli.jpg);
+    --profile_bg8: url(../../../assets/images/profile_picture/maria_rodrigez.jpg);
     --profile_bg9: url(../../../assets/images/profile_picture/francesca_bellini.jpg);
-    --profile_bg10: url(../../../assets/images/profile_picture/maria_rodrigez.jpg);
+    /* --profile_bg10:  */
     ----white-filter-profile-picture: linear-gradient(360deg, rgba(255, 255, 255, 0.29) 0%, rgba(255, 255, 255, 0.29) 54.69%, rgba(255, 255, 255, 0.29) 100%);
     --lable-color: var(--second-color);
     --name-lable-color: var(--first-color);
 }
 
-.owl-item {
+/* .owl-item {
     display: flex;
-}
-
-.carousel-container {
-    height: 100%;
-    display: flex;
-    align-items: flex-end;
-    z-index: 0;
 }
 
 .owl-stage-outer, .owl-stage, .owl-item {
     height: 100% !important;
-}
+} */
 
 .carousel-profile-picture {
     position: relative;
@@ -219,6 +212,20 @@
     .custom-carousel-lable-name {
         color: var(--name-lable-color);
     }
+
+    .picture-top {
+        margin-bottom: 50px;
+    }
+
+    .picture-middle {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    .picture-bottom {
+        margin-top: 50px;
+    }
+
 }
 
 @media screen and (min-width: 1440px) {

@@ -40,15 +40,19 @@ const CustomOwlCarousel = (props) => {
     const responsive = {
         superLargeDesktop: {
             // the naming can be any, depends on you.
-            breakpoint: { max: 4000, min: 1441 },
+            breakpoint: { max: 4000, min: 2001 },
             items: props.item_superLargeDesktop
         },
+        mediumDesktop: {
+            breakpoint: { max: 2000, min: 1440 },
+            items: props.item_mediumDesktop
+        },
         desktop: {
-            breakpoint: { max: 1440, min: 1025 },
+            breakpoint: { max: 1439, min: 1024 },
             items: props.item_desktop
         },
         tablet: {
-            breakpoint: { max: 1024, min: 769 },
+            breakpoint: { max: 1023, min: 769 },
             items: props.item_tablet
         },
         bigMobile: {
@@ -74,21 +78,26 @@ const CustomOwlCarousel = (props) => {
 
             < div
                 key={key}
-                className={get(item, 'classNameSingleEl', '')}
+                className={`${get(item, 'classNameSingleEl', '')} ${props.singleElClassName}`}
             >
                 <div
-                    className={`item ${item.classNameBgImg}`}
+                    className={`item ${item.classNameBgImg} ${props.profilePictureClassName}`}
                 >
 
-                    <div className={item.classNameLable} role={props.roleDiv} aria-label={item.alt}>
-                        <Text className='custom-carousel-lable-text custom-carousel-lable-name'>
+                    <div className={`${item.classNameLable} ${props.lableContainerClassName}`} role={props.roleDiv} aria-label={item.alt}>
+                        <Text className={`custom-carousel-lable-text custom-carousel-lable-name ${props.lableTxtClassName}`}>
                             {turnToUppercase(item.name)}
                         </Text>
-                        <Text className='custom-carousel-lable-text custom-carousel-lable-name'>
+                        <Text className={`custom-carousel-lable-text custom-carousel-lable-name ${props.lableTxtClassName}`}>
                             {turnToUppercase(item.surname)}
                         </Text>
-                        <Text className='custom-carousel-lable-text custom-carousel-lable-role'>
-                            {item.role}
+                        <Text className={`custom-carousel-lable-text custom-carousel-lable-role ${props.lableTxtDescClassName}`}>
+                            {props.showRole &&
+                                item.role
+                            }
+                            {props.showDesc &&
+                                item.description
+                            }
                         </Text>
                     </div>
                 </div>
@@ -112,6 +121,7 @@ const CustomOwlCarousel = (props) => {
             autoPlay={props.autoPlay}
             autoPlaySpeed={props.autoPlaySpeed}
             afterChange={props.dragged}
+            className={props.carouselClassName}
         >
             {
                 props.objCarousel &&
@@ -130,7 +140,7 @@ const CustomOwlCarousel = (props) => {
 CustomOwlCarousel.defaultProps = {
     loop: true,
     mergeFit: true,
-    classNameContainer: 'carousel-container',
+    // classNameContainer: 'carousel-container',
     itemsCarousel: carouselProfile,
     dots: false,
     roleDiv: 'img',
@@ -141,6 +151,7 @@ CustomOwlCarousel.defaultProps = {
     keyBoardControl: false,
     infinite: true,
     item_superLargeDesktop: 4,
+    item_mediumDesktop: 4,
     item_desktop: 4,
     item_tablet: 4,
     item_bigMobile: 3,
@@ -148,7 +159,10 @@ CustomOwlCarousel.defaultProps = {
     item_smallmobile: 2,
     item_extraSmallMobile: 2,
     objCarousel: true,
-    autoPlay: false
+    autoPlay: false,
+
+    showRole: true,
+    showDesc: false
 }
 
 export default CustomOwlCarousel
