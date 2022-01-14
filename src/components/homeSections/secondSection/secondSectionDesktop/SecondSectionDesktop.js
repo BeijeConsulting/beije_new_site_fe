@@ -50,8 +50,8 @@ const SecondSectionDesktop = () => {
             }
         })
 
-        t1.from(container, { y: 50, opacity: 0, stagger: 0.5, duration: 1, ease: 'power2.in' })
-        t2.from(singleEl, { y: 50, opacity: 0, stagger: 0.5, duration: 1.5, ease: 'power2.in' })
+        t1.from(container, { y: 50, opacity: 0, stagger: 0.2, duration: 0.5, ease: 'power2.in' })
+        t2.from(singleEl, { y: 50, opacity: 0, stagger: 0.2, duration: 0.5, ease: 'power2.in' })
     }, [])
 
     const printCard = (item, key) => {

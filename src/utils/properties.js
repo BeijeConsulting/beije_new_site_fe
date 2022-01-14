@@ -8,8 +8,8 @@ import icon_facebook from '../assets/icons/social_icon/f_facebook_dark.png'
 import icon_instagram from '../assets/icons/social_icon/in_instagram_dark.png'
 import icon_youTube from '../assets/icons/social_icon/youtube_dark.png'
 
-//assets used in home page
-// import official_video_home from '../assets/videos/official_video_home.mp4'
+// assets used in home
+import official_video_home from '../assets/videos/video_home.mp4'
 
 //assets used in consulting page
 import img1_consulting from '../assets/images/consulting/consulting1.jpg'
@@ -24,7 +24,7 @@ import img2_academy from '../assets/images/academy/academy2.jpg'
 
 
 //export assets
-// export const video_home = official_video_home;
+export const video_home = official_video_home;
 export const consulting1 = img1_consulting;
 export const consulting2 = img2_consulting;
 export const academy1 = img1_academy;

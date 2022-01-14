@@ -81,12 +81,12 @@ const Consulting = (props) => {
 
         t1.from(percentage1Title, { y: 100, opacity: 0, duration: 1, ease: 'back' })
         t1.from(percentage1SingleDesktop, { opacity: 0, stagger: 0.3, duration: 0.5, ease: 'power2.in' })
-        t1_2.from(percentage1SingleMobile, { opacity: 0, duration: 1, ease: 'power2.in' })
+        t1_2.from(percentage1SingleMobile, { opacity: 0, duration: 0.5, ease: 'power2.in' })
 
         t2.from(percentage2Title, { y: 100, opacity: 0, duration: 1, ease: 'back' })
         t2.from(percentage2SingleDesktop, { opacity: 0, stagger: 0.3, duration: 0.5, ease: 'power2.in' })
         t2.from(percentage2SingleMobile, { opacity: 0, duration: 0.5, ease: 'power2.in' })
-        t2.from(percentage2DataSurvey, { opacity: 0, duration: 1, ease: 'power2.in' })
+        t2.from(percentage2DataSurvey, { opacity: 0, duration: 0.5, ease: 'power2.in' })
 
         return () => window.removeEventListener("scroll", handleScroll);
     });

@@ -17,6 +17,7 @@ import './Home.css';
 
 //import components
 import ContainerSectionScroll from "../../components/functional_components/containerSectionScroll/ContainerSectionScroll";
+import BackgroundVideo from '../../components/functional_components/backgroundVideo/BackgroundVideo'
 import FirstSection from "../../components/homeSections/firstSection/FirstSection";
 import SecondSectionDesktop from "../../components/homeSections/secondSection/secondSectionDesktop/SecondSectionDesktop";
 import SecondSectionMobile from "../../components/homeSections/secondSection/secondSectionMobile/SecondSectionMobile";
@@ -25,14 +26,11 @@ import FourthSection from "../../components/homeSections/fourthSection/FourthSec
 import CustomFooter from "../../components/functional_components/customFooter/CustomFooter";
 
 //import constats
-import { cardWhoWeAre } from "../../utils/properties";
+import { cardWhoWeAre, video_home } from "../../utils/properties";
 import SecondSectionTablet from "../../components/homeSections/secondSection/secondSectionTablet/SecondSectionTablet";
 const historyObj = cardWhoWeAre[1];
 const missionObj = cardWhoWeAre[2];
 const visionObj = cardWhoWeAre[3];
-
-// import BackgroundVideo from '../../components/functional_components/backgroundVideo/BackgroundVideo'
-// import video_home from '../../assets/video/prova.mp4'
 
 
 const Home = (props) => {
@@ -65,15 +63,15 @@ const Home = (props) => {
     panels.forEach((panel, i) => {
       ScrollTrigger.create({
         trigger: panel,
-        start: "top bottom",
+        // start: "top bottom",
       });
     });
 
-    ScrollTrigger.create({
-      start: 0,
-      end: "max",
-      snap: 1 / (panels.length - 1)
-    })
+    // ScrollTrigger.create({
+    //   start: 0,
+    //   end: "max",
+    //   snap: 1 / (panels.length - 1)
+    // })
 
     return () => {
       window.removeEventListener("resize", updateMedia);
@@ -98,12 +96,12 @@ const Home = (props) => {
         className="home-section gsap-home-first-section"
       >
         <div className='home-video-filter'>
-          {/* <BackgroundVideo
+          <BackgroundVideo
             autoPlay
             muted
             loop
             src={video_home}
-          /> */}
+          />
           <ContainerSectionScroll>
             <FirstSection
             // callbackScroll={ }
