@@ -68,7 +68,7 @@ const Home = (props) => {
     });
 
     ScrollTrigger.create({
-      start: 10,
+      start: 0,
       end: "max+1",
       snap: 1 / (panels.length - 1)
     })
