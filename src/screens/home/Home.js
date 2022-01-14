@@ -63,15 +63,15 @@ const Home = (props) => {
     panels.forEach((panel, i) => {
       ScrollTrigger.create({
         trigger: panel,
-        // start: "top bottom",
+        start: "top bottom",
       });
     });
 
-    // ScrollTrigger.create({
-    //   start: 0,
-    //   end: "max",
-    //   snap: 1 / (panels.length - 1)
-    // })
+    ScrollTrigger.create({
+      start: 10,
+      end: "max+1",
+      snap: 1 / (panels.length - 1)
+    })
 
     return () => {
       window.removeEventListener("resize", updateMedia);
