@@ -7,6 +7,7 @@ import menuDuck from '../ducks/menuDuck';
 import colorDuck from '../ducks/colorDuck'
 import visibilityDuck from '../ducks/visibilityDuck';
 import colorHeaderDuck from '../ducks/colorHeaderDuck';
+import pageFocusDuck from '../ducks/pageFocusDuck';
 
 // const rootReducer = combineReducers({
 
@@ -19,7 +20,8 @@ const appReducer = combineReducers({
   menuDuck,
   colorDuck,
   visibilityDuck,
-  colorHeaderDuck
+  colorHeaderDuck,
+  pageFocusDuck
 })
 
 const rootReducer = (state, action) => {

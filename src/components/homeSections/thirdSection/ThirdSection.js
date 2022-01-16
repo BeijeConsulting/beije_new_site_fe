@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Row, Col, Layout } from "antd";
 
@@ -11,6 +12,9 @@ import './ThirdSection.css'
 
 //import functions
 import { turnToUppercase, divideText } from "../../../utils/utilities";
+
+// import constants
+import { ENVIRONMENT } from "../../../utils/properties";
 
 //import components
 import CustomCard from "../../functional_components/customCard/CustomCard";
@@ -26,6 +30,7 @@ const ThirdSection = () => {
 
     const { t } = useTranslation()
     const ref = useRef(null);
+    const navigate = useNavigate();
 
     const draggedCarousel = () => {
         setState({
@@ -50,9 +55,13 @@ const ThirdSection = () => {
         })
 
         // t1.from(percentage1SingleDesktop, { opacity: 0, stagger: 0.3, duration: 0.5, ease: 'power2.in' });
-        t1.from(singleEl, { y: 50, opacity: 0, stagger: 0.3, duration: 1.5, ease: 'power2.in' })
+        t1.from(singleEl, { y: 50, opacity: 0, stagger: 0.3, duration: 0.5, ease: 'power2.in' })
 
     }, [])
+
+    const goToWhoWeAre = () => {
+        navigate(`${ENVIRONMENT.ROUTING.BASE_URL}whoweare`)
+    }
 
     return (
         <Layout
@@ -91,6 +100,7 @@ const ThirdSection = () => {
                         <CustomButton
                             type={'view-all-btn'}
                             content={<ViewAllButton />}
+                            clickCallback={goToWhoWeAre}
                         />
                     </Col>
                 </Row>

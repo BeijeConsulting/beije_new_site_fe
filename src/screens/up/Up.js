@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 
-import { Row, Col, Carousel } from 'antd'
+import { Row, Col } from 'antd'
 
 //import gsap
 import { gsap } from 'gsap'
@@ -16,7 +16,7 @@ import { setColor } from '../../redux/ducks/colorDuck'
 import { turnToUppercase } from "../../utils/utilities";
 
 // import constants
-import { up_comments, up_case_studies } from "../../utils/properties";
+import { up_comments /*, up_case_studies */ } from "../../utils/properties";
 
 // import style
 import './Up.css'
@@ -27,9 +27,10 @@ import CustomCard from '../../components/functional_components/customCard/Custom
 import SectionSubtitle from "../../components/functional_components/sectionSubtitle/SectionSubtitle";
 import Comments from "../../components/functional_components/comments/Comments";
 import CustomOwlCarousel from "../../components/hooks_components/customOwlCarousel/CustomOwlCarousel";
-import CustomButton from "../../components/functional_components/Button/CustomButton";
-import ViewAllButton from "../../components/functional_components/viewAllButton/ViewAllButton";
+// import CustomButton from "../../components/functional_components/Button/CustomButton";
+// import ViewAllButton from "../../components/functional_components/viewAllButton/ViewAllButton";
 import SectionForm from "../../components/functional_components/sectionForm/SectionForm";
+import { initPageFocus, setPageFocus } from "../../redux/ducks/pageFocusDuck";
 
 const Up = (props) => {
 
@@ -46,6 +47,7 @@ const Up = (props) => {
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
         props.dispatch(setColor(true))
+        props.dispatch(setPageFocus('up'))
 
         const element = ref.current;
 
@@ -92,7 +94,10 @@ const Up = (props) => {
         t3.from(caseStudiesBtn, { opacity: 0, duration: 0.5, ease: 'power2.in' })
 
 
-        return () => window.removeEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+            props.dispatch(initPageFocus())
+        };
     });
 
     const handleScroll = () => {
@@ -115,33 +120,33 @@ const Up = (props) => {
         )
     }
 
-    const printCaseStudies = (item, key) => {
-        return (
-            <CustomCard
-                key={key}
-                cardClassName={item.containerClassName}
-                cardParagraph={turnToUppercase(item.title)}
-                paragraphClassName={item.titleClassName}
-            />
-        )
-    }
+    // const printCaseStudies = (item, key) => {
+    //     return (
+    //         <CustomCard
+    //             key={key}
+    //             cardClassName={item.containerClassName}
+    //             cardParagraph={turnToUppercase(item.title)}
+    //             paragraphClassName={item.titleClassName}
+    //         />
+    //     )
+    // }
 
-    const printCaseStudiesDesktop = (item, key) => {
-        return (
-            <Col
-                key={key}
-                xs={0}
-                md={8}
-                className="up-case-studies-single-card-gsap"
-            >
-                <CustomCard
-                    cardClassName={item.containerClassName}
-                    cardParagraph={turnToUppercase(item.title)}
-                    paragraphClassName={item.titleClassName}
-                />
-            </Col>
-        )
-    }
+    // const printCaseStudiesDesktop = (item, key) => {
+    //     return (
+    //         <Col
+    //             key={key}
+    //             xs={0}
+    //             md={8}
+    //             className="up-case-studies-single-card-gsap"
+    //         >
+    //             <CustomCard
+    //                 cardClassName={item.containerClassName}
+    //                 cardParagraph={turnToUppercase(item.title)}
+    //                 paragraphClassName={item.titleClassName}
+    //             />
+    //         </Col>
+    //     )
+    // }
 
     return (
         <div
@@ -182,39 +187,32 @@ const Up = (props) => {
                         />
                     </Col>
                     <Col
-                        xs={24}
-                        lg={0}
+                        span={24}
                     >
-                        <Carousel
-                            autoplay
-                            dots={false}
-                            className="academy-comments-carousel-ant"
+                        <CustomOwlCarousel
+                            item_superLargeDesktop={2}
+                            item_mediumDesktop={2}
+                            item_desktop={2}
+                            item_tablet={2}
+                            item_bigMobile={1}
+                            item_mobile={1}
+                            item_smallmobile={1}
+                            item_extraSmallMobile={1}
+                            objCarousel={false}
+                            className="academy-gsap-single-comment"
+
+                            infinite={true}
+                            autoPlay={true}
+                            autoPlaySpeed={3000}
                         >
                             {up_comments.map(printComments)}
-                        </Carousel>
-                    </Col>
-                    <Col
-                        xs={0}
-                        lg={12}
-                    >
-                        <Comments
-                            profilePictureImg={'up-comments-profile-picture1'}
-                        />
-                    </Col>
-                    <Col
-                        xs={0}
-                        lg={12}
-
-                        className={'academy-comments-section-second-comment-col'}
-                    >
-                        <Comments
-                            profilePictureImg={'up-comments-profile-picture2'}
-                        />
+                        </CustomOwlCarousel>
                     </Col>
                 </Row>
             </section>
 
-            <section className="up-case-studies-section up-case-studies-gsap">
+            {/* SECTION CASE STUDIES COMMENTED FOR THE MOMENT */}
+            {/* <section className="up-case-studies-section up-case-studies-gsap">
                 <Row>
                     <Col
                         xs={24}
@@ -259,7 +257,7 @@ const Up = (props) => {
                         />
                     </Row>
                 </Row>
-            </section>
+            </section> */}
 
             <section className={'academy-form-section consulting-gsap-sixth-section'}>
                 <SectionForm

@@ -77,8 +77,9 @@ const Career = (props) => {
             <Row>
                 <Title
                     level={1}
+                    className="career-title"
                 >
-                    BLOG
+                    Career
                 </Title>
             </Row>
             <div className="card-container">

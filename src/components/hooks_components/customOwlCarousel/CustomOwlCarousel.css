@@ -211,6 +211,7 @@
 
     .custom-carousel-lable-name {
         color: var(--name-lable-color);
+        font-weight: bold !important;
     }
 
     .picture-top {

@@ -6,6 +6,9 @@ const { Link } = Typography;
 import { gsap } from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+// import redux
+import { connect } from "react-redux";
+
 //import constants
 import { ENVIRONMENT } from "../../../utils/properties";
 
@@ -44,30 +47,48 @@ const Navbar = (props) => {
             className={props.classNameRow}
             ref={ref}
         >
-            <Col className={`gsap-home-link ${props.classNameCol}`}>
-
+            <Col className={`gsap-home-link navbar-link ${props.classNameCol}`}>
                 <Link
                     href={props.href_consulting}
                     type={props.type}
                     className={props.classNameLink}>
                     CONSULTING
                 </Link>
+                {
+                    props.pageFocusDuck.page === 'consulting' &&
+                    <div className={'test-link-underline'}>
+
+                    </div>
+                }
+
             </Col>
-            <Col className={`gsap-home-link ${props.classNameCol}`}>
+            <Col className={`gsap-home-link navbar-link ${props.classNameCol}`}>
                 <Link
                     href={props.href_academy}
                     type={props.type}
                     className={props.classNameLink}>
                     TALENT ACADEMY
                 </Link>
+                {
+                    props.pageFocusDuck.page === 'academy' &&
+                    <div className={'test-link-underline'}>
+
+                    </div>
+                }
             </Col>
-            <Col className={`gsap-home-link ${props.classNameCol}`}>
+            <Col className={`gsap-home-link navbar-link ${props.classNameCol}`}>
                 <Link
                     href={props.href_up}
                     type={props.type}
                     className={props.classNameLink}>
                     UP
                 </Link>
+                {
+                    props.pageFocusDuck.page === 'up' &&
+                    <div className={'test-link-underline-light'}>
+
+                    </div>
+                }
             </Col>
         </Row>
     )
@@ -81,5 +102,11 @@ Navbar.defaultProps = {
     classNameLink: 'navbar-general-link',
 }
 
+const mapStateToProps = state => (
+    {
+        pageFocusDuck: state.pageFocusDuck
+    }
+)
 
-export default Navbar
+
+export default connect(mapStateToProps)(Navbar)

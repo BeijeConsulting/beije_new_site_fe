@@ -30,7 +30,7 @@ const GoToDetailRow = (props) => {
     useEffect(() => {
         const element = ref.current;
 
-        const singleCol1 = element.querySelectorAll('.go-to-detail-row-single-col')
+        const singleCol1 = element.querySelector('.go-to-detail-row-single-col')
         const singleCol2 = element.querySelectorAll('.go-to-detail-row-col');
 
 
@@ -41,8 +41,8 @@ const GoToDetailRow = (props) => {
             }
         })
 
-        t1.from(singleCol1, { x: -50, opacity: 0, stagger: 0.5, duration: 0.5, ease: 'power2.in' })
-        t1.from(singleCol2, { x: -50, opacity: 0, stagger: 0.5, duration: 0.5, ease: 'power2.in' })
+        t1.from(singleCol1, { x: -50, opacity: 0, duration: 0.4, ease: 'power2.in' })
+        t1.from(singleCol2, { x: -50, opacity: 0, stagger: 0.3, duration: 0.4, ease: 'power2.in' })
 
 
     }, [])
@@ -125,7 +125,7 @@ const GoToDetailRow = (props) => {
                             md={5}
                             className={'go-to-detail-row-col'}
                         >
-                            <Text className={props.textClassName}>
+                            <Text className={`${props.textClassName} ${props.text4ClassName}`}>
                                 {props.text4}
                             </Text>
                         </Col>
@@ -155,6 +155,7 @@ GoToDetailRow.defaultProps = {
     numCol: 4,
     textClassName: 'go-to-detail-row-txt',
     btnClassName: 'go-to-detail-row-btn',
+    text4ClassName: 'go-to-detail-row-txt4'
 }
 
 export default GoToDetailRow

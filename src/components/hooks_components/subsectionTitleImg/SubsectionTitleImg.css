@@ -34,6 +34,13 @@
 }
 
 @media screen and (min-width: 768px) {
+    .sub-section-img {
+        width: 550px;
+        height: 326px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
 
     .sub-section-desc-desktop-container {
         padding-right: 20px;
@@ -68,16 +75,5 @@
 
     .sub-section-btn-youtube-container-mobile {
         display: none;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-
-    .sub-section-title {
-        padding-left: 100px;
-    }
-
-    .sub-section-desc-desktop-container {
-        padding: 0 100px;
     }
 }

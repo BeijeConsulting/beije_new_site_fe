@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
-import { Row, Col, Collapse, List } from "antd";
+import { Row, Col, Collapse } from "antd";
 const { Panel } = Collapse;
 
 //import gsap
@@ -84,10 +84,10 @@ const AcademyDetails = (props) => {
         })
 
 
-        t1.from(structureColTitle, { y: 100, opacity: 0, stragger: 0.3, duration: 1, ease: 'back' });
+        t1.from(structureColTitle, { y: 100, opacity: 0, stragger: 0.3, duration: 0.5, ease: 'back' });
         t2.from(sctructureColEl, { opacity: 0, stagger: 0.3, duration: 0.5, ease: 'power2.in' })
 
-        t3.from(programColTitle, { y: 100, opacity: 0, stragger: 0.3, duration: 1, ease: 'back' })
+        t3.from(programColTitle, { y: 100, opacity: 0, stragger: 0.3, duration: 0.5, ease: 'back' })
         t4.from(programColEl, { opacity: 0, stagger: 0.3, duration: 0.5, ease: 'power2.in' })
     })
 
@@ -124,10 +124,7 @@ const AcademyDetails = (props) => {
                 className={'aDetails-program-section-program-panel'}
             >
                 <CustomList
-                    size="large"
-                    // indent={false}
-                    data={el.subtopic_list}
-                    renderItem={item => <List.Item>{item}</List.Item>}
+                    listToPrint={el.subtopic_list}
                 />
 
             </Panel >
@@ -244,6 +241,7 @@ const AcademyDetails = (props) => {
                         </Row>
                         <Row className="aDetals-program-el-gsap">
                             <Collapse
+                                accordion
                                 bordered={false}
                                 ghost
                                 showArrow={false}

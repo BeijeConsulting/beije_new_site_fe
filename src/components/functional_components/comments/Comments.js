@@ -37,15 +37,12 @@ const Comments = (props) => {
     return (
         <div
             ref={ref}
-            className={props.commentsContainerStyle}
+            className={`${props.commentsContainerStyle} ${props.commentsContainerClassNameAdd}`}
         >
             <CustomCard
                 imgPreview={false}
                 cardClassName={`comments-el-gsap ${props.profilePictureStyle} ${props.profilePictureImg}`}
                 cardImg
-            // imgAlt={props.imgAlt}
-            // imgSrc={props.imgSrc}
-            // imgClassName={props.imgClassName}
             />
             <CustomCard
                 cardClassName={`comments-el-gsap ${props.commentsTextContainerStyle}`}
@@ -71,7 +68,6 @@ Comments.defaultProps = {
     commentsTextContainerStyle: 'commets-text-container',
     commentsContainerStyle: 'comments-container academy-gsap-single-comment',
     profilePictureStyle: 'comments-profile-picture',
-    // profilePictureImg: 'comments-profile-picture-img',
     commentsTextStyle: 'comments-text',
     signatureStyle: 'comments-signature'
 }

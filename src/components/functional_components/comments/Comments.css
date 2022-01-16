@@ -4,7 +4,7 @@
 
 .comments-container {
     position: relative;
-    height: 345px;
+    height: 450px;
     width: 90%;
     background-color: #fff;
     border-radius: 30px;
@@ -30,11 +30,6 @@
 
 .comments-profile-picture-img {
     background-image: var(--default-comments-profile-picture);
-}
-
-.commets-text-container {
-    height: 70%;
-    overflow-y: scroll;
 }
 
 .commets-text-container::-webkit-scrollbar {
@@ -63,7 +58,7 @@
 
 @media screen and (min-width: 768px) {
     .comments-container {
-        height: 308px;
+        height: 400px;
         padding: 93px 40px 30px 40px;
     }
 
@@ -75,6 +70,7 @@
 
 @media screen and (min-width: 1440px) {
     .comments-container {
+        height: 340px;
         margin: 37px 80px;
         width: 83%;
         padding: 20px 20px 20px 100px;

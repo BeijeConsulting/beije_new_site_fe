@@ -9,6 +9,11 @@
     padding-top: 100px;
 }
 
+.career-title {
+    padding-left: 20px;
+    text-transform: uppercase;
+}
+
 .card-container p {
     margin: 0;
 }

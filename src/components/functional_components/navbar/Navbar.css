@@ -122,3 +122,41 @@
     width: 100% !important;
     left: 0 !important;
 }
+
+
+.navbar-link {
+    position: relative;
+}
+
+.test-link-underline {
+    position: absolute;
+    width: 100%;
+    bottom: -10px;
+    left: 0;
+    border-bottom: 3px solid var(--first-color);
+    animation: createUndeline linear 1.5s;
+}
+
+.test-link-underline-light {
+    position: absolute;
+    width: 100%;
+    bottom: -10px;
+    left: 0;
+    border-bottom: 3px solid #fff;
+    animation: createUndeline linear 2.5s;
+}
+
+@keyframes createUndeline {
+    0% {
+        width: 0%;
+    }
+
+    50% {
+        width: 50%;
+    }
+
+    100% {
+        width: 100%;
+    }
+
+}

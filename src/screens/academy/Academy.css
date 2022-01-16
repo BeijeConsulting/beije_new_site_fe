@@ -32,7 +32,7 @@
 
 /* Our courses section */
 .academy-ourCourses-section {
-    margin-bottom: 175px;
+    margin-bottom: 50px;
     padding: 0 20px;
 }
 
@@ -91,8 +91,8 @@
     justify-content: flex-end;
 }
 
-.academy-ourCourses-section-youtube-txt {
-    color: #fff;
+.academy-our-courses-desc-mobile {
+    margin-bottom: 30px;
 }
 
 /* Next courses section */
@@ -141,8 +141,12 @@
     margin-bottom: 40px;
 }
 
-.academy-comments-carousel-ant {
+.academy-comments-carousel-mobile {
     padding: 40px 0px !important;
+}
+
+.academy-comments-carousel-desktop {
+    display: none;
 }
 
 .academy-comments-profile-picture1 {
@@ -150,6 +154,21 @@
 }
 
 .academy-comments-profile-picture2 {
+    background-image: var(--academy-comments-picture1);
+}
+
+.academy-comments-profile-picture3 {
+    background-image: var(--academy-comments-picture1);
+}
+
+.academy-comments-profile-picture4 {
+    background-image: var(--academy-comments-picture1);
+}
+.academy-comments-profile-picture5 {
+    background-image: var(--academy-comments-picture1);
+}
+
+.academy-comments-profile-picture6 {
     background-image: var(--academy-comments-picture1);
 }
 
@@ -163,10 +182,6 @@
 
     .academy-first-part {
         padding-bottom: 40px;
-    }
-
-    .academy-next-courses-view-all-btn {
-        justify-content: center;
     }
 
     .academy-percentage-section-carousel {
@@ -205,11 +220,9 @@
         right: -139px;
     }
 
-
-    .academy-comments-section-second-comment-col {
-        padding-top: 80px;
+    .academy-single-comments-bottom {
+        margin-top: 80px !important;
     }
-
 }
 
 @media screen and (min-width: 1440px) {

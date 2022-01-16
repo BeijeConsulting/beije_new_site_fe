@@ -297,41 +297,63 @@ export const carouselProfile = [
   // },
 ]
 
-
 export const consulting_carousel_client = [
   {
     carouselTitle: 'title_carousel_client',
     iconSrc: icon1_consulting,
-    titlePenrcentage: '100%',
+    titlePenrcentage: '96,9 %',
     carouselDesc: 'paragraph1_carousel_client'
   },
   {
     carouselTitle: 'title_carousel_client',
     iconSrc: icon2_consulting,
-    titlePenrcentage: '94%',
+    titlePenrcentage: '92,2%',
     carouselDesc: 'paragraph2_carousel_client'
   },
   {
     carouselTitle: 'title_carousel_client',
     iconSrc: icon3_consulting,
-    titlePenrcentage: '100%',
+    titlePenrcentage: '89,3%',
     carouselDesc: 'paragraph3_carousel_client'
   }
 ]
 
 export const academy_comments = [
   {
-    commentsText: 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in.',
-    name: 'Name',
-    surname: 'surname',
+    commentsText: 'comments_txt.comments1',
+    name: 'Alessandro',
+    surname: 'Farina',
     profilePictureImg: 'academy-comments-profile-picture1',
     imgClassName: 'trial'
   },
   {
-    commentsText: 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in.',
-    name: 'Name',
-    surname: 'surname',
+    commentsText: "comments_txt.comments2",
+    name: 'Samuele',
+    surname: 'Fraioli',
     profilePictureImg: 'academy-comments-profile-picture2',
+    imgClassName: 'trial'
+  },
+  {
+    commentsText: "comments_txt.comments3",
+    name: 'Federica',
+    surname: 'Di Monaco',
+    profilePictureImg: 'academy-comments-profile-picture4',
+    imgClassName: 'trial'
+  }
+  ,
+  {
+    commentsText: "comments_txt.comments4",
+    name: 'Federica',
+    surname: 'Di Monaco',
+    profilePictureImg: 'academy-comments-profile-picture5',
+    imgClassName: 'trial'
+  }
+  ,
+  {
+    commentsText: "comments_txt.comments5",
+    name: 'Federica',
+    surname: 'Di Monaco',
+    profilePictureImg: 'academy-comments-profile-picture6',
     imgClassName: 'trial'
   }
 ]

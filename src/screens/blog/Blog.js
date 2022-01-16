@@ -1,13 +1,14 @@
 import React from "react";
 
 import { Row, Typography, Col } from "antd";
-const { Title, Paragraph } = Typography
+const { Title } = Typography
 
 // import style
 import './Blog.css'
 
 // import assets
-import imgTest from '../../assets/images/general/general1.jpg'
+import imgTest from '../../assets/images/general/general4.jpg'
+import { PlusOutlined } from '@ant-design/icons';
 
 // import functions 
 import { turnToUppercase } from "../../utils/utilities";
@@ -19,36 +20,59 @@ import CustomCard from "../../components/functional_components/customCard/Custom
 const Blog = (props) => {
     const obj = [
         {
-            title: 'Prova titolo a caso',
-            bg: imgTest
+            title: 'TITOLO NEWS LUNGO CHE OCCUPA TRE RIGHE',
+            bg: imgTest,
+            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
         },
         {
-            title: 'Prova titolo a caso',
-            bg: imgTest
+            title: 'TITOLO NEWS LUNGO CHE OCCUPA TRE RIGHE',
+            bg: imgTest,
+            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
         },
         {
-            title: 'Prova titolo a caso',
-            bg: imgTest
+            title: 'TITOLO NEWS LUNGO CHE OCCUPA TRE RIGHE',
+            bg: imgTest,
+            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
         },
         {
-            title: 'Prova titolo a caso',
-            bg: imgTest
+            title: 'TITOLO NEWS LUNGO CHE OCCUPA TRE RIGHE',
+            bg: imgTest,
+            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
         }
     ]
 
     const printBlogImages = (item, key) => {
+        console.log('item bg: ', item.bg)
         return (
             <Col
                 key={key}
                 xs={24}
-                md={8}
+                md={12}
+                lg={8}
+                className="blog-col-container"
             >
                 <CustomCard
-                    cardStyle={{ backgroundImage: item.bg }}
+                    cardStyle={{ backgroundImage: "linear-gradient(360deg, rgba(50, 62, 72) 0%, rgba(214, 227, 229, -0.71) 90%), url(" + item.bg + ")" }}
                     cardClassName={'blog-img'}
-                    cardParagraph={turnToUppercase(item.title)}
-                    paragraphClassName={'prova2'}
                 />
+
+                <div className='blog-card-text-container'>
+                    <CustomCard
+                        cardDescription={turnToUppercase(item.title)}
+                        descriptionClassName={'blog-title-card'}
+                        cardParagraph={item.desc}
+                        paragraphClassName={'blog-desc-card'}
+                    />
+                    <CustomCard
+                        cardClassName={'blog-btn-container'}
+                        cardButton
+                        type={'secondary-arrow-btn'}
+                        currentIcon={
+                            <PlusOutlined
+                                className='arrow-icon-btn' />
+                        }
+                    />
+                </div>
             </Col>
         )
     }
@@ -59,7 +83,7 @@ const Blog = (props) => {
                 <Title
                     level={1}
                 >
-                    BLOG
+                    {turnToUppercase('Blog')}
                 </Title>
             </Row>
             <Row className="blog-imges-container">

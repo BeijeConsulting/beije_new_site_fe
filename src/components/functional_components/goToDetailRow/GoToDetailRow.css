@@ -1,5 +1,7 @@
 :root {
-    --border-go-to-deail-color: var(--first-color)
+    --border-go-to-deail-color: var(--first-color);
+
+    --secondary-color-career: var(--second-color);
 }
 
 .go-to-detail-row-container {
@@ -23,4 +25,8 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+}
+
+.go-to-detail-row-txt4 {
+    color: var(--secondary-color-career) !important;
 }

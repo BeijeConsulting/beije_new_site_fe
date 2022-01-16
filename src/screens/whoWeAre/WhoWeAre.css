@@ -46,9 +46,7 @@
 
 @media screen and (min-width: 768px) {
 
-    .whoWeAre-sub-section-title {
-        padding-left: calc(50% + 20px);
-    }
+
 
     .whoWeAre-sub-section-desc-container {
         padding: 0 20px;
@@ -56,16 +54,9 @@
 }
 
 @media screen and (min-width: 1024px) {
+
     .whoWeAre-profile-sec {
         margin-bottom: -30px;
-    }
-
-    .whoWeAre-sub-section-title {
-        padding-left: calc(50% + 100px);
-    }
-
-    .whoWeAre-sub-section-desc-container {
-        padding-left: 100px;
     }
 
     .whoWeAre-carousel-container .react-multi-carousel-track {
@@ -75,6 +66,10 @@
     .whoWeAre-profile-picture-carousel {
         width: 270px;
         height: 700px !important;
+    }
+
+    .whoWeAre-sub-section-title {
+        padding-left: calc(50% + 20px);
     }
 
     .whoWeAre-single-el-carousel:hover .whoWeAre-carousel-lable-container {

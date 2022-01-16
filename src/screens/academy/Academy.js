@@ -2,11 +2,12 @@ import React, { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
-import { Row, Col, Carousel } from "antd";
+import { Row, Col } from "antd";
 
 // import redux
 import { connect } from "react-redux";
 import { setColorHeader } from "../../redux/ducks/colorHeaderDuck";
+import { setPageFocus, initPageFocus } from "../../redux/ducks/pageFocusDuck";
 
 //import gsap
 import { gsap } from 'gsap'
@@ -37,6 +38,7 @@ import Comments from "../../components/functional_components/comments/Comments";
 import IntroductiveSection from "../../components/functional_components/introductiveSection/IntroductiveSection";
 import GoToDetailRow from "../../components/functional_components/goToDetailRow/GoToDetailRow";
 import SectionForm from "../../components/functional_components/sectionForm/SectionForm";
+import CustomOwlCarousel from "../../components/hooks_components/customOwlCarousel/CustomOwlCarousel";
 
 const Academy = (props) => {
 
@@ -55,13 +57,12 @@ const Academy = (props) => {
 
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
+        props.dispatch(setPageFocus('academy'));
 
         const element = ref.current;
 
         const secondSection = element.querySelector('.academy-gsap-second-section');
         const secSectionTitle = element.querySelector('.academy-gsap-our-courses-title');
-        // const secSectionCourse1 = element.querySelector('.academy-gsap-our-courses-el1');
-        // const secSectionCourse2 = element.querySelector('.academy-gsap-our-courses-el2');
 
         const secondSecRow2 = element.querySelector('.academy-gsap-our-courses-row2');
         const secSectionDescDesktop = element.querySelector('.academy-gsap-our-courses-desc-desktop');
@@ -71,8 +72,6 @@ const Academy = (props) => {
 
         const thirdSec = element.querySelector('.academy-gsap-third-section');
         const thirdSecTitle = element.querySelector('.academy-gsap-next-courses-title');
-        // const thirdSecCourse1 = element.querySelector('.academy-gsap-next-courses-el1');
-        // const thirdSecCourse2 = element.querySelector('.academy-gsap-next-courses-el2');
         const thirdSecBtn = element.querySelector('.academy-gsap-next-courses-btn');
 
         const fourthSec = element.querySelector('.academy-gsap-fourth-section');
@@ -119,24 +118,27 @@ const Academy = (props) => {
             }
         })
 
-        t1.from(secSectionTitle, { y: 100, opacity: 0, duration: 1, ease: 'back' })
+        t1.from(secSectionTitle, { y: 20, opacity: 0, duration: 0.5, ease: 'back' })
 
         t2.from(secSectionDescMobile, { y: 50, opacity: 0, duration: 0.5, ease: 'baunce.in' })
         t2.from(secSectionImg, { opacity: 0, duration: 0.5, ease: 'power2.in' })
         t2.from(secSectionYouTube, { x: -50, opacity: 0, stagger: 0.3, duration: 0.5, ease: 'power2.in' })
         t2.from(secSectionDescDesktop, { y: 50, opacity: 0, duration: 0.5, ease: 'baunce.in' })
 
-        t3.from(thirdSecTitle, { y: 100, opacity: 0, duration: 1, ease: 'back' })
+        t3.from(thirdSecTitle, { y: 20, opacity: 0, duration: 0.5, ease: 'back' })
         t3.from(thirdSecBtn, { opacity: 0, duration: 0.5, ease: 'power2.in' })
 
-        t4.from(percentageTitle, { y: 100, opacity: 0, duration: 1, ease: 'back' })
+        t4.from(percentageTitle, { y: 100, opacity: 0, duration: 0.5, ease: 'back' })
         t4.from(percentageSingleDesktop, { opacity: 0, stagger: 0.3, duration: 0.5, ease: 'power2.in' })
         t4.from(percentageSingleMobile, { opacity: 0, duration: 0.5, ease: 'power2.in' })
 
-        t5.from(commentTitle, { y: 100, opacity: 0, duration: 1, ease: 'back' })
+        t5.from(commentTitle, { y: 20, opacity: 0, duration: 0.5, ease: 'back' })
         t5.from(singleComment, { opacity: 0, duration: 0.5, ease: 'power2.in' })
 
-        return () => window.removeEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+            props.dispatch(initPageFocus())
+        };
     });
 
     const handleScroll = () => {
@@ -184,7 +186,8 @@ const Academy = (props) => {
         return (
             <Comments
                 key={key}
-                commentsText={item.commentsText}
+                commentsContainerClassNameAdd={key % 2 !== 0 ? 'academy-single-comments-bottom' : ''}
+                commentsText={t(`Academy.${item.commentsText}`)}
                 name={item.name}
                 surname={item.surname}
                 profilePictureImg={item.profilePictureImg}
@@ -244,10 +247,21 @@ const Academy = (props) => {
                         <Col
                             xs={24}
                             md={0}
-                            className="academy-gsap-our-courses-desc-desktop"
+                            className="academy-our-courses-desc-mobile academy-gsap-our-courses-desc-mobile"
                         >
                             <CustomCard
                                 cardDescription={t('Academy.course_description')}
+                            />
+
+                            <CustomCard
+                                cardClassName={'academy-ourCourses-section-youtube-card'}
+                                cardDescription={t('Academy.send_to_youtube')}
+                                cardButton
+                                type={'primary-arrow-btn'}
+                                currentIcon={
+                                    <ArrowRightOutlined
+                                        className='arrow-icon-btn' />
+                                }
                             />
                         </Col>
                         <Col
@@ -262,29 +276,27 @@ const Academy = (props) => {
                                 imgClassName={'academy-ourCourses-section-img academy-gsap-our-courses-img'}
                                 imgSrc={academy2}
                             />
-                            <div className={'academy-ourCourses-section-youtube-container academy-gsap-our-courses-youTube'}>
-                                <CustomCard
-                                    cardClassName={'academy-ourCourses-section-youtube-card'}
-                                    cardDescription={t('Academy.send_to_youtube')}
-                                    descriptionClassName={'academy-ourCourses-section-youtube-txt'}
-                                    cardButton
-                                    type={'secondary-arrow-btn'}
-                                    currentIcon={
-                                        <ArrowRightOutlined
-                                            className='arrow-icon-btn' />
-                                    }
-                                />
-                            </div>
                         </Col>
                         <Col xs={0} md={2} lg={4}></Col>
                         <Col
                             xs={0}
                             md={10}
                             lg={8}
-                            className="academy-gsap-our-courses-desc-mobile"
+                            className="academy-gsap-our-courses-desc-desktop"
                         >
                             <CustomCard
                                 cardDescription={t('Academy.course_description')}
+                            />
+
+                            <CustomCard
+                                cardClassName={'academy-ourCourses-section-youtube-card'}
+                                cardDescription={t('Academy.send_to_youtube')}
+                                cardButton
+                                type={'primary-arrow-btn'}
+                                currentIcon={
+                                    <ArrowRightOutlined
+                                        className='arrow-icon-btn' />
+                                }
                             />
                         </Col>
                     </Row>
@@ -360,33 +372,26 @@ const Academy = (props) => {
                             />
                         </Col>
                         <Col
-                            xs={24}
-                            lg={0}
+                            span={24}
                         >
-                            <Carousel
-                                autoplay
-                                dots={false}
-                                className="academy-comments-carousel-ant academy-gsap-single-comment"
+                            <CustomOwlCarousel
+                                item_superLargeDesktop={2}
+                                item_mediumDesktop={2}
+                                item_desktop={2}
+                                item_tablet={2}
+                                item_bigMobile={1}
+                                item_mobile={1}
+                                item_smallmobile={1}
+                                item_extraSmallMobile={1}
+                                objCarousel={false}
+                                className="academy-gsap-single-comment"
+
+                                infinite={true}
+                                autoPlay={true}
+                                autoPlaySpeed={3000}
                             >
                                 {academy_comments.map(printComments)}
-                            </Carousel>
-                        </Col>
-                        <Col
-                            xs={0}
-                            lg={12}
-                        >
-                            <Comments
-                                profilePictureImg={'academy-comments-profile-picture1'}
-                            />
-                        </Col>
-                        <Col
-                            xs={0}
-                            lg={12}
-                            className={'academy-comments-section-second-comment-col'}
-                        >
-                            <Comments
-                                profilePictureImg={'academy-comments-profile-picture2'}
-                            />
+                            </CustomOwlCarousel>
                         </Col>
                     </Row>
                 </section>
@@ -399,7 +404,7 @@ const Academy = (props) => {
                 </section>
 
             </div>
-        </div>
+        </div >
     )
 }
 

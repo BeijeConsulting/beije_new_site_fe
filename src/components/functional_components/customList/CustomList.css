@@ -1,4 +1,4 @@
-.list-li {
+/* .list-li {
     font-family: 'Moderat-Regular', sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -13,4 +13,22 @@
 
 .list-li-borderLess {
     border: none !important;
+} */
+
+.custom-list-ul {
+    margin: 0;
+    list-style-type: none;
+}
+
+.custom-list-li {
+    text-indent: -20px;
+    padding: 10px 0;
+}
+
+.custom-list-li:before {
+    content: "-  " !important;
+}
+
+.custom-list-li::marker {
+    content: none !important;
 }

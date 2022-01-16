@@ -118,10 +118,6 @@
 
 
 @media screen and (min-width: 768px) {
-    .up-intro-section-paragraph {
-        width: 60%;
-        margin: auto;
-    }
 
     .up-case-studies-desktop {
         display: flex;
@@ -134,14 +130,14 @@
         margin: 0 auto 40px auto;
     }
 
-    .up-case-studies-btn-container {
-        display: flex;
-        justify-content: center;
-    }
-
 }
 
 @media screen and (min-width: 1024px) {
+    .up-intro-section-paragraph {
+        width: 60%;
+        margin: auto;
+    }
+
     .up-form-text-area {
         height: 242px !important;
     }

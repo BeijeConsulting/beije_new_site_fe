@@ -21,6 +21,7 @@ import Career from "./screens/career/Career";
 import WhoWeAre from "./screens/whoWeAre/WhoWeAre";
 import CareerDetail from "./screens/careerDetail/CareerDetail";
 import Blog from "./screens/blog/Blog";
+import Community from "./screens/community/Community";
 
 export default [
   {
@@ -96,6 +97,14 @@ export default [
     element: <GeneralLayout />,
     children: [
       { index: true, element: <Blog /> },
+      { path: "*", element: <NoMatch /> }
+    ]
+  },
+  {
+    path: `${ENVIRONMENT.ROUTING.BASE_URL}community`,
+    element: <GeneralLayout />,
+    children: [
+      { index: true, element: <Community /> },
       { path: "*", element: <NoMatch /> }
     ]
   },

@@ -38,7 +38,7 @@ const SectionForm = (props) => {
             }
         })
 
-        t1.from(title, { y: 100, opacity: 0, duration: 1, ease: 'back' })
+        t1.from(title, { y: 100, opacity: 0, duration: 0.5, ease: 'back' })
         t1.from(desc, { opacity: 0, stragger: 0.3, duration: 0.5, ease: 'power2.in' })
 
     }, [])

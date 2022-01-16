@@ -51,11 +51,11 @@ const SubsectionTitleImg = (props) => {
             }
         })
 
-        t1.from(title, { y: 100, opacity: 0, duration: 1, ease: 'back' })
-        t1.from(desc, { y: 50, opacity: 0, duration: 0.5, ease: 'baunce.in' })
-        t1.from(descDesktop, { y: 50, opacity: 0, duration: 0.3, ease: 'baunce.in' })
-        t1_2.from(img, { opacity: 0, duration: 1.5, ease: 'power2.in' })
-        t1_2.from(btn, { opacity: 0, duration: 1.5, ease: 'power2.in' })
+        t1.from(title, { y: 50, opacity: 0, duration: 0.5, ease: 'back' })
+        t1.from(desc, { y: 20, opacity: 0, duration: 0.5, ease: 'baunce.in' })
+        t1.from(descDesktop, { y: 20, opacity: 0, duration: 0.3, ease: 'baunce.in' })
+        t1_2.from(img, { opacity: 0, duration: 0.5, ease: 'power2.in' })
+        t1_2.from(btn, { opacity: 0, duration: 0.5, ease: 'power2.in' })
     }, [])
 
     const printList = (item, key) => {
@@ -87,7 +87,7 @@ const SubsectionTitleImg = (props) => {
                 {/* Description mobile always below title */}
                 <Col
                     xs={24}
-                    md={0}
+                    lg={0}
                 >
 
                     {
@@ -134,7 +134,7 @@ const SubsectionTitleImg = (props) => {
 
                 <Col
                     xs={0}
-                    md={12}
+                    lg={12}
                     className={props.descDesktopContainer}
                 >
 
