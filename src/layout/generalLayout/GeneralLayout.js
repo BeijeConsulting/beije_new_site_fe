@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import { Layout } from 'antd';
 import { connect } from "react-redux";
+import { useDispatch } from "react-redux";
+import { printCommunities, printBlog, printCareer } from "../../redux/actions/actions";
 
 import '../../style.css'
 import './GeneralLayout.css'
@@ -12,6 +14,28 @@ import CustomFooter from "../../components/functional_components/customFooter/Cu
 const { Header, Footer, Content } = Layout;
 
 const GeneralLayout = (props) => {
+
+    const dispatch = useDispatch();
+
+    const [state, setState] = useState({
+        apiReady: false
+    });
+
+    useEffect(() => {
+        callApi()
+    }, [])
+
+    const callApi = async () => {
+        await printCommunities(dispatch);
+        await printBlog(dispatch);
+        await printCareer(dispatch);
+
+        setState({
+            apiReady: true
+        })
+    }
+
+
     return (
         <Layout className="min-h-100vh">
             <Header
@@ -26,11 +50,13 @@ const GeneralLayout = (props) => {
             </Header>
             <Layout>
                 <Layout className="h-100">
-                    <Content>
-                        <div >
-                            <Outlet />
-                        </div>
-                    </Content>
+                    {state.apiReady &&
+                        <Content>
+                            <div >
+                                <Outlet />
+                            </div>
+                        </Content>
+                    }
                 </Layout>
             </Layout>
             {

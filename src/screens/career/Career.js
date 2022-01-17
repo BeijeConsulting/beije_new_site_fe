@@ -4,6 +4,11 @@ import { Tabs, Row, Typography } from 'antd';
 const { Title } = Typography
 const { TabPane } = Tabs;
 
+import moment from "moment";
+
+// import api
+import { connect } from "react-redux";
+
 // import style
 import './Career.css'
 
@@ -14,63 +19,57 @@ import GoToDetailRow from '../../components/functional_components/goToDetailRow/
 
 const Career = (props) => {
 
-    const objAcademy = [
-        {
-            title: 'React developer - Academy',
-            type: 'frontend',
-            location: 'remoto',
-            time: '2 settimane fa'
-        },
-        {
-            title: 'React developer - Academy',
-            type: 'frontend',
-            location: 'remoto',
-            time: '2 settimane fa'
-        },
-        {
-            title: 'React developer - Academy',
-            type: 'frontend',
-            location: 'remoto',
-            time: '2 settimane fa'
-        },
-        {
-            title: 'React developer - Academy',
-            type: 'frontend',
-            location: 'remoto',
-            time: '2 settimane fa'
-        },
-        {
-            title: 'React developer - Academy',
-            type: 'frontend',
-            location: 'remoto',
-            time: '2 settimane fa'
-        },
-        {
-            title: 'React developer - Academy',
-            type: 'frontend',
-            location: 'remoto',
-            time: '2 settimane fa'
-        }
-    ]
+    // const objAcademy = [
+    //     {
+    //         title: 'React developer - Academy',
+    //         type: 'frontend',
+    //         location: 'remoto',
+    //         time: '2 settimane fa'
+    //     },
+    //     {
+    //         title: 'React developer - Academy',
+    //         type: 'frontend',
+    //         location: 'remoto',
+    //         time: '2 settimane fa'
+    //     },
+    //     {
+    //         title: 'React developer - Academy',
+    //         type: 'frontend',
+    //         location: 'remoto',
+    //         time: '2 settimane fa'
+    //     },
+    //     {
+    //         title: 'React developer - Academy',
+    //         type: 'frontend',
+    //         location: 'remoto',
+    //         time: '2 settimane fa'
+    //     },
+    //     {
+    //         title: 'React developer - Academy',
+    //         type: 'frontend',
+    //         location: 'remoto',
+    //         time: '2 settimane fa'
+    //     },
+    //     {
+    //         title: 'React developer - Academy',
+    //         type: 'frontend',
+    //         location: 'remoto',
+    //         time: '2 settimane fa'
+    //     }
+    // ]
 
     const printListAcademy = (item, key) => {
         return (
             <GoToDetailRow
                 key={key}
                 numCol={4}
-                text1={item.title}
+                text1={item.title_it}
                 text2={item.type}
-                text3={item.location}
-                text4={item.time}
+                text3={item.mode}
+                text4={moment(item.date_creation, "YYYY-MM-DD").fromNow()}
             />
         )
     }
-
-    // const changeIcon = (panelProps) => {
-    //     return (
-    //         <OpenFilterBtn />
-    //     )
-    // }
 
     return (
         <div className="career-container">
@@ -85,39 +84,19 @@ const Career = (props) => {
             <div className="card-container">
                 <Tabs type="card" className='career-tabs-container'>
                     <TabPane tab="Academy" key="1" className='career-academy-panel'>
-                        {objAcademy.map(printListAcademy)}
+                        {props.careerApiDuck.career_obj_api.map(printListAcademy)}
                     </TabPane>
                     <TabPane tab="Job application" key="2" className='career-job-panel'>
-                        {objAcademy.map(printListAcademy)}
+                        {props.careerApiDuck.career_obj_api.map(printListAcademy)}
                     </TabPane>
                 </Tabs>
             </div>
-
-
-
-            {/* <Collapse
-                bordered={false}
-                ghost
-                showArrow={false}
-                expandIconPosition={"right"}
-                // expandIcon={(panelProps) => changeIcon(panelProps)}
-                style={{ width: '100%' }}
-            >
-                <CustomButton
-                    content={'Filtro'}
-                    type={'filter-btn'}
-                />
-                <CustomButton
-                    content={'Filtro'}
-                    type={'filter-btn'}
-                />
-                <CustomButton
-                    content={'Filtro'}
-                    type={'filter-btn'}
-                />
-            </Collapse> */}
         </div>
     )
 }
 
-export default Career 
+const mapStateToProps = state => ({
+    careerApiDuck: state.careerApiDuck
+})
+
+export default connect(mapStateToProps)(Career)

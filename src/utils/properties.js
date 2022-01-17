@@ -83,7 +83,7 @@ export const social = {
   url: {
     url_facebook: 'https://www.facebook.com/beijepeoplefirst',
     url_linkedIn: 'https://www.linkedin.com/company/beije',
-    url_youTube: 'https://www.youtube.com/'
+    url_youTube: 'https://www.youtube.com/channel/UCGZdqNE152QBvg9WZ4E65Iw'
   }
 }
 
@@ -118,23 +118,7 @@ export const siteMenu = [
     title: 'career',
     titleStyle: 'burger-menu-title txt-light',
     titleStyleHover: 'burger-menu-title txt-light2',
-    linkTo: 'https://www.google.it/'
-  },
-  {
-    key: 'blog',
-    typeMenu: 'secondary',
-    title: 'blog',
-    titleStyle: 'burger-menu-title txt-light',
-    titleStyleHover: 'burger-menu-title txt-light2',
-    linkTo: 'https://www.google.it/'
-  },
-  {
-    key: 'community',
-    typeMenu: 'secondary',
-    title: 'community',
-    titleStyle: 'burger-menu-title txt-light',
-    titleStyleHover: 'burger-menu-title txt-light2',
-    linkTo: 'https://www.google.it/'
+    linkTo: `${ENVIRONMENT.ROUTING.BASE_URL}career`
   },
   {
     key: 'whoWeAre',
@@ -142,7 +126,23 @@ export const siteMenu = [
     title: 'whoWeAre',
     titleStyle: 'burger-menu-title txt-light',
     titleStyleHover: 'burger-menu-title txt-light2',
-    linkTo: 'https://www.google.it/'
+    linkTo: `${ENVIRONMENT.ROUTING.BASE_URL}whoweare`
+  },
+  {
+    key: 'blog',
+    typeMenu: 'secondary',
+    title: 'blog',
+    titleStyle: 'burger-menu-title txt-light',
+    titleStyleHover: 'burger-menu-title txt-light2',
+    linkTo: `${ENVIRONMENT.ROUTING.BASE_URL}blog`
+  },
+  {
+    key: 'community',
+    typeMenu: 'secondary',
+    title: 'community',
+    titleStyle: 'burger-menu-title txt-light',
+    titleStyleHover: 'burger-menu-title txt-light2',
+    linkTo: `${ENVIRONMENT.ROUTING.BASE_URL}community`
   },
   {
     key: 'contacts',
@@ -150,7 +150,7 @@ export const siteMenu = [
     title: 'contacts',
     titleStyle: 'burger-menu-title txt-light',
     titleStyleHover: 'burger-menu-title txt-light2',
-    linkTo: 'https://www.google.it/'
+    linkTo: `${ENVIRONMENT.ROUTING.BASE_URL}contacts`
   },
 ]
 

@@ -23,8 +23,6 @@ const Navbar = (props) => {
         const element = ref.current;
 
         const singleLink = element.querySelectorAll('.gsap-home-link');
-        console.log('element home link', element);
-        console.log('link', singleLink);
 
         const t1 = gsap.timeline({
             scrollTrigger: {

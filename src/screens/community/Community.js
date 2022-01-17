@@ -4,11 +4,13 @@ import { Row, Typography, Col, Collapse } from "antd";
 const { Title } = Typography
 const { Panel } = Collapse;
 
+// import api
+import { connect } from "react-redux";
+
 // import style
 import './Community.css'
 
 // import assets
-import imgTest from '../../assets/images/general/general4.jpg'
 import { MinusOutlined, PlusOutlined } from '@ant-design/icons';
 
 // import functions 
@@ -20,28 +22,30 @@ import CustomCard from "../../components/functional_components/customCard/Custom
 
 const Community = (props) => {
 
-    const obj = [
-        {
-            title: 'TITOLO EVENTO',
-            bg: imgTest,
-            descEvent: 'Questa è una lunga descrizione che serve a capire se in effetti sta funzionando correttamente tutto: evento1'
-        },
-        {
-            title: 'TITOLO EVENTO',
-            bg: imgTest,
-            descEvent: 'Questa è una lunga descrizione che serve a capire se in effetti sta funzionando correttamente tutto: evento2'
-        },
-        {
-            title: 'TITOLO EVENTO',
-            bg: imgTest,
-            descEvent: 'Questa è una lunga descrizione che serve a capire se in effetti sta funzionando correttamente tutto: evento3'
-        },
-        {
-            title: 'TITOLO EVENTO',
-            bg: imgTest,
-            descEvent: 'Questa è una lunga descrizione che serve a capire se in effetti sta funzionando correttamente tutto: evento4'
-        }
-    ]
+    console.log('props', props)
+
+    // const obj = [
+    //     {
+    //         title: 'TITOLO EVENTO',
+    //         bg: imgTest,
+    //         descEvent: 'Questa è una lunga descrizione che serve a capire se in effetti sta funzionando correttamente tutto: evento1'
+    //     },
+    //     {
+    //         title: 'TITOLO EVENTO',
+    //         bg: imgTest,
+    //         descEvent: 'Questa è una lunga descrizione che serve a capire se in effetti sta funzionando correttamente tutto: evento2'
+    //     },
+    //     {
+    //         title: 'TITOLO EVENTO',
+    //         bg: imgTest,
+    //         descEvent: 'Questa è una lunga descrizione che serve a capire se in effetti sta funzionando correttamente tutto: evento3'
+    //     },
+    //     {
+    //         title: 'TITOLO EVENTO',
+    //         bg: imgTest,
+    //         descEvent: 'Questa è una lunga descrizione che serve a capire se in effetti sta funzionando correttamente tutto: evento4'
+    //     }
+    // ]
 
     const changeIcon = (panelProps) => {
         if (panelProps.isActive) {
@@ -97,13 +101,13 @@ const Community = (props) => {
                         header={
                             <>
                                 <CustomCard
-                                    cardStyle={{ backgroundImage: "linear-gradient(360deg, rgba(50, 62, 72) 0%, rgba(214, 227, 229, -0.71) 90%), url(" + item.bg + ")" }}
+                                    cardStyle={{ backgroundImage: "linear-gradient(360deg, rgba(50, 62, 72) 0%, rgba(214, 227, 229, -0.71) 90%), url(" + item.cover_img + ")" }}
                                     cardClassName={'community-img'}
                                 />
 
                                 <CustomCard
                                     cardClassName={'community-card-text-container'}
-                                    cardDescription={turnToUppercase(item.title)}
+                                    cardDescription={turnToUppercase(item.title_it)}
                                     descriptionClassName={'community-title-card'}
                                 />
                             </>
@@ -112,9 +116,9 @@ const Community = (props) => {
                     >
                         <Col>
                             <CustomCard
-                                cardDescription={turnToUppercase(item.title)}
+                                cardDescription={turnToUppercase(item.title_it)}
                                 descriptionClassName={'community-title-card-collapse'}
-                                cardParagraph={item.descEvent}
+                                cardParagraph={item.description_it}
                                 paragraphClassName={'community-desc-card'}
                             />
                         </Col>
@@ -137,12 +141,16 @@ const Community = (props) => {
                 </Title>
             </Row>
             <Row className="community-imges-container">
-                {obj.map(printCommunityImages)}
+                {props.communityApiDuck.community_obj_api.map(printCommunityImages)}
             </Row>
+
         </section>
-
-
     )
 }
 
-export default Community
+
+const mapStateToProps = state => ({
+    communityApiDuck: state.communityApiDuck
+})
+
+export default connect(mapStateToProps)(Community)

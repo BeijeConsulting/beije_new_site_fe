@@ -48,7 +48,7 @@
   },
   "burgerMenu": {
     "consulting": "CONSULTING",
-    "academy": "ACADEMY",
+    "academy": "TALENT ACADEMY",
     "up": "UP",
     "career": "CAREER",
     "whoWeAre": "CHI SIAMO",
@@ -283,5 +283,8 @@
     "case_studies_title": "Case studies",
     "form_message_title": "Richiedi maggiori informazioni",
     "form_message_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan lacus quis nibh porta, eget porttitor neque feugiat."
+  },
+  "Contacts": {
+    "title": "Contatti"
   }
 }

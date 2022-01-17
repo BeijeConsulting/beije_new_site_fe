@@ -80,7 +80,6 @@ const Home = (props) => {
   }, []);
 
   const handleScroll = () => {
-    console.log('window.pageYOffset: ', window.pageYOffset)
     if (window.pageYOffset > 200) {
       props.dispatch(initVisibility())
     }

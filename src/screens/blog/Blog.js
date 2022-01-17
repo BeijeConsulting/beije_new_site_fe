@@ -3,11 +3,13 @@ import React from "react";
 import { Row, Typography, Col } from "antd";
 const { Title } = Typography
 
+// import api
+import { connect } from "react-redux";
+
 // import style
 import './Blog.css'
 
 // import assets
-import imgTest from '../../assets/images/general/general4.jpg'
 import { PlusOutlined } from '@ant-design/icons';
 
 // import functions 
@@ -18,31 +20,30 @@ import CustomCard from "../../components/functional_components/customCard/Custom
 
 
 const Blog = (props) => {
-    const obj = [
-        {
-            title: 'TITOLO NEWS LUNGO CHE OCCUPA TRE RIGHE',
-            bg: imgTest,
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-        },
-        {
-            title: 'TITOLO NEWS LUNGO CHE OCCUPA TRE RIGHE',
-            bg: imgTest,
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-        },
-        {
-            title: 'TITOLO NEWS LUNGO CHE OCCUPA TRE RIGHE',
-            bg: imgTest,
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-        },
-        {
-            title: 'TITOLO NEWS LUNGO CHE OCCUPA TRE RIGHE',
-            bg: imgTest,
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-        }
-    ]
+    // const obj = [
+    //     {
+    //         title: 'TITOLO NEWS LUNGO CHE OCCUPA TRE RIGHE',
+    //         bg: imgTest,
+    //         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+    //     },
+    //     {
+    //         title: 'TITOLO NEWS LUNGO CHE OCCUPA TRE RIGHE',
+    //         bg: imgTest,
+    //         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+    //     },
+    //     {
+    //         title: 'TITOLO NEWS LUNGO CHE OCCUPA TRE RIGHE',
+    //         bg: imgTest,
+    //         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+    //     },
+    //     {
+    //         title: 'TITOLO NEWS LUNGO CHE OCCUPA TRE RIGHE',
+    //         bg: imgTest,
+    //         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+    //     }
+    // ]
 
     const printBlogImages = (item, key) => {
-        console.log('item bg: ', item.bg)
         return (
             <Col
                 key={key}
@@ -52,7 +53,7 @@ const Blog = (props) => {
                 className="blog-col-container"
             >
                 <CustomCard
-                    cardStyle={{ backgroundImage: "linear-gradient(360deg, rgba(50, 62, 72) 0%, rgba(214, 227, 229, -0.71) 90%), url(" + item.bg + ")" }}
+                    cardStyle={{ backgroundImage: "linear-gradient(360deg, rgba(50, 62, 72) 0%, rgba(214, 227, 229, -0.71) 90%), url(" + item.cover_img.desktop + ")" }}
                     cardClassName={'blog-img'}
                 />
 
@@ -60,7 +61,7 @@ const Blog = (props) => {
                     <CustomCard
                         cardDescription={turnToUppercase(item.title)}
                         descriptionClassName={'blog-title-card'}
-                        cardParagraph={item.desc}
+                        cardParagraph={item.subtitle}
                         paragraphClassName={'blog-desc-card'}
                     />
                     <CustomCard
@@ -87,7 +88,7 @@ const Blog = (props) => {
                 </Title>
             </Row>
             <Row className="blog-imges-container">
-                {obj.map(printBlogImages)}
+                {props.blogApiDuck.blog_obj_api.map(printBlogImages)}
             </Row>
         </section>
 
@@ -95,4 +96,8 @@ const Blog = (props) => {
     )
 }
 
-export default Blog
+const mapStateToProps = state => ({
+    blogApiDuck: state.blogApiDuck
+})
+
+export default connect(mapStateToProps)(Blog)

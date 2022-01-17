@@ -22,6 +22,7 @@ import WhoWeAre from "./screens/whoWeAre/WhoWeAre";
 import CareerDetail from "./screens/careerDetail/CareerDetail";
 import Blog from "./screens/blog/Blog";
 import Community from "./screens/community/Community";
+import Contacts from "./screens/contacts/Contacts";
 
 export default [
   {
@@ -105,6 +106,14 @@ export default [
     element: <GeneralLayout />,
     children: [
       { index: true, element: <Community /> },
+      { path: "*", element: <NoMatch /> }
+    ]
+  },
+  {
+    path: `${ENVIRONMENT.ROUTING.BASE_URL}contacts`,
+    element: <GeneralLayout />,
+    children: [
+      { index: true, element: <Contacts /> },
       { path: "*", element: <NoMatch /> }
     ]
   },

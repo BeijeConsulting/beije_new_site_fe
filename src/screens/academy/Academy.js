@@ -26,12 +26,11 @@ import {
 import { turnToUppercase } from "../../utils/utilities";
 
 //import constants
-import { consulting_carousel_client, academy2, academy_comments, ENVIRONMENT } from "../../utils/properties";
+import { academy2, academy_comments, ENVIRONMENT } from "../../utils/properties";
 
 //import components
 import CustomCard from "../../components/functional_components/customCard/CustomCard";
 import SectionSubtitle from "../../components/functional_components/sectionSubtitle/SectionSubtitle";
-import CustomCarousel from "../../components/hooks_components/customCarousel/CustomCarousel";
 import ViewAllButton from "../../components/functional_components/viewAllButton/ViewAllButton"
 import CustomButton from "../../components/functional_components/Button/CustomButton";
 import Comments from "../../components/functional_components/comments/Comments";
@@ -74,11 +73,6 @@ const Academy = (props) => {
         const thirdSecTitle = element.querySelector('.academy-gsap-next-courses-title');
         const thirdSecBtn = element.querySelector('.academy-gsap-next-courses-btn');
 
-        const fourthSec = element.querySelector('.academy-gsap-fourth-section');
-        const percentageTitle = element.querySelector('.academy-gsap-percentage-title');
-        const percentageSingleMobile = element.querySelector('.academy-gsap-percentage-single-mobile');
-        const percentageSingleDesktop = element.querySelectorAll('.academy-gsap-percentage-single-desktop');
-
         const fifthSec = element.querySelector('.academy-gsap-fifth-section');
         const commentTitle = element.querySelector('.academy-gsap-comment-title');
         const singleComment = element.querySelector('.academy-gsap-single-comment')
@@ -106,13 +100,6 @@ const Academy = (props) => {
 
         const t4 = gsap.timeline({
             scrollTrigger: {
-                trigger: fourthSec,
-                start: 'top 75%'
-            }
-        })
-
-        const t5 = gsap.timeline({
-            scrollTrigger: {
                 trigger: fifthSec,
                 start: 'top 75%'
             }
@@ -128,12 +115,8 @@ const Academy = (props) => {
         t3.from(thirdSecTitle, { y: 20, opacity: 0, duration: 0.5, ease: 'back' })
         t3.from(thirdSecBtn, { opacity: 0, duration: 0.5, ease: 'power2.in' })
 
-        t4.from(percentageTitle, { y: 100, opacity: 0, duration: 0.5, ease: 'back' })
-        t4.from(percentageSingleDesktop, { opacity: 0, stagger: 0.3, duration: 0.5, ease: 'power2.in' })
-        t4.from(percentageSingleMobile, { opacity: 0, duration: 0.5, ease: 'power2.in' })
-
-        t5.from(commentTitle, { y: 20, opacity: 0, duration: 0.5, ease: 'back' })
-        t5.from(singleComment, { opacity: 0, duration: 0.5, ease: 'power2.in' })
+        t4.from(commentTitle, { y: 20, opacity: 0, duration: 0.5, ease: 'back' })
+        t4.from(singleComment, { opacity: 0, duration: 0.5, ease: 'power2.in' })
 
         return () => {
             window.removeEventListener("scroll", handleScroll);
@@ -156,30 +139,6 @@ const Academy = (props) => {
 
     const goToMasterFrontend = () => {
         navigate(`${ENVIRONMENT.ROUTING.BASE_URL}academy/masterFrontend`)
-    }
-
-    const printPercentage = (item, key) => {
-        return (
-            <Col xs={0} md={8} key={key} className={'container-column items-center padding-30 academy-gsap-percentage-single-desktop'}>
-                <CustomCard
-                    cardClassName={'custom-carousel-icon'}
-                    imgPreview={false}
-                    cardImg
-                    imgSrc={item.iconSrc}
-                    imgHeight={42}
-                    imgWidth={56}
-                />
-                <div className='separator-line-vertical'></div>
-                <CustomCard
-                    titleLevel={1}
-                    cardTitle={item.titlePenrcentage}
-                />
-                <CustomCard
-                    cardParagraph={t(`Consulting.${item.carouselDesc}`)}
-                    paragraphClassName={'custom-carousel-paragraph'}
-                />
-            </Col>
-        )
     }
 
     const printComments = (item, key) => {
@@ -343,21 +302,6 @@ const Academy = (props) => {
 
             {/* Second Part */}
             <div className={'academy-second-part'}>
-
-                {/* Percentage Section */}
-                <section className="academy-percentage-section academy-gsap-fourth-section">
-                    <SectionSubtitle
-                        title={turnToUppercase(t('Academy.percentage_client_satisfaction_title'))}
-                        shortLineBelow
-                        classNameContainer={'academy-gsap-percentage-title'}
-                    />
-                    <Row className={'academy-percentage-section-carousel academy-gsap-percentage-single-mobile'}>
-                        <CustomCarousel />
-                    </Row>
-                    <Row className={'academy-percentage-section-card'}>
-                        {consulting_carousel_client.map(printPercentage)}
-                    </Row>
-                </section>
 
                 {/* Comments section */}
                 <section className="academy-gsap-fifth-section">
