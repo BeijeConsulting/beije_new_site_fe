@@ -17,6 +17,7 @@ Library:
   react-owl-carousel - https://www.npmjs.com/package/react-owl-carousel,
   gsap - https://www.npmjs.com/package/gsap
   react-multi-carousel - https://www.npmjs.com/package/react-multi-carousel
+  google-map-react - https://www.npmjs.com/package/google-map-react
 
 # look for google analytics
 to find google analytics search for the following comment: *ga*
