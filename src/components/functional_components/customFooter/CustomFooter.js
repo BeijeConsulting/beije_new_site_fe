@@ -119,7 +119,7 @@ const CustomFooter = (props) => {
                 <Row>
                     <CustomCard
                         descriptionClassName={'custom-footer-copyright txt-light mt-10'}
-                        cardDescription={'© Copyright 2019 - Beije Consulting S.r.l - ' + t('footer.vatNumber') + ' 08057530969'}
+                        cardDescription={t('footer.copyright') + ' - ' + t('footer.vatNumber') + ' 16334941008'}
                     />
                 </Row>
             </div>

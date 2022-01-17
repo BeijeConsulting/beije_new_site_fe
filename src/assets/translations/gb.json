@@ -17,7 +17,7 @@
   "btn": {
     "viewAll": "View All",
     "drag": "Drag -br- for more",
-    "apply": "[en] Candidati",
+    "apply": "Apply",
     "goBackAcademy": "[en] Torna all'academy"
   },
   "imgAlt": {
@@ -30,6 +30,7 @@
   "footer": {
     "location": "WHERE WE ARE",
     "contacts": "CONTACT US",
+    "copyright": "Beije is a People First Srl brand ",
     "legalNotes": "LEGAL NOTES",
     "vatNumber": "VAT Number"
   },
