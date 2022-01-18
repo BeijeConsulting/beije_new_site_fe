@@ -1,3 +1,12 @@
+:root {
+    --primary-color-bg-community: var(--fourth-color)
+}
+
+.community-container {
+    padding: 100px 20px 30px 20px;
+    background-color: var(--primary-color-bg-community);
+}
+
 .community-imges-container {
     width: 100%;
 }

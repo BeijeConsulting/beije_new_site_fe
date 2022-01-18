@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { Row, Typography, Col } from "antd";
 const { Title } = Typography
 
-// import api
+// import redux
 import { connect } from "react-redux";
+import { setColorHeader } from "../../redux/ducks/colorHeaderDuck";
 
 // import style
 import './Blog.css'
@@ -20,28 +21,22 @@ import CustomCard from "../../components/functional_components/customCard/Custom
 
 
 const Blog = (props) => {
-    // const obj = [
-    //     {
-    //         title: 'TITOLO NEWS LUNGO CHE OCCUPA TRE RIGHE',
-    //         bg: imgTest,
-    //         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-    //     },
-    //     {
-    //         title: 'TITOLO NEWS LUNGO CHE OCCUPA TRE RIGHE',
-    //         bg: imgTest,
-    //         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-    //     },
-    //     {
-    //         title: 'TITOLO NEWS LUNGO CHE OCCUPA TRE RIGHE',
-    //         bg: imgTest,
-    //         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-    //     },
-    //     {
-    //         title: 'TITOLO NEWS LUNGO CHE OCCUPA TRE RIGHE',
-    //         bg: imgTest,
-    //         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-    //     }
-    // ]
+
+    const primary_bg_page_blog = '#d6e3e5'
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, [])
+
+    const handleScroll = () => {
+        if (window.pageYOffset > 0) {
+            props.dispatch(setColorHeader(primary_bg_page_blog))
+        }
+    }
 
     const printBlogImages = (item, key) => {
         return (
@@ -79,7 +74,7 @@ const Blog = (props) => {
     }
 
     return (
-        <section style={{ padding: '100px 20px 30px 20px' }}>
+        <section className='blog-container'>
             <Row>
                 <Title
                     level={1}

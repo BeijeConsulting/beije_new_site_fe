@@ -84,7 +84,8 @@ export const social = {
     url_facebook: 'https://www.facebook.com/beijepeoplefirst',
     url_linkedIn: 'https://www.linkedin.com/company/beije',
     url_youTube: 'https://www.youtube.com/channel/UCGZdqNE152QBvg9WZ4E65Iw'
-  }
+  },
+  target: '_blank'
 }
 
 export const siteMenu = [
@@ -335,8 +336,8 @@ export const academy_comments = [
   },
   {
     commentsText: "comments_txt.comments3",
-    name: 'Federica',
-    surname: 'Di Monaco',
+    name: 'Alessandro',
+    surname: 'Savallo',
     profilePictureImg: 'academy-comments-profile-picture4',
     imgClassName: 'trial'
   }

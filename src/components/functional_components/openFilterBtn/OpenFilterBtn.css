@@ -1,8 +1,29 @@
+:root {
+    --open-filter-icon-open: url('../../../assets/icons/open_filter_icon.svg');
+    --open-filter-icon-close: url('../../../assets/icons/close_filter_icon.svg')
+}
+
+.open-filter-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
 .open-filter-icon {
-    background-image: url('../../../assets/icons/filter_icon.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 27px;
     height: 27px;
+    margin-right: 10px;
+}
+
+.open-filter-icon-open {
+    background-image: var(--open-filter-icon-open);
+}
+
+
+.open-filter-icon-close {
+    background-image: var(--open-filter-icon-close);
 }

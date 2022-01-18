@@ -130,7 +130,7 @@
     color: white;
     z-index: 1;
     /* transition: 1s ease-in; */
-    animation: fadeIn 1s;
+    animation: fadeIn 1.5s;
 }
 
 @keyframes fadeIn {

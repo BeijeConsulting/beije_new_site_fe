@@ -69,7 +69,7 @@
 .ant-tabs-tab-btn {
     font-family: 'SpaceGrotesk-Regular', sans-serif !important;
     font-weight: bold !important;
-    font-size: 18px !important;
+    font-size: 15px !important;
     line-height: 30px !important;
     letter-spacing: 0.06em !important;
     text-transform: uppercase;
@@ -79,4 +79,8 @@
 .card-container>.ant-tabs-card .ant-tabs-content {
     height: 100%;
     width: 100%;
+}
+
+.career-list-item-container {
+    padding-top: 20px;
 }

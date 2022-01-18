@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Row, Typography, Col } from 'antd';
 const { Title } = Typography
+
+// import redux
+import { connect } from "react-redux";
+import { setColorHeader } from "../../redux/ducks/colorHeaderDuck";
 
 // import style
 import './Contacts.css'
@@ -16,10 +20,26 @@ import CustomCard from "../../components/functional_components/customCard/Custom
 
 const Contacts = (props) => {
 
+    const primary_bg_page_contacts = '#d6e3e5'
+
     const { t } = useTranslation();
 
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, [])
+
+    const handleScroll = () => {
+        if (window.pageYOffset > 0) {
+            props.dispatch(setColorHeader(primary_bg_page_contacts))
+        }
+    }
+
     return (
-        <div className="contacts-container">
+        <section className="contacts-container">
 
             <Row>
                 <Title
@@ -105,8 +125,8 @@ const Contacts = (props) => {
                 </Col>
 
             </Row>
-        </div>
+        </section>
     )
 }
 
-export default Contacts
+export default connect()(Contacts)

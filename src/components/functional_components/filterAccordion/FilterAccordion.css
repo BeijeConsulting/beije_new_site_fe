@@ -1,0 +1,51 @@
+.filter-accordion-container {
+    position: relative
+}
+
+/* .filter-accordion-container .ant-collapse-icon-position-right>.ant-collapse-item>.ant-collapse-header {
+    padding-bottom: 40px;
+} */
+
+.filter-accordion-filter-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 5px 0 20px 0;
+    width: 100%;
+}
+
+.filter-accordion-filter-container-desktop {
+    display: none;
+}
+
+.filter-accordion-single-filter-container {
+    margin: 10px;
+}
+
+.filter-accordion-btn {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    margin-bottom: 20px;
+}
+
+
+@media screen and (min-width: 1024px) {
+
+    .filter-accordion-filter-container-desktop {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 5px 0 20px 0;
+        width: 100%;
+    }
+
+    .filter-accordion-collapse {
+        display: none;
+    }
+}

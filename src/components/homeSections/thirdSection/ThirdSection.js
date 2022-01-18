@@ -55,7 +55,7 @@ const ThirdSection = () => {
         })
 
         // t1.from(percentage1SingleDesktop, { opacity: 0, stagger: 0.3, duration: 0.5, ease: 'power2.in' });
-        t1.from(singleEl, { y: 50, opacity: 0, stagger: 0.3, duration: 0.5, ease: 'power2.in' })
+        t1.from(singleEl, { y: 50, opacity: 0, stagger: 0.3, duration: 0.8, ease: 'power2.in' })
 
     }, [])
 

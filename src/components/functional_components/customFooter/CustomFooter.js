@@ -68,39 +68,54 @@ const CustomFooter = (props) => {
                 <Row className={'container-row justify-end items-center custom-footer-social'}>
                     <CustomButton
                         type={'primary-social'}
-                        href={social.url.url_linkedIn}
                         currentIcon={
-                            <img
-                                src={social.icon.icon_linkedIn}
-                                alt={t('imgAlt.social.in')}
-                                style={{ height: 16 }}
-                                className={'icon-social'}
-                            />}
+                            <a
+                                href={social.url.url_linkedIn}
+                                target={social.target}
+                            >
+                                <img
+                                    src={social.icon.icon_linkedIn}
+                                    alt={t('imgAlt.social.in')}
+                                    style={{ height: 16 }}
+                                    className={'icon-social'}
+                                />
+                            </a>
+                        }
                     />
                     <div style={{ margin: 20 }}>
                         <CustomButton
                             type={'primary-social'}
-                            href={social.url.url_facebook}
                             currentIcon={
-                                <img
-                                    src={social.icon.icon_facebook}
-                                    alt={t('imgAlt.social.fb')}
-                                    style={{ height: 16 }}
-                                    className={'icon-social'}
-                                />}
+                                <a
+                                    href={social.url.url_facebook}
+                                    target={social.target}
+                                >
+                                    <img
+                                        src={social.icon.icon_facebook}
+                                        alt={t('imgAlt.social.fb')}
+                                        style={{ height: 16 }}
+                                        className={'icon-social'}
+                                    />
+                                </a>
+                            }
                         />
                     </div>
 
                     <CustomButton
                         type={'primary-social'}
-                        href={social.url.url_youTube}
                         currentIcon={
-                            <img
-                                src={social.icon.icon_youTube}
-                                alt={t('imgAlt.social.youTube')}
-                                style={{ height: 16 }}
-                                className={'icon-social'}
-                            />}
+                            <a
+                                href={social.url.url_youTube}
+                                target={social.target}
+                            >
+                                <img
+                                    src={social.icon.icon_youTube}
+                                    alt={t('imgAlt.social.youTube')}
+                                    style={{ height: 16 }}
+                                    className={'icon-social'}
+                                />
+                            </a>
+                        }
                     />
                 </Row>
 

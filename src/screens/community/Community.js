@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { Row, Typography, Col, Collapse } from "antd";
 const { Title } = Typography
 const { Panel } = Collapse;
 
-// import api
+// import redux
 import { connect } from "react-redux";
+import { setColorHeader } from "../../redux/ducks/colorHeaderDuck";
 
 // import style
 import './Community.css'
@@ -22,30 +23,21 @@ import CustomCard from "../../components/functional_components/customCard/Custom
 
 const Community = (props) => {
 
-    console.log('props', props)
+    const primary_bg_page_community = '#d6e3e5'
 
-    // const obj = [
-    //     {
-    //         title: 'TITOLO EVENTO',
-    //         bg: imgTest,
-    //         descEvent: 'Questa è una lunga descrizione che serve a capire se in effetti sta funzionando correttamente tutto: evento1'
-    //     },
-    //     {
-    //         title: 'TITOLO EVENTO',
-    //         bg: imgTest,
-    //         descEvent: 'Questa è una lunga descrizione che serve a capire se in effetti sta funzionando correttamente tutto: evento2'
-    //     },
-    //     {
-    //         title: 'TITOLO EVENTO',
-    //         bg: imgTest,
-    //         descEvent: 'Questa è una lunga descrizione che serve a capire se in effetti sta funzionando correttamente tutto: evento3'
-    //     },
-    //     {
-    //         title: 'TITOLO EVENTO',
-    //         bg: imgTest,
-    //         descEvent: 'Questa è una lunga descrizione che serve a capire se in effetti sta funzionando correttamente tutto: evento4'
-    //     }
-    // ]
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, [])
+
+    const handleScroll = () => {
+        if (window.pageYOffset > 0) {
+            props.dispatch(setColorHeader(primary_bg_page_community))
+        }
+    }
 
     const changeIcon = (panelProps) => {
         if (panelProps.isActive) {
@@ -132,7 +124,7 @@ const Community = (props) => {
     }
 
     return (
-        <section style={{ padding: '100px 20px 30px 20px' }}>
+        <section className={'community-container'}>
             <Row>
                 <Title
                     level={1}
