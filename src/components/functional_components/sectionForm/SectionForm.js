@@ -98,7 +98,7 @@ const SectionForm = (props) => {
 
 SectionForm.defaultProps = {
     marginBottom: '10px',
-    LongLineAbove: true,
+    LongLineAbove: false,
     moreInfo: false,
     agreement: false,
     positionBtn: 'flex-end',

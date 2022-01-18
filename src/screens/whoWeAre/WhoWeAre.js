@@ -99,7 +99,42 @@ const WhoWeAre = (props) => {
                     subTitle={t('WhoWeAre.value_title')}
                     desc={false}
                     list={true}
-                    listToPrint={whoWeAre_value_list}
+                    createList={
+                        <>
+                            <li>
+                                {t('WhoWeAre.value_list.el1.part1')}
+                                <span className="highlight-txt">
+                                    <strong>{t('WhoWeAre.value_list.el1.part2')}
+                                    </strong>
+                                </span>
+                                {t('WhoWeAre.value_list.el1.part3')}
+                            </li>
+                            <li>
+                                {t('WhoWeAre.value_list.el2.part1')}
+                                <span className="highlight-txt">
+                                    <strong>{t('WhoWeAre.value_list.el2.part2')}
+                                    </strong>
+                                </span>
+                                {t('WhoWeAre.value_list.el2.part3')}
+                            </li>
+                            <li>
+                                {t('WhoWeAre.value_list.el3.part1')}
+                                <span className="highlight-txt">
+                                    <strong>{t('WhoWeAre.value_list.el3.part2')}
+                                    </strong>
+                                </span>
+                                {t('WhoWeAre.value_list.el3.part3')}
+                            </li>
+                            <li>
+                                {t('WhoWeAre.value_list.el4.part1')}
+                                <span className="highlight-txt">
+                                    <strong>{t('WhoWeAre.value_list.el4.part2')}
+                                    </strong>
+                                </span>
+                                {t('WhoWeAre.value_list.el4.part3')}
+                            </li>
+                        </>
+                    }
                     bg={'whoWeAre-value-img'}
                 />
             </section>

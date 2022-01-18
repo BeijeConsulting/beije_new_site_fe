@@ -18,7 +18,7 @@ import './Consulting.css';
 import '../../components/hooks_components/customCarousel/CustomCarousel.css'
 
 //import constants
-import { consulting_carousel_client } from "../../utils/properties";
+import { consulting_carousel_client, consulting_carousel_employee } from "../../utils/properties";
 
 //import functions
 import { turnToUppercase } from "../../utils/utilities";
@@ -97,7 +97,7 @@ const Consulting = (props) => {
     });
 
     const handleScroll = () => {
-        if (window.pageYOffset == 0 || (window.pageYOffset > 0 && window.pageYOffset < 1297)) {
+        if (window.pageYOffset == 0 || (window.pageYOffset > 0 && window.pageYOffset < 1297) || window.pageYOffset > 2300) {
             props.dispatch(setColorHeader(primary_bg_page_consulting))
         }
         else {
@@ -197,7 +197,7 @@ const Consulting = (props) => {
             <div className={'consulting-percentage1-section'}>
                 <section className={'consulting-gsap-second-section'}>
                     <SectionSubtitle
-                        title={turnToUppercase(t('Consulting.title_carousel_client'))}
+                        title={turnToUppercase(t('Consulting.title_carousel_employee'))}
                         shortLineBelow
                         classNameContainer={'consulting-gsap-percentage1-title'}
                     />
@@ -205,7 +205,7 @@ const Consulting = (props) => {
                         <CustomCarousel />
                     </Row>
                     <Row className={'consulting-percentage-section-card'}>
-                        {consulting_carousel_client.map(printPercentage1)}
+                        {consulting_carousel_employee.map(printPercentage1)}
                     </Row>
                 </section>
 
@@ -229,13 +229,13 @@ const Consulting = (props) => {
                         />
                     </Row>
                 </section>
-
-                <section className={'consulting-gsap-fourth-section'}>
-                    <SectionForm
-                        title={turnToUppercase(t('Consulting.title_add_info'))}
-                    />
-                </section>
             </div>
+
+            <section className={'consulting-gsap-fourth-section consulting-form-section'}>
+                <SectionForm
+                    title={turnToUppercase(t('Consulting.title_add_info'))}
+                />
+            </section>
         </div>
     )
 }

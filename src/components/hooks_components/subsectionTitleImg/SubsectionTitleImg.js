@@ -101,10 +101,10 @@ const SubsectionTitleImg = (props) => {
                         </Row>
                     }
                     {
-                        props.list && props.listToPrint !== undefined &&
+                        props.list &&
                         <Row className={'sub-section-desc-container'}>
                             <ul className={`subSection-desc-mobile-gsap ${props.ulClassName}`}>
-                                {props.listToPrint.map(printList)}
+                                {!props.createList && props.listToPrint !== undefined ? props.listToPrint.map(printList) : props.createList}
                             </ul>
 
                         </Row>
@@ -149,10 +149,10 @@ const SubsectionTitleImg = (props) => {
                         </Row>
                     }
                     {
-                        props.list && props.listToPrint !== undefined &&
+                        props.list &&
                         <Row className={'sub-section-desc-container'}>
                             <ul className={`subSection-desc-desktop-gsap ${props.ulClassName}`}>
-                                {props.listToPrint.map(printList)}
+                                {!props.createList && props.listToPrint !== undefined ? props.listToPrint.map(printList) : props.createList}
                             </ul>
 
                         </Row>

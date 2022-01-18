@@ -26,7 +26,7 @@ import {
 import { turnToUppercase } from "../../utils/utilities";
 
 //import constants
-import { academy2, academy_comments, ENVIRONMENT } from "../../utils/properties";
+import { academy_carousel_student, academy2, academy_comments, ENVIRONMENT } from "../../utils/properties";
 
 //import components
 import CustomCard from "../../components/functional_components/customCard/CustomCard";
@@ -38,6 +38,7 @@ import IntroductiveSection from "../../components/functional_components/introduc
 import GoToDetailRow from "../../components/functional_components/goToDetailRow/GoToDetailRow";
 import SectionForm from "../../components/functional_components/sectionForm/SectionForm";
 import CustomOwlCarousel from "../../components/hooks_components/customOwlCarousel/CustomOwlCarousel";
+import CustomCarousel from "../../components/hooks_components/customCarousel/CustomCarousel";
 
 const Academy = (props) => {
 
@@ -73,6 +74,11 @@ const Academy = (props) => {
         const thirdSecTitle = element.querySelector('.academy-gsap-next-courses-title');
         const thirdSecBtn = element.querySelector('.academy-gsap-next-courses-btn');
 
+        const fourthSec = element.querySelector('.academy-gsap-fourth-section');
+        const percentageTitle = element.querySelector('.academy-gsap-percentage-title');
+        const percentageSingleMobile = element.querySelector('.academy-gsap-percentage-single-mobile');
+        const percentageSingleDesktop = element.querySelectorAll('.academy-gsap-percentage-single-desktop');
+
         const fifthSec = element.querySelector('.academy-gsap-fifth-section');
         const commentTitle = element.querySelector('.academy-gsap-comment-title');
         const singleComment = element.querySelector('.academy-gsap-single-comment')
@@ -100,6 +106,13 @@ const Academy = (props) => {
 
         const t4 = gsap.timeline({
             scrollTrigger: {
+                trigger: fourthSec,
+                start: 'top 75%'
+            }
+        })
+
+        const t5 = gsap.timeline({
+            scrollTrigger: {
                 trigger: fifthSec,
                 start: 'top 75%'
             }
@@ -115,8 +128,12 @@ const Academy = (props) => {
         t3.from(thirdSecTitle, { y: 20, opacity: 0, duration: 0.5, ease: 'back' })
         t3.from(thirdSecBtn, { opacity: 0, duration: 0.5, ease: 'power2.in' })
 
-        t4.from(commentTitle, { y: 20, opacity: 0, duration: 0.5, ease: 'back' })
-        t4.from(singleComment, { opacity: 0, duration: 0.5, ease: 'power2.in' })
+        t4.from(percentageTitle, { y: 50, opacity: 0, duration: 0.5, ease: 'back' })
+        t4.from(percentageSingleDesktop, { opacity: 0, stagger: 0.3, duration: 0.5, ease: 'power2.in' })
+        t4.from(percentageSingleMobile, { opacity: 0, duration: 0.5, ease: 'power2.in' })
+
+        t5.from(commentTitle, { y: 20, opacity: 0, duration: 0.5, ease: 'back' })
+        t5.from(singleComment, { opacity: 0, duration: 0.5, ease: 'power2.in' })
 
         return () => {
             window.removeEventListener("scroll", handleScroll);
@@ -125,7 +142,8 @@ const Academy = (props) => {
     });
 
     const handleScroll = () => {
-        if (window.pageYOffset == 0 || (window.pageYOffset > 0 && window.pageYOffset < 2200)) {
+        console.log('page scroll: ', window.pageYOffset);
+        if (window.pageYOffset == 0 || (window.pageYOffset > 0 && window.pageYOffset < 2200) || window.pageYOffset > 3300) {
             props.dispatch(setColorHeader(primary_bg_page_academy))
         }
         else {
@@ -139,6 +157,31 @@ const Academy = (props) => {
 
     const goToMasterFrontend = () => {
         navigate(`${ENVIRONMENT.ROUTING.BASE_URL}academy/masterFrontend`)
+    }
+
+
+    const printPercentage = (item, key) => {
+        return (
+            <Col xs={0} md={8} key={key} className={'container-column items-center padding-30 academy-gsap-percentage-single-desktop'}>
+                <CustomCard
+                    cardClassName={'custom-carousel-icon'}
+                    imgPreview={false}
+                    cardImg
+                    imgSrc={item.iconSrc}
+                    imgHeight={42}
+                    imgWidth={56}
+                />
+                <div className='separator-line-vertical'></div>
+                <CustomCard
+                    titleLevel={1}
+                    cardTitle={item.titlePenrcentage}
+                />
+                <CustomCard
+                    cardParagraph={t(`Academy.${item.carouselDesc}`)}
+                    paragraphClassName={'custom-carousel-paragraph'}
+                />
+            </Col>
+        )
     }
 
     const printComments = (item, key) => {
@@ -303,6 +346,22 @@ const Academy = (props) => {
             {/* Second Part */}
             <div className={'academy-second-part'}>
 
+                {/* Percentage Section */}
+                <section className="academy-percentage-section academy-gsap-fourth-section">
+                    <SectionSubtitle
+                        title={turnToUppercase(t('Academy.title_carousel_student'))}
+                        shortLineBelow
+                        classNameContainer={'academy-gsap-percentage-title'}
+                    />
+                    <Row className={'academy-percentage-section-carousel academy-gsap-percentage-single-mobile'}>
+                        <CustomCarousel />
+                    </Row>
+                    <Row className={'academy-percentage-section-card'}>
+                        {academy_carousel_student.map(printPercentage)}
+                    </Row>
+                </section>
+
+
                 {/* Comments section */}
                 <section className="academy-gsap-fifth-section">
                     <Row>
@@ -340,14 +399,14 @@ const Academy = (props) => {
                     </Row>
                 </section>
 
-                {/* Form section */}
-                <section className={'academy-form-section consulting-gsap-sixth-section'}>
-                    <SectionForm
-                        title={t('Academy.form_message_title')}
-                    />
-                </section>
-
             </div>
+
+            {/* Form section */}
+            <section className={'academy-form-section consulting-gsap-sixth-section'}>
+                <SectionForm
+                    title={t('Academy.form_message_title')}
+                />
+            </section>
         </div >
     )
 }

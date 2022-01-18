@@ -53,6 +53,10 @@ body {
 
 }
 
+.ant-typography {
+  color: var(--first-color) !important;
+}
+
 h1, h2, h3, h4, h5 {
   font-family: 'SpaceGrotesk-Medium', sans-serif;
   font-size: 40px !important;

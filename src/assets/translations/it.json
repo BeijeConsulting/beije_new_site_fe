@@ -93,11 +93,15 @@
       "part3": " best efficiency ",
       "part4": "si fondono per la costruzione di progetti innovativi."
     },
+    "title_carousel_employee": "Soddisfazione dipendenti",
+    "paragraph1_carousel_employee": "Ritiene che ci sia un buon clima aziendale.",
+    "paragraph2_carousel_employee": "Ritiene che l'azienda sia attenta al benessere dei dipendenti.",
+    "paragraph3_carousel_employee": "Raccomanderebbe l'azienda.",
     "title_carousel_client": "Soddisfazione clienti",
-    "paragraph1_carousel_client": "ritiene che ci sia un buon clima aziendale",
-    "paragraph2_carousel_client": "ritiene che l'azienda sia attenta al benessere dei dipendenti",
-    "paragraph3_carousel_client": "raccomanderebbe l'azienda",
-    "data_survey": "Dati survery 2019",
+    "paragraph1_carousel_client": "Ritiene che ci sia un buon clima aziendale.",
+    "paragraph2_carousel_client": "Ritiene che l'azienda sia attenta al benessere dei dipendenti.",
+    "paragraph3_carousel_client": "Raccomanderebbe l'azienda.",
+    "data_survey": "Dati survery 2021",
     "title_add_info": "Richiedi maggiori informazioni",
     "description_add_info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan lacus quis nibh porta, eget porttitor neque feugiat."
   },
@@ -115,7 +119,10 @@
     "date_next_course_1": "Gen. – Apr. 2021",
     "next_course_2": "Stage java",
     "date_next_course_2": "Gen. – Apr. 2021",
-    "percentage_client_satisfaction_title": "Soddisfazione clienti",
+    "title_carousel_student": "Soddisfazione studenti",
+    "paragraph1_carousel_student": "Ritiene che ci sia un buon clima aziendale.",
+    "paragraph2_carousel_student": "Ritiene che l'azienda sia attenta al benessere dei dipendenti.",
+    "paragraph3_carousel_student": "Raccomanderebbe l'azienda.",
     "comments_title": "Dicono di noi",
     "comments_txt": {
       "comments1": "Nell'Academy FrontEnd di Beije ho approfondito tecnologie e nozioni nuove, mi è stato inoltre fornito supporto per entrare nel mondo del lavoro, cosa che la sola università non mi ha fornito, per questo lo reputo un percorso che rifarei volentieri.",
@@ -138,12 +145,12 @@
     "title": "Master Backend",
     "intro": "Diventa Web Developer con noi!",
     "stageDesc": "Il corso comprende uno stage finale della durata di 3 mesi",
-    "compensationDesc": "rimborso spese",
-    "locationDesc": "remoto",
+    "compensationDesc": "Rimborso spese",
+    "locationDesc": "Remoto",
     "introList": {
-      "el1": "3 mesi di crescita professionale",
-      "el2": "Formazione costante attraverso progetti individuali e di gruppo",
-      "el3": "Utilizzo delle tecnologie più richieste dal mercato"
+      "el1": "3 mesi di crescita professionale;",
+      "el2": "Formazione costante attraverso progetti individuali e di gruppo;",
+      "el3": "Utilizzo delle tecnologie più richieste dal mercato."
     },
     "program": {
       "section1": {
@@ -198,13 +205,13 @@
   "AcademyFrontend": {
     "title": "Master Frontend",
     "intro": "Diventa Web Developer con noi!",
-    "stageDesc": "percorso di stage della durata di 3 mesi",
-    "compensationDesc": "rimborso spese",
-    "locationDesc": "remoto",
+    "stageDesc": "Percorso di stage della durata di 3 mesi",
+    "compensationDesc": "Rimborso spese",
+    "locationDesc": "Remoto",
     "introList": {
-      "el1": "3 mesi di crescita professionale e personale",
-      "el2": "Formazione costante attraverso progetti individuali e di gruppo con sviluppo di Web & Mobile application",
-      "el3": "Utilizzo di librerie e framework più richiesti dal mercato"
+      "el1": "3 mesi di crescita professionale e personale;",
+      "el2": "Formazione costante attraverso progetti individuali e di gruppo con sviluppo di Web & Mobile application;",
+      "el3": "Utilizzo di librerie e framework più richiesti dal mercato."
     },
     "program": {
       "section1": {
@@ -248,10 +255,26 @@
     "title": "Chi siamo",
     "value_title": "Valori",
     "value_list": {
-      "el1": "Crediamo in quello che facciamo e abbiamo un profondo RISPETTO per gli altri",
-      "el2": "Mostriamo GRATITUDINE per l’impegno che ogni giorno mettiamo nel nostro lavoro",
-      "el3": "Prima viene la squadra e poi l’individuo, il nostro è un lavoro di TEAM",
-      "el4": "La base per costruire la nostra community è sviluppare un SENSO DI APPARTENENZA"
+      "el1": {
+        "part1": "Crediamo in quello che facciamo e abbiamo un profondo ",
+        "part2": "RISPETTO ",
+        "part3": "per gli altri."
+      },
+      "el2": {
+        "part1": "Mostriamo ",
+        "part2": "GRATITUDINE ",
+        "part3": "per l’impegno che ogni giorno mettiamo nel nostro lavoro."
+      },
+      "el3": {
+        "part1": "Prima viene la squadra e poi l’individuo, il nostro è un lavoro di ",
+        "part2": "TEAM",
+        "part3": "."
+      },
+      "el4": {
+        "part1": "La base per costruire la nostra community è sviluppare un ",
+        "part2": "SENSO DI APPARTENENZA",
+        "part3": "."
+      }
     },
     "history_title": "Storia",
     "history_desc": {

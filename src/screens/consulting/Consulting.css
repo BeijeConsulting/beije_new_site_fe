@@ -7,22 +7,12 @@
 }
 
 .consulting-container {
-    background-color: var(--bg-color-secondary-consulting) !important;
+    background-color: var(--bg-color-primary-consulting) !important;
     overflow-x: hidden;
     position: relative;
 }
 
 /* Introductive section */
-.consulting-introductive-section {
-    background-color: var(--bg-color-primary-consulting);
-    clip-path: polygon(0 0,
-            100% 0,
-            100% 100%,
-            0 calc(100% - 10vw));
-    padding-bottom: 30px;
-}
-
-
 .consulting-bg1 {
     background-image: var(--consulting-bg1);
 }
@@ -33,8 +23,10 @@
 
 /* Percentage section */
 .consulting-percentage1-section {
-    padding: 0 20px;
-    margin-bottom: 30px;
+    background-color: var(--bg-color-secondary-consulting);
+    padding: 60px 20px;
+    margin: 20px 0;
+    clip-path: polygon(100% calc(100% - 95%), 100% 100%, 0 calc(100% - 5%), 0 0);
 }
 
 .consulting-percentage-section-carousel {
@@ -47,6 +39,12 @@
 }
 
 .consulting-percentage2-section {
+    margin-bottom: 30px;
+}
+
+/* Form section */
+.consulting-form-section {
+    padding: 0 20px;
     margin-bottom: 30px;
 }
 

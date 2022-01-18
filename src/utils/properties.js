@@ -302,7 +302,7 @@ export const consulting_carousel_client = [
   {
     carouselTitle: 'title_carousel_client',
     iconSrc: icon1_consulting,
-    titlePenrcentage: '96,9 %',
+    titlePenrcentage: '96,9%',
     carouselDesc: 'paragraph1_carousel_client'
   },
   {
@@ -316,6 +316,48 @@ export const consulting_carousel_client = [
     iconSrc: icon3_consulting,
     titlePenrcentage: '89,3%',
     carouselDesc: 'paragraph3_carousel_client'
+  }
+]
+
+export const consulting_carousel_employee = [
+  {
+    carouselTitle: 'title_carousel_employee',
+    iconSrc: icon1_consulting,
+    titlePenrcentage: '96,9%',
+    carouselDesc: 'paragraph1_carousel_employee'
+  },
+  {
+    carouselTitle: 'title_carousel_employee',
+    iconSrc: icon2_consulting,
+    titlePenrcentage: '92,2%',
+    carouselDesc: 'paragraph2_carousel_employee'
+  },
+  {
+    carouselTitle: 'title_carousel_employee',
+    iconSrc: icon3_consulting,
+    titlePenrcentage: '89,3%',
+    carouselDesc: 'paragraph3_carousel_employee'
+  }
+]
+
+export const academy_carousel_student = [
+  {
+    carouselTitle: 'title_carousel_student',
+    iconSrc: icon1_consulting,
+    titlePenrcentage: '96,9%',
+    carouselDesc: 'paragraph1_carousel_student'
+  },
+  {
+    carouselTitle: 'title_carousel_student',
+    iconSrc: icon2_consulting,
+    titlePenrcentage: '92,2%',
+    carouselDesc: 'paragraph2_carousel_student'
+  },
+  {
+    carouselTitle: 'title_carousel_student',
+    iconSrc: icon3_consulting,
+    titlePenrcentage: '89,3%',
+    carouselDesc: 'paragraph3_carousel_student'
   }
 ]
 
@@ -344,8 +386,8 @@ export const academy_comments = [
   ,
   {
     commentsText: "comments_txt.comments4",
-    name: 'Federica',
-    surname: 'Di Monaco',
+    name: 'Samuele',
+    surname: 'Busseni',
     profilePictureImg: 'academy-comments-profile-picture5',
     imgClassName: 'trial'
   }
@@ -519,80 +561,3 @@ export const up_case_studies = [
     titleClassName: 'up-case-studies-title'
   }
 ]
-
-export const whoWeAre_value_list = [
-  'WhoWeAre.value_list.el1',
-  'WhoWeAre.value_list.el2',
-  'WhoWeAre.value_list.el3',
-  'WhoWeAre.value_list.el4'
-]
-
-/*
-//sia per lista sia per detagli
-const blog = [
-  {
-    title: 'title news',
-    subtitle: 'subtitle news',
-    mediaBg: 'path',
-    description: 'long paragraph',
-    images: [
-      {
-        thumb: 'path',
-        imgDesktop: 'path',
-        imgMobile: 'path'
-      },
-      {
-        thumb: 'path',
-        imgDesktop: 'path',
-        imgMobile: 'path'
-      },
-      {
-        thumb: 'path',
-        imgDesktop: 'path',
-        imgMobile: 'path'
-      }
-    ],
-    video: 'path',
-    hashtags: ['learn', 'beije', 'together'],
-    permalink: 'titolo-news' //parte finale dell'url univoca
-  }
-]
-*/
-/*
-const COMMUNITY = [
-  {
-    title: 'title news',
-    image: {
-      thumb: 'path',
-      imgDesktop: 'path',
-      imgMobile: 'path'
-    },
-    description: 'long paragraph',
-    permalink: 'titolo-news' //parte finale dell'url univoca,
-    video: 'link YouTube' //se la stringa è vuota vuol dire che non c'è il video
-  }
-]
-*/
-
-/*
-const JOB_APPLICATION = [
-  {
-    title: 'react developer', //string
-    type: 'frontend', //string
-    mode: 'remoto', //string
-    academy: true, //bool - indica se la posizione è per academy o lavorativa
-    description: '<p>Long description</p>', //long string
-    date_creation: '2021-11-24', //date
-    permalink: 'titolo-news' //parte finale dell'url univoca
-  },
-  {
-    title: 'java developer', //string
-    type: 'backend', //string
-    mode: 'milano', //string
-    academy: true, //bool - indica se la posizione è per academy o lavorativa
-    description: '<p>Long description</p>', //long string
-    date_creation: '2021-11-24', //date
-    permalink: 'titolo-news' //parte finale dell'url univoca
-  },
-]
-*/

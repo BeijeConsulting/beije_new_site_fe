@@ -10,22 +10,13 @@
 }
 
 .academy-container {
-    background-color: var(--bg-color-secondary-academy) !important;
+    background-color: var(--bg-color-primary-academy) !important;
     overflow-x: hidden;
 }
 
 /* ACADEMY FIRST PART */
 
 /* Introductive section */
-.academy-first-part {
-    background-color: var(--bg-color-primary-academy);
-    clip-path: polygon(0 0,
-            100% 0,
-            100% 100%,
-            0 calc(100% - 10vw));
-    padding-bottom: 30px;
-}
-
 .academy-bg1 {
     background-image: var(--academy-bg1);
 }
@@ -117,8 +108,10 @@
 
 /* ACADEMY SECOND PART */
 .academy-second-part {
-    /* padding: 0 20px; */
-    margin-bottom: 30px;
+    background-color: var(--bg-color-secondary-academy);
+    padding: 60px 20px;
+    margin: 20px 0;
+    clip-path: polygon(100% calc(100% - 95%), 100% 100%, 0 calc(100% - 5%), 0 0);
 }
 
 /* Percentage section */
@@ -164,6 +157,7 @@
 .academy-comments-profile-picture4 {
     background-image: var(--academy-comments-picture1);
 }
+
 .academy-comments-profile-picture5 {
     background-image: var(--academy-comments-picture1);
 }
@@ -175,6 +169,7 @@
 /* Form message section */
 .academy-form-section {
     padding: 0 20px;
+    margin-bottom: 30px;
 }
 
 
