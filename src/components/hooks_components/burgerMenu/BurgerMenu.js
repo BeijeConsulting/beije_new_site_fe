@@ -9,17 +9,17 @@ const { Link } = Typography;
 import { setMenu, initMenu } from '../../../redux/ducks/menuDuck'
 
 //import assets and obj
-import { social } from '../../../utils/properties';
 import { siteMenu } from '../../../utils/properties';
 
 //import style
 import './BurgerMenu.css'
 
 //import components
-import CustomButton from '../../functional_components/Button/CustomButton';
+// import CustomButton from '../../functional_components/Button/CustomButton';
 import SwitchLanguage from '../switchLanguage/SwitchLanguage';
 import CustomCard from '../../functional_components/customCard/CustomCard';
 import { useTranslation } from 'react-i18next';
+import SocialSection from '../../functional_components/socialSection/SocialSection';
 
 
 
@@ -170,59 +170,7 @@ const BurgerMenu = (props) => {
                             <Row className={'burger-menu-social'}>
 
                                 <Col xs={12} lg={24} className='burger-menu-social-col container-row items-center'>
-                                    <CustomButton
-                                        type={'primary-social'}
-                                        currentIcon={
-                                            <a
-                                                href={social.url.url_linkedIn}
-                                                target={social.target}
-                                            >
-                                                <img
-                                                    src={social.icon.icon_linkedIn}
-                                                    alt={t('imgAlt.social.in')}
-                                                    style={{ height: 16 }}
-                                                    className={'icon-social'}
-                                                />
-                                            </a>
-                                        }
-                                    />
-                                    <div style={{ margin: 20 }}>
-                                        <CustomButton
-                                            type={'primary-social'}
-                                            currentIcon={
-                                                <a
-                                                    href={social.url.url_facebook}
-                                                    target={social.target}
-                                                >
-                                                    <img
-                                                        src={social.icon.icon_facebook}
-                                                        alt={t('imgAlt.social.fb')}
-                                                        style={{ height: 16 }}
-                                                        className={'icon-social'}
-                                                    />
-                                                </a>
-                                            }
-                                        />
-                                    </div>
-
-                                    <CustomButton
-                                        type={'primary-social'}
-                                        href={social.url.url_youTube}
-                                        currentIcon={
-                                            <a
-                                                href={social.url.url_youTube}
-                                                target={social.target}
-                                            >
-                                                <img
-                                                    src={social.icon.icon_youTube}
-                                                    alt={t('imgAlt.social.youTube')}
-                                                    style={{ height: 16 }}
-                                                    className={'icon-social'}
-                                                />
-                                            </a>
-                                        }
-                                    />
-
+                                    <SocialSection />
                                 </Col>
                                 <Col xs={12} sm={0} className='burger-menu-lang'>
                                     <SwitchLanguage />

@@ -34,14 +34,14 @@ const CustomHeader = (props) => {
             />
           </Link>
         </Col>
-        <Col xs={0} sm={0} lg={16} >
+        <Col xs={0} sm={0} lg={15} >
           <Navbar
             classNameRow={!props.visibilityDuck.visibility ? 'display-none' : 'navbar-row'}
             classNameCol={'col-link'}
             classNameLink={props.colorDuck.lightColor ? 'navbar-link-light' : 'navbar-general-link'}
           />
         </Col>
-        <Col xs={0} sm={0} lg={2} className='container-row justify-start items-end'>
+        <Col xs={0} sm={0} lg={3} className='container-row justify-center items-end'>
           {
             (!props.menuDuck.menuOpen && !props.colorDuck.lightColor) &&
             <SwitchLanguage

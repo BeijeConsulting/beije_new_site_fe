@@ -74,19 +74,29 @@ export const langMonth = {
   locale_it: localeIT,
 }
 
-export const social = {
-  icon: {
-    icon_facebook: icon_facebook,
-    icon_linkedIn: icon_instagram,
-    icon_youTube: icon_youTube
+export const social = [
+  {
+    icon: icon_facebook,
+    url: 'https://www.facebook.com/beijepeoplefirst',
+    alt: 'fb',
+    target: '_blank',
+    classNameSingleContainer: ''
   },
-  url: {
-    url_facebook: 'https://www.facebook.com/beijepeoplefirst',
-    url_linkedIn: 'https://www.linkedin.com/company/beije',
-    url_youTube: 'https://www.youtube.com/channel/UCGZdqNE152QBvg9WZ4E65Iw'
+  {
+    icon: icon_instagram,
+    url: 'https://www.linkedin.com/company/beije',
+    alt: 'in',
+    target: '_blank',
+    classNameSingleContainer: 'social-section-middle-social'
   },
-  target: '_blank'
-}
+  {
+    icon: icon_youTube,
+    url: 'https://www.youtube.com/channel/UCGZdqNE152QBvg9WZ4E65Iw',
+    alt: 'youTube',
+    target: '_blank',
+    classNameSingleContainer: ''
+  }
+]
 
 export const siteMenu = [
   {

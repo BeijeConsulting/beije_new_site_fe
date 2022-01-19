@@ -94,7 +94,8 @@
     .intro-section-img-container {
         height: 350px;
     }
-/* 
+
+    /* 
     .intro-sec-txt-div-container {
         width: 70%;
     } */
@@ -171,7 +172,11 @@
     }
 
     .intro-section-desc {
-        width: 60%;
+        width: 400px;
+    }
+
+    .intro-section-list {
+        width: 400px;
     }
 
     .intro-sec-row2-desc-mobile {

@@ -5,12 +5,11 @@ import { useTranslation } from 'react-i18next';
 //import style and assets
 import '../../../style.css'
 import './CustomFooter.css'
-import { social } from '../../../utils/properties'
 
 //Import components
 import CustomCard from "../customCard/CustomCard"
-import CustomButton from "../Button/CustomButton"
 import SwitchLanguage from "../../hooks_components/switchLanguage/SwitchLanguage";
+import SocialSection from "../socialSection/SocialSection";
 
 const CustomFooter = (props) => {
     const { t } = useTranslation();
@@ -65,59 +64,9 @@ const CustomFooter = (props) => {
 
             <div>
                 {/* this row is shown only when the device is smaller than 1024px */}
-                <Row className={'container-row justify-end items-center custom-footer-social'}>
-                    <CustomButton
-                        type={'primary-social'}
-                        currentIcon={
-                            <a
-                                href={social.url.url_linkedIn}
-                                target={social.target}
-                            >
-                                <img
-                                    src={social.icon.icon_linkedIn}
-                                    alt={t('imgAlt.social.in')}
-                                    style={{ height: 16 }}
-                                    className={'icon-social'}
-                                />
-                            </a>
-                        }
-                    />
-                    <div style={{ margin: 20 }}>
-                        <CustomButton
-                            type={'primary-social'}
-                            currentIcon={
-                                <a
-                                    href={social.url.url_facebook}
-                                    target={social.target}
-                                >
-                                    <img
-                                        src={social.icon.icon_facebook}
-                                        alt={t('imgAlt.social.fb')}
-                                        style={{ height: 16 }}
-                                        className={'icon-social'}
-                                    />
-                                </a>
-                            }
-                        />
-                    </div>
-
-                    <CustomButton
-                        type={'primary-social'}
-                        currentIcon={
-                            <a
-                                href={social.url.url_youTube}
-                                target={social.target}
-                            >
-                                <img
-                                    src={social.icon.icon_youTube}
-                                    alt={t('imgAlt.social.youTube')}
-                                    style={{ height: 16 }}
-                                    className={'icon-social'}
-                                />
-                            </a>
-                        }
-                    />
-                </Row>
+                <SocialSection
+                    classNameRowSocial='custom-footer-social custom-footer-social-mobile'
+                />
 
                 {/* this row is shown only when the device is bigger than 1024px */}
                 <Row className={'container-row justify-end items-center custom-footer-translation-desktop'}>
@@ -132,10 +81,25 @@ const CustomFooter = (props) => {
                 </Row>
 
                 <Row>
-                    <CustomCard
-                        descriptionClassName={'custom-footer-copyright txt-light mt-10'}
-                        cardDescription={t('footer.copyright') + ' - ' + t('footer.vatNumber') + ' 16334941008'}
-                    />
+                    <Col
+                        xs={24}
+                        lg={20}
+                    >
+                        <span
+                            className='custom-footer-copyright txt-light mt-10'
+                        >
+                            {t('footer.copyright') + ' - ' + t('footer.vatNumber') + ' 16334941008'}
+                        </span>
+                    </Col>
+                    <Col
+                        xs={0}
+                        lg={4}
+                    >
+                        <SocialSection
+                            classNameRowSocial='custom-footer-social-desktop'
+                        />
+                    </Col>
+
                 </Row>
             </div>
         </footer >

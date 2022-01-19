@@ -46,7 +46,10 @@
   },
   "home": {
     "firstSection": {
-      "title": "We help companies to implement innovative projects through Valuable Teams"
+      "title": {
+        "part1": "We help companies to implement innovative projects through ",
+        "part2": "Valuable Teams"
+      }
     },
     "secondSection": {
       "title_value": "VALUES",
@@ -95,7 +98,7 @@
   "Academy": {
     "title": "Talent Academy",
     "intro": "Be the next Software Ninjaneer!",
-    "page_description": "Our Talent Academies are theoretical-practical training courses to become a Software Developer. The Frontend and Backend Master Trainers, Roberto Brogi and Ivo Mosca will teach you through lectures, exercises, assessments and real projects. The courses last 3 months, they are paid courses and have the aim of entering the company with a permanent contract.",
+    "page_description": "Our Talent Academies are theoretical-practical training courses to become a Software Developer. ",
     "our_courses_title": "Our courses",
     "title_academy_java": "Academy Java",
     "title_academy_frontend": "Academy web develop - front end",
@@ -116,7 +119,8 @@
       "comments2": "Beije mi ha da subito dato un'ottima impressione e non si è smentita con il tempo. Ho avuto un contratto a tempo indeterminato dopo un breve periodo di formazione e sono entrato in un team che mi ha accolto ben oltre le mie aspettative. L’ambiente lavorativo è professionale, giovane e inclusivo.",
       "comments3": "Beije Academy è stata un’esperienza costruttiva e stimolante: mi ha permesso di apprendere le tecnologie usate nel mondo lavorativo e mi ha incoraggiato a mettermi in gioco in ogni circostanza.",
       "comments4": "",
-      "comments5": ""
+      "comments5": "",
+      "comments6": "Beije Accademy mi è stata molto utile per introdurmi nel mondo del lavoro con sicurezza grazie alle simulazioni in team, dove ho potuto mettere in pratica ciò che ho studiato in Accademy ed in Università."
     },
     "form_message_title": "Ask for more information"
   },
