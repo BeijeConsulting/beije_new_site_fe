@@ -3,21 +3,30 @@
     z-index: 2;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     height: 100%;
+    position: relative;
 }
 
 .home-fp-title {
     font-weight: 500 !important;
-    font-size: 35px !important;
+    font-size: 25px !important;
     color: #fff !important;
     line-height: 45px !important;
 }
 
 @media screen and (min-width: 768px) {
-    .home-fp-container {
-        padding-top: 70px;
+    .home-fp-title {
+        font-size: 35px !important;
     }
+
+    .home-fp-text-col {
+        margin-left: 20px;
+    }
+
+    /* .home-fp-container {
+        padding-top: 70px;
+    } */
 }
 
 @media screen and (min-width: 992px) {
@@ -28,7 +37,7 @@
 }
 
 @media screen and (min-width: 1024px) {
-    .home-fp-container {
+    /* .home-fp-container {
         padding-top: 50px;
-    }
+    } */
 }

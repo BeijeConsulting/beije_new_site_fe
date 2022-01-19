@@ -161,6 +161,7 @@ const Up = (props) => {
                     bg2='up-bg2'
                     desc1={t('Up.desc1')}
                     desc1Light={true}
+                    desc2Mobile={false}
                     desc2={t('Up.desc2')}
                     desc2Light={true}
                 />
@@ -173,46 +174,46 @@ const Up = (props) => {
                 </Row>
             </section>
 
-            <section className="up-comments-gsap">
-                <Row>
-                    <Col
-                        xs={24}
-                        className="up-comments-title-container up-comments-title-gsap"
-                    >
-                        <SectionSubtitle
-                            title={turnToUppercase(t('Up.comments_title'))}
-                            shortLineBelow
-                            classNameTitle={'up-comments-title'}
-                            classNameShortLine={'up-short-line'}
-                        />
-                    </Col>
-                    <Col
-                        span={24}
-                    >
-                        <CustomOwlCarousel
-                            item_superLargeDesktop={2}
-                            item_mediumDesktop={2}
-                            item_desktop={2}
-                            item_tablet={2}
-                            item_bigMobile={1}
-                            item_mobile={1}
-                            item_smallmobile={1}
-                            item_extraSmallMobile={1}
-                            objCarousel={false}
-                            className="academy-gsap-single-comment"
-
-                            infinite={true}
-                            autoPlay={true}
-                            autoPlaySpeed={3000}
+            <div className="up-section-polygen">
+                <section className="up-comments-gsap">
+                    <Row>
+                        <Col
+                            xs={24}
+                            className="up-comments-title-container up-comments-title-gsap"
                         >
-                            {up_comments.map(printComments)}
-                        </CustomOwlCarousel>
-                    </Col>
-                </Row>
-            </section>
+                            <SectionSubtitle
+                                title={turnToUppercase(t('Up.comments_title'))}
+                                shortLineBelow
+                                classNameShortLine={'up-short-line'}
+                            />
+                        </Col>
+                        <Col
+                            span={24}
+                        >
+                            <CustomOwlCarousel
+                                item_superLargeDesktop={2}
+                                item_mediumDesktop={2}
+                                item_desktop={2}
+                                item_tablet={2}
+                                item_bigMobile={1}
+                                item_mobile={1}
+                                item_smallmobile={1}
+                                item_extraSmallMobile={1}
+                                objCarousel={false}
+                                className="academy-gsap-single-comment"
 
-            {/* SECTION CASE STUDIES COMMENTED FOR THE MOMENT */}
-            {/* <section className="up-case-studies-section up-case-studies-gsap">
+                                infinite={true}
+                                autoPlay={true}
+                                autoPlaySpeed={3000}
+                            >
+                                {up_comments.map(printComments)}
+                            </CustomOwlCarousel>
+                        </Col>
+                    </Row>
+                </section>
+
+                {/* SECTION CASE STUDIES COMMENTED FOR THE MOMENT */}
+                {/* <section className="up-case-studies-section up-case-studies-gsap">
                 <Row>
                     <Col
                         xs={24}
@@ -258,7 +259,7 @@ const Up = (props) => {
                     </Row>
                 </Row>
             </section> */}
-
+            </div>
             <section className={'academy-form-section consulting-gsap-sixth-section'}>
                 <SectionForm
                     descClassName={'up-form-desc'}
@@ -271,6 +272,8 @@ const Up = (props) => {
             </section>
 
         </div >
+
+
     )
 }
 

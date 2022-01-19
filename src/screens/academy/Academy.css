@@ -5,6 +5,7 @@
     --separator-color-academy: var(--first-color);
 
     --academy-bg1: url('../../assets/images/academy/academy1.jpg');
+    --academy-bg2: url('../../assets/images/academy/academy2.jpg');
     --academy-comments-picture1: url('../../assets/images/comments/img_comments.jpg');
     --academy-comments-picture2: url('../../assets/images/comments/img_comments.jpg');
 }
@@ -24,7 +25,7 @@
 /* Our courses section */
 .academy-ourCourses-section {
     margin-bottom: 50px;
-    padding: 0 20px;
+    padding: 0 5%;
 }
 
 .academy-ourCourses-section-frontend-container {
@@ -48,7 +49,7 @@
     margin-top: 80px;
 }
 
-.academy-ourCourses-section-img-container {
+/* .academy-ourCourses-section-img-container {
     height: 289px;
 }
 
@@ -58,7 +59,7 @@
 }
 
 .academy-ourCourses-section-img {
-    /* width: 307px; */
+     width: 307px; 
     height: 289px;
     border-radius: 0 30px 30px 0;
 }
@@ -74,6 +75,10 @@
     padding: 20px;
     display: flex;
     align-items: center;
+} */
+
+.academy-bg2 {
+    background-image: var(--academy-bg2);
 }
 
 .academy-ourCourses-section-youtube-card {
@@ -89,7 +94,7 @@
 /* Next courses section */
 .academy-next-courses-section {
     margin-bottom: 30px;
-    padding: 0 20px;
+    padding: 0 5%;
 }
 
 .academy-next-courses-section-lastEl {
@@ -109,15 +114,15 @@
 /* ACADEMY SECOND PART */
 .academy-second-part {
     background-color: var(--bg-color-secondary-academy);
-    padding: 60px 20px;
+    padding: 60px 5%;
     margin: 20px 0;
     clip-path: polygon(100% calc(100% - 95%), 100% 100%, 0 calc(100% - 5%), 0 0);
 }
 
 /* Percentage section */
-.academy-percentage-section {
+/* .academy-percentage-section {
     padding: 0 20px;
-}
+} */
 
 .academy-percentage-section-carousel {
     display: block;
@@ -168,7 +173,7 @@
 
 /* Form message section */
 .academy-form-section {
-    padding: 0 20px;
+    padding: 0 5%;
     margin-bottom: 30px;
 }
 
@@ -188,17 +193,13 @@
     }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1024px) {
 
     .academy-first-part {
         padding-bottom: 100px;
         margin-bottom: -20px;
     }
 
-
-    .academy-ourCourses-section {
-        margin-bottom: 40px;
-    }
 
     .academy-ourCourses-section-img-container {
         height: 622px;
@@ -215,6 +216,7 @@
         right: -139px;
     }
 
+
     .academy-single-comments-bottom {
         margin-top: 80px !important;
     }
@@ -222,7 +224,24 @@
 
 @media screen and (min-width: 1440px) {
 
+    .academy-ourCourses-section {
+        margin-bottom: 40px;
+        padding: 0 15%;
+    }
+
     .academy-introductive-section-intro-container {
         align-self: flex-end;
+    }
+
+    .academy-next-courses-section {
+        padding: 0 15%;
+    }
+
+    .academy-second-part {
+        padding: 60px 15%;
+    }
+
+    .academy-form-section {
+        padding: 0 15%;
     }
 }

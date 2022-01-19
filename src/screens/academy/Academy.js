@@ -246,25 +246,12 @@ const Academy = (props) => {
                     />
 
                     <Row className="academy-ourCourses-second-part-container academy-gsap-our-courses-row2">
-                        <Col
+                        {/* <Col
                             xs={24}
                             md={0}
                             className="academy-our-courses-desc-mobile academy-gsap-our-courses-desc-mobile"
                         >
-                            <CustomCard
-                                cardDescription={t('Academy.course_description')}
-                            />
 
-                            <CustomCard
-                                cardClassName={'academy-ourCourses-section-youtube-card'}
-                                cardDescription={t('Academy.send_to_youtube')}
-                                cardButton
-                                type={'primary-arrow-btn'}
-                                currentIcon={
-                                    <ArrowRightOutlined
-                                        className='arrow-icon-btn' />
-                                }
-                            />
                         </Col>
                         <Col
                             xs={24}
@@ -300,8 +287,38 @@ const Academy = (props) => {
                                         className='arrow-icon-btn' />
                                 }
                             />
-                        </Col>
+                        </Col> */}
+
                     </Row>
+                </section>
+
+                <section>
+                    <IntroductiveSection
+                        firstRow={false}
+                        bg2='academy-bg2'
+                        desc2Mobile={false}
+                        desc2Light={true}
+                        desc2={
+                            <>
+                                <CustomCard
+                                    cardDescription={t('Academy.course_description')}
+                                />
+
+                                <CustomCard
+                                    cardClassName={'academy-ourCourses-section-youtube-card'}
+                                    cardDescription={t('Academy.send_to_youtube')}
+                                    cardButton
+                                    type={'primary-arrow-btn'}
+                                    currentIcon={
+                                        <ArrowRightOutlined
+                                            className='arrow-icon-btn' />
+
+                                    }
+                                />
+                            </>
+
+                        }
+                    />
                 </section>
 
                 {/* Next Courses section */}

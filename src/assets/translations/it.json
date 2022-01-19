@@ -59,7 +59,10 @@
   },
   "home": {
     "firstSection": {
-      "title": "Aiutiamo le aziende a realizzare progetti innovativi attraverso Team di Valore."
+      "title": {
+        "part1": "Aiutiamo le aziende a realizzare progetti innovativi attraverso ",
+        "part2": "Team di Valore"
+      }
     },
     "secondSection": {
       "title_value": "VALORI",
@@ -108,11 +111,11 @@
   "Academy": {
     "title": "Talent Academy",
     "intro": "Diventa il prossimo Software Ninjaneer!",
-    "page_description": "Le Talent Academy sono percorsi di formazione specializzati per diventare Software Developer. Svilupperai le tue competenze attraverso lezioni frontali, esercitazioni e progetti reali. I corsi hanno una durata di 3 mesi, sono retribuiti ed hanno come scopo l’inserimento in azienda con contratto a tempo indeterminato.",
+    "page_description": "Le Talent Academy sono percorsi di formazione specializzati per diventare Software Developer.",
     "our_courses_title": "I nostri corsi",
     "title_academy_java": "Academy Java",
     "title_academy_frontend": "Academy sviluppo web - front end",
-    "course_description": "Il tuo futuro parte…con Beije!",
+    "course_description": "Il tuo futuro parte con Beije!",
     "send_to_youtube": "Vieni a scoprire il nostro canale Youtube: troverai le pillole digitali dei nostri esperti Frontend / Backend, i Webinar e molto altro ancora…Ti aspettiamo! ",
     "next_courses_title": "I prossimi corsi",
     "next_course_1": "Stage java",
@@ -300,9 +303,9 @@
   "Up": {
     "title": "Up",
     "intro": "La nostra Software Factory",
-    "desc1": "Con dedizione e professionalità lavoriamo al fianco dei nostri clienti per fornire servizi di progettazione, implementazione, delivery, integration e application maintenance di sistemi software. Diamo supporto e realizziamo progetti partendo dall’analisi tecnica frontend/backend, realizzazione mockup all’implementazione del software attraverso le tecnologie innovative presenti sul mercato.",
-    "desc2": "Attraverso metodologia Agile, verranno definiti step di verifica e di aggiornamento del prodotto già durante lo sviluppo, con frequenti rilasci di versioni testabili dal cliente, in modo da ottimizzare puntualmente miglioramenti o eventuali modifiche sulle attività concordate. Dall’analisi del progetto alla stesura della documentazione fino all’implementazione: vi seguiamo in ogni fase",
-    "paragraph": "le tecnologie utilizzate vanno dall’ecosistema Java a quello .Net per il Backend, mentre Javascript e i principali framework per il frontend (React, Angular e Vue). Per l’infrastruttura basiamo abitualmente i progetti in cloud su servizi Amazon Web Services.",
+    "desc1": "Lavoriamo con dedizione al fianco dei nostri clienti per fornire servizi di progettazione, implementazione, delivery, integration e application maintenance di software. Realizziamo progetti partendo dall’analisi tecnica frontend & backend, realizzazione mockup fino all’implementazione del software attraverso le tecnologie presenti sul mercato.",
+    "desc2": "Attraverso metodologia Agile, verranno definiti step di verifica e di aggiornamento del prodotto già durante lo sviluppo, con frequenti rilasci di versioni testabili dal cliente, in modo da ottimizzare puntualmente miglioramenti e modifiche sulle attività concordate. Dall’analisi del progetto alla stesura della documentazione fino all’implementazione: vi seguiamo in ogni fase.",
+    "paragraph": "Le tecnologie utilizzate vanno dall’ecosistema Java a quello .Net per il Backend, mentre Javascript e i principali framework per il frontend (React, Angular e Vue). Per l’infrastruttura basiamo abitualmente i progetti in cloud su servizi Amazon Web Services.",
     "comments_title": "Dicono di noi",
     "case_studies_title": "Case studies",
     "form_message_title": "Richiedi maggiori informazioni",

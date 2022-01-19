@@ -57,7 +57,7 @@ const SecondSectionDesktop = () => {
     const printCard = (item, key) => {
         return (
             <Col
-                md={6}
+                lg={6}
                 key={key}
                 className={item.colContainerClassName}
             >

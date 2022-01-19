@@ -1,5 +1,7 @@
 :root {
     --primary-bg-color-up: var(--second-color);
+    --secondary-bg-color-up: var(--fourth-color);
+
     --up-bg1: url('../../assets/images/up/up1.jpg');
     --up-bg2: url('../../assets/images/up/up2.jpg');
     --up-case-studies: url('../../assets/images/up/upCaseStudies.svg');
@@ -10,7 +12,8 @@
 
 .up-container {
     background-color: var(--primary-bg-color-up);
-    padding-bottom: 40px;
+    overflow-x: hidden;
+    position: relative;
 }
 
 .up-bg1 {
@@ -26,13 +29,16 @@
 
 }
 
-.up-comments-title-container {
-    padding: 0 20px;
+/* POLYGEN SECTION */
+.up-section-polygen {
+    background-color: var(--secondary-bg-color-up);
+    padding: 0 5%;
+    clip-path: polygon(100% calc(100% - 95%), 100% 100%, 0 calc(100% - 5%), 0 0);
 }
 
-.up-comments-title {
-    color: #fff !important;
-}
+/* .up-comments-title-container {
+    padding: 0 5%;
+} */
 
 .up-comments-profile-picture1 {
     background-image: var(--up-comments-profile-picture1);
@@ -141,4 +147,12 @@
     .up-form-text-area {
         height: 242px !important;
     }
+}
+
+@media screen and (min-width: 1440px) {
+
+    .up-section-polygen {
+        padding: 0 15%;
+    }
+
 }

@@ -1,8 +1,8 @@
 .content-container-scroll {
     background-color: transparent;
+    /* width: 100%; */
     height: 100vh;
-    width: 100%;
-    padding: 100px 25px 25px 25px;
+    margin: 0 5%;
     /* max-width: 1400px;
     margin: auto; */
 }

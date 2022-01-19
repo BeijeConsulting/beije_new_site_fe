@@ -1,5 +1,5 @@
 import React from "react"
-import { Layout, Row, Col} from "antd"
+import { Layout, Row, Col } from "antd"
 
 import { useTranslation } from "react-i18next"
 
@@ -21,18 +21,24 @@ const FirstSection = () => {
             <div>
                 <Row>
                     <Col xs={0} md={4} />
-                    <Col xs={24} md={16}>
+                    <Col xs={24} md={16} className="home-fp-text-col">
                         <CustomCard
                             titleClassName={'home-fp-title animation-text-landing'}
                             titleLevel={1}
-                            cardTitle={t('home.firstSection.title')}
+                            cardTitle={
+                                <>
+                                    <span>{t('home.firstSection.title.part1')}</span>
+                                    <br />
+                                    <span>{t('home.firstSection.title.part2')}</span>
+                                </>
+                            }
                         />
                     </Col>
                     <Col xs={0} md={4} />
                 </Row>
                 <Row>
                     <Col xs={0} md={4} />
-                    <Col xs={0} md={16}>
+                    <Col xs={0} md={16} className="home-fp-text-col">
                         <Navbar
                             classNameLink={'navbar-home-link animation-text-landing'}
                         />

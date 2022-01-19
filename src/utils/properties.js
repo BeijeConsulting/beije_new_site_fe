@@ -399,6 +399,14 @@ export const academy_comments = [
     profilePictureImg: 'academy-comments-profile-picture6',
     imgClassName: 'trial'
   }
+  ,
+  {
+    commentsText: "comments_txt.comments6",
+    name: 'Clark',
+    surname: 'Ezpeleta',
+    profilePictureImg: 'academy-comments-profile-picture7',
+    imgClassName: 'trial'
+  }
 ]
 
 export const up_comments = [

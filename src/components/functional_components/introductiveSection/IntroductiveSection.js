@@ -89,12 +89,10 @@ const IntroductiveSection = (props) => {
 
 
     const switchClassImg1 = () => {
-        let resultClass = `intro-section-single-img-container intro-section-img1-container intro-sec-gsap-img1 ${props.bg1}`
-        if (props.secondRow) {
+        let resultClass = `intro-section-img-container intro-section-img1-container intro-sec-gsap-img1 ${props.bg1}`
+
+        if (props.detailPage) {
             resultClass = `intro-section-img-container intro-section-img1-container intro-sec-gsap-img1 ${props.bg1}`
-        }
-        else if (props.detailPage) {
-            resultClass = `intro-section-detail-img-container intro-section-img1-container intro-sec-gsap-img1 ${props.bg1}`
         }
         return resultClass
     }
@@ -120,7 +118,7 @@ const IntroductiveSection = (props) => {
             }
             {
                 props.titleOutColumn &&
-                <Row className="intro-sec-row-title-out-gsap">
+                <Row className="intro-sec-row-title-out intro-sec-row-title-out-gsap">
                     <Title
                         level={1}
                         className="intro-sec-title-out-gsap"
@@ -131,150 +129,146 @@ const IntroductiveSection = (props) => {
             }
 
             {/* Start of firt row */}
-            <Row className="intro-section-first-row  intro-sec-row1-gsap">
-                {/* Text col */}
-                <Col
-                    xs={24}
-                    md={24}
-                    lg={13}
-                >
-                    {/* Title */}
-                    {props.titleInColumn &&
-                        <Row>
-                            <Title
-                                level={1}
-                                className={`intro-section-title intro-sec-gsap-title ${props.titleLight ? 'txt-light' : ''}`}
-                            >
-                                {props.titleInColumn}
-                            </Title>
-                        </Row>
-                    }
-                    {/* Introduction */}
-                    {props.intro &&
-                        <Row className={'intro-section-intro-container'}>
-                            <Paragraph
-                                className={`intro-section-intro intro-sec-gsap-intro ${props.introLight ? 'txt-light' : ''}`}
-                            >
-                                {props.intro}
-                            </Paragraph>
-                        </Row>
-                    }
-                    {/* Description for desktop - next to img */}
-                    {
-                        props.desc1Desktop &&
-                        <Row className={'intro-section-desc1-container intro-section-desc-container'}>
-                            <Paragraph
-                                className={`intro-section-desc1 intro-sec-gsap-desc1-desktop ${props.desc1Light ? 'txt-light' : ''}`}
-                            >
-                                {props.desc1}
-                            </Paragraph>
-                        </Row>
-                    }
-                    {
-                        props.listDesktop && props.listToPrint !== undefined &&
-                        <Row className={'intro-section-desc1-container intro-section-desc-container'}>
-                            <CustomList
-                                liClassName={props.liClassName}
-                                ulClassName={props.ulClassName}
-                                listToPrint={props.listToPrint}
-                            />
-                        </Row>
-                    }
-                </Col>
-                {/* Space for Img */}
-                <div
-                    className={switchClassImg1()}
-                >
-                </div>
+            {props.firstRow &&
+                <Row className="intro-section-row-image intro-sec-row1-gsap">
+                    {/* Text col */}
+
+                    <div className="intro-sec-txt-div-container">
 
 
-                <Col
-                    xs={24}
-                    md={24}
-                    lg={0}
-                >
-                    <Paragraph
-                        className={`intro-section-desc intro-sec-gsap-desc-mobile ${props.desc1Light ? 'txt-light' : ''}`}
+                        {/* Title */}
+                        {props.titleInColumn &&
+                            <Row>
+                                <Title
+                                    level={1}
+                                    className={`intro-section-title intro-sec-gsap-title ${props.titleLight ? 'txt-light' : ''}`}
+                                >
+                                    {props.titleInColumn}
+                                </Title>
+                            </Row>
+                        }
+                        {/* Introduction */}
+                        {props.intro &&
+                            <Row className={'intro-section-intro-container'}>
+                                <Paragraph
+                                    className={`intro-section-intro intro-sec-gsap-intro ${props.introLight ? 'txt-light' : ''}`}
+                                >
+                                    {props.intro}
+                                </Paragraph>
+                            </Row>
+                        }
+                        {/* Description for desktop - next to img */}
+                        {
+                            props.desc1Desktop &&
+                            <Row className={'intro-section-desc1-container intro-section-desc-container'}>
+                                <Paragraph
+                                    className={`intro-section-desc1 intro-sec-gsap-desc1-desktop ${props.desc1Light ? 'txt-light' : ''}`}
+                                >
+                                    {props.desc1}
+                                </Paragraph>
+                            </Row>
+                        }
+                        {
+                            props.listDesktop && props.listToPrint !== undefined &&
+                            <Row className={'intro-section-desc1-container intro-section-desc-container'}>
+                                <CustomList
+                                    liClassName={props.liClassName}
+                                    ulClassName={props.ulClassName}
+                                    listToPrint={props.listToPrint}
+                                />
+                            </Row>
+                        }
+
+                    </div>
+                    {/* Space for Img */}
+                    <div
+                        className={switchClassImg1()}
                     >
-                        {props.desc1}
-                    </Paragraph>
-                </Col>
+                    </div>
 
-                {
-                    props.listMobile && props.listToPrint !== undefined &&
+
                     <Col
                         xs={24}
                         md={24}
                         lg={0}
                     >
-                        <CustomList
-                            ulClassName={props.ulClassNameMobile}
-                            listToPrint={props.listToPrint}
-                        />
+                        <Paragraph
+                            className={`intro-section-desc intro-sec-gsap-desc-mobile ${props.desc1Light ? 'txt-light' : ''}`}
+                        >
+                            {props.desc1}
+                        </Paragraph>
                     </Col>
-                }
 
-                {
-                    props.candidateBtn &&
+                    {
+                        props.listMobile && props.listToPrint !== undefined &&
+                        <Col
+                            xs={24}
+                            md={24}
+                            lg={0}
+                        >
+                            <CustomList
+                                ulClassName={props.ulClassNameMobile}
+                                listToPrint={props.listToPrint}
+                            />
+                        </Col>
+                    }
 
-                    <Col
-                        xs={24}
-                        md={24}
+                    {
+                        props.candidateBtn &&
 
-                        className="intro-sec-candidate-btn"
-                    >
-                        <CustomButton
-                            content={props.btnContent}
-                            htmlType='submit'
-                            type={'form-btn'}
-                        />
-                    </Col>
-                    // </Row>
+                        <Col
+                            xs={24}
+                            md={24}
 
-                }
-            </Row >
+                            className="intro-sec-candidate-btn"
+                        >
+                            <CustomButton
+                                content={props.btnContent}
+                                htmlType='submit'
+                                type={'form-btn'}
+                            />
+                        </Col>
+                        // </Row>
+
+                    }
+                </Row >
+            }
 
 
             {/* Start of second row */}
             {
                 props.secondRow &&
-                <Row className="into-sec-row2-gsap">
+                <div className="intro-section-row-image intro-section-row2-image into-sec-row2-gsap">
                     <div
                         className={`intro-section-img-container intro-section-img2-container ${props.bg2} into-sec-row2-img-gsap`}
                     >
                     </div>
                     {
-                        props.desc2Mobile &&
-                        <Col
-                            xs={24}
-                            md={24}
-                            lg={13}
-                            className="intro-section-desc-container"
+                        // props.desc2Mobile &&
+                        <div
+                            className="intro-sec-row2-desc-mobile"
                         >
                             <Paragraph
                                 className={`intro-section-desc ${props.desc2Light ? 'txt-light' : ''} into-sec-row2-desc-mobile-gsap`}
                             >
                                 {props.desc2}
                             </Paragraph>
-                        </Col>
+                        </div>
                     }
                     {
-                        !props.desc2Mobile &&
-                        <Col
-                            xs={0}
-                            md={0}
-                            lg={13}
-                            className="intro-section-desc-container"
+                        // !props.desc2Mobile &&
+                        <div
+                            className="intro-sec-row2-desc-desktop"
                         >
                             <Paragraph
                                 className={`intro-section-desc ${props.desc2Light ? 'txt-light' : ''} into-sec-row2-desc-desktop-gsap`}
                             >
                                 {props.desc2}
                             </Paragraph>
-                        </Col>
+                        </div>
                     }
 
-                </Row>
+                </div>
             }
 
         </div >
@@ -284,6 +278,7 @@ const IntroductiveSection = (props) => {
 IntroductiveSection.defaultProps = {
     titleInColumn: true,
     classNameContainer: 'intro-section-container intro-sec-gsap',
+    firstRow: true,
     desc1Desktop: true,
     secondRow: true,
     desc2Mobile: true,

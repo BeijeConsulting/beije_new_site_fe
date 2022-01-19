@@ -24,7 +24,8 @@
 /* Percentage section */
 .consulting-percentage1-section {
     background-color: var(--bg-color-secondary-consulting);
-    padding: 60px 20px;
+    /* padding: 60px 20px; */
+    padding: 0 5%;
     margin: 20px 0;
     clip-path: polygon(100% calc(100% - 95%), 100% 100%, 0 calc(100% - 5%), 0 0);
 }
@@ -44,7 +45,7 @@
 
 /* Form section */
 .consulting-form-section {
-    padding: 0 20px;
+    padding: 0 5%;
     margin-bottom: 30px;
 }
 
@@ -60,10 +61,21 @@
     }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1024px) {
 
     .consulting-introductive-section {
         padding-bottom: 100px;
         margin-bottom: -50px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+
+    .consulting-percentage1-section {
+        padding: 0 15%;
+    }
+
+    .consulting-form-section {
+        padding: 0 15%;
     }
 }

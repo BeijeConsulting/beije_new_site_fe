@@ -56,12 +56,15 @@ const SecondSectionMobile = (props) => {
     }, [])
 
     return (
-        <Col
-            xs={24}
-            className={props.obj.colContainerClassName}
+        // <Col
+        //     xs={24}
+        //     className={props.obj.colContainerClassName}
+        //     ref={ref}
+        // >
+            <div 
+            className={`sec-section-container-gsap ${props.obj.cardContainerClassName}`}
             ref={ref}
-        >
-            <div className={`sec-section-container-gsap ${props.obj.cardContainerClassName}`}>
+            >
                 <Row className="sec-section-row-title">
                     <CustomCard
                         cardTitle={t('home.secondSection.' + props.obj.cardTitle)}
@@ -79,7 +82,7 @@ const SecondSectionMobile = (props) => {
                     />
                 </Row>
             </div>
-        </Col>
+        // </Col>
     )
 }
 
