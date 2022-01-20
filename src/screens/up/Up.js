@@ -31,6 +31,7 @@ import CustomOwlCarousel from "../../components/hooks_components/customOwlCarous
 // import ViewAllButton from "../../components/functional_components/viewAllButton/ViewAllButton";
 import SectionForm from "../../components/functional_components/sectionForm/SectionForm";
 import { initPageFocus, setPageFocus } from "../../redux/ducks/pageFocusDuck";
+import PolygonSection from "../../components/functional_components/polygonSection/PolygonSection";
 
 const Up = (props) => {
 
@@ -161,12 +162,12 @@ const Up = (props) => {
                     bg2='up-bg2'
                     desc1={t('Up.desc1')}
                     desc1Light={true}
-                    desc2Mobile={false}
+                    desc2Mobile={true}
                     desc2={t('Up.desc2')}
                     desc2Light={true}
                 />
 
-                <Row className="up-intro-sec-desc3-row-gsap">
+                <Row className="up-intro-sec-desc3-row up-intro-sec-desc3-row-gsap">
                     <CustomCard
                         cardParagraph={t('Up.paragraph')}
                         paragraphClassName={'up-intro-section-paragraph txt-light up-intro-sec-desc3-gsap'}
@@ -174,7 +175,7 @@ const Up = (props) => {
                 </Row>
             </section>
 
-            <div className="up-section-polygen">
+            {/* <PolygonSection>
                 <section className="up-comments-gsap">
                     <Row>
                         <Col
@@ -212,8 +213,7 @@ const Up = (props) => {
                     </Row>
                 </section>
 
-                {/* SECTION CASE STUDIES COMMENTED FOR THE MOMENT */}
-                {/* <section className="up-case-studies-section up-case-studies-gsap">
+                <section className="up-case-studies-section up-case-studies-gsap">
                 <Row>
                     <Col
                         xs={24}
@@ -258,9 +258,9 @@ const Up = (props) => {
                         />
                     </Row>
                 </Row>
-            </section> */}
-            </div>
-            <section className={'academy-form-section consulting-gsap-sixth-section'}>
+            </section>
+            </PolygonSection> */}
+            <section className={'up-form-section consulting-gsap-sixth-section'}>
                 <SectionForm
                     descClassName={'up-form-desc'}
                     classNameLongLine={'up-long-line'}

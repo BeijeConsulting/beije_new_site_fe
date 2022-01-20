@@ -17,16 +17,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import './Academy.css'
 // import '../consulting/Consulting.css'
 
-//import assets
-import {
-    ArrowRightOutlined
-} from '@ant-design/icons';
-
 //import functions
 import { turnToUppercase } from "../../utils/utilities";
 
 //import constants
-import { academy_carousel_student, academy2, academy_comments, ENVIRONMENT } from "../../utils/properties";
+import { academy_carousel_student, academy_comments, ENVIRONMENT, social } from "../../utils/properties";
 
 //import components
 import CustomCard from "../../components/functional_components/customCard/CustomCard";
@@ -39,6 +34,7 @@ import GoToDetailRow from "../../components/functional_components/goToDetailRow/
 import SectionForm from "../../components/functional_components/sectionForm/SectionForm";
 import CustomOwlCarousel from "../../components/hooks_components/customOwlCarousel/CustomOwlCarousel";
 import CustomCarousel from "../../components/hooks_components/customCarousel/CustomCarousel";
+import PolygonSection from "../../components/functional_components/polygonSection/PolygonSection";
 
 const Academy = (props) => {
 
@@ -294,9 +290,12 @@ const Academy = (props) => {
 
                 <section>
                     <IntroductiveSection
+                        classNameContainer='academy-section-youtube'
                         firstRow={false}
                         bg2='academy-bg2'
-                        desc2Mobile={false}
+                        desc2Mobile={true}
+                        desc2MobileAbove={true}
+                        desc2Mobilebelow={false}
                         desc2Light={true}
                         desc2={
                             <>
@@ -307,13 +306,11 @@ const Academy = (props) => {
                                 <CustomCard
                                     cardClassName={'academy-ourCourses-section-youtube-card'}
                                     cardDescription={t('Academy.send_to_youtube')}
-                                    cardButton
-                                    type={'primary-arrow-btn'}
-                                    currentIcon={
-                                        <ArrowRightOutlined
-                                            className='arrow-icon-btn' />
-
-                                    }
+                                />
+                                <CustomButton
+                                    type={'secondary-social'}
+                                    href={social[2].url}
+                                    bgIcon='btn-youtube-bg'
                                 />
                             </>
 
@@ -361,7 +358,7 @@ const Academy = (props) => {
             </div>
 
             {/* Second Part */}
-            <div className={'academy-second-part'}>
+            <PolygonSection>
 
                 {/* Percentage Section */}
                 <section className="academy-percentage-section academy-gsap-fourth-section">
@@ -398,7 +395,7 @@ const Academy = (props) => {
                                 item_superLargeDesktop={2}
                                 item_mediumDesktop={2}
                                 item_desktop={2}
-                                item_tablet={2}
+                                item_tablet={1}
                                 item_bigMobile={1}
                                 item_mobile={1}
                                 item_smallmobile={1}
@@ -416,7 +413,7 @@ const Academy = (props) => {
                     </Row>
                 </section>
 
-            </div>
+            </PolygonSection>
 
             {/* Form section */}
             <section className={'academy-form-section consulting-gsap-sixth-section'}>

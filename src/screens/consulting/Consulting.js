@@ -29,6 +29,7 @@ import CustomCarousel from "../../components/hooks_components/customCarousel/Cus
 import SectionSubtitle from "../../components/functional_components/sectionSubtitle/SectionSubtitle";
 import IntroductiveSection from "../../components/functional_components/introductiveSection/IntroductiveSection";
 import SectionForm from "../../components/functional_components/sectionForm/SectionForm";
+import PolygonSection from "../../components/functional_components/polygonSection/PolygonSection";
 
 
 const Consulting = (props) => {
@@ -53,12 +54,12 @@ const Consulting = (props) => {
         const percentage1Title = element.querySelector('.consulting-gsap-percentage1-title')
         const percentage1SingleMobile = element.querySelector('.consulting-gsap-percentage1-single-mobile')
         const percentage1SingleDesktop = element.querySelectorAll('.consulting-gsap-percentage1-single-desktop')
+        const percentage1DataSurvey = element.querySelectorAll('.consulting-gsap-percentage1-data-survey')
 
-        const thirdSection = element.querySelector('.consulting-gsap-third-section');
-        const percentage2Title = element.querySelector('.consulting-gsap-percentage2-title')
-        const percentage2SingleMobile = element.querySelector('.consulting-gsap-percentage2-single-mobile')
-        const percentage2SingleDesktop = element.querySelectorAll('.consulting-gsap-percentage2-single-desktop')
-        const percentage2DataSurvey = element.querySelectorAll('.consulting-gsap-percentage2-data-survey')
+        // const thirdSection = element.querySelector('.consulting-gsap-third-section');
+        // const percentage2Title = element.querySelector('.consulting-gsap-percentage2-title')
+        // const percentage2SingleMobile = element.querySelector('.consulting-gsap-percentage2-single-mobile')
+        // const percentage2SingleDesktop = element.querySelectorAll('.consulting-gsap-percentage2-single-desktop')
 
         const t1 = gsap.timeline({
             scrollTrigger: {
@@ -74,21 +75,21 @@ const Consulting = (props) => {
             }
         })
 
-        const t2 = gsap.timeline({
-            scrollTrigger: {
-                trigger: thirdSection,
-                start: 'top 75%',
-            }
-        })
+        // const t2 = gsap.timeline({
+        //     scrollTrigger: {
+        //         trigger: thirdSection,
+        //         start: 'top 75%',
+        //     }
+        // })
 
         t1.from(percentage1Title, { y: 100, opacity: 0, duration: 0.5, ease: 'back' })
         t1.from(percentage1SingleDesktop, { opacity: 0, stagger: 0.3, duration: 0.5, ease: 'power2.in' })
         t1_2.from(percentage1SingleMobile, { opacity: 0, duration: 0.5, ease: 'power2.in' })
+        t1.from(percentage1DataSurvey, { opacity: 0, duration: 0.5, ease: 'power2.in' })
 
-        t2.from(percentage2Title, { y: 100, opacity: 0, duration: 0.5, ease: 'back' })
-        t2.from(percentage2SingleDesktop, { opacity: 0, stagger: 0.3, duration: 0.5, ease: 'power2.in' })
-        t2.from(percentage2SingleMobile, { opacity: 0, duration: 0.5, ease: 'power2.in' })
-        t2.from(percentage2DataSurvey, { opacity: 0, duration: 0.5, ease: 'power2.in' })
+        // t2.from(percentage2Title, { y: 100, opacity: 0, duration: 0.5, ease: 'back' })
+        // t2.from(percentage2SingleDesktop, { opacity: 0, stagger: 0.3, duration: 0.5, ease: 'power2.in' })
+        // t2.from(percentage2SingleMobile, { opacity: 0, duration: 0.5, ease: 'power2.in' })
 
         return () => {
             window.removeEventListener("scroll", handleScroll);
@@ -129,29 +130,29 @@ const Consulting = (props) => {
         )
     }
 
-    const printPercentage2 = (item, key) => {
-        return (
-            <Col xs={0} md={8} key={key} className={'container-column items-center padding-30 consulting-gsap-percentage2-single-desktop'}>
-                <CustomCard
-                    cardClassName={'custom-carousel-icon '}
-                    imgPreview={false}
-                    cardImg
-                    imgSrc={item.iconSrc}
-                    imgHeight={42}
-                    imgWidth={56}
-                />
-                <div className='separator-line-vertical '></div>
-                <CustomCard
-                    titleLevel={1}
-                    cardTitle={item.titlePenrcentage}
-                />
-                <CustomCard
-                    cardParagraph={t(`Consulting.${item.carouselDesc}`)}
-                    paragraphClassName={'custom-carousel-paragraph '}
-                />
-            </Col>
-        )
-    }
+    // const printPercentage2 = (item, key) => {
+    //     return (
+    //         <Col xs={0} md={8} key={key} className={'container-column items-center padding-30 consulting-gsap-percentage2-single-desktop'}>
+    //             <CustomCard
+    //                 cardClassName={'custom-carousel-icon '}
+    //                 imgPreview={false}
+    //                 cardImg
+    //                 imgSrc={item.iconSrc}
+    //                 imgHeight={42}
+    //                 imgWidth={56}
+    //             />
+    //             <div className='separator-line-vertical '></div>
+    //             <CustomCard
+    //                 titleLevel={1}
+    //                 cardTitle={item.titlePenrcentage}
+    //             />
+    //             <CustomCard
+    //                 cardParagraph={t(`Consulting.${item.carouselDesc}`)}
+    //                 paragraphClassName={'custom-carousel-paragraph '}
+    //             />
+    //         </Col>
+    //     )
+    // }
 
     return (
         /* *he* */
@@ -169,32 +170,26 @@ const Consulting = (props) => {
                     // desc1={'Qualità e best efficiency si fondono per la costruzione di progetti innovativi. '}
                     desc1={
                         <>
+                            {t('Consulting.description.part1')}
                             <strong>
-                                {t('Consulting.description.part1')}
+                                {t('Consulting.description.part2')}
                             </strong>
-                            {t('Consulting.description.part2')}
-                            <strong>
-                                {t('Consulting.description.part3')}
-                            </strong>
-                            {t('Consulting.description.part4')}
+                            {t('Consulting.description.part3')}
                         </>}
                     desc2Mobile={false}
                     desc2Light={true}
                     desc2={
                         <>
+                            {t('Consulting.description.part1')}
                             <strong>
-                                {t('Consulting.description.part1')}
+                                {t('Consulting.description.part2')}
                             </strong>
-                            {t('Consulting.description.part2')}
-                            <strong>
-                                {t('Consulting.description.part3')}
-                            </strong>
-                            {t('Consulting.description.part4')}
+                            {t('Consulting.description.part3')}
                         </>}
                 />
             </section>
 
-            <div className={'consulting-percentage1-section'}>
+            <PolygonSection>
                 <section className={'consulting-gsap-second-section'}>
                     <SectionSubtitle
                         title={turnToUppercase(t('Consulting.title_carousel_employee'))}
@@ -207,9 +202,16 @@ const Consulting = (props) => {
                     <Row className={'consulting-percentage-section-card'}>
                         {consulting_carousel_employee.map(printPercentage1)}
                     </Row>
+                    <Row className="consulting-gsap-percentage1-data-survey">
+                        <SectionSubtitle
+                            styleContainer={{ marginBottom: 0 }}
+                            shortLineAbove
+                            description={t('Consulting.data_survey')}
+                        />
+                    </Row>
                 </section>
 
-                <section className="consulting-percentage2-section consulting-gsap-third-section">
+                {/* <section className="consulting-percentage2-section consulting-gsap-third-section">
                     <SectionSubtitle
                         title={turnToUppercase(t('Consulting.title_carousel_client'))}
                         shortLineBelow
@@ -221,15 +223,8 @@ const Consulting = (props) => {
                     <Row className={'consulting-percentage-section-card'}>
                         {consulting_carousel_client.map(printPercentage2)}
                     </Row>
-                    <Row className="consulting-gsap-percentage2-data-survey">
-                        <SectionSubtitle
-                            styleContainer={{ marginBottom: 0 }}
-                            shortLineAbove
-                            description={t('Consulting.data_survey')}
-                        />
-                    </Row>
-                </section>
-            </div>
+                </section> */}
+            </PolygonSection>
 
             <section className={'consulting-gsap-fourth-section consulting-form-section'}>
                 <SectionForm

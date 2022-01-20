@@ -12,7 +12,7 @@
 
 /* Program section */
 .aDetails-program-section {
-    padding: 20px;
+    padding: 40px 5%;
 }
 
 /* structure */
@@ -104,5 +104,9 @@
     .aDeteils-introductive-section-intro-container {
         align-self: center;
         width: 50%
+    }
+
+    .aDetails-program-section {
+        padding: 40px 15%;
     }
 }

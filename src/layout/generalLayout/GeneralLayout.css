@@ -8,5 +8,13 @@
 
 .generalLayout-footer {
     background-color: var(--primary-color-footer);
-    padding: 20px;
+    padding: 20px 5%;
+}
+
+
+@media screen and (min-width: 1440px) {
+
+    .generalLayout-footer {
+        padding: 20px 15%;
+    }
 }

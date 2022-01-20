@@ -5,10 +5,16 @@
 .homeLayout-footer {
     background-color: var(--primary-color-footer);
     height: calc(100vh - 110px);
-    padding: 20px;
+    padding: 20px 5%;
     z-index: 2;
     position: absolute;
     bottom: 0;
     right: 0;
     left: 0;
+}
+
+@media screen and (min-width: 1440px) {
+    .homeLayout-footer {
+        padding: 20px 15%;
+    }
 }

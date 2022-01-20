@@ -125,6 +125,9 @@ const BurgerMenu = (props) => {
             case "blog":
                 className = "menu-overlay-img menu-blog"
                 break
+            case "focusAcademy":
+                className = "menu-overlay-img menu-focusAcademy"
+                break
             case "community":
                 className = "menu-overlay-img menu-community"
                 break
@@ -153,19 +156,19 @@ const BurgerMenu = (props) => {
                         <Header className='header-ant-style-transparent' />
                         <Content className={'burger-menu-content'} >
                             <Row className='burger-menu-row-content'>
-                                <Col xs={0} lg={3} />
-                                <Col xs={24} lg={6} className='mb-20'>
+                                <Col xs={0} lg={2} />
+                                <Col xs={24} lg={9} className='mb-20'>
                                     {
                                         siteMenu.map(printPrimaryMenu)
                                     }
                                 </Col>
-                                <Col xs={0} lg={5} />
-                                <Col xs={24} lg={6} >
+                                <Col xs={0} lg={2} />
+                                <Col xs={24} lg={9} >
                                     {
                                         siteMenu.map(printSecondaryMenu)
                                     }
                                 </Col>
-                                <Col xs={0} lg={4} />
+                                <Col xs={0} lg={2} />
                             </Row>
                             <Row className={'burger-menu-social'}>
 

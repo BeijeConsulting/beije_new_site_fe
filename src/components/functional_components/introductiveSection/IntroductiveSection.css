@@ -20,7 +20,7 @@
 .intro-section-row-image {
     padding: 0px 5%;
     position: relative;
-    margin-bottom: 100px;
+    margin-bottom: 30px;
 }
 
 .intro-section-title {
@@ -124,6 +124,7 @@
 
     .intro-section-row-image {
         height: 490px !important;
+        margin-bottom: 100px;
     }
 
     .intro-section-img-container {

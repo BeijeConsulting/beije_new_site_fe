@@ -3,14 +3,15 @@
     --secondary-burger-menu: #fff;
 
     /* all bg images on menu voices hover */
-    --bg_consulting: url(../../../assets/images/general/general1.jpg);
-    --bg_academy: url(../../../assets/images/general/general2.jpg);
-    --bg_up: url(../../../assets/images/general/general3.jpg);
-    --bg_career: url(../../../assets/images/general/general4.jpg);
-    --bg_whoWeAre: url(../../../assets/images/general/general5.jpg);
-    /* --bg_contacts: url(../../../assets/images/general/general6.jpg);
-    --bg_blog: url(../../../assets/images/general/general1.jpg);
-    --bg_community: url(../../../assets/images/general/general2.jpg); */
+    --bg_consulting: url(../../../assets/images/burgerMenu/consulting_burger.jpg);
+    --bg_academy: url(../../../assets/images/burgerMenu/talentAcademy_burger.jpg);
+    --bg_up: url(../../../assets/images/burgerMenu/up_burger.jpg);
+    --bg_career: url(../../../assets/images/burgerMenu/career_burger.jpg);
+    --bg_whoWeAre: url(../../../assets/images/burgerMenu/whoweare_burger.jpg);
+    --bg_contacts: url(../../../assets/images/burgerMenu/contacts_burger.jpg);
+    --bg_blog: url(../../../assets/images/burgerMenu/blog_burger.jpg);
+    --bg_focusAcademy: url(../../../assets/images/burgerMenu/focusAcademy_burger.jpeg);
+    --bg_community: url(../../../assets/images/burgerMenu/community_burger.jpg);
 }
 
 .burger-menu-nav {
@@ -130,7 +131,7 @@
     color: white;
     z-index: 1;
     /* transition: 1s ease-in; */
-    animation: fadeIn 1.5s;
+    animation: fadeIn 1s;
 }
 
 @keyframes fadeIn {
@@ -166,25 +167,27 @@
 }
 
 .menu-contacts {
-    background-color: var(--primary-burger-menu);
-    background-image: none;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.67)), var(--bg_contacts);
 }
 
 .menu-blog {
-    background-color: var(--primary-burger-menu);
-    background-image: none;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.67)), var(--bg_blog);
+    background-position: bottom;
+}
+
+.menu-focusAcademy {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.67)), var(--bg_focusAcademy);
 }
 
 .menu-community {
-    background-color: var(--primary-burger-menu);
-    background-image: none;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.67)), var(--bg_community);
 }
 
 .burger-menu-content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 110px 25px 25px 25px;
+    padding: 110px 5% 25px 5%;
     width: 100vw;
     height: 100vh;
     /* position: absolute;
@@ -227,7 +230,7 @@
 
 .burger-menu-title {
     font-family: 'Moderat-Regular';
-    font-size: 20px !important;
+    font-size: 16px !important;
     font-weight: normal !important;
     line-height: 34px !important;
 }
@@ -245,6 +248,10 @@
 
     .menu-overlay {
         animation: open-menu-animation linear 1.5s forwards;
+    }
+
+    .burger-menu-title {
+        font-size: 20px !important;
     }
 }
 
@@ -306,9 +313,18 @@
     .burger-menu-title {
         font-size: 34px !important;
         align-self: flex-end;
+        margin-bottom: 1em !important;
     }
 
     .menu-overlay {
         animation: open-menu-animation linear 0.8s forwards;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+
+    .burger-menu-content {
+
+        padding: 110px 15% 25px 15%;
     }
 }

@@ -99,7 +99,7 @@ const IntroductiveSection = (props) => {
 
     return (
         <div
-            className={props.classNameContainer}
+            className={`intro-sec-gsap ${props.classNameContainer}`}
             ref={ref}
         >
             {/* go back button */}
@@ -239,12 +239,24 @@ const IntroductiveSection = (props) => {
             {
                 props.secondRow &&
                 <div className="intro-section-row-image intro-section-row2-image into-sec-row2-gsap">
+                    {
+                        props.desc2Mobile && props.desc2MobileAbove &&
+                        <div
+                            className="intro-sec-row2-desc-mobile"
+                        >
+                            <Paragraph
+                                className={`intro-section-desc ${props.desc2Light ? 'txt-light' : ''} into-sec-row2-desc-mobile-gsap`}
+                            >
+                                {props.desc2}
+                            </Paragraph>
+                        </div>
+                    }
                     <div
                         className={`intro-section-img-container intro-section-img2-container ${props.bg2} into-sec-row2-img-gsap`}
                     >
                     </div>
                     {
-                        // props.desc2Mobile &&
+                        props.desc2Mobile && props.desc2Mobilebelow &&
                         <div
                             className="intro-sec-row2-desc-mobile"
                         >
@@ -277,7 +289,7 @@ const IntroductiveSection = (props) => {
 
 IntroductiveSection.defaultProps = {
     titleInColumn: true,
-    classNameContainer: 'intro-section-container intro-sec-gsap',
+    classNameContainer: 'intro-section-container',
     firstRow: true,
     desc1Desktop: true,
     secondRow: true,
@@ -289,7 +301,9 @@ IntroductiveSection.defaultProps = {
     listMobile: false,
     liClassName: 'intro-section-list-li',
     ulClassName: 'intro-section-list intro-sec-gsap-list-desktop',
-    ulClassNameMobile: 'intro-sec-gsap-list-mobile'
+    ulClassNameMobile: 'intro-sec-gsap-list-mobile',
+    desc2MobileAbove: false,
+    desc2Mobilebelow: true
 }
 
 export default IntroductiveSection

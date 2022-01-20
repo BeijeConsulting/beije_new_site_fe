@@ -55,7 +55,8 @@
     "whoWeAre": "CHI SIAMO",
     "contacts": "CONTATTI",
     "blog": "BLOG",
-    "community": "COMMUNITY"
+    "community": "COMMUNITY",
+    "focusAcademy": "FOCUS ACADEMY"
   },
   "home": {
     "firstSection": {
@@ -89,14 +90,13 @@
     }
   },
   "Consulting": {
-    "intro": "In ottica people first aiutiamo le aziende a costruire Team di Valore attraverso figure altamente formate per fornire servizi di consulenza informatica specializzati.",
+    "intro": "In ottica people first aiutiamo le aziende a costruire Team di Valore attraverso figure altamente specializzate.",
     "description": {
-      "part1": "Qualità ",
-      "part2": " e ",
-      "part3": " best efficiency ",
-      "part4": "si fondono per la costruzione di progetti innovativi."
+      "part1": "Ci impegniamo ad ottenere i risultati migliori attraverso aggiornamenti mirati e formazione costante per la realizzazione di ",
+      "part2": "progetti innovativi",
+      "part3": "."
     },
-    "title_carousel_employee": "Soddisfazione dipendenti",
+    "title_carousel_employee": "Soddisfazione consulenti",
     "paragraph1_carousel_employee": "Ritiene che ci sia un buon clima aziendale.",
     "paragraph2_carousel_employee": "Ritiene che l'azienda sia attenta al benessere dei dipendenti.",
     "paragraph3_carousel_employee": "Raccomanderebbe l'azienda.",
@@ -129,10 +129,10 @@
     "comments_title": "Dicono di noi",
     "comments_txt": {
       "comments1": "Nell'Academy FrontEnd di Beije ho approfondito tecnologie e nozioni nuove, mi è stato inoltre fornito supporto per entrare nel mondo del lavoro, cosa che la sola università non mi ha fornito, per questo lo reputo un percorso che rifarei volentieri.",
-      "comments2": "Beije mi ha da subito dato un'ottima impressione e non si è smentita con il tempo. Ho avuto un contratto a tempo indeterminato dopo un breve periodo di formazione e sono entrato in un team che mi ha accolto ben oltre le mie aspettative. L’ambiente lavorativo è professionale, giovane e inclusivo.",
+      "comments2": "Beije mi ha da subito dato un'ottima impressione e non si è smentita con il tempo. Ho avuto un contratto a tempo indeterminato dopo un breve periodo di formazione e sono entrato in un team che mi ha accolto ben oltre le mie aspettative.",
       "comments3": "Beije Academy è stata un’esperienza costruttiva e stimolante: mi ha permesso di apprendere le tecnologie usate nel mondo lavorativo e mi ha incoraggiato a mettermi in gioco in ogni circostanza.",
       "comments4": "",
-      "comments5": "",
+      "comments5": "Una formazione completa, un'esperienza professionalizzante che ti lascia con delle competenze reali e applicabili nell'immediato. Alla Talent Academy non si impara solo a programmare, ma a farlo con consapevolezza e ingegno.",
       "comments6": "Beije Accademy mi è stata molto utile per introdurmi nel mondo del lavoro con sicurezza grazie alle simulazioni in team, dove ho potuto mettere in pratica ciò che ho studiato in Accademy ed in Università."
     },
     "form_message_title": "Richiedi maggiori informazioni",

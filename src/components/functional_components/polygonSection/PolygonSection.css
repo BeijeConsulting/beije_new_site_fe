@@ -1,0 +1,20 @@
+:root {
+    --primary-bg-color-polygen: var(--fourth-color);
+}
+
+.polygen-section {
+    padding: 60px 5%;
+    clip-path: polygon(100% calc(100% - 95%), 100% 100%, 0 calc(100% - 5%), 0 0);
+}
+
+.polygen-section-color {
+    background-color: var(--primary-bg-color-polygen);
+}
+
+@media screen and (min-width: 1440px) {
+
+    .polygen-section {
+        padding: 60px 15%;
+    }
+
+}

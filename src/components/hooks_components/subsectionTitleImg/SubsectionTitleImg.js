@@ -83,12 +83,13 @@ const SubsectionTitleImg = (props) => {
                     />
                 </Row>
             }
-            <Row className="sub-section-row">
+            <Row className={`sub-section-row ${props.imgRight ? 'sub-section-row2' : ''}`}>
                 {/* Description mobile always below title */}
-                <Col
+                {/* <Col
                     xs={24}
                     lg={0}
-                >
+                > */}
+                <dvi className='sub-section-desc-mobile'>
 
                     {
                         props.desc &&
@@ -109,7 +110,10 @@ const SubsectionTitleImg = (props) => {
 
                         </Row>
                     }
-                </Col>
+                </dvi>
+
+                {/* </Col> */}
+
 
                 {/* Img on left side */}
 
@@ -124,7 +128,7 @@ const SubsectionTitleImg = (props) => {
                             <div className="sub-section-btn-youtube-container-mobile subSection-btn-gsap">
                                 <CustomButton
                                     type={'secondary-social'}
-                                    href={social.url.url_youTube}
+                                    href={social[2].url}
                                     bgIcon='btn-youtube-bg'
                                 />
                             </div>
@@ -132,12 +136,15 @@ const SubsectionTitleImg = (props) => {
                     </div>
                 }
 
-                <Col
+                {/* <Col
                     xs={0}
                     lg={12}
                     className={props.descDesktopContainer}
-                >
+                > */}
+                <div
+                    className={props.descDesktopContainer}
 
+                >
                     {
                         props.desc &&
                         <Row className={'sub-section-desc-container'}>
@@ -163,13 +170,13 @@ const SubsectionTitleImg = (props) => {
                         <div className="subSection-btn-gsap">
                             <CustomButton
                                 type={'secondary-social'}
-                                href={social.url.url_youTube}
+                                href={social[2].url}
                                 bgIcon='btn-youtube-bg'
                             />
                         </div>
                     }
-                </Col>
-
+                    {/* </Col> */}
+                </div>
                 {props.imgRightDescLeft &&
                     <div className={'sub-section-img-icon-container'}>
 
@@ -182,7 +189,7 @@ const SubsectionTitleImg = (props) => {
                             <div className="sub-section-btn-youtube-container-mobile subSection-btn-gsap">
                                 <CustomButton
                                     type={'secondary-social'}
-                                    href={social.url.url_youTube}
+                                    href={social[2].url}
                                     bgIcon='btn-youtube-bg'
                                 />
                             </div>
@@ -199,6 +206,7 @@ SubsectionTitleImg.defaultProps = {
     classNameTitle: 'sub-section-title',
     titleOutColumn: true,
     subTitle: 'Value',
+    imgRight: false,
     descDesktopContainer: 'sub-section-desc-desktop-container',
     ulClassName: "sub-section-list",
     imgRightDescLeft: true,

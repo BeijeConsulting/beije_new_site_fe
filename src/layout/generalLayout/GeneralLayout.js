@@ -50,13 +50,13 @@ const GeneralLayout = (props) => {
             </Header>
             <Layout>
                 <Layout className="h-100">
-                    {state.apiReady &&
+                    {/* {state.apiReady && */}
                         <Content>
                             <div >
                                 <Outlet />
                             </div>
                         </Content>
-                    }
+                    {/* } */}
                 </Layout>
             </Layout>
             {

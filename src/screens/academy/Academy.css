@@ -7,7 +7,9 @@
     --academy-bg1: url('../../assets/images/academy/academy1.jpg');
     --academy-bg2: url('../../assets/images/academy/academy2.jpg');
     --academy-comments-picture1: url('../../assets/images/comments/img_comments.jpg');
-    --academy-comments-picture2: url('../../assets/images/comments/img_comments.jpg');
+    --academy-comments-fraioli: url('../../assets/images/comments/fraioli_comments.jpg');
+    --academy-comments-diMonaco: url('../../assets/images/comments/diMonaco_comments.jpeg');
+    --academy-comments-ezpeleta: url('../../assets/images/comments/ezpeleta_comments.jpg');
 }
 
 .academy-container {
@@ -24,7 +26,7 @@
 
 /* Our courses section */
 .academy-ourCourses-section {
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
     padding: 0 5%;
 }
 
@@ -49,33 +51,9 @@
     margin-top: 80px;
 }
 
-/* .academy-ourCourses-section-img-container {
-    height: 289px;
+.academy-section-youtube {
+    margin-bottom: 100px;
 }
-
-.academy-ourCourses-section-img-container .ant-image {
-    position: absolute;
-    left: -20px;
-}
-
-.academy-ourCourses-section-img {
-     width: 307px; 
-    height: 289px;
-    border-radius: 0 30px 30px 0;
-}
-
-.academy-ourCourses-section-youtube-container {
-    position: absolute;
-    width: 318px;
-    height: 236px;
-    background-color: var(--bg-color-youtube-pills);
-    bottom: -127px;
-    right: -11px;
-    border-radius: 30px;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-} */
 
 .academy-bg2 {
     background-image: var(--academy-bg2);
@@ -112,12 +90,6 @@
 
 
 /* ACADEMY SECOND PART */
-.academy-second-part {
-    background-color: var(--bg-color-secondary-academy);
-    padding: 60px 5%;
-    margin: 20px 0;
-    clip-path: polygon(100% calc(100% - 95%), 100% 100%, 0 calc(100% - 5%), 0 0);
-}
 
 /* Percentage section */
 /* .academy-percentage-section {
@@ -151,8 +123,8 @@
     background-image: var(--academy-comments-picture1);
 }
 
-.academy-comments-profile-picture2 {
-    background-image: var(--academy-comments-picture1);
+.academy-comments-profile-fraioli {
+    background-image: var(--academy-comments-fraioli);
 }
 
 .academy-comments-profile-picture3 {
@@ -163,17 +135,17 @@
     background-image: var(--academy-comments-picture1);
 }
 
-.academy-comments-profile-picture5 {
-    background-image: var(--academy-comments-picture1);
+.academy-comments-profile-diMonaco {
+    background-image: var(--academy-comments-diMonaco);
 }
 
-.academy-comments-profile-picture6 {
-    background-image: var(--academy-comments-picture1);
+.academy-comments-profile-ezpeleta {
+    background-image: var(--academy-comments-ezpeleta);
 }
 
 /* Form message section */
 .academy-form-section {
-    padding: 0 5%;
+    padding: 40px 5%;
     margin-bottom: 30px;
 }
 
@@ -237,11 +209,7 @@
         padding: 0 15%;
     }
 
-    .academy-second-part {
-        padding: 60px 15%;
-    }
-
     .academy-form-section {
-        padding: 0 15%;
+        padding: 50px 15%;
     }
 }

@@ -24,9 +24,8 @@
     background-image: var(--up-bg2);
 }
 
-.up-intro-section-paragraph {
-    padding: 30px 20px;
-
+.up-intro-sec-desc3-row {
+    padding: 30px 5%;
 }
 
 /* POLYGEN SECTION */
@@ -103,6 +102,10 @@
     margin-right: 10px;
 }
 
+.up-form-section {
+    margin: 40px 5%;
+}
+
 .up-form-title {
     color: #fff !important;
 }
@@ -125,6 +128,11 @@
 
 @media screen and (min-width: 768px) {
 
+    .up-intro-section-paragraph {
+        width: 80%;
+        margin: 0 auto;
+    }
+
     .up-case-studies-desktop {
         display: flex;
         flex-direction: row;
@@ -139,10 +147,7 @@
 }
 
 @media screen and (min-width: 1024px) {
-    .up-intro-section-paragraph {
-        width: 60%;
-        margin: auto;
-    }
+
 
     .up-form-text-area {
         height: 242px !important;
@@ -151,8 +156,16 @@
 
 @media screen and (min-width: 1440px) {
 
+    .up-intro-sec-desc3-row {
+        padding: 0px 15%;
+    }    
+
     .up-section-polygen {
         padding: 0 15%;
+    }
+
+    .up-form-section {
+        margin: 90px 15%;
     }
 
 }

@@ -16,8 +16,8 @@
 /* Profile section */
 
 .whoWeAre-profile-sec {
-    padding-left: 20px;
-    margin-bottom: 60px;
+    /* margin-bottom: 60px; */
+    margin: 0 5%;
 }
 
 .whoWeAre-profile-sec-title {
@@ -44,20 +44,22 @@
     background-image: var(--who-we-are-mission-bg);
 }
 
-@media screen and (min-width: 768px) {
-
-
-
-    .whoWeAre-sub-section-desc-container {
-        padding: 0 20px;
-    }
+.whoWeAre-sub-section-desc-container {
+    display: none;
 }
+
+/* @media screen and (min-width: 768px) {
+
+
+
+    
+} */
 
 @media screen and (min-width: 1024px) {
 
-    .whoWeAre-profile-sec {
+    /* .whoWeAre-profile-sec {
         margin-bottom: -30px;
-    }
+    } */
 
     .whoWeAre-carousel-container .react-multi-carousel-track {
         margin-bottom: 210px !important;
@@ -80,5 +82,18 @@
 
     .whoWeAre-carousel-lable-desc {
         font-size: 15px !important;
+    }
+
+
+    .whoWeAre-sub-section-desc-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+
+    .whoWeAre-profile-sec {
+        margin: 0 15%;
     }
 }

@@ -70,8 +70,8 @@ const WhoWeAre = (props) => {
                             />
                         }
                         <CustomOwlCarousel
-                            item_superLargeDesktop={6}
-                            item_mediumDesktop={4}
+                            item_superLargeDesktop={4}
+                            item_mediumDesktop={3}
                             item_desktop={3}
                             item_tablet={4}
                             item_bigMobile={4}
@@ -155,6 +155,7 @@ const WhoWeAre = (props) => {
                         </>
                     }
                     bg={'whoWeAre-history-img'}
+                    imgRight={true}
                     imgRightDescLeft={false}
                     imgLeftDescRight={true}
                     classNameTitle={'whoWeAre-sub-section-title'}
@@ -206,6 +207,7 @@ const WhoWeAre = (props) => {
                     bg={'whoWeAre-mission-img'}
                     imgRightDescLeft={false}
                     imgLeftDescRight={true}
+                    imgRight={true}
                     classNameTitle={'whoWeAre-sub-section-title'}
                     descDesktopContainer={'whoWeAre-sub-section-desc-container'}
                 />

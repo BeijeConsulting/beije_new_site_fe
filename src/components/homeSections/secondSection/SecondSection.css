@@ -1,10 +1,10 @@
 :root {
     --prmary-color-divider: var(--first-color);
 
-    --value_bg: url(../../../assets/images/home/home_value.png);
+    --value_bg: url(../../../assets/images/home/value_home.jpg);
     --history_bg: url(../../../assets/images/home/home_history.png);
-    --mission_bg: url(../../../assets/images/home/home_mission.png);
-    --vision_bg: url(../../../assets/images/home/home_vision.png);
+    --mission_bg: url(../../../assets/images/home/mission_home.jpg);
+    --vision_bg: url(../../../assets/images/home/vision_home.jpg);
 }
 
 /* .sec-section-card-col {
@@ -67,6 +67,7 @@
     background-image:
         linear-gradient(360deg, #D6E3E5 0%, rgba(113, 126, 133, 0.726354) 54.69%, rgba(214, 227, 229, 0.29) 100%),
         var(--mission_bg);
+    background-position: left !important;
 }
 
 .sec-section-card-bg-vision {
@@ -148,7 +149,7 @@
         font-family: 'SpaceGrotesk-Bold', sans-serif !important;
         font-style: normal !important;
         font-weight: bold !important;
-        font-size: 45px !important;
+        font-size: 30px !important;
         line-height: 110px !important;
     }
 }

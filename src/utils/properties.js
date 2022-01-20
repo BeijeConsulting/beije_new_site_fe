@@ -156,6 +156,14 @@ export const siteMenu = [
     linkTo: `${ENVIRONMENT.ROUTING.BASE_URL}community`
   },
   {
+    key: 'focusAcademy',
+    typeMenu: 'secondary',
+    title: 'focusAcademy',
+    titleStyle: 'burger-menu-title txt-light',
+    titleStyleHover: 'burger-menu-title txt-light2',
+    linkTo: 'https://focusacademy.it/'
+  },
+  {
     key: 'contacts',
     typeMenu: 'secondary',
     title: 'contacts',
@@ -186,7 +194,7 @@ export const cardWhoWeAre = [
   },
   {
     colContainerClassName: "sec-section-card-col",
-    cardContainerClassName: 'sec-section-card sec-section-card-bg-mission sec-section-card-top sec-section-container-gsap',
+    cardContainerClassName: 'sec-section-card sec-section-card-bg-vision sec-section-card-top sec-section-container-gsap',
     colClassName: 'sec-section-singleEl-gsap',
     titleLevel: 2,
     cardTitle: 'title_vision',
@@ -195,7 +203,7 @@ export const cardWhoWeAre = [
   },
   {
     colContainerClassName: "sec-section-card-col",
-    cardContainerClassName: 'sec-section-card  sec-section-card-bg-vision sec-section-card-bottom sec-section-container-gsap',
+    cardContainerClassName: 'sec-section-card sec-section-card-bg-mission sec-section-card-bottom sec-section-container-gsap',
     colClassName: 'sec-section-singleEl-gsap',
     titleLevel: 2,
     cardTitle: 'title_mission',
@@ -383,14 +391,14 @@ export const academy_comments = [
     commentsText: "comments_txt.comments2",
     name: 'Samuele',
     surname: 'Fraioli',
-    profilePictureImg: 'academy-comments-profile-picture2',
+    profilePictureImg: 'academy-comments-profile-fraioli',
     imgClassName: 'trial'
   },
   {
     commentsText: "comments_txt.comments3",
     name: 'Alessandro',
     surname: 'Savallo',
-    profilePictureImg: 'academy-comments-profile-picture4',
+    profilePictureImg: 'academy-comments-profile-picture3',
     imgClassName: 'trial'
   }
   ,
@@ -398,7 +406,7 @@ export const academy_comments = [
     commentsText: "comments_txt.comments4",
     name: 'Samuele',
     surname: 'Busseni',
-    profilePictureImg: 'academy-comments-profile-picture5',
+    profilePictureImg: 'academy-comments-profile-picture4',
     imgClassName: 'trial'
   }
   ,
@@ -406,7 +414,7 @@ export const academy_comments = [
     commentsText: "comments_txt.comments5",
     name: 'Federica',
     surname: 'Di Monaco',
-    profilePictureImg: 'academy-comments-profile-picture6',
+    profilePictureImg: 'academy-comments-profile-diMonaco',
     imgClassName: 'trial'
   }
   ,
@@ -414,7 +422,7 @@ export const academy_comments = [
     commentsText: "comments_txt.comments6",
     name: 'Clark',
     surname: 'Ezpeleta',
-    profilePictureImg: 'academy-comments-profile-picture7',
+    profilePictureImg: 'academy-comments-profile-ezpeleta',
     imgClassName: 'trial'
   }
 ]
