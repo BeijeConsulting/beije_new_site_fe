@@ -3,7 +3,7 @@ import { setUserInfo } from "../ducks/UserInfo";
 import { get } from 'lodash';
 import { showError } from "../../utils/utilities";
 // import {showError, showSuccess} from "../../utils/utilities";
-// import {setLoading} from "../ducks/Loading";
+import { setLoading } from "../ducks/Loading";
 import { setLanguage } from "../ducks/Language";
 import { setCommunityApi } from "../ducks/communityApiDuck";
 import { setBlogApi } from "../ducks/blogApiDuck";
@@ -41,12 +41,12 @@ export const printCommunities = async (dispatch) => {
 
 export const printBlog = async (dispatch) => {
   try {
+    dispatch(setLoading(true));
     const blog = await Api.getBlog();
-    if (!blog.error) {
-      dispatch(setBlogApi(blog));
-    } else {
+    if (blog.error) {
       showError(get(blog, 'error.messageCode', 'ER000'));
     }
+    dispatch(setLoading(false));
     return blog;
   } catch (err) {
     // console.log('Error!', err);
