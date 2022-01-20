@@ -8,9 +8,6 @@ import colorDuck from '../ducks/colorDuck'
 import visibilityDuck from '../ducks/visibilityDuck';
 import colorHeaderDuck from '../ducks/colorHeaderDuck';
 import pageFocusDuck from '../ducks/pageFocusDuck';
-import communityApiDuck from '../ducks/communityApiDuck';
-import blogApiDuck from '../ducks/blogApiDuck';
-import careerApiDuck from '../ducks/careerApiDuck';
 
 // const rootReducer = combineReducers({
 
@@ -24,10 +21,7 @@ const appReducer = combineReducers({
   colorDuck,
   visibilityDuck,
   colorHeaderDuck,
-  pageFocusDuck,
-  communityApiDuck,
-  blogApiDuck,
-  careerApiDuck
+  pageFocusDuck
 })
 
 const rootReducer = (state, action) => {

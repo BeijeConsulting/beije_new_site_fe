@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import { Tabs, Row, Typography } from 'antd';
 const { Title } = Typography
@@ -6,8 +6,11 @@ const { TabPane } = Tabs;
 
 import moment from "moment";
 
+// import action
+import { printCareer } from "../../redux/actions/actions";
+
 // import redux
-import { connect } from "react-redux";
+import { connect, useDispatch } from "react-redux";
 import { setColorHeader } from "../../redux/ducks/colorHeaderDuck";
 
 // import style
@@ -20,67 +23,74 @@ import FilterAccordion from "../../components/functional_components/filterAccord
 
 const Career = (props) => {
 
-    const primary_bg_page_career = '#d6e3e5'
+  const apiDispatch = useDispatch();
+  const primary_bg_page_career = '#d6e3e5';
 
-    useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
+  const [state, setState] = useState({
+    dataContent: []
+  });
 
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, [])
+  useEffect(() => {
+    getDataCareer();
+    window.addEventListener("scroll", handleScroll);
 
-    const handleScroll = () => {
-        if (window.pageYOffset > 0) {
-            props.dispatch(setColorHeader(primary_bg_page_career))
-        }
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [])
+
+  const getDataCareer = async () => {
+    const career = await printCareer(apiDispatch);
+    setState((prevState => ({ ...prevState, dataContent: career })));
+  }
+
+  const handleScroll = () => {
+    if (window.pageYOffset > 0) {
+      props.dispatch(setColorHeader(primary_bg_page_career))
     }
+  }
 
-    const printListAcademy = (item, key) => {
-        return (
-            <GoToDetailRow
-                key={key}
-                numCol={4}
-                text1={item.title_it}
-                text2={item.type}
-                text3={item.mode}
-                text4={moment(item.date_creation, "YYYY-MM-DD").fromNow()}
-            />
-        )
-    }
-
+  const printListAcademy = (item, key) => {
     return (
-        <div className="career-container">
-            <Row>
-                <Title
-                    level={1}
-                    className="career-title"
-                >
-                    Career
-                </Title>
-            </Row>
-            <div className="card-container">
-                <Tabs type="card" className='career-tabs-container'>
-                    <TabPane tab="Job application" key="2" className='career-job-panel'>
-                        <FilterAccordion />
-                        <div className='career-list-item-container'>
-                            {props.careerApiDuck.career_obj_api.map(printListAcademy)}
-                        </div>
-                    </TabPane>
-                    <TabPane tab="Talent Academy" key="1" className='career-academy-panel'>
-                        <FilterAccordion />
-                        <div className='career-list-item-container'>
-                            {props.careerApiDuck.career_obj_api.map(printListAcademy)}
-                        </div>
-                    </TabPane>
-                </Tabs>
-            </div>
-        </div>
+      <GoToDetailRow
+        key={key}
+        numCol={4}
+        text1={item.title_it}
+        text2={item.type}
+        text3={item.mode}
+        text4={moment(item.date_creation, "YYYY-MM-DD").fromNow()}
+      />
     )
+  }
+
+  return (
+    <div className="career-container">
+      <Row>
+        <Title
+          level={1}
+          className="career-title"
+        >
+          Career
+        </Title>
+      </Row>
+      <div className="card-container">
+        <Tabs type="card" className='career-tabs-container'>
+          <TabPane tab="Job application" key="2" className='career-job-panel'>
+            <FilterAccordion />
+            <div className='career-list-item-container'>
+              {!state.dataContent.error ? state.dataContent.map(printListAcademy) : 'Error'}
+            </div>
+          </TabPane>
+          <TabPane tab="Talent Academy" key="1" className='career-academy-panel'>
+            <FilterAccordion />
+            <div className='career-list-item-container'>
+              {!state.dataContent.error ? state.dataContent.map(printListAcademy) : 'Error'}
+            </div>
+          </TabPane>
+        </Tabs>
+      </div>
+    </div>
+  )
 }
 
-const mapStateToProps = state => ({
-    careerApiDuck: state.careerApiDuck
-})
-
-export default connect(mapStateToProps)(Career)
+export default connect()(Career)

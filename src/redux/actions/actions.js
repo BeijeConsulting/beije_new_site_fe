@@ -5,9 +5,6 @@ import { showError } from "../../utils/utilities";
 // import {showError, showSuccess} from "../../utils/utilities";
 import { setLoading } from "../ducks/Loading";
 import { setLanguage } from "../ducks/Language";
-import { setCommunityApi } from "../ducks/communityApiDuck";
-import { setBlogApi } from "../ducks/blogApiDuck";
-import { setCareerApi } from "../ducks/careerApiDuck";
 
 export const doLogin = async (dispatch, data) => {
   try {
@@ -27,12 +24,12 @@ export const doLogin = async (dispatch, data) => {
 
 export const printCommunities = async (dispatch) => {
   try {
+    dispatch(setLoading(true));
     const communities = await Api.getCommunities();
-    if (!communities.error) {
-      dispatch(setCommunityApi(communities));
-    } else {
+    if (communities.error) {
       showError(get(communities, 'error.messageCode', 'ER000'));
     }
+    dispatch(setLoading(false));
     return communities;
   } catch (err) {
     // console.log('Error!', err);
@@ -55,12 +52,12 @@ export const printBlog = async (dispatch) => {
 
 export const printCareer = async (dispatch) => {
   try {
+    dispatch(setLoading(true));
     const careers = await Api.getCareer();
-    if (!careers.error) {
-      dispatch(setCareerApi(careers));
-    } else {
+    if (careers.error) {
       showError(get(careers, 'error.messageCode', 'ER000'));
     }
+    dispatch(setLoading(false));
     return careers;
   } catch (err) {
     // console.log('Error!', err);
