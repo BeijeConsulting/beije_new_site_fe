@@ -6,7 +6,7 @@ import './PolygonSection.css'
 const PolygonSection = (props) => {
     return (
         <div
-            className={`polygen-section ${props.bgColor}`}
+            className={`polygen-section ${props.bgColor} ${props.polygenClipPath}`}
         >
             {props.children}
         </div>
@@ -15,7 +15,8 @@ const PolygonSection = (props) => {
 }
 
 PolygonSection.defaultProps = {
-    bgColor: 'polygen-section-color'
+    bgColor: 'polygen-section-color',
+    polygenClipPath: 'polygen-section-clipPath'
 }
 
 export default PolygonSection

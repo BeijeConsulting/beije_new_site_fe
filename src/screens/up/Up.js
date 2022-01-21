@@ -35,147 +35,147 @@ import PolygonSection from "../../components/functional_components/polygonSectio
 
 const Up = (props) => {
 
-    const primary_bg_page_up = '#52798e'
+  const primary_bg_page_up = '#52798e'
 
-    const { t } = useTranslation()
+  const { t } = useTranslation()
 
-    const ref = useRef(null);
+  const ref = useRef(null);
 
-    //GSAP
-    gsap.registerPlugin(ScrollTrigger);
-
-
-    useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
-        props.dispatch(setColor(true))
-        props.dispatch(setPageFocus('up'))
-
-        const element = ref.current;
-
-        const desc3Container = element.querySelector('.up-intro-sec-desc3-row-gsap');
-        const desc3 = element.querySelector('.up-intro-sec-desc3-gsap')
-
-        const commentsSection = element.querySelector('.up-comments-gsap');
-        const commentsSecTitle = element.querySelector('.up-comments-title-gsap');
-
-        const caseStudiesSec = element.querySelector('.up-case-studies-gsap');
-        const caseStudiesTitle = element.querySelector('.up-case-studies-title-gsap');
-        const caseStudiesCarousel = element.querySelector('.up-case-studies-carousel-gsap');
-        const caseStudiesSingleCard = element.querySelectorAll('.up-case-studies-single-card-gsap');
-        const caseStudiesBtn = element.querySelector('.up-case-studies-view-all-gsap');
-
-        const t1 = gsap.timeline({
-            scrollTrigger: {
-                trigger: desc3Container,
-                start: 'top 75%',
-            }
-        })
-
-        const t2 = gsap.timeline({
-            scrollTrigger: {
-                trigger: commentsSection,
-                start: 'top 75%',
-            }
-        })
-
-        const t3 = gsap.timeline({
-            scrollTrigger: {
-                trigger: caseStudiesSec,
-                start: 'top 75%',
-            }
-        })
-
-        t1.from(desc3, { y: 50, opacity: 0, duration: 0.5, ease: 'baunce.in' })
-
-        t2.from(commentsSecTitle, { y: 50, opacity: 0, duration: 0.5, ease: 'baunce.in' })
-
-        t3.from(caseStudiesTitle, { y: 50, opacity: 0, duration: 0.5, ease: 'baunce.in' })
-        t3.from(caseStudiesSingleCard, { opacity: 0, stagger: 0.3, duration: 0.5, ease: 'power2.in' })
-        t3.from(caseStudiesCarousel, { opacity: 0, duration: 0.5, ease: 'power2.in' })
-        t3.from(caseStudiesBtn, { opacity: 0, duration: 0.5, ease: 'power2.in' })
+  //GSAP
+  gsap.registerPlugin(ScrollTrigger);
 
 
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-            props.dispatch(initPageFocus())
-        };
-    });
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    props.dispatch(setColor(true))
+    props.dispatch(setPageFocus('up'))
 
-    const handleScroll = () => {
-        if (window.pageYOffset > 0) {
-            props.dispatch(setColorHeader(primary_bg_page_up))
-            props.dispatch(setColor(true))
-        }
+    const element = ref.current;
+
+    const desc3Container = element.querySelector('.up-intro-sec-desc3-row-gsap');
+    const desc3 = element.querySelector('.up-intro-sec-desc3-gsap')
+
+    const commentsSection = element.querySelector('.up-comments-gsap');
+    const commentsSecTitle = element.querySelector('.up-comments-title-gsap');
+
+    const caseStudiesSec = element.querySelector('.up-case-studies-gsap');
+    const caseStudiesTitle = element.querySelector('.up-case-studies-title-gsap');
+    const caseStudiesCarousel = element.querySelector('.up-case-studies-carousel-gsap');
+    const caseStudiesSingleCard = element.querySelectorAll('.up-case-studies-single-card-gsap');
+    const caseStudiesBtn = element.querySelector('.up-case-studies-view-all-gsap');
+
+    const t1 = gsap.timeline({
+      scrollTrigger: {
+        trigger: desc3Container,
+        start: 'top 75%',
+      }
+    })
+
+    const t2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: commentsSection,
+        start: 'top 75%',
+      }
+    })
+
+    const t3 = gsap.timeline({
+      scrollTrigger: {
+        trigger: caseStudiesSec,
+        start: 'top 75%',
+      }
+    })
+
+    t1.from(desc3, { y: 50, opacity: 0, duration: 0.5, ease: 'baunce.in' })
+
+    t2.from(commentsSecTitle, { y: 50, opacity: 0, duration: 0.5, ease: 'baunce.in' })
+
+    t3.from(caseStudiesTitle, { y: 50, opacity: 0, duration: 0.5, ease: 'baunce.in' })
+    t3.from(caseStudiesSingleCard, { opacity: 0, stagger: 0.3, duration: 0.5, ease: 'power2.in' })
+    t3.from(caseStudiesCarousel, { opacity: 0, duration: 0.5, ease: 'power2.in' })
+    t3.from(caseStudiesBtn, { opacity: 0, duration: 0.5, ease: 'power2.in' })
+
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      props.dispatch(initPageFocus())
+    };
+  });
+
+  const handleScroll = () => {
+    if (window.pageYOffset > 0) {
+      props.dispatch(setColorHeader(primary_bg_page_up))
+      props.dispatch(setColor(true))
     }
+  }
 
-    const printComments = (item, key) => {
-        return (
-            <Comments
-                key={key}
-                commentsText={item.commentsText}
-                name={item.name}
-                surname={item.surname}
-                profilePictureImg={item.profilePictureImg}
-                imgClassName={item.imgClassName}
-            />
-        )
-    }
-
-    // const printCaseStudies = (item, key) => {
-    //     return (
-    //         <CustomCard
-    //             key={key}
-    //             cardClassName={item.containerClassName}
-    //             cardParagraph={turnToUppercase(item.title)}
-    //             paragraphClassName={item.titleClassName}
-    //         />
-    //     )
-    // }
-
-    // const printCaseStudiesDesktop = (item, key) => {
-    //     return (
-    //         <Col
-    //             key={key}
-    //             xs={0}
-    //             md={8}
-    //             className="up-case-studies-single-card-gsap"
-    //         >
-    //             <CustomCard
-    //                 cardClassName={item.containerClassName}
-    //                 cardParagraph={turnToUppercase(item.title)}
-    //                 paragraphClassName={item.titleClassName}
-    //             />
-    //         </Col>
-    //     )
-    // }
-
+  const printComments = (item, key) => {
     return (
-        <div
-            className='up-container'
-            ref={ref}
-        >
-            <section>
-                <IntroductiveSection
-                    titleInColumn={t('Up.title')}
-                    titleLight={true}
-                    bg1='up-bg1'
-                    bg2='up-bg2'
-                    desc1={t('Up.desc1')}
-                    desc1Light={true}
-                    desc2Mobile={true}
-                    desc2={t('Up.desc2')}
-                    desc2Light={true}
-                />
+      <Comments
+        key={key}
+        commentsText={item.commentsText}
+        name={item.name}
+        surname={item.surname}
+        profilePictureImg={item.profilePictureImg}
+        imgClassName={item.imgClassName}
+      />
+    )
+  }
 
-                <Row className="up-intro-sec-desc3-row up-intro-sec-desc3-row-gsap">
-                    <CustomCard
-                        cardParagraph={t('Up.paragraph')}
-                        paragraphClassName={'up-intro-section-paragraph txt-light up-intro-sec-desc3-gsap'}
-                    />
-                </Row>
-            </section>
+  // const printCaseStudies = (item, key) => {
+  //     return (
+  //         <CustomCard
+  //             key={key}
+  //             cardClassName={item.containerClassName}
+  //             cardParagraph={turnToUppercase(item.title)}
+  //             paragraphClassName={item.titleClassName}
+  //         />
+  //     )
+  // }
 
-            {/* <PolygonSection>
+  // const printCaseStudiesDesktop = (item, key) => {
+  //     return (
+  //         <Col
+  //             key={key}
+  //             xs={0}
+  //             md={8}
+  //             className="up-case-studies-single-card-gsap"
+  //         >
+  //             <CustomCard
+  //                 cardClassName={item.containerClassName}
+  //                 cardParagraph={turnToUppercase(item.title)}
+  //                 paragraphClassName={item.titleClassName}
+  //             />
+  //         </Col>
+  //     )
+  // }
+
+  return (
+    <div
+      className='up-container'
+      ref={ref}
+    >
+      <section>
+        <IntroductiveSection
+          titleInColumn={t('Up.title')}
+          titleLight={true}
+          bg1='up-bg1'
+          bg2='up-bg2'
+          desc1={t('Up.desc1')}
+          desc1Light={true}
+          desc2Mobile={true}
+          desc2={t('Up.desc2')}
+          desc2Light={true}
+        />
+
+        <Row className="up-intro-sec-desc3-row up-intro-sec-desc3-row-gsap">
+          <CustomCard
+            cardParagraph={t('Up.paragraph')}
+            paragraphClassName={'up-intro-section-paragraph txt-light up-intro-sec-desc3-gsap'}
+          />
+        </Row>
+      </section>
+
+      {/* <PolygonSection>
                 <section className="up-comments-gsap">
                     <Row>
                         <Col
@@ -260,21 +260,32 @@ const Up = (props) => {
                 </Row>
             </section>
             </PolygonSection> */}
-            <section className={'up-form-section consulting-gsap-sixth-section'}>
-                <SectionForm
-                    descClassName={'up-form-desc'}
-                    classNameLongLine={'up-long-line'}
-                    classNameTitle={'up-form-title'}
-                    title={turnToUppercase(t('Up.form_message_title'))}
-                    classNameTextArea={'up-form-text-area'}
-                    typeBtn='form-btn-light'
-                />
-            </section>
+      <PolygonSection
+        polygenClipPath={'up-polygen-clip-path'}
+      >
+        <section className={'up-form-section consulting-gsap-sixth-section'}>
+          <SectionForm
+            title={turnToUppercase(t('Up.form_message_title'))}
+          />
+        </section>
+      </PolygonSection>
 
-        </div >
+      {/* settings to turn form into light color */}
+      {/* <section className={'up-form-section consulting-gsap-sixth-section'}>
+          <SectionForm
+            descClassName={'up-form-desc'}
+            classNameTitle={'up-form-title'}
+            title={turnToUppercase(t('Up.form_message_title'))}
+            classNameTextArea={'up-form-text-area'}
+            typeBtn='form-btn-light'
+            classNameCheckbox={'txt-light'}
+          />
+        </section> */}
+
+    </div >
 
 
-    )
+  )
 }
 
 export default connect()(Up)

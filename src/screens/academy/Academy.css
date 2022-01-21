@@ -8,6 +8,7 @@
     --academy-bg2: url('../../assets/images/academy/academy2.jpg');
     --academy-comments-picture1: url('../../assets/images/comments/img_comments.jpg');
     --academy-comments-fraioli: url('../../assets/images/comments/fraioli_comments.jpg');
+    --academy-comments-savallo: url('../../assets/images/comments/savallo_comments.jpeg');
     --academy-comments-diMonaco: url('../../assets/images/comments/diMonaco_comments.jpeg');
     --academy-comments-ezpeleta: url('../../assets/images/comments/ezpeleta_comments.jpg');
 }
@@ -127,8 +128,8 @@
     background-image: var(--academy-comments-fraioli);
 }
 
-.academy-comments-profile-picture3 {
-    background-image: var(--academy-comments-picture1);
+.academy-comments-profile-savallo {
+    background-image: var(--academy-comments-savallo);
 }
 
 .academy-comments-profile-picture4 {

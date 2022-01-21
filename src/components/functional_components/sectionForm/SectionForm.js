@@ -49,7 +49,7 @@ const SectionForm = (props) => {
         >
             <Row>
                 <Col
-                    xs={24}
+                    xs={props.xsCol1Title}
                 >
                     <SectionSubtitle
                         styleContainer={{ marginBottom: props.marginBottom }}
@@ -57,11 +57,12 @@ const SectionForm = (props) => {
                         LongLineAbove={props.LongLineAbove}
                         classNameTitle={`sec-form-title-gsap ${props.classNameTitle}`}
                         title={props.title}
+                        level={props.titleLevel}
                     />
                 </Col>
                 <Col
-                    xs={24}
-                    md={6}
+                    xs={props.xsColInfo}
+                    md={props.mdColInfo}
                 >
                     <Row className={'sec-form-row-desc sec-form-desc-gsap'}>
                         <CustomCard
@@ -81,14 +82,15 @@ const SectionForm = (props) => {
                         />
                     </Row>
                 </Col>
-                <Col xs={0} md={4}></Col>
-                <Col xs={24} md={14}>
+                <Col xs={props.xsColDivider} md={props.mdColDivider}></Col>
+                <Col xs={props.xsColForm} md={props.mdColForm}>
                     <CustomForm
                         moreInfo={props.moreInfo}
                         agreement={props.agreement}
                         positionBtn={props.positionBtn}
                         classNameTextArea={props.classNameTextArea}
                         typeBtn={props.typeBtn}
+                        classNameCheckbox={props.classNameCheckbox}
                     />
                 </Col>
             </Row>
@@ -99,9 +101,16 @@ const SectionForm = (props) => {
 SectionForm.defaultProps = {
     marginBottom: '10px',
     LongLineAbove: false,
-    moreInfo: false,
-    agreement: false,
     positionBtn: 'flex-end',
+
+    xsCol1Title: 24,
+    xsColInfo: 24,
+    mdColInfo: 6,
+    xsColDivider: 0,
+    mdColDivider: 4,
+    xsColForm: 24,
+    mdColForm: 14
+
 }
 
 export default SectionForm

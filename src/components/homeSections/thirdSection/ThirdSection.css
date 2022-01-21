@@ -1,7 +1,7 @@
 .third-sec-container {
     background-color: #fff;
     margin-top: 100px;
-    height: calc(100vh - 100px);
+    /* height: calc(100vh - 100px); */
     width: 100%;
     display: flex;
     justify-content: flex-start;
@@ -17,9 +17,13 @@
 }
 
 .third-sec-col2 {
-    width: 100%;
-    /* height: 80%; */
+    /* width: 100%; */
+    height: 80%;
     position: relative
+}
+
+.third-sec-col2 .react-multi-carousel-track {
+    height: 255px !important;
 }
 
 .third-sec-col3 {
@@ -57,4 +61,15 @@
         display: block;
     }
 
+    .third-sec-col2 .react-multi-carousel-track {
+        height: 415px !important;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+    .third-sec-col2 .react-multi-carousel-track {
+        height: 450px !important;
+    }
 }

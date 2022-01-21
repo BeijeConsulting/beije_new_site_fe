@@ -31,7 +31,7 @@
     background-color: transparent;
     border: 1px solid var(--text-primary-fourth-sec);
     border-radius: 25px;
-    height: 165px !important;
+    height: 130px !important;
 }
 
 .fourth-sec-text-area-form::placeholder {

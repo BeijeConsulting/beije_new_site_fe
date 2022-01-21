@@ -4,6 +4,9 @@
 
 .polygen-section {
     padding: 60px 5%;
+}
+
+.polygen-section-clipPath {
     clip-path: polygon(100% calc(100% - 95%), 100% 100%, 0 calc(100% - 5%), 0 0);
 }
 

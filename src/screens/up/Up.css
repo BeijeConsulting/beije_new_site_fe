@@ -102,6 +102,12 @@
     margin-right: 10px;
 }
 
+
+/* Form section */
+.up-polygen-clip-path {
+    clip-path: polygon(100% calc(100% - 95%), 100% 100%, 0 100%, 0 0);
+}
+
 .up-form-section {
     margin: 40px 5%;
 }
@@ -158,7 +164,7 @@
 
     .up-intro-sec-desc3-row {
         padding: 0px 15%;
-    }    
+    }
 
     .up-section-polygen {
         padding: 0 15%;

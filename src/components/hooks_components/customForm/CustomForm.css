@@ -1,9 +1,9 @@
 :root {
-    --placeholder-primary: var(--third-color);
-    --text-primary: var(--first-color);
-    --privacy-check: var(--second-color);
-    --bg-color: var(--fourth-color);
-    --error-color: var(--sixth-color)
+    --placeholder-primary-form: var(--third-color);
+    --text-primary-form: var(--first-color);
+    --privacy-check-form: var(--second-color);
+    --bg-color-form: var(--fourth-color);
+    --error-color-form: var(--sixth-color)
 }
 
 .fomr-container {
@@ -17,27 +17,39 @@
     width: 100%;
 }
 
+.form-input.ant-input {
+    padding: 8px 16px !important;
+    color: var(--text-primary-form) !important;
+    border: 1px solid var(--text-primary-form);
+}
+
+.form-input.ant-input:hover {
+    padding: 8px 16px !important;
+    color: var(--text-primary-form) !important;
+    border: 2px solid var(--text-primary-form)!important;
+}
+
 .form-text-area {
     background-color: transparent;
-    border: 1px solid var(--text-primary);
+    border: 1px solid var(--text-primary-form);
     height: 219px !important;
     border-radius: 25px;
 }
 
 .form-input::placeholder {
-    color: var(--placeholder-primary);
+    color: var(--placeholder-primary-form);
 }
 
 .form-text-area::placeholder {
-    color: var(--text-primary);
+    color: var(--text-primary-form);
 }
 
 .form-input-condition {
-    color: var(--privacy-check);
+    color: var(--privacy-check-form);
 }
 
 .input-error {
-    color: var(--error-color);
+    color: var(--error-color-form);
 }
 
 .input-inLine-container {
@@ -62,25 +74,25 @@
 /* CHANGE ORIGINAL CLASS CSS OF ANT DESIGN*/
 
 .ant-checkbox-wrapper .ant-checkbox-inner, .ant-checkbox:hover .ant-checkbox-inner, .ant-checkbox-input:focus+.ant-checkbox-inner {
-    border-color: var(--placeholder-primary) !important;
+    border-color: var(--placeholder-primary-form) !important;
     border-radius: 50px !important;
-    outline: none;
+    outline-color: var(--third-color) !important;
 }
 
 .ant-checkbox-wrapper:hover .ant-checkbox-inner, .ant-checkbox:hover .ant-checkbox-inner, .ant-checkbox-input:focus+.ant-checkbox-inner {
-    border-color: var(--placeholder-primary) !important;
+    border-color: var(--placeholder-primary-form) !important;
     border-radius: 50px !important;
-    outline: none;
+    outline-color: var(--third-color) !important;
 }
 
 .ant-checkbox-checked .ant-checkbox-inner {
-    background-color: var(--text-primary) !important;
-    outline: none !important;
-    border-color: var(--bg-color) !important;
+    background-color: var(--text-primary-form) !important;
+    outline-color: var(--third-color) !important;
+    border-color: var(--bg-color-form) !important;
 }
 
 .ant-checkbox-inner {
-    border: 1px solid var(--bg-color) !important;
+    border: 1px solid var(--bg-color-form) !important;
 }
 
 .ant-checkbox-checked::after {
@@ -92,15 +104,15 @@
 }
 
 .ant-input:hover {
-    border-color: var(--text-primary) !important;
-    outline: var(--text-primary) !important;
+    border-color: var(--text-primary-form) !important;
+    outline-color: var(--text-primary-form) !important;
     /* box-shadow: 0 0 0 2px rgb(50 62 72 / 20%); */
     box-shadow: none;
 
 }
 
 .ant-input:focus, .ant-input-focused {
-    border-color: var(--text-primary);
+    border-color: var(--text-primary-form);
     /* box-shadow: 0 0 0 2px rgb(50 62 72 / 20%); */
     box-shadow: none;
 
@@ -108,20 +120,20 @@
 
 
 .ant-form-item-explain.ant-form-item-explain-error {
-    color: var(--error-color);
+    color: var(--error-color-form);
     font-size: 12px;
 }
 
 .ant-form-item-explain.ant-form-item-explain-error:hover {
-    color: var(--error-color);
+    color: var(--error-color-form);
 }
 
 .ant-form-item-has-error :not(.ant-input-disabled):not(.ant-input-borderless).ant-input, .ant-form-item-has-error :not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper, .ant-form-item-has-error :not(.ant-input-disabled):not(.ant-input-borderless).ant-input:hover, .ant-form-item-has-error :not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper:hover {
-    border-color: var(--error-color);
+    border-color: var(--error-color-form);
 }
 
 .ant-form-item-has-error :not(.ant-input-disabled):not(.ant-input-borderless).ant-input:focus, .ant-form-item-has-error :not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper:focus, .ant-form-item-has-error :not(.ant-input-disabled):not(.ant-input-borderless).ant-input-focused, .ant-form-item-has-error :not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper-focused {
-    border-color: var(--error-color);
+    border-color: var(--error-color-form);
     /* box-shadow: 0 0 0 2px rgb(177 32 9 / 20%); */
     box-shadow: none;
 }

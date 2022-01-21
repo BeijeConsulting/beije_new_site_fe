@@ -24,12 +24,12 @@
 
 .carousel-profile-picture {
     position: relative;
-    border-radius: 40px;
+    border-radius: 30px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 118px;
-    height: 296px !important;
+    width: 120px;
+    height: 200px !important;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -155,10 +155,10 @@
 
 .carousel-profile-single-el:hover .custom-carousel-lable {
     position: absolute;
-    bottom: -10px;
+    bottom: -15px;
     right: -10px;
-    width: 128px;
-    height: 91px;
+    width: 120px;
+    height: 85px;
     background-color: var(--lable-color);
     padding: 10px;
     display: flex;
@@ -168,7 +168,7 @@
 
 .custom-carousel-lable-text {
     font-family: 'SpaceGrotesk-Regular', sans-serif !important;
-    font-size: 16px !important;
+    font-size: 14px !important;
     line-height: 25px !important;
     color: #fff;
     font-weight: normal !important;
@@ -178,25 +178,38 @@
     display: none;
 }
 
+@media screen and (min-width: 400px) {
+    .carousel-profile-picture {
+        width: 160px;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .carousel-profile-picture {
-        width: 140px;
-        height: 500px !important;
+        height: 360px !important;
     }
 
     .custom-carousel-lable {
-        height: 86px;
-        width: 126px;
+        width: 160px !important;
         background-color: var(--lable-color);
+    }
+
+    .custom-carousel-lable-text {
+        font-size: 16px !important;
     }
 }
 
 @media screen and (min-width: 992px) {
 
-    .carousel-profile-single-el:hover .custom-carousel-lable {
+    /* .carousel-profile-single-el:hover .custom-carousel-lable {
         right: -15px;
         height: 149px;
         width: 145px;
+    } */
+
+    .custom-carousel-lable {
+        bottom: -35px !important;
+        height: 155px !important;
     }
 
     .custom-carousel-lable-text {
@@ -230,15 +243,16 @@
 }
 
 @media screen and (min-width: 1440px) {
-    .carousel-profile-picture {
-        width: 205px;
-        height: 500px !important;
-    }
 
+    /* .carousel-profile-picture {
+        width: 160px;
+        height: 500px !important;
+    } */
+    /* 
     .carousel-profile-single-el:hover .custom-carousel-lable {
         width: 205px;
         height: 140px;
-    }
+    } */
 
     .custom-carousel-lable-text {
         font-size: 20px !important;

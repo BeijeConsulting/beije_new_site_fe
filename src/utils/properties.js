@@ -398,7 +398,7 @@ export const academy_comments = [
     commentsText: "comments_txt.comments3",
     name: 'Alessandro',
     surname: 'Savallo',
-    profilePictureImg: 'academy-comments-profile-picture3',
+    profilePictureImg: 'academy-comments-profile-savallo',
     imgClassName: 'trial'
   }
   ,
