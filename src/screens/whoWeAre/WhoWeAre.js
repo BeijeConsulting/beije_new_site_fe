@@ -78,6 +78,7 @@ const WhoWeAre = (props) => {
               infinite={true}
               showRole={false}
               showDesc={true}
+              showArrows={true}
               dragged={draggedCarousel}
 
               carouselClassName='whoWeAre-carousel-container'

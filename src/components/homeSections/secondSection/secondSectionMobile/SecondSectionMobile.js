@@ -82,6 +82,7 @@ const SecondSectionMobile = (props) => {
               className='arrow-icon-btn' />
           }
           className={'sec-section-singleEl-gsap'}
+          href={props.obj.href}
         />
       </Row>
     </div>

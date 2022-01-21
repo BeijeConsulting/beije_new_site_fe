@@ -73,22 +73,20 @@ const SubsectionTitleImg = (props) => {
             className={props.classNameContainer}
             ref={ref}
         >
-            {
-                props.titleOutColumn &&
-                <Row className={`subSection-title-gsap ${props.classNameTitle}`}>
-                    <SectionSubtitle
-                        level={2}
-                        title={props.subTitle}
-                        shortLineBelow
-                    />
-                </Row>
-            }
-            <Row className={`sub-section-row ${props.imgRight ? 'sub-section-row2' : ''}`}>
+
+            <div className={`sub-section-row ${props.imgRight ? 'sub-section-row2' : ''}`}>
+                {
+                    props.titleMobile &&
+                    <Row className={`subSection-title-gsap ${props.classNameTitleMobile}`}>
+                        <SectionSubtitle
+                            level={2}
+                            title={props.subTitle}
+                            shortLineBelow
+                        />
+                    </Row>
+                }
+
                 {/* Description mobile always below title */}
-                {/* <Col
-                    xs={24}
-                    lg={0}
-                > */}
                 <div className='sub-section-desc-mobile'>
 
                     {
@@ -112,9 +110,6 @@ const SubsectionTitleImg = (props) => {
                     }
                 </div>
 
-                {/* </Col> */}
-
-
                 {/* Img on left side */}
 
                 {props.imgLeftDescRight &&
@@ -136,15 +131,21 @@ const SubsectionTitleImg = (props) => {
                     </div>
                 }
 
-                {/* <Col
-                    xs={0}
-                    lg={12}
-                    className={props.descDesktopContainer}
-                > */}
+
                 <div
                     className={props.descDesktopContainer}
 
                 >
+                    {
+                        props.titleDesktop &&
+                        <Row className={`subSection-title-gsap ${props.classNameTitleDesktop}`}>
+                            <SectionSubtitle
+                                level={2}
+                                title={props.subTitle}
+                                shortLineBelow
+                            />
+                        </Row>
+                    }
                     {
                         props.desc &&
                         <Row className={'sub-section-desc-container'}>
@@ -175,8 +176,8 @@ const SubsectionTitleImg = (props) => {
                             />
                         </div>
                     }
-                    {/* </Col> */}
                 </div>
+
                 {props.imgRightDescLeft &&
                     <div className={'sub-section-img-icon-container'}>
 
@@ -196,15 +197,17 @@ const SubsectionTitleImg = (props) => {
                         }
                     </div>
                 }
-            </Row >
+            </div >
         </div >
     )
 }
 
 SubsectionTitleImg.defaultProps = {
     classNameContainer: 'sub-section-container sub-sec-gsap',
-    classNameTitle: 'sub-section-title',
-    titleOutColumn: true,
+    classNameTitleMobile: 'sub-section-title-mobile',
+    classNameTitleDesktop: 'sub-section-title-desktop',
+    titleMobile: true,
+    titleDesktop: true,
     subTitle: 'Value',
     imgRight: false,
     descDesktopContainer: 'sub-section-desc-desktop-container',

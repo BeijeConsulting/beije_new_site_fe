@@ -58,13 +58,19 @@
 
 @media screen and (min-width: 768px) {
     .comments-container {
-        height: 370px;
+        height: 360px;
         padding: 93px 40px 30px 40px;
     }
 
     .comments-profile-picture {
         width: 100px;
         height: 100px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .comments-container {
+        height: 510px;
     }
 }
 

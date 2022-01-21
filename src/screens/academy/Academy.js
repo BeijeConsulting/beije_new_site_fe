@@ -208,7 +208,7 @@ const Academy = (props) => {
                     <IntroductiveSection
                         titleInColumn={t('Academy.title')}
                         bg1={'academy-bg1'}
-                        intro={t('Academy.intro')}
+                        // intro={t('Academy.intro')}
                         desc1={t('Academy.page_description')}
                         secondRow={false}
                     />

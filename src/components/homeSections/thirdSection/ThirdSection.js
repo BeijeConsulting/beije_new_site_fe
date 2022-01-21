@@ -91,6 +91,7 @@ const ThirdSection = () => {
                             />
                         }
                         <CustomOwlCarousel
+                            showArrows={true}
                             dragged={draggedCarousel}
                         />
                     </Col>

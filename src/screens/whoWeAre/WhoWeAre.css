@@ -48,12 +48,9 @@
     display: none;
 }
 
-/* @media screen and (min-width: 768px) {
-
-
-
-    
-} */
+.whoWeAre-carousel-container .react-multi-carousel-track {
+    margin-bottom: 30px !important;
+}
 
 @media screen and (min-width: 1024px) {
 
@@ -62,7 +59,7 @@
     } */
 
     .whoWeAre-carousel-container .react-multi-carousel-track {
-        margin-bottom: 210px !important;
+        margin-bottom: 80px !important;
     }
 
     .whoWeAre-profile-picture-carousel {
@@ -70,18 +67,18 @@
         height: 700px !important;
     }
 
-    .whoWeAre-sub-section-title {
+    /* .whoWeAre-sub-section-title {
         padding-left: calc(50% + 20px);
-    }
+    } */
 
     .whoWeAre-single-el-carousel:hover .whoWeAre-carousel-lable-container {
-        width: 270px;
-        height: 380px;
-        bottom: -198px;
+        width: 270px !important;
+        height: 220px !important;
+        bottom: -80px !important;
     }
 
     .whoWeAre-carousel-lable-desc {
-        font-size: 15px !important;
+        font-size: 18px !important;
     }
 
 

@@ -217,7 +217,7 @@ export const carouselProfile = [
     name: 'Francesco',
     surname: 'Cesana',
     role: 'General Manager',
-    description: "Gestione dell’intero processo di selezione, dalla creazione di annunci fino all’onboarding, passando per la ricerca mirata attraverso i portali specifici, screening CV, primo contatto telefonico e svolgimento dei colloqui conoscitivi per trovare i potenziali candidati e attrarre i talenti in ambito IT",
+    description: "",
     alt: 'FrancescoCesana',
     classNameSingleEl: 'carousel-profile-single-el picture-top',
     classNameBgImg: 'carousel-profile-picture carousel-profile-bg1',
@@ -227,7 +227,7 @@ export const carouselProfile = [
     id: 2,
     name: 'Erica',
     surname: 'Mauro',
-    role: 'sales manager',
+    role: 'Sales manager',
     alt: 'EricaMauro',
     classNameSingleEl: 'carousel-profile-single-el picture-middle',
     classNameBgImg: 'carousel-profile-picture carousel-profile-bg2',
@@ -258,6 +258,7 @@ export const carouselProfile = [
     name: 'Roberto',
     surname: 'Brogi',
     role: 'CTO & Master Trainer',
+    description: 'Sono un uomo semplice: programmo di giorno, mi trasformo in John Deacon di notte.',
     alt: 'RobertoBrogi',
     classNameSingleEl: 'carousel-profile-single-el picture-top',
     classNameBgImg: 'carousel-profile-picture carousel-profile-bg5',
@@ -268,6 +269,7 @@ export const carouselProfile = [
     name: 'Ivo',
     surname: 'Mosca',
     role: 'CIO & Master Trainer',
+    description: 'Make it simple.',
     alt: 'IvoMosca',
     classNameSingleEl: 'carousel-profile-single-el picture-middle',
     classNameBgImg: 'carousel-profile-picture carousel-profile-bg6',
@@ -278,6 +280,7 @@ export const carouselProfile = [
     name: 'Francesca',
     surname: 'Ferioli',
     role: 'HR specialist',
+    description: 'Psicologa specializzata in comunicazione. Musica, Spagna e basket dipendente.',
     alt: 'FrancescaFerioli',
     classNameSingleEl: 'carousel-profile-single-el picture-bottom',
     classNameBgImg: 'carousel-profile-picture carousel-profile-bg7',
@@ -288,6 +291,7 @@ export const carouselProfile = [
     name: 'Maria',
     surname: 'Amigo Rodrigez',
     role: 'Junior IT Recruiter',
+    description: 'Nerd sotto copertura in ambito IT, cosa potrebbe andare storto?',
     alt: 'MariaAmigoRodrigez',
     classNameSingleEl: 'carousel-profile-single-el picture-middle',
     classNameBgImg: 'carousel-profile-picture carousel-profile-bg8',
@@ -297,7 +301,8 @@ export const carouselProfile = [
     id: 9,
     name: 'Francesca',
     surname: 'Bellini',
-    role: 'head of marketin',
+    role: 'Head of marketin',
+    description: 'Dammi tre parole: fashion, danza e carbonara.',
     alt: 'FrancescaBellini',
     classNameSingleEl: 'carousel-profile-single-el picture-bottom',
     // classNameSingleEl: 'carousel-profile-single-el picture-top',
@@ -362,19 +367,19 @@ export const academy_carousel_student = [
   {
     carouselTitle: 'title_carousel_student',
     iconSrc: icon1_consulting,
-    titlePenrcentage: '96,9%',
+    titlePenrcentage: '100%',
     carouselDesc: 'paragraph1_carousel_student'
   },
   {
     carouselTitle: 'title_carousel_student',
     iconSrc: icon2_consulting,
-    titlePenrcentage: '92,2%',
+    titlePenrcentage: '100%',
     carouselDesc: 'paragraph2_carousel_student'
   },
   {
     carouselTitle: 'title_carousel_student',
     iconSrc: icon3_consulting,
-    titlePenrcentage: '89,3%',
+    titlePenrcentage: '91.7%',
     carouselDesc: 'paragraph3_carousel_student'
   }
 ]

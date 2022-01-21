@@ -80,6 +80,7 @@ const SecondSectionTablet = (props) => {
                                     className='arrow-icon-btn' />
                             }
                             className={item.btnClassName}
+                            href={item.href}
                         />
                     </Row>
                 </div>
