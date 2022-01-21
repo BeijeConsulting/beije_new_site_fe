@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
-import { Row, Col, Typography } from "antd";
+import { Row, Typography } from "antd";
 const { Paragraph } = Typography
 
 //import gsap
@@ -89,7 +89,7 @@ const SubsectionTitleImg = (props) => {
                     xs={24}
                     lg={0}
                 > */}
-                <dvi className='sub-section-desc-mobile'>
+                <div className='sub-section-desc-mobile'>
 
                     {
                         props.desc &&
@@ -110,7 +110,7 @@ const SubsectionTitleImg = (props) => {
 
                         </Row>
                     }
-                </dvi>
+                </div>
 
                 {/* </Col> */}
 

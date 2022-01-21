@@ -11,7 +11,7 @@ import '../SecondSection.css'
 
 //import assets
 import {
-    ArrowRightOutlined
+  ArrowRightOutlined
 } from '@ant-design/icons';
 
 //import costants
@@ -23,76 +23,77 @@ import CustomButton from "../../../functional_components/Button/CustomButton";
 
 const SecondSectionDesktop = () => {
 
-    const { t } = useTranslation()
+  const { t } = useTranslation()
 
-    const ref = useRef(null)
+  const ref = useRef(null)
 
-    //GSAP
-    gsap.registerPlugin(ScrollTrigger);
+  //GSAP
+  gsap.registerPlugin(ScrollTrigger);
 
-    useEffect(() => {
+  useEffect(() => {
 
-        const element = ref.current;
+    const element = ref.current;
 
-        const container = element.querySelectorAll('.sec-section-container-gsap');
-        const singleEl = element.querySelectorAll('.sec-section-singleEl-gsap');
+    const container = element.querySelectorAll('.sec-section-container-gsap');
+    const singleEl = element.querySelectorAll('.sec-section-singleEl-gsap');
 
-        const t1 = gsap.timeline({
-            scrollTrigger: {
-                trigger: element,
-                start: 'top 75%',
-            }
-        })
-        const t2 = gsap.timeline({
-            scrollTrigger: {
-                trigger: container,
-                start: 'top 75%',
-            }
-        })
+    const t1 = gsap.timeline({
+      scrollTrigger: {
+        trigger: element,
+        start: 'top 75%',
+      }
+    })
+    const t2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: container,
+        start: 'top 75%',
+      }
+    })
 
-        t1.from(container, { y: 50, opacity: 0, stagger: 0.2, duration: 0.5, ease: 'power2.in' })
-        t2.from(singleEl, { y: 50, opacity: 0, stagger: 0.2, duration: 0.5, ease: 'power2.in' })
-    }, [])
+    t1.from(container, { y: 50, opacity: 0, stagger: 0.2, duration: 0.5, ease: 'power2.in' })
+    t2.from(singleEl, { y: 50, opacity: 0, stagger: 0.2, duration: 0.5, ease: 'power2.in' })
+  }, [])
 
-    const printCard = (item, key) => {
-        return (
-            <Col
-                lg={6}
-                key={key}
-                className={item.colContainerClassName}
-            >
-                <div className={item.cardContainerClassName}>
-                    <Row className="sec-section-row-title">
-                        <CustomCard
-                            cardTitle={t('home.secondSection.' + item.cardTitle)}
-                            titleLevel={item.titleLevel}
-                            cardClassName={item.colClassName}
-                        />
-
-                        <CustomButton
-                            type={item.type_btn}
-                            currentIcon={
-                                <ArrowRightOutlined
-                                    className='arrow-icon-btn' />
-                            }
-                        />
-                    </Row>
-                </div>
-            </Col >
-        )
-    }
-
+  const printCard = (item, key) => {
     return (
-        <>
-            <Row
-                className='d-flex justify-between width-100'
-                ref={ref}
-            >
-                {cardWhoWeAre.map(printCard)}
-            </Row>
+      <Col
+        lg={6}
+        key={key}
+        className={item.colContainerClassName}
+      >
+        <div className={item.cardContainerClassName}>
+          <Row className="sec-section-row-title">
+            <CustomCard
+              cardTitle={t('home.secondSection.' + item.cardTitle)}
+              titleLevel={item.titleLevel}
+              cardClassName={item.colClassName}
+            />
 
-        </>
+            <CustomButton
+              type={item.type_btn}
+              currentIcon={
+                <ArrowRightOutlined
+                  className='arrow-icon-btn' />
+              }
+              href={item.href}
+            />
+          </Row>
+        </div>
+      </Col >
     )
+  }
+
+  return (
+    <>
+      <Row
+        className='sec-section-row-card-container'
+        ref={ref}
+      >
+        {cardWhoWeAre.map(printCard)}
+      </Row>
+
+    </>
+  )
 }
 
 export default SecondSectionDesktop

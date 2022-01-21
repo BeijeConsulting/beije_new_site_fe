@@ -90,7 +90,7 @@ const SecondSectionTablet = (props) => {
     return (
         <>
             <Row
-                className='d-flex justify-between width-100'
+                className='sec-section-row-card-container'
                 ref={ref}
 
             >

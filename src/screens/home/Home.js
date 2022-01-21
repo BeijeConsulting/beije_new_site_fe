@@ -26,7 +26,7 @@ import FourthSection from "../../components/homeSections/fourthSection/FourthSec
 import CustomFooter from "../../components/functional_components/customFooter/CustomFooter";
 
 //import constats
-import { cardWhoWeAre, video_home } from "../../utils/properties";
+import { cardWhoWeAre } from "../../utils/properties";
 import SecondSectionTablet from "../../components/homeSections/secondSection/secondSectionTablet/SecondSectionTablet";
 const historyObj = cardWhoWeAre[1];
 const missionObj = cardWhoWeAre[2];
@@ -99,7 +99,7 @@ const Home = (props) => {
             autoPlay
             muted
             loop
-            src={video_home}
+            src={'https://beije.s3.eu-west-1.amazonaws.com/video_home.mp4'}
           />
           <ContainerSectionScroll>
             <FirstSection
