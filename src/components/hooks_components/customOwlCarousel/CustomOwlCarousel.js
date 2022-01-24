@@ -121,7 +121,7 @@ const CustomOwlCarousel = (props) => {
             autoPlay={props.autoPlay}
             autoPlaySpeed={props.autoPlaySpeed}
             afterChange={props.dragged}
-            className={props.carouselClassName}
+            className={`${props.carouselClassName} cursor-grab`}
         >
             {
                 props.objCarousel &&
