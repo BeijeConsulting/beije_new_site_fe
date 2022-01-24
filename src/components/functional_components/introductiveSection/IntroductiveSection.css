@@ -224,3 +224,23 @@
     }
 
 }
+
+
+@media (-webkit-min-device-pixel-ratio: 1.25) {
+
+    .intro-sec-go-back-btn-container {
+        padding: 0 15%;
+    }
+
+    .intro-sec-row-title-out {
+        padding: 0 15%;
+    }
+
+    .intro-sec-txt-div-container {
+        height: 554px;
+    }
+
+    .intro-section-row-image {
+        padding: 0px 15%;
+    }
+}

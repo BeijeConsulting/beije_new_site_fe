@@ -7,10 +7,6 @@
   --vision_bg: url(../../../assets/images/home/vision_home.jpg);
 }
 
-/* .sec-section-card-col {
-    padding: 0 20px;
-} */
-
 .sec-section-row-card-container {
   display: flex;
   justify-content: space-between;
@@ -19,11 +15,8 @@
 }
 
 .sec-section-card-col {
-  /* padding: 0 10px; */
   display: flex;
   align-items: center;
-  /* margin-top: 100px; */
-  /* height: calc(100vh - 20vh); */
   height: 100%;
 }
 
@@ -147,3 +140,4 @@
     max-height: 500px;
   }
 }
+

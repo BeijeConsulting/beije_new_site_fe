@@ -201,12 +201,6 @@
 
 @media screen and (min-width: 992px) {
 
-    /* .carousel-profile-single-el:hover .custom-carousel-lable {
-        right: -15px;
-        height: 149px;
-        width: 145px;
-    } */
-
     .custom-carousel-lable {
         bottom: -35px !important;
         height: 155px !important;
