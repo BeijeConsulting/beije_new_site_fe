@@ -28,6 +28,7 @@
     flex-direction: column;
     margin-left: 20px;
     z-index: 100;
+    cursor: pointer;
 }
 
 .burger-menu-container i {
@@ -43,6 +44,7 @@
     flex-direction: column;
     margin-left: 20px;
     z-index: 100;
+    cursor: pointer;
 }
 
 .burger-menu-container-light i {
