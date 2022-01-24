@@ -7,7 +7,7 @@
   --sixth-color: #b12009;
 }
 
-/* @media (-webkit-device-pixel-ratio: 1.50) {
+/* @media (-webkit-device-pixel-ratio: 1.25) {
   * {
     zoom: 99%;
   }
@@ -56,6 +56,7 @@ body {
   line-height: 26px !important;
   font-weight: normal !important;
   color: var(--first-color) !important;
+  zoom: reset;
 
 }
 

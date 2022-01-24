@@ -159,9 +159,9 @@ const Consulting = (props) => {
   return (
     /* *he* */
     <>
-      <Helmet>
+      {/* <Helmet>
         <meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=1.0, user-scalable=no"></meta>
-      </Helmet>
+      </Helmet> */}
       <div className={'consulting-container'} ref={ref}>
 
         <section className={'consulting-introductive-section'}>
