@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { Row} from "antd";
+import { Row } from "antd";
 
 //import gsap
 import { gsap } from 'gsap'
@@ -56,15 +56,8 @@ const SecondSectionMobile = (props) => {
   }, [])
 
   return (
-    // <Col
-    //     xs={24}
-    //     className={props.obj.colContainerClassName}
-    //     ref={ref}
-    // >
-    // <Row
-    //   className='sec-section-row-card-container'
-    // >
     <div
+      id='secondSection'
       className={`sec-section-container-gsap ${props.obj.cardContainerClassName}`}
       ref={ref}
     >
@@ -78,17 +71,13 @@ const SecondSectionMobile = (props) => {
         <CustomButton
           type={props.obj.type_btn}
           currentIcon={
-            <ArrowRightOutlined
-              className='arrow-icon-btn' />
+            <i className={'arrow-icon-btn arrow-icon-dark'} />
           }
           className={'sec-section-singleEl-gsap'}
           href={props.obj.href}
         />
       </Row>
     </div>
-    // </Row>
-
-    // </Col>
   )
 }
 

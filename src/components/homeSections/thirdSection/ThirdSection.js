@@ -101,6 +101,7 @@ const ThirdSection = () => {
                             type={'view-all-btn'}
                             content={<ViewAllButton />}
                             clickCallback={goToWhoWeAre}
+                            href={`${ENVIRONMENT.ROUTING.BASE_URL}whoweare`}
                         />
                     </Col>
                 </Row>

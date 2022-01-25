@@ -18,7 +18,7 @@
     "viewAll": "Vedi tutti",
     "drag": "Drag -br- for more",
     "apply": "Candidati",
-    "goBackAcademy": "Torna all'academy"
+    "goBackAcademy": "Torna a Beije Talent Academy"
   },
   "imgAlt": {
     "social": {
@@ -49,7 +49,7 @@
   },
   "burgerMenu": {
     "consulting": "CONSULTING",
-    "academy": "TALENT ACADEMY",
+    "academy": "BEIJE TALENT ACADEMY",
     "up": "UP",
     "career": "CAREER",
     "whoWeAre": "CHI SIAMO",
@@ -109,7 +109,7 @@
     "description_add_info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan lacus quis nibh porta, eget porttitor neque feugiat."
   },
   "Academy": {
-    "title": "Talent Academy",
+    "title": "Beije Talent Academy",
     "page_description": "Corsi specializzati Frontend & Backend per diventare Software Developer. Svilupperai le tue competenze attraverso lezioni frontali, esercitazioni, valutazioni e progetti reali.",
     "our_courses_title": "I nostri corsi",
     "title_academy_java": "Academy Java",
@@ -131,7 +131,7 @@
       "comments2": "Beije mi ha da subito dato un'ottima impressione e non si è smentita con il tempo. Ho avuto un contratto a tempo indeterminato dopo un breve periodo di formazione e sono entrato in un team che mi ha accolto ben oltre le mie aspettative.",
       "comments3": "Beije Academy è stata un’esperienza costruttiva e stimolante: mi ha permesso di apprendere le tecnologie usate nel mondo lavorativo e mi ha incoraggiato a mettermi in gioco in ogni circostanza.",
       "comments4": "",
-      "comments5": "Una formazione completa, un'esperienza professionalizzante che ti lascia con delle competenze reali e applicabili nell'immediato. Alla Talent Academy non si impara solo a programmare, ma a farlo con consapevolezza e ingegno.",
+      "comments5": "Una formazione completa, un'esperienza professionalizzante che ti lascia con delle competenze reali e applicabili nell'immediato. Alla Beije Talent Academy non si impara solo a programmare, ma a farlo con consapevolezza e ingegno.",
       "comments6": "Beije Accademy mi è stata molto utile per introdurmi nel mondo del lavoro con sicurezza grazie alle simulazioni in team, dove ho potuto mettere in pratica ciò che ho studiato in Accademy ed in Università."
     },
     "form_message_title": "Richiedi maggiori informazioni",

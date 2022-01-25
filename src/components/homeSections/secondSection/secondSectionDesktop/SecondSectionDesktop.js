@@ -72,8 +72,7 @@ const SecondSectionDesktop = () => {
             <CustomButton
               type={item.type_btn}
               currentIcon={
-                <ArrowRightOutlined
-                  className='arrow-icon-btn' />
+                <i className={'arrow-icon-btn arrow-icon-dark'} />
               }
               href={item.href}
             />
@@ -86,6 +85,7 @@ const SecondSectionDesktop = () => {
   return (
     <>
       <Row
+        id='secondSection'
         className='sec-section-row-card-container'
         ref={ref}
       >

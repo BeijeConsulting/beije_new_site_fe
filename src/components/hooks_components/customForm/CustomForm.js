@@ -20,6 +20,10 @@ const CustomForm = (props) => {
 
   const { t } = useTranslation()
 
+  const handleCallback = () => {
+    props.callBack() 
+  }
+
 
   // to see the values pass "values" as parameter of this function
   const onFinish = () => {
@@ -176,6 +180,7 @@ const CustomForm = (props) => {
             content={t('home.fourthSection.send_btn')}
             htmlType='submit'
             type={props.typeBtn}
+            clickCallback={handleCallback}
           />
         </div>
       </Form >

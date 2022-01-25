@@ -65,7 +65,7 @@ const Navbar = (props) => {
                     href={props.href_academy}
                     type={props.type}
                     className={props.classNameLink}>
-                    TALENT ACADEMY
+                    BEIJE TALENT ACADEMY
                 </Link>
                 {
                     props.pageFocusDuck.page === 'academy' &&

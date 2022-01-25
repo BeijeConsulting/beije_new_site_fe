@@ -1,7 +1,9 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import { Layout } from 'antd';
-import { connect } from "react-redux";
+import { connect, useSelector } from "react-redux";
+import { get } from "lodash";
+
 
 import '../../style.css'
 import './HomeLayout.css'
@@ -13,6 +15,8 @@ import CustomHeader from "../../components/hooks_components/customHeader/CustomH
 const { Header, Content } = Layout;
 
 const HomeLayout = (props) => {
+
+  const pageIsLoading = useSelector((state) => get(state.loadingDuck, 'pageIsLoading', false));
 
   return (
     <Layout>
@@ -33,6 +37,7 @@ const HomeLayout = (props) => {
           <Content>
             <div >
               <Outlet />
+              {pageIsLoading ? 'LOADING' : ''}
             </div>
           </Content>
         </Layout>

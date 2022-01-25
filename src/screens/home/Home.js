@@ -101,11 +101,11 @@ const Home = (props) => {
             loop
             src={'https://beije.s3.eu-west-1.amazonaws.com/video_home.mp4'}
           />
-          <ContainerSectionScroll>
+          {/* <ContainerSectionScroll> */}
             <FirstSection
             // callbackScroll={ }
             />
-          </ContainerSectionScroll>
+          {/* </ContainerSectionScroll> */}
         </div>
       </section>
 

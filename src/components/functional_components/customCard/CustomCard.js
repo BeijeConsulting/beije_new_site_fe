@@ -69,6 +69,7 @@ const CustomCard = (props) => {
                     currentIcon={props.currentIcon}
                     content={props.content}
                     classNameBtn={props.classNameBtn}
+                    href={props.href}
                 />
             }
             {

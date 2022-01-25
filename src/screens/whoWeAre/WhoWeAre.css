@@ -1,7 +1,7 @@
 :root {
     --primary-color-whoWeAre: var(--fourth-color);
 
-    --who-we-are-value-bg: url('../../assets/images/whoWeAre/whoWeAre_vision.svg');
+    --who-we-are-value-bg: url('../../assets/images/whoWeAre/value.jpg');
     --who-we-are-history-bg: url('../../assets/images/whoWeAre/history.jpg');
     --who-we-are-vision-bg: url('../../assets/images/whoWeAre/vision.jpg');
     --who-we-are-mission-bg: url('../../assets/images/whoWeAre/mission.jpg');

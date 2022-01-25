@@ -1,10 +1,14 @@
 import React from "react"
-import { Layout, Row, Col } from "antd"
-
+import { useNavigate } from "react-router-dom"
 import { useTranslation } from "react-i18next"
+
+import { Row, Col } from "antd"
 
 //import style
 import './FirstSection.css'
+
+// import constants
+import { ENVIRONMENT } from "../../../utils/properties"
 
 //import components
 import CustomCard from "../../functional_components/customCard/CustomCard"
@@ -16,8 +20,14 @@ const FirstSection = () => {
 
     const { t } = useTranslation()
 
+    const navigate = useNavigate()
+
+    const callbackScroll = () => {
+        navigate(`${ENVIRONMENT.ROUTING.BASE_URL}#secondSection`)
+    }
+
     return (
-        <Layout className={'home-fp-container'}>
+        <div className={'home-fp-container'}>
             <div>
                 <Row>
                     <Col xs={0} md={4} />
@@ -50,11 +60,11 @@ const FirstSection = () => {
             <div>
 
                 <ScrollButton
-                // callback={props.callbackScroll}
+                    callback={callbackScroll}
                 />
 
             </div>
-        </Layout >
+        </div >
     )
 }
 

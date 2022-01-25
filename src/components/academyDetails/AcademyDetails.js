@@ -1,6 +1,8 @@
 import React, { useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
+import { connect } from "react-redux";
+import { setPageFocus, initPageFocus } from "../../redux/ducks/pageFocusDuck";
 
 import { Row, Col, Collapse } from "antd";
 const { Panel } = Collapse;
@@ -44,6 +46,7 @@ const AcademyDetails = (props) => {
     gsap.registerPlugin(ScrollTrigger);
 
     useEffect(() => {
+        props.dispatch(setPageFocus('academy'));
 
         const element = ref.current;
 
@@ -88,8 +91,12 @@ const AcademyDetails = (props) => {
         t2.from(sctructureColEl, { opacity: 0, stagger: 0.3, duration: 0.5, ease: 'power2.in' })
 
         t3.from(programColTitle, { y: 100, opacity: 0, stragger: 0.3, duration: 0.5, ease: 'back' })
-        t4.from(programColEl, { opacity: 0, stagger: 0.3, duration: 0.5, ease: 'power2.in' })
-    })
+        t4.from(programColEl, { opacity: 0, stagger: 0.3, duration: 0.5, ease: 'power2.in' });
+
+        return () => {
+            props.dispatch(initPageFocus())
+        };
+    }, [])
 
     const changeIcon = (panelProps) => {
         if (panelProps.isActive) {
@@ -264,4 +271,4 @@ AcademyDetails.defaultProps = {
     academyProgram: java_program
 }
 
-export default AcademyDetails
+export default connect()(AcademyDetails)

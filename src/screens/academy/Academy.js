@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
 
 import { Row, Col } from "antd";
 
@@ -26,7 +25,7 @@ import { academy_carousel_student, academy_comments, ENVIRONMENT, social } from 
 //import components
 import CustomCard from "../../components/functional_components/customCard/CustomCard";
 import SectionSubtitle from "../../components/functional_components/sectionSubtitle/SectionSubtitle";
-import ViewAllButton from "../../components/functional_components/viewAllButton/ViewAllButton"
+// import ViewAllButton from "../../components/functional_components/viewAllButton/ViewAllButton"
 import CustomButton from "../../components/functional_components/Button/CustomButton";
 import Comments from "../../components/functional_components/comments/Comments";
 import IntroductiveSection from "../../components/functional_components/introductiveSection/IntroductiveSection";
@@ -45,8 +44,6 @@ const Academy = (props) => {
     const ref = useRef(null);
 
     const { t } = useTranslation()
-
-    const navigate = useNavigate()
 
     //GSAP
     gsap.registerPlugin(ScrollTrigger);
@@ -147,15 +144,6 @@ const Academy = (props) => {
         }
     }
 
-    const goToMasterBackend = () => {
-        navigate(`${ENVIRONMENT.ROUTING.BASE_URL}academy/masterBackend`)
-    }
-
-    const goToMasterFrontend = () => {
-        navigate(`${ENVIRONMENT.ROUTING.BASE_URL}academy/masterFrontend`)
-    }
-
-
     const printPercentage = (item, key) => {
         return (
             <Col xs={0} md={8} key={key} className={'container-column items-center padding-30 academy-gsap-percentage-single-desktop'}>
@@ -194,6 +182,11 @@ const Academy = (props) => {
         )
     }
 
+    const sendEmailCommercial = () => {
+        console.log('Send email to commercial');
+        // *ga*
+      }
+
     return (
         <div
             className={'academy-container'}
@@ -231,13 +224,13 @@ const Academy = (props) => {
                         numCol={1}
                         textClassName='academy-ourCourses-section-course-title'
                         text={t('Academy.title_academy_java')}
-                        clickCallback={goToMasterBackend}
+                        href={`${ENVIRONMENT.ROUTING.BASE_URL}academy/masterBackend`}
                     />
                     <GoToDetailRow
                         numCol={1}
                         textClassName='academy-ourCourses-section-course-title'
                         text={t('Academy.title_academy_frontend')}
-                        clickCallback={goToMasterFrontend}
+                        href={`${ENVIRONMENT.ROUTING.BASE_URL}academy/masterFrontend`}
                         containerClassName={'academy-ourCourses-section-lastEl'}
                     />
 
@@ -319,7 +312,7 @@ const Academy = (props) => {
                 </section>
 
                 {/* Next Courses section */}
-                <section className='academy-next-courses-section academy-gsap-third-section'>
+                {/* <section className='academy-next-courses-section academy-gsap-third-section'>
                     <Row>
                         <Col
                             xs={24}
@@ -354,7 +347,7 @@ const Academy = (props) => {
                             />
                         </Col>
                     </Row>
-                </section>
+                </section> */}
             </div>
 
             {/* Second Part */}
@@ -419,6 +412,7 @@ const Academy = (props) => {
             <section className={'academy-form-section consulting-gsap-sixth-section'}>
                 <SectionForm
                     title={t('Academy.form_message_title')}
+                    callBack={sendEmailCommercial}
                 />
             </section>
         </div >

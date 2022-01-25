@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from "react";
 
 import { Row, Col, Typography } from "antd";
 const { Text, Title } = Typography;
+import Icon from '@ant-design/icons';
 
 //import gsap
 import { gsap } from 'gsap'
@@ -10,11 +11,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 // import style
 import './GoToDetailRow.css'
 
-// import assets
-import {
-    ArrowRightOutlined
-} from '@ant-design/icons';
-
+import arrow from '../../../assets/icons/arrow_white.png'
 
 // import components
 import CustomCard from "../customCard/CustomCard";
@@ -141,10 +138,10 @@ const GoToDetailRow = (props) => {
                     cardButton
                     type={'primary-arrow-btn'}
                     currentIcon={
-                        <ArrowRightOutlined
-                            className='arrow-icon-btn' />
+                        <i className={'arrow-icon-btn arrow-icon-white'} />
                     }
                     clickCallback={props.clickCallback}
+                    href={props.href}
                 />
             </Col>
         </Row>

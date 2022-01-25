@@ -76,8 +76,7 @@ const SecondSectionTablet = (props) => {
                         <CustomButton
                             type={item.type_btn}
                             currentIcon={
-                                <ArrowRightOutlined
-                                    className='arrow-icon-btn' />
+                                <i className={'arrow-icon-btn arrow-icon-dark'} />
                             }
                             className={item.btnClassName}
                             href={item.href}
@@ -91,6 +90,7 @@ const SecondSectionTablet = (props) => {
     return (
         <>
             <Row
+                id='secondSection'
                 className='sec-section-row-card-container'
                 ref={ref}
 

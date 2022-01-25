@@ -149,6 +149,11 @@ const Up = (props) => {
   //     )
   // }
 
+  const sendEmailCommercial = () => {
+    console.log('Send email to commercial');
+    // *ga*
+  }
+
   return (
     <div
       className='up-container'
@@ -266,6 +271,7 @@ const Up = (props) => {
         <section className={'up-form-section consulting-gsap-sixth-section'}>
           <SectionForm
             title={turnToUppercase(t('Up.form_message_title'))}
+            callBack={sendEmailCommercial}
           />
         </section>
       </PolygonSection>

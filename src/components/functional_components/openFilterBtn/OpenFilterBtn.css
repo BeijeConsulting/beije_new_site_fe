@@ -1,6 +1,6 @@
 :root {
-    --open-filter-icon-open: url('../../../assets/icons/open_filter_icon.svg');
-    --open-filter-icon-close: url('../../../assets/icons/close_filter_icon.svg')
+    --open-filter-icon-open: url('../../../assets/icons/open_filter_icon.png');
+    --open-filter-icon-close: url('../../../assets/icons/close_filter_icon.png')
 }
 
 .open-filter-container {
@@ -14,16 +14,18 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 27px;
-    height: 27px;
     margin-right: 10px;
 }
 
 .open-filter-icon-open {
     background-image: var(--open-filter-icon-open);
+    width: 23px;
+    height: 20px;
 }
 
 
 .open-filter-icon-close {
     background-image: var(--open-filter-icon-close);
+    width: 30px;
+    height: 20px;
 }

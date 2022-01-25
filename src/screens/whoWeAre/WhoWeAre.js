@@ -89,6 +89,81 @@ const WhoWeAre = (props) => {
         </Row>
       </section>
 
+      {/* vision */}
+      <section
+        id='vision'
+      >
+        <SubsectionTitleImg
+          subTitle={t('WhoWeAre.vision_title')}
+
+          desc={
+            <>
+              {t('WhoWeAre.vision_desc.part1')}
+              <strong>
+                <span className="highlight-txt">
+                  {t('WhoWeAre.vision_desc.part2')}
+                </span>
+              </strong>
+              {t('WhoWeAre.vision_desc.part3')}
+              <strong>
+                <span className="highlight-txt">
+                  {t('WhoWeAre.vision_desc.part4')}
+                </span>
+              </strong>
+              {t('WhoWeAre.vision_desc.part5')}
+            </>
+          }
+          bg={'whoWeAre-vision-img'}
+        />
+      </section>
+
+      {/* mission */}
+      <section
+        id='mission'
+      >
+        <SubsectionTitleImg
+          subTitle={t('WhoWeAre.mission_title')}
+          desc={
+            <>
+              {t('WhoWeAre.mission_desc.part1')}
+              <strong>
+                <span className="highlight-txt">
+                  {t('WhoWeAre.mission_desc.part2')}
+                </span>
+              </strong>
+              {t('WhoWeAre.mission_desc.part3')}
+            </>
+          }
+          bg={'whoWeAre-mission-img'}
+          imgRight={true}
+          imgRightDescLeft={false}
+          imgLeftDescRight={true}
+          classNameTitle={'whoWeAre-sub-section-title'}
+          descDesktopContainer={'whoWeAre-sub-section-desc-container'}
+        />
+      </section>
+
+      {/* history */}
+      <section
+        id='history'
+      >
+        <SubsectionTitleImg
+          subTitle={t('WhoWeAre.history_title')}
+          desc={
+            <>
+              {t('WhoWeAre.history_desc.part1')}
+              <strong>
+                <span className="highlight-txt">
+                  {t('WhoWeAre.history_desc.part2')}
+                </span>
+              </strong>
+              {t('WhoWeAre.history_desc.part3')}
+            </>
+          }
+          bg={'whoWeAre-history-img'}
+        />
+      </section>
+
       {/* value */}
       <section
         id='value'
@@ -134,81 +209,6 @@ const WhoWeAre = (props) => {
             </>
           }
           bg={'whoWeAre-value-img'}
-        />
-      </section>
-
-      {/* history */}
-      <section
-        id='history'
-      >
-        <SubsectionTitleImg
-          subTitle={t('WhoWeAre.history_title')}
-          desc={
-            <>
-              {t('WhoWeAre.history_desc.part1')}
-              <strong>
-                <span className="highlight-txt">
-                  {t('WhoWeAre.history_desc.part2')}
-                </span>
-              </strong>
-              {t('WhoWeAre.history_desc.part3')}
-            </>
-          }
-          bg={'whoWeAre-history-img'}
-          imgRight={true}
-          imgRightDescLeft={false}
-          imgLeftDescRight={true}
-          classNameTitle={'whoWeAre-sub-section-title'}
-          descDesktopContainer={'whoWeAre-sub-section-desc-container'}
-        />
-      </section>
-
-      {/* vision */}
-      <section
-        id='vision'
-      >
-        <SubsectionTitleImg
-          subTitle={t('WhoWeAre.vision_title')}
-          desc={
-            <>
-              {t('WhoWeAre.vision_desc.part1')}
-              <strong>
-                <span className="highlight-txt">
-                  {t('WhoWeAre.vision_desc.part2')}
-                </span>
-              </strong>
-              {t('WhoWeAre.vision_desc.part3')}
-              <strong>
-                <span className="highlight-txt">
-                  {t('WhoWeAre.vision_desc.part4')}
-                </span>
-              </strong>
-              {t('WhoWeAre.vision_desc.part5')}
-            </>
-          }
-          bg={'whoWeAre-vision-img'}
-        />
-      </section>
-
-      {/* mission */}
-      <section
-        id='mission'
-      >
-        <SubsectionTitleImg
-          subTitle={t('WhoWeAre.mission_title')}
-          desc={
-            <>
-              {t('WhoWeAre.mission_desc.part1')}
-              <strong>
-                <span className="highlight-txt">
-                  {t('WhoWeAre.mission_desc.part2')}
-                </span>
-              </strong>
-              {t('WhoWeAre.mission_desc.part3')}
-            </>
-          }
-
-          bg={'whoWeAre-mission-img'}
           imgRightDescLeft={false}
           imgLeftDescRight={true}
           imgRight={true}

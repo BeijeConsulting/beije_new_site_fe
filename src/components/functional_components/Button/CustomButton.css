@@ -4,7 +4,11 @@
     --secondary-btn-color: var(--fourth-color);
 
     --social-youtube-light-btn: url('../../../assets/icons/social_icon/youtube_light_circle.png');
-    --social-youtube-btn: url('../../../assets/icons/social_icon/youtube_dark_circle.png')
+    --social-youtube-btn: url('../../../assets/icons/social_icon/youtube_dark_circle.png');
+
+    --arrow-white-btn: url('../../../assets/icons/arrow_white.png');
+    --arrow-dark-btn: url('../../../assets/icons/arrow.svg');
+    --arrow-lightblue-btn: url('../../../assets/icons/arrow_lightblue.png');
 }
 
 /* Menu */
@@ -134,8 +138,19 @@
 }
 
 .arrow-icon-btn {
-    font-size: 18px !important;
-    line-height: 26px !important;
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.arrow-icon-white {
+    background-image: var(--arrow-white-btn);
+}
+
+.arrow-icon-dark {
+    background-image: var(--arrow-dark-btn);
 }
 
 .secondary-arrow {
@@ -166,8 +181,8 @@
     }
 
     .arrow-icon-btn {
-        font-size: 20px !important;
-        line-height: 35px !important;
+        width: 30px;
+        height: 30px;
     }
 }
 
@@ -176,9 +191,9 @@
     border-radius: 50px;
     height: 50px;
     width: 137px;
-    background-color: transparent;
+    background-color: var(--primary-btn-color);
     border: 1px solid var(--primary-btn-color) !important;
-    color: var(--primary-btn-color) !important;
+    color: #fff !important;
     font-family: 'SpaceGrotesk-Regular', sans-serif !important;
     font-style: normal !important;
     font-weight: bold !important;
@@ -194,23 +209,23 @@
 
 .custom-btn-form:hover {
     border: 1px solid var(--primary-btn-color) !important;
-    color: var(--primary-btn-color) !important;
+    color: #fff !important;
     background-color: transparent !important;
 }
 
 .custom-btn-form:focus {
     border: 1px solid var(--primary-btn-color) !important;
-    color: var(--primary-btn-color) !important;
-    background-color: transparent !important;
+    color: #fff !important;
+    background-color: var(--primary-btn-color) !important;
 }
 
 .custom-btn-form-light {
     border-radius: 50px;
     height: 50px;
     width: 137px;
-    background-color: transparent;
+    background-color: #fff;
     border: 1px solid #fff !important;
-    color: #fff !important;
+    color: var(--primary-btn-color) !important;
     font-family: 'SpaceGrotesk-Regular', sans-serif !important;
     font-style: normal !important;
     font-weight: bold !important;
@@ -226,13 +241,13 @@
 
 .custom-btn-form-light:hover {
     border: 1px solid #fff !important;
-    color: #fff !important;
+    color: var(--primary-btn-color) !important;
     background-color: transparent !important;
 }
 
 .custom-btn-form-light:focus {
     border: 1px solid #fff !important;
-    color: #fff !important;
+    color: var(--primary-btn-color) !important;
     background-color: transparent !important;
 }
 
