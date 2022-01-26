@@ -55,7 +55,7 @@ const CustomCarousel = (props) => {
                         <CustomCard
                             titleLevel={1}
                             cardTitle={item.titlePenrcentage}
-                            titleClassName={'center'}
+                            titleClassName={`center ${props.titleObjClassName}`}
                         />
                     </Col>
                     <Col xs={4} className={'custom-carousel-col-arrow'}>

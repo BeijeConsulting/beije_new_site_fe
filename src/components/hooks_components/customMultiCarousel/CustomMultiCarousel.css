@@ -1,0 +1,259 @@
+:root {
+    --profile_bg1: url(../../../assets/images/profile_picture/francesco_cesana.jpg);
+    --profile_bg2: url(../../../assets/images/profile_picture/erica_mauro.jpg);
+    --profile_bg3: url(../../../assets/images/profile_picture/chiara_balsamini.jpg);
+    --profile_bg4: url(../../../assets/images/profile_picture/marianna_fulginiti.jpg);
+    --profile_bg5: url(../../../assets/images/profile_picture/roberto_brogi.jpg);
+    --profile_bg6: url(../../../assets/images/profile_picture/ivo_mosca.jpg);
+    --profile_bg7: url(../../../assets/images/profile_picture/francesca_ferioli.jpg);
+    --profile_bg8: url(../../../assets/images/profile_picture/maria_rodrigez.jpg);
+    --profile_bg9: url(../../../assets/images/profile_picture/francesca_bellini.jpg);
+    /* --profile_bg10:  */
+    ----white-filter-profile-picture: linear-gradient(360deg, rgba(255, 255, 255, 0.29) 0%, rgba(255, 255, 255, 0.29) 54.69%, rgba(255, 255, 255, 0.29) 100%);
+    --lable-color: var(--second-color);
+    --name-lable-color: var(--first-color);
+}
+
+/* .owl-item {
+    display: flex;
+}
+
+.owl-stage-outer, .owl-stage, .owl-item {
+    height: 100% !important;
+} */
+
+.carousel-profile-picture {
+    position: relative;
+    border-radius: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 120px;
+    height: 200px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.picture-top {
+    margin-bottom: 40px;
+}
+
+.picture-middle {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.picture-bottom {
+    margin-top: 40px;
+}
+
+.carousel-profile-bg1 {
+    background-image:
+        var(----white-filter-profile-picture),
+        var(--profile_bg1);
+}
+
+.carousel-profile-bg1:hover {
+    background-image: var(--profile_bg1);
+}
+
+.carousel-profile-bg2 {
+    background-image:
+        var(----white-filter-profile-picture),
+        var(--profile_bg2);
+}
+
+.carousel-profile-bg2:hover {
+    background-image: var(--profile_bg2);
+}
+
+.carousel-profile-bg3 {
+    background-image:
+        var(----white-filter-profile-picture),
+        var(--profile_bg3);
+}
+
+.carousel-profile-bg3:hover {
+    background-image: var(--profile_bg3);
+}
+
+.carousel-profile-bg4 {
+    background-image:
+        var(----white-filter-profile-picture),
+        var(--profile_bg4);
+}
+
+.carousel-profile-bg4:hover {
+    background-image: var(--profile_bg4);
+}
+
+.carousel-profile-bg5 {
+    background-image:
+        var(----white-filter-profile-picture),
+        var(--profile_bg5);
+}
+
+.carousel-profile-bg5:hover {
+    background-image: var(--profile_bg5);
+}
+
+.carousel-profile-bg6 {
+    background-image:
+        var(----white-filter-profile-picture),
+        var(--profile_bg6);
+}
+
+.carousel-profile-bg6:hover {
+    background-image: var(--profile_bg6);
+}
+
+.carousel-profile-bg7 {
+    background-image:
+        var(----white-filter-profile-picture),
+        var(--profile_bg7);
+}
+
+.carousel-profile-bg7:hover {
+    background-image: var(--profile_bg7);
+}
+
+.carousel-profile-bg8 {
+    background-image:
+        var(----white-filter-profile-picture),
+        var(--profile_bg8);
+}
+
+.carousel-profile-bg8:hover {
+    background-image: var(--profile_bg8);
+}
+
+.carousel-profile-bg9 {
+    background-image:
+        var(----white-filter-profile-picture),
+        var(--profile_bg9);
+}
+
+.carousel-profile-bg9:hover {
+    background-image: var(--profile_bg9);
+}
+
+.carousel-profile-bg10 {
+    background-image:
+        var(----white-filter-profile-picture),
+        var(--profile_bg10);
+}
+
+.carousel-profile-bg10:hover {
+    background-image: var(--profile_bg10);
+}
+
+.custom-carousel-lable {
+    display: none;
+}
+
+.carousel-profile-single-el:hover .custom-carousel-lable {
+    position: absolute;
+    bottom: -15px;
+    right: -10px;
+    width: 120px;
+    height: 85px;
+    background-color: var(--lable-color);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.custom-carousel-lable-text {
+    font-family: 'SpaceGrotesk-Regular', sans-serif !important;
+    font-size: 14px !important;
+    line-height: 25px !important;
+    color: #fff;
+    font-weight: normal !important;
+}
+
+.custom-carousel-lable-role {
+    display: none;
+}
+
+@media screen and (min-width: 400px) {
+    .carousel-profile-picture {
+        width: 160px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .carousel-profile-picture {
+        height: 360px !important;
+    }
+
+    .custom-carousel-lable {
+        width: 160px !important;
+        background-color: var(--lable-color);
+    }
+
+    .custom-carousel-lable-text {
+        font-size: 16px !important;
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    .custom-carousel-lable {
+        bottom: -35px !important;
+        height: 155px !important;
+    }
+
+    .custom-carousel-lable-text {
+        font-size: 18px !important;
+        line-height: 25px !important;
+    }
+
+    .custom-carousel-lable-role {
+        display: block;
+        padding-top: 10px;
+    }
+
+    .custom-carousel-lable-name {
+        color: var(--name-lable-color);
+        font-weight: bold !important;
+    }
+
+    .picture-top {
+        margin-bottom: 50px;
+    }
+
+    .picture-middle {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    .picture-bottom {
+        margin-top: 50px;
+    }
+
+}
+
+@media screen and (min-width: 1440px) {
+
+    /* .carousel-profile-picture {
+        width: 160px;
+        height: 500px !important;
+    } */
+    /* 
+    .carousel-profile-single-el:hover .custom-carousel-lable {
+        width: 205px;
+        height: 140px;
+    } */
+
+    .custom-carousel-lable-text {
+        font-size: 20px !important;
+        line-height: 25px !important;
+    }
+
+    .custom-carousel-lable-name {
+        color: var(--name-lable-color);
+    }
+}

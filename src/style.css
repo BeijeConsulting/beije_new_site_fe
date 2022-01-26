@@ -278,6 +278,14 @@ h2 {
   cursor: pointer;
 }
 
+.cursor-grabbing {
+  cursor: grabbing;
+}
+
+.cursor-grab {
+  cursor: grab;
+}
+
 .actions-container {
   display: flex;
   justify-content: space-around;

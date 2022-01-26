@@ -15,7 +15,7 @@ import { divideText, turnToUppercase } from "../../utils/utilities";
 
 // import components
 import CustomCard from "../../components/functional_components/customCard/CustomCard";
-import CustomOwlCarousel from "../../components/hooks_components/customOwlCarousel/CustomOwlCarousel";
+import CustomMultiCarousel from "../../components/hooks_components/customMultiCarousel/CustomMultiCarousel";
 import SubsectionTitleImg from "../../components/hooks_components/subsectionTitleImg/SubsectionTitleImg";
 import CustomButton from "../../components/functional_components/Button/CustomButton";
 
@@ -66,7 +66,7 @@ const WhoWeAre = (props) => {
                 content={divideText(turnToUppercase(t('btn.drag')), '-BR-')}
               />
             }
-            <CustomOwlCarousel
+            <CustomMultiCarousel
               item_superLargeDesktop={4}
               item_mediumDesktop={3}
               item_desktop={3}
@@ -78,9 +78,7 @@ const WhoWeAre = (props) => {
               infinite={true}
               showRole={false}
               showDesc={true}
-              // showArrows={true}
               dragged={draggedCarousel}
-
               carouselClassName='whoWeAre-carousel-container'
               singleElClassName='whoWeAre-single-el-carousel'
               profilePictureClassName='whoWeAre-profile-picture-carousel'
@@ -89,6 +87,81 @@ const WhoWeAre = (props) => {
             />
           </Col>
         </Row>
+      </section>
+
+      {/* vision */}
+      <section
+        id='vision'
+      >
+        <SubsectionTitleImg
+          subTitle={t('WhoWeAre.vision_title')}
+
+          desc={
+            <>
+              {t('WhoWeAre.vision_desc.part1')}
+              <strong>
+                <span className="highlight-txt">
+                  {t('WhoWeAre.vision_desc.part2')}
+                </span>
+              </strong>
+              {t('WhoWeAre.vision_desc.part3')}
+              <strong>
+                <span className="highlight-txt">
+                  {t('WhoWeAre.vision_desc.part4')}
+                </span>
+              </strong>
+              {t('WhoWeAre.vision_desc.part5')}
+            </>
+          }
+          bg={'whoWeAre-vision-img'}
+        />
+      </section>
+
+      {/* mission */}
+      <section
+        id='mission'
+      >
+        <SubsectionTitleImg
+          subTitle={t('WhoWeAre.mission_title')}
+          desc={
+            <>
+              {t('WhoWeAre.mission_desc.part1')}
+              <strong>
+                <span className="highlight-txt">
+                  {t('WhoWeAre.mission_desc.part2')}
+                </span>
+              </strong>
+              {t('WhoWeAre.mission_desc.part3')}
+            </>
+          }
+          bg={'whoWeAre-mission-img'}
+          imgRight={true}
+          imgRightDescLeft={false}
+          imgLeftDescRight={true}
+          classNameTitle={'whoWeAre-sub-section-title'}
+          descDesktopContainer={'whoWeAre-sub-section-desc-container'}
+        />
+      </section>
+
+      {/* history */}
+      <section
+        id='history'
+      >
+        <SubsectionTitleImg
+          subTitle={t('WhoWeAre.history_title')}
+          desc={
+            <>
+              {t('WhoWeAre.history_desc.part1')}
+              <strong>
+                <span className="highlight-txt">
+                  {t('WhoWeAre.history_desc.part2')}
+                </span>
+              </strong>
+              {t('WhoWeAre.history_desc.part3')}
+            </>
+          }
+          bg={'whoWeAre-history-img'}
+        />
       </section>
 
       {/* value */}
@@ -136,81 +209,6 @@ const WhoWeAre = (props) => {
             </>
           }
           bg={'whoWeAre-value-img'}
-        />
-      </section>
-
-      {/* history */}
-      <section
-        id='history'
-      >
-        <SubsectionTitleImg
-          subTitle={t('WhoWeAre.history_title')}
-          desc={
-            <>
-              {t('WhoWeAre.history_desc.part1')}
-              <strong>
-                <span className="highlight-txt">
-                  {t('WhoWeAre.history_desc.part2')}
-                </span>
-              </strong>
-              {t('WhoWeAre.history_desc.part3')}
-            </>
-          }
-          bg={'whoWeAre-history-img'}
-          imgRight={true}
-          imgRightDescLeft={false}
-          imgLeftDescRight={true}
-          classNameTitle={'whoWeAre-sub-section-title'}
-          descDesktopContainer={'whoWeAre-sub-section-desc-container'}
-        />
-      </section>
-
-      {/* vision */}
-      <section
-        id='vision'
-      >
-        <SubsectionTitleImg
-          subTitle={t('WhoWeAre.vision_title')}
-          desc={
-            <>
-              {t('WhoWeAre.vision_desc.part1')}
-              <strong>
-                <span className="highlight-txt">
-                  {t('WhoWeAre.vision_desc.part2')}
-                </span>
-              </strong>
-              {t('WhoWeAre.vision_desc.part3')}
-              <strong>
-                <span className="highlight-txt">
-                  {t('WhoWeAre.vision_desc.part4')}
-                </span>
-              </strong>
-              {t('WhoWeAre.vision_desc.part5')}
-            </>
-          }
-          bg={'whoWeAre-vision-img'}
-        />
-      </section>
-
-      {/* mission */}
-      <section
-        id='mission'
-      >
-        <SubsectionTitleImg
-          subTitle={t('WhoWeAre.mission_title')}
-          desc={
-            <>
-              {t('WhoWeAre.mission_desc.part1')}
-              <strong>
-                <span className="highlight-txt">
-                  {t('WhoWeAre.mission_desc.part2')}
-                </span>
-              </strong>
-              {t('WhoWeAre.mission_desc.part3')}
-            </>
-          }
-
-          bg={'whoWeAre-mission-img'}
           imgRightDescLeft={false}
           imgLeftDescRight={true}
           imgRight={true}

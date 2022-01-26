@@ -18,7 +18,7 @@
     "viewAll": "Vedi tutti",
     "drag": "Drag -br- for more",
     "apply": "Candidati",
-    "goBackAcademy": "Torna all'academy"
+    "goBackAcademy": "Torna a Beije Talent Academy"
   },
   "imgAlt": {
     "social": {
@@ -49,7 +49,7 @@
   },
   "burgerMenu": {
     "consulting": "CONSULTING",
-    "academy": "TALENT ACADEMY",
+    "academy": "BEIJE TALENT ACADEMY",
     "up": "UP",
     "career": "CAREER",
     "whoWeAre": "CHI SIAMO",
@@ -89,6 +89,35 @@
       "send_btn": "Invia"
     }
   },
+  "personalProfile": {
+    "francesco_cesana": {
+      "desc": "Vino, arte e buon cibo: bisogna fare di necessità virtù"
+    },
+    "erica_mauro": {
+      "desc": "Promotrice di buon umore e di nuove scoperte: c'è sempre un buon motivo per sorridere e per imparare qualcosa di nuovo."
+    },
+    "chiara_balsamini": {
+      "desc": "Nella vita ho indossato più pattini che tacchi. Spoiler: sorriso dipendente."
+    },
+    "marianna_fulginiti": {
+      "desc": "Mai vinto al gioco del silenzio, ricercatrice assidua di nuove mete da esplorare e conoscere."
+    },
+    "roberto_brogi": {
+      "desc": "Sono un uomo semplice: programmo di giorno, mi trasformo in John Deacon di notte."
+    },
+    "ivo_mosca": {
+      "desc": "Make it simple."
+    },
+    "francesca_ferioli": {
+      "desc": "Psicologa specializzata in comunicazione. Musica, Spagna e basket dipendente."
+    },
+    "maria_rodrigez": {
+      "desc": "Nerd sotto copertura in ambito IT, cosa potrebbe andare storto?"
+    },
+    "francesca_bellini": {
+      "desc": "Dammi tre parole: fashion, danza e carbonara."
+    }
+  },
   "Consulting": {
     "intro": "In ottica people first aiutiamo le aziende a costruire Team di Valore attraverso figure altamente specializzate.",
     "description": {
@@ -109,13 +138,13 @@
     "description_add_info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan lacus quis nibh porta, eget porttitor neque feugiat."
   },
   "Academy": {
-    "title": "Talent Academy",
+    "title": "Beije Talent Academy",
     "page_description": "Corsi specializzati Frontend & Backend per diventare Software Developer. Svilupperai le tue competenze attraverso lezioni frontali, esercitazioni, valutazioni e progetti reali.",
     "our_courses_title": "I nostri corsi",
-    "title_academy_java": "Academy Java",
-    "title_academy_frontend": "Academy sviluppo web - front end",
+    "title_academy_java": "Academy Backend",
+    "title_academy_frontend": "Academy Frontend",
     "course_description": "Diventa il prossimo Software Ninjaneer!",
-    "send_to_youtube": "Vieni a scoprire il nostro canale Youtube: troverai le pillole digitali dei nostri esperti Frontend / Backend, i Webinar e molto altro ancora…Ti aspettiamo! ",
+    "send_to_youtube": "Come find us on Youtube: you will find the digital pills of our Frontend  &  Backend experts, the Webinars and much more… We are waiting for you! ",
     "next_courses_title": "I prossimi corsi",
     "next_course_1": "Stage java",
     "date_next_course_1": "Gen. – Apr. 2021",
@@ -130,9 +159,11 @@
       "comments1": "Nell'Academy FrontEnd di Beije ho approfondito tecnologie e nozioni nuove, mi è stato inoltre fornito supporto per entrare nel mondo del lavoro, cosa che la sola università non mi ha fornito, per questo lo reputo un percorso che rifarei volentieri.",
       "comments2": "Beije mi ha da subito dato un'ottima impressione e non si è smentita con il tempo. Ho avuto un contratto a tempo indeterminato dopo un breve periodo di formazione e sono entrato in un team che mi ha accolto ben oltre le mie aspettative.",
       "comments3": "Beije Academy è stata un’esperienza costruttiva e stimolante: mi ha permesso di apprendere le tecnologie usate nel mondo lavorativo e mi ha incoraggiato a mettermi in gioco in ogni circostanza.",
-      "comments4": "",
-      "comments5": "Una formazione completa, un'esperienza professionalizzante che ti lascia con delle competenze reali e applicabili nell'immediato. Alla Talent Academy non si impara solo a programmare, ma a farlo con consapevolezza e ingegno.",
-      "comments6": "Beije Accademy mi è stata molto utile per introdurmi nel mondo del lavoro con sicurezza grazie alle simulazioni in team, dove ho potuto mettere in pratica ciò che ho studiato in Accademy ed in Università."
+      "comments4": "Nonostante fosse la prima Academy tutta da remoto è stata gestita ottimamente, sia nelle lezioni frontali che nella divisione dei gruppi in mini-progetti. Ritengo che l'Academy mi abbia fornito una preparazione più che adeguata per svolgere attività in ambito Java.",
+      "comments5": "Una formazione completa, un'esperienza professionalizzante che ti lascia con delle competenze reali e applicabili nell'immediato. Alla Beije Talent Academy non si impara solo a programmare, ma a farlo con consapevolezza e ingegno.",
+      "comments6": "Beije Accademy mi è stata molto utile per introdurmi nel mondo del lavoro con sicurezza grazie alle simulazioni in team, dove ho potuto mettere in pratica ciò che ho studiato in Accademy ed in Università.",
+      "comments7": "L’Academy di Beije è stata un’esperienza formativa davvero importante per il mio percorso di crescita. Non credevo che in soli tre mesi sarei riuscito ad apprendere tanto da poter lavorare in autonomia su progetti complessi. Sicuramente la consiglierei a tutti!",
+      "comments8": "Grazie all'Academy Java di Beije ho capito quello che differenzia l'università dal mondo del lavoro e soprattutto ho capito come gestire un progetto vero e proprio, capendo come usare le tecnologie java piu usate dalle aziende."
     },
     "form_message_title": "Richiedi maggiori informazioni",
     "form_message_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan lacus quis nibh porta, eget porttitor neque feugiat."

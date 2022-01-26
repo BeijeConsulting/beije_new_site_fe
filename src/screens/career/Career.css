@@ -7,10 +7,11 @@
 .career-container {
     background-color: var(--primary-bg-color-career);
     padding-top: 100px;
+    padding: 100px 5% 30px 5%;
 }
 
 .career-title {
-    padding-left: 20px;
+    /* padding-left: 5%; */
     text-transform: uppercase;
 }
 
@@ -56,6 +57,7 @@
     border-radius: 25px 25px 0 0;
     border: 1px solid var(--primary-color-career) !important;
     border-bottom: none !important;
+    /* margin-left: 5% */
 }
 
 .card-container>.ant-tabs-card .ant-tabs-content>.ant-tabs-tabpane.career-academy-panel {
@@ -83,4 +85,22 @@
 
 .career-list-item-container {
     padding-top: 20px;
+}
+
+@media screen and (min-width: 1440px) {
+    .career-container {
+        padding: 100px 15% 30px 5%;
+    }
+
+    /* .career-title {
+        padding-left: 15%;
+    }
+
+    .card-container>.ant-tabs-card .ant-tabs-content>.ant-tabs-tabpane {
+        padding: 16px 15%;
+    }
+
+    .card-container>.ant-tabs-card .ant-tabs-tab-active.career-job-panel {
+        margin-left: 15%;
+    } */
 }

@@ -11,6 +11,8 @@
     --academy-comments-savallo: url('../../assets/images/comments/savallo_comments.jpeg');
     --academy-comments-diMonaco: url('../../assets/images/comments/diMonaco_comments.jpeg');
     --academy-comments-ezpeleta: url('../../assets/images/comments/ezpeleta_comments.jpg');
+    --academy-comments-pignorio: url('../../assets/images/comments/pignorio_comments.png');
+    --academy-comments-zacheo: url('../../assets/images/comments/img_comments.jpg');
 }
 
 .academy-container {
@@ -42,6 +44,7 @@
     letter-spacing: 0.06em;
     font-weight: 500 !important;
     text-transform: uppercase;
+    margin: 0px !important
 }
 
 .academy-ourCourses-section-lastEl {
@@ -142,6 +145,14 @@
 
 .academy-comments-profile-ezpeleta {
     background-image: var(--academy-comments-ezpeleta);
+}
+
+.academy-comments-profile-pignorio {
+    background-image: var(--academy-comments-pignorio);
+}
+
+.academy-comments-profile-zacheo {
+    background-image: var(--academy-comments-zacheo);
 }
 
 /* Form message section */

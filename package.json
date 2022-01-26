@@ -5,6 +5,7 @@
   "dependencies": {
     "@fullpage/react-fullpage": "^0.1.19",
     "@lottiefiles/react-lottie-player": "^3.4.1",
+    "animated-number-react": "^0.1.2",
     "antd": "^4.16.13",
     "axios": "^0.21.4",
     "babel-eslint": "^10.1.0",

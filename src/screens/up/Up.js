@@ -26,7 +26,7 @@ import IntroductiveSection from "../../components/functional_components/introduc
 import CustomCard from '../../components/functional_components/customCard/CustomCard'
 import SectionSubtitle from "../../components/functional_components/sectionSubtitle/SectionSubtitle";
 import Comments from "../../components/functional_components/comments/Comments";
-import CustomOwlCarousel from "../../components/hooks_components/customOwlCarousel/CustomOwlCarousel";
+import CustomMultiCarousel from "../../components/hooks_components/customMultiCarousel/CustomMultiCarousel";
 // import CustomButton from "../../components/functional_components/Button/CustomButton";
 // import ViewAllButton from "../../components/functional_components/viewAllButton/ViewAllButton";
 import SectionForm from "../../components/functional_components/sectionForm/SectionForm";
@@ -149,6 +149,11 @@ const Up = (props) => {
   //     )
   // }
 
+  const sendEmailCommercial = () => {
+    console.log('Send email to commercial');
+    // *ga*
+  }
+
   return (
     <div
       className='up-container'
@@ -191,7 +196,7 @@ const Up = (props) => {
                         <Col
                             span={24}
                         >
-                            <CustomOwlCarousel
+                            <CustomMultiCarousel
                                 item_superLargeDesktop={2}
                                 item_mediumDesktop={2}
                                 item_desktop={2}
@@ -208,7 +213,7 @@ const Up = (props) => {
                                 autoPlaySpeed={3000}
                             >
                                 {up_comments.map(printComments)}
-                            </CustomOwlCarousel>
+                            </CustomMultiCarousel>
                         </Col>
                     </Row>
                 </section>
@@ -231,7 +236,7 @@ const Up = (props) => {
                         md={0}
                         className="up-case-studies-carousel-gsap"
                     >
-                        <CustomOwlCarousel
+                        <CustomMultiCarousel
                             objCarousel={false}
                             item_bigMobile={1}
                             item_mobile={1}
@@ -243,7 +248,7 @@ const Up = (props) => {
                             autoPlaySpeed={3000}
                         >
                             {up_case_studies.map(printCaseStudies)}
-                        </CustomOwlCarousel>
+                        </CustomMultiCarousel>
                     </Col>
 
                     <Row className={'up-case-studies-desktop'}>
@@ -266,6 +271,7 @@ const Up = (props) => {
         <section className={'up-form-section consulting-gsap-sixth-section'}>
           <SectionForm
             title={turnToUppercase(t('Up.form_message_title'))}
+            callBack={sendEmailCommercial}
           />
         </section>
       </PolygonSection>

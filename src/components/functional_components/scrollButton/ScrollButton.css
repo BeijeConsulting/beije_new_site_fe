@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     position: absolute;
-    bottom: 0;
+    bottom: 30px;
     left: 0;
     right: 0;
 }
@@ -13,13 +13,12 @@
     font-family: 'SpaceGrotesk-SemiBold', sans-serif;
     font-size: 18px;
     line-height: 60px;
-    margin-bottom: -50px;
+    margin-bottom: 0px;
     color: #fff;
 }
 
-.scroll-btn-lottie {
-    height: 100px;
-    width: 100px
+.scroll-btn-icon {
+    transform: rotate(90deg);
 }
 
 @media screen and (min-width: 1024px) {

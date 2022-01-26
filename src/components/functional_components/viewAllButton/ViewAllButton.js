@@ -1,11 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Typography } from "antd";
-
-//import assets
-import {
-    ArrowRightOutlined
-} from '@ant-design/icons';
 const { Text } = Typography
 
 //import functions
@@ -23,9 +18,7 @@ const ViewAllButton = (props) => {
             <Text className={props.classNameTxt}>
                 {turnToUppercase(t('btn.viewAll'))}
             </Text>
-            <ArrowRightOutlined
-                className={props.classNameArrow}
-            />
+            <i className={props.classNameArrow} />
         </div>
     )
 }
@@ -33,7 +26,7 @@ const ViewAllButton = (props) => {
 ViewAllButton.defaultProps = {
     classNameContainer: "view-all-btn-container",
     classNameTxt: 'view-all-btn-txt',
-    classNameArrow: 'view-all-btn-arrow'
+    classNameArrow: 'arrow-icon-btn arrow-icon-dark'
 }
 
 export default ViewAllButton

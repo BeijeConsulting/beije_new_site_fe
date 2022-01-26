@@ -172,26 +172,6 @@ export const siteMenu = [
 export const cardWhoWeAre = [
   {
     colContainerClassName: "sec-section-card-col",
-    cardContainerClassName: "sec-section-card sec-section-card-bg-value sec-section-card-top sec-section-container-gsap",
-    colClassName: 'sec-section-singleEl-gsap',
-    titleLevel: 2,
-    cardTitle: 'title_value',
-    type_btn: 'secondary-arrow-btn',
-    btnClassName: 'sec-section-singleEl-gsap',
-    href: `${ENVIRONMENT.ROUTING.BASE_URL}whoweare#value`
-  },
-  {
-    colContainerClassName: "sec-section-card-col",
-    cardContainerClassName: "sec-section-card sec-section-card-bg-history sec-section-card-bottom sec-section-container-gsap",
-    colClassName: 'sec-section-singleEl-gsap',
-    titleLevel: 2,
-    cardTitle: 'title_history',
-    type_btn: 'secondary-arrow-btn',
-    btnClassName: 'sec-section-singleEl-gsap',
-    href: `${ENVIRONMENT.ROUTING.BASE_URL}whoweare#history`
-  },
-  {
-    colContainerClassName: "sec-section-card-col",
     cardContainerClassName: 'sec-section-card sec-section-card-bg-vision sec-section-card-top sec-section-container-gsap',
     colClassName: 'sec-section-singleEl-gsap',
     titleLevel: 2,
@@ -209,6 +189,26 @@ export const cardWhoWeAre = [
     type_btn: 'secondary-arrow-btn',
     btnClassName: 'sec-section-singleEl-gsap',
     href: `${ENVIRONMENT.ROUTING.BASE_URL}whoweare#mission`
+  },
+  {
+    colContainerClassName: "sec-section-card-col",
+    cardContainerClassName: "sec-section-card sec-section-card-bg-history sec-section-card-top sec-section-container-gsap",
+    colClassName: 'sec-section-singleEl-gsap',
+    titleLevel: 2,
+    cardTitle: 'title_history',
+    type_btn: 'secondary-arrow-btn',
+    btnClassName: 'sec-section-singleEl-gsap',
+    href: `${ENVIRONMENT.ROUTING.BASE_URL}whoweare#history`
+  },
+  {
+    colContainerClassName: "sec-section-card-col",
+    cardContainerClassName: "sec-section-card sec-section-card-bg-value sec-section-card-bottom sec-section-container-gsap",
+    colClassName: 'sec-section-singleEl-gsap',
+    titleLevel: 2,
+    cardTitle: 'title_value',
+    type_btn: 'secondary-arrow-btn',
+    btnClassName: 'sec-section-singleEl-gsap',
+    href: `${ENVIRONMENT.ROUTING.BASE_URL}whoweare#value`
   }
 ]
 export const carouselProfile = [
@@ -217,7 +217,7 @@ export const carouselProfile = [
     name: 'Francesco',
     surname: 'Cesana',
     role: 'General Manager',
-    description: "",
+    description: "personalProfile.francesco_cesana.desc",
     alt: 'FrancescoCesana',
     classNameSingleEl: 'carousel-profile-single-el picture-top',
     classNameBgImg: 'carousel-profile-picture carousel-profile-bg1',
@@ -228,6 +228,7 @@ export const carouselProfile = [
     name: 'Erica',
     surname: 'Mauro',
     role: 'Sales manager',
+    description: "personalProfile.erica_mauro.desc",
     alt: 'EricaMauro',
     classNameSingleEl: 'carousel-profile-single-el picture-middle',
     classNameBgImg: 'carousel-profile-picture carousel-profile-bg2',
@@ -237,7 +238,8 @@ export const carouselProfile = [
     id: 3,
     name: 'Chiara',
     surname: 'Balsamini',
-    role: 'Account',
+    role: 'Talent Consultant',
+    description: "personalProfile.chiara_balsamini.desc",
     alt: 'ChiaraBalsamini',
     classNameSingleEl: 'carousel-profile-single-el picture-bottom',
     classNameBgImg: 'carousel-profile-picture carousel-profile-bg3',
@@ -248,6 +250,7 @@ export const carouselProfile = [
     name: 'Marianna',
     surname: 'Fulginiti',
     role: 'Account Manager',
+    description: 'personalProfile.marianna_fulginiti.desc',
     alt: 'MariannaFulginiti',
     classNameSingleEl: 'carousel-profile-single-el picture-middle',
     classNameBgImg: 'carousel-profile-picture carousel-profile-bg4',
@@ -258,7 +261,7 @@ export const carouselProfile = [
     name: 'Roberto',
     surname: 'Brogi',
     role: 'CTO & Master Trainer',
-    description: 'Sono un uomo semplice: programmo di giorno, mi trasformo in John Deacon di notte.',
+    description: 'personalProfile.roberto_brogi.desc',
     alt: 'RobertoBrogi',
     classNameSingleEl: 'carousel-profile-single-el picture-top',
     classNameBgImg: 'carousel-profile-picture carousel-profile-bg5',
@@ -269,7 +272,7 @@ export const carouselProfile = [
     name: 'Ivo',
     surname: 'Mosca',
     role: 'CIO & Master Trainer',
-    description: 'Make it simple.',
+    description: 'personalProfile.ivo_mosca.desc',
     alt: 'IvoMosca',
     classNameSingleEl: 'carousel-profile-single-el picture-middle',
     classNameBgImg: 'carousel-profile-picture carousel-profile-bg6',
@@ -280,7 +283,7 @@ export const carouselProfile = [
     name: 'Francesca',
     surname: 'Ferioli',
     role: 'HR specialist',
-    description: 'Psicologa specializzata in comunicazione. Musica, Spagna e basket dipendente.',
+    description: 'personalProfile.francesca_ferioli.desc',
     alt: 'FrancescaFerioli',
     classNameSingleEl: 'carousel-profile-single-el picture-bottom',
     classNameBgImg: 'carousel-profile-picture carousel-profile-bg7',
@@ -291,7 +294,7 @@ export const carouselProfile = [
     name: 'Maria',
     surname: 'Amigo Rodrigez',
     role: 'Junior IT Recruiter',
-    description: 'Nerd sotto copertura in ambito IT, cosa potrebbe andare storto?',
+    description: 'personalProfile.maria_rodrigez.desc',
     alt: 'MariaAmigoRodrigez',
     classNameSingleEl: 'carousel-profile-single-el picture-middle',
     classNameBgImg: 'carousel-profile-picture carousel-profile-bg8',
@@ -301,8 +304,8 @@ export const carouselProfile = [
     id: 9,
     name: 'Francesca',
     surname: 'Bellini',
-    role: 'Head of marketin',
-    description: 'Dammi tre parole: fashion, danza e carbonara.',
+    role: 'Marketing specialist',
+    description: 'personalProfile.francesca_bellini.desc',
     alt: 'FrancescaBellini',
     classNameSingleEl: 'carousel-profile-single-el picture-bottom',
     // classNameSingleEl: 'carousel-profile-single-el picture-top',
@@ -428,6 +431,20 @@ export const academy_comments = [
     name: 'Clark',
     surname: 'Ezpeleta',
     profilePictureImg: 'academy-comments-profile-ezpeleta',
+    imgClassName: 'trial'
+  },
+  {
+    commentsText: "comments_txt.comments7",
+    name: 'Luca',
+    surname: 'Pignorio',
+    profilePictureImg: 'academy-comments-profile-pignorio',
+    imgClassName: 'trial'
+  },
+  {
+    commentsText: "comments_txt.comments8",
+    name: 'Emanuele',
+    surname: 'Zacheo',
+    profilePictureImg: 'academy-comments-profile-zacheo',
     imgClassName: 'trial'
   }
 ]

@@ -111,10 +111,10 @@
     border-bottom: 1px solid var(--prmary-color-divider);
   }
 
-  .sec-section-card-bg-history {
+  .sec-section-card-bg-value {
     background-image:
       linear-gradient(180deg, #D6E3E5 0%, rgba(113, 126, 133, -0.273646) 54.69%, rgba(214, 227, 229, 0.29) 100%),
-      var(--history_bg);
+      var(--value_bg);
   }
 
   .sec-section-card-bg-vision {
