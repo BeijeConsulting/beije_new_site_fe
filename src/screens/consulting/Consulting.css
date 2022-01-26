@@ -67,8 +67,12 @@
     }
 }
 
-@media (-webkit-device-pixel-ratio: 1.25) and (-webkit-device-pixel-ratio: 1.5) {
+@media (-webkit-device-pixel-ratio: 1.5) {
     .consulting-form-section {
         padding: 50px 15%;
     }
+
+    /* .consulting-container {
+        transform: scale(0.5) translate(0%);
+    } */
 }
