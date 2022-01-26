@@ -17,6 +17,15 @@
     width: 100%;
 }
 
+.form-input-gsap {
+    height: 90px;
+}
+
+.recaptcha > div > div {
+    display: flex;
+    place-content: center;
+}
+
 .form-input.ant-input {
     padding: 8px 16px !important;
     color: var(--text-primary-form) !important;

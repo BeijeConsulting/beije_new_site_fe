@@ -607,4 +607,6 @@ export const up_case_studies = [
     title: 'Case study 1: sottotitolo case studies',
     titleClassName: 'up-case-studies-title'
   }
-]
+];
+
+export const googleReCaptchaKey = "6Lf_gDoeAAAAAMThwX9hHIPZmULe3bAePNWxA80o";

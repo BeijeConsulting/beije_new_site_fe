@@ -182,10 +182,10 @@ const Academy = (props) => {
         )
     }
 
-    const sendEmailCommercial = () => {
-        console.log('Send email to commercial');
-        // *ga*
-      }
+    // const sendEmailCommercial = () => {
+    //     console.log('Send email to commercial');
+    //     // *ga*
+    //   }
 
     return (
         <div
@@ -412,7 +412,8 @@ const Academy = (props) => {
             <section className={'academy-form-section consulting-gsap-sixth-section'}>
                 <SectionForm
                     title={t('Academy.form_message_title')}
-                    callBack={sendEmailCommercial}
+                    // callBack={sendEmailCommercial}
+                    origin="academy"
                 />
             </section>
         </div >

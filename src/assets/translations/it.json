@@ -81,6 +81,7 @@
       "contacts": "Contattaci",
       "placeholder": {
         "name": "Nome Cognome*",
+        "email": "Email*",
         "state": "Stato*",
         "town": "Città*",
         "message": "Scrivi qui il tuo messaggio"

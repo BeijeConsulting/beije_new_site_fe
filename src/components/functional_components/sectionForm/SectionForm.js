@@ -91,7 +91,8 @@ const SectionForm = (props) => {
                         classNameTextArea={props.classNameTextArea}
                         typeBtn={props.typeBtn}
                         classNameCheckbox={props.classNameCheckbox}
-                        callBack={props.callBack}
+                        // callBack={props.callBack}
+                        origin={props.origin}
                     />
                 </Col>
             </Row>
@@ -110,7 +111,9 @@ SectionForm.defaultProps = {
     xsColDivider: 0,
     mdColDivider: 4,
     xsColForm: 24,
-    mdColForm: 14
+    mdColForm: 14,
+
+    origin: 'home'
 }
 
 export default SectionForm
