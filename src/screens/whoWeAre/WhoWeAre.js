@@ -15,7 +15,7 @@ import { divideText, turnToUppercase } from "../../utils/utilities";
 
 // import components
 import CustomCard from "../../components/functional_components/customCard/CustomCard";
-import CustomOwlCarousel from "../../components/hooks_components/customOwlCarousel/CustomOwlCarousel";
+import CustomMultiCarousel from "../../components/hooks_components/customMultiCarousel/CustomMultiCarousel";
 import SubsectionTitleImg from "../../components/hooks_components/subsectionTitleImg/SubsectionTitleImg";
 import CustomButton from "../../components/functional_components/Button/CustomButton";
 
@@ -66,7 +66,7 @@ const WhoWeAre = (props) => {
                 content={divideText(turnToUppercase(t('btn.drag')), '-BR-')}
               />
             }
-            <CustomOwlCarousel
+            <CustomMultiCarousel
               item_superLargeDesktop={4}
               item_mediumDesktop={3}
               item_desktop={3}

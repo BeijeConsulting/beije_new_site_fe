@@ -1,0 +1,16 @@
+.percentage-sec-arrow {
+  background: transparent;
+  border: 0;
+  color: var(--first-color);
+  font-size: 80px;
+  position: absolute;
+  top: 50%;
+}
+
+.percentage-sec-arrow-right {
+  right: 0;
+}
+
+.percentage-sec-arrow-left {
+  left: 0;
+}

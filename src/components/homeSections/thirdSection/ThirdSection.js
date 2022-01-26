@@ -18,7 +18,7 @@ import { ENVIRONMENT } from "../../../utils/properties";
 
 //import components
 import CustomCard from "../../functional_components/customCard/CustomCard";
-import CustomOwlCarousel from "../../hooks_components/customOwlCarousel/CustomOwlCarousel";
+import CustomMultiCarousel from "../../hooks_components/customMultiCarousel/CustomMultiCarousel";
 import CustomButton from "../../functional_components/Button/CustomButton";
 import ViewAllButton from "../../functional_components/viewAllButton/ViewAllButton";
 
@@ -90,7 +90,7 @@ const ThirdSection = () => {
                                 content={divideText(turnToUppercase(t('btn.drag')), '-BR-')}
                             />
                         }
-                        <CustomOwlCarousel
+                        <CustomMultiCarousel
                             dragged={draggedCarousel}
                         />
                     </Col>
