@@ -127,11 +127,11 @@ h2 {
   height: 79px !important;
   line-height: 50px;
   background-color: #fff;
+  border: 1px solid orange; /*remove*/
 }
 
 .ant-layout {
   background-color: #fff;
-  /* align-items: center; */
 }
 
 /* Menu */

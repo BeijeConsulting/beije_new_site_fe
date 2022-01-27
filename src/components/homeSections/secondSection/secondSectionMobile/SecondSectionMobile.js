@@ -58,7 +58,7 @@ const SecondSectionMobile = (props) => {
   return (
     <div
       id='secondSection'
-      className={`sec-section-container-gsap ${props.obj.cardContainerClassName}`}
+      className={`sec-section-row-card-container sec-section-container-gsap ${props.obj.cardContainerClassName}`}
       ref={ref}
     >
       <Row className="sec-section-row-title">

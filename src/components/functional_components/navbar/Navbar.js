@@ -93,7 +93,7 @@ const Navbar = (props) => {
 }
 
 Navbar.defaultProps = {
-    classNameRow: 'navbar-row',
+    classNameRow: 'navbar-row navbar-row-top',
     href_consulting: `${ENVIRONMENT.ROUTING.BASE_URL}consulting`,
     href_academy: `${ENVIRONMENT.ROUTING.BASE_URL}academy`,
     href_up: `${ENVIRONMENT.ROUTING.BASE_URL}up`,

@@ -2,8 +2,6 @@
     background-color: transparent;
     height: 100%;
     margin: 0 5%;
-    /* margin-top: 80px; */
-    /* border: 1px solid black */
 }
 
 @media screen and (min-width: 1440px) {
@@ -12,3 +10,16 @@
         margin: 0 15%;
     }
 }
+
+
+@media (-webkit-device-pixel-ratio: 1.25) {
+    .content-container-scroll {
+        margin: 0 5%;
+    }
+}
+/* 
+@media (-webkit-min-device-pixel-ratio: 1.3) {
+    .content-container-scroll {
+        margin: 0 15%;
+    }
+} */

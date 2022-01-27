@@ -180,17 +180,17 @@
 
 @media screen and (min-width: 400px) {
     .carousel-profile-picture {
-        width: 160px;
+        width: 80%;
     }
 }
 
 @media screen and (min-width: 768px) {
     .carousel-profile-picture {
-        height: 360px !important;
+        height: 60vh !important;
     }
 
     .custom-carousel-lable {
-        width: 160px !important;
+        width: 100% !important;
         background-color: var(--lable-color);
     }
 

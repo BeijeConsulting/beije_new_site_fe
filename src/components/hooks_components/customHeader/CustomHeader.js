@@ -36,12 +36,12 @@ const CustomHeader = (props) => {
         </Col>
         <Col xs={0} sm={0} lg={15} >
           <Navbar
-            classNameRow={!props.visibilityDuck.visibility ? 'display-none' : 'navbar-row'}
+            classNameRow={!props.visibilityDuck.visibility ? 'display-none' : 'navbar-row navbar-row-top'}
             classNameCol={'col-link'}
             classNameLink={props.colorDuck.lightColor ? 'navbar-link-light' : 'navbar-general-link'}
           />
         </Col>
-        <Col xs={0} sm={0} lg={3} className='container-row justify-center items-end'>
+        <Col xs={0} sm={0} lg={3} className='container-row justify-center items-end custom-header-switchLang-col'>
           {
             (!props.menuDuck.menuOpen && !props.colorDuck.lightColor) &&
             <SwitchLanguage
