@@ -610,3 +610,4 @@ export const up_case_studies = [
 ];
 
 export const googleReCaptchaKey = "6Lf_gDoeAAAAAMThwX9hHIPZmULe3bAePNWxA80o";
+export const googleAnalyticsKey = "UA-215782182-1";

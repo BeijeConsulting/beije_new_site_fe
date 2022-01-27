@@ -18,6 +18,7 @@ Library:
   gsap - https://www.npmjs.com/package/gsap
   react-multi-carousel - https://www.npmjs.com/package/react-multi-carousel
   google-map-react - https://www.npmjs.com/package/google-map-react
+  react-ga - https://www.npmjs.com/package/react-ga
 
 # look for google analytics
 to find google analytics search for the following comment: *ga*
@@ -30,4 +31,3 @@ to find seo script search for the following comment: *seo*
 
 # look for alt img
 to find alt img search for the following comment: *alt*
-
