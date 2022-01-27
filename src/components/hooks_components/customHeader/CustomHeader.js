@@ -24,7 +24,7 @@ const CustomHeader = (props) => {
   return (
     <>
       <Row className='d-flex items-center'>
-        <Col xs={12} sm={12} lg={5} className='container-row items-center'>
+        <Col xs={12} lg={5} className='container-row items-center'>
           <Link href={ENVIRONMENT.ROUTING.BASE_URL} className={'header-img-container'}>
             <Image
               className={'header-logo'}
@@ -34,14 +34,14 @@ const CustomHeader = (props) => {
             />
           </Link>
         </Col>
-        <Col xs={0} sm={0} lg={15} >
+        <Col xs={0} lg={15} >
           <Navbar
             classNameRow={!props.visibilityDuck.visibility ? 'display-none' : 'navbar-row'}
             classNameCol={'col-link'}
             classNameLink={props.colorDuck.lightColor ? 'navbar-link-light' : 'navbar-general-link'}
           />
         </Col>
-        <Col xs={0} sm={0} lg={3} className='container-row justify-center items-end'>
+        <Col xs={0} lg={3} className='container-row justify-center items-end'>
           {
             (!props.menuDuck.menuOpen && !props.colorDuck.lightColor) &&
             <SwitchLanguage

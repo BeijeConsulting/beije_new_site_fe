@@ -29,8 +29,8 @@ const FirstSection = () => {
         <div className={'home-fp-container'}>
             <div>
                 <Row>
-                    <Col xs={0} md={4} />
-                    <Col xs={24} md={16} className="home-fp-text-col">
+                    <Col xs={0} md={5} />
+                    <Col xs={24} md={15} className="home-fp-text-col">
                         <CustomCard
                             titleClassName={'home-fp-title animation-text-landing'}
                             titleLevel={1}
@@ -46,8 +46,8 @@ const FirstSection = () => {
                     <Col xs={0} md={4} />
                 </Row>
                 <Row>
-                    <Col xs={0} md={4} />
-                    <Col xs={0} md={16} className="home-fp-text-col">
+                    <Col xs={0} md={5} />
+                    <Col xs={0} md={15} className="home-fp-text-col">
                         <Navbar
                             classNameLink={'navbar-home-link animation-text-landing'}
                         />

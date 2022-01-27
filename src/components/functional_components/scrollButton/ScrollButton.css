@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     position: absolute;
-    bottom: 30px;
+    bottom: 4vw;
     left: 0;
     right: 0;
 }
@@ -23,6 +23,12 @@
 
 @media screen and (min-width: 1024px) {
     .scroll-btn-text {
-        font-size: 20px;
+        font-size: 1.5vw;
+    }
+}
+
+@media screen and (min-width: 1440px), (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5) {
+    .scroll-btn-container {
+        bottom: 1.5vw;
     }
 }

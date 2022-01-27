@@ -210,7 +210,7 @@ const Consulting = (props) => {
       </section>
 
       <PolygonSection>
-        <section className={'consulting-gsap-second-section'}>
+        <section className={'consulting-gsap-second-section consulting-section-inside-polygen'}>
           <SectionSubtitle
             title={turnToUppercase(t('Consulting.title_carousel_employee'))}
             shortLineBelow

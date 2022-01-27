@@ -226,21 +226,20 @@
 }
 
 
-@media (-webkit-min-device-pixel-ratio: 1.25) {
-
-    .intro-sec-go-back-btn-container {
-        padding: 0 15%;
-    }
-
-    .intro-sec-row-title-out {
-        padding: 0 15%;
-    }
-
+@media (-webkit-min-device-pixel-ratio: 1.5) {
     .intro-sec-txt-div-container {
-        height: 554px;
+        transform: scale(75%);
+    }
+
+    .intro-section-img-container {
+        height: 360px;
     }
 
     .intro-section-row-image {
-        padding: 0px 15%;
+        height: 360px !important;
+    }
+
+    .intro-sec-row2-desc-desktop {
+        transform: scale(75%);
     }
 }

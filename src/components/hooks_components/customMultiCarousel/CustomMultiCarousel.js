@@ -156,7 +156,7 @@ CustomMultiCarousel.defaultProps = {
     keyBoardControl: false,
     infinite: true,
     item_superLargeDesktop: 4,
-    item_mediumDesktop: 3,
+    item_mediumDesktop: 4,
     item_desktop: 3,
     item_tablet: 2,
     item_bigMobile: 2,

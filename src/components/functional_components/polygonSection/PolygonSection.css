@@ -21,10 +21,3 @@
     }
 
 }
-
-@media (-webkit-min-device-pixel-ratio: 1.25) {
-    .polygen-section {
-        padding: 60px 15%;
-    }
-
-}

@@ -68,8 +68,13 @@
 }
 
 
-@media (-webkit-min-device-pixel-ratio: 1.25) {
+@media (-webkit-min-device-pixel-ratio: 1.5) {
     .consulting-form-section {
-        padding: 50px 15% ;
+        /* padding: 50px 15% ; */
+        transform: scale(75%) translate(0);
+    }
+
+    .consulting-section-inside-polygen {
+        transform: scale(75%) translate(0);
     }
 }

@@ -7,14 +7,14 @@
     display: flex !important;
     align-items: flex-end !important;
     justify-content: flex-end !important;
-    height: 40px !important;
+    height: 6vh !important;
 }
 
 .navbar-row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 500px;
+    width: 40vw;
     align-items: center !important;
 }
 
@@ -69,11 +69,11 @@
 .navbar-general-link {
     color: var(--primary-nav-color) !important;
     text-decoration: none !important;
-    height: 37px !important;
+    height: 5vh !important;
     font-family: 'Moderat-Regular', sans-serif !important;
     font-style: normal !important;
     font-weight: bold !important;
-    font-size: 20px !important;
+    font-size: 1.5vw !important;
     letter-spacing: 0.06em !important;
     text-transform: uppercase !important;
 }
@@ -100,8 +100,8 @@
     color: var(--secondary-nav-color) !important;
     text-decoration: none !important;
     font-weight: bold;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 1.5vw;
+    line-height: 1.9vh;
 }
 
 .navbar-home-link::after {

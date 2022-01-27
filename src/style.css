@@ -80,13 +80,13 @@ h2 {
 @media screen and (min-width: 992px) {
   body {
     letter-spacing: 0.06em !important;
-    font-size: 20px !important;
-    line-height: 35px !important;
+    font-size: 1.4vw !important;
+    line-height: 2.3vw !important;
   }
 
   h1, h2, h3, h4, h5 {
-    font-size: 70px !important;
-    line-height: 100px !important;
+    font-size: 5vw !important;
+    line-height: 6vw !important;
   }
 
   h2 {
@@ -124,7 +124,7 @@ h2 {
 }
 
 .ant-layout-header {
-  height: 79px !important;
+  height: 13vh !important;
   line-height: 50px;
   background-color: #fff;
 }
@@ -393,20 +393,20 @@ h2 {
 
 .header-ant-style-transparent {
   position: fixed;
-  width: 100%;
-  padding: 5px 25px;
+  width: 100vw;
+  padding: 1vh 2vw;
   background-color: transparent;
   z-index: 2;
-  line-height: 53px !important;
+  line-height: 6vh !important;
 }
 
 .header-ant-style {
   position: fixed;
-  width: 100%;
-  padding: 5px 25px;
+  width: 100vw;
+  padding: 1vh 2vw;
   background-color: #fff;
   z-index: 2;
-  line-height: 53px !important;
+  line-height: 8vh !important;
 }
 
 .header-ant-general-style {
@@ -414,9 +414,9 @@ h2 {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 5px 25px;
+  padding: 1vh 2vw;
   background-color: #fff;
-  line-height: 53px !important;
+  line-height: 8vh !important;
   z-index: 2;
 }
 
