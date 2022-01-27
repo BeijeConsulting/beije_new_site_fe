@@ -194,7 +194,6 @@ const CustomForm = (props) => {
             ref={e => (state.captcha = e)}
             sitekey={googleReCaptchaKey}
             onChange={reCaptchaChange}
-            theme="dark"
           />
         </div>
 

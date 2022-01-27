@@ -21,10 +21,10 @@
     height: 90px;
 }
 
-.recaptcha > div > div {
+/* .recaptcha > div > div { // if you want put recaptcha on center
     display: flex;
     place-content: center;
-}
+} */
 
 .form-input.ant-input {
     padding: 8px 16px !important;
