@@ -39,10 +39,10 @@ export default function userInfoDuck(state = INIT_STATE, action) {
         If I'm here, the user change manually route or refresh page and now the state is empty.
         So I check if I'm not in login and is logged in by localstorage. If I haven't localstorage and I have empty state, I redirect to login 
       */
-      newState = state;
-      if (isEmpty(newState.userInfo) && localUserInfo) {
-          newState.userInfo = JSON.parse(localUserInfo);
-      }
+      // newState = state;
+      // if (isEmpty(newState.userInfo) && localUserInfo) {
+      //     newState.userInfo = JSON.parse(localUserInfo);
+      // }
       break;
   }
   return newState;
