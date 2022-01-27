@@ -17,7 +17,6 @@
   align-items: center;
   width: 100vw;
   height: calc(100vh - 26vh);
-  border: 1px solid green;
   /*remuve*/
   margin-top: 13vh;
   margin-bottom: 13vh;
@@ -159,7 +158,6 @@
 
   .sec-section-row-card-container {
     height: calc(100vh - 8vh);
-    border: 1px solid green;
     margin-top: 5vh;
     margin-bottom: 3vh;
   }
