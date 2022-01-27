@@ -102,9 +102,9 @@ const Home = (props) => {
             src={'https://beije.s3.eu-west-1.amazonaws.com/video_home.mp4'}
           />
           {/* <ContainerSectionScroll> */}
-            <FirstSection
-            // callbackScroll={ }
-            />
+          <FirstSection
+          // callbackScroll={ }
+          />
           {/* </ContainerSectionScroll> */}
         </div>
       </section>
@@ -198,9 +198,9 @@ const Home = (props) => {
       </section>
 
       <section className="home-section home-fourth-section">
-        <ContainerSectionScroll>
-          <FourthSection />
-        </ContainerSectionScroll>
+        {/* <ContainerSectionScroll> */}
+        <FourthSection />
+        {/* </ContainerSectionScroll> */}
       </section>
 
       <section className="home-section home-last-section">
