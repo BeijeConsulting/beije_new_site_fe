@@ -72,6 +72,7 @@ export const langMonth = {
 
 export const social = [
   {
+    name: "Facebook",
     icon: icon_facebook,
     url: 'https://www.facebook.com/beijepeoplefirst',
     alt: 'fb',
@@ -79,6 +80,7 @@ export const social = [
     classNameSingleContainer: ''
   },
   {
+    name: "Linkedin",
     icon: icon_instagram,
     url: 'https://www.linkedin.com/company/beije',
     alt: 'in',
@@ -86,6 +88,7 @@ export const social = [
     classNameSingleContainer: 'social-section-middle-social'
   },
   {
+    name: "Youtube",
     icon: icon_youTube,
     url: 'https://www.youtube.com/channel/UCGZdqNE152QBvg9WZ4E65Iw',
     alt: 'youTube',

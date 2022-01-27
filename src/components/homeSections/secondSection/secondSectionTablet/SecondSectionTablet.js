@@ -9,11 +9,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 //import style
 import '../SecondSection.css'
 
-//import assets
-import {
-  ArrowRightOutlined
-} from '@ant-design/icons';
-
 //import costants
 import { cardWhoWeAre } from "../../../../utils/properties";
 
