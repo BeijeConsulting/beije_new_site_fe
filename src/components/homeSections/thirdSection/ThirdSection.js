@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Row, Col, Layout } from "antd";
 
@@ -11,7 +10,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import './ThirdSection.css'
 
 //import functions
-import { turnToUppercase, divideText } from "../../../utils/utilities";
+import { turnToUppercase, divideText, setGaEvent } from "../../../utils/utilities";
 
 // import constants
 import { ENVIRONMENT } from "../../../utils/properties";
@@ -30,8 +29,6 @@ const ThirdSection = () => {
 
     const { t } = useTranslation()
     const ref = useRef(null);
-    const navigate = useNavigate();
-
     const draggedCarousel = () => {
         setState({
             ...state,
@@ -58,10 +55,6 @@ const ThirdSection = () => {
         t1.from(singleEl, { y: 50, opacity: 0, stagger: 0.3, duration: 0.8, ease: 'power2.in' })
 
     }, [])
-
-    const goToWhoWeAre = () => {
-        navigate(`${ENVIRONMENT.ROUTING.BASE_URL}whoweare`)
-    }
 
     return (
         <Layout
@@ -100,7 +93,7 @@ const ThirdSection = () => {
                         <CustomButton
                             type={'view-all-btn'}
                             content={<ViewAllButton />}
-                            clickCallback={goToWhoWeAre}
+                            clickCallback={setGaEvent({category: "Navigation", action: "Click view all", label: "Third section home"})}
                             href={`${ENVIRONMENT.ROUTING.BASE_URL}whoweare`}
                         />
                     </Col>

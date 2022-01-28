@@ -1,7 +1,7 @@
 import React from "react";
 import { useRoutes } from "react-router-dom";
 import { connect } from "react-redux";
-
+import ReactGa from 'react-ga';
 import { Layout } from 'antd';
 const { Header, Footer } = Layout;
 
@@ -13,9 +13,12 @@ import './style.css'
 import CustomHeader from './components/hooks_components/customHeader/CustomHeader'
 import CustomFooter from "./components/functional_components/customFooter/CustomFooter";
 import SiteRoutes from './routes';
+import { googleAnalyticsKey } from "./utils/properties";
+import RouteChangeTracker from "./components/functional_components/RouteChangeTracker";
 
 
 const App = (props) => {
+  ReactGa.initialize(googleAnalyticsKey);
   // The useRoutes() hook allows you to define your routes as JavaScript objects
   // instead of <Routes> and <Route> elements. This is really just a style
   // preference for those who prefer to not use JSX for their routes config.
@@ -35,6 +38,7 @@ const App = (props) => {
       >
         <CustomHeader />
       </Header>
+      <RouteChangeTracker />
       {element}
 
       <Footer className={'generalLayout-footer'}>

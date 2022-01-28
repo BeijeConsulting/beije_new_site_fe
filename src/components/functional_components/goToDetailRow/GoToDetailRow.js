@@ -2,7 +2,6 @@ import React, { useRef, useEffect } from "react";
 
 import { Row, Col, Typography } from "antd";
 const { Text, Title } = Typography;
-import Icon from '@ant-design/icons';
 
 //import gsap
 import { gsap } from 'gsap'
@@ -10,8 +9,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 // import style
 import './GoToDetailRow.css'
-
-import arrow from '../../../assets/icons/arrow_white.png'
 
 // import components
 import CustomCard from "../customCard/CustomCard";

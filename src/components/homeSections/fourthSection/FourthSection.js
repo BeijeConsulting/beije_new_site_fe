@@ -45,10 +45,10 @@ const FourthSection = () => {
 
   }, [])
 
-  const sendEmailCommercial = () => {
-    console.log('Send email to commercial');
-    // *ga*
-  }
+  // const sendEmailCommercial = () => {
+  //   console.log('Send email to commercial');
+  //   // *ga*
+  // }
 
   return (
     <div
@@ -61,7 +61,8 @@ const FourthSection = () => {
           classNameTextArea={'fourth-sec-text-area-form'}
           titleLevel={1}
           xsColInfo={0}
-          callBack={sendEmailCommercial}
+          // callBack={sendEmailCommercial}
+          origin="home"
         />
       </Layout>
     </div>

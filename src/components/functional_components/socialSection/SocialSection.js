@@ -11,6 +11,7 @@ import { social } from "../../../utils/properties";
 
 // import components
 import CustomButton from "../Button/CustomButton";
+import { setGaEvent } from "../../../utils/utilities";
 
 const SocialSection = (props) => {
 
@@ -37,6 +38,7 @@ const SocialSection = (props) => {
                             />
                         </a>
                     }
+                    clickCallback={setGaEvent({category: "Social", action: "Click social button", label: item.name})}
                 />
             </div>
         )
