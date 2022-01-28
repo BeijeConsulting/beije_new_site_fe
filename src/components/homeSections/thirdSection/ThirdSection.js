@@ -71,7 +71,7 @@ const ThirdSection = () => {
                 ref={ref}
             >
                 <Row className={'third-sec-row'}>
-                    <Col xs={24} md={8} lg={7} className={'third-sec-col1'}>
+                    <Col xs={24} lg={7} className={'third-sec-col1'}>
                         <CustomCard
                             cardTitle={turnToUppercase(t('home.thirdSection.title'))}
                             titleClassName={'third-sec-title single-el-gsap'}
@@ -81,7 +81,7 @@ const ThirdSection = () => {
                     </Col>
                     <Col md={1} lg={1} />
                     <Col
-                        xs={24} md={15} lg={16}
+                        xs={24} lg={16}
                         className={'third-sec-col2 single-el-gsap'}
                     >
                         {state.showDragBtn &&

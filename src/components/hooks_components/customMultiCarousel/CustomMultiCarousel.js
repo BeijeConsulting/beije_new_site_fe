@@ -54,11 +54,11 @@ const CustomMultiCarousel = (props) => {
             items: props.item_desktop
         },
         tablet: {
-            breakpoint: { max: 1023, min: 769 },
+            breakpoint: { max: 1023, min: 768 },
             items: props.item_tablet
         },
         bigMobile: {
-            breakpoint: { max: 768, min: 501 },
+            breakpoint: { max: 767, min: 501 },
             items: props.item_bigMobile
         },
         mobile: {
@@ -158,7 +158,7 @@ CustomMultiCarousel.defaultProps = {
     item_superLargeDesktop: 4,
     item_mediumDesktop: 3,
     item_desktop: 3,
-    item_tablet: 2,
+    item_tablet: 3,
     item_bigMobile: 2,
     item_mobile: 2,
     item_smallmobile: 2,

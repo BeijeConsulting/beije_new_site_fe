@@ -30,9 +30,19 @@ const FirstSection = () => {
   useEffect(() => {
     var zoom = detectZoom.zoom();
     var device = detectZoom.device();
-
     console.log('zoom: ', zoom, 'device: ', device);
+
+    window.addEventListener("resize", updateMedia);
+
+    return () => {
+      window.removeEventListener("resize", updateMedia);
+    }
   }, [])
+
+  const updateMedia = () => {
+    console.log('width: ', window.innerWidth, ' height: ', window.innerHeight)
+
+  };
 
   return (
     <div className={'home-fp-container'}>

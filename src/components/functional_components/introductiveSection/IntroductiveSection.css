@@ -1,246 +1,288 @@
 .intro-section-container {
-    margin-top: 120px;
+  margin-top: 120px;
 }
 
 /* GO BACK BTN */
 .intro-sec-go-back-btn-container {
-    padding: 0 5%;
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: flex-end;
+  padding: 0 5%;
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 
 
 /* CONTAINER ROW */
 
 .intro-sec-row-title-out {
-    padding: 0 5%;
+  padding: 0 5%;
 }
 
 .intro-section-row-image {
-    padding: 0px 5%;
-    position: relative;
-    margin-bottom: 30px;
+  padding: 0px 5%;
+  position: relative;
+  margin-bottom: 30px;
 }
 
 .intro-section-title {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .intro-section-intro {
-    font-family: 'SpaceGrotesk-Regular', sans-serif;
-    font-weight: 400px;
-    font-size: 24px;
-    line-height: 42px;
-    letter-spacing: 0.06em;
-    margin-bottom: 30px;
+  font-family: 'SpaceGrotesk-Regular', sans-serif;
+  font-weight: 400px;
+  font-size: 24px;
+  line-height: 42px;
+  letter-spacing: 0.06em;
+  margin-bottom: 30px;
 }
 
 .intro-section-desc {
-    margin: 30px 0;
+  margin: 30px 0;
 }
 
 .intro-sec-row2-desc-desktop {
-    display: none;
+  display: none;
 }
 
 .intro-section-row2-image {
-    display: flex;
-    flex-direction: column;
-    /* justify-content: flex-end; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  /* justify-content: flex-end; */
 }
 
 .intro-section-desc1-container {
-    display: none;
+  display: none;
 }
 
 /* IMAGE */
 .intro-section-img-container {
-    height: 257px;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    border-radius: 30px;
+  height: 257px;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 30px;
 }
 
 /* BTN CANDIDATE */
 .intro-sec-candidate-row {
-    width: 100%;
-    display: flex;
-    align-items: baseline;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
 }
 
 .intro-sec-candidate-btn {
-    margin-top: 30px;
-    display: flex;
-    justify-content: flex-end;
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 
 /* LIST DESCRIPTION */
 .intro-section-list-li {
-    text-indent: -40px;
-    padding: 5px 0;
+  text-indent: -40px;
+  padding: 5px 0;
 }
 
 .intro-section-list-li:before {
-    content: "-  " !important;
+  content: "-  " !important;
 }
 
 .intro-section-list-li::marker {
-    content: none !important;
+  content: none !important;
 }
 
 
 @media screen and (min-width: 768px) {
-    .intro-section-img-container {
-        height: 350px;
-    }
+  .intro-section-img-container {
+    height: 350px;
+  }
 
-    /* 
+  /* 
     .intro-sec-txt-div-container {
         width: 70%;
     } */
 
-    /* ALL DESCRIPTION */
+  /* ALL DESCRIPTION */
 
-    .intro-section-intro {
-        width: 80%;
-        margin: 30px auto;
-    }
+  .intro-section-intro {
+    width: 80%;
+    margin: 30px auto;
+  }
 
-    .intro-section-desc {
-        width: 80%;
-        margin: 30px auto;
-    }
+  .intro-section-desc {
+    width: 80%;
+    margin: 30px auto;
+  }
 
 }
 
 @media screen and (min-width: 1024px) {
 
-    .intro-sec-txt-div-container {
-        width: 60%;
-        margin: 0;
-        height: 490px;
-    }
+  .intro-sec-txt-div-container {
+    width: 60%;
+    margin: 0;
+    height: 490px;
+  }
 
-    .intro-section-row-image {
-        height: 490px !important;
-        margin-bottom: 100px;
-    }
+  .intro-section-row-image {
+    height: 490px !important;
+    margin-bottom: 100px;
+  }
 
-    .intro-section-img-container {
-        height: 490px;
-        position: absolute;
-        width: 40%;
-    }
+  .intro-section-img-container {
+    height: 490px;
+    position: absolute;
+    width: 40%;
+  }
 
-    .intro-section-img1-container {
-        right: 0;
-        top: 0;
-        border-radius: 30px 0 0 30px;
-    }
+  .intro-section-img1-container {
+    right: 0;
+    top: 0;
+    border-radius: 30px 0 0 30px;
+  }
 
-    .intro-section-img2-container {
-        left: 0;
-        top: 0;
-        border-radius: 0 30px 30px 0;
-    }
+  .intro-section-img2-container {
+    left: 0;
+    top: 0;
+    border-radius: 0 30px 30px 0;
+  }
 
-    .intro-section-row2-image {
-        flex-direction: row;
-        justify-content: flex-end;
-    }
+  .intro-section-row2-image {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
 
 
-    /* DESCRIPTION */
-    .intro-section-intro-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+  /* DESCRIPTION */
+  .intro-section-intro-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
 
-    .intro-section-intro {
-        width: 400px;
-    }
+  .intro-section-intro {
+    width: 400px;
+  }
 
-    .intro-section-desc-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+  .intro-section-desc-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
 
-    .intro-section-desc1 {
-        width: 400px;
-    }
+  .intro-section-desc1 {
+    width: 400px;
+  }
 
-    .intro-section-desc {
-        width: 400px;
-    }
+  .intro-section-desc {
+    width: 400px;
+  }
 
-    .intro-section-list {
-        width: 400px;
-    }
+  .intro-section-list {
+    width: 400px;
+  }
 
-    .intro-sec-row2-desc-mobile {
-        display: none;
-    }
+  .intro-sec-row2-desc-mobile {
+    display: none;
+  }
 
-    .intro-sec-row2-desc-desktop {
-        display: flex;
-        align-items: center;
-        width: 60%;
-    }
+  .intro-sec-row2-desc-desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 60%;
+  }
 }
 
 @media screen and (min-width: 1440px) {
 
-    .intro-sec-go-back-btn-container {
-        padding: 0 15%;
-    }
+  .intro-sec-go-back-btn-container {
+    padding: 0 15%;
+  }
 
-    .intro-sec-row-title-out {
-        padding: 0 15%;
-    }
+  .intro-sec-row-title-out {
+    padding: 0 15%;
+  }
 
-    .intro-sec-txt-div-container {
-        height: 554px;
-    }
+  .intro-sec-txt-div-container {
+    height: 554px;
+  }
 
-    .intro-section-row-image {
-        padding: 0px 15%;
-    }
+  .intro-section-row-image {
+    padding: 0px 15%;
+  }
 
-    .intro-section-row-image {
-        height: 554px !important;
-    }
+  .intro-section-row-image {
+    height: 554px !important;
+  }
 
-    .intro-section-img-container {
-        height: 554px;
-        position: absolute;
-        width: 40%;
-    }
+  .intro-section-img-container {
+    height: 554px;
+    position: absolute;
+    width: 40%;
+  }
 
 }
 
 
 @media (-webkit-min-device-pixel-ratio: 1.25) {
 
-    .intro-sec-go-back-btn-container {
-        padding: 0 15%;
-    }
+  .intro-sec-go-back-btn-container {
+    padding: 0 15%;
+  }
 
-    .intro-sec-row-title-out {
-        padding: 0 15%;
-    }
+  .intro-sec-row-title-out {
+    padding: 0 15%;
+  }
 
-    .intro-sec-txt-div-container {
-        height: 554px;
-    }
+  .intro-sec-txt-div-container {
+    height: 554px;
+  }
 
-    .intro-section-row-image {
-        padding: 0px 15%;
-    }
+  .intro-section-row-image {
+    padding: 0px 15%;
+  }
 }

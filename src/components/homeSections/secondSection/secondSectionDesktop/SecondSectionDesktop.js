@@ -57,6 +57,8 @@ const SecondSectionDesktop = () => {
   const printCard = (item, key) => {
     return (
       <Col
+        xs={24}
+        md={12}
         lg={6}
         key={key}
         className={item.colContainerClassName}
@@ -85,7 +87,7 @@ const SecondSectionDesktop = () => {
   return (
     <>
       <Row
-        id='secondSection'
+        // id='secondSection'
         className='sec-section-row-card-container'
         ref={ref}
       >

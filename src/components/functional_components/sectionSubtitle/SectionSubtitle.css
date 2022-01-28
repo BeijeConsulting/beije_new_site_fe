@@ -1,5 +1,5 @@
 :root {
-    --saparator-line: var(--first-color);
+  --saparator-line: var(--first-color);
 }
 
 /* .sec-subtitle-container {
@@ -7,12 +7,12 @@
 } */
 
 .separator-short-horizontal-line {
-    border-top: 3px solid var(--saparator-line);
-    width: 48px;
+  border-top: 3px solid var(--saparator-line);
+  width: 48px;
 }
 
 .separator-long-horizontal-line {
-    border-top: 2px solid var(--saparator-line);
-    width: 100%;
-    margin-bottom: 15px;
+  border-top: 2px solid var(--saparator-line);
+  width: 100%;
+  margin-bottom: 15px;
 }

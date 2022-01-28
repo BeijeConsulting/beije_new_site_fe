@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from "react";
 // import { Helmet } from "react-helmet";
 import { connect } from "react-redux";
-import { Layout } from "antd";
-const { Footer } = Layout;
 
 //import gsap
 import { gsap } from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollToPlugin } from "gsap/all";
 
 //import actions to dispatch
 import { setVisibility, initVisibility } from "../../redux/ducks/visibilityDuck"
+import { setColorHeader, initColorHeader } from "../../redux/ducks/colorHeaderDuck";
 
 //import style
 import './Home.css';
@@ -23,11 +21,11 @@ import SecondSectionDesktop from "../../components/homeSections/secondSection/se
 import SecondSectionMobile from "../../components/homeSections/secondSection/secondSectionMobile/SecondSectionMobile";
 import ThirdSection from "../../components/homeSections/thirdSection/ThirdSection";
 import FourthSection from "../../components/homeSections/fourthSection/FourthSection";
-import CustomFooter from "../../components/functional_components/customFooter/CustomFooter";
 
 //import constats
 import { cardWhoWeAre } from "../../utils/properties";
 import SecondSectionTablet from "../../components/homeSections/secondSection/secondSectionTablet/SecondSectionTablet";
+import PolygonSection from "../../components/functional_components/polygonSection/PolygonSection";
 const historyObj = cardWhoWeAre[1];
 const missionObj = cardWhoWeAre[2];
 const visionObj = cardWhoWeAre[3];
@@ -51,27 +49,11 @@ const Home = (props) => {
 
   //GSAP
   gsap.registerPlugin(ScrollTrigger);
-  gsap.registerPlugin(ScrollToPlugin);
 
   useEffect(() => {
     window.addEventListener("resize", updateMedia);
     window.addEventListener("scroll", handleScroll);
     props.dispatch(setVisibility(false))
-
-    let panels = gsap.utils.toArray(".home-section");
-
-    panels.forEach((panel, i) => {
-      ScrollTrigger.create({
-        trigger: panel,
-        start: "top bottom",
-      });
-    });
-
-    ScrollTrigger.create({
-      start: 0,
-      end: "max",
-      // snap: 1 / (panels.length - 1)
-    })
 
     return () => {
       window.removeEventListener("resize", updateMedia);
@@ -82,8 +64,12 @@ const Home = (props) => {
   const handleScroll = () => {
     if (window.pageYOffset > 200) {
       props.dispatch(initVisibility())
+      props.dispatch(setColorHeader('#fff'))
     }
-    else { props.dispatch(setVisibility(false)) }
+    else {
+      props.dispatch(setVisibility(false))
+      props.dispatch(initColorHeader())
+    }
   }
 
   return (
@@ -91,123 +77,44 @@ const Home = (props) => {
     <div
       className="gsap-home-container"
     >
-      <section
-        className="home-section gsap-home-first-section"
+      <PolygonSection
+        polygenClipPath={'home-polygen-clip-path-contancts'}
       >
-        <div className='home-video-filter'>
-          <BackgroundVideo
-            autoPlay
-            muted
-            loop
-            src={'https://beije.s3.eu-west-1.amazonaws.com/video_home.mp4'}
-          />
-          {/* <ContainerSectionScroll> */}
+        <section
+          className="home-section gsap-home-first-section"
+        >
+          <div className='home-video-filter'>
+            <BackgroundVideo
+              autoPlay
+              muted
+              loop
+              src={'https://beije.s3.eu-west-1.amazonaws.com/video_home.mp4'}
+            />
             <FirstSection
-            // callbackScroll={ }
             />
-          {/* </ContainerSectionScroll> */}
-        </div>
-      </section>
+          </div>
+        </section>
+      </PolygonSection>
 
-      <section
-        className="home-section home-second-section gsap-home-second-section"
-      >
-        <ContainerSectionScroll
-          className='home-container-section2'
-          scrollBar={true}
+      <div style={{ backgroundColor: '#fff' }}>
+        <section
+          className="gsap-home-second-section"
         >
-          {
-            myState.isDesktop &&
-            <SecondSectionDesktop />
-          }
-          {
-            myState.isTablet &&
-            <SecondSectionTablet />
-          }
-          {
-            !myState.isDesktop && !myState.isTablet &&
-            <SecondSectionMobile />
-          }
-        </ContainerSectionScroll>
-      </section>
-
-      {
-        myState.isTablet &&
-        <section className="home-section home-second-section">
-          <ContainerSectionScroll
-            className='home-container-section2'
-            scrollBar={true}
-          >
-            <SecondSectionTablet
-              card1={2}
-              card2={4}
-            />
-          </ContainerSectionScroll>
+          <SecondSectionDesktop />
         </section>
-      }
 
-      {
-        !myState.isDesktop && !myState.isTablet &&
-        <section className="home-section home-second-section">
-          <ContainerSectionScroll
-            className='home-container-section2'
-            scrollBar={true}
-          >
-            <SecondSectionMobile
-              obj={historyObj}
-            />
-          </ContainerSectionScroll>
-        </section>
-      }
-
-      {!myState.isDesktop && !myState.isTablet &&
-
-        <section className="home-section home-second-section">
-          <ContainerSectionScroll
-            className='home-container-section2'
-            scrollBar={true}
-          >
-            <SecondSectionMobile
-              obj={missionObj}
-            />
-          </ContainerSectionScroll>
-        </section>
-      }
-
-      {!myState.isDesktop && !myState.isTablet &&
-
-        <section className="home-section home-second-section">
-          <ContainerSectionScroll
-            className='home-container-section2'
-            scrollBar={true}
-          >
-            <SecondSectionMobile
-              obj={visionObj}
-            />
-          </ContainerSectionScroll>
-        </section>
-      }
-
-      <section className="home-section home-third-section">
-        <ContainerSectionScroll
-          className='home-container-section3'
-        >
+        <section>
           <ThirdSection />
+        </section>
 
-        </ContainerSectionScroll>
-      </section>
-
-      <section className="home-section home-fourth-section">
-        <ContainerSectionScroll>
-          <FourthSection />
-        </ContainerSectionScroll>
-      </section>
-
-      <section className="home-section home-last-section">
-        <Footer className={'homeLayout-footer'}>
-          <CustomFooter />
-        </Footer>
-      </section>
+        <PolygonSection
+          polygenClipPath={'home-polygen-clip-path-contancts'}
+        >
+          <section className="home-fourth-section">
+            <FourthSection />
+          </section>
+        </PolygonSection>
+      </div>
 
     </div >
 

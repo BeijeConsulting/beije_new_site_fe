@@ -1,61 +1,63 @@
 :root {
-    --home-bg-color-fourth-sec: var(--fourth-color);
+  --home-bg-color-fourth-sec: var(--fourth-color);
 }
 
 .home-section {
-    height: 100vh;
-    position: sticky;
-    top: 0;
+  height: 100vh;
+  /* position: sticky;
+  top: 0; */
 }
 
 .home-second-section {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .home-third-section {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .home-fourth-section {
-    background-color: var(--home-bg-color-fourth-sec);
+  background-color: var(--home-bg-color-fourth-sec);
 }
 
 .home-last-section {
-    background-color: var(--home-bg-color-fourth-sec);
+  background-color: var(--home-bg-color-fourth-sec);
 }
 
 
 .home-video-filter {
-    z-index: -1;
-    background-image: linear-gradient(to bottom, rgb(72, 116, 147, 0.70), rgb(221, 44, 44, 0.70));
-    top: 0;
-    left: 0;
-    height: 100vh;
-    display: flex;
+  z-index: -1;
+  background-image: -webkit-linear-gradient(left top, left bottom, from(rgb(72, 116, 147, 0.70)), to(rgb(221, 44, 44, 0.70)));
+  background-image: -o-linear-gradient(top, rgb(72, 116, 147, 0.70), rgb(221, 44, 44, 0.70));
+  background-image: linear-gradient(to bottom, rgb(72, 116, 147, 0.70), rgb(221, 44, 44, 0.70));
+  top: 0;
+  left: 0;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .home-link:hover {
-    border-bottom: 1px solid #fff !important;
+  border-bottom: 1px solid #fff !important;
 }
 
-.home-container-section2 {
-    display: flex;
-    flex-direction: column;
-    /* justify-content: space-around; */
-}
-
-.home-container-section3 {
-    display: flex;
+.home-polygen-clip-path-contancts {
+  -webkit-clip-path: polygon(100% calc(100% - 95%), 100% 100%, 0 100%, 0 0);
+  clip-path: polygon(100% calc(100% - 95%), 100% 100%, 0 100%, 0 0);
 }
 
 @media screen and (min-width: 768px) {
-    .home-video-filter {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .home-container-section2 {
-        flex-direction: row;
-    }
+  .home-video-filter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
 }

@@ -1,5 +1,7 @@
 .bg-video-filter {
     z-index: -1;
+    background-image: -webkit-linear-gradient(left top, left bottom, from(rgb(72, 116, 147, 0.70)), to(rgb(221, 44, 44, 0.70)));
+    background-image: -o-linear-gradient(top, rgb(72, 116, 147, 0.70), rgb(221, 44, 44, 0.70));
     background-image: linear-gradient(to bottom, rgb(72, 116, 147, 0.70), rgb(221, 44, 44, 0.70));
     position: fixed;
     top: 0;
@@ -10,6 +12,7 @@
 
 .bg-video {
     z-index: -100;
+    -o-object-fit: cover;
     object-fit: cover;
     width: 100vw;
     height: 100vh;

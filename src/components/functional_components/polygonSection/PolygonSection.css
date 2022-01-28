@@ -1,30 +1,31 @@
 :root {
-    --primary-bg-color-polygen: var(--fourth-color);
+  --primary-bg-color-polygen: var(--fourth-color);
 }
 
 .polygen-section {
-    padding: 60px 5%;
+  padding: 60px 5%;
 }
 
 .polygen-section-clipPath {
-    clip-path: polygon(100% calc(100% - 95%), 100% 100%, 0 calc(100% - 5%), 0 0);
+  -webkit-clip-path: polygon(100% calc(100% - 95%), 100% 100%, 0 calc(100% - 5%), 0 0);
+  clip-path: polygon(100% calc(100% - 95%), 100% 100%, 0 calc(100% - 5%), 0 0);
 }
 
 .polygen-section-color {
-    background-color: var(--primary-bg-color-polygen);
+  background-color: var(--primary-bg-color-polygen);
 }
 
 @media screen and (min-width: 1440px) {
 
-    .polygen-section {
-        padding: 60px 15%;
-    }
+  .polygen-section {
+    padding: 60px 15%;
+  }
 
 }
 
 @media (-webkit-min-device-pixel-ratio: 1.25) {
-    .polygen-section {
-        padding: 60px 15%;
-    }
+  .polygen-section {
+    padding: 60px 5%;
+  }
 
 }

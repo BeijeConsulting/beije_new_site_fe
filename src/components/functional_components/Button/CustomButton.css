@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 :root {
     --primary-btn-color: var(--first-color);
     --primary-btn-shadow: rgb(50, 62, 72, 0.50);
@@ -36,6 +43,7 @@
 }
 
 .custom-btn-primary-social:hover>.icon-social {
+    -webkit-filter: brightness(0) invert(1);
     filter: brightness(0) invert(1)
 }
 
@@ -46,6 +54,7 @@
 }
 
 .custom-btn-primary-social:active>.icon-social {
+    -webkit-filter: brightness(0) invert(1);
     filter: brightness(0) invert(1)
 }
 
@@ -129,11 +138,13 @@
 
 .primary-arrow:hover {
     background-color: var(--primary-btn-color);
+    -webkit-box-shadow: 4px 4px 6px 0px var(--primary-btn-shadow);
     box-shadow: 4px 4px 6px 0px var(--primary-btn-shadow);
 }
 
 .primary-arrow:focus {
     background-color: var(--primary-btn-color);
+    -webkit-box-shadow: 4px 4px 6px 0px var(--primary-btn-shadow);
     box-shadow: 4px 4px 6px 0px var(--primary-btn-shadow);
 }
 
@@ -163,11 +174,13 @@
 
 .secondary-arrow:hover {
     background-color: #fff;
+    -webkit-box-shadow: 4px 4px 6px 0px var(--primary-btn-shadow);
     box-shadow: 4px 4px 6px 0px var(--primary-btn-shadow);
 }
 
 .secondary-arrow:focus {
     background-color: #fff;
+    -webkit-box-shadow: 4px 4px 6px 0px var(--primary-btn-shadow);
     box-shadow: 4px 4px 6px 0px var(--primary-btn-shadow);
 }
 
@@ -194,8 +207,14 @@
     font-weight: bold !important;
     font-size: 18px !important;
     line-height: 60px !important;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
     display: flex !important;
+    -webkit-box-align: center !important;
+    -ms-flex-align: center !important;
     align-items: center !important;
+    -webkit-box-pack: center !important;
+    -ms-flex-pack: center !important;
     justify-content: center !important;
     text-align: center !important;
     letter-spacing: 0.12em !important;
@@ -226,8 +245,14 @@
     font-weight: bold !important;
     font-size: 18px !important;
     line-height: 60px !important;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
     display: flex !important;
+    -webkit-box-align: center !important;
+    -ms-flex-align: center !important;
     align-items: center !important;
+    -webkit-box-pack: center !important;
+    -ms-flex-pack: center !important;
     justify-content: center !important;
     text-align: center !important;
     letter-spacing: 0.12em !important;
@@ -271,8 +296,14 @@
     font-weight: bold;
     color: var(--primary-btn-color) !important;
     background-color: transparent !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     border: none !important;
 }
@@ -284,8 +315,14 @@
     font-weight: bold;
     color: #fff !important;
     background-color: transparent !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     border: none !important;
 }
@@ -299,8 +336,14 @@
     font-weight: bold;
     color: var(--primary-btn-color) !important;
     background-color: transparent !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     border: none !important;
 }
@@ -327,20 +370,31 @@
     border: none !important;
     text-align: center;
     padding: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
 .custom-btn-drag-more:hover {
     background-color: var(--primary-btn-color);
+    -webkit-box-shadow: 4px 4px 6px 0px var(--primary-btn-shadow);
     box-shadow: 4px 4px 6px 0px var(--primary-btn-shadow);
     color: #fff;
 }
 
 .custom-btn-drag-more:focus {
     background-color: var(--primary-btn-color);
+    -webkit-box-shadow: 4px 4px 6px 0px var(--primary-btn-shadow);
     box-shadow: 4px 4px 6px 0px var(--primary-btn-shadow);
     color: #fff;
 }
@@ -369,8 +423,14 @@
     font-weight: bold !important;
     font-size: 15px !important;
     line-height: 30px !important;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
     display: flex !important;
+    -webkit-box-align: center !important;
+    -ms-flex-align: center !important;
     align-items: center !important;
+    -webkit-box-pack: center !important;
+    -ms-flex-pack: center !important;
     justify-content: center !important;
     text-align: center !important;
     letter-spacing: 0.06em !important;
