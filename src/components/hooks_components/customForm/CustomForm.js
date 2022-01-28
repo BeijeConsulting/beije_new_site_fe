@@ -166,6 +166,7 @@ const CustomForm = (props) => {
               className='form-input'
               onChange={formikContacts.handleChange}
               onBlur={formikContacts.handleBlur}
+              autoSize={{ minRows: 4, maxRows: 4 }}
             />
           </div>
         }
@@ -174,7 +175,7 @@ const CustomForm = (props) => {
           props.agreement === true &&
           <Row>
             <Col xs={0} md={24}>
-              <div className="mb-1em">
+              <div className="mb-1em mt-1em">
                 <Checkbox
                   id="agreement"
                   name="agreement"

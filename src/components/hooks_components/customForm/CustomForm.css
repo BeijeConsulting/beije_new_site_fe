@@ -30,7 +30,7 @@
 }
 
 .form-input-gsap {
-    height: 90px;
+    min-height: 90px;
 }
 
 /* .recaptcha > div > div { // if you want put recaptcha on center
