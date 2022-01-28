@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Row, Col, Layout } from "antd";
 
@@ -11,7 +10,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import './ThirdSection.css'
 
 //import functions
-import { turnToUppercase, divideText } from "../../../utils/utilities";
+import { turnToUppercase, divideText, setGaEvent } from "../../../utils/utilities";
 
 // import constants
 import { ENVIRONMENT } from "../../../utils/properties";
@@ -30,8 +29,6 @@ const ThirdSection = () => {
 
     const { t } = useTranslation()
     const ref = useRef(null);
-    const navigate = useNavigate();
-
     const draggedCarousel = () => {
         setState({
             ...state,
@@ -59,10 +56,6 @@ const ThirdSection = () => {
 
     }, [])
 
-    const goToWhoWeAre = () => {
-        navigate(`${ENVIRONMENT.ROUTING.BASE_URL}whoweare`)
-    }
-
     return (
         <Layout
             className={'third-sec-container'}
@@ -71,7 +64,7 @@ const ThirdSection = () => {
                 ref={ref}
             >
                 <Row className={'third-sec-row'}>
-                    <Col xs={24} md={8} lg={7} className={'third-sec-col1'}>
+                    <Col xs={24} lg={7} className={'third-sec-col1'}>
                         <CustomCard
                             cardTitle={turnToUppercase(t('home.thirdSection.title'))}
                             titleClassName={'third-sec-title single-el-gsap'}
@@ -81,7 +74,7 @@ const ThirdSection = () => {
                     </Col>
                     <Col md={1} lg={1} />
                     <Col
-                        xs={24} md={15} lg={16}
+                        xs={24} lg={16}
                         className={'third-sec-col2 single-el-gsap'}
                     >
                         {state.showDragBtn &&
@@ -100,7 +93,7 @@ const ThirdSection = () => {
                         <CustomButton
                             type={'view-all-btn'}
                             content={<ViewAllButton />}
-                            clickCallback={goToWhoWeAre}
+                            clickCallback={setGaEvent({category: "Navigation", action: "Click view all", label: "Third section home"})}
                             href={`${ENVIRONMENT.ROUTING.BASE_URL}whoweare`}
                         />
                     </Col>

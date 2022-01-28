@@ -4,7 +4,8 @@
 
 .homeLayout-footer {
     background-color: var(--primary-color-footer);
-    height: calc(100vh - 110px);
+    /* remove */
+    /* height: calc(100vh - 110px); */
     padding: 20px 5%;
     z-index: 2;
     position: absolute;

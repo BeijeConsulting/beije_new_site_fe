@@ -68,6 +68,7 @@
       "contacts": "Contact us",
       "placeholder": {
         "name": "First Name Last Name*",
+        "email": "Email*",
         "state": "State*",
         "town": "Town*",
         "message": "Write here your message"

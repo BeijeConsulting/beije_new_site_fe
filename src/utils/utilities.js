@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactGa from 'react-ga';
 import { notification } from 'antd';
 import { getTranslation } from '../i18n/i18n-config';
 import { replace, toNumber } from 'lodash';
@@ -133,4 +134,17 @@ export const addBreakPoint = (sentence, division) => {
   return (
     new_sentence.map(printNewSentence)
   )
+}
+
+export const setGaEvent = (data) => () => {
+  if (data.category && data.action) {
+    ReactGa.event({
+      category: data.category, // String (Required)
+      action: data.action, // String (Required)
+      label: data.label, // String (Optional)
+      value: data.value, // Int (Optional)
+      nonInteraction: data.nonInteraction, // Bool (Optional)
+      transport: data.transport // (Optional)
+    });
+  }
 }

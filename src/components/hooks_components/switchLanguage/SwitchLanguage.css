@@ -1,11 +1,11 @@
 .switch-language-span {
-    font-family: 'Moderat-Regular', sans-serif !important;
-    font-style: normal !important;
-    font-size: 20px !important;
-    letter-spacing: 0.06em !important;
-    text-transform: uppercase !important;
+  font-family: 'Moderat-Regular', sans-serif !important;
+  font-style: normal !important;
+  font-size: 20px !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
 }
 
 .switch-language-span-selected {
-    font-weight: bold !important;
+  font-weight: bold !important;
 }

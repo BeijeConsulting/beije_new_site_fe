@@ -13,12 +13,9 @@ Library:
   Number format - https://www.npmjs.com/package/react-number-format
   helmet - https://www.npmjs.com/package/react-helmet
   lottie - https://www.npmjs.com/package/@lottiefiles/react-lottie-player
-  react fullpage - https://github.com/alvarotrigo/react-fullpage <!--Rimuovere-->
-  react-owl-carousel - https://www.npmjs.com/package/react-owl-carousel, <!--Rimuovere-->
   gsap - https://www.npmjs.com/package/gsap
   react-multi-carousel - https://www.npmjs.com/package/react-multi-carousel
-  google-map-react - https://www.npmjs.com/package/google-map-react <!--Rimuovere-->
-  react-animate-number - https://www.npmjs.com/package/animated-number-react
+  react-ga - https://www.npmjs.com/package/react-ga
 
 # look for google analytics
 to find google analytics search for the following comment: *ga*
@@ -31,4 +28,3 @@ to find seo script search for the following comment: *seo*
 
 # look for alt img
 to find alt img search for the following comment: *alt*
-

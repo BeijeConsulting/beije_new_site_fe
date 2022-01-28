@@ -9,13 +9,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 //import style
 import '../SecondSection.css'
 
-//import assets
-import {
-  ArrowRightOutlined
-} from '@ant-design/icons';
 
 //import costants
 import { cardWhoWeAre } from "../../../../utils/properties";
+
+// import gaEvent set
+import { setGaEvent } from "../../../../utils/utilities";
 
 //import components
 import CustomCard from "../../../functional_components/customCard/CustomCard";
@@ -57,6 +56,8 @@ const SecondSectionDesktop = () => {
   const printCard = (item, key) => {
     return (
       <Col
+        xs={24}
+        md={12}
         lg={6}
         key={key}
         className={item.colContainerClassName}
@@ -75,6 +76,7 @@ const SecondSectionDesktop = () => {
                 <i className={'arrow-icon-btn arrow-icon-dark'} />
               }
               href={item.href}
+              clickCallback={setGaEvent({category: "Navigation", action: "Click card arrow", label: item.cardTitle})}
             />
           </Row>
         </div>
@@ -85,7 +87,7 @@ const SecondSectionDesktop = () => {
   return (
     <>
       <Row
-        id='secondSection'
+        // id='secondSection'
         className='sec-section-row-card-container'
         ref={ref}
       >

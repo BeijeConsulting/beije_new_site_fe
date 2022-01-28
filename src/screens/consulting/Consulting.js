@@ -1,7 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import Helmet from "react-helmet";
-import AnimatedNumber from "animated-number-react";
 
 //import gsap
 import { gsap } from 'gsap'
@@ -169,10 +167,10 @@ const Consulting = (props) => {
   //     )
   // }
 
-  const sendEmailCommercial = () => {
-    console.log('Send email to commercial');
-    // *ga*
-  }
+  // const sendEmailCommercial = () => {
+  //   console.log('Send email to commercial');
+  //   // *ga*
+  // }
 
   return (
     /* *he* */
@@ -253,7 +251,8 @@ const Consulting = (props) => {
       <section className={'consulting-gsap-fourth-section consulting-form-section'}>
         <SectionForm
           title={turnToUppercase(t('Consulting.title_add_info'))}
-          callBack={sendEmailCommercial}
+          // callBack={sendEmailCommercial}
+          origin="consulting"
         />
       </section>
     </div>

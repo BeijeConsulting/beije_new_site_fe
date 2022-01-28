@@ -1,35 +1,41 @@
 :root {
-    --primary-color-bg-contacts: var(--fourth-color)
+  --primary-color-bg-contacts: var(--fourth-color)
 }
 
 .contacts-container {
-    padding: 100px 20px 40px 20px;
-    background-color: var(--primary-color-bg-contacts);
+  padding: 100px 20px 40px 20px;
+  background-color: var(--primary-color-bg-contacts);
 }
 
 .contacts-map-iframe {
-    width: 100%;
-    height: 300px;
-    border: 0;
-    border-radius: 30px;
+  width: 100%;
+  height: 300px;
+  border: 0;
+  border-radius: 30px;
 }
 
 .contacts-row-info {
-    padding: 10px 0;
+  padding: 10px 0;
 }
 
 @media screen and (min-width: 1024px) {
-    .contacts-map-iframe {
-        height: 400px;
-    }
+  .contacts-map-iframe {
+    height: 400px;
+  }
 
-    .contacts-row-info {
-        padding: 0;
-    }
+  .contacts-row-info {
+    padding: 0;
+  }
 
-    .contacts-info-container-desktop {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-    }
+  .contacts-info-container-desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
 }

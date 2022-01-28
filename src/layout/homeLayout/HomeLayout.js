@@ -9,12 +9,9 @@ import '../../style.css'
 import './HomeLayout.css'
 
 
-//Import Components
-import CustomHeader from "../../components/hooks_components/customHeader/CustomHeader";
+const { Content } = Layout;
 
-const { Header, Content } = Layout;
-
-const HomeLayout = (props) => {
+const HomeLayout = () => {
 
   const pageIsLoading = useSelector((state) => get(state.loadingDuck, 'pageIsLoading', false));
 
@@ -22,16 +19,6 @@ const HomeLayout = (props) => {
     <Layout>
 
       <Layout className="min-h-100vh">
-        <Header
-          className={!props.visibilityDuck.visibility ? 'header-ant-style-transparent' : 'header-ant-style'}
-          style={{
-            backgroundColor: props.colorHeaderDuck.colorHeader !== undefined ?
-              props.colorHeaderDuck.colorHeader : "#fff",
-            transition: '1s'
-          }}
-        >
-          <CustomHeader />
-        </Header>
 
         <Layout className="h-100">
           <Content>
@@ -42,14 +29,7 @@ const HomeLayout = (props) => {
           </Content>
         </Layout>
 
-
       </Layout>
-      {/* {
-        !props.menuDuck.menuOpen &&
-        <Footer className={'homeLayout-footer'}>
-          <CustomFooter />
-        </Footer>
-      } */}
     </Layout>
   );
 }

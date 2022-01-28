@@ -1,95 +1,112 @@
-:root {
-    --bg-color-primary-academy: var(--fifth-color);
-    --bg-color-secondary-academy: var(--fourth-color);
-    --bg-color-youtube-pills: var(--second-color);
-    --separator-color-academy: var(--first-color);
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
 
-    --academy-bg1: url('../../assets/images/academy/academy1.jpg');
-    --academy-bg2: url('../../assets/images/academy/academy2.jpg');
-    --academy-comments-picture1: url('../../assets/images/comments/img_comments.jpg');
-    --academy-comments-fraioli: url('../../assets/images/comments/fraioli_comments.jpg');
-    --academy-comments-savallo: url('../../assets/images/comments/savallo_comments.jpeg');
-    --academy-comments-diMonaco: url('../../assets/images/comments/diMonaco_comments.jpeg');
-    --academy-comments-ezpeleta: url('../../assets/images/comments/ezpeleta_comments.jpg');
-    --academy-comments-pignorio: url('../../assets/images/comments/pignorio_comments.png');
-    --academy-comments-zacheo: url('../../assets/images/comments/img_comments.jpg');
+:root {
+  --bg-color-primary-academy: var(--fifth-color);
+  --bg-color-secondary-academy: var(--fourth-color);
+  --bg-color-youtube-pills: var(--second-color);
+  --separator-color-academy: var(--first-color);
+
+  --academy-bg1: url('../../assets/images/academy/academy1.jpg');
+  --academy-bg2: url('../../assets/images/academy/academy2.jpg');
+  --academy-comments-picture1: url('../../assets/images/comments/img_comments.jpg');
+  --academy-comments-fraioli: url('../../assets/images/comments/fraioli_comments.jpg');
+  --academy-comments-savallo: url('../../assets/images/comments/savallo_comments.jpeg');
+  --academy-comments-diMonaco: url('../../assets/images/comments/diMonaco_comments.jpeg');
+  --academy-comments-ezpeleta: url('../../assets/images/comments/ezpeleta_comments.jpg');
+  --academy-comments-pignorio: url('../../assets/images/comments/pignorio_comments.png');
+  --academy-comments-zacheo: url('../../assets/images/comments/img_comments.jpg');
 }
 
 .academy-container {
-    background-color: var(--bg-color-primary-academy) !important;
-    overflow-x: hidden;
+  background-color: var(--bg-color-primary-academy) !important;
+  overflow-x: hidden;
 }
 
 /* ACADEMY FIRST PART */
 
 /* Introductive section */
 .academy-bg1 {
-    background-image: var(--academy-bg1);
+  background-image: var(--academy-bg1);
 }
 
 /* Our courses section */
 .academy-ourCourses-section {
-    /* margin-bottom: 50px; */
-    padding: 0 5%;
+  /* margin-bottom: 50px; */
+  padding: 0 5%;
 }
 
 .academy-ourCourses-section-frontend-container {
-    border-bottom: 1px solid var(--separator-color-academy);
-    margin-bottom: 48px;
+  border-bottom: 1px solid var(--separator-color-academy);
+  margin-bottom: 48px;
 }
 
 .academy-ourCourses-section-course-title {
-    font-size: 40px !important;
-    line-height: 45px !important;
-    letter-spacing: 0.06em;
-    font-weight: 500 !important;
-    text-transform: uppercase;
-    margin: 0px !important
+  font-size: 40px !important;
+  line-height: 45px !important;
+  letter-spacing: 0.06em;
+  font-weight: 500 !important;
+  text-transform: uppercase;
+  margin: 0px !important
 }
 
 .academy-ourCourses-section-lastEl {
-    border-top: none !important;
+  border-top: none !important;
 }
 
 .academy-ourCourses-second-part-container {
-    margin-top: 80px;
+  margin-top: 80px;
 }
 
 .academy-section-youtube {
-    margin-bottom: 100px;
+  margin-bottom: 100px;
 }
 
 .academy-bg2 {
-    background-image: var(--academy-bg2);
+  background-image: var(--academy-bg2);
 }
 
 .academy-ourCourses-section-youtube-card {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 
 .academy-our-courses-desc-mobile {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 /* Next courses section */
 .academy-next-courses-section {
-    margin-bottom: 30px;
-    padding: 0 5%;
+  margin-bottom: 30px;
+  padding: 0 5%;
 }
 
 .academy-next-courses-section-lastEl {
-    border-top: none !important;
+  border-top: none !important;
 }
 
 .academy-next-courses-view-all-btn-container {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 .academy-next-courses-view-all-btn {
-    display: flex;
-    justify-content: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 
 
@@ -101,127 +118,130 @@
 } */
 
 .academy-percentage-section-carousel {
-    display: block;
-    padding: 40px 0;
+  display: block;
+  padding: 40px 0;
 }
 
 .academy-percentage-section-card {
-    display: none;
+  display: none;
 }
 
 /* Comments section */
 .academy-comments-title-container {
-    padding: 0 20px;
-    margin-bottom: 40px;
+  padding: 0 20px;
+  margin-bottom: 40px;
 }
 
 .academy-comments-carousel-mobile {
-    padding: 40px 0px !important;
+  padding: 40px 0px !important;
 }
 
 .academy-comments-carousel-desktop {
-    display: none;
+  display: none;
 }
 
 .academy-comments-profile-picture1 {
-    background-image: var(--academy-comments-picture1);
+  background-image: var(--academy-comments-picture1);
 }
 
 .academy-comments-profile-fraioli {
-    background-image: var(--academy-comments-fraioli);
+  background-image: var(--academy-comments-fraioli);
 }
 
 .academy-comments-profile-savallo {
-    background-image: var(--academy-comments-savallo);
+  background-image: var(--academy-comments-savallo);
 }
 
 .academy-comments-profile-picture4 {
-    background-image: var(--academy-comments-picture1);
+  background-image: var(--academy-comments-picture1);
 }
 
 .academy-comments-profile-diMonaco {
-    background-image: var(--academy-comments-diMonaco);
+  background-image: var(--academy-comments-diMonaco);
 }
 
 .academy-comments-profile-ezpeleta {
-    background-image: var(--academy-comments-ezpeleta);
+  background-image: var(--academy-comments-ezpeleta);
 }
 
 .academy-comments-profile-pignorio {
-    background-image: var(--academy-comments-pignorio);
+  background-image: var(--academy-comments-pignorio);
 }
 
 .academy-comments-profile-zacheo {
-    background-image: var(--academy-comments-zacheo);
+  background-image: var(--academy-comments-zacheo);
 }
 
 /* Form message section */
 .academy-form-section {
-    padding: 40px 5%;
-    margin-bottom: 30px;
+  padding: 40px 5%;
+  margin-bottom: 30px;
 }
 
 
 @media screen and (min-width: 768px) {
 
-    .academy-first-part {
-        padding-bottom: 40px;
-    }
+  .academy-first-part {
+    padding-bottom: 40px;
+  }
 
-    .academy-percentage-section-carousel {
-        display: none;
-    }
+  .academy-percentage-section-carousel {
+    display: none;
+  }
 
-    .academy-percentage-section-card {
-        display: flex;
-    }
+  .academy-percentage-section-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 @media screen and (min-width: 1024px) {
 
-    .academy-first-part {
-        padding-bottom: 100px;
-        margin-bottom: -20px;
-    }
+  .academy-first-part {
+    padding-bottom: 100px;
+    margin-bottom: -20px;
+  }
 
 
-    .academy-ourCourses-section-img-container {
-        height: 622px;
-    }
+  .academy-ourCourses-section-img-container {
+    height: 622px;
+  }
 
-    .academy-ourCourses-section-img {
-        height: 622px;
-    }
+  .academy-ourCourses-section-img {
+    height: 622px;
+  }
 
-    .academy-ourCourses-section-youtube-container {
-        width: 493px;
-        height: 243px;
-        bottom: 36px;
-        right: -139px;
-    }
+  .academy-ourCourses-section-youtube-container {
+    width: 493px;
+    height: 243px;
+    bottom: 36px;
+    right: -139px;
+  }
 
 
-    .academy-single-comments-bottom {
-        margin-top: 80px !important;
-    }
+  .academy-single-comments-bottom {
+    margin-top: 80px !important;
+  }
 }
 
 @media screen and (min-width: 1440px) {
 
-    .academy-ourCourses-section {
-        margin-bottom: 40px;
-        padding: 0 15%;
-    }
+  .academy-ourCourses-section {
+    margin-bottom: 40px;
+    padding: 0 15%;
+  }
 
-    .academy-introductive-section-intro-container {
-        align-self: flex-end;
-    }
+  .academy-introductive-section-intro-container {
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+  }
 
-    .academy-next-courses-section {
-        padding: 0 15%;
-    }
+  .academy-next-courses-section {
+    padding: 0 15%;
+  }
 
-    .academy-form-section {
-        padding: 50px 15%;
-    }
+  .academy-form-section {
+    padding: 50px 15%;
+  }
 }

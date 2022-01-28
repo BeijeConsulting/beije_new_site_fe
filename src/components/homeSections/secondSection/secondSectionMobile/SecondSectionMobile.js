@@ -18,6 +18,9 @@ import {
 import { cardWhoWeAre } from "../../../../utils/properties";
 const valueObj = cardWhoWeAre[0];
 
+// import gaEvent set
+import { setGaEvent } from "../../../../utils/utilities";
+
 //import components
 import CustomCard from "../../../functional_components/customCard/CustomCard";
 import CustomButton from "../../../functional_components/Button/CustomButton";
@@ -75,6 +78,7 @@ const SecondSectionMobile = (props) => {
           }
           className={'sec-section-singleEl-gsap'}
           href={props.obj.href}
+          clickCallback={setGaEvent({category: "Navigation", action: "Click card arrow", label: props.obj.cardTitle})}
         />
       </Row>
     </div>

@@ -1,42 +1,52 @@
 :root {
-    --saparator-line: var(--first-color);
+  --saparator-line: var(--first-color);
 }
 
 .contentStyle {
-    height: 160px;
-    color: #fff;
-    text-align: center;
-    background: #364d79
+  height: 160px;
+  color: #fff;
+  text-align: center;
+  background: #364d79
 }
 
 .custom-carousel-col-arrow {
-    display: flex;
-    align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .custom-carousel-arrow {
-    height: 40px;
-    width: 40px;
-    font-size: 34px !important
+  height: 40px;
+  width: 40px;
+  font-size: 34px !important
 }
 
 .separator-line-vertical {
-    border-left: 2px solid var(--saparator-line);
-    height: 31px;
-    margin: -7px;
-    margin-bottom: 10px;
+  border-left: 2px solid var(--saparator-line);
+  height: 31px;
+  margin: -7px;
+  margin-bottom: 10px;
 }
 
 .custom-carousel-icon {
-    width: 72px;
-    height: 72px;
-    border-radius: 100%;
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 100%;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .custom-carousel-paragraph {
-    text-align: center;
+  text-align: center;
 }

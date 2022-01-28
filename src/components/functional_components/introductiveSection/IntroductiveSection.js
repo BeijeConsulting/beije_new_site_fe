@@ -234,7 +234,6 @@ const IntroductiveSection = (props) => {
                 </Row >
             }
 
-
             {/* Start of second row */}
             {
                 props.secondRow &&
