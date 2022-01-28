@@ -29,8 +29,12 @@
   width: 100%;
 }
 
-.form-input-gsap {
-    min-height: 90px;
+.form-input-container {
+    min-height: 6em;
+}
+
+.agreement-checkbox {
+    min-height: 3.5em;
 }
 
 /* .recaptcha > div > div { // if you want put recaptcha on center
@@ -190,16 +194,24 @@
   color: var(--error-color-form);
 }
 
-.ant-form-item-has-error :not(.ant-input-disabled):not(.ant-input-borderless).ant-input, .ant-form-item-has-error :not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper, .ant-form-item-has-error :not(.ant-input-disabled):not(.ant-input-borderless).ant-input:hover, .ant-form-item-has-error :not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper:hover {
+.ant-form-item-has-error {
+  border: 1px solid var(--error-color-form) !important;
+}
+
+.form-input.ant-input.ant-form-item-has-error:hover {
+  border: 2px solid var(--error-color-form) !important;
+}
+
+/* .ant-form-item-has-error :not(.ant-input-disabled):not(.ant-input-borderless).ant-input, .ant-form-item-has-error :not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper, .ant-form-item-has-error :not(.ant-input-disabled):not(.ant-input-borderless).ant-input:hover, .ant-form-item-has-error :not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper:hover {
   border-color: var(--error-color-form);
 }
 
 .ant-form-item-has-error :not(.ant-input-disabled):not(.ant-input-borderless).ant-input:focus, .ant-form-item-has-error :not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper:focus, .ant-form-item-has-error :not(.ant-input-disabled):not(.ant-input-borderless).ant-input-focused, .ant-form-item-has-error :not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper-focused {
   border-color: var(--error-color-form);
-  /* box-shadow: 0 0 0 2px rgb(177 32 9 / 20%); */
+  /* box-shadow: 0 0 0 2px rgb(177 32 9 / 20%); *
   -webkit-box-shadow: none;
   box-shadow: none;
-}
+} */
 
 input:-webkit-autofill,
 input:-webkit-autofill:focus {

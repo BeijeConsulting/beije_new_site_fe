@@ -47,9 +47,11 @@ const CustomForm = (props) => {
     t1.from(formInput, { opacity: 0, stagger: 0.3, duration: 0.5, ease: 'power2.in' })
   }, [])
 
-  const checkboxAgreementChange = (value) => {
-    formikContacts.setFieldValue('agreement', value.target.checked);
-  }
+  // const checkboxAgreementChange = (value) => {
+  //   // formikContacts.setFieldValue('agreement', value.target.checked);
+  //   formikContacts.handleChange(value);
+  //   formikContacts.handleBlur(value)
+  // }
 
   const reCaptchaChange = (value) => {
     let captchaCheck = false;
@@ -74,19 +76,19 @@ const CustomForm = (props) => {
     validate: values => {
       let errors = {};
       if (!values.name) {
-        errors.name = 'Required!'
+        errors.name = 'formValidation.required_msg'
       }
       if (!values.email) {
-        errors.email = 'Required!'
+        errors.email = 'formValidation.required_msg'
       }
       if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-        errors.email = 'Mail invalid!'
+        errors.email = 'formValidation.not_valid_msg'
       }
       if (!values.town) {
-        errors.town = 'Required!'
+        errors.town = 'formValidation.required_msg'
       }
-      if (!values.agreement) {
-        errors.agreement = 'Required!'
+      if (values.agreement === false) {
+        errors.agreement = 'formValidation.agreement'
       }
       return errors;
     },
@@ -108,62 +110,62 @@ const CustomForm = (props) => {
       >
         {
           props.nameSurname === true &&
-          <div className="form-input-gsap">
+          <div className="form-input-gsap form-input-container">
             <Input
               id="name"
               name="name"
               value={formikContacts.values.name}
               placeholder={t('home.fourthSection.placeholder.name')}
-              className='form-input form-input-alert'
+              className={`form-input ${formikContacts.errors.name && formikContacts.touched.name ? 'ant-form-item-has-error' : ''}`}
               onChange={formikContacts.handleChange}
               onBlur={formikContacts.handleBlur}
             />
-            <span>{formikContacts.errors.name && formikContacts.touched.name ? 'error name' : ''}</span>
+            <span className="input-error" >{formikContacts.errors.name && formikContacts.touched.name ? t(`${formikContacts.errors.name}`) : ''}</span>
           </div>
         }
 
         {props.moreInfo &&
           <Row>
             <Col xs={12} md={15}>
-              <div className="form-input-gsap">
+              <div className="form-input-gsap form-input-container">
                 <Input
                   id="email"
                   name="email"
                   value={formikContacts.values.email}
                   placeholder={t('home.fourthSection.placeholder.email')}
-                  className='form-input'
+                  className={`form-input ${formikContacts.errors.email && formikContacts.touched.email ? 'ant-form-item-has-error' : ''}`}
                   onChange={formikContacts.handleChange}
                   onBlur={formikContacts.handleBlur}
                 />
-                <span>{formikContacts.errors.email && formikContacts.touched.email ? 'error email' : ''}</span>
+                <span className="input-error" >{formikContacts.errors.email && formikContacts.touched.email ? t(`${formikContacts.errors.email}`) : ''}</span>
               </div>
             </Col>
             <Col xs={1} md={1} />
             <Col xs={11} md={8}>
-              <div className="form-input-gsap">
+              <div className="form-input-gsap form-input-container">
                 <Input
                   id="town"
                   name="town"
                   value={formikContacts.values.town}
                   placeholder={t('home.fourthSection.placeholder.town')}
-                  className='form-input'
+                  className={`form-input ${formikContacts.errors.town && formikContacts.touched.town ? 'ant-form-item-has-error' : ''}`}
                   onChange={formikContacts.handleChange}
                   onBlur={formikContacts.handleBlur}
                 />
-                <span>{formikContacts.errors.town && formikContacts.touched.town ? 'error town' : ''}</span>
+                <span className="input-error" >{formikContacts.errors.town && formikContacts.touched.town ? t(`${formikContacts.errors.town}`) : ''}</span>
               </div>
             </Col>
           </Row>
         }
         {
           props.message === true &&
-          <div className="form-input-gsap">
+          <div className="form-input-gsap form-input-container">
             <Input.TextArea
               id="message"
               name="message"
               value={formikContacts.values.message}
               placeholder={t('home.fourthSection.placeholder.message')}
-              className='form-input'
+              className="form-input"
               onChange={formikContacts.handleChange}
               onBlur={formikContacts.handleBlur}
               autoSize={{ minRows: 4, maxRows: 4 }}
@@ -175,29 +177,30 @@ const CustomForm = (props) => {
           props.agreement === true &&
           <Row>
             <Col xs={0} md={24}>
-              <div className="mb-1em mt-1em">
+              <div className="mb-1em mt-1em form-input-gsap agreement-checkbox">
                 <Checkbox
                   id="agreement"
                   name="agreement"
                   className={`form-input-condition ${props.classNameCheckbox}`}
-                  onChange={checkboxAgreementChange}
+                  onChange={formikContacts.handleChange("agreement")}
+                  onBlur={(e) => formikContacts.handleBlur(e)} // it is necessary for "touched" formik event
                   checked={formikContacts.values.agreement}
                 >
                   {t('home.fourthSection.agreement')}
                 </Checkbox>
-                <span>{formikContacts.errors.agreement && formikContacts.touched.agreement ? 'error agreement' : ''}</span>
+                <br />
+                <span className="input-error" >{formikContacts.errors.agreement && formikContacts.touched.agreement ? t(`${formikContacts.errors.agreement}`) : ''}</span>
               </div>
             </Col>
           </Row>
         }
-        <div className="recaptcha">
+        <div className="form-input-gsap recaptcha">
           <ReCAPTCHA
             ref={e => (state.captcha = e)}
             sitekey={googleReCaptchaKey}
             onChange={reCaptchaChange}
           />
         </div>
-
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: props.positionBtn, width: '100%' }} className='form-input-gsap'>
           <CustomButton
             content={t('home.fourthSection.send_btn')}
