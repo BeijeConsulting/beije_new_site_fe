@@ -1,7 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import Helmet from "react-helmet";
-import AnimatedNumber from "animated-number-react";
 
 //import gsap
 import { gsap } from 'gsap'
