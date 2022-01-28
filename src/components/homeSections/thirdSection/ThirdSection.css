@@ -6,11 +6,7 @@
 */
 
 .third-sec-container {
-  background-color: #fff;
-  /* remove */
-  /* margin-top: 13vh;
-  height: calc(100vh - 26vh);
-  margin-bottom: 13vh; */
+  background-color: transparent;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -18,7 +14,6 @@
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  border: 1px solid green;
 }
 
 .third-sec-row {
@@ -98,11 +93,6 @@
     transform: scale(80%);
   }
 
-  .third-sec-container {
-    /* remove */
-    /* margin-top: 3vh;
-    height: calc(100vh - 3vh); */
-  }
 }
 
 @media (-webkit-min-device-pixel-ratio: 1.3) {

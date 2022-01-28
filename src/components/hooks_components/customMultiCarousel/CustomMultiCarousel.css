@@ -209,7 +209,7 @@
 
 @media screen and (min-width: 768px) {
   .carousel-profile-picture {
-    height: 400px !important;
+    height: 500px !important;
   }
 
   .custom-carousel-lable {
@@ -261,10 +261,10 @@
 
 @media screen and (min-width: 1440px) {
 
-  /* .carousel-profile-picture {
-        width: 160px;
-        height: 500px !important;
-    } */
+  .carousel-profile-picture {
+    height: 600px !important;
+  }
+
   /* 
     .carousel-profile-single-el:hover .custom-carousel-lable {
         width: 205px;

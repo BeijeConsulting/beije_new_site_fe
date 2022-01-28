@@ -4,10 +4,6 @@
 
 .fourth-sec-container {
   background-color: transparent;
-  /* remove */
-  /* padding-top: 13vh; 
-  height: calc(100vh - 26vh);
-  padding-bottom: 13vh; */
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -15,7 +11,6 @@
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  border: 1px solid green;
 }
 
 
