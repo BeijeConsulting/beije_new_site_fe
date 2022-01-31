@@ -469,19 +469,3 @@ h2 {
     opacity: 1;
   }
 }
-
-/* .bounce-intro-positioning {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  z-index: 150;
-} */
-
-.bounce-intro {
-  z-index: 1;
-  position: absolute;
-  width: 100%;
-  /* top: -25%; */
-  /* height: 100%; */
-  pointer-events: none;
-}

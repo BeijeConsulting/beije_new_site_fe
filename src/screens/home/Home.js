@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
-// import { Helmet } from "react-helmet";
-import { connect } from "react-redux";
+import { connect, useDispatch, useSelector } from "react-redux";
 
 //import gsap
 import { gsap } from 'gsap'
@@ -19,14 +18,26 @@ import FirstSection from "../../components/homeSections/firstSection/FirstSectio
 import SecondSectionDesktop from "../../components/homeSections/secondSection/secondSectionDesktop/SecondSectionDesktop";
 import ThirdSection from "../../components/homeSections/thirdSection/ThirdSection";
 import FourthSection from "../../components/homeSections/fourthSection/FourthSection";
-
+import InitialBounce from "../../components/functional_components/initialBounce/InitialBounce";
 //import constats
 import PolygonSection from "../../components/functional_components/polygonSection/PolygonSection";
+import { setBounce } from "../../redux/ducks/Loading";
+import { get } from "lodash";
 
 
 
 const Home = (props) => {
+  const pageIsBouncing = useSelector((state) => get(state.loadingDuck, 'pageIsBouncing', false));
+  const dispatch = useDispatch();
 
+  useEffect(() => {
+    dispatch(setBounce(true));
+  }, []);
+
+  setTimeout(() => {
+    dispatch(setBounce(false));
+  }, 5000);
+  
   //GSAP
   gsap.registerPlugin(ScrollTrigger);
 
@@ -55,7 +66,9 @@ const Home = (props) => {
     <div
       className="gsap-home-container"
     >
-      <section className='home-polygen-firstSec'>
+      <InitialBounce showBounce={pageIsBouncing} />
+      <div className="container-fade-in">
+      <section className="home-polygen-firstSec">
         <BackgroundVideo
           autoPlay
           muted
@@ -67,8 +80,8 @@ const Home = (props) => {
           />
         </div>
       </section>
-
-      <div style={{ backgroundColor: '#fff' }}>
+      </div>
+      <div className={`${pageIsBouncing && 'hidden'}`} style={{ backgroundColor: '#fff' }}>
         <section
           className="home-second-section"
         >
