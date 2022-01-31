@@ -77,7 +77,7 @@ const SecondSectionMobile = (props) => {
           }
           className={'sec-section-singleEl-gsap'}
           href={props.obj.href}
-          clickCallback={setGaEvent({category: "Navigation", action: "Click card arrow", label: props.obj.cardTitle})}
+          clickCallback={() => setGaEvent({category: "Navigation", action: "Click card arrow", label: props.obj.cardTitle})}
         />
       </Row>
     </div>

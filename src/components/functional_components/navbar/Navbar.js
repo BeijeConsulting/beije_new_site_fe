@@ -25,7 +25,7 @@ const Navbar = (props) => {
         <Link
           to={`${ENVIRONMENT.ROUTING.BASE_URL}consulting`}
           className={props.classNameLink}
-          onClick={setGaEvent({ category: "Navigation", action: "Click navbar", label: "Consulting" })}
+          onClick={() => setGaEvent({ category: "Navigation", action: "Click navbar", label: "Consulting" })}
         >
           CONSULTING
         </Link>
@@ -41,7 +41,7 @@ const Navbar = (props) => {
         <Link
           to={`${ENVIRONMENT.ROUTING.BASE_URL}academy`}
           className={props.classNameLink}
-          onClick={setGaEvent({ category: "Navigation", action: "Click navbar", label: "Beije talent academy" })}
+          onClick={() => setGaEvent({ category: "Navigation", action: "Click navbar", label: "Beije talent academy" })}
         >
           BEIJE TALENT ACADEMY
         </Link>
@@ -55,7 +55,7 @@ const Navbar = (props) => {
         <Link
           to={`${ENVIRONMENT.ROUTING.BASE_URL}up`}
           className={props.classNameLink}
-          onClick={setGaEvent({ category: "Navigation", action: "Click navbar", label: "Up" })}
+          onClick={() => setGaEvent({ category: "Navigation", action: "Click navbar", label: "Up" })}
         >
           UP
         </Link>

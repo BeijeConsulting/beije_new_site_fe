@@ -242,7 +242,7 @@ const Academy = (props) => {
             textClassName='academy-ourCourses-section-course-title'
             text={t('Academy.title_academy_java')}
             href={`${ENVIRONMENT.ROUTING.BASE_URL}academy/masterBackend`}
-            clickCallback={setGaEvent({ category: "Navigation", action: "Click academy arrow", label: "Master Backend" })}
+            clickCallback={() => setGaEvent({ category: "Navigation", action: "Click academy arrow", label: "Master Backend" })}
           />
           <GoToDetailRow
             numCol={1}
@@ -250,7 +250,7 @@ const Academy = (props) => {
             text={t('Academy.title_academy_frontend')}
             href={`${ENVIRONMENT.ROUTING.BASE_URL}academy/masterFrontend`}
             containerClassName={'academy-ourCourses-section-lastEl'}
-            clickCallback={setGaEvent({ category: "Navigation", action: "Click academy arrow", label: "Master Frontent" })}
+            clickCallback={() => setGaEvent({ category: "Navigation", action: "Click academy arrow", label: "Master Frontent" })}
           />
 
           <Row className="academy-ourCourses-second-part-container academy-gsap-our-courses-row2">
@@ -323,7 +323,7 @@ const Academy = (props) => {
                   type={'secondary-social'}
                   href={social[2].url}
                   bgIcon='btn-youtube-bg'
-                  clickCallback={setGaEvent({ category: "Social", action: "Click button academy", label: "Youtube" })}
+                  clickCallback={() => setGaEvent({ category: "Social", action: "Click button academy", label: "Youtube" })}
                 />
               </>
 
