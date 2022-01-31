@@ -176,6 +176,17 @@ const IntroductiveSection = (props) => {
                                     ulClassName={props.ulClassName}
                                     listToPrint={props.listToPrint}
                                 />
+
+                                {
+                                    props.candidateBtn &&
+
+
+                                    <CustomButton
+                                        content={props.btnContent}
+                                        htmlType='submit'
+                                        type={'form-btn'}
+                                    />
+                                }
                             </Row>
                         }
 
@@ -213,7 +224,7 @@ const IntroductiveSection = (props) => {
                         </Col>
                     }
 
-                    {
+                    {/* {
                         props.candidateBtn &&
 
                         <Col
@@ -230,7 +241,7 @@ const IntroductiveSection = (props) => {
                         </Col>
                         // </Row>
 
-                    }
+                    } */}
                 </Row >
             }
 

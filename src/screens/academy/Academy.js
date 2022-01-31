@@ -7,6 +7,7 @@ import { Row, Col } from "antd";
 import { connect } from "react-redux";
 import { setColorHeader } from "../../redux/ducks/colorHeaderDuck";
 import { setPageFocus, initPageFocus } from "../../redux/ducks/pageFocusDuck";
+import { initVisibility } from "../../redux/ducks/visibilityDuck";
 
 //import gsap
 import { gsap } from 'gsap'
@@ -51,6 +52,9 @@ const Academy = (props) => {
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     props.dispatch(setPageFocus('academy'));
+    props.dispatch(initVisibility())
+    props.dispatch(setColorHeader(primary_bg_page_academy))
+
 
     const element = ref.current;
 

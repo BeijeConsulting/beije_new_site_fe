@@ -9,6 +9,29 @@
     "youWantLogout": "Do you want to exit the portal? ",
     "cancel": "Cancel"
   },
+  "helmet": {
+    "meta_title": {
+      "home": "",
+      "consulting": "",
+      "academy": "",
+      "up": "",
+      "whoweare": ""
+    },
+    "meta_description": {
+      "home": "",
+      "consulting": "",
+      "academy": "",
+      "up": "",
+      "whoweare": ""
+    },
+    "keywords": {
+      "home": "",
+      "consulting": "",
+      "academy": "",
+      "up": "",
+      "whoweare": ""
+    }
+  },
   "formValidation": {
     "required_msg": "Required field",
     "not_valid_msg": "Not valid field",
@@ -39,7 +62,7 @@
     "academy": "BEIJE TALENT ACADEMY",
     "up": "UP",
     "career": "CAREER",
-    "whoWeAre": "WHO WE ARE",
+    "whoWeAre": "ABOUT US",
     "contacts": "CONTACTS",
     "blog": "BLOG",
     "community": "COMMUNITY",
@@ -175,51 +198,51 @@
     },
     "program": {
       "section1": {
-        "title": "Java basi e teoria",
-        "subsection1": "Fondamenti di Java e di programmazione ad oggetti",
-        "subsection2": "Variabili: differenza tra tipi primitivi e rifermenti ad oggetti",
-        "subsection3": "Gli operatori in Java: aritmetici, unari e binari",
-        "subsection4": "Costrutti condizionali ed iterativi; controllo avanzato del flusso",
-        "subsection5": "La classe String ed il concetto di immutabilità",
-        "subsection6": "La classe StringBuilder ed il concetto di “uguaglianza” tra oggetti in Java",
-        "subsection7": "Gli array mono e multidimensionali in Java; la classe ArrayList",
-        "subsection8": "La gestione di data ed orario in Java",
-        "subsection9": "Design dei metodi: modificatori di accesso e passaggio di parametri",
-        "subsection10": "I metodi “Costruttori” e l’overloading di metodi in una classe",
-        "subsection11": "Ereditarietà e classi astratte",
-        "subsection12": "Interfacce e Polimorfismo",
-        "subsection13": "Gestire le eccezioni in Java",
-        "subsection14": "Accenni di programmazione funzionale in Java: scrivere semplici funzioni Lambda",
-        "subsection15": "I Design Patterns: Builder, Factory, Singleton e Decorator"
+        "title": "Java Basis and theory",
+        "subsection1": "Fundamentals of Java and object-oriented programming",
+        "subsection2": "Variables: difference between primitive types and object references",
+        "subsection3": "Operators in Java: arithmetic, unary and binary",
+        "subsection4": "Conditional and iterative constructs; advanced flow control",
+        "subsection5": "The String class and the concept of immutability",
+        "subsection6": "The StringBuilder class and the concept of “equality” between objects in Java",
+        "subsection7": "Mono and multidimensional arrays in Java; the ArrayList class",
+        "subsection8": "The management of date and time in Java",
+        "subsection9": "Method design: access modifiers and parameter passing",
+        "subsection10": "The “Constructors” methods and overloading of methods in a class",
+        "subsection11": "Inheritance and abstract classes",
+        "subsection12": "Interfaces and Polymorphism",
+        "subsection13": "Handling exceptions in Java",
+        "subsection14": "Hints of functional programming in Java: writing simple Lambda functions",
+        "subsection15": "The Design Patterns: Builder, Factory, Singleton and Decorator"
       },
       "section2": {
         "title": "Java I/O",
-        "subsection1": "Leggere e scrivere file in Java",
-        "subsection2": "Organizzare dati in file CSV",
-        "subsection3": "Il formato XML e come gestirlo in Java",
-        "subsection4": "Importare ed esportare dati da fonti e formati differenti"
+        "subsection1": "Read and write files in Java",
+        "subsection2": "Organize data in CSV files",
+        "subsection3": "The XML format and how to handle it in Java",
+        "subsection4": "Import and export data from different sources and formats"
       },
       "section3": {
-        "title": "Java e database",
-        "subsection1": "Teoria dei DataBase",
-        "subsection2": "Il linguaggio SQL",
-        "subsection3": "Interfacciarsi ad un database con JDBC",
+        "title": "Java & database",
+        "subsection1": "DataBase theory",
+        "subsection2": "The SQL language",
+        "subsection3": "Interface to a database with JDBC",
         "subsection4": "JPA: Java Persistence Api",
-        "subsection5": "Il framework Hibernate per ORM e JPA",
-        "subsection6": "Usare Maven per la gestione dei progetti"
+        "subsection5": "The Hibernate framework for ORM and JPA",
+        "subsection6": "Use Maven for project management"
       },
       "section4": {
-        "title": "Java per il web",
-        "subsection1": "Java per il Web: Servlet e JSP, HTML e CSS",
-        "subsection2": "Il concetto di sessione e l’utilizzo di bean per il mantenimento e trasporto dei dati",
-        "subsection3": "Il Design Pattern Model-View-Controller",
-        "subsection4": "Il framework Spring: Inversion of Control & Dependencies Injection",
-        "subsection5": "SpringMVC: DispatcherServlet, controller, model e views",
-        "subsection6": "Spring JPA e Spring Security",
-        "subsection7": "Web Service SOAP: implementazione di un server ed un client",
-        "subsection8": "Web Service REST: il formato JSON ed implementazione di un WS REST con SpringMVC",
-        "subsection9": "DOM e Javascript",
-        "subsection10": "AJAX: utilizzo del comando fetch per le chiamate asincrone"
+        "title": "Java for the web",
+        "subsection1": "Java for the Web: Servlets and JSPs, HTML and CSS",
+        "subsection2": "The concept of session and the use of beans for the maintenance and transport of data",
+        "subsection3": "The Design Pattern Model-View-Controller",
+        "subsection4": "The Spring: Inversion of Control & Dependencies Injection framework",
+        "subsection5": "SpringMVC: DispatcherServlet, controller, model and views",
+        "subsection6": "Spring JPA and Spring Security",
+        "subsection7": "Web Service SOAP: implementation of a server and a client",
+        "subsection8": "Web Service REST: the JSON format and implementation of a WS REST with SpringMVC",
+        "subsection9": "DOM and Javascript",
+        "subsection10": "AJAX: Using the fetch command for asynchronous calls"
       }
     }
   },
@@ -241,14 +264,14 @@
         "subsection2": "HTML5",
         "subsection3": "CSS3",
         "subsection4": "ES6",
-        "subsection6": "Programmazione generale",
+        "subsection6": "General programming",
         "subsection7": "Git"
       },
       "section2": {
         "title": "React",
-        "subsection1": "React, la libreria dedicata al frontend",
+        "subsection1": "React: the library dedicated to frontend",
         "subsection2": "React vs JQuery vs AngularJS Vs Vue",
-        "subsection3": "Gestione e organizzazione del Progetto",
+        "subsection3": "Project management and organization",
         "subsection4": "Hooks & Class",
         "subsection5": "Components, State, Props and Lifecycle events",
         "subsection6": "Routing and Navigation",
@@ -265,7 +288,7 @@
         "subsection6": "Redux"
       },
       "section4": {
-        "title": "Approfondimenti",
+        "title": "Insights",
         "subsection1": "Npm module custom",
         "subsection2": "Interactive application (Ar/Vr)",
         "subsection3": "Games"
@@ -273,7 +296,7 @@
     }
   },
   "WhoWeAre": {
-    "title": "Who we are",
+    "title": "About Us",
     "value_title": "Values",
     "value_list": {
       "el1": {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from "react-redux";
-import { Row, Col, Image, Typography } from 'antd';
-const { Link } = Typography;
+import { Link } from 'react-router-dom';
+import { Row, Col, Image } from 'antd';
 
 //import constats
 import { ENVIRONMENT } from '../../../utils/properties';
@@ -25,11 +25,15 @@ const CustomHeader = (props) => {
     <>
       <Row className='d-flex items-center'>
         <Col xs={12} sm={12} lg={5} className='container-row items-center'>
-          <Link href={ENVIRONMENT.ROUTING.BASE_URL} className={'header-img-container'}>
+          <Link
+            to={ENVIRONMENT.ROUTING.BASE_URL}
+            className={'header-img-container'}
+          >
             <Image
               className={'header-logo'}
               preview={false}
-              src={!props.menuDuck.menuOpen ? logo_dark : logo_light}
+              // src={!props.menuDuck.menuOpen ? logo_dark : logo_light}
+              src={props.colorHeaderDuck.colorHeader === 'transparent' || props.colorHeaderDuck.colorHeader === '#52798e' || props.menuDuck.menuOpen ? logo_light : logo_dark}
               width='100%'
             />
           </Link>
@@ -69,7 +73,8 @@ const mapStateToProps = state => (
   {
     menuDuck: state.menuDuck,
     colorDuck: state.colorDuck,
-    visibilityDuck: state.visibilityDuck
+    visibilityDuck: state.visibilityDuck,
+    colorHeaderDuck: state.colorHeaderDuck
   }
 )
 

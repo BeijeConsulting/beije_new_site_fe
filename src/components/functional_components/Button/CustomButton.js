@@ -30,7 +30,7 @@ const CustomButton = (props) => {
         currentClassName = 'secondary-arrow circular-btn d-flex items-center justify-center'
         break;
       case "primary-social":
-        currentClassName = "custom-btn-primary-social circular-btn d-flex items-center justify-center"
+        currentClassName = `custom-btn-primary-social ${props.bgIcon} circular-btn d-flex items-center justify-center`
         break;
       case "secondary-social":
         currentClassName = `custom-btn-secondary-social ${props.bgIcon} circular-btn d-flex items-center justify-center`
@@ -88,6 +88,7 @@ const CustomButton = (props) => {
         icon={props.currentIcon}
         href={props.href}
         htmlType={props.htmlType}
+        target={props.target}
       >
         {props.content}
       </Button>

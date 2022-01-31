@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
+import { Link } from "react-router-dom";
 
-import { Row, Col, Typography, Layout } from 'antd';
+
+import { Row, Col, Layout } from 'antd';
 const { Header, Content } = Layout;
-const { Link } = Typography;
 
 //action dispatched
 import { setMenu, initMenu } from '../../../redux/ducks/menuDuck'
@@ -66,13 +67,23 @@ const BurgerMenu = (props) => {
     })
   }
 
+  const clickOnLink = ({ item }) => () => {
+    setGaEvent({ category: "Navigation", action: "Burger menu", label: item.title })
+    props.dispatch(initMenu())
+    setState({
+      ...state,
+      openMenu: !state.openMenu
+    })
+
+  }
+
   const printPrimaryMenu = (item, key) => {
     if (item.typeMenu === 'primary') {
       return (
         <Link
           key={key}
-          href={item.linkTo}
-          onClick={setGaEvent({ category: "Navigation", action: "Burger menu", label: item.title })}
+          to={item.linkTo}
+          onClick={clickOnLink({ item })}
         >
           <CustomCard
             titleClassName={state.stateLink && state.idElement === key ? item.titleStyleHover : item.titleStyle}
@@ -90,8 +101,8 @@ const BurgerMenu = (props) => {
       return (
         <Link
           key={key}
-          href={item.linkTo}
-          onClick={setGaEvent({ category: "Navigation", action: "Burger menu", label: item.title })}
+          to={item.linkTo}
+          onClick={clickOnLink({ item })}
         >
           <CustomCard
             titleClassName={state.stateLink && state.idElement === key ? item.titleStyleHover : item.titleStyle}

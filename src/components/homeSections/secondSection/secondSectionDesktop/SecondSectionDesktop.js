@@ -87,7 +87,7 @@ const SecondSectionDesktop = () => {
   return (
     <>
       <Row
-        // id='secondSection'
+        id='secondSection'
         className='sec-section-row-card-container'
         ref={ref}
       >

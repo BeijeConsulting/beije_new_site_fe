@@ -9,7 +9,6 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 //import style
-import 'antd/dist/antd.css';
 import './CustomForm.css'
 
 //import components
@@ -176,7 +175,7 @@ const CustomForm = (props) => {
         {
           props.agreement === true &&
           <Row>
-            <Col xs={0} md={24}>
+            <Col xs={24} md={24}>
               <div className="mb-1em mt-1em form-input-gsap agreement-checkbox">
                 <Checkbox
                   id="agreement"
@@ -201,7 +200,7 @@ const CustomForm = (props) => {
             onChange={reCaptchaChange}
           />
         </div>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: props.positionBtn, width: '100%' }} className='form-input-gsap'>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: props.positionBtn, width: '100%' }} className='mt-1em form-input-gsap'>
           <CustomButton
             content={t('home.fourthSection.send_btn')}
             type={props.typeBtn}

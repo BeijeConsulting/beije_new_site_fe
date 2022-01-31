@@ -12,6 +12,7 @@ import { Row, Col } from "antd";
 import { connect } from "react-redux";
 import { setColorHeader } from "../../redux/ducks/colorHeaderDuck";
 import { setPageFocus, initPageFocus } from "../../redux/ducks/pageFocusDuck";
+import { initVisibility } from "../../redux/ducks/visibilityDuck";
 
 //import style
 import './Consulting.css';
@@ -48,6 +49,8 @@ const Consulting = (props) => {
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     props.dispatch(setPageFocus('consulting'));
+    props.dispatch(initVisibility())
+    props.dispatch(setColorHeader(primary_bg_page_consulting))
 
     const element = ref.current;
 

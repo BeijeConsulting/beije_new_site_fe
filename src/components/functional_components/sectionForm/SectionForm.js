@@ -46,6 +46,7 @@ const SectionForm = (props) => {
     return (
         <div
             ref={ref}
+            className={props.classNameFormContainer}
         >
             <Row>
                 <Col
@@ -101,6 +102,7 @@ const SectionForm = (props) => {
 }
 
 SectionForm.defaultProps = {
+    classNameFormContainer: "sec-form-container",
     marginBottom: '10px',
     LongLineAbove: false,
     positionBtn: 'flex-end',

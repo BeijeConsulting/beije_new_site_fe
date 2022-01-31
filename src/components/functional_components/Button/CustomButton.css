@@ -1,17 +1,14 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.3.6,
-* Autoprefixer: v10.3.1
-* Browsers: last 4 version
-*/
-
 :root {
     --primary-btn-color: var(--first-color);
     --primary-btn-shadow: rgb(50, 62, 72, 0.50);
     --secondary-btn-color: var(--fourth-color);
 
-    --social-youtube-light-btn: url('../../../assets/icons/social_icon/youtube_light_circle.png');
-    --social-youtube-btn: url('../../../assets/icons/social_icon/youtube_dark_circle.png');
+    --social-yt-light-btn: url('../../../assets/icons/social_icon/social_circle/yt_bg_light_v2.svg');
+    --social-yt-btn: url('../../../assets/icons/social_icon/social_circle/yt_bg_dark_v2.svg');
+    --social-fb-light-btn: url('../../../assets/icons/social_icon/social_circle/fb_bg_light.svg');
+    --social-fb-btn: url('../../../assets/icons/social_icon/social_circle/fb_bg_dark.svg');
+    --social-in-light-btn: url('../../../assets/icons/social_icon/social_circle/in_bg_light.svg');
+    --social-in-btn: url('../../../assets/icons/social_icon/social_circle/in_bg_dark.svg');
 
     --arrow-white-btn: url('../../../assets/icons/arrow_white.png');
     --arrow-dark-btn: url('../../../assets/icons/arrow.svg');
@@ -28,34 +25,68 @@
 /* Social */
 
 .custom-btn-primary-social {
-    background-color: var(--secondary-btn-color);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 30px !important;
     width: 30px !important;
     line-height: 30px !important;
     outline: none !important;
-    border: none;
+    border: none !important;
+}
+
+.btn_fb_default {
+    background-image: var(--social-fb-light-btn) !important;
+}
+
+.btn_in_default {
+    background-image: var(--social-in-light-btn) !important;
+}
+
+.btn_yt_default {
+    background-image: var(--social-yt-light-btn) !important;
 }
 
 .custom-btn-primary-social:hover {
-    background-color: var(--primary-btn-color);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
     outline: none !important;
-    border: none;
+    border: none !important;
 }
 
-.custom-btn-primary-social:hover>.icon-social {
-    -webkit-filter: brightness(0) invert(1);
-    filter: brightness(0) invert(1)
+.btn_fb_default:hover {
+    background-image: var(--social-fb-btn) !important;
+}
+
+.btn_in_default:hover {
+    background-image: var(--social-in-btn) !important;
+}
+
+.btn_yt_default:hover {
+    background-image: var(--social-yt-btn) !important;
 }
 
 .custom-btn-primary-social:active {
-    background-color: var(--primary-btn-color);
     outline: none !important;
     border: none;
 }
 
-.custom-btn-primary-social:active>.icon-social {
-    -webkit-filter: brightness(0) invert(1);
-    filter: brightness(0) invert(1)
+.btn_fb_default:active {
+    background-image: var(--social-fb-dark-btn) !important;
+}
+
+.btn_in_default:active {
+    background-image: var(--social-in-dark-btn) !important;
+}
+
+.btn_yt_default:active {
+    background-image: var(--social-yt-dark-btn) !important;
+}
+
+.custom-btn-primary-social:empty {
+    visibility: visible !important;
 }
 
 
@@ -67,11 +98,11 @@
     width: 45px !important;
     line-height: 30px !important;
     outline: none !important;
-    border: none;
+    border: none !important;
 }
 
 .btn-youtube-bg {
-    background-image: var(--social-youtube-light-btn) !important;
+    background-image: var(--social-yt-light-btn) !important;
 }
 
 .custom-btn-secondary-social:hover {
@@ -80,11 +111,11 @@
     background-size: cover;
 
     outline: none !important;
-    border: none;
+    border: none !important;
 }
 
 .btn-youtube-bg:hover {
-    background-image: var(--social-youtube-btn) !important;
+    background-image: var(--social-yt-btn) !important;
 }
 
 .custom-btn-secondary-social:active {
@@ -93,7 +124,7 @@
 }
 
 .btn-youtube-bg:active {
-    background-image: var(--social-youtube-btn) !important;
+    background-image: var(--social-yt-btn) !important;
 
 }
 
@@ -224,13 +255,24 @@
 .custom-btn-form:hover {
     border: 1px solid var(--primary-btn-color) !important;
     color: #fff !important;
-    background-color: transparent !important;
+    background-color: var(--primary-btn-color) !important;
+    -webkit-box-shadow: 4px 4px 6px 0px var(--primary-btn-shadow);
+    box-shadow: 4px 4px 6px 0px var(--primary-btn-shadow);
 }
 
 .custom-btn-form:focus {
     border: 1px solid var(--primary-btn-color) !important;
     color: #fff !important;
     background-color: var(--primary-btn-color) !important;
+    -webkit-box-shadow: 4px 4px 6px 0px var(--primary-btn-shadow);
+    box-shadow: 4px 4px 6px 0px var(--primary-btn-shadow);
+}
+
+.custom-btn-form:disabled {
+    border: 1px solid var(--primary-btn-color) !important;
+    color: #fff !important;
+    background-color: var(--primary-btn-color) !important;
+    opacity: 0.8;
 }
 
 .custom-btn-form-light {

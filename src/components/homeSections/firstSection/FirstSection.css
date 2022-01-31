@@ -12,6 +12,7 @@
   -ms-flex-pack: center;
   justify-content: center;
   height: 100%;
+  margin: 0 5%;
   /* position: relative; */
 }
 
@@ -26,6 +27,11 @@
   .home-fp-title {
     font-size: 35px !important;
   }
+
+  .home-fp-container {
+    margin: 0%;
+  }
+
 }
 
 @media screen and (min-width: 992px) {
@@ -36,11 +42,11 @@
 }
 
 
-@media (-webkit-min-device-pixel-ratio: 1.25) {
+@media (min-resolution: 119dpi) and (-webkit-min-device-pixel-ratio: 1.25) {
   .home-fp-container {
     -webkit-transform: scale(80%);
     -ms-transform: scale(80%);
-    transform: scale(80%)
+    transform: scale(80%);
   }
 
   .scroll-btn-container {
@@ -48,7 +54,7 @@
   }
 }
 
-@media (-webkit-min-device-pixel-ratio: 1.3) {
+@media (min-resolution: 119dpi) and (-webkit-min-device-pixel-ratio: 1.3) {
   .home-fp-container {
     -webkit-transform: scale(75%);
     -ms-transform: scale(75%);

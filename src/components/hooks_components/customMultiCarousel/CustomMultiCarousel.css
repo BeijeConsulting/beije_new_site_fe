@@ -35,8 +35,8 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 120px;
-  height: 200px !important;
+  width: 80%;
+  height: 270px !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -199,12 +199,6 @@
 
 .custom-carousel-lable-role {
   display: none;
-}
-
-@media screen and (min-width: 400px) {
-  .carousel-profile-picture {
-    width: 80%;
-  }
 }
 
 @media screen and (min-width: 768px) {

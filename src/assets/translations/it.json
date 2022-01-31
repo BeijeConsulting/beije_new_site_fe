@@ -9,6 +9,29 @@
     "youWantLogout": "Vuoi uscire dal portale?",
     "cancel": "Annulla"
   },
+  "helmet": {
+    "meta_title": {
+      "home": "",
+      "consulting": "",
+      "academy": "",
+      "up": "",
+      "whoweare": ""
+    },
+    "meta_description": {
+      "home": "",
+      "consulting": "",
+      "academy": "",
+      "up": "",
+      "whoweare": ""
+    },
+    "keywords": {
+      "home": "",
+      "consulting": "",
+      "academy": "",
+      "up": "",
+      "whoweare": ""
+    }
+  },
   "formValidation": {
     "required_msg": "Campo obbligatorio",
     "not_valid_msg": "Campo non valido",

@@ -30,6 +30,8 @@ const WhoWeAre = (props) => {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
+    props.dispatch(setColorHeader(primary_bg_page_academy))
+
     return () => window.removeEventListener("scroll", handleScroll);
   });
 

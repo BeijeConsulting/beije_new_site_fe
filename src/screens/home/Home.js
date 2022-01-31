@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
-// import { Helmet } from "react-helmet";
-import { connect } from "react-redux";
+import { connect, useDispatch, useSelector } from "react-redux";
 
 //import gsap
 import { gsap } from 'gsap'
@@ -19,13 +18,26 @@ import FirstSection from "../../components/homeSections/firstSection/FirstSectio
 import SecondSectionDesktop from "../../components/homeSections/secondSection/secondSectionDesktop/SecondSectionDesktop";
 import ThirdSection from "../../components/homeSections/thirdSection/ThirdSection";
 import FourthSection from "../../components/homeSections/fourthSection/FourthSection";
-
+import InitialBounce from "../../components/functional_components/initialBounce/InitialBounce";
 //import constats
 import PolygonSection from "../../components/functional_components/polygonSection/PolygonSection";
+import { setBounce } from "../../redux/ducks/Loading";
+import { get } from "lodash";
+import { Helmet } from "react-helmet";
 
 
 
 const Home = (props) => {
+  const pageIsBouncing = useSelector((state) => get(state.loadingDuck, 'pageIsBouncing', false));
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(setBounce(true));
+  }, []);
+
+  setTimeout(() => {
+    dispatch(setBounce(false));
+  }, 5000);
 
   //GSAP
   gsap.registerPlugin(ScrollTrigger);
@@ -33,6 +45,7 @@ const Home = (props) => {
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     props.dispatch(setVisibility(false))
+    props.dispatch(initColorHeader())
 
     return () => {
       window.removeEventListener("scroll", handleScroll)
@@ -51,49 +64,57 @@ const Home = (props) => {
   }
 
   return (
+    <>
+      <Helmet>
+        <title>My Title</title>
+        <meta name="description" content="Free Web tutorials" />
+        <meta name="keywords" content="HTML, CSS, JavaScript" />
+      </Helmet>
 
-    <div
-      className="gsap-home-container"
-    >
-      <section className='home-polygen-firstSec'>
-        <BackgroundVideo
-          autoPlay
-          muted
-          loop
-          src={'https://beije.s3.eu-west-1.amazonaws.com/video_home.mp4'}
-        />
-        <div className="home-video-filter">
-          <FirstSection
-          />
-        </div>
-      </section>
-
-      <div style={{ backgroundColor: '#fff' }}>
-        <section
-          className="home-second-section"
-        >
-          <SecondSectionDesktop />
-        </section>
-
-        <PolygonSection>
-          <section>
-            <ThirdSection />
+      <div
+        className="gsap-home-container"
+      >
+        <InitialBounce showBounce={pageIsBouncing} />
+        <div className={`${pageIsBouncing && 'overflow-hidden'} container-fade-in`}>
+          <section className="home-polygen-firstSec">
+            <BackgroundVideo
+              autoPlay
+              muted
+              loop
+              src={'https://beije.s3.eu-west-1.amazonaws.com/video_home.mp4'}
+            />
+            <div className="home-video-filter">
+              <FirstSection
+              />
+            </div>
           </section>
-        </PolygonSection>
+        </div>
+        <div className={`${pageIsBouncing && 'hidden'}`} style={{ backgroundColor: '#fff' }}>
+          <section
+            className="home-second-section"
+          >
+            <SecondSectionDesktop />
+          </section>
 
-        {/* <PolygonSection
+          <PolygonSection>
+            <section>
+              <ThirdSection />
+            </section>
+          </PolygonSection>
+
+          {/* <PolygonSection
           polygenClipPath={'home-polygen-clip-path-contancts'}
         > */}
-        <section
-        // className="home-fourth-section"
-        >
-          <FourthSection />
-        </section>
-        {/* </PolygonSection> */}
-      </div>
+          <section
+            className="home-fourth-section"
+          >
+            <FourthSection />
+          </section>
+          {/* </PolygonSection> */}
+        </div>
 
-    </div >
-
+      </div >
+    </>
   );
 }
 
