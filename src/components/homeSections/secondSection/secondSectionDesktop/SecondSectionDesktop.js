@@ -76,7 +76,7 @@ const SecondSectionDesktop = () => {
                 <i className={'arrow-icon-btn arrow-icon-dark'} />
               }
               href={item.href}
-              clickCallback={setGaEvent({category: "Navigation", action: "Click card arrow", label: item.cardTitle})}
+              clickCallback={() => setGaEvent({category: "Navigation", action: "Click card arrow", label: item.cardTitle})}
             />
           </Row>
         </div>

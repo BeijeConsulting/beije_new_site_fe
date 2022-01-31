@@ -93,7 +93,7 @@ const ThirdSection = () => {
                         <CustomButton
                             type={'view-all-btn'}
                             content={<ViewAllButton />}
-                            clickCallback={setGaEvent({category: "Navigation", action: "Click view all", label: "Third section home"})}
+                            clickCallback={() => setGaEvent({category: "Navigation", action: "Click view all", label: "Third section home"})}
                             href={`${ENVIRONMENT.ROUTING.BASE_URL}whoweare`}
                         />
                     </Col>

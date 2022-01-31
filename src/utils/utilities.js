@@ -136,7 +136,7 @@ export const addBreakPoint = (sentence, division) => {
   )
 }
 
-export const setGaEvent = (data) => () => {
+export const setGaEvent = (data) => {
   if (data.category && data.action) {
     ReactGa.event({
       category: data.category, // String (Required)
