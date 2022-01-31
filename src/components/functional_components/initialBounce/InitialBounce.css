@@ -56,7 +56,6 @@
 }
 
 .container-fade-in {
-  overflow: hidden;
   animation: fade-in 3s ease;
 }
 
