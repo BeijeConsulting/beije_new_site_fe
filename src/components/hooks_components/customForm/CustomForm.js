@@ -9,7 +9,6 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 //import style
-import 'antd/dist/antd.css';
 import './CustomForm.css'
 
 //import components
