@@ -18,7 +18,8 @@ const GeneralLayout = () => {
         <Layout className="h-100">
           <Content>
             <div>
-              {pageIsLoading ? <LoadingBounce /> : <Outlet />}
+              {pageIsLoading && <LoadingBounce />}
+              <Outlet />
             </div>
           </Content>
         </Layout>
