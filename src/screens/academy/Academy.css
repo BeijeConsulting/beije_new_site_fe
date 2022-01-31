@@ -13,13 +13,14 @@
 
   --academy-bg1: url('../../assets/images/academy/academy1.jpg');
   --academy-bg2: url('../../assets/images/academy/academy2.jpg');
-  --academy-comments-picture1: url('../../assets/images/comments/img_comments.jpg');
+  --academy-comments-farina: url('../../assets/images/comments/farina_comments.jpg');
   --academy-comments-fraioli: url('../../assets/images/comments/fraioli_comments.jpg');
   --academy-comments-savallo: url('../../assets/images/comments/savallo_comments.jpeg');
+  --academy-comments-busseni: url('../../assets/images/comments/busseni_comments.jpeg');
   --academy-comments-diMonaco: url('../../assets/images/comments/diMonaco_comments.jpeg');
   --academy-comments-ezpeleta: url('../../assets/images/comments/ezpeleta_comments.jpg');
   --academy-comments-pignorio: url('../../assets/images/comments/pignorio_comments.png');
-  --academy-comments-zacheo: url('../../assets/images/comments/img_comments.jpg');
+  --academy-comments-zacheo: url('../../assets/images/comments/zacheo_comments.jpg');
 }
 
 .academy-container {
@@ -140,8 +141,8 @@
   display: none;
 }
 
-.academy-comments-profile-picture1 {
-  background-image: var(--academy-comments-picture1);
+.academy-comments-profile-farina {
+  background-image: var(--academy-comments-farina);
 }
 
 .academy-comments-profile-fraioli {
@@ -152,8 +153,8 @@
   background-image: var(--academy-comments-savallo);
 }
 
-.academy-comments-profile-picture4 {
-  background-image: var(--academy-comments-picture1);
+.academy-comments-profile-busseni {
+  background-image: var(--academy-comments-busseni);
 }
 
 .academy-comments-profile-diMonaco {
@@ -171,13 +172,6 @@
 .academy-comments-profile-zacheo {
   background-image: var(--academy-comments-zacheo);
 }
-
-/* Form message section */
-.academy-form-section {
-  padding: 40px 5%;
-  margin-bottom: 30px;
-}
-
 
 @media screen and (min-width: 768px) {
 
@@ -240,8 +234,25 @@
   .academy-next-courses-section {
     padding: 0 15%;
   }
+}
 
-  .academy-form-section {
-    padding: 50px 15%;
+
+@media (-webkit-min-device-pixel-ratio: 1.25) {
+  .academy-ourCourses-section {
+    -webkit-transform: scale(80%);
+    -ms-transform: scale(80%);
+    transform: scale(80%);
+
+    padding: 0%
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.3) {
+  .academy-ourCourses-section {
+    -webkit-transform: scale(75%);
+    -ms-transform: scale(75%);
+    transform: scale(75%);
+
+    padding: 0%;
   }
 }

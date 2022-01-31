@@ -125,6 +125,7 @@ const SubsectionTitleImg = (props) => {
                                     type={'secondary-social'}
                                     href={social[2].url}
                                     bgIcon='btn-youtube-bg'
+                                    target={'_blank'}
                                 />
                             </div>
                         }
@@ -173,6 +174,7 @@ const SubsectionTitleImg = (props) => {
                                 type={'secondary-social'}
                                 href={social[2].url}
                                 bgIcon='btn-youtube-bg'
+                                target={'_blank'}
                             />
                         </div>
                     }
@@ -192,7 +194,20 @@ const SubsectionTitleImg = (props) => {
                                     type={'secondary-social'}
                                     href={social[2].url}
                                     bgIcon='btn-youtube-bg'
+                                    target={'_blank'}
                                 />
+                                {/* <CustomButton
+                                    btnType={'secondary-social'}
+                                    href={social[2].url}
+                                    target={social[2].target}
+                                    currentIcon={
+                                        <img
+                                            src={social[2].icon}
+                                            alt={t(`imgAlt.social.${social[2].alt}`)}
+                                            className={social[2].iconClassname}
+                                        />
+                                    }
+                                /> */}
                             </div>
                         }
                     </div>

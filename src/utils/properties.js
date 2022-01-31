@@ -73,7 +73,7 @@ export const langMonth = {
 export const social = [
   {
     name: "Facebook",
-    icon: icon_facebook,
+    bgIcon: 'btn_fb_default',
     url: 'https://www.facebook.com/beijepeoplefirst',
     alt: 'fb',
     target: '_blank',
@@ -81,7 +81,7 @@ export const social = [
   },
   {
     name: "Linkedin",
-    icon: icon_instagram,
+    bgIcon: 'btn_in_default',
     url: 'https://www.linkedin.com/company/beije',
     alt: 'in',
     target: '_blank',
@@ -89,7 +89,7 @@ export const social = [
   },
   {
     name: "Youtube",
-    icon: icon_youTube,
+    bgIcon: 'btn_yt_default',
     url: 'https://www.youtube.com/channel/UCGZdqNE152QBvg9WZ4E65Iw',
     alt: 'youTube',
     target: '_blank',
@@ -395,30 +395,30 @@ export const academy_comments = [
     commentsText: 'comments_txt.comments1',
     name: 'Alessandro',
     surname: 'Farina',
-    profilePictureImg: 'academy-comments-profile-picture1',
-    imgClassName: 'trial'
+    profilePictureImg: 'academy-comments-profile-farina',
+    // imgClassName: 'trial'
   },
   {
     commentsText: "comments_txt.comments2",
     name: 'Samuele',
     surname: 'Fraioli',
     profilePictureImg: 'academy-comments-profile-fraioli',
-    imgClassName: 'trial'
+    // imgClassName: 'trial'
   },
   {
     commentsText: "comments_txt.comments3",
     name: 'Alessandro',
     surname: 'Savallo',
     profilePictureImg: 'academy-comments-profile-savallo',
-    imgClassName: 'trial'
+    // imgClassName: 'trial'
   }
   ,
   {
     commentsText: "comments_txt.comments4",
     name: 'Samuele',
     surname: 'Busseni',
-    profilePictureImg: 'academy-comments-profile-picture4',
-    imgClassName: 'trial'
+    profilePictureImg: 'academy-comments-profile-busseni',
+    // imgClassName: 'trial'
   }
   ,
   {
@@ -426,7 +426,7 @@ export const academy_comments = [
     name: 'Federica',
     surname: 'Di Monaco',
     profilePictureImg: 'academy-comments-profile-diMonaco',
-    imgClassName: 'trial'
+    // imgClassName: 'trial'
   }
   ,
   {
@@ -434,21 +434,21 @@ export const academy_comments = [
     name: 'Clark',
     surname: 'Ezpeleta',
     profilePictureImg: 'academy-comments-profile-ezpeleta',
-    imgClassName: 'trial'
+    // imgClassName: 'trial'
   },
   {
     commentsText: "comments_txt.comments7",
     name: 'Luca',
     surname: 'Pignorio',
     profilePictureImg: 'academy-comments-profile-pignorio',
-    imgClassName: 'trial'
+    // imgClassName: 'trial'
   },
   {
     commentsText: "comments_txt.comments8",
     name: 'Emanuele',
     surname: 'Zacheo',
     profilePictureImg: 'academy-comments-profile-zacheo',
-    imgClassName: 'trial'
+    // imgClassName: 'trial'
   }
 ]
 

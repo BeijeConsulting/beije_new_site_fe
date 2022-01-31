@@ -23,13 +23,27 @@ const SocialSection = (props) => {
                 key={key}
                 className={item.classNameSingleContainer}
             >
+                {/* <CustomButton
+                    type={'primary-social'}
+                    href={item.url}
+                    bgIcon={item.bgIcon}
+                    target={item.target}
+                    clickCallback={setGaEvent({ category: "Social", action: "Click social button", label: item.name })}
+
+                /> */}
                 <CustomButton
                     type={props.btnType}
+                    href={item.url}
+                    bgIcon={item.bgIcon}
+                    target={item.target}
+                    clickCallback={setGaEvent({ category: "Social", action: "Click social button", label: item.name })}
+                />
+                {/* <CustomButton
+                    type={props.btnType}
+                    href={item.url}
+                    target={item.target}
                     currentIcon={
-                        <a
-                            href={item.url}
-                            target={item.target}
-                        >
+                     
                             <img
                                 src={item.icon}
                                 alt={t(`imgAlt.social.${item.alt}`)}
@@ -38,8 +52,8 @@ const SocialSection = (props) => {
                             />
                         </a>
                     }
-                    clickCallback={setGaEvent({category: "Social", action: "Click social button", label: item.name})}
-                />
+                    clickCallback={setGaEvent({ category: "Social", action: "Click social button", label: item.name })}
+                /> */}
             </div>
         )
 

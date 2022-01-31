@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 
-import { Row, Col } from 'antd'
+import { Row } from 'antd'
 
 //import gsap
 import { gsap } from 'gsap'
@@ -10,13 +10,14 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 // import redux
 import { connect } from "react-redux";
 import { setColorHeader } from "../../redux/ducks/colorHeaderDuck";
-import { setColor } from '../../redux/ducks/colorDuck'
+import { setColor, initColor } from '../../redux/ducks/colorDuck'
+import { initVisibility } from "../../redux/ducks/visibilityDuck";
 
 // import functions
 import { turnToUppercase } from "../../utils/utilities";
 
 // import constants
-import { up_comments /*, up_case_studies */ } from "../../utils/properties";
+// import { up_comments , up_case_studies } from "../../utils/properties"; DO NOT DELETE
 
 // import style
 import './Up.css'
@@ -24,9 +25,10 @@ import './Up.css'
 // import components
 import IntroductiveSection from "../../components/functional_components/introductiveSection/IntroductiveSection";
 import CustomCard from '../../components/functional_components/customCard/CustomCard'
-import SectionSubtitle from "../../components/functional_components/sectionSubtitle/SectionSubtitle";
-import Comments from "../../components/functional_components/comments/Comments";
-import CustomMultiCarousel from "../../components/hooks_components/customMultiCarousel/CustomMultiCarousel";
+// DO NOT DELETE COMMENTS
+// import SectionSubtitle from "../../components/functional_components/sectionSubtitle/SectionSubtitle";
+// import Comments from "../../components/functional_components/comments/Comments";
+// import CustomMultiCarousel from "../../components/hooks_components/customMultiCarousel/CustomMultiCarousel";
 // import CustomButton from "../../components/functional_components/Button/CustomButton";
 // import ViewAllButton from "../../components/functional_components/viewAllButton/ViewAllButton";
 import SectionForm from "../../components/functional_components/sectionForm/SectionForm";
@@ -49,6 +51,8 @@ const Up = (props) => {
     window.addEventListener("scroll", handleScroll);
     props.dispatch(setColor(true))
     props.dispatch(setPageFocus('up'))
+    props.dispatch(setColorHeader(primary_bg_page_up))
+    props.dispatch(initVisibility())
 
     const element = ref.current;
 
@@ -97,7 +101,9 @@ const Up = (props) => {
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      props.dispatch(initPageFocus())
+      props.dispatch(initPageFocus());
+      props.dispatch(initColor())
+
     };
   });
 
@@ -108,19 +114,21 @@ const Up = (props) => {
     }
   }
 
-  const printComments = (item, key) => {
-    return (
-      <Comments
-        key={key}
-        commentsText={item.commentsText}
-        name={item.name}
-        surname={item.surname}
-        profilePictureImg={item.profilePictureImg}
-        imgClassName={item.imgClassName}
-      />
-    )
-  }
+  // DO NOT DELETE
+  // const printComments = (item, key) => {
+  //   return (
+  //     <Comments
+  //       key={key}
+  //       commentsText={item.commentsText}
+  //       name={item.name}
+  //       surname={item.surname}
+  //       profilePictureImg={item.profilePictureImg}
+  //       imgClassName={item.imgClassName}
+  //     />
+  //   )
+  // }
 
+  // DO NOT DELETE
   // const printCaseStudies = (item, key) => {
   //     return (
   //         <CustomCard
@@ -132,6 +140,7 @@ const Up = (props) => {
   //     )
   // }
 
+  //DO NOT DELETE
   // const printCaseStudiesDesktop = (item, key) => {
   //     return (
   //         <Col
@@ -180,6 +189,7 @@ const Up = (props) => {
         </Row>
       </section>
 
+      {/* DO NOT DELETE */}
       {/* <PolygonSection>
                 <section className="up-comments-gsap">
                     <Row>
@@ -270,6 +280,7 @@ const Up = (props) => {
       >
         <section className={'up-form-section consulting-gsap-sixth-section'}>
           <SectionForm
+            classNameFormContainer={''}
             title={turnToUppercase(t('Up.form_message_title'))}
             // callBack={sendEmailCommercial}
             origin="up"
@@ -277,6 +288,7 @@ const Up = (props) => {
         </section>
       </PolygonSection>
 
+      {/* DO NOT DELETE */}
       {/* settings to turn form into light color */}
       {/* <section className={'up-form-section consulting-gsap-sixth-section'}>
           <SectionForm

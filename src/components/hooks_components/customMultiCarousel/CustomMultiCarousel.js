@@ -113,30 +113,32 @@ const CustomMultiCarousel = (props) => {
     }
 
     return (
-        <Carousel
-            responsive={responsive}
-            draggable={props.draggable}
-            showDots={props.showDots}
-            arrows={props.showArrows}
-            customLeftArrow={props.customLeftArrow}
-            customRightArrow={props.customRightArrow}
-            keyBoardControl={props.keyBoardControl}
-            infinite={props.infinite}
-            autoPlay={props.autoPlay}
-            autoPlaySpeed={props.autoPlaySpeed}
-            afterChange={props.dragged}
-            className={`${props.carouselClassName} ${props.grab ? 'cursor-grab' : ''}`}
-        >
-            {
-                props.objCarousel &&
-                props.itemsCarousel.map(printItems)
-            }
-            {
-                !props.objCarousel &&
-                props.children
-            }
+        <div>
+            <Carousel
+                responsive={responsive}
+                draggable={props.draggable}
+                showDots={props.showDots}
+                arrows={props.showArrows}
+                customLeftArrow={props.customLeftArrow}
+                customRightArrow={props.customRightArrow}
+                keyBoardControl={props.keyBoardControl}
+                infinite={props.infinite}
+                autoPlay={props.autoPlay}
+                autoPlaySpeed={props.autoPlaySpeed}
+                afterChange={props.dragged}
+                className={`${props.carouselClassName} ${props.grab ? 'cursor-grab' : ''}`}
+            >
+                {
+                    props.objCarousel &&
+                    props.itemsCarousel.map(printItems)
+                }
+                {
+                    !props.objCarousel &&
+                    props.children
+                }
 
-        </Carousel>
+            </Carousel>
+        </div>
     )
 
 }

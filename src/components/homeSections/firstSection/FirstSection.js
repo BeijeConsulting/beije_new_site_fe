@@ -23,6 +23,7 @@ const FirstSection = () => {
   const navigate = useNavigate()
 
   const callbackScroll = () => {
+    console.log('sono nello scroll button')
     navigate(`${ENVIRONMENT.ROUTING.BASE_URL}#secondSection`)
   }
 

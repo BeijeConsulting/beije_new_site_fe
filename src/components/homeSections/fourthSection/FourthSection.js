@@ -1,8 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 
-import { Row, Col, Layout, Typography } from "antd";
-const { Title } = Typography;
+import {Layout } from "antd";
 
 //import gsap
 import { gsap } from 'gsap'
@@ -15,8 +14,6 @@ import './FourthSection.css';
 import { turnToUppercase } from '../../../utils/utilities'
 
 //import components
-import CustomCard from '../../functional_components/customCard/CustomCard'
-import CustomForm from "../../hooks_components/customForm/CustomForm";
 import SectionForm from "../../functional_components/sectionForm/SectionForm";
 
 const FourthSection = () => {
@@ -57,7 +54,6 @@ const FourthSection = () => {
       <Layout className={'fourth-sec-container'}>
         <SectionForm
           title={turnToUppercase(t('home.fourthSection.title'))}
-          positionBtn={'center'}
           classNameTextArea={'fourth-sec-text-area-form'}
           titleLevel={1}
           xsColInfo={0}

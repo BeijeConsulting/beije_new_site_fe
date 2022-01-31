@@ -23,6 +23,7 @@ import InitialBounce from "../../components/functional_components/initialBounce/
 import PolygonSection from "../../components/functional_components/polygonSection/PolygonSection";
 import { setBounce } from "../../redux/ducks/Loading";
 import { get } from "lodash";
+import { Helmet } from "react-helmet";
 
 
 
@@ -37,13 +38,14 @@ const Home = (props) => {
   setTimeout(() => {
     dispatch(setBounce(false));
   }, 5000);
-  
+
   //GSAP
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     props.dispatch(setVisibility(false))
+    props.dispatch(initColorHeader())
 
     return () => {
       window.removeEventListener("scroll", handleScroll)
@@ -62,51 +64,57 @@ const Home = (props) => {
   }
 
   return (
+    <>
+      <Helmet>
+        <title>My Title</title>
+        <meta name="description" content="Free Web tutorials" />
+        <meta name="keywords" content="HTML, CSS, JavaScript" />
+      </Helmet>
 
-    <div
-      className="gsap-home-container"
-    >
-      <InitialBounce showBounce={pageIsBouncing} />
-      <div className="container-fade-in">
-      <section className="home-polygen-firstSec">
-        <BackgroundVideo
-          autoPlay
-          muted
-          loop
-          src={'https://beije.s3.eu-west-1.amazonaws.com/video_home.mp4'}
-        />
-        <div className="home-video-filter">
-          <FirstSection
-          />
-        </div>
-      </section>
-      </div>
-      <div className={`${pageIsBouncing && 'hidden'}`} style={{ backgroundColor: '#fff' }}>
-        <section
-          className="home-second-section"
-        >
-          <SecondSectionDesktop />
-        </section>
-
-        <PolygonSection>
-          <section>
-            <ThirdSection />
+      <div
+        className="gsap-home-container"
+      >
+        <InitialBounce showBounce={pageIsBouncing} />
+        <div className="container-fade-in">
+          <section className="home-polygen-firstSec">
+            <BackgroundVideo
+              autoPlay
+              muted
+              loop
+              src={'https://beije.s3.eu-west-1.amazonaws.com/video_home.mp4'}
+            />
+            <div className="home-video-filter">
+              <FirstSection
+              />
+            </div>
           </section>
-        </PolygonSection>
+        </div>
+        <div className={`${pageIsBouncing && 'hidden'}`} style={{ backgroundColor: '#fff' }}>
+          <section
+            className="home-second-section"
+          >
+            <SecondSectionDesktop />
+          </section>
 
-        {/* <PolygonSection
+          <PolygonSection>
+            <section>
+              <ThirdSection />
+            </section>
+          </PolygonSection>
+
+          {/* <PolygonSection
           polygenClipPath={'home-polygen-clip-path-contancts'}
         > */}
-        <section
-        // className="home-fourth-section"
-        >
-          <FourthSection />
-        </section>
-        {/* </PolygonSection> */}
-      </div>
+          <section
+            className="home-fourth-section"
+          >
+            <FourthSection />
+          </section>
+          {/* </PolygonSection> */}
+        </div>
 
-    </div >
-
+      </div >
+    </>
   );
 }
 

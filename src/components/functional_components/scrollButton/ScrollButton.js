@@ -6,7 +6,6 @@ import './ScrollButton.css'
 const ScrollButton = (props) => {
 
     const handleClick = () => {
-        // *ga*
         props.callback()
     }
 

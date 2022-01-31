@@ -8,7 +8,9 @@ const PolygonSection = (props) => {
         <div
             className={`${props.polygenStyle} ${props.bgColor} ${props.polygenClipPath}`}
         >
-            {props.children}
+            <div className="polygen-internal-container">
+                {props.children}
+            </div>
         </div>
 
     )

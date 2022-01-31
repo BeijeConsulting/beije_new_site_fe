@@ -90,7 +90,6 @@ const SecondSectionTablet = (props) => {
   return (
     <>
       <Row
-        id='secondSection'
         className='sec-section-row-card-container'
         ref={ref}
 
