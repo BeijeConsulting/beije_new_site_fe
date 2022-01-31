@@ -75,7 +75,7 @@ const Home = (props) => {
         className="gsap-home-container"
       >
         <InitialBounce showBounce={pageIsBouncing} />
-        <div className="container-fade-in">
+        <div className={`${pageIsBouncing && 'overflow-hidden'} container-fade-in`}>
           <section className="home-polygen-firstSec">
             <BackgroundVideo
               autoPlay
