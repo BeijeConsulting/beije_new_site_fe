@@ -8,6 +8,7 @@ import colorDuck from '../ducks/colorDuck'
 import visibilityDuck from '../ducks/visibilityDuck';
 import colorHeaderDuck from '../ducks/colorHeaderDuck';
 import pageFocusDuck from '../ducks/pageFocusDuck';
+import openModalDuck from '../ducks/openModalDuck';
 
 // const rootReducer = combineReducers({
 
@@ -21,7 +22,8 @@ const appReducer = combineReducers({
   colorDuck,
   visibilityDuck,
   colorHeaderDuck,
-  pageFocusDuck
+  pageFocusDuck,
+  openModalDuck
 })
 
 const rootReducer = (state, action) => {

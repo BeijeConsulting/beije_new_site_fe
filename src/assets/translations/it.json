@@ -11,25 +11,40 @@
   },
   "helmet": {
     "meta_title": {
-      "home": "",
-      "consulting": "",
-      "academy": "",
-      "up": "",
-      "whoweare": ""
+      "home": "Beije – People First",
+      "consulting": "Consulting – Beije People First",
+      "academy": "Academy – Beije People First",
+      "academy_backend": "Master frontend– Beije People First",
+      "academy_frontend": "Master backend – Beije People First",
+      "up": "Up – Beije People First",
+      "whoweare": "Chi siamo – Beije People First",
+      "career": "",
+      "blog": "",
+      "community": ""
     },
     "meta_description": {
-      "home": "",
-      "consulting": "",
-      "academy": "",
-      "up": "",
-      "whoweare": ""
+      "home": "Beije People First azienda leader nel settore IT è specializzata nella consulenza, formazione frontend & backend e nello sviluppo di mobile & web app mettendo al centro le esigenze del cliente.",
+      "consulting": "I nostri consulenti Beije forniscono consulenza informatica professionale per lo sviluppo di software in grado di offrire le migliori soluzioni che si adattino alle esigenze del cliente. ",
+      "academy": "Un’esperienza di formazione intensiva che ha l’obiettivo di sviluppare le competenze necessarie per diventare Software Developer attraverso lezioni frontali e progetti reali. ",
+      "academy_backend": "Master retribuito di tre mesi per diventare Java Developer.",
+      "academy_frontend": "Master retribuito di tre mesi per diventare Web Developer.",
+      "up": "Realizzazione e manutenzione di software in perfetto stile Agile attraverso l’utilizzo delle tecnologie più innovative presenti sul mercato. ",
+      "whoweare": "Chi siamo? Azienda leader nel settore IT, siamo specializzata nella consulenza, sviluppo di mobile & web app mettendo al centro le esigenze del cliente e formazione frontend & backend.",
+      "career": "",
+      "blog": "",
+      "community": ""
     },
     "keywords": {
-      "home": "",
-      "consulting": "",
-      "academy": "",
-      "up": "",
-      "whoweare": ""
+      "home": "IT, consulenza, formazione, frontend, backend",
+      "consulting": "consulenza informatica",
+      "academy": "Software Developer",
+      "academy_backend": "",
+      "academy_frontend": "",
+      "up": "Agile",
+      "whoweare": "",
+      "career": "",
+      "blog": "",
+      "community": ""
     }
   },
   "formValidation": {
@@ -74,7 +89,7 @@
     "consulting": "CONSULTING",
     "academy": "BEIJE TALENT ACADEMY",
     "up": "UP",
-    "career": "CAREER",
+    "career": "LAVORA CON NOI",
     "whoWeAre": "CHI SIAMO",
     "contacts": "CONTATTI",
     "blog": "BLOG",
@@ -109,7 +124,10 @@
         "town": "Città*",
         "message": "Scrivi qui il tuo messaggio"
       },
-      "agreement": "Ho letto e accetto il trattamento dei miei dati personali*",
+      "agreement": {
+        "part1": "Ho letto e accetto il ",
+        "part2": "trattamento dei miei dati personali*"
+      },
       "send_btn": "Invia"
     }
   },
@@ -164,11 +182,11 @@
   "Academy": {
     "title": "Beije Talent Academy",
     "page_description": "Corsi specializzati Frontend & Backend per diventare Software Developer. Svilupperai le tue competenze attraverso lezioni frontali, esercitazioni, valutazioni e progetti reali.",
-    "our_courses_title": "I nostri corsi",
-    "title_academy_java": "Academy Backend",
-    "title_academy_frontend": "Academy Frontend",
+    "our_courses_title": "I nostri Master",
+    "title_academy_java": "Master Backend",
+    "title_academy_frontend": "Master Frontend",
     "course_description": "Diventa il prossimo Software Ninjaneer!",
-    "send_to_youtube": "Come find us on Youtube: you will find the digital pills of our Frontend  &  Backend experts, the Webinars and much more… We are waiting for you! ",
+    "send_to_youtube": "Vieni a scoprire il nostro canale Youtube: troverai le pillole digitali dei nostri esperti Frontend & Backend, i Webinar e molto altro ancora…Ti aspettiamo!",
     "next_courses_title": "I prossimi corsi",
     "next_course_1": "Stage java",
     "date_next_course_1": "Gen. – Apr. 2021",

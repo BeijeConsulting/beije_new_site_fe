@@ -11,11 +11,13 @@
   },
   "helmet": {
     "meta_title": {
-      "home": "",
-      "consulting": "",
-      "academy": "",
-      "up": "",
-      "whoweare": ""
+      "home": "Beije – People First",
+      "consulting": "Consulting – Beije People First",
+      "academy": "Academy – Beije People First",
+      "academy_backend": "Master frontend– Beije People First",
+      "academy_frontend": "Master backend – Beije People First",
+      "up": "Up – Beije People First",
+      "whoweare": "About us – Beije People First"
     },
     "meta_description": {
       "home": "",
@@ -96,7 +98,10 @@
         "town": "Town*",
         "message": "Write here your message"
       },
-      "agreement": "I have read and accept the treatment of my personal data*",
+      "agreement": {
+        "part1": "I have read and accept the ",
+        "part2": "treatment of my personal data*"
+      },
       "send_btn": "Send"
     }
   },
@@ -151,9 +156,9 @@
   "Academy": {
     "title": "Beije Talent Academy",
     "page_description": "Corsi specializzati Frontend & Backend per diventare Software Developer. Svilupperai le tue competenze attraverso lezioni frontali, esercitazioni, valutazioni e progetti reali.",
-    "our_courses_title": "Our courses",
-    "title_academy_java": "Academy Backend",
-    "title_academy_frontend": "Academy Frontend",
+    "our_courses_title": "Our Master",
+    "title_academy_java": "Master Backend",
+    "title_academy_frontend": "Master Frontend",
     "course_description": "Be the next Software Ninjaneer!",
     "send_to_youtube": "Come find us on Youtube: you will find the digital pills of our Frontend  &  Backend experts, the Webinars and much more… We are waiting for you!",
     "next_courses_title": "Next courses",

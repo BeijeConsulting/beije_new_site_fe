@@ -24,6 +24,7 @@ import PolygonSection from "../../components/functional_components/polygonSectio
 import { setBounce } from "../../redux/ducks/Loading";
 import { get } from "lodash";
 import { Helmet } from "react-helmet";
+import { t } from "i18next";
 
 
 
@@ -66,9 +67,9 @@ const Home = (props) => {
   return (
     <>
       <Helmet>
-        <title>My Title</title>
-        <meta name="description" content="Free Web tutorials" />
-        <meta name="keywords" content="HTML, CSS, JavaScript" />
+        <title>{t('helmet.meta_title.home')}</title>
+        <meta name="description" content={t('helmet.meta_description.home')} />
+        <meta name="keywords" content={t('helmet.keywords.home')} />
       </Helmet>
 
       <div

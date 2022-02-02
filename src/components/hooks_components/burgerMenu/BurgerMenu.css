@@ -249,13 +249,13 @@
 }
 
 .menu-focusAcademy {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.67)), to(rgba(0, 0, 0, 0.67))), var(--bg_focusAcademy);
+  background-image: -webkit-linear-gradient(left top, left bottom, from(rgba(0, 0, 0, 0.67)), to(rgba(0, 0, 0, 0.67))), var(--bg_focusAcademy);
   background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.67)), var(--bg_focusAcademy);
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.67)), var(--bg_focusAcademy);
 }
 
 .menu-community {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.67)), to(rgba(0, 0, 0, 0.67))), var(--bg_community);
+  background-image: -webkit-linear-gradient(left top, left bottom, from(rgba(0, 0, 0, 0.67)), to(rgba(0, 0, 0, 0.67))), var(--bg_community);
   background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.67)), var(--bg_community);
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.67)), var(--bg_community);
 }
@@ -469,7 +469,7 @@
 
 
 @media (-webkit-min-device-pixel-ratio: 1.25) {
-  .burger-menu-container {
+  .burger-menu-content {
     -webkit-transform: scale(80%);
     -ms-transform: scale(80%);
     transform: scale(80%);
@@ -478,9 +478,12 @@
 
 @media (-webkit-min-device-pixel-ratio: 1.3) {
 
-  .burger-menu-container {
+  .burger-menu-content {
     -webkit-transform: scale(75%);
     -ms-transform: scale(75%);
     transform: scale(75%);
+
+    padding: 0%;
   }
+
 }

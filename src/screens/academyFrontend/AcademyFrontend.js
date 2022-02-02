@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import Helmet from "react-helmet";
 
 // import redux
 import { connect } from "react-redux";
@@ -35,21 +36,28 @@ const AcademyFrontend = (props) => {
     }
 
     return (
-        <div>
+        <>
+            <Helmet>
+                <title>{t('helmet.meta_title.academy_frontend')}</title>
+                <meta name="description" content={t('helmet.meta_description.academy_frontend')} />
+                <meta name="keywords" content={t('helmet.keywords.academy_frontend')} />
+            </Helmet>
+            <div>
 
-            <AcademyDetails
-                pageTitle={turnToUppercase(t('AcademyFrontend.title'))}
-                pageIntro={t('AcademyFrontend.intro')}
-                imgSrc={academy1}
-                btnContent={t('btn.apply')}
-                stageDescription={t('AcademyFrontend.stageDesc')}
-                compensationDesc={t('AcademyFrontend.compensationDesc')}
-                locationDesc={t('AcademyFrontend.locationDesc')}
-                listToPrint={master_frontend_list_intro}
-                academyProgram={frontend_program}
-            />
+                <AcademyDetails
+                    pageTitle={turnToUppercase(t('AcademyFrontend.title'))}
+                    pageIntro={t('AcademyFrontend.intro')}
+                    imgSrc={academy1}
+                    btnContent={t('btn.apply')}
+                    stageDescription={t('AcademyFrontend.stageDesc')}
+                    compensationDesc={t('AcademyFrontend.compensationDesc')}
+                    locationDesc={t('AcademyFrontend.locationDesc')}
+                    listToPrint={master_frontend_list_intro}
+                    academyProgram={frontend_program}
+                />
 
-        </div>
+            </div>
+        </>
     )
 }
 

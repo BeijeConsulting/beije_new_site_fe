@@ -5,10 +5,11 @@ import { connect, useSelector } from "react-redux";
 import '../../style.css'
 import './GeneralLayout.css'
 import { get } from "lodash";
+import LoadingBounce from "../../components/functional_components/loadingBounce/LoadingBounce";
 
-const {Content } = Layout;
+const { Content } = Layout;
 
-const GeneralLayout = (props) => {
+const GeneralLayout = () => {
 
   const pageIsLoading = useSelector((state) => get(state.loadingDuck, 'pageIsLoading', false));
   return (
@@ -16,9 +17,9 @@ const GeneralLayout = (props) => {
       <Layout>
         <Layout className="h-100">
           <Content>
-            <div >
+            <div>
+              {pageIsLoading && <LoadingBounce />}
               <Outlet />
-              {pageIsLoading ? 'LOADING' : ''}
             </div>
           </Content>
         </Layout>

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
+import Helmet from "react-helmet";
 
 //import gsap
 import { gsap } from 'gsap'
@@ -177,66 +178,73 @@ const Consulting = (props) => {
 
   return (
     /* *he* */
-    <div className={'consulting-container'} ref={ref}>
+    <>
+      <Helmet>
+        <title>{t('helmet.meta_title.consulting')}</title>
+        <meta name="description" content={t('helmet.meta_description.consulting')} />
+        <meta name="keywords" content={t('helmet.keywords.consulting')} />
+      </Helmet>
 
-      <section className={'consulting-introductive-section'}>
-        <IntroductiveSection
-          titleInColumn={'Consulting'}
-          desc1Desktop={false}
-          bg1='consulting-bg1'
-          bg2='consulting-bg2'
-          introLight={true}
-          intro={t('Consulting.intro')}
-          desc1Light={true}
-          // desc1={'Qualità e best efficiency si fondono per la costruzione di progetti innovativi. '}
-          desc1={
-            <>
-              {t('Consulting.description.part1')}
-              <strong>
-                {t('Consulting.description.part2')}
-              </strong>
-              {t('Consulting.description.part3')}
-            </>}
-          desc2Mobile={false}
-          desc2Light={true}
-          desc2={
-            <>
-              {t('Consulting.description.part1')}
-              <strong>
-                {t('Consulting.description.part2')}
-              </strong>
-              {t('Consulting.description.part3')}
-            </>}
-        />
-      </section>
+      <div className={'consulting-container'} ref={ref}>
 
-      <PolygonSection>
-        <section className={'consulting-gsap-second-section'}>
-          <SectionSubtitle
-            title={turnToUppercase(t('Consulting.title_carousel_employee'))}
-            shortLineBelow
-            classNameContainer={'consulting-gsap-percentage1-title'}
+        <section className={'consulting-introductive-section'}>
+          <IntroductiveSection
+            titleInColumn={'Consulting'}
+            desc1Desktop={false}
+            bg1='consulting-bg1'
+            bg2='consulting-bg2'
+            introLight={true}
+            intro={t('Consulting.intro')}
+            desc1Light={true}
+            // desc1={'Qualità e best efficiency si fondono per la costruzione di progetti innovativi. '}
+            desc1={
+              <>
+                {t('Consulting.description.part1')}
+                <strong>
+                  {t('Consulting.description.part2')}
+                </strong>
+                {t('Consulting.description.part3')}
+              </>}
+            desc2Mobile={false}
+            desc2Light={true}
+            desc2={
+              <>
+                {t('Consulting.description.part1')}
+                <strong>
+                  {t('Consulting.description.part2')}
+                </strong>
+                {t('Consulting.description.part3')}
+              </>}
           />
-
-          {/* <PercentageSection /> */}
-          <Row className={'consulting-percentage-section-carousel consulting-gsap-percentage1-single-mobile'}>
-            <CustomCarousel
-              titleObjClassName={'consulting-gsap-number-percentage-mobile'}
-            />
-          </Row>
-          <Row className={'consulting-percentage-section-card'}>
-            {consulting_carousel_employee.map(printPercentage1)}
-          </Row>
-          <Row className="consulting-gsap-percentage1-data-survey">
-            <SectionSubtitle
-              styleContainer={{ marginBottom: 0 }}
-              shortLineAbove
-              description={t('Consulting.data_survey')}
-            />
-          </Row>
         </section>
 
-        {/* <section className="consulting-percentage2-section consulting-gsap-third-section">
+        <PolygonSection>
+          <section className={'consulting-gsap-second-section'}>
+            <SectionSubtitle
+              title={turnToUppercase(t('Consulting.title_carousel_employee'))}
+              shortLineBelow
+              classNameContainer={'consulting-gsap-percentage1-title'}
+            />
+
+            {/* <PercentageSection /> */}
+            <Row className={'consulting-percentage-section-carousel consulting-gsap-percentage1-single-mobile'}>
+              <CustomCarousel
+                titleObjClassName={'consulting-gsap-number-percentage-mobile'}
+              />
+            </Row>
+            <Row className={'consulting-percentage-section-card'}>
+              {consulting_carousel_employee.map(printPercentage1)}
+            </Row>
+            <Row className="consulting-gsap-percentage1-data-survey">
+              <SectionSubtitle
+                styleContainer={{ marginBottom: 0 }}
+                shortLineAbove
+                description={t('Consulting.data_survey')}
+              />
+            </Row>
+          </section>
+
+          {/* <section className="consulting-percentage2-section consulting-gsap-third-section">
                     <SectionSubtitle
                         title={turnToUppercase(t('Consulting.title_carousel_client'))}
                         shortLineBelow
@@ -249,16 +257,17 @@ const Consulting = (props) => {
                         {consulting_carousel_client.map(printPercentage2)}
                     </Row>
                 </section> */}
-      </PolygonSection>
+        </PolygonSection>
 
-      <section className={'consulting-gsap-fourth-section consulting-form-section'}>
-        <SectionForm
-          title={turnToUppercase(t('Consulting.title_add_info'))}
-          // callBack={sendEmailCommercial}
-          origin="consulting"
-        />
-      </section>
-    </div>
+        <section className={'consulting-gsap-fourth-section consulting-form-section'}>
+          <SectionForm
+            title={turnToUppercase(t('Consulting.title_add_info'))}
+            // callBack={sendEmailCommercial}
+            origin="consulting"
+          />
+        </section>
+      </div>
+    </>
   )
 }
 

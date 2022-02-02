@@ -1,8 +1,8 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import { Layout } from 'antd';
-import { connect, useSelector } from "react-redux";
-import { get } from "lodash";
+import { connect } from "react-redux"; // useSelector
+// import { get } from "lodash";
 
 
 import '../../style.css'
@@ -13,7 +13,7 @@ const { Content } = Layout;
 
 const HomeLayout = () => {
 
-  const pageIsLoading = useSelector((state) => get(state.loadingDuck, 'pageIsLoading', false));
+  // const pageIsLoading = useSelector((state) => get(state.loadingDuck, 'pageIsLoading', false));
 
   return (
     <Layout>
@@ -24,7 +24,7 @@ const HomeLayout = () => {
           <Content>
             <div >
               <Outlet />
-              {pageIsLoading ? 'LOADING' : ''}
+              {/* {pageIsLoading ? 'LOADING' : ''} */}
             </div>
           </Content>
         </Layout>

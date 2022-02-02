@@ -8,12 +8,17 @@ import { useFormik } from "formik";
 import { gsap } from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+//redux
+import { connect } from "react-redux";
+import { setModal, initModal } from "../../../redux/ducks/openModalDuck";
+
 //import style
 import './CustomForm.css'
 
 //import components
 import CustomButton from "../../functional_components/Button/CustomButton";
 import { googleReCaptchaKey } from "../../../utils/properties";
+import CustomModal from "../../functional_components/customModal/CustomModal";
 
 
 const CustomForm = (props) => {
@@ -24,7 +29,6 @@ const CustomForm = (props) => {
     captchaValue: ''
   });
   const { t } = useTranslation()
-
 
   //GSAP
   gsap.registerPlugin(ScrollTrigger);
@@ -60,7 +64,8 @@ const CustomForm = (props) => {
     setState({
       ...state,
       captchaCheck,
-      captchaValue: value
+      captchaValue: value,
+      openModal: false
     });
   }
 
@@ -98,6 +103,14 @@ const CustomForm = (props) => {
       state.captcha.reset();
     }
   });
+
+  const showModal = () => {
+    props.dispatch(setModal(true));
+  }
+
+  const closeModal = () => {
+    props.dispatch(initModal());
+  };
 
   return (
     <div
@@ -185,12 +198,33 @@ const CustomForm = (props) => {
                   onBlur={(e) => formikContacts.handleBlur(e)} // it is necessary for "touched" formik event
                   checked={formikContacts.values.agreement}
                 >
-                  {t('home.fourthSection.agreement')}
+                  <>
+                    {t('home.fourthSection.agreement.part1')}
+                    <span
+                      className='form-policy-privacy-link'
+                      onClick={showModal}>
+                      {t('home.fourthSection.agreement.part2')}
+                    </span>
+                  </>
                 </Checkbox>
                 <br />
                 <span className="input-error" >{formikContacts.errors.agreement && formikContacts.touched.agreement ? t(`${formikContacts.errors.agreement}`) : ''}</span>
               </div>
             </Col>
+
+            <CustomModal
+              modalTitle='Privacy Policies'
+              callBackCancelModal={closeModal}
+              footer={
+                <button onClick={closeModal}>
+                  Close
+                </button>}
+            >
+              <p>
+                Hnnhfrblpjuef ejfrhubhsd bygdeyubwg efhbygu dehbgevf  wefhbefyew wiefgygf wyegyvf wueygtvdbdt feywgufyvf wueyfgygd wyefgyf eufywgetfv efbytvf feubuf
+                iefuhyvbyv efryyver fhyf evtyvsgdgvue fhefggetuwdbv
+              </p>
+            </CustomModal>
           </Row>
         }
         <div className="form-input-gsap recaptcha">
@@ -224,4 +258,4 @@ CustomForm.defaultProps = {
   origin: 'home'
 }
 
-export default CustomForm
+export default connect()(CustomForm)
