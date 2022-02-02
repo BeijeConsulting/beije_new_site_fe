@@ -69,20 +69,25 @@
 }
 
 .custom-btn-primary-social:active {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
     outline: none !important;
     border: none;
 }
 
-.btn_fb_default:active {
-    background-image: var(--social-fb-dark-btn) !important;
+.custom-btn-primary-social:empty {
+    visibility: visible !important;
 }
 
-.btn_in_default:active {
-    background-image: var(--social-in-dark-btn) !important;
-}
+.custom-btn-primary-social:focus {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
-.btn_yt_default:active {
-    background-image: var(--social-yt-dark-btn) !important;
+    outline: none !important;
+    border: none;
 }
 
 .custom-btn-primary-social:empty {
@@ -119,14 +124,24 @@
 }
 
 .custom-btn-secondary-social:active {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
     outline: none !important;
     border: none;
 }
 
-.btn-youtube-bg:active {
-    background-image: var(--social-yt-btn) !important;
+.custom-btn-secondary-social:focus {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
+    outline: none !important;
+    border: none;
 }
+
+
 
 .custom-btn-secondary-social:empty {
     visibility: visible !important;

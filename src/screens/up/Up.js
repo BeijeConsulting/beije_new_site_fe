@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
+import Helmet from "react-helmet";
 
 import { Row } from 'antd'
 
@@ -164,33 +165,39 @@ const Up = (props) => {
   // }
 
   return (
-    <div
-      className='up-container'
-      ref={ref}
-    >
-      <section>
-        <IntroductiveSection
-          titleInColumn={t('Up.title')}
-          titleLight={true}
-          bg1='up-bg1'
-          bg2='up-bg2'
-          desc1={t('Up.desc1')}
-          desc1Light={true}
-          desc2Mobile={true}
-          desc2={t('Up.desc2')}
-          desc2Light={true}
-        />
-
-        <Row className="up-intro-sec-desc3-row up-intro-sec-desc3-row-gsap">
-          <CustomCard
-            cardParagraph={t('Up.paragraph')}
-            paragraphClassName={'up-intro-section-paragraph txt-light up-intro-sec-desc3-gsap'}
+    <>
+      <Helmet>
+        <title>{t('helmet.meta_title.up')}</title>
+        <meta name="description" content={t('helmet.meta_description.up')} />
+        <meta name="keywords" content={t('helmet.keywords.up')} />
+      </Helmet>
+      <div
+        className='up-container'
+        ref={ref}
+      >
+        <section>
+          <IntroductiveSection
+            titleInColumn={t('Up.title')}
+            titleLight={true}
+            bg1='up-bg1'
+            bg2='up-bg2'
+            desc1={t('Up.desc1')}
+            desc1Light={true}
+            desc2Mobile={true}
+            desc2={t('Up.desc2')}
+            desc2Light={true}
           />
-        </Row>
-      </section>
 
-      {/* DO NOT DELETE */}
-      {/* <PolygonSection>
+          <Row className="up-intro-sec-desc3-row up-intro-sec-desc3-row-gsap">
+            <CustomCard
+              cardParagraph={t('Up.paragraph')}
+              paragraphClassName={'up-intro-section-paragraph txt-light up-intro-sec-desc3-gsap'}
+            />
+          </Row>
+        </section>
+
+        {/* DO NOT DELETE */}
+        {/* <PolygonSection>
                 <section className="up-comments-gsap">
                     <Row>
                         <Col
@@ -275,22 +282,22 @@ const Up = (props) => {
                 </Row>
             </section>
             </PolygonSection> */}
-      <PolygonSection
-        polygenClipPath={'up-polygen-clip-path'}
-      >
-        <section className={'up-form-section consulting-gsap-sixth-section'}>
-          <SectionForm
-            classNameFormContainer={''}
-            title={turnToUppercase(t('Up.form_message_title'))}
-            // callBack={sendEmailCommercial}
-            origin="up"
-          />
-        </section>
-      </PolygonSection>
+        <PolygonSection
+          polygenClipPath={'up-polygen-clip-path'}
+        >
+          <section className={'up-form-section consulting-gsap-sixth-section'}>
+            <SectionForm
+              classNameFormContainer={''}
+              title={turnToUppercase(t('Up.form_message_title'))}
+              // callBack={sendEmailCommercial}
+              origin="up"
+            />
+          </section>
+        </PolygonSection>
 
-      {/* DO NOT DELETE */}
-      {/* settings to turn form into light color */}
-      {/* <section className={'up-form-section consulting-gsap-sixth-section'}>
+        {/* DO NOT DELETE */}
+        {/* settings to turn form into light color */}
+        {/* <section className={'up-form-section consulting-gsap-sixth-section'}>
           <SectionForm
             descClassName={'up-form-desc'}
             classNameTitle={'up-form-title'}
@@ -301,9 +308,9 @@ const Up = (props) => {
           />
         </section> */}
 
-    </div >
+      </div >
 
-
+    </>
   )
 }
 

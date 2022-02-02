@@ -21,6 +21,8 @@ import Navbar from '../../functional_components/navbar/Navbar';
 
 const CustomHeader = (props) => {
 
+  console.log('menuOpen', props.menuDuck.menuOpen, 'lightColor', props.colorDuck.lightColor)
+
   return (
     <>
       <Row className='d-flex items-center'>

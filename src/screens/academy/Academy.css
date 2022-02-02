@@ -15,9 +15,9 @@
   --academy-bg2: url('../../assets/images/academy/academy2.jpg');
   --academy-comments-farina: url('../../assets/images/comments/farina_comments.jpg');
   --academy-comments-fraioli: url('../../assets/images/comments/fraioli_comments.jpg');
-  --academy-comments-savallo: url('../../assets/images/comments/savallo_comments.jpeg');
-  --academy-comments-busseni: url('../../assets/images/comments/busseni_comments.jpeg');
-  --academy-comments-diMonaco: url('../../assets/images/comments/diMonaco_comments.jpeg');
+  --academy-comments-savallo: url('../../assets/images/comments/savallo_comments.jpg');
+  --academy-comments-busseni: url('../../assets/images/comments/busseni_comments.jpg');
+  --academy-comments-diMonaco: url('../../assets/images/comments/diMonaco_comments.jpg');
   --academy-comments-ezpeleta: url('../../assets/images/comments/ezpeleta_comments.jpg');
   --academy-comments-pignorio: url('../../assets/images/comments/pignorio_comments.png');
   --academy-comments-zacheo: url('../../assets/images/comments/zacheo_comments.jpg');
@@ -243,7 +243,7 @@
     -ms-transform: scale(80%);
     transform: scale(80%);
 
-    padding: 0%
+    padding: 0 5%;
   }
 }
 
@@ -254,5 +254,13 @@
     transform: scale(75%);
 
     padding: 0%;
+  }
+}
+
+@media not all and (min-resolution:.001dpcm) {
+  @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+    .academy-ourCourses-section {
+      padding: 0 15%;
+    }
   }
 }

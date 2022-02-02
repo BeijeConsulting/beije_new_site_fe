@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import Helmet from "react-helmet";
 
 import { Row, Col } from "antd";
 
@@ -49,176 +50,183 @@ const WhoWeAre = (props) => {
   }
 
   return (
-    <div className="whoWeAre-container">
+    <>
+      <Helmet>
+        <title>{t('helmet.meta_title.whoweare')}</title>
+        <meta name="description" content={t('helmet.meta_description.whoweare')} />
+        <meta name="keywords" content={t('helmet.keywords.whoweare')} />
+      </Helmet>
+      <div className="whoWeAre-container">
 
-      {/* profile picture section */}
-      <section className="whoWeAre-profile-sec">
-        <Row>
-          <Col span={24}>
-            <CustomCard
-              cardTitle={t('WhoWeAre.title')}
-              titleClassName={'whoWeAre-profile-sec-title'}
-            />
-          </Col>
-          <Col span={24}>
-            {state.showDragBtn &&
-
-              <CustomButton
-                type='drag-more-btn'
-                content={divideText(turnToUppercase(t('btn.drag')), '-BR-')}
+        {/* profile picture section */}
+        <section className="whoWeAre-profile-sec">
+          <Row>
+            <Col span={24}>
+              <CustomCard
+                cardTitle={t('WhoWeAre.title')}
+                titleClassName={'whoWeAre-profile-sec-title'}
               />
+            </Col>
+            <Col span={24}>
+              {state.showDragBtn &&
+
+                <CustomButton
+                  type='drag-more-btn'
+                  content={divideText(turnToUppercase(t('btn.drag')), '-BR-')}
+                />
+              }
+              <CustomMultiCarousel
+                item_superLargeDesktop={4}
+                item_mediumDesktop={4}
+                item_desktop={4}
+                item_tablet={4}
+                item_bigMobile={4}
+                item_mobile={3}
+                item_smallmobile={2}
+                item_extraSmallMobile={2}
+                infinite={true}
+                showRole={false}
+                showDesc={true}
+                dragged={draggedCarousel}
+                carouselClassName='whoWeAre-carousel-container'
+                singleElClassName='whoWeAre-single-el-carousel'
+                profilePictureClassName='whoWeAre-profile-picture-carousel'
+                lableContainerClassName='whoWeAre-carousel-lable-container'
+                lableTxtDescClassName='whoWeAre-carousel-lable-desc'
+              />
+            </Col>
+          </Row>
+        </section>
+
+        {/* vision */}
+        <section
+          id='vision'
+        >
+          <SubsectionTitleImg
+            subTitle={t('WhoWeAre.vision_title')}
+
+            desc={
+              <>
+                {t('WhoWeAre.vision_desc.part1')}
+                <strong>
+                  <span className="highlight-txt">
+                    {t('WhoWeAre.vision_desc.part2')}
+                  </span>
+                </strong>
+                {t('WhoWeAre.vision_desc.part3')}
+                <strong>
+                  <span className="highlight-txt">
+                    {t('WhoWeAre.vision_desc.part4')}
+                  </span>
+                </strong>
+                {t('WhoWeAre.vision_desc.part5')}
+              </>
             }
-            <CustomMultiCarousel
-              item_superLargeDesktop={4}
-              item_mediumDesktop={3}
-              item_desktop={3}
-              item_tablet={4}
-              item_bigMobile={4}
-              item_mobile={3}
-              item_smallmobile={2}
-              item_extraSmallMobile={2}
-              infinite={true}
-              showRole={false}
-              showDesc={true}
-              dragged={draggedCarousel}
-              carouselClassName='whoWeAre-carousel-container'
-              singleElClassName='whoWeAre-single-el-carousel'
-              profilePictureClassName='whoWeAre-profile-picture-carousel'
-              lableContainerClassName='whoWeAre-carousel-lable-container'
-              lableTxtDescClassName='whoWeAre-carousel-lable-desc'
-            />
-          </Col>
-        </Row>
-      </section>
+            bg={'whoWeAre-vision-img'}
+          />
+        </section>
 
-      {/* vision */}
-      <section
-        id='vision'
-      >
-        <SubsectionTitleImg
-          subTitle={t('WhoWeAre.vision_title')}
+        {/* mission */}
+        <section
+          id='mission'
+        >
+          <SubsectionTitleImg
+            subTitle={t('WhoWeAre.mission_title')}
+            desc={
+              <>
+                {t('WhoWeAre.mission_desc.part1')}
+                <strong>
+                  <span className="highlight-txt">
+                    {t('WhoWeAre.mission_desc.part2')}
+                  </span>
+                </strong>
+                {t('WhoWeAre.mission_desc.part3')}
+              </>
+            }
+            bg={'whoWeAre-mission-img'}
+            imgRight={true}
+            imgRightDescLeft={false}
+            imgLeftDescRight={true}
+            classNameTitle={'whoWeAre-sub-section-title'}
+            descDesktopContainer={'whoWeAre-sub-section-desc-container'}
+          />
+        </section>
 
-          desc={
-            <>
-              {t('WhoWeAre.vision_desc.part1')}
-              <strong>
-                <span className="highlight-txt">
-                  {t('WhoWeAre.vision_desc.part2')}
-                </span>
-              </strong>
-              {t('WhoWeAre.vision_desc.part3')}
-              <strong>
-                <span className="highlight-txt">
-                  {t('WhoWeAre.vision_desc.part4')}
-                </span>
-              </strong>
-              {t('WhoWeAre.vision_desc.part5')}
-            </>
-          }
-          bg={'whoWeAre-vision-img'}
-        />
-      </section>
+        {/* history */}
+        <section
+          id='history'
+        >
+          <SubsectionTitleImg
+            subTitle={t('WhoWeAre.history_title')}
+            desc={
+              <>
+                {t('WhoWeAre.history_desc.part1')}
+                <strong>
+                  <span className="highlight-txt">
+                    {t('WhoWeAre.history_desc.part2')}
+                  </span>
+                </strong>
+                {t('WhoWeAre.history_desc.part3')}
+              </>
+            }
+            bg={'whoWeAre-history-img'}
+          />
+        </section>
 
-      {/* mission */}
-      <section
-        id='mission'
-      >
-        <SubsectionTitleImg
-          subTitle={t('WhoWeAre.mission_title')}
-          desc={
-            <>
-              {t('WhoWeAre.mission_desc.part1')}
-              <strong>
-                <span className="highlight-txt">
-                  {t('WhoWeAre.mission_desc.part2')}
-                </span>
-              </strong>
-              {t('WhoWeAre.mission_desc.part3')}
-            </>
-          }
-          bg={'whoWeAre-mission-img'}
-          imgRight={true}
-          imgRightDescLeft={false}
-          imgLeftDescRight={true}
-          classNameTitle={'whoWeAre-sub-section-title'}
-          descDesktopContainer={'whoWeAre-sub-section-desc-container'}
-        />
-      </section>
-
-      {/* history */}
-      <section
-        id='history'
-      >
-        <SubsectionTitleImg
-          subTitle={t('WhoWeAre.history_title')}
-          desc={
-            <>
-              {t('WhoWeAre.history_desc.part1')}
-              <strong>
-                <span className="highlight-txt">
-                  {t('WhoWeAre.history_desc.part2')}
-                </span>
-              </strong>
-              {t('WhoWeAre.history_desc.part3')}
-            </>
-          }
-          bg={'whoWeAre-history-img'}
-        />
-      </section>
-
-      {/* value */}
-      <section
-        id='value'
-      >
-        <SubsectionTitleImg
-          subTitle={t('WhoWeAre.value_title')}
-          desc={false}
-          list={true}
-          createList={
-            <>
-              <li>
-                {t('WhoWeAre.value_list.el1.part1')}
-                <span className="highlight-txt">
-                  <strong>{t('WhoWeAre.value_list.el1.part2')}
-                  </strong>
-                </span>
-                {t('WhoWeAre.value_list.el1.part3')}
-              </li>
-              <li>
-                {t('WhoWeAre.value_list.el2.part1')}
-                <span className="highlight-txt">
-                  <strong>{t('WhoWeAre.value_list.el2.part2')}
-                  </strong>
-                </span>
-                {t('WhoWeAre.value_list.el2.part3')}
-              </li>
-              <li>
-                {t('WhoWeAre.value_list.el3.part1')}
-                <span className="highlight-txt">
-                  <strong>{t('WhoWeAre.value_list.el3.part2')}
-                  </strong>
-                </span>
-                {t('WhoWeAre.value_list.el3.part3')}
-              </li>
-              <li>
-                {t('WhoWeAre.value_list.el4.part1')}
-                <span className="highlight-txt">
-                  <strong>{t('WhoWeAre.value_list.el4.part2')}
-                  </strong>
-                </span>
-                {t('WhoWeAre.value_list.el4.part3')}
-              </li>
-            </>
-          }
-          bg={'whoWeAre-value-img'}
-          imgRightDescLeft={false}
-          imgLeftDescRight={true}
-          imgRight={true}
-          classNameTitle={'whoWeAre-sub-section-title'}
-          descDesktopContainer={'whoWeAre-sub-section-desc-container'}
-        />
-      </section>
-    </div>
+        {/* value */}
+        <section
+          id='value'
+        >
+          <SubsectionTitleImg
+            subTitle={t('WhoWeAre.value_title')}
+            desc={false}
+            list={true}
+            createList={
+              <>
+                <li>
+                  {t('WhoWeAre.value_list.el1.part1')}
+                  <span className="highlight-txt">
+                    <strong>{t('WhoWeAre.value_list.el1.part2')}
+                    </strong>
+                  </span>
+                  {t('WhoWeAre.value_list.el1.part3')}
+                </li>
+                <li>
+                  {t('WhoWeAre.value_list.el2.part1')}
+                  <span className="highlight-txt">
+                    <strong>{t('WhoWeAre.value_list.el2.part2')}
+                    </strong>
+                  </span>
+                  {t('WhoWeAre.value_list.el2.part3')}
+                </li>
+                <li>
+                  {t('WhoWeAre.value_list.el3.part1')}
+                  <span className="highlight-txt">
+                    <strong>{t('WhoWeAre.value_list.el3.part2')}
+                    </strong>
+                  </span>
+                  {t('WhoWeAre.value_list.el3.part3')}
+                </li>
+                <li>
+                  {t('WhoWeAre.value_list.el4.part1')}
+                  <span className="highlight-txt">
+                    <strong>{t('WhoWeAre.value_list.el4.part2')}
+                    </strong>
+                  </span>
+                  {t('WhoWeAre.value_list.el4.part3')}
+                </li>
+              </>
+            }
+            bg={'whoWeAre-value-img'}
+            imgRightDescLeft={false}
+            imgLeftDescRight={true}
+            imgRight={true}
+            classNameTitle={'whoWeAre-sub-section-title'}
+            descDesktopContainer={'whoWeAre-sub-section-desc-container'}
+          />
+        </section>
+      </div>
+    </>
   )
 }
 

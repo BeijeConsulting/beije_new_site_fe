@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
+import Helmet from "react-helmet";
 
 import { Row, Col } from "antd";
 
@@ -205,56 +206,62 @@ const Academy = (props) => {
   }
 
   return (
-    <div
-      className={'academy-container'}
-      ref={ref}
-    >
+    <>
+      <Helmet>
+        <title>{t('helmet.meta_title.academy')}</title>
+        <meta name="description" content={t('helmet.meta_description.academy')} />
+        <meta name="keywords" content={t('helmet.keywords.academy')} />
+      </Helmet>
+      <div
+        className={'academy-container'}
+        ref={ref}
+      >
 
-      {/* Yellow part */}
-      <div className={'academy-first-part'}>
+        {/* Yellow part */}
+        <div className={'academy-first-part'}>
 
-        {/* Introductive section */}
-        <section className="academy-gsap-first-section">
-          <IntroductiveSection
-            titleInColumn={t('Academy.title')}
-            bg1={'academy-bg1'}
-            // intro={t('Academy.intro')}
-            desc1={t('Academy.page_description')}
-            secondRow={false}
-          />
-        </section>
+          {/* Introductive section */}
+          <section className="academy-gsap-first-section">
+            <IntroductiveSection
+              titleInColumn={t('Academy.title')}
+              bg1={'academy-bg1'}
+              // intro={t('Academy.intro')}
+              desc1={t('Academy.page_description')}
+              secondRow={false}
+            />
+          </section>
 
-        {/* Our courses section */}
-        <section className={'academy-ourCourses-section academy-gsap-second-section'}>
-          <Row>
-            <Col
-              xs={24}
-              className={'academy-gsap-our-courses-title'}
-            >
-              <CustomCard
-                cardTitle={turnToUppercase(t('Academy.our_courses_title'))}
-                titleLevel={2}
-              />
-            </Col>
-          </Row>
-          <GoToDetailRow
-            numCol={1}
-            textClassName='academy-ourCourses-section-course-title'
-            text={t('Academy.title_academy_java')}
-            href={`${ENVIRONMENT.ROUTING.BASE_URL}academy/masterBackend`}
-            clickCallback={() => setGaEvent({ category: "Navigation", action: "Click academy arrow", label: "Master Backend" })}
-          />
-          <GoToDetailRow
-            numCol={1}
-            textClassName='academy-ourCourses-section-course-title'
-            text={t('Academy.title_academy_frontend')}
-            href={`${ENVIRONMENT.ROUTING.BASE_URL}academy/masterFrontend`}
-            containerClassName={'academy-ourCourses-section-lastEl'}
-            clickCallback={() => setGaEvent({ category: "Navigation", action: "Click academy arrow", label: "Master Frontent" })}
-          />
+          {/* Our courses section */}
+          <section className={'academy-ourCourses-section academy-gsap-second-section'}>
+            <Row>
+              <Col
+                xs={24}
+                className={'academy-gsap-our-courses-title'}
+              >
+                <CustomCard
+                  cardTitle={turnToUppercase(t('Academy.our_courses_title'))}
+                  titleLevel={2}
+                />
+              </Col>
+            </Row>
+            <GoToDetailRow
+              numCol={1}
+              textClassName='academy-ourCourses-section-course-title'
+              text={t('Academy.title_academy_java')}
+              href={`${ENVIRONMENT.ROUTING.BASE_URL}academy/masterBackend`}
+              clickCallback={() => setGaEvent({ category: "Navigation", action: "Click academy arrow", label: "Master Backend" })}
+            />
+            <GoToDetailRow
+              numCol={1}
+              textClassName='academy-ourCourses-section-course-title'
+              text={t('Academy.title_academy_frontend')}
+              href={`${ENVIRONMENT.ROUTING.BASE_URL}academy/masterFrontend`}
+              containerClassName={'academy-ourCourses-section-lastEl'}
+              clickCallback={() => setGaEvent({ category: "Navigation", action: "Click academy arrow", label: "Master Frontent" })}
+            />
 
-          <Row className="academy-ourCourses-second-part-container academy-gsap-our-courses-row2">
-            {/* <Col
+            <Row className="academy-ourCourses-second-part-container academy-gsap-our-courses-row2">
+              {/* <Col
                             xs={24}
                             md={0}
                             className="academy-our-courses-desc-mobile academy-gsap-our-courses-desc-mobile"
@@ -297,42 +304,43 @@ const Academy = (props) => {
                             />
                         </Col> */}
 
-          </Row>
-        </section>
+            </Row>
+          </section>
 
-        <section>
-          <IntroductiveSection
-            classNameContainer='academy-section-youtube'
-            firstRow={false}
-            bg2='academy-bg2'
-            desc2Mobile={true}
-            desc2MobileAbove={true}
-            desc2Mobilebelow={false}
-            desc2Light={true}
-            desc2={
-              <>
-                <CustomCard
-                  cardDescription={t('Academy.course_description')}
-                />
+          <section>
+            <IntroductiveSection
+              classNameContainer='academy-section-youtube'
+              firstRow={false}
+              bg2='academy-bg2'
+              desc2Mobile={true}
+              desc2MobileAbove={true}
+              desc2Mobilebelow={false}
+              desc2Light={true}
+              desc2={
+                <>
+                  <CustomCard
+                    cardDescription={t('Academy.course_description')}
+                  />
 
-                <CustomCard
-                  cardClassName={'academy-ourCourses-section-youtube-card'}
-                  cardDescription={t('Academy.send_to_youtube')}
-                />
-                <CustomButton
-                  type={'secondary-social'}
-                  href={social[2].url}
-                  bgIcon='btn-youtube-bg'
-                  clickCallback={() => setGaEvent({ category: "Social", action: "Click button academy", label: "Youtube" })}
-                />
-              </>
+                  <CustomCard
+                    cardClassName={'academy-ourCourses-section-youtube-card'}
+                    cardDescription={t('Academy.send_to_youtube')}
+                  />
+                  <CustomButton
+                    type={'secondary-social'}
+                    href={social[2].url}
+                    bgIcon='btn_yt_default'
+                    target={'_blank'}
+                    clickCallback={() => setGaEvent({ category: "Social", action: "Click button academy", label: "Youtube" })}
+                  />
+                </>
 
-            }
-          />
-        </section>
+              }
+            />
+          </section>
 
-        {/* Next Courses section */}
-        {/* <section className='academy-next-courses-section academy-gsap-third-section'>
+          {/* Next Courses section */}
+          {/* <section className='academy-next-courses-section academy-gsap-third-section'>
                     <Row>
                         <Col
                             xs={24}
@@ -368,76 +376,77 @@ const Academy = (props) => {
                         </Col>
                     </Row>
                 </section> */}
-      </div>
+        </div>
 
-      {/* Second Part */}
-      <PolygonSection>
+        {/* Second Part */}
+        <PolygonSection>
 
-        {/* Percentage Section */}
-        <section className="academy-percentage-section academy-gsap-fourth-section">
-          <SectionSubtitle
-            title={turnToUppercase(t('Academy.title_carousel_student'))}
-            shortLineBelow
-            classNameContainer={'academy-gsap-percentage-title'}
-          />
-          <Row className={'academy-percentage-section-carousel academy-gsap-percentage-single-mobile'}>
-            <CustomCarousel
-              titleObjClassName={'academy-gsap-number-percentage-mobile'}
+          {/* Percentage Section */}
+          <section className="academy-percentage-section academy-gsap-fourth-section">
+            <SectionSubtitle
+              title={turnToUppercase(t('Academy.title_carousel_student'))}
+              shortLineBelow
+              classNameContainer={'academy-gsap-percentage-title'}
             />
-          </Row>
-          <Row className={'academy-percentage-section-card'}>
-            {academy_carousel_student.map(printPercentage)}
-          </Row>
-        </section>
-
-
-        {/* Comments section */}
-        <section className="academy-gsap-fifth-section">
-          <Row>
-            <Col
-              xs={24}
-              className="academy-comments-title-container academy-gsap-comment-title"
-            >
-              <SectionSubtitle
-                title={turnToUppercase(t('Academy.comments_title'))}
-                shortLineBelow
+            <Row className={'academy-percentage-section-carousel academy-gsap-percentage-single-mobile'}>
+              <CustomCarousel
+                titleObjClassName={'academy-gsap-number-percentage-mobile'}
               />
-            </Col>
-            <Col
-              span={24}
-            >
-              <CustomMultiCarousel
-                item_superLargeDesktop={2}
-                item_mediumDesktop={2}
-                item_desktop={2}
-                item_tablet={1}
-                item_bigMobile={1}
-                item_mobile={1}
-                item_smallmobile={1}
-                item_extraSmallMobile={1}
-                objCarousel={false}
-                className="academy-gsap-single-comment"
+            </Row>
+            <Row className={'academy-percentage-section-card'}>
+              {academy_carousel_student.map(printPercentage)}
+            </Row>
+          </section>
 
-                infinite={true}
-                autoPlay={true}
-                autoPlaySpeed={3000}
+
+          {/* Comments section */}
+          <section className="academy-gsap-fifth-section">
+            <Row>
+              <Col
+                xs={24}
+                className="academy-comments-title-container academy-gsap-comment-title"
               >
-                {academy_comments.map(printComments)}
-              </CustomMultiCarousel>
-            </Col>
-          </Row>
+                <SectionSubtitle
+                  title={turnToUppercase(t('Academy.comments_title'))}
+                  shortLineBelow
+                />
+              </Col>
+              <Col
+                span={24}
+              >
+                <CustomMultiCarousel
+                  item_superLargeDesktop={2}
+                  item_mediumDesktop={2}
+                  item_desktop={2}
+                  item_tablet={1}
+                  item_bigMobile={1}
+                  item_mobile={1}
+                  item_smallmobile={1}
+                  item_extraSmallMobile={1}
+                  objCarousel={false}
+                  className="academy-gsap-single-comment"
+
+                  infinite={true}
+                  autoPlay={true}
+                  autoPlaySpeed={3000}
+                >
+                  {academy_comments.map(printComments)}
+                </CustomMultiCarousel>
+              </Col>
+            </Row>
+          </section>
+
+        </PolygonSection>
+
+        {/* Form section */}
+        <section className={'academy-form-section consulting-gsap-sixth-section'}>
+          <SectionForm
+            title={t('Academy.form_message_title')}
+            origin="academy"
+          />
         </section>
-
-      </PolygonSection>
-
-      {/* Form section */}
-      <section className={'academy-form-section consulting-gsap-sixth-section'}>
-        <SectionForm
-          title={t('Academy.form_message_title')}
-          origin="academy"
-        />
-      </section>
-    </div >
+      </div >
+    </>
   )
 }
 

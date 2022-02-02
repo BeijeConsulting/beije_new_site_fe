@@ -30,11 +30,11 @@
 }
 
 .form-input-container {
-    min-height: 6em;
+  min-height: 6em;
 }
 
 .agreement-checkbox {
-    min-height: 3.5em;
+  min-height: 3.5em;
 }
 
 /* .recaptcha > div > div { // if you want put recaptcha on center
@@ -102,7 +102,13 @@
 }
 
 .form-input-condition {
-  color: var(--privacy-check-form);
+  color: var(--privacy-check-form) !important;
+}
+
+
+.form-policy-privacy-link {
+  color: var(--privacy-check-form) !important;
+  text-decoration: underline;
 }
 
 .input-error {

@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import Helmet from "react-helmet";
 
 // import redux
 import { connect } from "react-redux";
@@ -34,21 +35,28 @@ const AcademyJava = (props) => {
     }
 
     return (
-        <div>
+        <>
+            <Helmet>
+                <title>{t('helmet.meta_title.academy_backend')}</title>
+                <meta name="description" content={t('helmet.meta_description.academy_backend')} />
+                <meta name="keywords" content={t('helmet.keywords.academy_backend')} />
+            </Helmet>
+            <div>
 
-            <AcademyDetails
-                pageTitle={turnToUppercase(t('AcademyBackend.title'))}
-                pageIntro={t('AcademyBackend.intro')}
-                imgSrc={academy1}
-                btnContent={t('btn.apply')}
-                stageDescription={t('AcademyBackend.stageDesc')}
-                compensationDesc={t('AcademyBackend.compensationDesc')}
-                locationDesc={t('AcademyBackend.locationDesc')}
-                listToPrint={master_backend_list_intro}
-                academyProgram={java_program}
-            />
+                <AcademyDetails
+                    pageTitle={turnToUppercase(t('AcademyBackend.title'))}
+                    pageIntro={t('AcademyBackend.intro')}
+                    imgSrc={academy1}
+                    btnContent={t('btn.apply')}
+                    stageDescription={t('AcademyBackend.stageDesc')}
+                    compensationDesc={t('AcademyBackend.compensationDesc')}
+                    locationDesc={t('AcademyBackend.locationDesc')}
+                    listToPrint={master_backend_list_intro}
+                    academyProgram={java_program}
+                />
 
-        </div>
+            </div>
+        </>
     )
 }
 
