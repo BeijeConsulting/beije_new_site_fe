@@ -46,7 +46,13 @@ const AcademyFrontend = (props) => {
 
                 <AcademyDetails
                     pageTitle={turnToUppercase(t('AcademyFrontend.title'))}
-                    pageIntro={t('AcademyFrontend.intro')}
+                    pageIntro={
+                        <>
+                            {t('AcademyFrontend.intro.part1')}
+                            <strong>{t('AcademyFrontend.intro.part2')}</strong>
+                            {t('AcademyFrontend.intro.part3')}
+                        </>
+                    }
                     imgSrc={academy1}
                     btnContent={t('btn.apply')}
                     stageDescription={t('AcademyFrontend.stageDesc')}

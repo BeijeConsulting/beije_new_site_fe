@@ -226,7 +226,21 @@ const Academy = (props) => {
               titleInColumn={t('Academy.title')}
               bg1={'academy-bg1'}
               // intro={t('Academy.intro')}
-              desc1={t('Academy.page_description')}
+              desc1={
+                <>
+                  {t('Academy.page_description.part1')}
+                  <strong>{t('Academy.page_description.part2')}</strong>
+                  {t('Academy.page_description.part3')}
+                  <strong>{t('Academy.page_description.part4')}</strong>
+                  {t('Academy.page_description.part5')}
+                  <strong>{t('Academy.page_description.part6')}</strong>
+                  {t('Academy.page_description.part7')}
+                  <strong>{t('Academy.page_description.part8')}</strong>
+                </>
+
+
+
+              }
               secondRow={false}
             />
           </section>
@@ -319,12 +333,28 @@ const Academy = (props) => {
               desc2={
                 <>
                   <CustomCard
-                    cardDescription={t('Academy.course_description')}
+                    cardDescription={
+                      <>
+                        {t('Academy.course_description.part1')}
+                        <strong>{t('Academy.course_description.part2')}</strong>
+                        {t('Academy.course_description.part3')}
+                      </>
+                    }
                   />
 
                   <CustomCard
                     cardClassName={'academy-ourCourses-section-youtube-card'}
-                    cardDescription={t('Academy.send_to_youtube')}
+                    cardDescription={
+                      <>
+                        {t('Academy.send_to_youtube.part1')}
+                        <strong>{t('Academy.send_to_youtube.part2')}</strong>
+                        {t('Academy.send_to_youtube.part3')}
+                        <strong>{t('Academy.send_to_youtube.part4')}</strong>
+                        {t('Academy.send_to_youtube.part5')}
+                        <strong>{t('Academy.send_to_youtube.part6')}</strong>
+                        {t('Academy.send_to_youtube.part7')}
+                      </>
+                    }
                   />
                   <CustomButton
                     type={'secondary-social'}

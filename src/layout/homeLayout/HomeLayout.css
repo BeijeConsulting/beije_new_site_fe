@@ -20,6 +20,7 @@
     }
 }
 
+/* media for zoomed screens */
 @media (-webkit-min-device-pixel-ratio: 1.25) {
     .homeLayout-footer {
         padding: 20px 5%;
@@ -30,5 +31,14 @@
 
     .homeLayout-footer {
         padding: 20px 5%;
+    }
+}
+
+/* safari only */
+@media not all and (min-resolution:.001dpcm) {
+    @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+        .homeLayout-footer {
+            padding: 20px 15%;
+        }
     }
 }

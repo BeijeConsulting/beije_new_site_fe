@@ -236,7 +236,7 @@
   }
 }
 
-
+/* media for zoomed screens */
 @media (-webkit-min-device-pixel-ratio: 1.25) {
   .academy-ourCourses-section {
     -webkit-transform: scale(80%);
@@ -257,6 +257,7 @@
   }
 }
 
+/* safari only */
 @media not all and (min-resolution:.001dpcm) {
   @supports (-webkit-appearance:none) and (stroke-color:transparent) {
     .academy-ourCourses-section {

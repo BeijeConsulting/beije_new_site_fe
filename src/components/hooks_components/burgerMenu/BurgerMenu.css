@@ -462,12 +462,11 @@
 @media screen and (min-width: 1440px) {
 
   .burger-menu-content {
-
     padding: 110px 15% 25px 15%;
   }
 }
 
-
+/* media for zoomed screens */
 @media (-webkit-min-device-pixel-ratio: 1.25) {
   .burger-menu-content {
     -webkit-transform: scale(80%);
@@ -486,4 +485,13 @@
     padding: 0%;
   }
 
+}
+
+/* safari only */
+@media not all and (min-resolution:.001dpcm) {
+  @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+    .burger-menu-content {
+      padding: 110px 15% 25px 15%;
+    }
+  }
 }

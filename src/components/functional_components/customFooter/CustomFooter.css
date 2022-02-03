@@ -104,6 +104,7 @@
   }
 }
 
+/* media for zoomed screens */
 @media (-webkit-min-device-pixel-ratio: 1.25) {
   .custom-footer-container {
     -webkit-transform: scale(80%);

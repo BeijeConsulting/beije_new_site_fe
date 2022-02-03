@@ -268,26 +268,7 @@
 
 }
 
-
-/* @media (-webkit-min-device-pixel-ratio: 1.25) {
-
-  .intro-sec-go-back-btn-container {
-    padding: 0 15%;
-  }
-
-  .intro-sec-row-title-out {
-    padding: 0 15%;
-  }
-
-  .intro-sec-txt-div-container {
-    height: 554px;
-  }
-
-  .intro-section-row-image {
-    padding: 0px 15%;
-  }
-} */
-
+/* media for zoomed screens */
 @media (-webkit-min-device-pixel-ratio: 1.25) {
   .intro-sec-txt-div-container {
     -webkit-transform: scale(80%);
@@ -323,5 +304,18 @@
     -webkit-transform: scale(75%);
     -ms-transform: scale(75%);
     transform: scale(75%)
+  }
+}
+
+/* safari only */
+@media not all and (min-resolution:.001dpcm) {
+  @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+    .content-container-scroll {
+      padding: 0 15%;
+    }
+
+    .intro-section-row-image {
+      padding: 0px 15%;
+    }
   }
 }

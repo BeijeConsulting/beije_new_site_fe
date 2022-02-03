@@ -194,7 +194,13 @@ const Consulting = (props) => {
             bg1='consulting-bg1'
             bg2='consulting-bg2'
             introLight={true}
-            intro={t('Consulting.intro')}
+            intro={
+              <>
+                {t('Consulting.intro.part1')}
+                <strong>{t('Consulting.intro.part2')}</strong>
+                {t('Consulting.intro.part3')}
+              </>
+            }
             desc1Light={true}
             // desc1={'Qualità e best efficiency si fondono per la costruzione di progetti innovativi. '}
             desc1={
