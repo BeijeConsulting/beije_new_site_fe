@@ -41,7 +41,7 @@
   }
 }
 
-
+/* media for zoomed screens */
 @media (-webkit-min-device-pixel-ratio: 1.25) {
   .home-fp-container {
     -webkit-transform: scale(80%);
@@ -63,5 +63,15 @@
 
   .scroll-btn-container {
     bottom: 0px !important;
+  }
+}
+
+
+/* safari only */
+@media not all and (min-resolution:.001dpcm) {
+  @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+    .scroll-btn-container {
+      bottom: 30px !important;
+    }
   }
 }

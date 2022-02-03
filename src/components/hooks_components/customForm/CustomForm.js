@@ -19,6 +19,7 @@ import './CustomForm.css'
 import CustomButton from "../../functional_components/Button/CustomButton";
 import { googleReCaptchaKey } from "../../../utils/properties";
 import CustomModal from "../../functional_components/customModal/CustomModal";
+import PrivacyPolicies from "../../functional_components/privacyPolicy/PrivacyPolicies";
 
 
 const CustomForm = (props) => {
@@ -215,15 +216,9 @@ const CustomForm = (props) => {
             <CustomModal
               modalTitle='Privacy Policies'
               callBackCancelModal={closeModal}
-              footer={
-                <button onClick={closeModal}>
-                  Close
-                </button>}
+              newFooter={true}
             >
-              <p>
-                Hnnhfrblpjuef ejfrhubhsd bygdeyubwg efhbygu dehbgevf  wefhbefyew wiefgygf wyegyvf wueygtvdbdt feywgufyvf wueyfgygd wyefgyf eufywgetfv efbytvf feubuf
-                iefuhyvbyv efryyver fhyf evtyvsgdgvue fhefggetuwdbv
-              </p>
+              <PrivacyPolicies />
             </CustomModal>
           </Row>
         }
@@ -243,7 +238,7 @@ const CustomForm = (props) => {
           />
         </div>
       </Form >
-    </div>
+    </div >
   )
 }
 

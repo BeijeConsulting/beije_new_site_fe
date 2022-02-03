@@ -30,6 +30,8 @@
 
 } */
 
+
+/* media for zoomed screens */
 @media (-webkit-min-device-pixel-ratio: 1.25) {
   .polygen-internal-container {
     -webkit-transform: scale(80%);
@@ -51,5 +53,15 @@
 
   .polygen-section {
     padding: 0%;
+  }
+}
+
+/* safari only */
+@media not all and (min-resolution:.001dpcm) {
+  @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+    .polygen-section {
+      padding: 60px 15%;
+    }
+
   }
 }

@@ -59,6 +59,9 @@ const CustomButton = (props) => {
       case "filter-btn":
         currentClassName = "custom-btn-filter"
         break;
+      case "modal-btn":
+        currentClassName = "custom-btn-modal"
+        break;
       default:
         currentClassName = ""
         break;

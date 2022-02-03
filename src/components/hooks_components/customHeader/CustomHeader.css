@@ -55,6 +55,7 @@
 
 }
 
+/* media for zoomed screens */
 @media (-webkit-min-device-pixel-ratio: 1.25) {
   .header-logo, .header-switch-language, .burger-menu-container {
     -webkit-transform: scale(80%);

@@ -181,16 +181,74 @@ const Up = (props) => {
             titleLight={true}
             bg1='up-bg1'
             bg2='up-bg2'
-            desc1={t('Up.desc1')}
+            desc1={
+              <>
+                {t('Up.desc1.part1')}
+                <strong>{t('Up.desc1.part2')}</strong>
+                {t('Up.desc1.part3')}
+                <strong>{t('Up.desc1.part4')}</strong>
+                {t('Up.desc1.part5')}
+                <strong>{t('Up.desc1.part6')}</strong>
+                {t('Up.desc1.part7')}
+                <strong>{t('Up.desc1.part8')}</strong>
+                {t('Up.desc1.part9')}
+                <strong>{t('Up.desc1.part10')}</strong>
+                {t('Up.desc1.part11')}
+                <strong>{t('Up.desc1.part12')}</strong>
+                {t('Up.desc1.part13')}
+                <strong>{t('Up.desc1.part14')}</strong>
+                {t('Up.desc1.part15')}
+                <strong>{t('Up.desc1.part16')}</strong>
+                {t('Up.desc1.part17')}
+              </>
+            }
             desc1Light={true}
             desc2Mobile={true}
-            desc2={t('Up.desc2')}
+            desc2={
+              <>
+                {t('Up.desc2.part1')}
+                <strong>{t('Up.desc2.part2')}</strong>
+                {t('Up.desc2.part3')}
+                <strong>{t('Up.desc2.part4')}</strong>
+                {t('Up.desc2.part5')}
+                <strong>{t('Up.desc2.part6')}</strong>
+                {t('Up.desc2.part7')}
+                <strong>{t('Up.desc2.part8')}</strong>
+                {t('Up.desc2.part9')}
+                <strong>{t('Up.desc2.part10')}</strong>
+                {t('Up.desc2.part11')}
+              </>
+            }
             desc2Light={true}
           />
 
           <Row className="up-intro-sec-desc3-row up-intro-sec-desc3-row-gsap">
             <CustomCard
-              cardParagraph={t('Up.paragraph')}
+              cardParagraph={
+                <>
+                  {t('Up.paragraph.part1')}
+                  <strong>{t('Up.paragraph.part2')}</strong>
+                  {t('Up.paragraph.part3')}
+                  <strong>{t('Up.paragraph.part4')}</strong>
+                  {t('Up.paragraph.part5')}
+                  <strong>{t('Up.paragraph.part6')}</strong>
+                  {t('Up.paragraph.part7')}
+                  <strong>{t('Up.paragraph.part8')}</strong>
+                  {t('Up.paragraph.part9')}
+                  <strong>{t('Up.paragraph.part10')}</strong>
+                  {t('Up.paragraph.part11')}
+                  <strong>{t('Up.paragraph.part12')}</strong>
+                  {t('Up.paragraph.part13')}
+                  <strong>{t('Up.paragraph.part14')}</strong>
+                  {t('Up.paragraph.part15')}
+                  <strong>{t('Up.paragraph.part16')}</strong>
+                  {t('Up.paragraph.part17')}
+                  <strong>{t('Up.paragraph.part18')}</strong>
+                  {t('Up.paragraph.part19')}
+                  <strong>{t('Up.paragraph.part20')}</strong>
+                  {t('Up.paragraph.part21')}
+                </>
+              }
               paragraphClassName={'up-intro-section-paragraph txt-light up-intro-sec-desc3-gsap'}
             />
           </Row>

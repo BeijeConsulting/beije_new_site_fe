@@ -45,7 +45,13 @@ const AcademyJava = (props) => {
 
                 <AcademyDetails
                     pageTitle={turnToUppercase(t('AcademyBackend.title'))}
-                    pageIntro={t('AcademyBackend.intro')}
+                    pageIntro={
+                        <>
+                            {t('AcademyBackend.intro.part1')}
+                            <strong>{t('AcademyBackend.intro.part2')}</strong>
+                            {t('AcademyBackend.intro.part3')}
+                        </>
+                    }
                     imgSrc={academy1}
                     btnContent={t('btn.apply')}
                     stageDescription={t('AcademyBackend.stageDesc')}

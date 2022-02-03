@@ -152,7 +152,7 @@
   }
 }
 
-
+/* media for zoomed screens */
 @media (-webkit-min-device-pixel-ratio: 1.25) {
   .sub-section-desc-desktop-container, .whoWeAre-sub-section-desc-container {
     -webkit-transform: scale(80%);
@@ -178,5 +178,15 @@
   .sub-section-img, .sub-section-row, .sub-section-desc-desktop-container {
     height: 400px;
     padding: 0 5%;
+  }
+}
+
+
+/* safari only */
+@media not all and (min-resolution:.001dpcm) {
+  @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+    .sub-section-row {
+      padding: 0 15%;
+    }
   }
 }
