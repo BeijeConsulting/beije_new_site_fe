@@ -11,7 +11,6 @@ import { social } from "../../../utils/properties";
 
 // import components
 import CustomButton from "../Button/CustomButton";
-import { setGaEvent } from "../../../utils/utilities";
 
 const SocialSection = (props) => {
 
@@ -23,37 +22,12 @@ const SocialSection = (props) => {
                 key={key}
                 className={item.classNameSingleContainer}
             >
-                {/* <CustomButton
-                    type={'primary-social'}
-                    href={item.url}
-                    bgIcon={item.bgIcon}
-                    target={item.target}
-                    clickCallback={() => setGaEvent({ category: "Social", action: "Click social button", label: item.name })}
-
-                /> */}
                 <CustomButton
                     type={props.btnType}
                     href={item.url}
                     bgIcon={item.bgIcon}
                     target={item.target}
-                    clickCallback={() => setGaEvent({ category: "Social", action: "Click social button", label: item.name })}
                 />
-                {/* <CustomButton
-                    type={props.btnType}
-                    href={item.url}
-                    target={item.target}
-                    currentIcon={
-                     
-                            <img
-                                src={item.icon}
-                                alt={t(`imgAlt.social.${item.alt}`)}
-                                style={{ height: 16 }}
-                                className={props.iconClassname}
-                            />
-                        </a>
-                    }
-                    clickCallback={() => setGaEvent({ category: "Social", action: "Click social button", label: item.name })}
-                /> */}
             </div>
         )
 

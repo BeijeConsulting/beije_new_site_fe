@@ -13,9 +13,6 @@ import '../SecondSection.css'
 //import costants
 import { cardWhoWeAre } from "../../../../utils/properties";
 
-// import gaEvent set
-import { setGaEvent } from "../../../../utils/utilities";
-
 //import components
 import CustomCard from "../../../functional_components/customCard/CustomCard";
 import CustomButton from "../../../functional_components/Button/CustomButton";
@@ -76,7 +73,6 @@ const SecondSectionDesktop = () => {
                 <i className={'arrow-icon-btn arrow-icon-dark'} />
               }
               href={item.href}
-              clickCallback={() => setGaEvent({category: "Navigation", action: "Click card arrow", label: item.cardTitle})}
             />
           </Row>
         </div>

@@ -8,9 +8,6 @@ import { connect } from "react-redux";
 // import constants
 import { ENVIRONMENT } from "../../../utils/properties";
 
-// import gaEvent set
-import { setGaEvent } from "../../../utils/utilities";
-
 // import style
 import './Navbar.css'
 
@@ -25,7 +22,6 @@ const Navbar = (props) => {
         <Link
           to={`${ENVIRONMENT.ROUTING.BASE_URL}consulting`}
           className={props.classNameLink}
-          onClick={() => setGaEvent({ category: "Navigation", action: "Click navbar", label: "Consulting" })}
         >
           CONSULTING
         </Link>
@@ -41,7 +37,6 @@ const Navbar = (props) => {
         <Link
           to={`${ENVIRONMENT.ROUTING.BASE_URL}academy`}
           className={props.classNameLink}
-          onClick={() => setGaEvent({ category: "Navigation", action: "Click navbar", label: "Beije talent academy" })}
         >
           BEIJE TALENT ACADEMY
         </Link>
@@ -55,7 +50,6 @@ const Navbar = (props) => {
         <Link
           to={`${ENVIRONMENT.ROUTING.BASE_URL}up`}
           className={props.classNameLink}
-          onClick={() => setGaEvent({ category: "Navigation", action: "Click navbar", label: "Up" })}
         >
           UP
         </Link>

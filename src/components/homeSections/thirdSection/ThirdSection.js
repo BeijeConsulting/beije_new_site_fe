@@ -10,7 +10,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import './ThirdSection.css'
 
 //import functions
-import { turnToUppercase, divideText, setGaEvent } from "../../../utils/utilities";
+import { turnToUppercase, divideText } from "../../../utils/utilities";
 
 // import constants
 import { ENVIRONMENT } from "../../../utils/properties";
@@ -93,7 +93,6 @@ const ThirdSection = () => {
                         <CustomButton
                             type={'view-all-btn'}
                             content={<ViewAllButton />}
-                            clickCallback={() => setGaEvent({category: "Navigation", action: "Click view all", label: "Third section home"})}
                             href={`${ENVIRONMENT.ROUTING.BASE_URL}whoweare`}
                         />
                     </Col>

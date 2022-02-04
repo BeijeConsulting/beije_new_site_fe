@@ -19,7 +19,7 @@ import './Academy.css'
 // import '../consulting/Consulting.css'
 
 //import functions
-import { setGaEvent, turnToUppercase } from "../../utils/utilities";
+import { turnToUppercase } from "../../utils/utilities";
 
 //import constants
 import { academy_carousel_student, academy_comments, ENVIRONMENT, social } from "../../utils/properties";
@@ -263,7 +263,6 @@ const Academy = (props) => {
               textClassName='academy-ourCourses-section-course-title'
               text={t('Academy.title_academy_java')}
               href={`${ENVIRONMENT.ROUTING.BASE_URL}academy/masterBackend`}
-              clickCallback={() => setGaEvent({ category: "Navigation", action: "Click academy arrow", label: "Master Backend" })}
             />
             <GoToDetailRow
               numCol={1}
@@ -271,7 +270,6 @@ const Academy = (props) => {
               text={t('Academy.title_academy_frontend')}
               href={`${ENVIRONMENT.ROUTING.BASE_URL}academy/masterFrontend`}
               containerClassName={'academy-ourCourses-section-lastEl'}
-              clickCallback={() => setGaEvent({ category: "Navigation", action: "Click academy arrow", label: "Master Frontent" })}
             />
 
             <Row className="academy-ourCourses-second-part-container academy-gsap-our-courses-row2">
@@ -361,7 +359,6 @@ const Academy = (props) => {
                     href={social[2].url}
                     bgIcon='btn_yt_default'
                     target={'_blank'}
-                    clickCallback={() => setGaEvent({ category: "Social", action: "Click button academy", label: "Youtube" })}
                   />
                 </>
 

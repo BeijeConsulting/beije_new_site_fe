@@ -21,7 +21,6 @@ import SwitchLanguage from '../switchLanguage/SwitchLanguage';
 import CustomCard from '../../functional_components/customCard/CustomCard';
 import { useTranslation } from 'react-i18next';
 import SocialSection from '../../functional_components/socialSection/SocialSection';
-import { setGaEvent } from '../../../utils/utilities';
 
 
 
@@ -68,7 +67,6 @@ const BurgerMenu = (props) => {
   }
 
   const clickOnLink = ({ item }) => () => {
-    setGaEvent({ category: "Navigation", action: "Burger menu", label: item.title })
     props.dispatch(initMenu())
     setState({
       ...state,

@@ -12,9 +12,6 @@ import '../SecondSection.css'
 //import costants
 import { cardWhoWeAre } from "../../../../utils/properties";
 
-// import gaEvent set
-import { setGaEvent } from "../../../../utils/utilities";
-
 // const slicedArray = array.slice(0, n);
 // const valueHistoryObj = [];
 // valueHistoryObj = cardWhoWeAre[0, 1];
@@ -79,7 +76,6 @@ const SecondSectionTablet = (props) => {
               }
               className={item.btnClassName}
               href={item.href}
-              clickCallback={setGaEvent({ category: "Navigation", action: "Click card arrow", label: item.cardTitle })}
             />
           </Row>
         </div>
