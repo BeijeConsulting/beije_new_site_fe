@@ -3,6 +3,7 @@ import { useRoutes } from "react-router-dom";
 import { connect, useSelector } from "react-redux";
 import ReactGa from 'react-ga';
 import { Layout } from 'antd';
+import { ENVIRONMENT } from "./utils/properties";
 const { Header, Footer } = Layout;
 
 // import cookies
@@ -15,12 +16,11 @@ import './style.css'
 import CustomHeader from './components/hooks_components/customHeader/CustomHeader'
 import CustomFooter from "./components/functional_components/customFooter/CustomFooter";
 import SiteRoutes from './routes';
-import { googleAnalyticsKey } from "./utils/properties";
 import RouteChangeTracker from "./components/functional_components/RouteChangeTracker";
 import { get } from "lodash";
 
 const App = (props) => {
-  ReactGa.initialize(googleAnalyticsKey);
+  ReactGa.initialize(ENVIRONMENT.GOOGLE_ANALITYCS_KEY);
   let element = useRoutes(SiteRoutes);
   const pageIsBouncing = useSelector((state) => get(state.loadingDuck, 'pageIsBouncing', false));
 
