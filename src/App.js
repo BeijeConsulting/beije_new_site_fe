@@ -24,11 +24,11 @@ const App = (props) => {
   let element = useRoutes(SiteRoutes);
   const pageIsBouncing = useSelector((state) => get(state.loadingDuck, 'pageIsBouncing', false));
 
-  let testCookieName = "test"
-  Cookies.remove(testCookieName)
-  console.log("cookie: ", Cookies.get(testCookieName));
-  Cookies.set(testCookieName, 500);
-  console.log("cookie: ", Cookies.get(testCookieName));
+  // let testCookieName = "test"
+  // Cookies.remove(testCookieName)
+  // console.log("cookie: ", Cookies.get(testCookieName));
+  // Cookies.set(testCookieName, 500);
+  // console.log("cookie: ", Cookies.get(testCookieName));
 
   return (
     <>
