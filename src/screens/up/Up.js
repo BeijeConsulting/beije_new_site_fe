@@ -159,10 +159,6 @@ const Up = (props) => {
   //     )
   // }
 
-  // const sendEmailCommercial = () => {
-  //   console.log('Send email to commercial');
-  //   // *ga*
-  // }
 
   return (
     <>

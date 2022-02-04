@@ -3,11 +3,6 @@ import 'moment/locale/it';
 import localeGB from 'antd/es/date-picker/locale/en_GB';
 import localeIT from 'antd/es/date-picker/locale/it_IT';
 
-//Icon for social
-import icon_facebook from '../assets/icons/social_icon/f_facebook_dark.png'
-import icon_instagram from '../assets/icons/social_icon/in_instagram_dark.png'
-import icon_youTube from '../assets/icons/social_icon/youtube_dark.png'
-
 //assets used in consulting page
 import img1_consulting from '../assets/images/consulting/consulting1.jpg'
 import img2_consulting from '../assets/images/consulting/consulting2.jpg'

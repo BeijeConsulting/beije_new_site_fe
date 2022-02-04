@@ -10,9 +10,9 @@
     --social-in-light-btn: url('../../../assets/icons/social_icon/social_circle/in_bg_light.svg');
     --social-in-btn: url('../../../assets/icons/social_icon/social_circle/in_bg_dark.svg');
 
-    --arrow-white-btn: url('../../../assets/icons/arrow_white.png');
+    --arrow-white-btn: url('../../../assets/icons/arrow_white.svg');
     --arrow-dark-btn: url('../../../assets/icons/arrow.svg');
-    --arrow-lightblue-btn: url('../../../assets/icons/arrow_lightblue.png');
+    --arrow-lightblue-btn: url('../../../assets/icons/arrow_lightblue.svg');
 }
 
 /* Menu */
@@ -518,7 +518,7 @@
 .custom-btn-modal {
     border-radius: 50px;
     height: 50px;
-    width: 137px;
+    width: 90%;
     background-color: var(--primary-btn-color);
     border: 1px solid var(--primary-btn-color) !important;
     color: #fff !important;
@@ -533,7 +533,7 @@
     text-align: center !important;
     letter-spacing: 0.12em !important;
     text-transform: uppercase !important;
-    margin-left: 15px;
+    margin: 15px;
 }
 
 .custom-btn-modal:hover {

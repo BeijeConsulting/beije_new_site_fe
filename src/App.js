@@ -5,6 +5,9 @@ import ReactGa from 'react-ga';
 import { Layout } from 'antd';
 const { Header, Footer } = Layout;
 
+// import cookies
+import CookieConsent, { Cookies } from "react-cookie-consent";
+
 // import style
 import './style.css'
 
@@ -20,6 +23,13 @@ const App = (props) => {
   ReactGa.initialize(googleAnalyticsKey);
   let element = useRoutes(SiteRoutes);
   const pageIsBouncing = useSelector((state) => get(state.loadingDuck, 'pageIsBouncing', false));
+
+  let testCookieName = "test"
+  Cookies.remove(testCookieName)
+  console.log("cookie: ", Cookies.get(testCookieName));
+  Cookies.set(testCookieName, 500);
+  console.log("cookie: ", Cookies.get(testCookieName));
+
   return (
     <>
       <Header
@@ -32,6 +42,20 @@ const App = (props) => {
       >
         <CustomHeader />
       </Header>
+      <CookieConsent
+        location="bottom"
+        buttonText="Accept"
+        enableDeclineButton
+        declineButtonText="Decline"
+        cookieName="Cookies_BeijePeopleFirst"
+        style={{ background: "#323e48", borderTop: '1px solid #d6e3e5' }}
+        buttonStyle={{ color: "#323e48", fontSize: "15px", backgroundColor: '#d6e3e5', borderRadius: '30px' }}
+        declineButtonStyle={{ color: "#323e48", fontSize: "15px", backgroundColor: '#d6e3e5', borderRadius: '30px' }}
+        expires={150}
+      >
+        <span>This website uses cookies to enhance the user experience.</span>
+      </CookieConsent>
+
       <RouteChangeTracker />
       {element}
       <Footer className={`${pageIsBouncing && 'hidden'} generalLayout-footer`}>

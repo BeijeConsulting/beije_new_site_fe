@@ -3,11 +3,12 @@
 const SET_MODAL = 'WEB/MODAL/SET_MODAL'
 const INIT_MODAL = 'WEB/MODAL/INIT_MODAL'
 
-export function setModal(value) {
+export function setModal(value1, value2) {
     return {
         type: SET_MODAL,
         payload: {
-            openModal: value
+            openModal: value1,
+            typeContent: value2
         }
     };
 }
@@ -21,17 +22,18 @@ export function initModal() {
 
 
 const INIT_STATE = {
-    openModal: false
+    openModal: false,
+    typeContent: ''
 }
 
 export default function openModalDuck(state = INIT_STATE, action) {
     let newState = Object.assign({}, state);
     switch (action.type) {
         case SET_MODAL:
-            newState.openModal = action.payload.openModal;
+            newState = action.payload;
             return newState;
         case INIT_MODAL:
-            newState.openModal = false;
+            newState = {};
             return newState;
         default:
             return state;

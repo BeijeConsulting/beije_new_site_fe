@@ -119,7 +119,6 @@ const WhoWeAre = (props) => {
                     {t('WhoWeAre.vision_desc.part4')}
                   </span>
                 </strong>
-                {t('WhoWeAre.vision_desc.part5')}
               </>
             }
             bg={'whoWeAre-vision-img'}
@@ -167,6 +166,7 @@ const WhoWeAre = (props) => {
                   </span>
                 </strong>
                 {t('WhoWeAre.history_desc.part3')}
+                <strong>{t('WhoWeAre.history_desc.part4')}</strong>
               </>
             }
             bg={'whoWeAre-history-img'}
@@ -213,7 +213,6 @@ const WhoWeAre = (props) => {
                     <strong>{t('WhoWeAre.value_list.el4.part2')}
                     </strong>
                   </span>
-                  {t('WhoWeAre.value_list.el4.part3')}
                 </li>
               </>
             }

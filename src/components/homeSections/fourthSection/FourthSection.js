@@ -42,11 +42,6 @@ const FourthSection = () => {
 
   }, [])
 
-  // const sendEmailCommercial = () => {
-  //   console.log('Send email to commercial');
-  //   // *ga*
-  // }
-
   return (
     <div
       ref={ref}

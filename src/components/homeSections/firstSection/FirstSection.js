@@ -1,8 +1,7 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { useNavigate } from "react-router-dom"
 import { useTranslation } from "react-i18next"
 import { Row, Col } from "antd"
-import detectZoom from "detect-zoom" //remove
 
 //import style
 import './FirstSection.css'
@@ -23,27 +22,8 @@ const FirstSection = () => {
   const navigate = useNavigate()
 
   const callbackScroll = () => {
-    console.log('sono nello scroll button')
     navigate(`${ENVIRONMENT.ROUTING.BASE_URL}#secondSection`)
   }
-
-  // remove - useEffect all
-  useEffect(() => {
-    var zoom = detectZoom.zoom();
-    var device = detectZoom.device();
-    console.log('zoom: ', zoom, 'device: ', device);
-
-    window.addEventListener("resize", updateMedia);
-
-    return () => {
-      window.removeEventListener("resize", updateMedia);
-    }
-  }, [])
-
-  const updateMedia = () => {
-    console.log('width: ', window.innerWidth, ' height: ', window.innerHeight)
-
-  };
 
   return (
     <div className={'home-fp-container'}>

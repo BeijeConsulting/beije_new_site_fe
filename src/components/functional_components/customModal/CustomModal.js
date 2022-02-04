@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { Modal } from "antd";
 
-// import constants
+// import constants and docs
 import {
   DownloadOutlined
 } from '@ant-design/icons';
+import privacyPoliciesPDF from '../../../assets/PrivacyPolicies_BeijePeopleFirst.pdf'
 
 // import redux
 import { connect } from "react-redux";
@@ -17,12 +18,6 @@ import CustomButton from "../Button/CustomButton";
 
 const CustomModal = (props) => {
 
-  const [state, setState] = useState({
-    modalVisible: false
-  })
-
-  console.log('openModal: ', props.openModalDuck.openModal)
-
   const handleOk = () => {
     props.callBackOkModal()
   }
@@ -31,18 +26,22 @@ const CustomModal = (props) => {
     props.callBackCancelModal()
   }
 
-
   return (
     <Modal
       title={props.modalTitle}
       visible={props.openModalDuck.openModal}
       footer={props.newFooter ?
         <div className={'modal-footer'}>
-          <CustomButton
-            type="modal-btn"
-            currentIcon={<DownloadOutlined />}
-            content={'Download'}
-          />
+          {
+            props.downloadPDF &&
+            <a href={props.pdfHref} download={true}>
+              <CustomButton
+                type="modal-btn"
+                currentIcon={<DownloadOutlined />}
+                content={'Download pdf'}
+              />
+            </a>
+          }
           <CustomButton
             type="modal-btn"
             content={'Close'}
@@ -64,7 +63,9 @@ const CustomModal = (props) => {
 
 CustomModal.defaultProps = {
   modalClassname: 'modal-container',
-  bodyStyle: 'modal-body'
+  bodyStyle: 'modal-body',
+  downloadPDF: false,
+  pdfHref: privacyPoliciesPDF
 }
 
 const mapStateToProps = state => ({

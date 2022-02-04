@@ -111,6 +111,10 @@
   text-decoration: underline;
 }
 
+.form-policy-privacy-link:hover {
+  text-decoration: none;
+}
+
 .input-error {
   color: var(--error-color-form);
 }

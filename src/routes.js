@@ -87,7 +87,7 @@ export default [
     children: [
       { index: true, element: <Career /> },
       {
-        path: `${ENVIRONMENT.ROUTING.BASE_URL}career/academy`,
+        path: `${ENVIRONMENT.ROUTING.BASE_URL}career/detail/:id`,
         element: <CareerDetail />
       },
       { path: "*", element: <NoMatch /> }
@@ -98,6 +98,10 @@ export default [
     element: <GeneralLayout />,
     children: [
       { index: true, element: <Blog /> },
+      {
+        path: `${ENVIRONMENT.ROUTING.BASE_URL}blog/detail/:lang`,
+        element: <CareerDetail />
+      },
       { path: "*", element: <NoMatch /> }
     ]
   },

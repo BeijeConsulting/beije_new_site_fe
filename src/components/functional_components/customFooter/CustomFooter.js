@@ -2,6 +2,10 @@ import React from "react"
 import { Row, Col } from "antd"
 import { useTranslation } from 'react-i18next';
 
+// redux
+import { connect } from "react-redux";
+import { setModal, initModal } from "../../../redux/ducks/openModalDuck";
+
 //import style and assets
 import '../../../style.css'
 import './CustomFooter.css'
@@ -10,9 +14,24 @@ import './CustomFooter.css'
 import CustomCard from "../customCard/CustomCard"
 import SwitchLanguage from "../../hooks_components/switchLanguage/SwitchLanguage";
 import SocialSection from "../socialSection/SocialSection";
+import LegalNotes from "../legalNotes/LegalNotes";
+import PrivacyPolicies from "../privacyPolicy/PrivacyPolicies";
+import CustomModal from "../customModal/CustomModal";
 
 const CustomFooter = (props) => {
     const { t } = useTranslation();
+
+    const showModalPrivacyPolicies = () => {
+        props.dispatch(setModal(true, 'privacyPolicies'));
+    }
+
+    const showModallegalNotes = () => {
+        props.dispatch(setModal(true, 'legalNotes'))
+    }
+
+    const closeModal = () => {
+        props.dispatch(initModal());
+    };
 
     return (
         <footer className={props.classNameFooter}>
@@ -44,15 +63,23 @@ const CustomFooter = (props) => {
                     </Col>
                 </Col>
                 <Col span={9} className={'container-column footer-right-col'}>
-                    <CustomCard
-                        titleClassName={'custom-footer-title txt-right txt-light'}
-                        cardTitle={'PRIVACY AND COOKIE POLICY'}
-                    />
+                    <span
+                        className='footer-policy-privacy-link'
+                        onClick={showModalPrivacyPolicies}>
+                        <CustomCard
+                            titleClassName={'custom-footer-title txt-right txt-light'}
+                            cardTitle={'PRIVACY AND COOKIE POLICY'}
+                        />
+                    </span>
 
-                    <CustomCard
-                        titleClassName={'custom-footer-title txt-right txt-light'}
-                        cardTitle={t('footer.legalNotes')}
-                    />
+                    <span
+                        className='footer-legal-notes-link'
+                        onClick={showModallegalNotes}>
+                        <CustomCard
+                            titleClassName={'custom-footer-title txt-right txt-light'}
+                            cardTitle={t('footer.legalNotes')}
+                        />
+                    </span>
                     {/* this row is shown only when the device is smaller than 1024px */}
                     <CustomCard>
                         <p className='txt-right txt-light custom-footer-translation-mobile'>
@@ -60,6 +87,28 @@ const CustomFooter = (props) => {
                         </p>
                     </CustomCard>
                 </Col>
+                {
+                    props.openModalDuck.typeContent === 'privacyPolicies' &&
+                    <CustomModal
+                        modalTitle='Privacy Policies'
+                        callBackCancelModal={closeModal}
+                        newFooter={true}
+                        downloadPDF={true}
+                    >
+                        <PrivacyPolicies />
+                    </CustomModal>
+                }
+
+                {
+                    props.openModalDuck.typeContent === 'legalNotes' &&
+                    <CustomModal
+                        modalTitle='Legal Notes'
+                        callBackCancelModal={closeModal}
+                        newFooter={true}
+                    >
+                        <LegalNotes />
+                    </CustomModal>
+                }
             </Row >
 
             <div>
@@ -110,5 +159,8 @@ CustomFooter.defaultProps = {
     classNameFooter: 'custom-footer-container w-100 h-100'
 }
 
+const mapStateToProps = state => ({
+    openModalDuck: state.openModalDuck
+})
 
-export default CustomFooter
+export default connect(mapStateToProps)(CustomFooter)

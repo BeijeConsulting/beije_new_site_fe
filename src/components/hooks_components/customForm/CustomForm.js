@@ -105,8 +105,8 @@ const CustomForm = (props) => {
     }
   });
 
-  const showModal = () => {
-    props.dispatch(setModal(true));
+  const showModalPrivacyPolicies = () => {
+    props.dispatch(setModal(true, 'privacyPolicies'));
   }
 
   const closeModal = () => {
@@ -203,7 +203,7 @@ const CustomForm = (props) => {
                     {t('home.fourthSection.agreement.part1')}
                     <span
                       className='form-policy-privacy-link'
-                      onClick={showModal}>
+                      onClick={showModalPrivacyPolicies}>
                       {t('home.fourthSection.agreement.part2')}
                     </span>
                   </>
@@ -212,14 +212,17 @@ const CustomForm = (props) => {
                 <span className="input-error" >{formikContacts.errors.agreement && formikContacts.touched.agreement ? t(`${formikContacts.errors.agreement}`) : ''}</span>
               </div>
             </Col>
-
-            <CustomModal
-              modalTitle='Privacy Policies'
-              callBackCancelModal={closeModal}
-              newFooter={true}
-            >
-              <PrivacyPolicies />
-            </CustomModal>
+            {
+              props.openModalDuck.typeContent === 'privacyPolicies' &&
+              <CustomModal
+                modalTitle='Privacy Policies'
+                callBackCancelModal={closeModal}
+                newFooter={true}
+                downloadPDF={true}
+              >
+                <PrivacyPolicies />
+              </CustomModal>
+            }
           </Row>
         }
         <div className="form-input-gsap recaptcha">
@@ -253,4 +256,8 @@ CustomForm.defaultProps = {
   origin: 'home'
 }
 
-export default connect()(CustomForm)
+const mapStateToProps = state => ({
+  openModalDuck: state.openModalDuck
+})
+
+export default connect(mapStateToProps)(CustomForm)

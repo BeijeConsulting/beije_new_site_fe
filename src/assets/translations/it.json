@@ -43,11 +43,11 @@
       "academy_backend": "java, fondamenti java, string builder, cvs, xml, database, linguaggio java, java per web, spring, javascript, DOM, come diventare java developer",
       "academy_frontend": "react, react native, frontend, academy frontend, come diventare frontend developer, master frontend, master, corso, corso web, come creare una pagina web, come creare una applicazione mobile, android, iOS, come diventare esperto frontend, javascript, programmatore android, programmatore iOS",
       "up": "agile, progettazione, implementazione, delivery, integration, application maintenance, software, frontend, backend, azienda software, IT, azienda IT, azienda Milano, consulting Milano, azienda Lissone, azienda informatica Milano",
-      "whoweare": "",
-      "career": "",
+      "whoweare": "beije storia, beije valori, beije mission, beije vision, beije futuro, team di valore, people first, beije azienda",
+      "career": "offerte lavoro beije, stage frontend, stage backend, stage, stage milano IT, stage frontend milano, stage backend milano, master frontend, master backend, come entrare in beije, carriera beije, lavoro, academy, stipendio frontend, stipendio sviluppatore, stipendio backend",
       "blog": "",
-      "community": "",
-      "contacts": "contatti beije"
+      "community": "community, community beije, beije community, eventi beije, team beije, team, storia beije",
+      "contacts": "contatti beije, sede beije, dove si trova beije, numero telefono beije, email beije"
     }
   },
   "formValidation": {
@@ -370,43 +370,42 @@
       "el1": {
         "part1": "Crediamo in quello che facciamo e abbiamo un profondo ",
         "part2": "RISPETTO ",
-        "part3": "per gli altri."
+        "part3": "per gli altri"
       },
       "el2": {
         "part1": "Mostriamo ",
         "part2": "GRATITUDINE ",
-        "part3": "per l’impegno che ogni giorno mettiamo nel nostro lavoro."
+        "part3": "per l’impegno che ogni giorno mettiamo nel nostro lavoro"
       },
       "el3": {
         "part1": "Prima viene la squadra e poi l’individuo, il nostro è un lavoro di ",
         "part2": "TEAM",
-        "part3": "."
+        "part3": ""
       },
       "el4": {
         "part1": "La base per costruire la nostra community è sviluppare un ",
-        "part2": "SENSO DI APPARTENENZA",
-        "part3": "."
+        "part2": "SENSO DI APPARTENENZA"
       }
     },
     "history_title": "Storia",
     "history_desc": {
       "part1": "Al centro del modello Beije c’è una vision ",
-      "part2": "people first ",
-      "part3": ": le persone al centro per la creazione di un’azienda di valore. Da un ideale ad un business: da più di 10 anni ci impegniamo costantemente per aggiornare il nostro know-how e siamo in grado di fornire le metodologie più moderne e le tecnologie più innovative per la realizzazione di progetti altamente specializzati."
+      "part2": "People First ",
+      "part3": ": le persone al centro per la creazione di un’azienda di valore. Da un ideale ad un business: da più di 10 anni ci impegniamo costantemente per aggiornare il nostro know-how e siamo in grado di fornire le metodologie più moderne e le tecnologie più innovative per la realizzazione di ",
+      "part4": "progetti altamente specializzati"
     },
     "vision_title": "Vision",
     "vision_desc": {
       "part1": "Le ",
       "part2": "persone ",
       "part3": "al centro del nostro ",
-      "part4": "futuro",
-      "part5": "."
+      "part4": "futuro"
     },
     "mission_title": "Mission",
     "mission_desc": {
       "part1": "Aiutiamo le aziende a realizzare progetti innovativi attraverso Team di ",
       "part2": "Valore",
-      "part3": "."
+      "part3": ""
     }
   },
   "Up": {

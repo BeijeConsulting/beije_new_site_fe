@@ -171,11 +171,6 @@ const Consulting = (props) => {
   //     )
   // }
 
-  // const sendEmailCommercial = () => {
-  //   console.log('Send email to commercial');
-  //   // *ga*
-  // }
-
   return (
     /* *he* */
     <>
