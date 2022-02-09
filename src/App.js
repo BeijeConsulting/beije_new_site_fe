@@ -1,48 +1,12 @@
 import React from "react";
 import { useRoutes } from "react-router-dom";
-import { connect, useSelector } from "react-redux";
-import ReactGa from 'react-ga';
-import { Layout } from 'antd';
-const { Header, Footer } = Layout;
-
-// import style
-import './style.css'
-
-// import components
-import CustomHeader from './components/hooks_components/customHeader/CustomHeader'
-import CustomFooter from "./components/functional_components/customFooter/CustomFooter";
 import SiteRoutes from './routes';
-import { googleAnalyticsKey } from "./utils/properties";
-import RouteChangeTracker from "./components/functional_components/RouteChangeTracker";
-import { get } from "lodash";
 
-const App = (props) => {
-  ReactGa.initialize(googleAnalyticsKey);
+export default function App() {
+  // The useRoutes() hook allows you to define your routes as JavaScript objects
+  // instead of <Routes> and <Route> elements. This is really just a style
+  // preference for those who prefer to not use JSX for their routes config.
   let element = useRoutes(SiteRoutes);
-  const pageIsBouncing = useSelector((state) => get(state.loadingDuck, 'pageIsBouncing', false));
-  return (
-    <>
-      <Header
-        className={!props?.menuDuck?.menuOpen ? 'header-ant-general-style' : 'header-ant-style'}
-        style={{
-          backgroundColor: props?.colorHeaderDuck?.colorHeader !== undefined ?
-            props?.colorHeaderDuck?.colorHeader : "transparent",
-          transition: '1.5s'
-        }}
-      >
-        <CustomHeader />
-      </Header>
-      <RouteChangeTracker />
-      {element}
-      <Footer className={`${pageIsBouncing && 'hidden'} generalLayout-footer`}>
-        <CustomFooter />
-      </Footer>
-    </>
-  )
+
+  return element;
 }
-
-const mapStateToProps = state => ({
-  colorHeaderDuck: state.colorHeaderDuck
-})
-
-export default connect(mapStateToProps)(App)

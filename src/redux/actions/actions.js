@@ -1,10 +1,10 @@
 import Api from "../../services/Api";
-import { setUserInfo } from "../ducks/UserInfo";
-import { get } from 'lodash';
-import { showError } from "../../utils/utilities";
+import {setUserInfo} from "../ducks/UserInfo";
+import {get} from 'lodash';
+import {showError} from "../../utils/utilities";
 // import {showError, showSuccess} from "../../utils/utilities";
-import { setLoading } from "../ducks/Loading";
-import { setLanguage } from "../ducks/Language";
+// import {setLoading} from "../ducks/Loading";
+import {setLanguage} from "../ducks/Language";
 
 export const doLogin = async (dispatch, data) => {
   try {
@@ -21,49 +21,6 @@ export const doLogin = async (dispatch, data) => {
     // console.log('Error!', err);
   }
 }
-
-export const printCommunities = async (dispatch) => {
-  try {
-    dispatch(setLoading(true));
-    const communities = await Api.getCommunities();
-    if (communities.error) {
-      showError(get(communities, 'error.messageCode', 'ER000'));
-    }
-    dispatch(setLoading(false));
-    return communities;
-  } catch (err) {
-    // console.log('Error!', err);
-  }
-}
-
-export const printBlog = async (dispatch) => {
-  try {
-    dispatch(setLoading(true));
-    const blog = await Api.getBlog();
-    if (blog.error) {
-      showError(get(blog, 'error.messageCode', 'ER000'));
-    }
-    dispatch(setLoading(false));
-    return blog;
-  } catch (err) {
-    // console.log('Error!', err);
-  }
-}
-
-export const printCareer = async (dispatch) => {
-  try {
-    dispatch(setLoading(true));
-    const careers = await Api.getCareer();
-    if (careers.error) {
-      showError(get(careers, 'error.messageCode', 'ER000'));
-    }
-    dispatch(setLoading(false));
-    return careers;
-  } catch (err) {
-    // console.log('Error!', err);
-  }
-}
-
 
 // Another api example
 // export const saveSettings = async (dataToSave) => {

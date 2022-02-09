@@ -3,20 +3,11 @@
  * when you use right apis, remove this comment
  */
 // import {deleteApi, get, post} from './GenericServices';
-import { post, get } from './GenericServices';
+import {post} from './GenericServices';
 
 const Api = {
   login: (data) => {
     return post('auth', data);
-  },
-  getCommunities: () => {
-    return get('communities');
-  },
-  getBlog: () => {
-    return get('blogs');
-  },
-  getCareer: () => {
-    return get('job_applications');
   }
 };
 

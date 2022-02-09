@@ -3,12 +3,6 @@ import { combineReducers } from 'redux';
 import userInfoDuck from "../ducks/UserInfo";
 import languageDuck from "../ducks/Language";
 import loadingDuck from "../ducks/Loading";
-import menuDuck from '../ducks/menuDuck';
-import colorDuck from '../ducks/colorDuck'
-import visibilityDuck from '../ducks/visibilityDuck';
-import colorHeaderDuck from '../ducks/colorHeaderDuck';
-import pageFocusDuck from '../ducks/pageFocusDuck';
-import openModalDuck from '../ducks/openModalDuck';
 
 // const rootReducer = combineReducers({
 
@@ -17,13 +11,7 @@ import openModalDuck from '../ducks/openModalDuck';
 const appReducer = combineReducers({
   userInfoDuck,
   languageDuck,
-  loadingDuck,
-  menuDuck,
-  colorDuck,
-  visibilityDuck,
-  colorHeaderDuck,
-  pageFocusDuck,
-  openModalDuck
+  loadingDuck
 })
 
 const rootReducer = (state, action) => {

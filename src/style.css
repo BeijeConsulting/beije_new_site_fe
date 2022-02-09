@@ -1,107 +1,25 @@
-:root {
-  --first-color: #323e48;
-  --second-color: #52798e;
-  --third-color: #9ec1db;
-  --fourth-color: #d6e3e5;
-  --fifth-color: #feef87;
-  --sixth-color: #b12009;
-}
-
-
 @font-face {
-  font-family: 'Moderat-Regular';
-  src: url('./assets/font/Moderat/Moderat-Regular.woff');
+  font-family: 'Roboto';
+  src: url('./assets/font/Roboto-Regular.ttf');
 }
 
 @font-face {
-  font-family: 'Moderat-Bold';
-  src: url('./assets/font/Moderat/Moderat-Bold.woff');
-}
-
-@font-face {
-  font-family: 'SpaceGrotesk-Regular';
-  src: url('./assets/font/Space_Grotesk/SpaceGrotesk-Regular.ttf');
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: 'SpaceGrotesk-Medium';
-  src: url('./assets/font/Space_Grotesk/SpaceGrotesk-Medium.ttf');
-}
-
-@font-face {
-  font-family: 'SpaceGrotesk-Light';
-  src: url('./assets/font/Space_Grotesk/SpaceGrotesk-Light.ttf');
-}
-
-@font-face {
-  font-family: 'SpaceGrotesk-SemiBold';
-  src: url('./assets/font/Space_Grotesk/SpaceGrotesk-SemiBold.ttf');
+  font-family: 'Roboto';
+  src: url('./assets/font/Roboto-Bold.ttf');
+  font-weight: bold;
 }
 
 body {
-  /* overflow: overlay; */
-  background-color: #fff;
+  background-color: #FAFAFA;
   margin: 0;
-  font-family: 'Moderat-Regular', sans-serif;
+  font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  letter-spacing: 0.06em !important;
-  font-size: 18px !important;
-  line-height: 26px !important;
-  font-weight: normal !important;
-  color: var(--first-color) !important;
-  zoom: reset;
-
 }
-
-.ant-typography {
-  color: var(--first-color) !important;
-}
-
-h1, h2, h3, h4, h5 {
-  font-family: 'SpaceGrotesk-Medium', sans-serif;
-  font-size: 40px !important;
-  line-height: 45px !important;
-  letter-spacing: 0.06em;
-  font-weight: 500 !important;
-  color: var(--first-color) !important;
-}
-
-h2 {
-  font-family: 'SpaceGrotesk-Medium', sans-serif;
-  font-size: 30px !important;
-  line-height: 38px !important;
-  letter-spacing: 6%;
-  font-weight: bold !important;
-  font-style: normal !important;
-}
-
-@media screen and (min-width: 992px) {
-  body {
-    letter-spacing: 0.06em !important;
-    font-size: 20px !important;
-    line-height: 35px !important;
-  }
-
-  h1, h2, h3, h4, h5 {
-    font-size: 70px !important;
-    line-height: 100px !important;
-  }
-
-  h2 {
-    font-size: 40px !important;
-    line-height: 60px !important;
-    font-weight: 500 !important;
-  }
-}
-
-/* Added classes */
-/* ex. ad classes for title weight */
 
 /* Notification error class */
 .notification-error {
-  background-color: var(--sixth-color) !important;
+  background-color: #de5246 !important;
   color: #FAFAFA;
 }
 
@@ -124,18 +42,12 @@ h2 {
 }
 
 .ant-layout-header {
-  height: 79px !important;
   line-height: 50px;
-  background-color: #fff;
+  background-color: #FAFAFA;
 }
 
-.ant-layout {
-  background-color: #fff;
-}
-
-/* Menu */
 @media only screen and (max-width: 767px) {
-  .ant-layout-has-sider>aside {
+  .ant-layout-has-sider > aside {
     z-index: 10;
     position: fixed;
     top: 0px;
@@ -143,7 +55,7 @@ h2 {
     height: 100%;
   }
 
-  .ant-layout-sider-collapsed~.menu-left-overlay {
+  .ant-layout-sider-collapsed ~ .menu-left-overlay {
     display: none;
   }
 
@@ -159,11 +71,9 @@ h2 {
   }
 }
 
-
-/* General classes */
-/* .ant-layout-content {
+.ant-layout-content {
   padding: 25px;
-} */
+}
 
 .ant-list-item-meta-title {
   margin: 0;
@@ -197,10 +107,6 @@ h2 {
   margin-right: 10px;
 }
 
-.ml-10 {
-  margin-left: 10px;
-}
-
 .w-100 {
   width: 100%;
 }
@@ -211,10 +117,6 @@ h2 {
 
 .padding-30 {
   padding: 30px;
-}
-
-.overflow-hidden {
-  overflow: hidden;
 }
 
 .icon-small {
@@ -248,12 +150,22 @@ h2 {
   font-weight: bold;
 }
 
-.user-right>span {
+.user-right > span {
   margin: 5px;
 }
 
 .user-right {
   font-size: 24px;
+}
+
+.container-spinner-positioning {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 38, 84, 0.2);
+  z-index: 1;
 }
 
 .spinner-positioning {
@@ -269,14 +181,6 @@ h2 {
 
 .cursor-pointer {
   cursor: pointer;
-}
-
-.cursor-grabbing {
-  cursor: grabbing;
-}
-
-.cursor-grab {
-  cursor: grab;
 }
 
 .actions-container {
@@ -306,170 +210,4 @@ h2 {
 
 .mr-10px {
   margin-right: 10px;
-}
-
-/* Added classes */
-
-.txt-right {
-  text-align: right;
-}
-
-.txt-left {
-  text-align: left;
-}
-
-.txt-center {
-  text-align: center;
-}
-
-.txt-light {
-  color: #fff !important;
-}
-
-.txt-light2 {
-  color: var(--third-color) !important;
-}
-
-.txt-dark {
-  color: var(--first-color) !important;
-}
-
-.container-column {
-  display: flex;
-  flex-direction: column;
-}
-
-.container-row {
-  display: flex;
-  flex-direction: row;
-}
-
-.items-start {
-  align-items: flex-start;
-}
-
-.items-center {
-  align-items: center;
-}
-
-.items-end {
-  align-items: flex-end;
-}
-
-.justify-start {
-  justify-content: flex-start;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.justify-end {
-  justify-content: flex-end;
-}
-
-.justify-around {
-  justify-content: space-around;
-}
-
-.justify-between {
-  justify-content: space-between;
-}
-
-.circular-btn {
-  border-radius: 50% !important;
-}
-
-.cursor-pointer {
-  cursor: pointer;
-}
-
-.header-ant-style-transparent {
-  position: fixed;
-  width: 100%;
-  padding: 5px 25px;
-  background-color: transparent;
-  z-index: 2;
-  line-height: 53px !important;
-}
-
-.header-ant-style {
-  position: fixed;
-  width: 100%;
-  padding: 5px 25px;
-  background-color: #fff;
-  z-index: 2;
-  line-height: 53px !important;
-}
-
-.header-ant-general-style {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 5px 25px;
-  background-color: #fff;
-  line-height: 53px !important;
-  z-index: 2;
-}
-
-.mb-20 {
-  margin-bottom: 20px;
-}
-
-.p-20 {
-  padding: 20px;
-}
-
-.display-none {
-  display: none;
-}
-
-.display-block {
-  display: block;
-}
-
-.width-100 {
-  width: 100%
-}
-
-.height-100 {
-  height: 100%;
-}
-
-.highlight-txt {
-  color: var(--sixth-color) !important;
-}
-
-
-/* ANIMATION */
-
-.animation-text-landing {
-  animation: textLanding linear 1s
-}
-
-@keyframes textLanding {
-  from {
-    opacity: 0;
-    transform: translateY(100px)
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0)
-  }
-}
-
-.animation-box-img-landing {
-  animation: boxImgLanding linear 1s
-}
-
-@keyframes boxImgLanding {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
 }

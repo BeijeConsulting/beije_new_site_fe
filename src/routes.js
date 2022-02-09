@@ -1,32 +1,17 @@
 import React from "react";
 import { Outlet, useLocation, Navigate } from "react-router-dom";
-
-//import costants
 import { ENVIRONMENT } from './utils/properties';
-
-//import layouts
-import HomeLayout from "./layout/homeLayout/HomeLayout";
-import GeneralLayout from "./layout/generalLayout/GeneralLayout";
-
-//import screens
 import Login from './screens/Login/Login';
-import Home from './screens/home/Home'
-import Consulting from './screens/consulting/Consulting'
-import Academy from "./screens/academy/Academy";
-import AcademyJava from "./screens/academyJava/AcademyJava"
-import Up from "./screens/up/Up";
+import Home from "./screens/Home/Home";
+import RouteA from "./screens/RouteA/RouteA";
+import RouteB from "./screens/RouteB";
+import RouteADetail from "./screens/RouteA/RouteADetail";
 import NoMatch from "./screens/NoMatch";
-import AcademyFrontend from "./screens/academyFrontend/AcademyFrontend";
-import Career from "./screens/career/Career";
-import WhoWeAre from "./screens/whoWeAre/WhoWeAre";
-import CareerDetail from "./screens/careerDetail/CareerDetail";
-import Blog from "./screens/blog/Blog";
-import Community from "./screens/community/Community";
-import Contacts from "./screens/contacts/Contacts";
+import BasicLayout from "./layout/BasicLayout";
 
 export default [
   {
-    path: `${ENVIRONMENT.ROUTING.LOGIN_URL}`,
+    path: `${ENVIRONMENT.BASE_URL}login`,
     element: <Outlet />,
     children: [
       { index: true, element: <Login /> },
@@ -34,100 +19,36 @@ export default [
     ]
   },
   {
-    path: `${ENVIRONMENT.ROUTING.BASE_URL}`,
-    element: <HomeLayout />,
+    path: `${ENVIRONMENT.BASE_URL}`,
+    element: <BasicLayout />,
     children: [
       { index: true, element: <Home /> },
       { path: "*", element: <NoMatch /> }
     ]
   },
   {
-    path: `${ENVIRONMENT.ROUTING.BASE_URL}consulting`,
-    element: <GeneralLayout />,
+    path: `${ENVIRONMENT.BASE_URL}routeA`,
+    element: <BasicLayout />,
     children: [
-      { index: true, element: <Consulting /> },
-      { path: "*", element: <NoMatch /> }
-    ]
-  },
-  {
-    path: `${ENVIRONMENT.ROUTING.BASE_URL}academy`,
-    element: <GeneralLayout />,
-    children: [
-      { index: true, element: <Academy /> },
+      { index: true, element: <RouteA /> },
       {
-        path: `${ENVIRONMENT.ROUTING.BASE_URL}academy/masterBackend`,
-        element: <AcademyJava />
-      },
-      {
-        path: `${ENVIRONMENT.ROUTING.BASE_URL}academy/masterFrontend`,
-        element: <AcademyFrontend />
+        path: `${ENVIRONMENT.BASE_URL}routeA/:id`,
+        element: <RouteADetail />
       },
       { path: "*", element: <NoMatch /> }
     ]
   },
   {
-    path: `${ENVIRONMENT.ROUTING.BASE_URL}up`,
-    element: <GeneralLayout />,
+    path: `${ENVIRONMENT.BASE_URL}routeB`,
+    element: <BasicLayout />,
     children: [
-      { index: true, element: <Up /> },
-      { path: "*", element: <NoMatch /> }
-    ]
-  },
-  {
-    path: `${ENVIRONMENT.ROUTING.BASE_URL}whoweare`,
-    element: <GeneralLayout />,
-    children: [
-      { index: true, element: <WhoWeAre /> },
-      { path: "*", element: <NoMatch /> }
-    ]
-  },
-  {
-    path: `${ENVIRONMENT.ROUTING.BASE_URL}career`,
-    element: <GeneralLayout />,
-    children: [
-      { index: true, element: <Career /> },
-      {
-        path: `${ENVIRONMENT.ROUTING.BASE_URL}career/academy`,
-        element: <CareerDetail />
-      },
-      { path: "*", element: <NoMatch /> }
-    ]
-  },
-  {
-    path: `${ENVIRONMENT.ROUTING.BASE_URL}blog`,
-    element: <GeneralLayout />,
-    children: [
-      { index: true, element: <Blog /> },
-      { path: "*", element: <NoMatch /> }
-    ]
-  },
-  {
-    path: `${ENVIRONMENT.ROUTING.BASE_URL}community`,
-    element: <GeneralLayout />,
-    children: [
-      { index: true, element: <Community /> },
-      { path: "*", element: <NoMatch /> }
-    ]
-  },
-  {
-    path: `${ENVIRONMENT.ROUTING.BASE_URL}contacts`,
-    element: <GeneralLayout />,
-    children: [
-      { index: true, element: <Contacts /> },
-      { path: "*", element: <NoMatch /> }
-    ]
-  },
-  {
-    path: `${ENVIRONMENT.ROUTING.BASE_URL}cicci`,
-    element: <GeneralLayout />,
-    children: [
-      { index: true, element: <RequireAuth><Up /></RequireAuth> },
+      { index: true, element: <RequireAuth><RouteB /></RequireAuth> },
       { path: "*", element: <NoMatch /> }
     ]
   }
 ];
 
-function RequireAuth({ children }) {
+function RequireAuth({children}) {
   const localUserInfo = localStorage.getItem('userInfo');
   const auth = (localUserInfo && localUserInfo !== ''); // !!! Important. Create function that check if user leggd in. This check is provvisory
   const location = useLocation();

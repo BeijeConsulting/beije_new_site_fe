@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { useFormik } from 'formik';
 import { Input, Row, Col } from "antd";
 import { LoginOutlined } from '@ant-design/icons';
-import { useNavigate } from "react-router-dom";
+import {  useNavigate  } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { doLogin } from '../../redux/actions/actions';
-import Button from "../../components/functional_components/Button/CustomButton";
+import Button from "../../components/hooks_components/Button/CustomButton";
 import './login.css';
 import { useTranslation } from 'react-i18next';
 
@@ -68,7 +68,7 @@ const Login = () => {
           <Row type="flex" justify="center" align="middle">
             <Button
               type="primary"
-              currentIcon={<LoginOutlined className="icon-medium" />}
+              currentIcon={<LoginOutlined className="icon-medium"/>}
               isLoading={isLoading}
               clickCallback={formikLogin.submitForm}
               currentSize="large"
