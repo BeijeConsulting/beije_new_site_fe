@@ -2,10 +2,10 @@ import { get } from "./GenericServices";
 
 const Blog = {
   getList: () => {
-    return get("list");
+    return get("blogs");
   },
   getListDetail: (id) => {
-    return get(`detail/${id}`);
+    return get(`blog/${id}`);
   }
 };
 

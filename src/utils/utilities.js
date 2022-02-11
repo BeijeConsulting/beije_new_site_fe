@@ -1,26 +1,26 @@
 import React from "react";
-import { notification } from "antd";
 import { getTranslation } from "../i18n/i18n-config";
 import { replace, toNumber } from "lodash";
 import NumberFormat from "react-number-format";
+import ReactGa from 'react-ga';
 
-export const showError = (error) => {
-  notification.open({
-    duration: 5,
-    className: "notification-error",
-    message: getTranslation("general", "ErrorNotificationTitle"),
-    description: getTranslation("errorsCode", error)
-  });
-}
+// export const showError = (error) => {
+//   notification.open({
+//     duration: 5,
+//     className: "notification-error",
+//     message: getTranslation("general", "ErrorNotificationTitle"),
+//     description: getTranslation("errorsCode", error)
+//   });
+// }
 
-export const showSuccess = (message = "SuccessNotificationContent") => {
-  notification.open({
-    duration: 5,
-    className: "notification-success",
-    message: getTranslation("general", "SuccessNotificationTitle"),
-    description: getTranslation("general", message)
-  });
-}
+// export const showSuccess = (message = "SuccessNotificationContent") => {
+//   notification.open({
+//     duration: 5,
+//     className: "notification-success",
+//     message: getTranslation("general", "SuccessNotificationTitle"),
+//     description: getTranslation("general", message)
+//   });
+// }
 
 export const buildQueryString = (actQS, data) => {
   let newQueryString = "";
@@ -76,4 +76,17 @@ export const unformatNumber = (value, lang) => {
   let number = replace(value, regexThousand, "");
   number = replace(number, regexDecimal, ".");
   return toNumber(number);
+}
+
+export const setGaEvent = (data) => {
+  if (data.category && data.action) {
+    ReactGa.event({
+      category: data.category, // String (Required)
+      action: data.action, // String (Required)
+      label: data.label, // String (Optional)
+      value: data.value, // Int (Optional)
+      nonInteraction: data.nonInteraction, // Bool (Optional)
+      transport: data.transport // (Optional)
+    });
+  }
 }

@@ -2,10 +2,10 @@ import { get } from "./GenericServices";
 
 const Community = {
   getList: () => {
-    return get("list");
+    return get("communities");
   },
   getListDetail: (id) => {
-    return get(`detail/${id}`);
+    return get(`community/${id}`);
   }
 };
 

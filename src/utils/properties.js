@@ -1,7 +1,5 @@
 import 'moment/locale/en-gb';
 import 'moment/locale/it';
-import localeGB from 'antd/es/date-picker/locale/en_GB';
-import localeIT from 'antd/es/date-picker/locale/it_IT';
 
 const getBaseURL = () => {
   const env = process.env.REACT_APP_ENV;
@@ -32,17 +30,19 @@ export const paginationDefaults = {
 }
 
 export const dbDate = 'YYYY-MM-DD';
-export const langDate = {
-  gb: 'YYYY/MM/DD',
-  locale_gb: localeGB,
-  it: 'DD/MM/YYYY',
-  locale_it: localeIT,
-}
+// export const langDate = {
+//   gb: 'YYYY/MM/DD',
+//   locale_gb: localeGB,
+//   it: 'DD/MM/YYYY',
+//   locale_it: localeIT,
+// }
 
 export const dbMonth = "YYYY-MM";
-export const langMonth = {
-  gb: 'YYYY/MM',
-  locale_gb: localeGB,
-  it: 'MM/YYYY',
-  locale_it: localeIT,
-}
+// export const langMonth = {
+//   gb: 'YYYY/MM',
+//   locale_gb: localeGB,
+//   it: 'MM/YYYY',
+//   locale_it: localeIT,
+// }
+
+export const googleAnalyticsKey = "UA-215782182-1";

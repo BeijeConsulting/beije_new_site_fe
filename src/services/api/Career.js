@@ -2,10 +2,10 @@ import { get } from "./GenericServices";
 
 const Career = {
   getList: () => {
-    return get("list");
+    return get("job_applications");
   },
   getListDetail: (id) => {
-    return get(`detail/${id}`);
+    return get(`job_application/${id}`);
   }
 };
 

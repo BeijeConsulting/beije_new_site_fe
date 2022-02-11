@@ -1,10 +1,15 @@
 import { useRoutes } from "react-router-dom";
 import SiteRoutes from './routes';
+import ReactGa from 'react-ga';
+
+// Functions
+import { googleAnalyticsKey } from "./utils/properties";
+
+// Components
+import RouteChangeTracker from "./components/functional_components/RouteChangeTracker";
 
 export default function App() {
-  // The useRoutes() hook allows you to define your routes as JavaScript objects
-  // instead of <Routes> and <Route> elements. This is really just a style
-  // preference for those who prefer to not use JSX for their routes config.
+  ReactGa.initialize(googleAnalyticsKey);
   let element = useRoutes(SiteRoutes);
 
   return element;

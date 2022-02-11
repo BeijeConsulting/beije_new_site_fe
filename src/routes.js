@@ -2,12 +2,12 @@ import React from "react";
 // import { ENVIRONMENT } from "./utils/properties";
 import Home from "./screens/home/Home";
 import NoMatch from "./screens/NoMatch";
-import BasicLayout from "./layout/BasicLayout";
+import HomeLayout from "./layout/HomeLayout";
 
 export default [
   {
     path: "/",
-    element: <BasicLayout />,
+    element: <HomeLayout />,
     children: [
       { index: true, element: <Home /> },
       // {
