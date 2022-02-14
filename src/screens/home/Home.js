@@ -14,18 +14,20 @@ const Home = (props) => {
   const { t } = useTranslation();
   return (
     <>
+      {/* First section with title */}
       <Container
-        maxWidth="md"
-        sx={{ height: "100vh", color: "#fff", border: "1px solid #fff" }}
+        component={"section"}
+        maxWidth={"false"}
+        className={"home-fist-section-container paddingX-container-default d-flex flex-column justify-center"}
       >
         <h1>Aiutiamo le aziende a realizzare progetti innovativi attraverso Team di Valore</h1>
-        <h2>Questo è un testo h2</h2>
-        <h3>Questo è un testo h3</h3>
-
       </Container>
+
+      {/* Second section with description */}
       <Container
-        maxWidth="md"
-        sx={{ height: "100vh", color: "#fff" }}
+        component={"section"}
+        maxWidth={"false"}
+        className={"home-second-section-container paddingX-container-default  d-flex flex-column justify-center"}
       >
         <p>Questo è un normale paragrafo</p>
 

@@ -1,0 +1,42 @@
+.header-container {
+  -webkit-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 2;
+}
+
+/* Logo */
+.header-container-logo {
+  height: 38px;
+  width: auto;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .header-container {
+    -webkit-box-pack: none;
+    -ms-flex-pack: none;
+    justify-content: none
+  }
+
+  .header-container-logo {
+    height: 48px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .header-container-logo {
+    height: 78px;
+  }
+}

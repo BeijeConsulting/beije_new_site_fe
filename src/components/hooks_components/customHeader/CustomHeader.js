@@ -1,47 +1,31 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 // MUI
-import { Button, IconButton, Menu, MenuItem, Toolbar, Typography } from "@mui/material";
+import { Toolbar } from "@mui/material";
 import { Box } from "@mui/system";
-import MenuIcon from "@mui/icons-material/Menu";
-const pages = ["Products", "Pricing", "Blog"];
+
 
 // Style
 import './CustomHeader.css'
 
+// Constants
+import { logo_secondary } from "../../../utils/properties"
+
+// Components
+import BurgerMenu from '../burgerMenu/BurgerMenu';
+
 
 const CustomHeader = () => {
-
-  const [state, setState] = useState({
-    anchorElNav: null
-  })
-
-  const handleOpenNavMenu = (event) => {
-    setState({
-      anchorElNav: event.currentTarget
-    });
-  };
-
-  const handleCloseNavMenu = () => {
-    setState({
-      anchorElNav: null
-    });
-  };
 
   return (
     <Toolbar
       disableGutters
-      sx={{ display: "flex", justifyContent: { xs: "space-between", sm: "none" } }}
+      maxWidth={"none"}
+      className={"header-container bg-transparent"}
     >
-      <Typography
-        variant="h6"
-        noWrap
-        component="div"
-        sx={{ mr: 2, display: "flex", marginRight: '10%' }}
-      >
-        LOGO
-      </Typography>
-      <Box sx={{ flexGrow: 1, display: { xs: "none", sm: "flex" } }}>
+      <img src={logo_secondary} alt="Logo Beije People First" className="header-container-logo" />
+
+      {/* <Box sx={{ flexGrow: 1, display: { xs: "none", sm: "flex" } }}>
         {pages.map((page) => (
           <Button
             key={page}
@@ -51,44 +35,11 @@ const CustomHeader = () => {
             {page}
           </Button>
         ))}
-      </Box>
+      </Box> */}
 
       <Box sx={{ flexGrow: 0 }}>
-        <IconButton
-          size="large"
-          aria-label="account of current user"
-          aria-controls="menu-appbar"
-          aria-haspopup="true"
-          onClick={handleOpenNavMenu}
-          color="inherit"
-          sx={{ p: 0 }}
-        >
-          <MenuIcon />
-        </IconButton>
-        <Menu
-          id="menu-appbar"
-          anchorEl={state.anchorElNav}
-          anchorOrigin={{
-            vertical: "bottom",
-            horizontal: "left"
-          }}
-          keepMounted
-          transformOrigin={{
-            vertical: "top",
-            horizontal: "left"
-          }}
-          open={Boolean(state.anchorElNav)}
-          onClose={handleCloseNavMenu}
-          sx={{
-            display: "block"
-          }}
-        >
-          {pages.map((page) => (
-            <MenuItem key={page} onClick={handleCloseNavMenu}>
-              <Typography textAlign="center">{page}</Typography>
-            </MenuItem>
-          ))}
-        </Menu>
+        <BurgerMenu />
+
       </Box>
     </Toolbar>
 

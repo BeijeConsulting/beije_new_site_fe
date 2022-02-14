@@ -1,6 +1,17 @@
 import 'moment/locale/en-gb';
 import 'moment/locale/it';
 
+// Assets
+import logo_short_white from "../assets/images/logos/logo_short_white.svg"
+import { faFacebookF, faLinkedinIn, faYoutube } from '@fortawesome/free-brands-svg-icons'
+import { faN } from '@fortawesome/free-solid-svg-icons'
+
+// Link
+const linkFb = "https://www.facebook.com/beijepeoplefirst";
+const linkIn = "https://www.linkedin.com/company/beije";
+const linkYt = "https://www.youtube.com/channel/UCGZdqNE152QBvg9WZ4E65Iw"
+
+
 const getBaseURL = () => {
   const env = process.env.REACT_APP_ENV;
   let actualEnv = null;
@@ -46,3 +57,85 @@ export const dbMonth = "YYYY-MM";
 // }
 
 export const googleAnalyticsKey = "UA-215782182-1";
+
+export const logo_secondary = logo_short_white;
+
+export const defaultIcon = faN;
+
+// Menu voices
+export const menu_voices = [
+  {
+    name: "Beije Consulting",
+    link_to: "#",
+    key_link: "consulting"
+  },
+  {
+    name: "Beije Up",
+    link_to: "#",
+    key_link: "up"
+  },
+  {
+    name: "Beije Talent Academy",
+    link_to: "#",
+    key_link: "academy"
+  },
+  {
+    name: "Chi Siamo",
+    link_to: "#",
+    key_link: "aboutUs"
+  },
+  {
+    name: "Blog",
+    link_to: "#",
+    key_link: "blog"
+  },
+  {
+    name: "Community",
+    link_to: "#",
+    key_link: "community"
+  },
+  {
+    name: "Focus Academy",
+    link_to: "#",
+    key_link: "focusAcademy"
+  },
+  {
+    name: "Lavora con noi",
+    link_to: "#",
+    key_link: "career"
+  },
+  {
+    name: "Contatti",
+    link_to: "#",
+    key_link: "contacts"
+  },
+]
+
+// Social icons
+export const socialFb = faFacebookF;
+export const socialIn = faLinkedinIn;
+export const socialYt = faYoutube;
+
+export const social_list = [
+  {
+    lable: "Facebook",
+    link_to: linkFb,
+    icon: faFacebookF,
+    type: "social-primary",
+    classNameIcon: "social-icon-primary"
+  },
+  {
+    lable: "Facebook",
+    link_to: linkIn,
+    icon: faLinkedinIn,
+    type: "social-primary",
+    classNameIcon: "social-icon-primary"
+  },
+  {
+    lable: "Facebook",
+    link_to: linkYt,
+    icon: faYoutube,
+    type: "social-primary",
+    classNameIcon: "social-icon-primary"
+  }
+]

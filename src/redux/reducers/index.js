@@ -2,6 +2,7 @@ import { combineReducers } from 'redux';
 // API
 import languageDuck from "../ducks/Language";
 import loadingDuck from "../ducks/Loading";
+import burgerMenuDuck from '../ducks/burgerMenuDuck';
 
 // const rootReducer = combineReducers({
 
@@ -9,7 +10,8 @@ import loadingDuck from "../ducks/Loading";
 
 const appReducer = combineReducers({
   languageDuck,
-  loadingDuck
+  loadingDuck,
+  burgerMenuDuck
 })
 
 const rootReducer = (state, action) => {

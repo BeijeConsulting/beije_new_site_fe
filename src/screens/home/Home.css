@@ -1,0 +1,25 @@
+.home-fist-section-container {
+  height: var(--height-no-header-xs);
+  color: var(--white);
+  /*Remove*/
+  border: 1px solid #fff;
+}
+
+.home-second-section-container {
+  height: 100vh;
+  color: var(--white);
+  /* Remove */
+  border: 1px solid yellow;
+}
+
+@media(min-width: 768px) {
+  .home-fist-section-container {
+    height: var(--height-no-header-md);
+  }
+}
+
+@media(min-width: 1440px) {
+  .home-fist-section-container {
+    height: var(--height-no-header-lg);
+  }
+}

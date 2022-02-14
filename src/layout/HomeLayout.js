@@ -1,9 +1,12 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 
+// Redux
+import { connect } from "react-redux";
+
 // MUI
 import { Box } from "@mui/system";
-import { AppBar, Container } from "@mui/material";
+import { AppBar } from "@mui/material";
 
 // Style
 import './HomeLayout.css'
@@ -12,26 +15,25 @@ import './HomeLayout.css'
 import CustomHeader from "../components/hooks_components/customHeader/CustomHeader";
 import CustomFooter from "../components/hooks_components/customFooter/CustomFooter";
 
-const HomeLayout = () => {
+const HomeLayout = (props) => {
+
   return (
-    <Box>
+    <Box className={props.burgerMenuDuck.menuOpen ? "position-fixed" : ""} >
       <video className="homeLayout-video" autoPlay muted loop playsinline>
         <source src="https://beije.s3.eu-west-1.amazonaws.com/video_home.mp4" type="video/mp4" />
       </video>
 
       <AppBar
         position="sticky"
-        className="homeLayout-container-header"
+        className="bg-transparent"
       >
-        <Container maxWidth="md">
-          <CustomHeader />
-        </Container>
+        <CustomHeader />
       </AppBar>
 
-      <main
-      >
+      <main>
         <Outlet />
       </main>
+
       <footer>
         <CustomFooter />
       </footer>
@@ -41,4 +43,11 @@ const HomeLayout = () => {
   );
 }
 
-export default HomeLayout;
+const mapStateToProps = state => (
+  {
+    burgerMenuDuck: state.burgerMenuDuck
+  }
+)
+
+
+export default connect(mapStateToProps)(HomeLayout);
