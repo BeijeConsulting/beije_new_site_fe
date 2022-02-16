@@ -9,10 +9,13 @@ import { Box } from "@mui/system";
 import './CustomHeader.css'
 
 // Constants
+import { logo_primary_light } from '../../../utils/properties';
 import { logo_secondary } from "../../../utils/properties"
 
 // Components
 import BurgerMenu from '../burgerMenu/BurgerMenu';
+import CustomNavbar from '../customNavbar/CustomNavbar';
+import SwitchLang from '../switchLang/SwitchLang';
 
 
 const CustomHeader = () => {
@@ -23,23 +26,16 @@ const CustomHeader = () => {
       maxWidth={"none"}
       className={"header-container bg-transparent"}
     >
-      <img src={logo_secondary} alt="Logo Beije People First" className="header-container-logo" />
+      <img src={logo_primary_light} alt="Logo Beije People First" className="header-container-logo" />
 
-      {/* <Box sx={{ flexGrow: 1, display: { xs: "none", sm: "flex" } }}>
-        {pages.map((page) => (
-          <Button
-            key={page}
-            onClick={handleCloseNavMenu}
-            sx={{ my: 2, color: "white", display: "block" }}
-          >
-            {page}
-          </Button>
-        ))}
-      </Box> */}
-
-      <Box sx={{ flexGrow: 0 }}>
+      <Box className={"header-navbar-container"}>
+        <CustomNavbar />
+      </Box>
+      <Box className={"header-switchLang-container"}>
+        <SwitchLang />
+      </Box>
+      <Box sx={{ flexGrow: 0, flexDirection: "row" }}>
         <BurgerMenu />
-
       </Box>
     </Toolbar>
 

@@ -22,6 +22,17 @@
   width: auto;
 }
 
+/* Navbar */
+.header-navbar-container {
+  display: none;
+}
+
+/* Switch Lang */
+.header-switchLang-container {
+  display: none;
+}
+
+
 /* Media Queries */
 @media (min-width: 768px) {
   .header-container {
@@ -35,7 +46,23 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
+  .header-navbar-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .header-switchLang-container {
+    flex-grow: 0;
+    display: flex;
+    margin-right: 20px;
+  }
+
+}
+
+
+@media (min-width: 1600px) {
   .header-container-logo {
     height: 78px;
   }

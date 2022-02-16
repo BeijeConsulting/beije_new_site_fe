@@ -17,12 +17,12 @@
   --sofiaPro-regular: "SofiaPro-Regular", sans-serif;
   --sofiaPro-bold: "SofiaPro-Bold", sans-serif;
 
-  --height-no-header-xs: calc(100vh - 56px);
-  --height-no-header-md: calc(100vh - 64px);
-  --height-no-header-lg: calc(100vh - 138px);
-  --header-height-xs: 56px;
-  --header-height-md: 64px;
-  --header-height-lg: 138px;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-xxl: 1600px;
+  --breakpoint-xxxl: 2000px;
 }
 
 
@@ -69,27 +69,42 @@ body {
 
 h1, h2 {
   font-family: var(--sofiaPro-bold);
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 h3, h4, h5, h6 {
   font-family: var(--sofiaPro-regular);
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
+
+/* @media (min-width: 768px) {} */
 
 @media (min-width: 768px) {
 
   body {
-    font-family: var(--moderat-regular);
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 
   h1 {
-    font-size: 3rem;
+    font-size: 2.7rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3, h4, h5, h6 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  h1 {
+    font-size: 4.375rem;
   }
 
   h2 {
@@ -97,13 +112,7 @@ h3, h4, h5, h6 {
   }
 
   h3, h4, h5, h6 {
-    font-size: 2rem;
-  }
-}
-
-@media (min-width: 1440px) {
-  h1 {
-    font-size: 4.4rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -187,7 +196,6 @@ h3, h4, h5, h6 {
 }
 
 /* POSITION */
-
 .position-fixed {
   position: fixed;
 }
@@ -198,7 +206,6 @@ h3, h4, h5, h6 {
 }
 
 /* PADDING */
-
 .paddingX-container-default {
   padding-left: 1.5rem !important;
   padding-right: 1.5rem !important;
@@ -206,12 +213,20 @@ h3, h4, h5, h6 {
 
 @media(min-width: 768px) {
   .paddingX-container-default {
-    padding-left: 10.5rem !important;
+    padding-left: 14rem !important;
     padding-right: 10.2rem !important;
   }
 }
 
-@media(min-width: 1440px) {
+@media(min-width: 1200px) {
+  .paddingX-container-default {
+    padding-left: 16.4rem !important;
+    padding-right: 14rem !important;
+  }
+}
+
+
+@media(min-width: 1600px) {
   .paddingX-container-default {
     padding-left: 26.125rem !important;
     padding-right: 25.5rem !important;
@@ -233,7 +248,13 @@ h3, h4, h5, h6 {
   }
 }
 
-@media(min-width: 1440px) {
+@media(min-width:1200px) {
+  .css-1cndkqf-MuiToolbar-root {
+    padding: 1.1rem 6.3rem;
+  }
+}
+
+@media(min-width: 1600px) {
   .css-1cndkqf-MuiToolbar-root {
     padding: 1.875rem 10rem;
   }

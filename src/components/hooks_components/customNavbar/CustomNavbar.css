@@ -1,0 +1,36 @@
+.navbar-container {
+  display: flex;
+  flex-direction: row;
+  color: var(--white);
+}
+
+.navbar-container a {
+  color: var(--white);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: var(--moderat-bold);
+  font-size: 1rem;
+}
+
+.navbar-container a:nth-child(2) {
+  margin: 0 57px
+}
+
+/* Media Queries */
+@media(min-width: 768px) {
+  .navbar-container a {
+    font-size: 1.1rem;
+  }
+}
+
+@media(min-width: 1024px) {
+  .navbar-container a:nth-child(2) {
+    margin: 0 30px
+  }
+}
+
+@media(min-width: 1600px) {
+  .navbar-container a {
+    font-size: 1.25rem;
+  }
+}

@@ -117,11 +117,14 @@ const BurgerMenu = (props) => {
         onClick={handleOpenNavMenu}
         color="inherit"
       >
-        <Hamburger
-          toggled={state.openMenu}
-          toggle={handleOpenNavMenu}
-          className={"burgerMenu-container"}
-        />
+        <div
+          className={state.openMenu ? "burgerMenu-icon-close-container" : "burgerMenu-icon-open-container"}
+          onToggle={handleOpenNavMenu}
+        >
+          <div />
+          <div />
+          <div />
+        </div>
       </IconButton>
 
       {/* Background menu */}

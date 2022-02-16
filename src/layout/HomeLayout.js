@@ -16,15 +16,14 @@ import CustomHeader from "../components/hooks_components/customHeader/CustomHead
 import CustomFooter from "../components/hooks_components/customFooter/CustomFooter";
 
 const HomeLayout = (props) => {
-
   return (
     <Box className={props.burgerMenuDuck.menuOpen ? "position-fixed" : ""} >
+      <div className={"homeLayout-video-filter"} />
       <video className="homeLayout-video" autoPlay muted loop playsinline>
         <source src="https://beije.s3.eu-west-1.amazonaws.com/video_home.mp4" type="video/mp4" />
       </video>
-
       <AppBar
-        position="sticky"
+        position="fixed"
         className="bg-transparent"
       >
         <CustomHeader />

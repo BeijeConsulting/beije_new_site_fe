@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useTranslation } from "react-i18next";
 
 // MUI
@@ -9,9 +9,14 @@ import { Box } from "@mui/system";
 import "./Home.css";
 
 // Components
+import CustomNavbar from "../../components/hooks_components/customNavbar/CustomNavbar";
 
 const Home = (props) => {
   const { t } = useTranslation();
+  const refSecondSection = useRef(null)
+
+  console.log('ref: ', refSecondSection);
+
   return (
     <>
       {/* First section with title */}
@@ -20,11 +25,17 @@ const Home = (props) => {
         maxWidth={"false"}
         className={"home-fist-section-container paddingX-container-default d-flex flex-column justify-center"}
       >
-        <h1>Aiutiamo le aziende a realizzare progetti innovativi attraverso Team di Valore</h1>
+        <Box className={"home-first-section-title-container"}>
+          <h1>Aiutiamo le aziende a realizzare progetti innovativi attraverso Team di Valore</h1>
+        </Box>
+        <Box className={"home-first-section-navbar-container"}>
+          <CustomNavbar />
+        </Box>
       </Container>
 
       {/* Second section with description */}
       <Container
+        ref={refSecondSection}
         component={"section"}
         maxWidth={"false"}
         className={"home-second-section-container paddingX-container-default  d-flex flex-column justify-center"}

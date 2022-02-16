@@ -2,14 +2,15 @@ import 'moment/locale/en-gb';
 import 'moment/locale/it';
 
 // Assets
-import logo_short_white from "../assets/images/logos/logo_short_white.svg"
-import { faFacebookF, faLinkedinIn, faYoutube } from '@fortawesome/free-brands-svg-icons'
-import { faN } from '@fortawesome/free-solid-svg-icons'
+import logo_official_white from "../assets/images/logos/logo_official_white.svg";
+import logo_short_white from "../assets/images/logos/logo_short_white.svg";
+import { faFacebookF, faLinkedinIn, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faN } from '@fortawesome/free-solid-svg-icons';
 
 // Link
 const linkFb = "https://www.facebook.com/beijepeoplefirst";
 const linkIn = "https://www.linkedin.com/company/beije";
-const linkYt = "https://www.youtube.com/channel/UCGZdqNE152QBvg9WZ4E65Iw"
+const linkYt = "https://www.youtube.com/channel/UCGZdqNE152QBvg9WZ4E65Iw";
 
 
 const getBaseURL = () => {
@@ -58,7 +59,8 @@ export const dbMonth = "YYYY-MM";
 
 export const googleAnalyticsKey = "UA-215782182-1";
 
-export const logo_secondary = logo_short_white;
+export const logo_primary_light = logo_official_white;
+export const logo_secondary_light = logo_short_white;
 
 export const defaultIcon = faN;
 
