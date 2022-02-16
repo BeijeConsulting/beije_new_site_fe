@@ -8,5 +8,13 @@
     "Password": "Password",
     "youWantLogout": "Do you want to exit the portal? ",
     "cancel": "Cancel"
+  },
+  "home": {
+    "firstSection": {
+      "title": {
+        "part1": "We help companies to implement innovative projects through ",
+        "part2": "Valuable Teams"
+      }
+    }
   }
 }

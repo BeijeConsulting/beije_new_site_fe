@@ -5,32 +5,49 @@ import { NavLink } from 'react-router-dom';
 import "./CustomNavbar.css";
 
 const CustomNavbar = (props) => {
+
+  const switchClassName = () => {
+    let currentClassName = null;
+    switch (props.type) {
+      case "home-navbar":
+        currentClassName = "navbar-container-secondary"
+        break;
+      default:
+        currentClassName = "navbar-container"
+        break;
+    }
+    return currentClassName;
+  }
+
   return (
-    <nav className="navbar-container">
+    <nav className={switchClassName()}>
 
       <NavLink
-        to=""
-        className={({ isActive }) =>
-          isActive ? props.activeClassName : props.notActiveClassName
-        }
+        to="/test"
+      // className={switchClassName}
+      // className={({ isActive }) =>
+      //   isActive ? props.activeClassName : props.notActiveClassName
+      // }
       >
         Beije Consulting
       </NavLink>
 
       <NavLink
         to=""
-        className={({ isActive }) =>
-          isActive ? props.activeClassName : props.notActiveClassName
-        }
+      // className={switchClassName}
+      // className={({ isActive }) =>
+      //   isActive ? props.activeClassName : props.notActiveClassName
+      // }
       >
         Beije Talent Academy
       </NavLink>
 
       <NavLink
         to=""
-        className={({ isActive }) =>
-          isActive ? props.activeClassName : props.notActiveClassName
-        }
+      // className={switchClassName}
+      // className={({ isActive }) =>
+      //   isActive ? props.activeClassName : props.notActiveClassName
+      // }
       >
         Beije Up
       </NavLink>
@@ -40,8 +57,8 @@ const CustomNavbar = (props) => {
 }
 
 CustomNavbar.defaultProps = {
-  activeClassName: "navbar-active-links",
-  notActiveClassName: "navbar-not-active-links"
+  // activeClassName: "navbar-active-links",
+  // notActiveClassName: "navbar-not-active-links"
 }
 
 export default CustomNavbar

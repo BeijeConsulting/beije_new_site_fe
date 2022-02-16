@@ -8,5 +8,13 @@
     "Password": "Password",
     "youWantLogout": "Vuoi uscire dal portale?",
     "cancel": "Annulla"
+  },
+  "home": {
+    "firstSection": {
+      "title": {
+        "part1": "Aiutiamo le aziende a realizzare progetti innovativi attraverso ",
+        "part2": "Team di Valore"
+      }
+    }
   }
 }

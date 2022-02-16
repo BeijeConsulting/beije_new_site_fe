@@ -12,5 +12,4 @@ Library:
   Number format - https://www.npmjs.com/package/react-number-format
   MUI kit [emotion, style components, SVG icons]- https://mui.com/getting-started/installation/
   react-ga - https://www.npmjs.com/package/react-ga
-  hamburger react - https://www.npmjs.com/package/hamburger-react or https://hamburger-react.netlify.app/
   fontAwsome icons - https://fontawesome.com/v5/docs/web/use-with/react

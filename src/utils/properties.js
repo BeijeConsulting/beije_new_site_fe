@@ -5,7 +5,8 @@ import 'moment/locale/it';
 import logo_official_white from "../assets/images/logos/logo_official_white.svg";
 import logo_short_white from "../assets/images/logos/logo_short_white.svg";
 import { faFacebookF, faLinkedinIn, faYoutube } from '@fortawesome/free-brands-svg-icons';
-import { faN } from '@fortawesome/free-solid-svg-icons';
+import { faN, faArrowDownLong } from '@fortawesome/free-solid-svg-icons';
+
 
 // Link
 const linkFb = "https://www.facebook.com/beijepeoplefirst";
@@ -63,6 +64,7 @@ export const logo_primary_light = logo_official_white;
 export const logo_secondary_light = logo_short_white;
 
 export const defaultIcon = faN;
+export const downArrow = faArrowDownLong;
 
 // Menu voices
 export const menu_voices = [

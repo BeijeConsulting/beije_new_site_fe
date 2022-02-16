@@ -20,6 +20,8 @@ import SwitchLang from '../switchLang/SwitchLang';
 
 const CustomHeader = () => {
 
+  const showNavbar = false;
+
   return (
     <Toolbar
       disableGutters
@@ -28,12 +30,16 @@ const CustomHeader = () => {
     >
       <img src={logo_primary_light} alt="Logo Beije People First" className="header-container-logo" />
 
-      <Box className={"header-navbar-container"}>
-        <CustomNavbar />
-      </Box>
-      <Box className={"header-switchLang-container"}>
-        <SwitchLang />
-      </Box>
+      {showNavbar &&
+        <>
+          <Box className={"header-navbar-container"}>
+            <CustomNavbar />
+          </Box>
+          <Box className={"header-switchLang-container"}>
+            <SwitchLang />
+          </Box>
+        </>
+      }
       <Box sx={{ flexGrow: 0, flexDirection: "row" }}>
         <BurgerMenu />
       </Box>

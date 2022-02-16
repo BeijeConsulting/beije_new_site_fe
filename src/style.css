@@ -11,6 +11,14 @@
   --light-silver: #D6CDCD;
   --red: #b12009;
   --lightblue: #9EC1DB;
+  --yellow: #feef87;
+  --dark-blue: #323e48;
+
+  /* --first-color: #323e48;
+  --second-color: #52798e;
+  --third-color: #9ec1db;
+  --fourth-color: #d6e3e5;
+  --fifth-color: #feef87; */
 
   --moderat-regular: "Moderat-Regular", sans-serif;
   --moderat-bold: "Moderat-Bold", sans-serif;
@@ -24,7 +32,6 @@
   --breakpoint-xxl: 1600px;
   --breakpoint-xxxl: 2000px;
 }
-
 
 * {
   margin: 0;
@@ -60,7 +67,7 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-body {
+body, a {
   font-family: var(--moderat-regular);
   font-size: 1rem;
   letter-spacing: 0px;
@@ -85,7 +92,7 @@ h3, h4, h5, h6 {
 
 @media (min-width: 768px) {
 
-  body {
+  body, a {
     font-size: 1.25rem;
   }
 
@@ -181,13 +188,21 @@ h3, h4, h5, h6 {
   justify-content: space-around;
 }
 
-/* container COLOR */
+.justify-envely {
+  justify-content: space-evenly;
+}
+
+/* container and text COLOR */
 .bg-transparent {
   background-color: transparent !important;
 }
 
 .bg-dark-grey {
   background-color: var(--dark-grey) !important;
+}
+
+.hightlight-txt {
+  color: var(--red)
 }
 
 /* DISPLAY */
