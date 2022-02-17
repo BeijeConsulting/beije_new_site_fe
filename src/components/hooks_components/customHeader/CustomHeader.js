@@ -23,28 +23,38 @@ const CustomHeader = () => {
   const showNavbar = false;
 
   return (
-    <Toolbar
-      disableGutters
-      maxWidth={"none"}
-      className={"header-container bg-transparent"}
-    >
-      <img src={logo_primary_light} alt="Logo Beije People First" className="header-container-logo" />
+    <>
+      <Toolbar
+        disableGutters
+        maxWidth={"none"}
+        className={"header-container header-container-mobile bg-transparent"}
+      >
+        <Box className={"header-switchLang-container-mobile"}>
+          <SwitchLang />
+        </Box>
+      </Toolbar>
+      <Toolbar
+        disableGutters
+        maxWidth={"none"}
+        className={"header-container bg-transparent"}
+      >
+        <img src={logo_primary_light} alt="Logo Beije People First" className="header-container-logo" />
 
-      {showNavbar &&
-        <>
-          <Box className={"header-navbar-container"}>
-            <CustomNavbar />
-          </Box>
-          <Box className={"header-switchLang-container"}>
-            <SwitchLang />
-          </Box>
-        </>
-      }
-      <Box sx={{ flexGrow: 0, flexDirection: "row" }}>
-        <BurgerMenu />
-      </Box>
-    </Toolbar>
-
+        {showNavbar &&
+          <>
+            <Box className={"header-navbar-container"}>
+              <CustomNavbar />
+            </Box>
+            <Box className={"header-switchLang-container"}>
+              <SwitchLang />
+            </Box>
+          </>
+        }
+        <Box sx={{ flexGrow: 0, flexDirection: "row" }}>
+          <BurgerMenu />
+        </Box>
+      </Toolbar>
+    </>
   );
 }
 

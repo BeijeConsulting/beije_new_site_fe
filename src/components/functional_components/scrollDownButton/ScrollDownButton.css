@@ -1,7 +1,3 @@
 .scrollDown-btn {
-  color: var(--red) !important;
-}
-
-.scrollDown-btn span {
   color: var(--white) !important;
 }

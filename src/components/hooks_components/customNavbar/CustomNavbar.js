@@ -39,7 +39,7 @@ const CustomNavbar = (props) => {
       //   isActive ? props.activeClassName : props.notActiveClassName
       // }
       >
-        Beije Talent Academy
+        Beije Up
       </NavLink>
 
       <NavLink
@@ -49,7 +49,7 @@ const CustomNavbar = (props) => {
       //   isActive ? props.activeClassName : props.notActiveClassName
       // }
       >
-        Beije Up
+        Beije Talent Academy
       </NavLink>
 
     </nav>

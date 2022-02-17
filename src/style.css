@@ -221,56 +221,9 @@ h3, h4, h5, h6 {
 }
 
 /* PADDING */
-.paddingX-container-default {
-  padding-left: 1.5rem !important;
-  padding-right: 1.5rem !important;
-}
-
-@media(min-width: 768px) {
+@media (min-width: 768px) {
   .paddingX-container-default {
-    padding-left: 14rem !important;
-    padding-right: 10.2rem !important;
-  }
-}
-
-@media(min-width: 1200px) {
-  .paddingX-container-default {
-    padding-left: 16.4rem !important;
-    padding-right: 14rem !important;
-  }
-}
-
-
-@media(min-width: 1600px) {
-  .paddingX-container-default {
-    padding-left: 26.125rem !important;
-    padding-right: 25.5rem !important;
-  }
-}
-
-/* MUI Modified classes root */
-.css-1cndkqf-MuiToolbar-root {
-  padding: 0.5rem 1.5rem !important;
-}
-
-.MuiContainer-root {
-  max-width: 1920px !important;
-}
-
-@media(min-width:768px) {
-  .css-1cndkqf-MuiToolbar-root {
-    padding: 0.75rem 4rem !important;
-  }
-}
-
-@media(min-width:1200px) {
-  .css-1cndkqf-MuiToolbar-root {
-    padding: 1.1rem 6.3rem !important;
-  }
-}
-
-@media(min-width: 1600px) {
-  .css-1cndkqf-MuiToolbar-root {
-    padding: 1.875rem 10rem !important;
+    padding-left: 21.8% !important;
+    padding-right: 21.2% !important;
   }
 }

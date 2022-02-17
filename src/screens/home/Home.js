@@ -27,9 +27,9 @@ const Home = (props) => {
       <Container
         component={"section"}
         maxWidth={"false"}
-        className={"home-fist-section-container paddingX-container-default d-flex flex-column justify-center"}
+        className={"home-fist-section-container paddingX-container-default d-flex flex-column"}
       >
-        <Box className={"home-first-section-title-container"}>
+        <Box className={"home-first-section-title-container d-flex flex-column justify-center"}>
           <h1>{t("home.firstSection.title.part1")}<br />{t("home.firstSection.title.part2")}</h1>
         </Box>
         <Box className={"home-first-section-navbar-container"}>

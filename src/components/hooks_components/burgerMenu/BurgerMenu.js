@@ -115,6 +115,7 @@ const BurgerMenu = (props) => {
         aria-controls="menu-appbar"
         onClick={handleOpenNavMenu}
         color="inherit"
+        className="burgerMenu-iconButton"
       >
         <div
           className={state.openMenu ? "burgerMenu-icon-close-container" : "burgerMenu-icon-open-container"}
