@@ -1,83 +1,61 @@
 import React from 'react';
-import { connect } from "react-redux";
-import { Link } from 'react-router-dom';
-import { Row, Col, Image } from 'antd';
 
-//import constats
-import { ENVIRONMENT } from '../../../utils/properties';
+// MUI
+import { Toolbar } from "@mui/material";
+import { Box } from "@mui/system";
 
-//import style
-import '../../../style.css'
+
+// Style
 import './CustomHeader.css'
 
-//import assets
-import logo_dark from '../../../assets/images/logo/logo_official_dark_noBg.svg'
-import logo_light from '../../../assets/images/logo/logo_white_written.png'
+// Constants
+import { logo_primary_light } from '../../../utils/properties';
+import { logo_secondary } from "../../../utils/properties"
 
-//import components
-import SwitchLanguage from '../switchLanguage/SwitchLanguage'
+// Components
 import BurgerMenu from '../burgerMenu/BurgerMenu';
-import Navbar from '../../functional_components/navbar/Navbar';
+import CustomNavbar from '../customNavbar/CustomNavbar';
+import SwitchLang from '../switchLang/SwitchLang';
 
-const CustomHeader = (props) => {
 
-  console.log('menuOpen', props.menuDuck.menuOpen, 'lightColor', props.colorDuck.lightColor)
+const CustomHeader = () => {
+
+  const showNavbar = false;
 
   return (
     <>
-      <Row className='d-flex items-center'>
-        <Col xs={12} sm={12} lg={5} className='container-row items-center'>
-          <Link
-            to={ENVIRONMENT.ROUTING.BASE_URL}
-            className={'header-img-container'}
-          >
-            <Image
-              className={'header-logo'}
-              preview={false}
-              // src={!props.menuDuck.menuOpen ? logo_dark : logo_light}
-              src={props.colorHeaderDuck.colorHeader === 'transparent' || props.colorHeaderDuck.colorHeader === '#52798e' || props.menuDuck.menuOpen ? logo_light : logo_dark}
-              width='100%'
-            />
-          </Link>
-        </Col>
-        <Col xs={0} sm={0} lg={15} >
-          <Navbar
-            classNameRow={!props.visibilityDuck.visibility ? 'display-none' : 'navbar-row navbar-row-top'}
-            classNameCol={'col-link'}
-            classNameLink={props.colorDuck.lightColor ? 'navbar-link-light' : 'navbar-general-link'}
-          />
-        </Col>
-        <Col xs={0} sm={0} lg={3} className='container-row justify-center items-end custom-header-switchLang-col'>
-          {
-            (!props.menuDuck.menuOpen && !props.colorDuck.lightColor) &&
-            <SwitchLanguage
-              classNameContainer={'header-switch-language'}
-            />
-          }
-          {
-            (props.menuDuck.menuOpen || props.colorDuck.lightColor) &&
-            <SwitchLanguage
-              classNameContainer={'header-switch-language txt-light'}
-            />
-          }
-        </Col>
-        <Col xs={12} sm={12} lg={1} className='heade-container-burger container-row justify-end items-end'>
+      <Toolbar
+        disableGutters
+        maxWidth={"none"}
+        className={"header-container header-container-mobile bg-transparent"}
+      >
+        <Box className={"header-switchLang-container-mobile"}>
+          <SwitchLang />
+        </Box>
+      </Toolbar>
+      <Toolbar
+        disableGutters
+        maxWidth={"none"}
+        className={"header-container bg-transparent"}
+      >
+        <img src={logo_primary_light} alt="Logo Beije People First" className="header-container-logo" />
+
+        {showNavbar &&
+          <>
+            <Box className={"header-navbar-container"}>
+              <CustomNavbar />
+            </Box>
+            <Box className={"header-switchLang-container"}>
+              <SwitchLang />
+            </Box>
+          </>
+        }
+        <Box sx={{ flexGrow: 0, flexDirection: "row" }}>
           <BurgerMenu />
-        </Col>
-      </Row>
+        </Box>
+      </Toolbar>
     </>
-
-
   );
 }
 
-const mapStateToProps = state => (
-  {
-    menuDuck: state.menuDuck,
-    colorDuck: state.colorDuck,
-    visibilityDuck: state.visibilityDuck,
-    colorHeaderDuck: state.colorHeaderDuck
-  }
-)
-
-export default connect(mapStateToProps)(CustomHeader);
+export default CustomHeader;

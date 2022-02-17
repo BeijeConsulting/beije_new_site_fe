@@ -1,41 +1,31 @@
-import React, { useState } from 'react'
-import { connect } from 'react-redux'
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
+// redux
+import { connect } from "react-redux";
+import { setMenu, initMenu } from "../../../redux/ducks/burgerMenuDuck";
 
-import { Row, Col, Layout } from 'antd';
-const { Header, Content } = Layout;
+// MUI
+import { Box, IconButton } from "@mui/material";
 
-//action dispatched
-import { setMenu, initMenu } from '../../../redux/ducks/menuDuck'
+// Style
+import "./BurgerMenu.css";
 
-//import assets and obj
-import { siteMenu } from '../../../utils/properties';
+// Constants
+import { menu_voices } from "../../../utils/properties";
 
-//import style
-import './BurgerMenu.css'
-
-//import components
-// import CustomButton from '../../functional_components/Button/CustomButton';
-import SwitchLanguage from '../switchLanguage/SwitchLanguage';
-import CustomCard from '../../functional_components/customCard/CustomCard';
-import { useTranslation } from 'react-i18next';
-import SocialSection from '../../functional_components/socialSection/SocialSection';
-import { setGaEvent } from '../../../utils/utilities';
-
-
+// Components
+import SocialLinks from "../../functional_components/socialLinks/SocialLinks";
 
 const BurgerMenu = (props) => {
+
   const [state, setState] = useState({
-    openMenu: false,
+    openMenu: undefined,
     stateLink: false,
     idElement: null
   })
 
-  const { t } = useTranslation()
-
-  const changeStateMenu = () => {
-    // *ga*
+  const handleOpenNavMenu = () => {
     if (!state.openMenu) {
       props.dispatch(setMenu(true))
     }
@@ -44,9 +34,22 @@ const BurgerMenu = (props) => {
     }
 
     setState({
-      ...state,
       openMenu: !state.openMenu
-    })
+    });
+  };
+
+  const printMenuLinks = (item, key) => {
+    return (
+      <Link
+        key={key}
+        to={item.link_to}
+        className={"burgerMenu-links-voices"}
+        onMouseEnter={mouseOver(key, item.key_link)}
+        onMouseLeave={mouseLeave(key, item.key_link)}
+      >
+        {item.name}
+      </Link>
+    )
   }
 
   const mouseOver = (val, val2) => () => {
@@ -67,83 +70,36 @@ const BurgerMenu = (props) => {
     })
   }
 
-  const clickOnLink = ({ item }) => () => {
-    setGaEvent({ category: "Navigation", action: "Burger menu", label: item.title })
-    props.dispatch(initMenu())
-    setState({
-      ...state,
-      openMenu: !state.openMenu
-    })
-
-  }
-
-  const printPrimaryMenu = (item, key) => {
-    if (item.typeMenu === 'primary') {
-      return (
-        <Link
-          key={key}
-          to={item.linkTo}
-          onClick={clickOnLink({ item })}
-        >
-          <CustomCard
-            titleClassName={state.stateLink && state.idElement === key ? item.titleStyleHover : item.titleStyle}
-            cardTitle={t(`burgerMenu.${item.title}`)}
-            callbackMouseEnter={mouseOver(key, item.key)}
-            callbackMouseLeave={mouseLeave(key, item.key)}
-          />
-        </Link>
-      )
-    }
-  }
-
-  const printSecondaryMenu = (item, key) => {
-    if (item.typeMenu === 'secondary') {
-      return (
-        <Link
-          key={key}
-          to={item.linkTo}
-          onClick={clickOnLink({ item })}
-        >
-          <CustomCard
-            titleClassName={state.stateLink && state.idElement === key ? item.titleStyleHover : item.titleStyle}
-            cardTitle={t(`burgerMenu.${item.title}`)}
-            callbackMouseEnter={mouseOver(key, item.key)}
-            callbackMouseLeave={mouseLeave(key, item.key)}
-          />
-        </Link>
-      )
-    }
-  }
-
   const switchBgMenu = () => {
-    let className = "menu-overlay-img"
+    console.log('stateLink: ', state.stateLink, "keyElement: ", state.keyElement);
+    let className = "burgerMenu-nav-container burgerMenu-nav-container-img"
     switch (state.keyElement) {
       case "consulting":
-        className = "menu-overlay-img menu-consulting"
+        className = "burgerMenu-nav-container burgerMenu-nav-container-img burgerMenu-consulting"
         break
       case "academy":
-        className = "menu-overlay-img menu-academy"
+        className = "burgerMenu-nav-container burgerMenu-nav-container-img burgerMenu-academy"
         break
       case "up":
-        className = "menu-overlay-img menu-up"
+        className = "burgerMenu-nav-container burgerMenu-nav-container-img burgerMenu-up"
         break
       case "career":
-        className = "menu-overlay-img menu-career"
+        className = "burgerMenu-nav-container burgerMenu-nav-container-img burgerMenu-career"
         break
-      case "whoWeAre":
-        className = "menu-overlay-img menu-whoWeAre"
+      case "aboutUs":
+        className = "burgerMenu-nav-container burgerMenu-nav-container-img burgerMenu-aboutUs"
         break
       case "contacts":
-        className = "menu-overlay-img menu-contacts"
+        className = "burgerMenu-nav-container burgerMenu-nav-container-img burgerMenu-contacts"
         break
       case "blog":
-        className = "menu-overlay-img menu-blog"
+        className = "burgerMenu-nav-container burgerMenu-nav-container-img burgerMenu-blog"
         break
       case "focusAcademy":
-        className = "menu-overlay-img menu-focusAcademy"
+        className = "burgerMenu-nav-container burgerMenu-nav-container-img burgerMenu-focusAcademy"
         break
       case "community":
-        className = "menu-overlay-img menu-community"
+        className = "burgerMenu-nav-container burgerMenu-nav-container-img burgerMenu-community"
         break
       default:
         break
@@ -152,58 +108,43 @@ const BurgerMenu = (props) => {
   }
 
   return (
-    <>
-      {/* 'burger-menu-container' */}
-      <div
-        className={!props.colorDuck.lightColor ? 'burger-menu-container' : 'burger-menu-container-light'}
-        onClick={changeStateMenu}>
-        <i className={state.openMenu ? 'burger-menu-open' : 'burger-menu-close'}></i>
-        <i className={state.openMenu ? 'burger-menu-open' : 'burger-menu-close burger-menu-middle-line'}></i>
-        <i className={state.openMenu ? 'burger-menu-open' : 'burger-menu-close'}></i>
-      </div>
+    <Box>
+      <IconButton
+        size="large"
+        aria-label="burger-menu"
+        aria-controls="menu-appbar"
+        onClick={handleOpenNavMenu}
+        color="inherit"
+        className="burgerMenu-iconButton"
+      >
+        <div
+          className={state.openMenu ? "burgerMenu-icon-close-container" : "burgerMenu-icon-open-container"}
+          onToggle={handleOpenNavMenu}
+        >
+          <div />
+          <div />
+          <div />
+        </div>
+      </IconButton>
+
+      {/* Background menu */}
+      <div className={state.openMenu ? "burgerMenu-background" : "burgerMenu-background-reverse"} />
 
       {
         state.openMenu &&
-        <nav className="menu-overlay">
-          <Layout
-            className={state.stateLink ? switchBgMenu() : "menu-overlay"}>
-            <Header className='header-ant-style-transparent' />
-            <Content className={'burger-menu-content'} >
-              <Row className='burger-menu-row-content'>
-                <Col xs={0} lg={1} />
-                <Col xs={24} lg={10} className='mb-20'>
-                  {
-                    siteMenu.map(printPrimaryMenu)
-                  }
-                </Col>
-                <Col xs={0} lg={3} />
-                <Col xs={24} lg={9} >
-                  {
-                    siteMenu.map(printSecondaryMenu)
-                  }
-                </Col>
-                <Col xs={0} lg={1} />
-              </Row>
-              <Row className={'burger-menu-social'}>
-
-                <Col xs={12} lg={24} className='burger-menu-social-col container-row items-center'>
-                  <SocialSection />
-                </Col>
-                <Col xs={12} sm={0} className='burger-menu-lang'>
-                  <SwitchLanguage />
-                </Col>
-              </Row>
-            </Content>
-          </Layout>
+        <nav
+          className={state.stateLink ? switchBgMenu() : "burgerMenu-nav-container"}
+          role="navigation">
+          <Box className="d-flex flex-column justify-around burgerMenu-nav-links-container">
+            {menu_voices?.map(printMenuLinks)}
+            <SocialLinks
+              classNameSocialContainer={"burgerMenu-social-container"}
+            />
+          </Box>
         </nav>
       }
-
-    </>
+    </Box >
   )
 }
 
-const mapStateToProps = state => ({
-  colorDuck: state.colorDuck
-})
-
-export default connect(mapStateToProps)(BurgerMenu)
+export default connect()(BurgerMenu)

@@ -1,0 +1,9 @@
+.switch-language-span {
+  font-family: var(--moderat-regular);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.switch-language-span-selected {
+  font-family: var(--moderat-bold);
+}

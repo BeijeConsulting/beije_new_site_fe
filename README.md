@@ -2,7 +2,6 @@
 Library:
   Flags - https://www.npmjs.com/package/react-flags-select
   I18n - https://react.i18next.com/
-  Ant - https://ant.design/
   Formik - https://formik.org/
   Moment - https://momentjs.com/
   Lodash - https://lodash.com/
@@ -11,20 +10,7 @@ Library:
   Axios - https://www.npmjs.com/package/axios
   Eslint - https://eslint.org/
   Number format - https://www.npmjs.com/package/react-number-format
-  helmet - https://www.npmjs.com/package/react-helmet
-  lottie - https://www.npmjs.com/package/@lottiefiles/react-lottie-player
-  gsap - https://www.npmjs.com/package/gsap
-  react-multi-carousel - https://www.npmjs.com/package/react-multi-carousel
+  MUI kit [emotion, style components, SVG icons]- https://mui.com/getting-started/installation/
   react-ga - https://www.npmjs.com/package/react-ga
-
-# look for google analytics
-to find google analytics search for the following comment: *ga*
-
-# look for helmet
-to find helmet search for the following comment: *he*
-
-# look for seo script
-to find seo script search for the following comment: *seo*
-
-# look for alt img
-to find alt img search for the following comment: *alt*
+  fontAwsome icons - https://fontawesome.com/v5/docs/web/use-with/react
+  react-scroll-trigger - https://www.npmjs.com/package/react-scroll-trigger

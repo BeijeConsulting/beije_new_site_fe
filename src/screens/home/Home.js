@@ -1,122 +1,77 @@
-import React, { useEffect } from "react";
-import { connect, useDispatch, useSelector } from "react-redux";
+import React from "react";
+import { useTranslation } from "react-i18next";
+import ScrollTrigger from 'react-scroll-trigger';
 
-//import gsap
-import { gsap } from 'gsap'
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+// MUI
+import { Container } from "@mui/material";
+import { Box } from "@mui/system";
 
-//import actions to dispatch
-import { setVisibility, initVisibility } from "../../redux/ducks/visibilityDuck"
-import { setColorHeader, initColorHeader } from "../../redux/ducks/colorHeaderDuck";
+// Style
+import "./Home.css";
 
-//import style
-import './Home.css';
-
-//import components
-import BackgroundVideo from '../../components/functional_components/backgroundVideo/BackgroundVideo'
-import FirstSection from "../../components/homeSections/firstSection/FirstSection";
-import SecondSectionDesktop from "../../components/homeSections/secondSection/secondSectionDesktop/SecondSectionDesktop";
-import ThirdSection from "../../components/homeSections/thirdSection/ThirdSection";
-import FourthSection from "../../components/homeSections/fourthSection/FourthSection";
-import InitialBounce from "../../components/functional_components/initialBounce/InitialBounce";
-//import constats
-import PolygonSection from "../../components/functional_components/polygonSection/PolygonSection";
-import { setBounce } from "../../redux/ducks/Loading";
-import { get } from "lodash";
-import { Helmet } from "react-helmet";
-import { t } from "i18next";
-
-
+// Components
+import CustomNavbar from "../../components/hooks_components/customNavbar/CustomNavbar";
+import ScrollDownButton from "../../components/functional_components/scrollDownButton/ScrollDownButton";
+import CustomTab from "../../components/functional_components/ui/customTab/CustomTab";
 
 const Home = (props) => {
-  const pageIsBouncing = useSelector((state) => get(state.loadingDuck, 'pageIsBouncing', false));
-  const dispatch = useDispatch();
+  const { t } = useTranslation();
 
-  useEffect(() => {
-    dispatch(setBounce(true));
-  }, []);
-
-  setTimeout(() => {
-    dispatch(setBounce(false));
-  }, 5000);
-
-  //GSAP
-  gsap.registerPlugin(ScrollTrigger);
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    props.dispatch(setVisibility(false))
-    props.dispatch(initColorHeader())
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, []);
-
-  const handleScroll = () => {
-    if (window.pageYOffset > 200) {
-      props.dispatch(initVisibility())
-      props.dispatch(setColorHeader('#fff'))
-    }
-    else {
-      props.dispatch(setVisibility(false))
-      props.dispatch(initColorHeader())
-    }
+  const secSectionEnterViewport = () => {
+    console.log("sono nella seconda sezione");
   }
 
   return (
     <>
-      <Helmet>
-        <title>{t('helmet.meta_title.home')}</title>
-        <meta name="description" content={t('helmet.meta_description.home')} />
-        <meta name="keywords" content={t('helmet.keywords.home')} />
-      </Helmet>
-
-      <div
-        className="gsap-home-container"
+      {/* First section with title */}
+      <Container
+        component={"section"}
+        maxWidth={"false"}
+        className={"home-fist-section-container paddingX-container-default d-flex flex-column"}
       >
-        <InitialBounce showBounce={pageIsBouncing} />
-        <div className={`${pageIsBouncing && 'overflow-hidden'} container-fade-in`}>
-          <section className="home-polygen-firstSec">
-            <BackgroundVideo
-              autoPlay
-              muted
-              loop
-              src={'https://beije.s3.eu-west-1.amazonaws.com/video_home.mp4'}
-            />
-            <div className="home-video-filter">
-              <FirstSection
-              />
-            </div>
-          </section>
-        </div>
-        <div className={`${pageIsBouncing && 'hidden'}`} style={{ backgroundColor: '#fff' }}>
-          <section
-            className="home-second-section"
-          >
-            <SecondSectionDesktop />
-          </section>
+        <Box className={"home-first-section-title-container d-flex flex-column justify-center"}>
+          <h1>{t("home.firstSection.title.part1")}<br />{t("home.firstSection.title.part2")}</h1>
+        </Box>
+        <Box className={"home-first-section-navbar-container"}>
+          <CustomNavbar
+            type={"home-navbar"}
+          />
+        </Box>
+        <Box className={"home-first-section-scroll-down-container"}>
+          <ScrollDownButton />
+        </Box>
+      </Container>
 
-          <PolygonSection>
-            <section>
-              <ThirdSection />
-            </section>
-          </PolygonSection>
+      {/* Second section with description */}
+      <ScrollTrigger onEnter={secSectionEnterViewport}>
+        <Container
+          component={"section"}
+          maxWidth={"false"}
+          className={"home-second-section-container d-flex flex-column justify-center"}
+        >
+          <h2 className={"home-second-section-txt"}>
+            <span className={"home-second-section-quotation-marks"}>&#8220;</span>
+            <span>Lavoriamo costantemente per arrivare alla piena soddisfazione dei nostri clienti</span>
+            <span className={"home-second-section-quotation-marks"}>&#8222;</span>
+          </h2>
+        </Container>
+      </ScrollTrigger>
 
-          {/* <PolygonSection
-          polygenClipPath={'home-polygen-clip-path-contancts'}
-        > */}
-          <section
-            className="home-fourth-section"
-          >
-            <FourthSection />
-          </section>
-          {/* </PolygonSection> */}
-        </div>
-
-      </div >
+      {/* Box with dark bg for next sections */}
+      <Box className={"bg-dark-grey"}>
+        <Container
+          component={"section"}
+          maxWidth={"false"}
+          className={"home-third-section-container d-flex flex-column justify-center"}
+        >
+          <Box>
+            <CustomTab />
+          </Box>
+        </Container>
+      </Box>
     </>
   );
 }
 
-export default connect()(Home);
+// https://beije.s3.eu-west-1.amazonaws.com/video_home.mp4
+export default Home;
