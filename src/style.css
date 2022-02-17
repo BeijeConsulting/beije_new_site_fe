@@ -250,27 +250,27 @@ h3, h4, h5, h6 {
 
 /* MUI Modified classes root */
 .css-1cndkqf-MuiToolbar-root {
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1.5rem !important;
 }
 
 .MuiContainer-root {
-  max-width: 1920px;
+  max-width: 1920px !important;
 }
 
 @media(min-width:768px) {
   .css-1cndkqf-MuiToolbar-root {
-    padding: 0.75rem 4rem;
+    padding: 0.75rem 4rem !important;
   }
 }
 
 @media(min-width:1200px) {
   .css-1cndkqf-MuiToolbar-root {
-    padding: 1.1rem 6.3rem;
+    padding: 1.1rem 6.3rem !important;
   }
 }
 
 @media(min-width: 1600px) {
   .css-1cndkqf-MuiToolbar-root {
-    padding: 1.875rem 10rem;
+    padding: 1.875rem 10rem !important;
   }
 }
