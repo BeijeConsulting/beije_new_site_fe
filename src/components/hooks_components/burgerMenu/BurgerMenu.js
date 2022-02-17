@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Hamburger from 'hamburger-react'
 
 // redux
 import { connect } from "react-redux";

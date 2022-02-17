@@ -12,6 +12,7 @@ import "./Home.css";
 // Components
 import CustomNavbar from "../../components/hooks_components/customNavbar/CustomNavbar";
 import ScrollDownButton from "../../components/functional_components/scrollDownButton/ScrollDownButton";
+import CustomTab from "../../components/functional_components/ui/customTab/CustomTab";
 
 const Home = (props) => {
   const { t } = useTranslation();
@@ -63,7 +64,9 @@ const Home = (props) => {
           maxWidth={"false"}
           className={"home-third-section-container d-flex flex-column justify-center"}
         >
-
+          <Box>
+            <CustomTab />
+          </Box>
         </Container>
       </Box>
     </>
