@@ -1,0 +1,86 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+.third-sec-container {
+  background-color: transparent;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.third-sec-row {
+  height: 100%;
+  width: 100%;
+}
+
+.third-sec-col1 {
+  width: 100%;
+}
+
+.third-sec-col2 {
+  height: 80%;
+  position: relative
+}
+
+.third-sec-col2 .react-multi-carousel-track {
+  height: 350px !important;
+}
+
+.third-sec-col3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding-bottom: 10px;
+}
+
+.drag-more-btn-text {
+  color: #fff !important;
+}
+
+.third-sec-description {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .third-sec-col1 {
+    height: 100%
+  }
+
+  .third-sec-col2 {
+    height: 100%
+  }
+
+  .third-sec-description {
+    display: block;
+  }
+
+  .third-sec-col2 .react-multi-carousel-track {
+    height: 580px !important;
+  }
+
+}
+
+@media screen and (min-width: 1440px) {
+
+  .third-sec-col2 .react-multi-carousel-track {
+    height: 735px !important;
+  }
+}

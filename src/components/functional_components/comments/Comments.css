@@ -1,0 +1,109 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+:root {
+    --default-comments-profile-picture: url('../../../assets/images/comments/img_comments.jpg');
+}
+
+.comments-container {
+    position: relative;
+    height: 450px;
+    width: 90%;
+    background-color: #fff;
+    border-radius: 30px;
+    /* box-shadow: 6px 6px 30px rgba(50, 62, 72, 0.2); */
+    padding: 60px 20px 20px 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 37px auto;
+}
+
+.comments-profile-picture {
+    position: absolute;
+    top: -35px;
+    left: 20px;
+    width: 80px;
+    height: 80px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 100%;
+}
+
+.comments-profile-picture-img {
+    background-image: var(--default-comments-profile-picture);
+}
+
+.commets-text-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.commets-text-container {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.comments-text {
+    font-weight: normal !important;
+    font-size: 18px !important;
+    line-height: 26px !important;
+}
+
+.comments-signature {
+    font-weight: bold !important;
+    font-size: 18px !important;
+    line-height: 30px !important;
+}
+
+@media screen and (min-width: 768px) {
+    .comments-container {
+        height: 360px;
+        padding: 93px 40px 30px 40px;
+    }
+
+    .comments-profile-picture {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .comments-container {
+        height: 510px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .comments-container {
+        height: 450px;
+        margin: 37px 80px;
+        width: 83%;
+        padding: 20px 20px 20px 100px;
+    }
+
+    .comments-profile-picture {
+        width: 130px;
+        height: 130px;
+        top: 50px;
+        left: -55px;
+    }
+
+    .commets-text-container {
+        height: 60%;
+    }
+}

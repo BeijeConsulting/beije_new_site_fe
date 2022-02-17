@@ -1,0 +1,76 @@
+import React from "react";
+import { useTranslation } from "react-i18next";
+
+import { Row } from "antd";
+
+// import style
+import './SocialSection.css'
+
+// import constants
+import { social } from "../../../utils/properties";
+
+// import components
+import CustomButton from "../Button/CustomButton";
+import { setGaEvent } from "../../../utils/utilities";
+
+const SocialSection = (props) => {
+
+    const { t } = useTranslation();
+
+    const printSocial = (item, key) => {
+        return (
+            <div
+                key={key}
+                className={item.classNameSingleContainer}
+            >
+                {/* <CustomButton
+                    type={'primary-social'}
+                    href={item.url}
+                    bgIcon={item.bgIcon}
+                    target={item.target}
+                    clickCallback={() => setGaEvent({ category: "Social", action: "Click social button", label: item.name })}
+
+                /> */}
+                <CustomButton
+                    type={props.btnType}
+                    href={item.url}
+                    bgIcon={item.bgIcon}
+                    target={item.target}
+                    clickCallback={() => setGaEvent({ category: "Social", action: "Click social button", label: item.name })}
+                />
+                {/* <CustomButton
+                    type={props.btnType}
+                    href={item.url}
+                    target={item.target}
+                    currentIcon={
+                     
+                            <img
+                                src={item.icon}
+                                alt={t(`imgAlt.social.${item.alt}`)}
+                                style={{ height: 16 }}
+                                className={props.iconClassname}
+                            />
+                        </a>
+                    }
+                    clickCallback={() => setGaEvent({ category: "Social", action: "Click social button", label: item.name })}
+                /> */}
+            </div>
+        )
+
+    }
+
+    return (
+        <Row className={`container-row justify-end items-center ${props.classNameRowSocial}`}>
+            {
+                social.map(printSocial)
+            }
+        </Row>
+    )
+}
+
+SocialSection.defaultProps = {
+    btnType: 'primary-social',
+    iconClassname: 'icon-social',
+}
+
+export default SocialSection

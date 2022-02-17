@@ -1,0 +1,39 @@
+.scroll-btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+}
+
+.scroll-btn-text {
+  font-family: 'SpaceGrotesk-SemiBold', sans-serif;
+  font-size: 18px;
+  line-height: 60px;
+  margin-bottom: 0px;
+  color: #fff;
+}
+
+.scroll-btn-icon {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+@media screen and (min-width: 1024px) {
+  .scroll-btn-text {
+    font-size: 20px;
+  }
+}

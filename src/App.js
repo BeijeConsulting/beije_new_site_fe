@@ -1,16 +1,48 @@
+import React from "react";
 import { useRoutes } from "react-router-dom";
-import SiteRoutes from './routes';
+import { connect, useSelector } from "react-redux";
 import ReactGa from 'react-ga';
+import { Layout } from 'antd';
+const { Header, Footer } = Layout;
 
-// Functions
+// import style
+import './style.css'
+
+// import components
+import CustomHeader from './components/hooks_components/customHeader/CustomHeader'
+import CustomFooter from "./components/functional_components/customFooter/CustomFooter";
+import SiteRoutes from './routes';
 import { googleAnalyticsKey } from "./utils/properties";
-
-// Components
 import RouteChangeTracker from "./components/functional_components/RouteChangeTracker";
+import { get } from "lodash";
 
-export default function App() {
+const App = (props) => {
   ReactGa.initialize(googleAnalyticsKey);
   let element = useRoutes(SiteRoutes);
-
-  return element;
+  const pageIsBouncing = useSelector((state) => get(state.loadingDuck, 'pageIsBouncing', false));
+  return (
+    <>
+      <Header
+        className={!props?.menuDuck?.menuOpen ? 'header-ant-general-style' : 'header-ant-style'}
+        style={{
+          backgroundColor: props?.colorHeaderDuck?.colorHeader !== undefined ?
+            props?.colorHeaderDuck?.colorHeader : "transparent",
+          transition: '1.5s'
+        }}
+      >
+        <CustomHeader />
+      </Header>
+      <RouteChangeTracker />
+      {element}
+      <Footer className={`${pageIsBouncing && 'hidden'} generalLayout-footer`}>
+        <CustomFooter />
+      </Footer>
+    </>
+  )
 }
+
+const mapStateToProps = state => ({
+  colorHeaderDuck: state.colorHeaderDuck
+})
+
+export default connect(mapStateToProps)(App)

@@ -40,7 +40,7 @@ export default function languageDuck(state = INIT_STATE, action) {
         If I'm here, the user change manually route or refresh page and now the state is empty.
       */
       newState = state;
-      if (newState.currentLanguage === ''  && localLang && localLang !== '') {
+      if (newState.currentLanguage === ''  && localLang) {
         newState.currentLanguage = localLang;
         switchLang(localLang);
       }

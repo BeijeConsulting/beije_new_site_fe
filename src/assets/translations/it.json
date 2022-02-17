@@ -9,12 +9,470 @@
     "youWantLogout": "Vuoi uscire dal portale?",
     "cancel": "Annulla"
   },
+  "helmet": {
+    "meta_title": {
+      "home": "Beije – People First",
+      "consulting": "Consulting – Beije People First",
+      "academy": "Academy – Beije People First",
+      "academy_backend": "Master backend – Beije People First",
+      "academy_frontend": "Master frontend– Beije People First",
+      "up": "Up – Beije People First",
+      "whoweare": "Chi siamo – Beije People First",
+      "career": "",
+      "blog": "",
+      "community": "",
+      "contacts": "contatti beije"
+    },
+    "meta_description": {
+      "home": "Beije People First azienda leader nel settore IT è specializzata nella consulenza, formazione frontend & backend e nello sviluppo di mobile & web app mettendo al centro le esigenze del cliente.",
+      "consulting": "I nostri consulenti Beije forniscono consulenza informatica professionale per lo sviluppo di software in grado di offrire le migliori soluzioni che si adattino alle esigenze del cliente. ",
+      "academy": "Un’esperienza di formazione intensiva che ha l’obiettivo di sviluppare le competenze necessarie per diventare Software Developer attraverso lezioni frontali e progetti reali. ",
+      "academy_backend": "Master retribuito di tre mesi per diventare Java Developer.",
+      "academy_frontend": "Master retribuito di tre mesi per diventare Web Developer.",
+      "up": "Realizzazione e manutenzione di software in perfetto stile Agile attraverso l’utilizzo delle tecnologie più innovative presenti sul mercato. ",
+      "whoweare": "Chi siamo? Azienda leader nel settore IT, siamo specializzata nella consulenza, sviluppo di mobile & web app mettendo al centro le esigenze del cliente e formazione frontend & backend.",
+      "career": "",
+      "blog": "",
+      "community": "",
+      "contacts": "contatti beije"
+    },
+    "keywords": {
+      "home": "IT, consulenza, formazione, frontend, backend, contatti beije, software developer, programmatore software, web developer, java developer, master, react, react native, java, database programmatore",
+      "consulting": "consulenza informatica, people first, valore, progetti innovativi, consulenza, consulenza react, consulenza java, consulenza react native, sviluppo frontend, sviluppo backend, consulenza frontend, consulenza backend, differenza frontend e backend, consulting Milano",
+      "academy": "master, master frontend, master backend, academy frontend, academy backend, software developer, webinar, java developer, frontend developer, web developer, backend developer, tecnologie, stage retribuito, stage, corso backend, corso frontend, corso, diventare programmatore, diventare sviluppatore, esperto react, esperto react native, esperto java, esperto backend, esperto frontend",
+      "academy_backend": "java, fondamenti java, string builder, cvs, xml, database, linguaggio java, java per web, spring, javascript, DOM, come diventare java developer",
+      "academy_frontend": "react, react native, frontend, academy frontend, come diventare frontend developer, master frontend, master, corso, corso web, come creare una pagina web, come creare una applicazione mobile, android, iOS, come diventare esperto frontend, javascript, programmatore android, programmatore iOS",
+      "up": "agile, progettazione, implementazione, delivery, integration, application maintenance, software, frontend, backend, azienda software, IT, azienda IT, azienda Milano, consulting Milano, azienda Lissone, azienda informatica Milano",
+      "whoweare": "",
+      "career": "",
+      "blog": "",
+      "community": "",
+      "contacts": "contatti beije"
+    }
+  },
+  "formValidation": {
+    "required_msg": "Campo obbligatorio",
+    "not_valid_msg": "Campo non valido",
+    "agreement": "Accetta le condizioni"
+  },
+  "btn": {
+    "viewAll": "Vedi tutti",
+    "drag": "Drag -br- for more",
+    "apply": "Candidati",
+    "goBackAcademy": "Torna a Beije Talent Academy"
+  },
+  "imgAlt": {
+    "social": {
+      "fb": "Link a Facebook",
+      "in": "Link a LinkedIn",
+      "youTube": "Link a YouTube"
+    },
+    "profilePicture": {
+      "FrancescoCesana": "Immagine del direttore generale Francesco Cesana",
+      "EricaMauro": "Immagine Seals Manager Erica Mauro",
+      "MariannaFulginiti": "Immagine people and business strategist Marianna Fulginiti",
+      "IvoMosca": "Immagine CTO & Trainer Ivo Mosca",
+      "MonicaIndustriale": "Immagine HR Manager Monica Industriale",
+      "ChiaraBalsamini": "Immagine Recruiter specialist Chiara Balsamini",
+      "RobertoBrogi": "Immagine PM & Trainer Roberto Brogi",
+      "FrancescaFerioli": "Immagine Recruiter $ Social media Francesca Ferioli",
+      "FrancescaBellini": "Immagine Marketing specialist Francesca Bellini",
+      "MariaAmigoRodrigez": "Immagine Recruiter specialist Maria Amigo Rodrigez"
+    }
+  },
+  "footer": {
+    "location": "DOVE SIAMO",
+    "hours": "ORARI",
+    "contacts": "CONTATTACI",
+    "legalNotes": "NOTE LEGALI",
+    "copyright": "Beije è un marchio di People First Srl",
+    "vatNumber": "Partita IVA"
+  },
+  "burgerMenu": {
+    "consulting": "CONSULTING",
+    "academy": "BEIJE TALENT ACADEMY",
+    "up": "UP",
+    "career": "LAVORA CON NOI",
+    "whoWeAre": "CHI SIAMO",
+    "contacts": "CONTATTI",
+    "blog": "BLOG",
+    "community": "COMMUNITY",
+    "focusAcademy": "FOCUS ACADEMY"
+  },
   "home": {
     "firstSection": {
       "title": {
         "part1": "Aiutiamo le aziende a realizzare progetti innovativi attraverso ",
         "part2": "Team di Valore"
       }
+    },
+    "secondSection": {
+      "title_value": "VALORI",
+      "title_history": "STORIA",
+      "title_mission": "MISSION",
+      "title_vision": "VISION"
+    },
+    "thirdSection": {
+      "title": "CHI SIAMO",
+      "description": "Italiano Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    "fourthSection": {
+      "title": "CONTATTACI",
+      "location": "Dove siamo",
+      "contacts": "Contattaci",
+      "placeholder": {
+        "name": "Nome Cognome*",
+        "email": "Email*",
+        "state": "Stato*",
+        "town": "Città*",
+        "message": "Scrivi qui il tuo messaggio"
+      },
+      "agreement": {
+        "part1": "Ho letto e accetto il ",
+        "part2": "trattamento dei miei dati personali*"
+      },
+      "send_btn": "Invia"
     }
+  },
+  "personalProfile": {
+    "francesco_cesana": {
+      "desc": "Vino, arte e buon cibo: bisogna fare di necessità virtù"
+    },
+    "erica_mauro": {
+      "desc": "Promotrice di buon umore e di nuove scoperte: c'è sempre un buon motivo per sorridere e per imparare qualcosa di nuovo."
+    },
+    "chiara_balsamini": {
+      "desc": "Nella vita ho indossato più pattini che tacchi. Spoiler: sorriso dipendente."
+    },
+    "marianna_fulginiti": {
+      "desc": "Mai vinto al gioco del silenzio, ricercatrice assidua di nuove mete da esplorare e conoscere."
+    },
+    "roberto_brogi": {
+      "desc": "Sono un uomo semplice: programmo di giorno, mi trasformo in John Deacon di notte."
+    },
+    "ivo_mosca": {
+      "desc": "Make it simple."
+    },
+    "francesca_ferioli": {
+      "desc": "Psicologa specializzata in comunicazione. Musica, Spagna e basket dipendente."
+    },
+    "maria_rodrigez": {
+      "desc": "Nerd sotto copertura in ambito IT, cosa potrebbe andare storto?"
+    },
+    "francesca_bellini": {
+      "desc": "Dammi tre parole: fashion, danza e carbonara."
+    }
+  },
+  "Consulting": {
+    "intro": {
+      "part1": "In ottica ",
+      "part2": "People First ",
+      "part3": "aiutiamo le aziende a costruire Team di Valore attraverso figure altamente specializzate"
+    },
+    "description": {
+      "part1": "Ci impegniamo ad ottenere i risultati migliori attraverso aggiornamenti mirati e formazione costante per la realizzazione di ",
+      "part2": "progetti innovativi",
+      "part3": "."
+    },
+    "title_carousel_employee": "Soddisfazione consulenti",
+    "paragraph1_carousel_employee": "Ritiene che ci sia un buon clima aziendale",
+    "paragraph2_carousel_employee": "Ritiene che l'azienda sia attenta al benessere dei dipendenti",
+    "paragraph3_carousel_employee": "Raccomanderebbe Beije People First",
+    "title_carousel_client": "Soddisfazione clienti",
+    "paragraph1_carousel_client": "Ritiene che ci sia un buon clima aziendale.",
+    "paragraph2_carousel_client": "Ritiene che l'azienda sia attenta al benessere dei dipendenti.",
+    "paragraph3_carousel_client": "Raccomanderebbe Beije People First.",
+    "data_survey": "Dati survey 2021",
+    "title_add_info": "Richiedi maggiori informazioni",
+    "description_add_info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan lacus quis nibh porta, eget porttitor neque feugiat."
+  },
+  "Academy": {
+    "title": "Beije Talent Academy",
+    "page_description": {
+      "part1": "Master specializzati ",
+      "part2": "Frontend ",
+      "part3": "& ",
+      "part4": "Backend ",
+      "part5": "per diventare ",
+      "part6": "Software Developer ",
+      "part7": ". Svilupperai le tue competenze attraverso lezioni frontali, esercitazioni, valutazioni e ",
+      "part8": "progetti reali"
+    },
+    "our_courses_title": "I nostri Master",
+    "title_academy_java": "Master Backend",
+    "title_academy_frontend": "Master Frontend",
+    "course_description": {
+      "part1": "Diventa il prossimo ",
+      "part2": "Software Ninjaneer",
+      "part3": "!"
+    },
+    "send_to_youtube": {
+      "part1": "Vieni a scoprire il nostro canale ",
+      "part2": "Youtube",
+      "part3": ": troverai le ",
+      "part4": "pillole digitali ",
+      "part5": "dei nostri esperti Frontend & Backend, i ",
+      "part6": "Webinar ",
+      "part7": "e molto altro ancora…Ti aspettiamo!"
+    },
+    "next_courses_title": "I prossimi corsi",
+    "next_course_1": "Stage java",
+    "date_next_course_1": "Gen. – Apr. 2021",
+    "next_course_2": "Stage java",
+    "date_next_course_2": "Gen. – Apr. 2021",
+    "title_carousel_student": "Soddisfazione studenti",
+    "paragraph1_carousel_student": "Ritiene che i contenuti del corso siano in linea con gli obiettivi dichiarati",
+    "paragraph2_carousel_student": "Ritiene docente preparato e competente rispetto ai contenuti proposti",
+    "paragraph3_carousel_student": "Consiglierebbe la Beije Talent Academy",
+    "comments_title": "Dicono di noi",
+    "comments_txt": {
+      "comments1": "Nell'Academy FrontEnd di Beije ho approfondito tecnologie e nozioni nuove, mi è stato inoltre fornito supporto per entrare nel mondo del lavoro, cosa che la sola università non mi ha fornito, per questo lo reputo un percorso che rifarei volentieri.",
+      "comments2": "Beije mi ha da subito dato un'ottima impressione e non si è smentita con il tempo. Ho avuto un contratto a tempo indeterminato dopo un breve periodo di formazione e sono entrato in un team che mi ha accolto ben oltre le mie aspettative.",
+      "comments3": "Beije Academy è stata un’esperienza costruttiva e stimolante: mi ha permesso di apprendere le tecnologie usate nel mondo lavorativo e mi ha incoraggiato a mettermi in gioco in ogni circostanza.",
+      "comments4": "Nonostante fosse la prima Academy tutta da remoto è stata gestita ottimamente, sia nelle lezioni frontali che nella divisione dei gruppi in mini-progetti. Ritengo che l'Academy mi abbia fornito una preparazione più che adeguata per svolgere attività in ambito Java.",
+      "comments5": "Una formazione completa, un'esperienza professionalizzante che ti lascia con delle competenze reali e applicabili nell'immediato. Alla Beije Talent Academy non si impara solo a programmare, ma a farlo con consapevolezza e ingegno.",
+      "comments6": "Beije Accademy mi è stata molto utile per introdurmi nel mondo del lavoro con sicurezza grazie alle simulazioni in team, dove ho potuto mettere in pratica ciò che ho studiato in Accademy ed in Università.",
+      "comments7": "L’Academy di Beije è stata un’esperienza formativa davvero importante per il mio percorso di crescita. Non credevo che in soli tre mesi sarei riuscito ad apprendere tanto da poter lavorare in autonomia su progetti complessi. Sicuramente la consiglierei a tutti!",
+      "comments8": "Grazie all'Academy Java di Beije ho capito quello che differenzia l'università dal mondo del lavoro e soprattutto ho capito come gestire un progetto vero e proprio, capendo come usare le tecnologie java piu usate dalle aziende."
+    },
+    "form_message_title": "Richiedi maggiori informazioni",
+    "form_message_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan lacus quis nibh porta, eget porttitor neque feugiat."
+  },
+  "AcademyDedails": {
+    "structure": "Struttura",
+    "stage": "Master",
+    "compensation": "Compenso",
+    "location": "Modalità",
+    "program": "Programma"
+  },
+  "AcademyBackend": {
+    "title": "Master Backend",
+    "intro": {
+      "part1": "Diventa ",
+      "part2": "Java Developer ",
+      "part3": "con noi!"
+    },
+    "stageDesc": "Master di 3 mesi retribuito",
+    "compensationDesc": "Rimborso spese",
+    "locationDesc": "Remoto",
+    "introList": {
+      "el1": "3 mesi di crescita professionale",
+      "el2": "Formazione costante attraverso progetti individuali e di gruppo",
+      "el3": "Utilizzo delle tecnologie più richieste dal mercato"
+    },
+    "program": {
+      "section1": {
+        "title": "Java basi e teoria",
+        "subsection1": "Fondamenti di Java e di programmazione ad oggetti",
+        "subsection2": "Variabili: differenza tra tipi primitivi e rifermenti ad oggetti",
+        "subsection3": "Gli operatori in Java: aritmetici, unari e binari",
+        "subsection4": "Costrutti condizionali ed iterativi; controllo avanzato del flusso",
+        "subsection5": "La classe String ed il concetto di immutabilità",
+        "subsection6": "La classe StringBuilder ed il concetto di “uguaglianza” tra oggetti in Java",
+        "subsection7": "Gli array mono e multidimensionali in Java; la classe ArrayList",
+        "subsection8": "La gestione di data ed orario in Java",
+        "subsection9": "Design dei metodi: modificatori di accesso e passaggio di parametri",
+        "subsection10": "I metodi “Costruttori” e l’overloading di metodi in una classe",
+        "subsection11": "Ereditarietà e classi astratte",
+        "subsection12": "Interfacce e Polimorfismo",
+        "subsection13": "Gestire le eccezioni in Java",
+        "subsection14": "Accenni di programmazione funzionale in Java: scrivere semplici funzioni Lambda",
+        "subsection15": "I Design Patterns: Builder, Factory, Singleton e Decorator"
+      },
+      "section2": {
+        "title": "Java I/O",
+        "subsection1": "Leggere e scrivere file in Java",
+        "subsection2": "Organizzare dati in file CSV",
+        "subsection3": "Il formato XML e come gestirlo in Java",
+        "subsection4": "Importare ed esportare dati da fonti e formati differenti"
+      },
+      "section3": {
+        "title": "Java e database",
+        "subsection1": "Teoria dei DataBase",
+        "subsection2": "Il linguaggio SQL",
+        "subsection3": "Interfacciarsi ad un database con JDBC",
+        "subsection4": "JPA: Java Persistence Api",
+        "subsection5": "Il framework Hibernate per ORM e JPA",
+        "subsection6": "Usare Maven per la gestione dei progetti"
+      },
+      "section4": {
+        "title": "Java per il web",
+        "subsection1": "Java per il Web: Servlet e JSP, HTML e CSS",
+        "subsection2": "Il concetto di sessione e l’utilizzo di bean per il mantenimento e trasporto dei dati",
+        "subsection3": "Il Design Pattern Model-View-Controller",
+        "subsection4": "Il framework Spring: Inversion of Control & Dependencies Injection",
+        "subsection5": "SpringMVC: DispatcherServlet, controller, model e views",
+        "subsection6": "Spring JPA e Spring Security",
+        "subsection7": "Web Service SOAP: implementazione di un server ed un client",
+        "subsection8": "Web Service REST: il formato JSON ed implementazione di un WS REST con SpringMVC",
+        "subsection9": "DOM e Javascript",
+        "subsection10": "AJAX: utilizzo del comando fetch per le chiamate asincrone"
+      }
+    }
+  },
+  "AcademyFrontend": {
+    "title": "Master Frontend",
+    "intro": {
+      "part1": "Diventa ",
+      "part2": "Web Developer ",
+      "part3": "con noi!"
+    },
+    "stageDesc": "Master di 3 mesi retribuito",
+    "compensationDesc": "Rimborso spese",
+    "locationDesc": "Remoto",
+    "introList": {
+      "el1": "3 mesi di crescita professionale e personale",
+      "el2": "Formazione costante attraverso progetti individuali e di gruppo con sviluppo di Web & Mobile application",
+      "el3": "Utilizzo di librerie e framework più richiesti dal mercato"
+    },
+    "program": {
+      "section1": {
+        "title": "Javascript, HTML5, CSS3",
+        "subsection1": "Javascript",
+        "subsection2": "HTML5",
+        "subsection3": "CSS3",
+        "subsection4": "ES6",
+        "subsection5": "Programmazione generale",
+        "subsection6": "Git"
+      },
+      "section2": {
+        "title": "React",
+        "subsection1": "React, la libreria dedicata al frontend",
+        "subsection2": "React vs JQuery vs AngularJS Vs Vue",
+        "subsection3": "Gestione e organizzazione del Progetto",
+        "subsection4": "Hooks & Class",
+        "subsection5": "Components, State, Props and Lifecycle events",
+        "subsection6": "Routing and Navigation",
+        "subsection7": "Virtual Dom",
+        "subsection8": "Redux"
+      },
+      "section3": {
+        "title": "React Native",
+        "subsection1": "React Vs React Native",
+        "subsection2": "Style and Component",
+        "subsection3": "Expo",
+        "subsection4": "Routing and Navigation",
+        "subsection5": "Build & pubblicazione Store Ios/Android",
+        "subsection6": "Redux"
+      },
+      "section4": {
+        "title": "Approfondimenti",
+        "subsection1": "Npm module custom",
+        "subsection2": "Interactive application (Ar/Vr)",
+        "subsection3": "Games"
+      }
+    }
+  },
+  "WhoWeAre": {
+    "title": "Chi siamo",
+    "value_title": "Valori",
+    "value_list": {
+      "el1": {
+        "part1": "Crediamo in quello che facciamo e abbiamo un profondo ",
+        "part2": "RISPETTO ",
+        "part3": "per gli altri."
+      },
+      "el2": {
+        "part1": "Mostriamo ",
+        "part2": "GRATITUDINE ",
+        "part3": "per l’impegno che ogni giorno mettiamo nel nostro lavoro."
+      },
+      "el3": {
+        "part1": "Prima viene la squadra e poi l’individuo, il nostro è un lavoro di ",
+        "part2": "TEAM",
+        "part3": "."
+      },
+      "el4": {
+        "part1": "La base per costruire la nostra community è sviluppare un ",
+        "part2": "SENSO DI APPARTENENZA",
+        "part3": "."
+      }
+    },
+    "history_title": "Storia",
+    "history_desc": {
+      "part1": "Al centro del modello Beije c’è una vision ",
+      "part2": "people first ",
+      "part3": ": le persone al centro per la creazione di un’azienda di valore. Da un ideale ad un business: da più di 10 anni ci impegniamo costantemente per aggiornare il nostro know-how e siamo in grado di fornire le metodologie più moderne e le tecnologie più innovative per la realizzazione di progetti altamente specializzati."
+    },
+    "vision_title": "Vision",
+    "vision_desc": {
+      "part1": "Le ",
+      "part2": "persone ",
+      "part3": "al centro del nostro ",
+      "part4": "futuro",
+      "part5": "."
+    },
+    "mission_title": "Mission",
+    "mission_desc": {
+      "part1": "Aiutiamo le aziende a realizzare progetti innovativi attraverso Team di ",
+      "part2": "Valore",
+      "part3": "."
+    }
+  },
+  "Up": {
+    "title": "Up",
+    "intro": "La nostra Software Factory",
+    "desc1": {
+      "part1": "Lavoriamo con dedizione al fianco dei nostri clienti per fornire servizi di ",
+      "part2": "progettazione",
+      "part3": ", ",
+      "part4": "implementazione",
+      "part5": ", ",
+      "part6": "delivery",
+      "part7": ", ",
+      "part8": "integration ",
+      "part9": "e ",
+      "part10": "application maintenance ",
+      "part11": "di ",
+      "part12": "software",
+      "part13": ". Realizziamo progetti partendo dall’analisi tecnica ",
+      "part14": "frontend ",
+      "part15": "& ",
+      "part16": "backend",
+      "part17": ", realizzazione mockup fino all’implementazione del software attraverso le tecnologie presenti sul mercato."
+    },
+    "desc2": {
+      "part1": "Attraverso metodologia ",
+      "part2": "Agile",
+      "part3": ", verranno definiti step di verifica e di aggiornamento del prodotto già durante lo sviluppo, con frequenti rilasci di versioni testabili dal cliente, in modo da ottimizzare puntualmente miglioramenti e modifiche sulle attività concordate. Dall’",
+      "part4": "analisi del progetto ",
+      "part5": "alla ",
+      "part6": "stesura ",
+      "part7": "della ",
+      "part8": "documentazione ",
+      "part9": "fino all’",
+      "part10": "implementazione",
+      "part11": ": vi seguiamo in ogni fase."
+    },
+    "paragraph": {
+      "part1": "Le tecnologie utilizzate vanno dall’ecosistema ",
+      "part2": "Java ",
+      "part3": "a quello ",
+      "part4": ".Net ",
+      "part5": "per il ",
+      "part6": "Backend ",
+      "part7": ", mentre ",
+      "part8": "Javascript ",
+      "part9": "e i principali framework per il ",
+      "part10": "Frontend ",
+      "part11": "(",
+      "part12": "React",
+      "part13": ", ",
+      "part14": "Angular ",
+      "part15": "e ",
+      "part16": "Vue",
+      "part17": "). Per l’infrastruttura basiamo abitualmente i progetti in ",
+      "part18": "Cloud ",
+      "part19": "su servizi ",
+      "part20": "Amazon Web Services",
+      "part21": "."
+    },
+    "comments_title": "Dicono di noi",
+    "case_studies_title": "Case studies",
+    "form_message_title": "Richiedi maggiori informazioni",
+    "form_message_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan lacus quis nibh porta, eget porttitor neque feugiat."
+  },
+  "Contacts": {
+    "title": "Contatti"
   }
 }

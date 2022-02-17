@@ -1,0 +1,10 @@
+.bg-video {
+    z-index: -100;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}

@@ -1,0 +1,44 @@
+:root {
+    --primary-color-footer: var(--first-color)
+}
+
+.homeLayout-footer {
+    background-color: var(--primary-color-footer);
+    /* remove */
+    /* height: calc(100vh - 110px); */
+    padding: 20px 5%;
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+@media screen and (min-width: 1440px) {
+    .homeLayout-footer {
+        padding: 20px 15%;
+    }
+}
+
+/* media for zoomed screens */
+@media (-webkit-min-device-pixel-ratio: 1.25) {
+    .homeLayout-footer {
+        padding: 20px 5%;
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.3) {
+
+    .homeLayout-footer {
+        padding: 20px 5%;
+    }
+}
+
+/* safari only */
+@media not all and (min-resolution:.001dpcm) {
+    @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+        .homeLayout-footer {
+            padding: 20px 15%;
+        }
+    }
+}

@@ -1,0 +1,58 @@
+:root {
+    --bg-color-primary-consulting: var(--third-color);
+    --bg-color-secondary-consulting: var(--fourth-color);
+
+    --consulting-bg1: url('../../assets/images/consulting/consulting1.jpg');
+    --consulting-bg2: url('../../assets/images/consulting/consulting2.jpg');
+}
+
+.consulting-container {
+    background-color: var(--bg-color-primary-consulting) !important;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Introductive section */
+.consulting-bg1 {
+    background-image: var(--consulting-bg1);
+}
+
+.consulting-bg2 {
+    background-image: var(--consulting-bg2);
+}
+
+/* Percentage section */
+
+.consulting-percentage-section-carousel {
+    margin: 30px 0;
+    display: block;
+}
+
+.consulting-percentage-section-card {
+    display: none;
+}
+
+.consulting-percentage2-section {
+    margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+
+
+    .consulting-percentage-section-carousel {
+        display: none;
+    }
+
+    .consulting-percentage-section-card {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .consulting-introductive-section {
+        margin-bottom: -50px;
+    }
+}

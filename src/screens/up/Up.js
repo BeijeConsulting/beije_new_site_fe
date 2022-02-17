@@ -1,0 +1,375 @@
+import React, { useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
+import Helmet from "react-helmet";
+
+import { Row } from 'antd'
+
+//import gsap
+import { gsap } from 'gsap'
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+// import redux
+import { connect } from "react-redux";
+import { setColorHeader } from "../../redux/ducks/colorHeaderDuck";
+import { setColor, initColor } from '../../redux/ducks/colorDuck'
+import { initVisibility } from "../../redux/ducks/visibilityDuck";
+
+// import functions
+import { turnToUppercase } from "../../utils/utilities";
+
+// import constants
+// import { up_comments , up_case_studies } from "../../utils/properties"; DO NOT DELETE
+
+// import style
+import './Up.css'
+
+// import components
+import IntroductiveSection from "../../components/functional_components/introductiveSection/IntroductiveSection";
+import CustomCard from '../../components/functional_components/customCard/CustomCard'
+// DO NOT DELETE COMMENTS
+// import SectionSubtitle from "../../components/functional_components/sectionSubtitle/SectionSubtitle";
+// import Comments from "../../components/functional_components/comments/Comments";
+// import CustomMultiCarousel from "../../components/hooks_components/customMultiCarousel/CustomMultiCarousel";
+// import CustomButton from "../../components/functional_components/Button/CustomButton";
+// import ViewAllButton from "../../components/functional_components/viewAllButton/ViewAllButton";
+import SectionForm from "../../components/functional_components/sectionForm/SectionForm";
+import { initPageFocus, setPageFocus } from "../../redux/ducks/pageFocusDuck";
+import PolygonSection from "../../components/functional_components/polygonSection/PolygonSection";
+
+const Up = (props) => {
+
+  const primary_bg_page_up = '#52798e'
+
+  const { t } = useTranslation()
+
+  const ref = useRef(null);
+
+  //GSAP
+  gsap.registerPlugin(ScrollTrigger);
+
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    props.dispatch(setColor(true))
+    props.dispatch(setPageFocus('up'))
+    props.dispatch(setColorHeader(primary_bg_page_up))
+    props.dispatch(initVisibility())
+
+    const element = ref.current;
+
+    const desc3Container = element.querySelector('.up-intro-sec-desc3-row-gsap');
+    const desc3 = element.querySelector('.up-intro-sec-desc3-gsap')
+
+    const commentsSection = element.querySelector('.up-comments-gsap');
+    const commentsSecTitle = element.querySelector('.up-comments-title-gsap');
+
+    const caseStudiesSec = element.querySelector('.up-case-studies-gsap');
+    const caseStudiesTitle = element.querySelector('.up-case-studies-title-gsap');
+    const caseStudiesCarousel = element.querySelector('.up-case-studies-carousel-gsap');
+    const caseStudiesSingleCard = element.querySelectorAll('.up-case-studies-single-card-gsap');
+    const caseStudiesBtn = element.querySelector('.up-case-studies-view-all-gsap');
+
+    const t1 = gsap.timeline({
+      scrollTrigger: {
+        trigger: desc3Container,
+        start: 'top 75%',
+      }
+    })
+
+    const t2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: commentsSection,
+        start: 'top 75%',
+      }
+    })
+
+    const t3 = gsap.timeline({
+      scrollTrigger: {
+        trigger: caseStudiesSec,
+        start: 'top 75%',
+      }
+    })
+
+    t1.from(desc3, { y: 50, opacity: 0, duration: 0.5, ease: 'baunce.in' })
+
+    t2.from(commentsSecTitle, { y: 50, opacity: 0, duration: 0.5, ease: 'baunce.in' })
+
+    t3.from(caseStudiesTitle, { y: 50, opacity: 0, duration: 0.5, ease: 'baunce.in' })
+    t3.from(caseStudiesSingleCard, { opacity: 0, stagger: 0.3, duration: 0.5, ease: 'power2.in' })
+    t3.from(caseStudiesCarousel, { opacity: 0, duration: 0.5, ease: 'power2.in' })
+    t3.from(caseStudiesBtn, { opacity: 0, duration: 0.5, ease: 'power2.in' })
+
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      props.dispatch(initPageFocus());
+      props.dispatch(initColor())
+
+    };
+  });
+
+  const handleScroll = () => {
+    if (window.pageYOffset > 0) {
+      props.dispatch(setColorHeader(primary_bg_page_up))
+      props.dispatch(setColor(true))
+    }
+  }
+
+  // DO NOT DELETE
+  // const printComments = (item, key) => {
+  //   return (
+  //     <Comments
+  //       key={key}
+  //       commentsText={item.commentsText}
+  //       name={item.name}
+  //       surname={item.surname}
+  //       profilePictureImg={item.profilePictureImg}
+  //       imgClassName={item.imgClassName}
+  //     />
+  //   )
+  // }
+
+  // DO NOT DELETE
+  // const printCaseStudies = (item, key) => {
+  //     return (
+  //         <CustomCard
+  //             key={key}
+  //             cardClassName={item.containerClassName}
+  //             cardParagraph={turnToUppercase(item.title)}
+  //             paragraphClassName={item.titleClassName}
+  //         />
+  //     )
+  // }
+
+  //DO NOT DELETE
+  // const printCaseStudiesDesktop = (item, key) => {
+  //     return (
+  //         <Col
+  //             key={key}
+  //             xs={0}
+  //             md={8}
+  //             className="up-case-studies-single-card-gsap"
+  //         >
+  //             <CustomCard
+  //                 cardClassName={item.containerClassName}
+  //                 cardParagraph={turnToUppercase(item.title)}
+  //                 paragraphClassName={item.titleClassName}
+  //             />
+  //         </Col>
+  //     )
+  // }
+
+  // const sendEmailCommercial = () => {
+  //   console.log('Send email to commercial');
+  //   // *ga*
+  // }
+
+  return (
+    <>
+      <Helmet>
+        <title>{t('helmet.meta_title.up')}</title>
+        <meta name="description" content={t('helmet.meta_description.up')} />
+        <meta name="keywords" content={t('helmet.keywords.up')} />
+      </Helmet>
+      <div
+        className='up-container'
+        ref={ref}
+      >
+        <section>
+          <IntroductiveSection
+            titleInColumn={t('Up.title')}
+            titleLight={true}
+            bg1='up-bg1'
+            bg2='up-bg2'
+            desc1={
+              <>
+                {t('Up.desc1.part1')}
+                <strong>{t('Up.desc1.part2')}</strong>
+                {t('Up.desc1.part3')}
+                <strong>{t('Up.desc1.part4')}</strong>
+                {t('Up.desc1.part5')}
+                <strong>{t('Up.desc1.part6')}</strong>
+                {t('Up.desc1.part7')}
+                <strong>{t('Up.desc1.part8')}</strong>
+                {t('Up.desc1.part9')}
+                <strong>{t('Up.desc1.part10')}</strong>
+                {t('Up.desc1.part11')}
+                <strong>{t('Up.desc1.part12')}</strong>
+                {t('Up.desc1.part13')}
+                <strong>{t('Up.desc1.part14')}</strong>
+                {t('Up.desc1.part15')}
+                <strong>{t('Up.desc1.part16')}</strong>
+                {t('Up.desc1.part17')}
+              </>
+            }
+            desc1Light={true}
+            desc2Mobile={true}
+            desc2={
+              <>
+                {t('Up.desc2.part1')}
+                <strong>{t('Up.desc2.part2')}</strong>
+                {t('Up.desc2.part3')}
+                <strong>{t('Up.desc2.part4')}</strong>
+                {t('Up.desc2.part5')}
+                <strong>{t('Up.desc2.part6')}</strong>
+                {t('Up.desc2.part7')}
+                <strong>{t('Up.desc2.part8')}</strong>
+                {t('Up.desc2.part9')}
+                <strong>{t('Up.desc2.part10')}</strong>
+                {t('Up.desc2.part11')}
+              </>
+            }
+            desc2Light={true}
+          />
+
+          <Row className="up-intro-sec-desc3-row up-intro-sec-desc3-row-gsap">
+            <CustomCard
+              cardParagraph={
+                <>
+                  {t('Up.paragraph.part1')}
+                  <strong>{t('Up.paragraph.part2')}</strong>
+                  {t('Up.paragraph.part3')}
+                  <strong>{t('Up.paragraph.part4')}</strong>
+                  {t('Up.paragraph.part5')}
+                  <strong>{t('Up.paragraph.part6')}</strong>
+                  {t('Up.paragraph.part7')}
+                  <strong>{t('Up.paragraph.part8')}</strong>
+                  {t('Up.paragraph.part9')}
+                  <strong>{t('Up.paragraph.part10')}</strong>
+                  {t('Up.paragraph.part11')}
+                  <strong>{t('Up.paragraph.part12')}</strong>
+                  {t('Up.paragraph.part13')}
+                  <strong>{t('Up.paragraph.part14')}</strong>
+                  {t('Up.paragraph.part15')}
+                  <strong>{t('Up.paragraph.part16')}</strong>
+                  {t('Up.paragraph.part17')}
+                  <strong>{t('Up.paragraph.part18')}</strong>
+                  {t('Up.paragraph.part19')}
+                  <strong>{t('Up.paragraph.part20')}</strong>
+                  {t('Up.paragraph.part21')}
+                </>
+              }
+              paragraphClassName={'up-intro-section-paragraph txt-light up-intro-sec-desc3-gsap'}
+            />
+          </Row>
+        </section>
+
+        {/* DO NOT DELETE */}
+        {/* <PolygonSection>
+                <section className="up-comments-gsap">
+                    <Row>
+                        <Col
+                            xs={24}
+                            className="up-comments-title-container up-comments-title-gsap"
+                        >
+                            <SectionSubtitle
+                                title={turnToUppercase(t('Up.comments_title'))}
+                                shortLineBelow
+                                classNameShortLine={'up-short-line'}
+                            />
+                        </Col>
+                        <Col
+                            span={24}
+                        >
+                            <CustomMultiCarousel
+                                item_superLargeDesktop={2}
+                                item_mediumDesktop={2}
+                                item_desktop={2}
+                                item_tablet={2}
+                                item_bigMobile={1}
+                                item_mobile={1}
+                                item_smallmobile={1}
+                                item_extraSmallMobile={1}
+                                objCarousel={false}
+                                className="academy-gsap-single-comment"
+
+                                infinite={true}
+                                autoPlay={true}
+                                autoPlaySpeed={3000}
+                            >
+                                {up_comments.map(printComments)}
+                            </CustomMultiCarousel>
+                        </Col>
+                    </Row>
+                </section>
+
+                <section className="up-case-studies-section up-case-studies-gsap">
+                <Row>
+                    <Col
+                        xs={24}
+                    >
+                        <SectionSubtitle
+                            styleContainer={{ marginBottom: '10px' }}
+                            LongLineAbove
+                            classNameTitle={'up-case-studies-title up-case-studies-title-gsap'}
+                            title={turnToUppercase(t('Up.case_studies_title'))}
+                            classNameLongLine={'up-long-line'}
+                        />
+                    </Col>
+                    <Col
+                        xs={24}
+                        md={0}
+                        className="up-case-studies-carousel-gsap"
+                    >
+                        <CustomMultiCarousel
+                            objCarousel={false}
+                            item_bigMobile={1}
+                            item_mobile={1}
+                            item_smallmobile={1}
+                            item_extraSmallMobile={1}
+                            // showArrows={true}
+                            infinite={true}
+                            autoPlay={true}
+                            autoPlaySpeed={3000}
+                        >
+                            {up_case_studies.map(printCaseStudies)}
+                        </CustomMultiCarousel>
+                    </Col>
+
+                    <Row className={'up-case-studies-desktop'}>
+                        {up_case_studies.map(printCaseStudiesDesktop)}
+                    </Row>
+                    <Row className="up-case-studies-btn-container up-case-studies-view-all-gsap">
+                        <CustomButton
+                            type={'view-all-btn-light'}
+                            content={<ViewAllButton
+                                classNameTxt={'up-case-studies-btn'}
+                            />}
+                        />
+                    </Row>
+                </Row>
+            </section>
+            </PolygonSection> */}
+        <PolygonSection
+          polygenClipPath={'up-polygen-clip-path'}
+        >
+          <section className={'up-form-section consulting-gsap-sixth-section'}>
+            <SectionForm
+              classNameFormContainer={''}
+              title={turnToUppercase(t('Up.form_message_title'))}
+              // callBack={sendEmailCommercial}
+              origin="up"
+            />
+          </section>
+        </PolygonSection>
+
+        {/* DO NOT DELETE */}
+        {/* settings to turn form into light color */}
+        {/* <section className={'up-form-section consulting-gsap-sixth-section'}>
+          <SectionForm
+            descClassName={'up-form-desc'}
+            classNameTitle={'up-form-title'}
+            title={turnToUppercase(t('Up.form_message_title'))}
+            classNameTextArea={'up-form-text-area'}
+            typeBtn='form-btn-light'
+            classNameCheckbox={'txt-light'}
+          />
+        </section> */}
+
+      </div >
+
+    </>
+  )
+}
+
+export default connect()(Up)
