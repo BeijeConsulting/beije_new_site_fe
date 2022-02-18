@@ -8,6 +8,7 @@
   --grey-tone-5: #838383;
   --grey-tone-6: #656565;
   --dark-grey: #262E36;
+  --grey-tone-7: #929292;
   --light-silver: #D6CDCD;
   --red: #b12009;
   --lightblue: #9EC1DB;
@@ -69,32 +70,27 @@ html {
 
 body, a {
   font-family: var(--moderat-regular);
-  font-size: 1rem;
+  font-size: 1.25rem;
   letter-spacing: 0px;
   color: var(--grey-tone-4)
 }
 
 h1, h2 {
   font-family: var(--sofiaPro-bold);
-  font-size: 1.5rem;
+  font-size: 1.7rem;
 }
 
 h2 {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
 }
 
 h3, h4, h5, h6 {
   font-family: var(--sofiaPro-regular);
-  font-size: 1.1rem;
 }
 
 /* @media (min-width: 768px) {} */
 
 @media (min-width: 768px) {
-
-  body, a {
-    font-size: 1.25rem;
-  }
 
   h1 {
     font-size: 2.7rem;
@@ -110,6 +106,13 @@ h3, h4, h5, h6 {
 }
 
 @media (min-width: 1600px) {
+  body, a {
+    font-family: var(--moderat-regular);
+    font-size: 1.5rem;
+    letter-spacing: 0px;
+    color: var(--grey-tone-4)
+  }
+
   h1 {
     font-size: 4.375rem;
   }
@@ -221,6 +224,11 @@ h3, h4, h5, h6 {
 }
 
 /* PADDING */
+.paddingX-container-default {
+  padding-left: 11.2% !important;
+  padding-right: 11.2% !important;
+} 
+
 @media (min-width: 768px) {
   .paddingX-container-default {
     padding-left: 21.8% !important;
