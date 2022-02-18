@@ -235,7 +235,7 @@
   height: calc(100vh - 87px);
   margin-top: 82px;
   font-family: var(--sofiaPro-bold);
-  font-size: 1rem;
+  font-size: 1rem !important;
 }
 
 .burgerMenu-links-voices {
@@ -334,7 +334,7 @@
   .burgerMenu-nav-links-container {
     height: calc(100vh - 125px);
     margin-top: 90px;
-    font-size: 1.2rem;
+    font-size: 2.5rem !important;
   }
 }
 
@@ -352,7 +352,7 @@
   }
 
   .burgerMenu-nav-links-container {
-    font-size: 2.2rem;
+    font-size: 2.2rem !important;
     margin-top: 107px;
   }
 }
@@ -373,7 +373,7 @@
   }
 
   .burgerMenu-nav-links-container {
-    font-size: 3rem;
+    font-size: 3rem !important;
     height: calc(100vh - 289px);
     margin-top: 202px;
   }

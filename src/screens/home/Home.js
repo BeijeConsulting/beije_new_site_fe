@@ -81,31 +81,18 @@ const Home = (props) => {
         </h2>
       </Container>
 
-      {/* Third section mobile */}
-      <Container
-        component={"section"}
-        maxWidth={"false"}
-        className={"home-third-section-container-mobile paddingX-container-default"}
-      >
-        <Box className={"d-flex flex-column"}>
-          <CustomTab
-            objTab={tab_aboutUs}
-          />
-        </Box>
-      </Container>
-
       {/* Box with dark bg for next sections */}
-      <Box className={"home-bg-dark-container bg-dark-grey"}>
+      <Box className={"bg-dark-grey position-relative clip-path-default"}>
 
         <p className={"home-written-bg"}>People first</p>
 
-        {/* Third section desktop */}
+        {/* Third section */}
         <Container
           component={"section"}
           maxWidth={"false"}
-          className={"home-third-section-container-desktop paddingX-container-default"}
+          className={"home-third-section-container paddingX-container-default"}
         >
-          <Box className={"d-flex flex-row"}>
+          <Box className={"home-third-section-tab-container d-flex"}>
             <CustomTab
               objTab={tab_aboutUs}
             />

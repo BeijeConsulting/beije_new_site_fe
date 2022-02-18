@@ -33,7 +33,7 @@
 }
 
 .navbar-container a:nth-child(2)::before {
-  background-color: var(--dark-blue);
+  background-color: var(--blue);
 }
 
 .navbar-container a:nth-child(3)::before {
@@ -53,7 +53,7 @@
   }
 
   .navbar-container a:nth-child(2):hover {
-    color: var(--dark-blue);
+    color: var(--blue);
   }
 
   .navbar-container a:nth-child(3):hover {
@@ -105,7 +105,7 @@
   }
 
   .navbar-container-secondary a:nth-child(2):hover::before {
-    background-color: var(--dark-blue);
+    background-color: var(--blue);
   }
 
   .navbar-container-secondary a:nth-child(3):hover::before {
@@ -117,7 +117,7 @@
   }
 
   .navbar-container-secondary a:nth-child(2):hover {
-    color: var(--dark-blue);
+    color: var(--blue);
   }
 
   .navbar-container-secondary a:nth-child(3):hover {
