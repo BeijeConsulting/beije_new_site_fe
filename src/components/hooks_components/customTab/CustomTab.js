@@ -16,18 +16,21 @@ const tabObj = [
     valueTab: "1",
     wrappedTab: false,
     contentTabPanel: "Item 1",
+    valueTabPanel: "1"
   },
   {
     labelTab: "Item 2",
     valueTab: "2",
     wrappedTab: false,
     contentTabPanel: "Item 1",
+    valueTabPanel: "2"
   },
   {
     labelTab: "Item 3",
     valueTab: "3",
     wrappedTab: false,
     contentTabPanel: "Item 1",
+    valueTabPanel: "3"
   }
 ]
 
@@ -54,6 +57,7 @@ const CustomTab = (props) => {
       <TabPanel
         key={key}
         value={item.valueTabPanel} /* value connected to the corresponding Tab */
+        className={props.classNameTabPanel}
       >
         {item.contentTabPanel}
       </TabPanel>
@@ -78,6 +82,7 @@ const CustomTab = (props) => {
 
 CustomTab.defaultProps = {
   classNameTabContainer: "tab-tabs-container",
+  classNameTabPanel: "tab-tabPanel-container",
   ariaLableTabList: "lab API tabs example",
   objTab: tabObj,
   orientation: "vertical"

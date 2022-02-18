@@ -9,7 +9,7 @@
 }
 
 .home-first-section-navbar-container {
-  margin-top: calc(100vh - 130vh);
+  margin-top: calc(100vh - 115vh);
   display: flex;
 }
 
@@ -19,9 +19,10 @@
 
 /* Second section */
 .home-second-section-container {
-  height: 100vh;
+  height: 360px;
   color: var(--white);
   padding-left: 19.7% !important;
+  padding-right: 11.2% !important;
 }
 
 .home-second-section-quotation-marks {
@@ -30,22 +31,59 @@
   line-height: 0px;
 }
 
-/* Third section */
-.home-third-section-container {
+/* Third section mobile and desktop*/
+.home-third-section-container-mobile {}
+
+.home-bg-dark-container {
+  position: relative;
   height: 1000px;
+  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+}
+
+.home-written-bg {
+  text-transform: uppercase;
+  font-family: var(--moderat-bold);
+  font-size: 45px;
+  position: absolute;
+  top: 224px;
+  left: 0;
+  margin: auto;
+  color: var(--grey-tone-6);
+  opacity: 16%;
+  width: 100%;
+  text-align: center;
+}
+
+.home-third-section-container-desktop {
+  display: none !important;
 }
 
 
 /* Media Queries */
+@media(min-width: 375px) {
+  .home-first-section-navbar-container {
+    margin-top: calc(100vh - 125vh);
+  }
+}
+
 @media(min-width: 768px) {
+
+  .home-first-section-navbar-container {
+    margin-top: calc(100vh - 120vh);
+  }
 
   .home-second-section-container {
     padding-left: 23.5% !important;
     padding-right: 47.6% !important;
+    height: 490px;
   }
 
   .home-second-section-quotation-marks {
     font-size: 2.7rem;
+  }
+
+  .home-written-bg {
+    font-size: 90px;
   }
 }
 
@@ -57,6 +95,20 @@
     bottom: 60px;
     right: 64px;
   }
+
+  .home-bg-dark-container {
+    -webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 80%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+  }
+
+  .home-third-section-container-mobile {
+    display: none !important;
+  }
+
+  .home-third-section-container-desktop {
+    height: 1000px;
+    display: flex !important;
+  }
 }
 
 @media(min-width: 1200px) {
@@ -66,6 +118,14 @@
 
   .home-first-section-scroll-down-container {
     right: 100.8px;
+  }
+
+  .home-second-section-container {
+    height: 700px;
+  }
+
+  .home-written-bg {
+    font-size: 160px;
   }
 }
 
@@ -81,5 +141,9 @@
 
   .home-second-section-quotation-marks {
     font-size: 4.375rem;
+  }
+
+  .home-written-bg {
+    font-size: 200px;
   }
 }

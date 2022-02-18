@@ -14,11 +14,11 @@
   justify-content: space-between;
   position: fixed;
   z-index: 2;
-  padding: 0px 8.3% 0.5rem 8.3% !important;
+  padding: 0px 6.56% 0.5rem 11.2% !important;
 }
 
 .header-container-mobile {
-  padding: 0.2rem 8.3% 0px 8.3% !important;
+  padding: 0.2rem 6.56% 0px 11.2% !important;
   justify-content: flex-end;
 }
 
