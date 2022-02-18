@@ -20,7 +20,7 @@ import SwitchLang from '../switchLang/SwitchLang';
 
 const CustomHeader = () => {
 
-  const showNavbar = true;
+  const showNavbar = false;
 
   return (
     <Toolbar
