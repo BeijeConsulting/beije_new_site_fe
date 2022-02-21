@@ -1,3 +1,7 @@
+:root {
+  --bg-team-beije: url("../../")
+}
+
 /* First section */
 .home-fist-section-container {
   /* height: 100vh; */
@@ -46,15 +50,40 @@
   text-align: center;
 }
 
+.home-third-section-container {
+  padding-top: 60px;
+}
+
 .home-third-section-tab-container {
   flex-direction: column;
 }
+
+/* Fourth section */
+.home-fourth-section-container {
+  /* Remove */
+  /* height: 700px; */
+  border: 1px solid white;
+}
+
+.home-fourth-section-container p {
+  font-size: 100px;
+  color: var(--white);
+  text-align: center;
+  line-height: 110px;
+  text-transform: uppercase;
+}
+
+.home-fourth-section-container:nth-child(2) {
+  font-size: 130px;
+}
+
 
 /* Media Queries */
 @media(min-width: 375px) {
   .home-first-section-navbar-container {
     margin-top: calc(100vh - 125vh);
   }
+
 }
 
 @media(min-width: 768px) {
@@ -77,8 +106,19 @@
     font-size: 90px;
   }
 
+  .home-third-section-container {
+    padding-top: 122px;
+  }
+
   .home-third-section-tab-container {
     flex-direction: row;
+  }
+
+  .home-fourth-section-container {
+    background-image: url("../../assets/images/home/beije_team.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 
@@ -107,6 +147,11 @@
 
   .home-written-bg {
     font-size: 160px;
+    top: 600px;
+  }
+
+  .home-third-section-container {
+    padding-top: 150px;
   }
 }
 
@@ -126,5 +171,6 @@
 
   .home-written-bg {
     font-size: 200px;
+    top: 230px;
   }
 }

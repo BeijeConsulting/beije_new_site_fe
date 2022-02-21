@@ -82,7 +82,7 @@ const Home = (props) => {
       {/* Box with dark bg for next sections */}
       <Box
         ref={refDarkContainer}
-        className={"bg-dark-grey position-relative clip-path-default"}
+        className={"bg-dark-grey position-relative"}
         style={{ height: "1000px" }}
       >
 
@@ -105,9 +105,13 @@ const Home = (props) => {
         <Container
           component={"section"}
           maxWidth={"false"}
-          className={"home-fourth-section-container-desktop paddingX-container-default"}
+          className={"home-fourth-section-container paddingX-container-default top-oblique-line"}
         >
-
+          <Box>
+            <p><strong>Le persone</strong></p>
+            <p><strong>Al centro</strong></p>
+            <p><strong>Del nostro futuro</strong></p>
+          </Box>
         </Container>
       </Box>
     </Box>

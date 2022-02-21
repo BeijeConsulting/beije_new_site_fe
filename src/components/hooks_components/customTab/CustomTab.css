@@ -14,9 +14,9 @@
 }
 
 .tab-lables {
-  text-transform: uppercase;
-  color: var(--white);
-  padding: 20px;
+  text-transform: uppercase !important;
+  color: var(--grey-tone-1) !important;
+  /* padding: 20px !important; */
 }
 
 .tab-lables:active {
@@ -24,6 +24,7 @@
 }
 
 .tab-panels-container {
+  width: 100%;
   /* Remove */
   border: 1px solid red;
 }
@@ -35,5 +36,9 @@
 @media(min-width: 768px) {
   .tab-container {
     flex-direction: row;
+  }
+
+  .tab-panels-container {
+    width: 80%;
   }
 }
