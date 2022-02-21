@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 
 // Redux
 import { connect } from "react-redux";
+import { setLogo, initLogo } from "../redux/ducks/logoDuck";
 
 // MUI
 import { AppBar, Box, Fab } from "@mui/material";
@@ -10,6 +11,9 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
 // Style
 import './HomeLayout.css'
+
+// Constants
+import { logo_secondary_light } from "../utils/properties"
 
 // Components
 import CustomHeader from "../components/hooks_components/customHeader/CustomHeader";
@@ -25,7 +29,12 @@ const HomeLayout = (props) => {
 
   useEffect(() => {
     window.addEventListener("resize", updateMedia);
-    return () => window.removeEventListener("resize", updateMedia);
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("resize", updateMedia);
+      window.removeEventListener("scroll", handleScroll);
+    }
   }, [])
 
   const updateMedia = () => {
@@ -34,6 +43,13 @@ const HomeLayout = (props) => {
       isMobile: window.innerWidth < 1024
     });
   };
+
+  const handleScroll = () => {
+    props.dispatch(initLogo())
+    if (window.pageYOffset > 150) {
+      props.dispatch(setLogo(logo_secondary_light))
+    }
+  }
 
   return (
     <Box className={props.burgerMenuDuck.menuOpen ? "position-fixed" : ""} >
@@ -54,12 +70,12 @@ const HomeLayout = (props) => {
       {!state.isMobile &&
         <AppBar
           position="fixed"
-          className="bg-transparent"
+          className={props.colorHeaderDuck.colorHeader === "#262E36" ? "bg-dark-grey" : "bg-transparent"}
         >
           <CustomHeader />
         </AppBar>
       }
-      <main>
+      <main className="scrollX-hidden">
         <Outlet />
       </main>
       {state.isMobile &&
@@ -80,7 +96,8 @@ const HomeLayout = (props) => {
 
 const mapStateToProps = state => (
   {
-    burgerMenuDuck: state.burgerMenuDuck
+    burgerMenuDuck: state.burgerMenuDuck,
+    colorHeaderDuck: state.colorHeaderDuck
   }
 )
 

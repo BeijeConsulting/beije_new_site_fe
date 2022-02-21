@@ -238,6 +238,10 @@ h3, h4, h5, h6 {
   overflow: hidden;
 }
 
+.scrollX-hidden {
+  overflow-x: hidden;
+}
+
 /* PADDING */
 .paddingX-container-default {
   padding-left: 11.2% !important;
@@ -261,12 +265,6 @@ h3, h4, h5, h6 {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
   }
 }
-
-/* @media (min-width: 1200px) {
-  .clip-path-default {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
-  }
-} */
 
 @media (min-width: 1600px) {
   .clip-path-default {

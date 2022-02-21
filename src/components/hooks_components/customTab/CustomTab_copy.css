@@ -1,0 +1,47 @@
+.tab-tabs-container {
+  width: 100%;
+  margin-left: 18%;
+  margin-bottom: 45px;
+}
+
+.tab-tabs-container button {
+  color: var(--grey-tone-7);
+  align-items: flex-start;
+}
+
+/* Selected Items */
+.tab-tabs-container .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+  color: var(--white) !important;
+}
+
+/* Line next to the selected item */
+.tab-tabs-container .css-10d9dml-MuiTabs-indicator {
+  background-color: var(--red) !important;
+  left: 0 !important;
+}
+
+/* .tab-tabs-container span::selection {
+  background-color: var(--red) !important;
+  left: 0 !important;
+} */
+
+/* Content tabPanel */
+.tab-tabPanel-container {
+  padding: 0 !important;
+  color: var(--white);
+  margin-bottom: 100px;
+}
+
+/* Media queries */
+@media(min-width: 768px) {
+
+  .tab-tabs-container {
+    margin-left: 0px !important;
+    margin-bottom: 45px;
+    width: 170%;
+  }
+
+  .tab-tabs-container button {
+    color: var(--grey-tone-1);
+  }
+}

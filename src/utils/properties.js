@@ -148,30 +148,18 @@ export const social_list = [
 export const tab_aboutUs = [
   {
     labelTab: "La storia",
-    valueTab: "1",
-    wrappedTab: false,
-    contentTabPanel: "Al centro del modello Beije c’è una vision people first : le persone al centro per la creazione di un’azienda di valore. Da un ideale ad un business: da più di 10 anni ci impegniamo costantemente per aggiornare il nostro know-how e siamo in grado di fornire le metodologie più moderne e le tecnologie più innovative per la realizzazione di progetti altamente specializzati.",
-    valueTabPanel: "1"
+    contentPanel: "T1 al centro del modello Beije c’è una vision people first : le persone al centro per la creazione di un’azienda di valore. Da un ideale ad un business: da più di 10 anni ci impegniamo costantemente per aggiornare il nostro know-how e siamo in grado di fornire le metodologie più moderne e le tecnologie più innovative per la realizzazione di progetti altamente specializzati.",
   },
   {
     labelTab: "I nostri valori",
-    valueTab: "2",
-    wrappedTab: false,
-    contentTabPanel: "Al centro del modello Beije c’è una vision people first : le persone al centro per la creazione di un’azienda di valore. Da un ideale ad un business: da più di 10 anni ci impegniamo costantemente per aggiornare il nostro know-how e siamo in grado di fornire le metodologie più moderne e le tecnologie più innovative per la realizzazione di progetti altamente specializzati.",
-    valueTabPanel: "2"
+    contentPanel: "T2 al centro del modello Beije c’è una vision people first : le persone al centro per la creazione di un’azienda di valore. Da un ideale ad un business: da più di 10 anni ci impegniamo costantemente per aggiornare il nostro know-how e siamo in grado di fornire le metodologie più moderne e le tecnologie più innovative per la realizzazione di progetti altamente specializzati.",
   },
   {
     labelTab: "La nostra missione",
-    valueTab: "3",
-    wrappedTab: false,
-    contentTabPanel: "Al centro del modello Beije c’è una vision people first : le persone al centro per la creazione di un’azienda di valore. Da un ideale ad un business: da più di 10 anni ci impegniamo costantemente per aggiornare il nostro know-how e siamo in grado di fornire le metodologie più moderne e le tecnologie più innovative per la realizzazione di progetti altamente specializzati.",
-    valueTabPanel: "3"
+    contentPanel: "T3 al centro del modello Beije c’è una vision people first : le persone al centro per la creazione di un’azienda di valore. Da un ideale ad un business: da più di 10 anni ci impegniamo costantemente per aggiornare il nostro know-how e siamo in grado di fornire le metodologie più moderne e le tecnologie più innovative per la realizzazione di progetti altamente specializzati.",
   },
   {
     labelTab: "La nostra visione",
-    valueTab: "4",
-    wrappedTab: false,
-    contentTabPanel: "Al centro del modello Beije c’è una vision people first : le persone al centro per la creazione di un’azienda di valore. Da un ideale ad un business: da più di 10 anni ci impegniamo costantemente per aggiornare il nostro know-how e siamo in grado di fornire le metodologie più moderne e le tecnologie più innovative per la realizzazione di progetti altamente specializzati.",
-    valueTabPanel: "4"
+    contentPanel: "T4 al centro del modello Beije c’è una vision people first : le persone al centro per la creazione di un’azienda di valore. Da un ideale ad un business: da più di 10 anni ci impegniamo costantemente per aggiornare il nostro know-how e siamo in grado di fornire le metodologie più moderne e le tecnologie più innovative per la realizzazione di progetti altamente specializzati.",
   }
 ]

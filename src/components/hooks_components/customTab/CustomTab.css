@@ -1,47 +1,39 @@
-.tab-tabs-container {
+.tab-container {
+  border: 1px solid yellow;
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  margin-left: 18%;
-  margin-bottom: 45px;
 }
 
-.tab-tabs-container button {
-  color: var(--grey-tone-7);
+.tab-labels-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
   align-items: flex-start;
 }
 
-/* Selected Items */
-.tab-tabs-container .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+.tab-lables {
+  text-transform: uppercase;
+  color: var(--white);
+  padding: 20px;
+}
+
+.tab-lables:active {
   color: var(--white) !important;
 }
 
-/* Line next to the selected item */
-.tab-tabs-container .css-10d9dml-MuiTabs-indicator {
-  background-color: var(--red) !important;
-  left: 0 !important;
+.tab-panels-container {
+  /* Remove */
+  border: 1px solid red;
 }
 
-/* .tab-tabs-container span::selection {
-  background-color: var(--red) !important;
-  left: 0 !important;
-} */
-
-/* Content tabPanel */
-.tab-tabPanel-container {
-  padding: 0 !important;
-  color: var(--white);
-  margin-bottom: 100px;
+.tab-panels {
+  color: var(--white)
 }
 
-/* Media queries */
 @media(min-width: 768px) {
-
-  .tab-tabs-container {
-    margin-left: 0px !important;
-    margin-bottom: 45px;
-    width: 170%;
-  }
-
-  .tab-tabs-container button {
-    color: var(--grey-tone-1);
+  .tab-container {
+    flex-direction: row;
   }
 }

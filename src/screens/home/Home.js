@@ -1,13 +1,14 @@
 import React, { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 
+// Redux
+import { connect } from "react-redux";
+import { setColorHeader, initColorHeader } from "../../redux/ducks/colorHeaderDuck";
+import { setVisibilityNavbar, initVisibilityNavbar } from "../../redux/ducks/showNavbarTopDuck";
+
 // MUI
 import { Container } from "@mui/material";
 import { Box } from "@mui/system";
-
-//import gsap
-import { gsap } from 'gsap'
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 // Style
 import "./Home.css";
@@ -22,33 +23,30 @@ import CustomTab from "../../components/hooks_components/customTab/CustomTab";
 
 const Home = (props) => {
   const { t } = useTranslation();
-  const ref = useRef(null);
-  // gsap.registerPlugin(ScrollTrigger);
+  const refDarkContainer = useRef();
 
-  // useEffect(() => {
-  //   const element = ref.current;
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
 
-  //   const firstSection = element.querySelector('.home-first-section-gsap');
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    }
+  }, [])
 
-  //   const t1 = gsap.timeline({
-  //     scrollTrigger: {
-  //       trigger: firstSection,
-  //       start: '75% 55%', /* 75% define the position of scroller-start, 60% define the position of start */
-  //       toggleActions: "play none none none",
-  //       // markers: true
-  //     }
-  //   })
-
-  //   t1.from(firstSection, {})
-  //   t1.add(callFunction)
-  // }, [])
-
-  // const callFunction = () => {
-  //   console.log("sono dentro la funzione");
-  // }
+  const handleScroll = () => {
+    let elementTop = refDarkContainer.current.offsetTop;
+    if (window.pageYOffset >= elementTop) {
+      props.dispatch(setColorHeader("#262E36"));
+      props.dispatch(setVisibilityNavbar(true));
+    }
+    else {
+      props.dispatch(initColorHeader());
+      props.dispatch(initVisibilityNavbar());
+    }
+  }
 
   return (
-    <Box ref={ref}>
+    <Box>
       {/* First section with title */}
       <Container
         component={"section"}
@@ -82,7 +80,11 @@ const Home = (props) => {
       </Container>
 
       {/* Box with dark bg for next sections */}
-      <Box className={"bg-dark-grey position-relative clip-path-default"}>
+      <Box
+        ref={refDarkContainer}
+        className={"bg-dark-grey position-relative clip-path-default"}
+        style={{ height: "1000px" }}
+      >
 
         <p className={"home-written-bg"}>People first</p>
 
@@ -94,7 +96,7 @@ const Home = (props) => {
         >
           <Box className={"home-third-section-tab-container d-flex"}>
             <CustomTab
-              objTab={tab_aboutUs}
+              obj={tab_aboutUs}
             />
           </Box>
         </Container>
@@ -112,5 +114,4 @@ const Home = (props) => {
   );
 }
 
-// https://beije.s3.eu-west-1.amazonaws.com/video_home.mp4
-export default Home;
+export default connect()(Home);
