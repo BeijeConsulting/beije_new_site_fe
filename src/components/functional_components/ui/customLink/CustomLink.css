@@ -1,0 +1,28 @@
+.link-default {
+  color: var(--white) !important;
+  text-transform: uppercase;
+  font-family: var(--moderat-bold);
+  position: relative;
+  text-decoration: none;
+}
+
+.link-default::before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background-color: var(--red);
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Hover */
+@media (hover: hover) and (pointer: fine) {
+  .link-default:hover::before {
+    left: 0;
+    right: auto;
+    width: 100%;
+    background-color: var(--white);
+  }
+}
