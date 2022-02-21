@@ -248,7 +248,7 @@ h3, h4, h5, h6 {
   padding-right: 11.2% !important;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .paddingX-container-default {
     padding-left: 21.8% !important;
     padding-right: 21.2% !important;
@@ -256,18 +256,27 @@ h3, h4, h5, h6 {
 }
 
 /* CLIP-PATH */
-.clip-path-default {
+.top-oblique-line {
+  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
+}
+
+.bottom-oblique-line {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
 }
 
 @media (min-width: 768px) {
-  .clip-path-default {
+
+  .bottom-oblique-line {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
   }
 }
 
 @media (min-width: 1600px) {
-  .clip-path-default {
+  .top-oblique-line {
+    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
+  }
+
+  .bottom-oblique-line {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
   }
 }
