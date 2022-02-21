@@ -265,9 +265,6 @@ h3, h4, h5, h6 {
 }
 
 @media (min-width: 768px) {
-  .top-oblique-line {
-    clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
-  }
 
   .bottom-oblique-line {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
@@ -276,7 +273,7 @@ h3, h4, h5, h6 {
 
 @media (min-width: 1600px) {
   .top-oblique-line {
-    clip-path: polygon(0 0, 100% 30%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
   }
 
   .bottom-oblique-line {

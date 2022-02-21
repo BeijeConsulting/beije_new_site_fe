@@ -40,14 +40,19 @@ const CustomTab = (props) => {
 
   const printLabels = (item, key) => {
     return (
-      <CustomButton
+      <Box
         key={key}
-        content={item.labelTab}
-        className={props.classNameLabels}
-        btnTypeContent={props.btnTypeContent}
-        callback={changeContent(key)}
+        className={key === state.value ? props.classNameLabelBoxActive : props.classNameLabelBox}
       >
-      </CustomButton>
+        <CustomButton
+          content={item.labelTab}
+          className={key === state.value ? props.classNameLabelActive : props.classNameLabels}
+          btnTypeContent={props.btnTypeContent}
+          callback={changeContent(key)}
+        >
+        </CustomButton>
+      </Box>
+
     )
   }
 
@@ -80,7 +85,10 @@ const CustomTab = (props) => {
 
 CustomTab.defaultProps = {
   btnTypeContent: "h3",
+  classNameLabelBoxActive: "tab-lables-box tab-lables-box-active",
+  classNameLabelBox: "tab-lables-box",
   classNameLabels: "tab-lables",
+  classNameLabelActive: "tab-lables tab-lables-active",
   typographyPanel: "p",
   classNamePanel: "tab-panels",
   obj: tabObj

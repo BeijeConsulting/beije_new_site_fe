@@ -83,7 +83,6 @@ const Home = (props) => {
       <Box
         ref={refDarkContainer}
         className={"bg-dark-grey position-relative"}
-        style={{ height: "1000px" }}
       >
 
         <p className={"home-written-bg"}>People first</p>
