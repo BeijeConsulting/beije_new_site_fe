@@ -3,6 +3,9 @@ import { combineReducers } from 'redux';
 import languageDuck from "../ducks/Language";
 import loadingDuck from "../ducks/Loading";
 import burgerMenuDuck from '../ducks/burgerMenuDuck';
+import logoDuck from '../ducks/logoDuck';
+import colorHeaderDuck from '../ducks/colorHeaderDuck';
+import showNavbarTopDuck from '../ducks/showNavbarTopDuck';
 
 // const rootReducer = combineReducers({
 
@@ -11,7 +14,10 @@ import burgerMenuDuck from '../ducks/burgerMenuDuck';
 const appReducer = combineReducers({
   languageDuck,
   loadingDuck,
-  burgerMenuDuck
+  burgerMenuDuck,
+  logoDuck,
+  colorHeaderDuck,
+  showNavbarTopDuck
 })
 
 const rootReducer = (state, action) => {

@@ -1,16 +1,14 @@
 import React from 'react';
 
+// Redux
+import { connect } from 'react-redux';
+
 // MUI
 import { Toolbar } from "@mui/material";
 import { Box } from "@mui/system";
 
-
 // Style
 import './CustomHeader.css'
-
-// Constants
-import { logo_primary_light } from '../../../utils/properties';
-import { logo_secondary } from "../../../utils/properties"
 
 // Components
 import BurgerMenu from '../burgerMenu/BurgerMenu';
@@ -18,9 +16,7 @@ import CustomNavbar from '../customNavbar/CustomNavbar';
 import SwitchLang from '../switchLang/SwitchLang';
 
 
-const CustomHeader = () => {
-
-  const showNavbar = false;
+const CustomHeader = (props) => {
 
   return (
     <Toolbar
@@ -28,9 +24,9 @@ const CustomHeader = () => {
       maxWidth={"none"}
       className={"header-container bg-transparent"}
     >
-      <img src={logo_primary_light} alt="Logo Beije People First" className="header-container-logo" />
+      <img src={props.logoDuck.logo} alt="Logo Beije People First" className="header-container-logo" />
 
-      {showNavbar &&
+      {props.showNavbarTopDuck.showNavbar &&
         <Box className={"header-navbar-container"}>
           <CustomNavbar />
         </Box>
@@ -46,4 +42,11 @@ const CustomHeader = () => {
   );
 }
 
-export default CustomHeader;
+const mapStateToProps = state => (
+  {
+    logoDuck: state.logoDuck,
+    showNavbarTopDuck: state.showNavbarTopDuck
+  }
+)
+
+export default connect(mapStateToProps)(CustomHeader);

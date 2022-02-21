@@ -1,7 +1,7 @@
 import React from "react";
 
 // MUI
-import { Button } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 
 // Style
 import "./CustomButton.css";
@@ -25,7 +25,11 @@ const CustomButton = (props) => {
       endIcon={props.endIcon}
       className={props.className}
     >
-      {props.content}
+      <Typography
+        component={props.btnTypeContent}
+      >
+        {props.content}
+      </Typography>
     </Button>
   )
 }
@@ -34,7 +38,8 @@ CustomButton.defaultProps = {
   variant: "text",
   disabled: false,
   colorBtn: "inherit",
-  size: "small"
+  size: "small",
+  btnTypeContent: "p"
 }
 
 export default CustomButton
