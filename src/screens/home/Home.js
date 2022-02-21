@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+import { truncate } from "lodash";
 
 // Redux
 import { connect } from "react-redux";
@@ -20,6 +22,7 @@ import { tab_aboutUs } from "../../utils/properties"
 import CustomNavbar from "../../components/hooks_components/customNavbar/CustomNavbar";
 import ScrollDownButton from "../../components/functional_components/scrollDownButton/ScrollDownButton";
 import CustomTab from "../../components/hooks_components/customTab/CustomTab";
+import CustomLink from "../../components/functional_components/ui/customLink/CustomLink";
 
 const Home = (props) => {
   const { t } = useTranslation();
@@ -110,6 +113,29 @@ const Home = (props) => {
             <p><strong>Le persone</strong></p>
             <p><strong>Al centro</strong></p>
             <p><strong>Del nostro futuro</strong></p>
+          </Box>
+        </Container>
+
+        {/* Fifth section desktop */}
+        <Container
+          component={"section"}
+          maxWidth={"false"}
+          className={"home-fifth-section-container paddingX-container-default"}
+        >
+          <Box className={"home-fifth-section-first-box"}>
+            <h2>Chi siamo</h2>
+          </Box>
+          <Box className={"home-fifth-section-second-box"}>
+            <p>
+              {truncate("Investiamo ogni giorno nelle persone per garantire un miglioramento costante dei nostri servizi. Siamo una community di professionisti informatici, ricercatori di nuovi talenti e marketers con un obiettivo: le persone al centro del nostro futuro. Ci impegniamo per progettare ed offrire soluzioni che danno vita a nuove realtà, e formiamo gli sviluppatori del domani. È la condivisione di uno scopo comune, è un approccio “out of the box”, è il rapporto con il cliente, è un sistema People First. Ti aspettiamo, segui il cambiamento.", {
+                'length': 396,
+                'separator': '...'
+              })}
+            </p>
+            <CustomLink
+              linkTo=""
+              content="Read more"
+            />
           </Box>
         </Container>
       </Box>
