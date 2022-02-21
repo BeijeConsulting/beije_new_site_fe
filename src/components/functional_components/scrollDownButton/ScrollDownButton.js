@@ -12,12 +12,13 @@ import { downArrow } from "../../../utils/properties";
 // Components
 import CustomButton from "../ui/customButton/CustomButton";
 
-const ScrollDownButton = () => {
+const ScrollDownButton = (props) => {
   return (
     <CustomButton
       content="Scroll Down"
       endIcon={<FontAwesomeIcon icon={downArrow} />}
       className={"scrollDown-btn"}
+      callback={props.callback}
     />
 
   )

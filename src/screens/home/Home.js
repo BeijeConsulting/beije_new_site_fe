@@ -28,6 +28,7 @@ const Home = (props) => {
   const { t } = useTranslation();
   const refDarkContainer = useRef();
 
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
 
@@ -48,6 +49,15 @@ const Home = (props) => {
     }
   }
 
+  const scrollToSection = () => {
+    let elementTop = refDarkContainer.current.offsetTop;
+    window.scrollTo({
+      top: elementTop,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }
+
   return (
     <Box>
       {/* First section with title */}
@@ -65,7 +75,9 @@ const Home = (props) => {
           />
         </Box>
         <Box className={"home-first-section-scroll-down-container"}>
-          <ScrollDownButton />
+          <ScrollDownButton
+            callback={scrollToSection}
+          />
         </Box>
       </Container>
 
