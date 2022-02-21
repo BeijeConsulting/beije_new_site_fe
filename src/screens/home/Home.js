@@ -138,6 +138,17 @@ const Home = (props) => {
             />
           </Box>
         </Container>
+
+        {/* Sixth section desktop */}
+        <Container
+          component={"section"}
+          maxWidth={"false"}
+          className={"home-sixth-section-container paddingX-container-default top-oblique-line"}
+        >
+
+
+        </Container>
+
       </Box>
     </Box>
   );

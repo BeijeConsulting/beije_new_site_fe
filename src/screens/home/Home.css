@@ -63,7 +63,7 @@
 .home-fourth-section-container {
   padding-top: 30px;
   padding-bottom: 30px;
-  margin-bottom: 100px;
+  margin-bottom: 90px;
 }
 
 .home-fourth-section-container p {
@@ -98,6 +98,14 @@
   margin-bottom: 20px;
   opacity: 60%;
 
+}
+
+/* Sixth section */
+.home-sixth-section-container {
+  background-color: var(--white);
+
+  /* Remove */
+  height: 1000px;
 }
 
 /* Media Queries */
