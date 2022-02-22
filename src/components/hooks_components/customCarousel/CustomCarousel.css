@@ -1,0 +1,87 @@
+:root {
+  --profile_chiara_balsamini: url("../../../assets/images/profile_picture/chiara_balsamini.jpg");
+  --profile_erica_mauro: url("../../../assets/images/profile_picture/erica_mauro.jpg");
+  --profile_francesca_bellini: url("../../../assets/images/profile_picture/francesca_bellini.jpg");
+  --profile_francesca_ferioli: url("../../../assets/images/profile_picture/francesca_ferioli.jpg");
+  --profile_francesco_cesana: url("../../../assets/images/profile_picture/francesco_cesana.jpg");
+  --profile_ivo_mosca: url("../../../assets/images/profile_picture/ivo_mosca.jpg");
+  --profile_maria_rodrigez: url("../../../assets/images/profile_picture/maria_rodrigez.jpg");
+  --profile_marianna_fulginiti: url("../../../assets/images/profile_picture/marianna_fulginiti.jpg");
+  --profile_roberto_brogi: url("../../../assets/images/profile_picture/roberto_brogi.jpg");
+}
+
+.carousel-container, .carousel-ring, .carousel-img {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  user-select: none;
+}
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: transparent;
+  position: relative;
+  /* Remove */
+  height: 500px;
+}
+
+.carousel-container div {
+  position: absolute;
+}
+
+.carousel-ring-container {
+  perspective: 2000px;
+  width: 300px;
+  height: 400px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.carousel-img {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  /* remove */
+  border: 1px solid white
+}
+
+
+/* Bg pictures */
+.carousel-bg-francesco-cesana {
+  background-image: var(--profile_francesco_cesana);
+}
+
+.carousel-bg-erica-mauro {
+  background-image: var(--profile_erica_mauro);
+}
+
+.carousel-bg-chiara-balsamini {
+  background-image: var(--profile_chiara_balsamini);
+}
+
+.carousel-bg-marianna-fulginiti {
+  background-image: var(--profile_marianna_fulginiti);
+}
+
+.carousel-bg-roberto-brogi {
+  background-image: var(--profile_roberto_brogi);
+}
+
+.carousel-bg-ivo-mosca {
+  background-image: var(--profile_ivo_mosca);
+}
+
+.carousel-bg-farcesca-ferioli {
+  background-image: var(--profile_francesca_ferioli);
+}
+
+.carousel-bg-maria-rodrigez {
+  background-image: var(--profile_maria_rodrigez);
+}
+
+.carousel-bg-francesca-bellini {
+  background-image: var(--profile_francesca_bellini);
+}

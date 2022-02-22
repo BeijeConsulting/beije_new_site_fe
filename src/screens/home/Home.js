@@ -23,6 +23,7 @@ import CustomNavbar from "../../components/hooks_components/customNavbar/CustomN
 import ScrollDownButton from "../../components/functional_components/scrollDownButton/ScrollDownButton";
 import CustomTab from "../../components/hooks_components/customTab/CustomTab";
 import CustomLink from "../../components/functional_components/ui/customLink/CustomLink";
+import CustomCarousel from "../../components/hooks_components/customCarousel/CustomCarousel";
 
 const Home = (props) => {
   const { t } = useTranslation();
@@ -157,17 +158,16 @@ const Home = (props) => {
             />
           </Box>
         </Container>
-
+        <Box>
+          <CustomCarousel />
+        </Box>
         {/* Sixth section desktop */}
         <Container
           component={"section"}
           maxWidth={"false"}
-          className={"home-sixth-section-container paddingX-container-default top-oblique-line"}
+          className={"home-sixth-section-container top-oblique-line"}
         >
-
-
         </Container>
-
       </Box>
     </Box>
   );

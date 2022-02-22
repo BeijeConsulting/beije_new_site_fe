@@ -8,6 +8,17 @@ import logo_short_grey from "../assets/images/logos/logo_short_grey.svg";
 import { faFacebookF, faLinkedinIn, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faN, faArrowDownLong } from '@fortawesome/free-solid-svg-icons';
 
+import chiara_balsamini from "../assets/images/profile_picture/chiara_balsamini.jpg";
+import erica_mauro from "../assets/images/profile_picture/erica_mauro.jpg";
+import francesca_bellini from "../assets/images/profile_picture/francesca_bellini.jpg";
+import francesca_ferioli from "../assets/images/profile_picture/francesca_ferioli.jpg";
+import francesco_cesana from "../assets/images/profile_picture/francesco_cesana.jpg";
+import ivo_mosca from "../assets/images/profile_picture/ivo_mosca.jpg";
+import maria_rodrigez from "../assets/images/profile_picture/maria_rodrigez.jpg";
+import marianna_fulginiti from "../assets/images/profile_picture/marianna_fulginiti.jpg";
+import roberto_brogi from "../assets/images/profile_picture/roberto_brogi.jpg";
+
+
 
 // Link
 const linkFb = "https://www.facebook.com/beijepeoplefirst";
@@ -149,19 +160,125 @@ export const social_list = [
 // Tab About Us
 export const tab_aboutUs = [
   {
-    labelTab: "La storia",
-    contentPanel: "T1 al centro del modello Beije c’è una vision people first : le persone al centro per la creazione di un’azienda di valore. Da un ideale ad un business: da più di 10 anni ci impegniamo costantemente per aggiornare il nostro know-how e siamo in grado di fornire le metodologie più moderne e le tecnologie più innovative per la realizzazione di progetti altamente specializzati.",
-  },
-  {
-    labelTab: "I nostri valori",
-    contentPanel: "T2 al centro del modello Beije c’è una vision people first : le persone al centro per la creazione di un’azienda di valore. Da un ideale ad un business: da più di 10 anni ci impegniamo costantemente per aggiornare il nostro know-how e siamo in grado di fornire le metodologie più moderne e le tecnologie più innovative per la realizzazione di progetti altamente specializzati.",
+    labelTab: "La nostra visione",
+    contentPanel: "T4 al centro del modello Beije c’è una vision people first : le persone al centro per la creazione di un’azienda di valore. Da un ideale ad un business: da più di 10 anni ci impegniamo costantemente per aggiornare il nostro know-how e siamo in grado di fornire le metodologie più moderne e le tecnologie più innovative per la realizzazione di progetti altamente specializzati.",
   },
   {
     labelTab: "La nostra missione",
     contentPanel: "T3 al centro del modello Beije c’è una vision people first : le persone al centro per la creazione di un’azienda di valore. Da un ideale ad un business: da più di 10 anni ci impegniamo costantemente per aggiornare il nostro know-how e siamo in grado di fornire le metodologie più moderne e le tecnologie più innovative per la realizzazione di progetti altamente specializzati.",
   },
   {
-    labelTab: "La nostra visione",
-    contentPanel: "T4 al centro del modello Beije c’è una vision people first : le persone al centro per la creazione di un’azienda di valore. Da un ideale ad un business: da più di 10 anni ci impegniamo costantemente per aggiornare il nostro know-how e siamo in grado di fornire le metodologie più moderne e le tecnologie più innovative per la realizzazione di progetti altamente specializzati.",
+    labelTab: "La storia",
+    contentPanel: "T1 al centro del modello Beije c’è una vision people first : le persone al centro per la creazione di un’azienda di valore. Da un ideale ad un business: da più di 10 anni ci impegniamo costantemente per aggiornare il nostro know-how e siamo in grado di fornire le metodologie più moderne e le tecnologie più innovative per la realizzazione di progetti altamente specializzati.",
+  },
+  {
+    labelTab: "I nostri valori",
+    contentPanel: "T2 al centro del modello Beije c’è una vision people first : le persone al centro per la creazione di un’azienda di valore. Da un ideale ad un business: da più di 10 anni ci impegniamo costantemente per aggiornare il nostro know-how e siamo in grado di fornire le metodologie più moderne e le tecnologie più innovative per la realizzazione di progetti altamente specializzati.",
   }
+]
+
+// Profile picture carousel
+export const carouselProfile = [
+  {
+    id: 1,
+    name: 'Francesco',
+    surname: 'Cesana',
+    role: 'General Manager',
+    description: "long descriprion",
+    alt: 'FrancescoCesana',
+    pictureClassName: "carousel-bg-francesco-cesana",
+    picture: francesco_cesana
+  },
+  {
+    id: 2,
+    name: 'Erica',
+    surname: 'Mauro',
+    role: 'Sales manager',
+    description: "long descriprion",
+    alt: 'EricaMauro',
+    pictureClassName: "carousel-bg-erica-mauro",
+    picture: erica_mauro
+  },
+  {
+    id: 3,
+    name: 'Chiara',
+    surname: 'Balsamini',
+    role: 'Talent Consultant',
+    description: "long descriprion",
+    alt: 'ChiaraBalsamini',
+    pictureClassName: "carousel-bg-chiara-balsamini",
+    picture: chiara_balsamini
+  },
+  {
+    id: 4,
+    name: 'Marianna',
+    surname: 'Fulginiti',
+    role: 'Account Manager',
+    description: 'long descriprion',
+    alt: 'MariannaFulginiti',
+    pictureClassName: "carousel-bg-marianna-fulginiti",
+    picture: marianna_fulginiti
+  },
+  {
+    id: 5,
+    name: 'Roberto',
+    surname: 'Brogi',
+    role: 'CTO & Master Trainer',
+    description: 'long descriprion',
+    alt: 'RobertoBrogi',
+    pictureClassName: "carousel-bg-roberto-brogi",
+    picture: roberto_brogi
+  },
+  {
+    id: 6,
+    name: 'Ivo',
+    surname: 'Mosca',
+    role: 'CIO & Master Trainer',
+    description: 'long descriprion',
+    alt: 'IvoMosca',
+    pictureClassName: "carousel-bg-ivo-mosca",
+    picture: ivo_mosca
+  },
+  {
+    id: 7,
+    name: 'Francesca',
+    surname: 'Ferioli',
+    role: 'HR specialist',
+    description: 'long descriprion',
+    alt: 'FrancescaFerioli',
+    pictureClassName: "carousel-bg-farcesca-ferioli",
+    picture: francesca_ferioli
+  },
+  {
+    id: 8,
+    name: 'Maria',
+    surname: 'Amigo Rodrigez',
+    role: 'Junior IT Recruiter',
+    description: 'long descriprion',
+    alt: 'MariaAmigoRodrigez',
+    pictureClassName: "carousel-bg-maria-rodrigez",
+    picture: maria_rodrigez
+  },
+  {
+    id: 9,
+    name: 'Francesca',
+    surname: 'Bellini',
+    role: 'Marketing specialist',
+    description: 'long descriprion',
+    alt: 'FrancescaBellini',
+    pictureClassName: "carousel-bg-francesca-bellini",
+    picture: francesca_bellini
+  }
+]
+
+export const list_images = [
+  chiara_balsamini,
+  erica_mauro,
+  francesca_bellini,
+  francesca_ferioli,
+  francesco_cesana,
+  ivo_mosca,
+  maria_rodrigez,
+  marianna_fulginiti,
+  roberto_brogi
 ]
