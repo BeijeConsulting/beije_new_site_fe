@@ -16,7 +16,7 @@ import { Box } from "@mui/system";
 import "./Home.css";
 
 // Constants
-import { tab_aboutUs } from "../../utils/properties"
+import { tab_aboutUs, logo_secondary_grey } from "../../utils/properties"
 
 // Components
 import CustomNavbar from "../../components/hooks_components/customNavbar/CustomNavbar";
@@ -99,8 +99,15 @@ const Home = (props) => {
         ref={refDarkContainer}
         className={"bg-dark-grey position-relative"}
       >
+        <img
+          src={logo_secondary_grey}
+          alt="logo sullo sfondo"
+          className="home-logo-bg" />
 
-        <p className={"home-written-bg"}>People first</p>
+        <p
+          className={"home-written-bg"}
+        >People first
+        </p>
 
         {/* Third section */}
         <Container

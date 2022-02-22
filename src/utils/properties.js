@@ -4,6 +4,7 @@ import 'moment/locale/it';
 // Assets
 import logo_official_white from "../assets/images/logos/logo_official_white.svg";
 import logo_short_white from "../assets/images/logos/logo_short_white.svg";
+import logo_short_grey from "../assets/images/logos/logo_short_grey.svg";
 import { faFacebookF, faLinkedinIn, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faN, faArrowDownLong } from '@fortawesome/free-solid-svg-icons';
 
@@ -62,6 +63,7 @@ export const googleAnalyticsKey = "UA-215782182-1";
 
 export const logo_primary_light = logo_official_white;
 export const logo_secondary_light = logo_short_white;
+export const logo_secondary_grey = logo_short_grey;
 
 export const defaultIcon = faN;
 export const downArrow = faArrowDownLong;
