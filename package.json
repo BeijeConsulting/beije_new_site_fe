@@ -34,6 +34,7 @@
     "react-scroll-trigger": "^0.6.13",
     "redux": "^4.1.2",
     "styled-components": "^5.3.3",
+    "swiper": "^8.0.6",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

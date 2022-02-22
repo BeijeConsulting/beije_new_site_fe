@@ -36,6 +36,10 @@
 }
 
 /* Third section*/
+.home-logo-bg {
+  display: none;
+}
+
 .home-written-bg {
   text-transform: uppercase;
   font-family: var(--moderat-bold);
@@ -133,6 +137,7 @@
   }
 
   .home-logo-bg {
+    display: block;
     position: absolute;
     top: 100px;
     right: 8.2%;

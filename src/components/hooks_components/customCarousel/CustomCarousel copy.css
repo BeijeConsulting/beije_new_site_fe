@@ -10,24 +10,42 @@
   --profile_roberto_brogi: url("../../../assets/images/profile_picture/roberto_brogi.jpg");
 }
 
-.swiper-container {
+.carousel-container, .carousel-ring, .carousel-img {
   width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
-
-  /* Remove */
-  border: 1px solid white;
+  height: 100%;
+  transform-style: preserve-3d;
+  user-select: none;
 }
 
-.swiper-slide {
-  background-image: url(https://source.unsplash.com/random);
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: transparent;
+  position: relative;
+  /* Remove */
+  height: 500px;
+}
+
+.carousel-container div {
+  position: absolute;
+}
+
+.carousel-ring-container {
+  perspective: 2000px;
+  width: 300px;
+  height: 400px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.carousel-img {
   background-position: center;
   background-size: cover;
-  width: 300px;
-  height: 500px;
+  background-repeat: no-repeat;
 
-  /* Remove */
-  border: 1px solid yellow;
+  /* remove */
+  border: 1px solid white
 }
 
 

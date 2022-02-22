@@ -24,6 +24,7 @@ import ScrollDownButton from "../../components/functional_components/scrollDownB
 import CustomTab from "../../components/hooks_components/customTab/CustomTab";
 import CustomLink from "../../components/functional_components/ui/customLink/CustomLink";
 import CustomCarousel from "../../components/hooks_components/customCarousel/CustomCarousel";
+import CustomForm from "../../components/hooks_components/customForm/CustomForm";
 
 const Home = (props) => {
   const { t } = useTranslation();
@@ -158,15 +159,16 @@ const Home = (props) => {
             />
           </Box>
         </Container>
-        <Box>
-          <CustomCarousel />
-        </Box>
+
+        <CustomCarousel />
+
         {/* Sixth section desktop */}
         <Container
           component={"section"}
           maxWidth={"false"}
           className={"home-sixth-section-container top-oblique-line"}
         >
+          <CustomForm />
         </Container>
       </Box>
     </Box>

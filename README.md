@@ -15,3 +15,5 @@ Library:
   fontAwsome icons - https://fontawesome.com/v5/docs/web/use-with/react
   react-scroll-trigger - https://www.npmjs.com/package/react-scroll-trigger
   gsap - https://www.npmjs.com/package/gsap
+  swiper - https://swiperjs.com/react
+  
