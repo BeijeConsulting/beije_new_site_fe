@@ -10,24 +10,36 @@
   --profile_roberto_brogi: url("../../../assets/images/profile_picture/roberto_brogi.jpg");
 }
 
+.swiper {
+  padding: 50px 0px;
+}
+
 .swiper-container {
   width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
-
-  /* Remove */
-  border: 1px solid white;
 }
 
 .swiper-slide {
   background-image: url(https://source.unsplash.com/random);
   background-position: center;
   background-size: cover;
-  width: 300px;
-  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
 
-  /* Remove */
-  border: 1px solid yellow;
+.swiper-slide p {
+  color: var(--white);
+  padding-left: 30px;
+}
+
+.swiper-slide p:nth-child(1) {
+  text-transform: uppercase;
+}
+
+.swiper-slide p:nth-child(2) {
+  padding-bottom: 30px;
 }
 
 

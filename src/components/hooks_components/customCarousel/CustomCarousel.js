@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 // Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -17,79 +17,93 @@ import { carouselProfile } from "../../../utils/properties"
 
 const CustomCarousel = (props) => {
 
-  // const swiper = new Swiper('.swiper-container', {
-  //   effect: 'coverflow',
-  //   centeredSlides: true,
-  //   slidesPerView: 1,
-  //   loop: true,
-  //   speed: 600,
+  const slideRef = useRef();
 
-  //   autoplay: {
-  //     delay: 3000,
-  //   },
+  const [state, setState] = useState({
+    widthSlide: null
+  })
 
-  //   coverflowEffect: {
-  //     rotate: 50,
-  //     stretch: 0,
-  //     depth: 100,
-  //     modifier: 1,
-  //     slideShadows: true,
-  //   },
-
-  //   breakpoints: {
-  //     320: {
-  //       slidesPerView: 2,
-  //     },
-  //     560: {
-  //       slidesPerView: 3,
-  //     },
-  //     990: {
-  //       slidesPerView: 3,
-  //     }
-  //   },
-
-  //   pagination: {
-  //     el: '.swiper-pagination',
-  //     clickable: true,
-  //   },
-
-  //   navigation: {
-  //     nextEl: '.swiper-button-next',
-  //     prevEl: '.swiper-button-prev',
-  //   },
-  // });
+  useEffect(() => {
+    let widthSlide = slideRef.current.clientWidth
+    setState({
+      ...state,
+      widthSlide: widthSlide
+    })
+  }, [])
 
   const printSwiperSlides = (item, key) => {
     return (
       <SwiperSlide
         key={key}
         className={item.pictureClassName}
+        ref={slideRef}
+        style={{ height: state.widthSlide }}
       >
-        Slide 1
+        <p>{item.name} {item.surname}</p>
+        <p>_{item.role}</p>
       </SwiperSlide>
     )
   }
 
   return (
+    // <Swiper
+    //   navigation
+    //   loop={true}
+    //   pagination={{ clickable: true }}
+    //   effect="coverflow"
+    //   coverflowEffect={{
+    //     rotate: 50,
+    //     stretch: 0,
+    //     depth: 100,
+    //     modifier: 1,
+    //     slideShadows: false
+    //   }}
+    //   slidesPerView={3}
+    //   centeredSlides
+    //   className={'carousel-container'}
+    // >
+    //   {carouselProfile.map(printSwiperSlides)}
+    // </Swiper>
+
     <Swiper
-      navigation
+      effect='coverflow'
+      centeredSlides={true}
+      slidesPerView={1}
       loop={true}
-      pagination={{ clickable: true }}
-      effect="coverflow"
+      speed={600}
+      autoplay={{
+        delay: 3000
+      }}
       coverflowEffect={{
         rotate: 50,
         stretch: 0,
         depth: 100,
         modifier: 1,
-        slideShadows: false
+        slideShadows: true,
       }}
-      slidesPerView={3}
-      centeredSlides
-      className={'carousel-container'}
-    // style={{ height: "500px" }}
+      breakpoints={{
+        320: {
+          slidesPerView: 2,
+        },
+        560: {
+          slidesPerView: 3,
+        },
+        990: {
+          slidesPerView: 3,
+        }
+      }}
+      pagination={{
+        el: '.swiper-pagination',
+        clickable: true
+      }}
+
+      navigation={{
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      }}
     >
       {carouselProfile.map(printSwiperSlides)}
-    </Swiper>
+    </Swiper >
   )
 }
 

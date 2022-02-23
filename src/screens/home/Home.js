@@ -159,14 +159,18 @@ const Home = (props) => {
             />
           </Box>
         </Container>
-
-        <CustomCarousel />
-
+        <Container
+          component={"section"}
+          maxWidth={"false"}
+          className={"home-sixth-section-container"}
+        >
+          <CustomCarousel />
+        </Container>
         {/* Sixth section desktop */}
         <Container
           component={"section"}
           maxWidth={"false"}
-          className={"home-sixth-section-container top-oblique-line"}
+          className={"home-seventh-section-container top-oblique-line"}
         >
           <CustomForm />
         </Container>
