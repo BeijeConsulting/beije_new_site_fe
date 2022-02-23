@@ -1,0 +1,13 @@
+.button-form-primary {
+  background-color: var(--dark-grey) !important;
+  text-transform: uppercase;
+  color: var(--white) !important;
+  padding: 12px 40px !important;
+  border-radius: 0% !important;
+}
+
+@media(min-width: 1024px) {
+  .button-form-primary {
+    padding: 15px 50px !important;
+  }
+}

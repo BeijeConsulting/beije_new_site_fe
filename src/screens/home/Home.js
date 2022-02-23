@@ -141,41 +141,55 @@ const Home = (props) => {
         <Container
           component={"section"}
           maxWidth={"false"}
-          className={"home-fifth-section-container paddingX-container-default"}
+          className={"position-relative"}
         >
-          <Box className={"home-fifth-section-first-box"}>
-            <h2>Chi siamo</h2>
-          </Box>
-          <Box className={"home-fifth-section-second-box"}>
-            <p>
-              {truncate("Investiamo ogni giorno nelle persone per garantire un miglioramento costante dei nostri servizi. Siamo una community di professionisti informatici, ricercatori di nuovi talenti e marketers con un obiettivo: le persone al centro del nostro futuro. Ci impegniamo per progettare ed offrire soluzioni che danno vita a nuove realtà, e formiamo gli sviluppatori del domani. È la condivisione di uno scopo comune, è un approccio “out of the box”, è il rapporto con il cliente, è un sistema People First. Ti aspettiamo, segui il cambiamento.", {
-                'length': 396,
-                'separator': '...'
-              })}
-            </p>
-            <CustomLink
-              linkTo=""
-              content="Read more"
-            />
-          </Box>
+          <Container
+            component={"section"}
+            maxWidth={"false"}
+            className={"home-fifth-section-container paddingX-container-default"}
+          >
+            <Box className={"home-fifth-section-first-box "}>
+              <h2>Chi siamo</h2>
+            </Box>
+            <Box className={"home-fifth-section-second-box"}>
+              <p>
+                {truncate("Investiamo ogni giorno nelle persone per garantire un miglioramento costante dei nostri servizi. Siamo una community di professionisti informatici, ricercatori di nuovi talenti e marketers con un obiettivo: le persone al centro del nostro futuro. Ci impegniamo per progettare ed offrire soluzioni che danno vita a nuove realtà, e formiamo gli sviluppatori del domani. È la condivisione di uno scopo comune, è un approccio “out of the box”, è il rapporto con il cliente, è un sistema People First. Ti aspettiamo, segui il cambiamento.", {
+                  'length': 396,
+                  'separator': '...'
+                })}
+              </p>
+              <CustomLink
+                linkTo=""
+                content="Read more"
+              />
+            </Box>
+          </Container>
+
+          <Container
+            component={"section"}
+            maxWidth={"false"}
+            className={"home-sixth-section-container"}
+          >
+            <CustomCarousel />
+          </Container>
         </Container>
-        <Container
-          component={"section"}
-          maxWidth={"false"}
-          className={"home-sixth-section-container"}
-        >
-          <CustomCarousel />
-        </Container>
+
+
+
         {/* Sixth section desktop */}
         <Container
           component={"section"}
           maxWidth={"false"}
-          className={"home-seventh-section-container top-oblique-line"}
+          className={"home-seventh-section-container paddingX-container-default top-oblique-line"}
         >
-          <CustomForm />
+          <Box
+            className={"home-seventh-section-box-form"}
+          >
+            <CustomForm />
+          </Box>
         </Container>
       </Box>
-    </Box>
+    </Box >
   );
 }
 

@@ -106,15 +106,20 @@
 /* Sixth section */
 .home-sixth-section-container {
   position: absolute;
-  bottom: 860px;
+  bottom: -190px;
+  left: 0px;
 }
 
 /* Seventh section */
 .home-seventh-section-container {
   background-color: var(--white);
-
   /* Remove */
-  height: 1000px;
+  border: 1px solid red;
+  height: 2000px;
+}
+
+.home-seventh-section-box-form {
+  margin-top: 150px;
 }
 
 /* Media Queries */
@@ -122,8 +127,14 @@
   .home-first-section-navbar-container {
     margin-top: calc(100vh - 125vh);
   }
-
 }
+
+@media(min-width: 400px) {
+  .home-sixth-section-container {
+    bottom: -210px;
+  }
+}
+
 
 @media(min-width: 768px) {
 
@@ -195,7 +206,11 @@
   }
 
   .home-sixth-section-container {
-    bottom: 770px;
+    bottom: -270px;
+  }
+
+  .home-seventh-section-box-form {
+    margin-top: 300px;
   }
 
 }
@@ -214,8 +229,8 @@
     right: 7.8%;
   }
 
-  .home-fifth-section-container {
-    margin-bottom: 150px;
+  .home-sixth-section-container {
+    bottom: -350px;
   }
 }
 
@@ -255,12 +270,12 @@
     font-size: 4.25rem;
   }
 
-  .home-fifth-section-container {
-    margin-bottom: 200px;
+  .home-sixth-section-container {
+    bottom: -435px;
   }
 
-  .home-sixth-section-container {
-    bottom: 700px;
+  .home-seventh-section-box-form {
+    margin-top: 400px;
   }
 }
 
@@ -302,10 +317,14 @@
   }
 
   .home-fifth-section-container {
-    margin-bottom: 300px;
+    margin-bottom: 150px;
   }
 
   .home-sixth-section-container {
-    bottom: 570px;
+    bottom: -680px;
+  }
+
+  .home-seventh-section-box-form {
+    margin-top: 570px;
   }
 }

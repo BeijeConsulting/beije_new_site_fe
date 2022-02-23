@@ -12,6 +12,19 @@ const CustomButton = (props) => {
     props.callback();
   }
 
+  const switchClassName = () => {
+    let currentClassName = null;
+    switch (props.type) {
+      case "btn-form-primary":
+        currentClassName = "button-form-primary"
+        break;
+      default:
+        currentClassName = ""
+        break;
+    }
+    return currentClassName;
+  }
+
   return (
     <Button
       variant={props.variant}
@@ -23,7 +36,7 @@ const CustomButton = (props) => {
       size={props.size}
       startIcon={props.startIcon}
       endIcon={props.endIcon}
-      className={props.className}
+      className={switchClassName()}
     >
       <Typography
         component={props.btnTypeContent}
