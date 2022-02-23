@@ -36,7 +36,7 @@ const CustomButton = (props) => {
       size={props.size}
       startIcon={props.startIcon}
       endIcon={props.endIcon}
-      className={switchClassName()}
+      className={props.className === undefined ? switchClassName() : props.className}
     >
       <Typography
         component={props.btnTypeContent}

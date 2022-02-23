@@ -30,6 +30,7 @@ const CustomForm = (props) => {
         item
         xs={0}
         md={4}
+        className={props.classNameInfoColumn}
       >
         <Box
           className={props.classNameInfoContainer}
@@ -126,7 +127,11 @@ const CustomForm = (props) => {
               item
               xs={12}
             >
-              <FormControlLabel control={<Checkbox />} label="Ho letto e accetto il trattamento dei miei dati personali" />
+              <FormControlLabel
+                control={<Checkbox />}
+                label="Ho letto e accetto il trattamento dei miei dati personali"
+                className={"form-field"}
+              />
             </Grid>
 
             <Grid
@@ -149,6 +154,7 @@ const CustomForm = (props) => {
 CustomForm.defaultProps = {
   classNameContainer: "form-container",
   classNameTitleContainer: "form-title-container",
+  classNameInfoColumn: "form-info-container-column",
   classNameInfoContainer: "form-info-container"
 }
 

@@ -113,9 +113,8 @@
 /* Seventh section */
 .home-seventh-section-container {
   background-color: var(--white);
-  /* Remove */
-  border: 1px solid red;
-  height: 2000px;
+  padding-bottom: 80px;
+  padding-top: 50px;
 }
 
 .home-seventh-section-box-form {

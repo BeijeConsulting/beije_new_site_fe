@@ -7,12 +7,8 @@
   color: var(--dark-blue);
 }
 
-.form-info-container p:nth-child(1), .form-info-container p:nth-child(4) {
-  font-family: var(--moderat-bold);
-}
-
-.form-info-container p:nth-child(3) {
-  margin-bottom: 20px;
+.form-info-container-column {
+  display: none;
 }
 
 .form-field {
@@ -54,6 +50,20 @@
 }
 
 /* Media queries */
+@media(min-width: 900px) {
+  .form-info-container-column {
+    display: block;
+  }
+
+  .form-info-container p:nth-child(1), .form-info-container p:nth-child(4) {
+    font-family: var(--moderat-bold);
+  }
+
+  .form-info-container p:nth-child(3) {
+    margin-bottom: 20px;
+  }
+}
+
 @media(min-width: 1024px) {
   .form-text-area {
     height: 300px !important;
