@@ -31,7 +31,7 @@
 
 .swiper-slide p {
   color: var(--white);
-  padding-left: 30px;
+  padding-left: 10px;
 }
 
 .swiper-slide p:nth-child(1) {
@@ -39,7 +39,7 @@
 }
 
 .swiper-slide p:nth-child(2) {
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 }
 
 
@@ -78,4 +78,20 @@
 
 .carousel-bg-francesca-bellini {
   background-image: var(--profile_francesca_bellini);
+}
+
+@media(max-width: 600px) {
+  .swiper-slide p {
+    font-size: 0.7rem;
+  }
+}
+
+@media(min-width: 1024px) {
+  .swiper-slide p {
+    padding-left: 30px;
+  }
+
+  .swiper-slide p:nth-child(2) {
+    padding-bottom: 30px;
+  }
 }
