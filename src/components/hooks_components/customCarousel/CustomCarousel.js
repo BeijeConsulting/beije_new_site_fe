@@ -1,7 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 
+// Gsap
+import gsap from "gsap";
+
 // Swiper
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide, useSwiper, useSwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Pagination, EffectCoverflow } from "swiper";
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -18,18 +21,34 @@ import { carouselProfile } from "../../../utils/properties"
 const CustomCarousel = (props) => {
 
   const slideRef = useRef();
+  const usingSwiperSlide = useSwiperSlide();
+  const usingSwiper = useSwiper()
 
   const [state, setState] = useState({
-    widthSlide: null
+    windowWidth: window.innerWidth,
+    windowHeight: window.innerHeight,
+    startMoving: false
   })
 
   useEffect(() => {
-    let widthSlide = slideRef.current.clientWidth
+    window.addEventListener("resize", updateDimension);
+
+    return () => {
+      window.removeEventListener("resize", updateDimension);
+    }
+  }, [])
+
+  const updateDimension = () => {
+    console.log("Entro in updateDimension");
+    let windowWidth = window.innerWidth;
+    let windowHeight = window.innerHeight;
+
     setState({
       ...state,
-      widthSlide: widthSlide
+      windowWidth: windowWidth,
+      windowHeight: windowHeight
     })
-  }, [])
+  }
 
   const printSwiperSlides = (item, key) => {
     return (
@@ -37,7 +56,7 @@ const CustomCarousel = (props) => {
         key={key}
         className={item.pictureClassName}
         ref={slideRef}
-        style={{ height: state.widthSlide }}
+        onMouseMove={tiltEffect()}
       >
         <p>{item.name} {item.surname}</p>
         <p>_{item.role}</p>
@@ -45,26 +64,20 @@ const CustomCarousel = (props) => {
     )
   }
 
-  return (
-    // <Swiper
-    //   navigation
-    //   loop={true}
-    //   pagination={{ clickable: true }}
-    //   effect="coverflow"
-    //   coverflowEffect={{
-    //     rotate: 50,
-    //     stretch: 0,
-    //     depth: 100,
-    //     modifier: 1,
-    //     slideShadows: false
-    //   }}
-    //   slidesPerView={3}
-    //   centeredSlides
-    //   className={'carousel-container'}
-    // >
-    //   {carouselProfile.map(printSwiperSlides)}
-    // </Swiper>
+  const tiltEffect = () => (e) => {
+    let windowWidth = state.windowWidth;
+    let windowHeight = state.windowHeight;
 
+    let positionX = (e.clientX / windowWidth) - 0.55;
+    let positionY = (e.clientY / windowHeight) - 0.55;
+    gsap.to(".swiper-slide-active", {
+      rotateY: positionX * 50,
+      rotateX: -positionY * 50,
+      ease: "none"
+    })
+  }
+
+  return (
     <Swiper
       effect='coverflow'
       centeredSlides={true}
