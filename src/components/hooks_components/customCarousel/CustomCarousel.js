@@ -94,9 +94,7 @@ const CustomCarousel = (props) => {
       slidesPerView={1}
       loop={true}
       speed={600}
-      autoplay={{
-        delay: 3000
-      }}
+      autoplay
       coverflowEffect={{
         rotate: 50,
         stretch: 0,
@@ -115,15 +113,17 @@ const CustomCarousel = (props) => {
           slidesPerView: 3,
         }
       }}
-      pagination={{
-        el: '.swiper-pagination',
-        clickable: true
-      }}
+      pagination
+      // pagination={{
+      //   el: '.swiper-pagination',
+      //   clickable: true
+      // }}
+      navigation
 
-      navigation={{
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
-      }}
+    // navigation={{
+    //   nextEl: '.swiper-button-next',
+    //   prevEl: '.swiper-button-prev'
+    // }}
     >
       {carouselProfile.map(printSwiperSlides)}
     </Swiper >
