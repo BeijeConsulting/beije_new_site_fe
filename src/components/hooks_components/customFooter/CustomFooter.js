@@ -19,63 +19,6 @@ const CustomFooter = () => {
     <Box
       className="footer-section"
     >
-      {/* <Grid
-        container
-        spacing={5}
-        className="footer-section-grid-container"
-      >
-        <Grid item xs={12} sm={4}>
-          <Box>
-            <SwitchLang />
-          </Box>
-          <Box>
-            <Link href={"/"}>
-              Support
-            </Link >
-          </Box>
-          <Box>
-            <Link href={"/"}>
-              Privicy
-            </Link >
-          </Box>
-        </Grid>
-
-        <Grid item xs={12} sm={4}>
-          <Box>
-            <Link href={"/"}>
-              Contact
-            </Link >
-          </Box>
-          <Box>
-            <Link href={"/"}>
-              Support
-            </Link >
-          </Box>
-          <Box>
-            <Link href={"/"}>
-              Privicy
-            </Link >
-          </Box>
-        </Grid>
-
-        <Grid item xs={12} sm={4}>
-          <Box>
-            <SwitchLang />
-          </Box>
-          <Box>
-            <Link href={"/"}>
-              Support
-            </Link >
-          </Box>
-          <Box>
-            <Link href={"/"}>
-              Privicy
-            </Link >
-          </Box>
-        </Grid>
-
-      </Grid> */}
-
       {/* First Row - lang and logo */}
       <div
         className={"footer-logo-lang d-flex footer-padding-elements"}
@@ -87,7 +30,6 @@ const CustomFooter = () => {
           <SwitchLang />
         </div>
       </div>
-
 
       <div
         className={"footer-info-policies d-flex footer-padding-elements"}

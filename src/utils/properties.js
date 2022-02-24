@@ -18,13 +18,13 @@ import maria_rodrigez from "../assets/images/profile_picture/maria_rodrigez.jpg"
 import marianna_fulginiti from "../assets/images/profile_picture/marianna_fulginiti.jpg";
 import roberto_brogi from "../assets/images/profile_picture/roberto_brogi.jpg";
 
-
-
 // Link
 const linkFb = "https://www.facebook.com/beijepeoplefirst";
 const linkIn = "https://www.linkedin.com/company/beije";
 const linkYt = "https://www.youtube.com/channel/UCGZdqNE152QBvg9WZ4E65Iw";
 
+// Captcha
+export const googleReCaptchaKey = "6Lf_gDoeAAAAAMThwX9hHIPZmULe3bAePNWxA80o";
 
 const getBaseURL = () => {
   const env = process.env.REACT_APP_ENV;

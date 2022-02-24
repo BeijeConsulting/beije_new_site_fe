@@ -7,6 +7,11 @@
   border-radius: 0% !important;
 }
 
+.button-form-primary:disabled {
+  background-color: var(--dark-grey) !important;
+  opacity: 80%;
+}
+
 @media(min-width: 1024px) {
   .button-form-primary {
     padding: 15px 50px !important;

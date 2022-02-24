@@ -16,4 +16,5 @@ Library:
   react-scroll-trigger - https://www.npmjs.com/package/react-scroll-trigger
   gsap - https://www.npmjs.com/package/gsap
   swiper - https://swiperjs.com/react
-  
+  react-google-recaptcha - https://www.npmjs.com/package/react-google-recaptcha
+  yup - https://www.npmjs.com/package/yup

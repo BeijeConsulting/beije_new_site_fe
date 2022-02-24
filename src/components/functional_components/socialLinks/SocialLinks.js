@@ -28,7 +28,7 @@ const SocialLinks = (props) => {
     )
   }
   return (
-    <Stack direction="row" spacing={1} className={`justify-center ${props.classNameSocialContainer}`}>
+    <Stack direction="row" spacing={2} className={`justify-center ${props.classNameSocialContainer}`}>
       {social_list?.map(printSocial)}
     </Stack>
   )

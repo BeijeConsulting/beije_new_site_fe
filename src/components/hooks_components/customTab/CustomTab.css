@@ -16,6 +16,8 @@
 .tab-lables-box {
   width: 100% !important;
   padding-left: 5%;
+  border-left: 3px solid var(--grey-tone-1) !important;
+  margin-bottom: 16px;
 }
 
 .tab-lables-box-active {
