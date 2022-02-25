@@ -118,7 +118,7 @@
   .swiper-slide p {
     padding-left: 30px;
     transform-style: preserve-3d;
-    transform: translate3d(4px, -2px, 33px);
+    transform: translate3d(4px, -2px, 60px);
   }
 
   .swiper-slide p:nth-child(2) {
