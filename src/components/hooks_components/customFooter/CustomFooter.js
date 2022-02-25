@@ -7,7 +7,7 @@ import { Box, Grid, Link } from '@mui/material';
 import './CustomFooter.css'
 
 // Constants
-import { logo_primary_light } from "../../../utils/properties";
+import { logo_primary_light, logo_secondary_light } from "../../../utils/properties";
 
 // Components
 import SwitchLang from "../switchLang/SwitchLang"
@@ -24,7 +24,10 @@ const CustomFooter = () => {
         className={"footer-logo-lang d-flex footer-padding-elements"}
       >
         <div>
-          <img src={logo_primary_light} alt="Logo Beije People First" className="footer-container-logo" />
+          <img src={logo_primary_light} alt="Logo Beije People First" className="footer-container-logo-desktop" />
+        </div>
+        <div>
+          <img src={logo_secondary_light} alt="Logo Beije People First" className="footer-container-logo-mobile" />
         </div>
         <div>
           <SwitchLang />
@@ -77,7 +80,7 @@ const CustomFooter = () => {
 
         {/* Vat number and social only desktop */}
         <div
-          className={"footer-vatNumber-desktop"}
+          className={"footer-vatNumber"}
         >
           <p>Beije è un marchio di People First Srl - Partita IVA 16334941008</p>
         </div>

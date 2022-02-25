@@ -16,7 +16,6 @@ import { googleReCaptchaKey } from "../../../utils/properties";
 import CustomButton from "../../functional_components/ui/customButton/CustomButton";
 
 const CustomForm = (props) => {
-
   const [state, setState] = useState({
     captchaCheck: false,
     captcha: undefined,
@@ -239,6 +238,7 @@ const CustomForm = (props) => {
             <Grid
               item
               xs={12}
+              className="form-agreement-container"
             >
               <FormControlLabel
                 label="Ho letto e accetto il trattamento dei miei dati personali"
@@ -249,14 +249,22 @@ const CustomForm = (props) => {
                     value={formikContacts.values.agreement}
                     checked={formikContacts.values.agreement}
                     error={formikContacts.touched.agreement && Boolean(formikContacts.errors.agreement)}
-                    helperText={formikContacts.touched.agreement && formikContacts.errors.agreement}
                     // onChange={formikContacts.handleChange("agreement")}
                     // onBlur={(e) => formikContacts.handleBlur(e)}
                     onChange={formikContacts.handleChange}
                     onBlur={formikContacts.handleBlur}
-                  />}
+
+                    classes={{ checked: 'form-ckeckbox-checked' }}
+                  />
+                }
+                helperText={formikContacts.touched.agreement && formikContacts.errors.agreement}
                 className="form-field"
               />
+              <div
+                className="form-agreement-helperText"
+              >
+                {formikContacts.touched.agreement && formikContacts.errors.agreement}
+              </div>
             </Grid>
             <Grid
               item
@@ -278,7 +286,7 @@ const CustomForm = (props) => {
                 type={"btn-form-primary"}
                 content={"Invia"}
                 callback={formikContacts.submitForm}
-                disabled={!(state.captchaCheck && formikContacts.isValid && formikContacts.dirty)}
+              // disabled={!(state.captchaCheck && formikContacts.isValid && formikContacts.dirty)}
               />
             </Grid>
           </form>

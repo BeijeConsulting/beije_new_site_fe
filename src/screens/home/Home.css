@@ -45,7 +45,7 @@
   font-family: var(--moderat-bold);
   font-size: 45px;
   position: absolute;
-  top: 770px;
+  top: 850px;
   left: 0;
   margin: auto;
   color: var(--grey-tone-6);
@@ -125,6 +125,10 @@
 @media(min-width: 375px) {
   .home-first-section-navbar-container {
     margin-top: calc(100vh - 125vh);
+  }
+
+  .home-written-bg {
+    top: 800px;
   }
 }
 
