@@ -77,6 +77,9 @@ const CustomCarousel = (props) => {
       ease: "none"
     })
 
+    console.log("e.clientX: ", e.clientX);
+    console.log("e.clientY: ", e.clientY);
+
     // let positionXp = (e.clientX / windowWidth) + 100;
     // let positionYp = (e.clientY / windowHeight) + 100;
     gsap.to(".swiper-slide-active p", {
