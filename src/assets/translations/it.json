@@ -9,11 +9,23 @@
     "youWantLogout": "Vuoi uscire dal portale?",
     "cancel": "Annulla"
   },
+  "burgerMenu": {
+    "consulting": "Beije Consulting",
+    "academy": "Beije Talent Academy",
+    "up": "Beije Up",
+    "career": "Career",
+    "whoWeAre": "About Us",
+    "contacts": "Contacts",
+    "blog": "Blog",
+    "community": "Community",
+    "focusAcademy": "FocusAcademy"
+  },
   "home": {
     "firstSection": {
       "title": {
-        "part1": "Aiutiamo le aziende a realizzare progetti innovativi attraverso ",
-        "part2": "Team di Valore"
+        "part1": "Aiutiamo le aziende a realizzare",
+        "part2": "progetti innovativi attraverso",
+        "part3": "Team di Valore"
       }
     }
   }

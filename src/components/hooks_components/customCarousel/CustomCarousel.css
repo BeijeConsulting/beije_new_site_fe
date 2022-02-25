@@ -121,6 +121,14 @@
     transform: translate3d(4px, -2px, 60px);
   }
 
+  .swiper-slide-prev p {
+    transform: translate3d(-33px, -2px, 60px);
+  }
+
+  .swiper-slide-next p {
+    transform: translate3d(33px, -2px, 60px);
+  }
+
   .swiper-slide p:nth-child(2) {
     padding-bottom: 30px;
   }

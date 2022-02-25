@@ -6,6 +6,7 @@ import burgerMenuDuck from '../ducks/burgerMenuDuck';
 import logoDuck from '../ducks/logoDuck';
 import colorHeaderDuck from '../ducks/colorHeaderDuck';
 import showNavbarTopDuck from '../ducks/showNavbarTopDuck';
+import modalDuck from '../ducks/modalDuck';
 
 // const rootReducer = combineReducers({
 
@@ -17,7 +18,8 @@ const appReducer = combineReducers({
   burgerMenuDuck,
   logoDuck,
   colorHeaderDuck,
-  showNavbarTopDuck
+  showNavbarTopDuck,
+  modalDuck
 })
 
 const rootReducer = (state, action) => {

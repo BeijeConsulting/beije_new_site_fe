@@ -69,7 +69,13 @@ const Home = (props) => {
         className={"home-fist-section-container paddingX-container-default d-flex flex-column home-first-section-gsap"}
       >
         <Box className={"home-first-section-title-container d-flex flex-column justify-center"}>
-          <h1>{t("home.firstSection.title.part1")}<br />{t("home.firstSection.title.part2")}</h1>
+          <h1>
+            {t("home.firstSection.title.part1")}
+            <br />
+            {t("home.firstSection.title.part2")}
+            <br />
+            {t("home.firstSection.title.part3")}
+          </h1>
         </Box>
         <Box className={"home-first-section-navbar-container"}>
           <CustomNavbar
@@ -91,7 +97,7 @@ const Home = (props) => {
       >
         <h2 className={"home-second-section-txt"}>
           <span className={"home-second-section-quotation-marks"}>&#8220;</span>
-          <span>Lavoriamo costantemente per arrivare alla piena soddisfazione dei nostri clienti</span>
+          <span>Lavoriamo costantemente per arrivare <br />alla piena soddisfazione <br />dei nostri clienti</span>
           <span className={"home-second-section-quotation-marks"}>&#8222;</span>
         </h2>
       </Container>
@@ -153,10 +159,11 @@ const Home = (props) => {
             </Box>
             <Box className={"home-fifth-section-second-box"}>
               <p>
-                {truncate("Investiamo ogni giorno nelle persone per garantire un miglioramento costante dei nostri servizi. Siamo una community di professionisti informatici, ricercatori di nuovi talenti e marketers con un obiettivo: le persone al centro del nostro futuro. Ci impegniamo per progettare ed offrire soluzioni che danno vita a nuove realtà, e formiamo gli sviluppatori del domani. È la condivisione di uno scopo comune, è un approccio “out of the box”, è il rapporto con il cliente, è un sistema People First. Ti aspettiamo, segui il cambiamento.", {
-                  'length': 396,
-                  'separator': '...'
-                })}
+                Siamo una community di professionisti informatici, ricercatori di nuovi talenti e marketers con un obiettivo: le persone al centro del nostro futuro.
+                Ci impegniamo per progettare ed offrire soluzioni che danno vita a nuove realtà
+                e formiamo gli sviluppatori del domani.
+                È la condivisione di uno scopo comune, è un approccio “out of the box”, è il rapporto con il cliente, è un sistema People First.
+                Ti aspettiamo, segui il cambiamento.
               </p>
               <CustomLink
                 linkTo=""

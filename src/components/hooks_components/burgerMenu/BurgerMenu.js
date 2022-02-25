@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 // redux
 import { connect } from "react-redux";
@@ -18,6 +19,8 @@ import { menu_voices } from "../../../utils/properties";
 import SocialLinks from "../../functional_components/socialLinks/SocialLinks";
 
 const BurgerMenu = (props) => {
+
+  const { t } = useTranslation();
 
   const [state, setState] = useState({
     openMenu: undefined,
@@ -47,7 +50,7 @@ const BurgerMenu = (props) => {
         onMouseEnter={mouseOver(key, item.key_link)}
         onMouseLeave={mouseLeave(key, item.key_link)}
       >
-        {item.name}
+        {t("burgerMenu." + item.name)}
       </Link>
     )
   }

@@ -60,6 +60,14 @@
   font-size: 0.75rem;
 }
 
+.form-agreement-link-modal {
+  text-decoration: underline;
+}
+
+.form-agreement-link-modal:hover {
+  text-decoration: none;
+}
+
 .form-submit-btn-container {
   display: flex;
   justify-content: flex-end;
@@ -67,7 +75,6 @@
 }
 
 /* Media queries */
-
 @media(min-width: 768px) {
   .form-agreement-helperText {
     bottom: -15px;

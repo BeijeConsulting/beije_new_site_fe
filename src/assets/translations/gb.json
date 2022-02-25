@@ -9,11 +9,23 @@
     "youWantLogout": "Do you want to exit the portal? ",
     "cancel": "Cancel"
   },
+  "burgerMenu": {
+    "consulting": "Beije Consulting",
+    "academy": "Beije Talent Academy",
+    "up": "Beije Up",
+    "career": "Career",
+    "aboutUs": "About Us",
+    "contacts": "Contacts",
+    "blog": "Blog",
+    "community": "Community",
+    "focusAcademy": "FocusAcademy"
+  },
   "home": {
     "firstSection": {
       "title": {
-        "part1": "We help companies to implement innovative projects through ",
-        "part2": "Valuable Teams"
+        "part1": "We help companies to implement",
+        "part2": "innovative projects through",
+        "part3": "Valuable Teams"
       }
     }
   }

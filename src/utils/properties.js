@@ -6,7 +6,7 @@ import logo_official_white from "../assets/images/logos/logo_official_white.svg"
 import logo_short_white from "../assets/images/logos/logo_short_white.svg";
 import logo_short_grey from "../assets/images/logos/logo_short_grey.svg";
 import { faFacebookF, faLinkedinIn, faYoutube } from '@fortawesome/free-brands-svg-icons';
-import { faN, faArrowDownLong } from '@fortawesome/free-solid-svg-icons';
+import { faN, faArrowDownLong, faSquareXmark } from '@fortawesome/free-solid-svg-icons';
 
 import chiara_balsamini from "../assets/images/profile_picture/chiara_balsamini.jpg";
 import erica_mauro from "../assets/images/profile_picture/erica_mauro.jpg";
@@ -78,51 +78,52 @@ export const logo_secondary_grey = logo_short_grey;
 
 export const defaultIcon = faN;
 export const downArrow = faArrowDownLong;
+export const closeIcon = faSquareXmark;
 
 // Menu voices
 export const menu_voices = [
   {
-    name: "Beije Consulting",
+    name: "consulting",
     link_to: "#",
     key_link: "consulting"
   },
   {
-    name: "Beije Up",
+    name: "up",
     link_to: "#",
     key_link: "up"
   },
   {
-    name: "Beije Talent Academy",
+    name: "academy",
     link_to: "#",
     key_link: "academy"
   },
   {
-    name: "Chi Siamo",
+    name: "aboutUs",
     link_to: "#",
     key_link: "aboutUs"
   },
   {
-    name: "Blog",
+    name: "blog",
     link_to: "#",
     key_link: "blog"
   },
   {
-    name: "Community",
+    name: "community",
     link_to: "#",
     key_link: "community"
   },
   {
-    name: "Focus Academy",
+    name: "focusAcademy",
     link_to: "#",
     key_link: "focusAcademy"
   },
   {
-    name: "Lavora con noi",
+    name: "career",
     link_to: "#",
     key_link: "career"
   },
   {
-    name: "Contatti",
+    name: "contacts",
     link_to: "#",
     key_link: "contacts"
   },
@@ -161,19 +162,19 @@ export const social_list = [
 export const tab_aboutUs = [
   {
     labelTab: "La nostra visione",
-    contentPanel: "T4 al centro del modello Beije c’è una vision people first : le persone al centro per la creazione di un’azienda di valore. Da un ideale ad un business: da più di 10 anni ci impegniamo costantemente per aggiornare il nostro know-how e siamo in grado di fornire le metodologie più moderne e le tecnologie più innovative per la realizzazione di progetti altamente specializzati.",
+    contentPanel: "Le persone al centro del nostro futuro.",
   },
   {
     labelTab: "La nostra missione",
-    contentPanel: "T3 al centro del modello Beije c’è una vision people first : le persone al centro per la creazione di un’azienda di valore. Da un ideale ad un business: da più di 10 anni ci impegniamo costantemente per aggiornare il nostro know-how e siamo in grado di fornire le metodologie più moderne e le tecnologie più innovative per la realizzazione di progetti altamente specializzati.",
+    contentPanel: "Aiutiamo le aziende a realizzare progetti innovativi attraverso Team di Valore. ",
   },
   {
-    labelTab: "La storia",
-    contentPanel: "T1 al centro del modello Beije c’è una vision people first : le persone al centro per la creazione di un’azienda di valore. Da un ideale ad un business: da più di 10 anni ci impegniamo costantemente per aggiornare il nostro know-how e siamo in grado di fornire le metodologie più moderne e le tecnologie più innovative per la realizzazione di progetti altamente specializzati.",
+    labelTab: "La nostra storia",
+    contentPanel: "Al centro del modello Beije c’è una vision people first: le persone al centro per la creazione di un’azienda di valore. Da un ideale ad un business: da più di 10 anni ci impegniamo costantemente per aggiornare il nostro know-how e siamo in grado di fornire le metodologie più moderne e le tecnologie più innovative per la realizzazione di progetti altamente specializzati.",
   },
   {
     labelTab: "I nostri valori",
-    contentPanel: "T2 al centro del modello Beije c’è una vision people first : le persone al centro per la creazione di un’azienda di valore. Da un ideale ad un business: da più di 10 anni ci impegniamo costantemente per aggiornare il nostro know-how e siamo in grado di fornire le metodologie più moderne e le tecnologie più innovative per la realizzazione di progetti altamente specializzati.",
+    contentPanel: "Crediamo in quello che facciamo e abbiamo un profondo RISPETTO per gli altri Mostriamo GRATITUDINE per l’impegno che ogni giorno mettiamo nel nostro lavoro Prima viene la squadra e poi l’individuo, il nostro è un lavoro di TEAM La base per costruire la nostra community è sviluppare un SENSO DI APPARTENENZA. ",
   }
 ]
 

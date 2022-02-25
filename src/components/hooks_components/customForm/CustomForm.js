@@ -3,6 +3,10 @@ import ReCAPTCHA from "react-google-recaptcha";
 import { useFormik } from "formik";
 import * as yup from 'yup';
 
+// Redux
+import { connect } from "react-redux";
+import { setModal, initModal } from "../../../redux/ducks/modalDuck"
+
 // MUI
 import { Grid, Box, TextField, TextareaAutosize, FormControlLabel, Checkbox } from "@mui/material";
 
@@ -14,6 +18,8 @@ import { googleReCaptchaKey } from "../../../utils/properties";
 
 // Components
 import CustomButton from "../../functional_components/ui/customButton/CustomButton";
+import CustomModal from "../customModal/CustomModal";
+import PrivacyPolicies from "../../functional_components/privacyPolicy/PrivacyPolicies"
 
 const CustomForm = (props) => {
   const [state, setState] = useState({
@@ -75,6 +81,14 @@ const CustomForm = (props) => {
       state.captcha.reset();
     }
   });
+
+  const openModal = () => {
+    props.dispatch(setModal(true))
+  }
+
+  const closeModal = () => {
+    props.dispatch(initModal())
+  }
 
 
   return (
@@ -241,7 +255,19 @@ const CustomForm = (props) => {
               className="form-agreement-container"
             >
               <FormControlLabel
-                label="Ho letto e accetto il trattamento dei miei dati personali"
+                label={
+                  <>
+                    <span>
+                      Ho letto e accetto il &nbsp;
+                    </span>
+                    <span
+                      className="form-agreement-link-modal"
+                      onClick={openModal}
+                    >
+                      trattamento dei miei dati personali
+                    </span>
+                  </>
+                }
                 control={
                   <Checkbox
                     id="agreement"
@@ -265,6 +291,12 @@ const CustomForm = (props) => {
               >
                 {formikContacts.touched.agreement && formikContacts.errors.agreement}
               </div>
+
+              <CustomModal
+                callbackClose={closeModal}
+              >
+                <PrivacyPolicies />
+              </CustomModal>
             </Grid>
             <Grid
               item
@@ -292,7 +324,7 @@ const CustomForm = (props) => {
           </form>
         </Box>
       </Grid>
-    </Grid>
+    </Grid >
   )
 }
 
@@ -303,4 +335,4 @@ CustomForm.defaultProps = {
   classNameInfoContainer: "form-info-container"
 }
 
-export default CustomForm 
+export default connect()(CustomForm)
