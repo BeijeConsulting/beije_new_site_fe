@@ -39,6 +39,10 @@
     },
     "btn": "Invia"
   },
+  "altImages": {
+    "privacyPolicies": "Beije Privacy Policy",
+    "legalNotes": "Beije Legal Notes"
+  },
   "burgerMenu": {
     "consulting": "Beije Consulting",
     "academy": "Beije Talent Academy",

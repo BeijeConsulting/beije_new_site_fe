@@ -13,9 +13,9 @@ Library:
   MUI kit [emotion, style components, SVG icons]- https://mui.com/getting-started/installation/
   react-ga - https://www.npmjs.com/package/react-ga
   fontAwsome icons - https://fontawesome.com/v5/docs/web/use-with/react
-  react-scroll-trigger - https://www.npmjs.com/package/react-scroll-trigger
+  react-scroll-trigger - https://www.npmjs.com/package/react-scroll-trigger <!--Remove-->
   gsap - https://www.npmjs.com/package/gsap
   swiper - https://swiperjs.com/react
   react-google-recaptcha - https://www.npmjs.com/package/react-google-recaptcha
   yup - https://www.npmjs.com/package/yup
-  react-pdf - https://www.npmjs.com/package/react-pdf
+  react-pdf - https://www.npmjs.com/package/react-pdf <!--Remove-->

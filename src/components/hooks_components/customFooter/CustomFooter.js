@@ -12,7 +12,7 @@ import { Box } from '@mui/material';
 import './CustomFooter.css'
 
 // Constants
-import { logo_primary_light, logo_secondary_light, pdf_legalNotes_en, pdf_legalNotes_it, pdf_privacyPolicies_en, pdf_privacyPolicies_it } from "../../../utils/properties";
+import { logo_primary_light, logo_secondary_light, legalNotes_en, legalNotes_it, privacyPolicies_en, privacyPolicies_it } from "../../../utils/properties";
 
 // Components
 import SwitchLang from "../switchLang/SwitchLang"
@@ -130,27 +130,25 @@ const CustomFooter = (props) => {
 
       <CustomModal
         callbackClose={closeModal}
+        modalTitle={props.modalDuck.typeModal === "privacyPolicies" ? t("footer.privacyPolicies") : t("footer.legalNotes")}
       >
         {
           props.modalDuck.typeModal === "privacyPolicies" &&
-          < object
-            data={t("modal.doc_lang") === "doc_it" ? pdf_privacyPolicies_it : pdf_privacyPolicies_en}
-            type="application/pdf"
-            width="100%"
-            height="100%">
-            <p>Alternative text - include a link <a href={pdf_privacyPolicies_en}>to the PDF!</a></p>
-          </object>
+          <img
+            modalTitle="Privacy Policy"
+            src={t("modal.doc_lang") === "doc_it" ? privacyPolicies_it : privacyPolicies_en}
+            alt={t("altImages.privacyPolicies")}
+            style={{ width: "100%" }}
+          />
         }
-
         {
           props.modalDuck.typeModal === "legalNotes" &&
-          < object
-            data={t("modal.doc_lang") === "doc_it" ? pdf_legalNotes_it : pdf_legalNotes_en}
-            type="application/pdf"
-            width="100%"
-            height="100%">
-            <p>Alternative text - include a link <a href={pdf_legalNotes_en}>to the PDF!</a></p>
-          </object>
+
+          <img
+            src={t("modal.doc_lang") === "doc_it" ? legalNotes_it : legalNotes_en}
+            alt={t("altImages.legalNotes")}
+            style={{ width: "100%" }}
+          />
         }
 
       </CustomModal>

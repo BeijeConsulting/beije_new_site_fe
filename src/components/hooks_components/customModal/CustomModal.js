@@ -56,7 +56,7 @@ const CustomModal = (props) => {
               <Box
                 className={"modal-header"}
               >
-                <h4>PRIVACY POLICY</h4>
+                <h4>{props.modalTitle}</h4>
               </Box>
               {/* Modal content */}
               <Box className="modal-content">

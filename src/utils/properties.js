@@ -19,10 +19,10 @@ import marianna_fulginiti from "../assets/images/profile_picture/marianna_fulgin
 import roberto_brogi from "../assets/images/profile_picture/roberto_brogi.jpg";
 
 // Docs
-import privacyPolicies_it from "../assets/docs/Beije_PrivacyPolicies_IT.pdf";
-import privacyPolicies_en from "../assets/docs/Beije_PrivacyPolicies_EN.pdf";
-import legalNotes_it from "../assets/docs/Beije_legalNotes_IT.pdf";
-import legalNotes_en from "../assets/docs/Beije_legalNotes_EN.pdf";
+import png_privacyPolicies_it from "../assets/images/privacy/Beije_PrivacyPolicies_IT.png";
+import png_privacyPolicies_en from "../assets/images/privacy/Beije_PrivacyPolicies_EN.png";
+import png_legalNotes_it from "../assets/images/privacy/Beije_legalNotes_IT.png";
+import png_legalNotes_en from "../assets/images/privacy/Beije_legalNotes_EN.png";
 
 // Link
 const linkFb = "https://www.facebook.com/beijepeoplefirst";
@@ -87,10 +87,10 @@ export const downArrow = faArrowDownLong;
 export const closeIcon = faSquareXmark;
 export const downloadIcon = faDownload;
 
-export const pdf_privacyPolicies_it = privacyPolicies_it;
-export const pdf_privacyPolicies_en = privacyPolicies_en;
-export const pdf_legalNotes_it = legalNotes_it;
-export const pdf_legalNotes_en = legalNotes_en;
+export const privacyPolicies_it = png_privacyPolicies_it;
+export const privacyPolicies_en = png_privacyPolicies_en;
+export const legalNotes_it = png_legalNotes_it;
+export const legalNotes_en = png_legalNotes_en;
 
 
 // Menu voices

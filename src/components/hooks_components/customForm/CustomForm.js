@@ -15,7 +15,7 @@ import { Grid, Box, TextField, TextareaAutosize, FormControlLabel, Checkbox } fr
 import "./CustomForm.css";
 
 // Constants
-import { googleReCaptchaKey, pdf_privacyPolicies_en, pdf_privacyPolicies_it } from "../../../utils/properties";
+import { googleReCaptchaKey, privacyPolicies_en, privacyPolicies_it } from "../../../utils/properties";
 
 // Components
 import CustomButton from "../../functional_components/ui/customButton/CustomButton";
@@ -292,14 +292,14 @@ const CustomForm = (props) => {
 
               <CustomModal
                 callbackClose={closeModal}
+                modalTitle={t("footer.privacyPolicies")}
               >
-                <object
-                  data={t("modal.doc_lang") === "doc_it" ? pdf_privacyPolicies_it : pdf_privacyPolicies_en}
-                  type="application/pdf"
-                  width="100%"
-                  height="100%">
-                  <p>Alternative text - include a link <a href={pdf_privacyPolicies_en}>to the PDF!</a></p>
-                </object>
+                <img
+                  modalTitle="Privacy Policy"
+                  src={t("modal.doc_lang") === "doc_it" ? privacyPolicies_it : privacyPolicies_en}
+                  alt={t("altImages.privacyPolicies")}
+                  style={{ width: "100%" }}
+                />
               </CustomModal>
             </Grid>
             <Grid
