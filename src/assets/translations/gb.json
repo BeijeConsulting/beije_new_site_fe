@@ -9,6 +9,36 @@
     "youWantLogout": "Do you want to exit the portal? ",
     "cancel": "Cancel"
   },
+  "contactInfo": {
+    "location": "Where we are",
+    "contact": "Contact us"
+  },
+  "modal": {
+    "btn": "Close",
+    "doc_lang": "doc_en"
+  },
+  "form": {
+    "errorMessage": {
+      "name": "Name is required",
+      "surname": "Surname is required",
+      "email": "Email is required",
+      "emailInvalid": "Email is invalid",
+      "town": "Town is required",
+      "agreement": "Terms and Conditions must be accepted"
+    },
+    "placeholder": {
+      "name": "Name",
+      "surname": "Surname",
+      "email": "Email",
+      "town": "Town",
+      "message": "Write here your message",
+      "agreement": {
+        "part1": "I have read and accept the ",
+        "part2": "Treatment of my personal data"
+      }
+    },
+    "btn": "Send"
+  },
   "burgerMenu": {
     "consulting": "Beije Consulting",
     "academy": "Beije Talent Academy",
@@ -19,6 +49,11 @@
     "blog": "Blog",
     "community": "Community",
     "focusAcademy": "Focus Academy"
+  },
+  "footer": {
+    "privacyPolicies": "PRIVACY POLICIES",
+    "legalNotes": "LEGAL NOTES",
+    "vatNumber": "Beije is a People First Srl brand - VAT number 16334941008 "
   },
   "home": {
     "firstSection": {
@@ -108,6 +143,9 @@
         "part15": " system.",
         "part16": "We are waiting for you, follow the change."
       }
+    },
+    "form": {
+      "title": "Contact us"
     }
   }
 }

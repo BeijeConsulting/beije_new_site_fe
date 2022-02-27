@@ -41,6 +41,12 @@
   padding-left: 10px;
   padding-top: 20px;
   border-bottom: 1px solid var(--grey-tone-1);
+  margin-top: 40px;
+}
+
+.form-text-area::placeholder {
+  font-size: 1rem;
+  color: var(--grey-tone-1);
 }
 
 .form-agreement-container {
@@ -100,12 +106,13 @@
 }
 
 @media(min-width: 1024px) {
+  .form-field {
+    margin: 20px 0px !important;
+  }
+
   .form-text-area {
     height: 300px !important;
     border: 1px solid var(--grey-tone-1);
-  }
-
-  .form-field {
-    margin: 20px 0px !important;
+    margin-top: 40px !important;
   }
 }

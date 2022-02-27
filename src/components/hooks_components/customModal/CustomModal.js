@@ -1,16 +1,25 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 // Redux
 import { connect } from "react-redux";
+import { initModal } from "../../../redux/ducks/modalDuck";
 
 // MUI
 import { Modal, Backdrop, Fade, Box, Typography } from "@mui/material";
 
 // Style
 import "./CustomModal.css";
+
+// Constants
+import { downloadIcon } from "../../../utils/properties";
+
+// Components
 import CustomIconButton from "../../functional_components/ui/customIconButton/CustomIconButton";
+import CustomButton from "../../functional_components/ui/customButton/CustomButton";
 
 const CustomModal = (props) => {
+  const { t } = useTranslation()
 
   const heandleOpen = () => {
     props.callbackOpen();
@@ -18,6 +27,10 @@ const CustomModal = (props) => {
 
   const heandleClose = () => {
     props.callbackClose();
+  }
+
+  const closeModal = () => {
+    props.dispatch(initModal())
   }
 
   return (
@@ -39,16 +52,24 @@ const CustomModal = (props) => {
             <Box
               className={"modal-txt-container"}
             >
+              {/* Modal header */}
               <Box
                 className={"modal-header"}
               >
-                <CustomIconButton />
+                <h4>PRIVACY POLICY</h4>
               </Box>
-              <Typography id="transition-modal-title" variant="h6" component="h2">
-                Text in a modal
-              </Typography>
+              {/* Modal content */}
               <Box className="modal-content">
                 {props.children}
+              </Box>
+
+              {/* Modal footer */}
+              <Box className="modal-footer">
+                <CustomButton
+                  type={"btn-form-primary"}
+                  content={t("modal.btn")}
+                  callback={closeModal}
+                />
               </Box>
             </Box>
           </Fade>

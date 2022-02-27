@@ -6,7 +6,7 @@ import logo_official_white from "../assets/images/logos/logo_official_white.svg"
 import logo_short_white from "../assets/images/logos/logo_short_white.svg";
 import logo_short_grey from "../assets/images/logos/logo_short_grey.svg";
 import { faFacebookF, faLinkedinIn, faYoutube } from '@fortawesome/free-brands-svg-icons';
-import { faN, faArrowDownLong, faSquareXmark } from '@fortawesome/free-solid-svg-icons';
+import { faN, faArrowDownLong, faSquareXmark, faDownload } from '@fortawesome/free-solid-svg-icons';
 
 import chiara_balsamini from "../assets/images/profile_picture/chiara_balsamini.jpg";
 import erica_mauro from "../assets/images/profile_picture/erica_mauro.jpg";
@@ -17,6 +17,12 @@ import ivo_mosca from "../assets/images/profile_picture/ivo_mosca.jpg";
 import maria_rodrigez from "../assets/images/profile_picture/maria_rodrigez.jpg";
 import marianna_fulginiti from "../assets/images/profile_picture/marianna_fulginiti.jpg";
 import roberto_brogi from "../assets/images/profile_picture/roberto_brogi.jpg";
+
+// Docs
+import privacyPolicies_it from "../assets/docs/Beije_PrivacyPolicies_IT.pdf";
+import privacyPolicies_en from "../assets/docs/Beije_PrivacyPolicies_EN.pdf";
+import legalNotes_it from "../assets/docs/Beije_legalNotes_IT.pdf";
+import legalNotes_en from "../assets/docs/Beije_legalNotes_EN.pdf";
 
 // Link
 const linkFb = "https://www.facebook.com/beijepeoplefirst";
@@ -79,6 +85,13 @@ export const logo_secondary_grey = logo_short_grey;
 export const defaultIcon = faN;
 export const downArrow = faArrowDownLong;
 export const closeIcon = faSquareXmark;
+export const downloadIcon = faDownload;
+
+export const pdf_privacyPolicies_it = privacyPolicies_it;
+export const pdf_privacyPolicies_en = privacyPolicies_en;
+export const pdf_legalNotes_it = legalNotes_it;
+export const pdf_legalNotes_en = legalNotes_en;
+
 
 // Menu voices
 export const menu_voices = [

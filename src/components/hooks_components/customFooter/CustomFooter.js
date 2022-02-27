@@ -1,21 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
+
+// Redux
+import { connect } from "react-redux";
+import { setModal, initModal } from "../../../redux/ducks/modalDuck"
 
 // MUI
-import { Box, Grid, Link } from '@mui/material';
+import { Box } from '@mui/material';
 
 // style
 import './CustomFooter.css'
 
 // Constants
-import { logo_primary_light, logo_secondary_light } from "../../../utils/properties";
+import { logo_primary_light, logo_secondary_light, pdf_legalNotes_en, pdf_legalNotes_it, pdf_privacyPolicies_en, pdf_privacyPolicies_it } from "../../../utils/properties";
 
 // Components
 import SwitchLang from "../switchLang/SwitchLang"
 import SocialLinks from "../../functional_components/socialLinks/SocialLinks";
+import CustomModal from "../customModal/CustomModal";
 
-const CustomFooter = () => {
+const CustomFooter = (props) => {
+  const { t } = useTranslation();
+
+  const [state, setState] = useState({
+    typeModal: 2
+  })
+
+  const openModal = (param1) => () => {
+    props.dispatch(setModal(true, param1))
+  }
+
+  const closeModal = () => {
+    props.dispatch(initModal())
+  }
+
   return (
-
     <Box
       className="footer-section"
     >
@@ -40,12 +59,12 @@ const CustomFooter = () => {
         {/* Info */}
         <div className={"footer-info d-flex"}>
           <div>
-            <p>Dove siamo</p>
+            <p>{t("contactInfo.location")}</p>
             <p>Via Varese, 27/38</p>
             <p>Lissone (MB)</p>
           </div>
           <div>
-            <p>Contattaci</p>
+            <p>{t("contactInfo.contact")}</p>
             <p>job@beije.it</p>
             <p>commerciale@beije.it</p>
           </div>
@@ -55,8 +74,18 @@ const CustomFooter = () => {
         <div
           className={"footer-policies-desktop"}
         >
-          <p>PRIVACY AND COOKIE POLICY </p>
-          <p>NOTE LEGALI</p>
+          <p
+            className="cursor-pointer footer-link-privacyPolicies-legalNotes"
+            onClick={openModal("privacyPolicies")}
+          >
+            {t("footer.privacyPolicies")}
+          </p>
+          <p
+            className="cursor-pointer footer-link-privacyPolicies-legalNotes"
+            onClick={openModal("legalNotes")}
+          >
+            {t("footer.legalNotes")}
+          </p>
         </div>
 
         <div
@@ -73,16 +102,24 @@ const CustomFooter = () => {
         <div
           className={"footer-policies-mobile"}
         >
-          <span>PRIVACY AND COOKIE POLICY</span>
+          <span
+            className="cursor-pointer footer-link-privacyPolicies-legalNotes"
+            onClick={openModal("privacyPolicies")}
+          >
+            {t("footer.privacyPolicies")} </span>
           <span> | </span>
-          <span>NOTE LEGALI</span>
+          <span
+            className="cursor-pointer footer-link-privacyPolicies-legalNotes"
+            onClick={openModal("legalNotes")}
+          >
+            {t("footer.legalNotes")}</span>
         </div>
 
         {/* Vat number and social only desktop */}
         <div
           className={"footer-vatNumber"}
         >
-          <p>Beije è un marchio di People First Srl - Partita IVA 16334941008</p>
+          <p>{t("footer.vatNumber")}</p>
         </div>
         <div
           className={"footer-social-desktop"}
@@ -90,11 +127,44 @@ const CustomFooter = () => {
           <SocialLinks />
         </div>
       </div>
-    </Box>
+
+      <CustomModal
+        callbackClose={closeModal}
+      >
+        {
+          props.modalDuck.typeModal === "privacyPolicies" &&
+          < object
+            data={t("modal.doc_lang") === "doc_it" ? pdf_privacyPolicies_it : pdf_privacyPolicies_en}
+            type="application/pdf"
+            width="100%"
+            height="100%">
+            <p>Alternative text - include a link <a href={pdf_privacyPolicies_en}>to the PDF!</a></p>
+          </object>
+        }
+
+        {
+          props.modalDuck.typeModal === "legalNotes" &&
+          < object
+            data={t("modal.doc_lang") === "doc_it" ? pdf_legalNotes_it : pdf_legalNotes_en}
+            type="application/pdf"
+            width="100%"
+            height="100%">
+            <p>Alternative text - include a link <a href={pdf_legalNotes_en}>to the PDF!</a></p>
+          </object>
+        }
+
+      </CustomModal>
+    </Box >
     // <div className="footer-section">
     //   <p>Questo è il footer</p>
     // </div>
   )
 }
 
-export default CustomFooter
+const mapStateToProps = state => (
+  {
+    modalDuck: state.modalDuck,
+  }
+)
+
+export default connect(mapStateToProps)(CustomFooter)

@@ -47,6 +47,13 @@
   display: none;
 }
 
+.footer-link-privacyPolicies-legalNotes {
+  text-decoration: underline;
+}
+
+.footer-link-privacyPolicies-legalNotes:hover {
+  text-decoration: none;
+}
 
 .footer-policies-desktop {
   display: none;
@@ -145,6 +152,16 @@
 
   .footer-social-desktop {
     display: block;
+  }
+}
+
+@media(min-width:1024px) {
+  .footer-link-privacyPolicies-legalNotes {
+    text-decoration: none;
+  }
+
+  .footer-link-privacyPolicies-legalNotes:hover {
+    text-decoration: underline;
   }
 }
 

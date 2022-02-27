@@ -9,6 +9,36 @@
     "youWantLogout": "Vuoi uscire dal portale?",
     "cancel": "Annulla"
   },
+  "contactInfo": {
+    "location": "Dove siamo",
+    "contact": "Contattaci"
+  },
+  "modal": {
+    "btn": "Chiudi",
+    "doc_lang": "doc_it"
+  },
+  "form": {
+    "errorMessage": {
+      "name": "Nome obbligatorio",
+      "surname": "Cognome obbligatorio",
+      "email": "Email obbligatoria",
+      "emailInvalid": "Email invalida",
+      "town": "Città obbligatoria",
+      "agreement": "I Termini e le Condizioni devono essere accettate"
+    },
+    "placeholder": {
+      "name": "Nome",
+      "surname": "Cognome",
+      "email": "Email",
+      "town": "Città",
+      "message": "Scrivi qui il tuo messaggio",
+      "agreement": {
+        "part1": "Ho letto e accetto il ",
+        "part2": "Trattamento dei miei dati personali"
+      }
+    },
+    "btn": "Invia"
+  },
   "burgerMenu": {
     "consulting": "Beije Consulting",
     "academy": "Beije Talent Academy",
@@ -20,9 +50,10 @@
     "community": "Community",
     "focusAcademy": "Focus Academy"
   },
-  "contactInfo": {
-    "location": "Dove siamo",
-    "contact": "Contattaci"
+  "footer": {
+    "privacyPolicies": "PRIVACY POLICIES",
+    "legalNotes": "NOTE LEGALI",
+    "vatNumber": "Beije è un marchio di People First Srl - Partita IVA 16334941008"
   },
   "home": {
     "firstSection": {
@@ -112,6 +143,9 @@
         "part15": ".",
         "part16": "Ti aspettiamo, segui il cambiamento."
       }
+    },
+    "form": {
+      "title": "Contattaci"
     }
   }
 }

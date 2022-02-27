@@ -1,11 +1,12 @@
 const SET_MODAL = 'SET_MODAL'
 const INIT_MODAL = 'INIT_MODAL'
 
-export function setModal(value) {
+export function setModal(value1, value2) {
   return {
     type: SET_MODAL,
     payload: {
-      modalOpen: value
+      modalOpen: value1,
+      typeModal: value2
     }
   };
 }
@@ -19,7 +20,8 @@ export function initModal() {
 
 
 const INIT_STATE = {
-  modalOpen: false
+  modalOpen: false,
+  typeModal: null
 }
 
 export default function modalDuck(state = INIT_STATE, action) {
@@ -27,9 +29,11 @@ export default function modalDuck(state = INIT_STATE, action) {
   switch (action.type) {
     case SET_MODAL:
       newState.modalOpen = action.payload.modalOpen;
+      newState.typeModal = action.payload.typeModal;
       break;
     case INIT_MODAL:
       newState.modalOpen = false;
+      newState.typeModal = null;
       break;
     default:
       newState = state;

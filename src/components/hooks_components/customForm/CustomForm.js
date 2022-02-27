@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useFormik } from "formik";
 import * as yup from 'yup';
@@ -14,14 +15,15 @@ import { Grid, Box, TextField, TextareaAutosize, FormControlLabel, Checkbox } fr
 import "./CustomForm.css";
 
 // Constants
-import { googleReCaptchaKey } from "../../../utils/properties";
+import { googleReCaptchaKey, pdf_privacyPolicies_en, pdf_privacyPolicies_it } from "../../../utils/properties";
 
 // Components
 import CustomButton from "../../functional_components/ui/customButton/CustomButton";
 import CustomModal from "../customModal/CustomModal";
-import PrivacyPolicies from "../../functional_components/privacyPolicy/PrivacyPolicies"
 
 const CustomForm = (props) => {
+  const { t } = useTranslation();
+
   const [state, setState] = useState({
     captchaCheck: false,
     captcha: undefined,
@@ -37,30 +39,29 @@ const CustomForm = (props) => {
       ...state,
       captchaCheck,
       captchaValue: value,
-      openModal: false
     });
   }
 
   const validationSchema = yup.object({
     name: yup
       .string('Enter your name')
-      .required('Name is required'),
+      .required(t("form.errorMessage.name")),
     surname: yup
       .string('Enter your name')
-      .required('Name is required'),
+      .required(t("form.errorMessage.surname")),
     email: yup
       .string('Enter your email')
-      .email('Enter a valid email')
-      .required('Email is required'),
+      .email(t("form.errorMessage.emailInvalid"))
+      .required(t("form.errorMessage.email")),
     town: yup
       .string('Enter your name')
-      .required('Name is required'),
+      .required(t("form.errorMessage.town")),
     message: yup
       .string('Enter your name'),
     agreement: yup
       .boolean()
-      .oneOf([true], "Term and condition must be accepted")
-      .required("Term and condition must be accepted"),
+      .oneOf([true], t("form.errorMessage.agreement"))
+      .required(t("form.errorMessage.agreement")),
   });
 
   const formikContacts = useFormik({
@@ -82,8 +83,8 @@ const CustomForm = (props) => {
     }
   });
 
-  const openModal = () => {
-    props.dispatch(setModal(true))
+  const openModal = (param) => () => {
+    props.dispatch(setModal(true, param))
   }
 
   const closeModal = () => {
@@ -105,7 +106,7 @@ const CustomForm = (props) => {
           className={props.classNameTitleContainer}
         >
           <h2>
-            Contatti
+            {props.formTitle}
           </h2>
         </Box>
       </Grid>
@@ -118,11 +119,11 @@ const CustomForm = (props) => {
         <Box
           className={props.classNameInfoContainer}
         >
-          <p>Dove siamo</p>
+          <p>{t("contactInfo.location")}</p>
           <p>Via Varese, 27/38</p>
           <p>Lissone (MB)</p>
 
-          <p>Contattaci</p>
+          <p>{t("contactInfo.contact")}</p>
           <p>job@beije.it</p>
           <p>commerciale@beije.it</p>
 
@@ -144,7 +145,7 @@ const CustomForm = (props) => {
               <TextField
                 id="name"
                 name="name"
-                label="Name"
+                label={t("form.placeholder.name")}
                 type="text"
                 value={formikContacts.values.name}
                 error={formikContacts.touched.name && Boolean(formikContacts.errors.name)}
@@ -166,7 +167,7 @@ const CustomForm = (props) => {
               <TextField
                 id="surname"
                 name="surname"
-                label="Surname"
+                label={t("form.placeholder.surname")}
                 type="text"
                 value={formikContacts.values.surname}
                 error={formikContacts.touched.surname && Boolean(formikContacts.errors.surname)}
@@ -192,7 +193,7 @@ const CustomForm = (props) => {
                 <TextField
                   id="email"
                   name="email"
-                  label="Email"
+                  label={t("form.placeholder.email")}
                   type="email"
                   value={formikContacts.values.email}
                   error={formikContacts.touched.email && Boolean(formikContacts.errors.email)}
@@ -212,7 +213,7 @@ const CustomForm = (props) => {
                 <TextField
                   id="town"
                   name="town"
-                  label="Town"
+                  label={t("form.placeholder.town")}
                   type="text"
                   value={formikContacts.values.town}
                   error={formikContacts.touched.town && Boolean(formikContacts.errors.town)}
@@ -235,9 +236,8 @@ const CustomForm = (props) => {
               <TextareaAutosize
                 id="message"
                 name="message"
-                label="Message"
                 type="text"
-                placeholder="Write here your message"
+                placeholder={t("form.placeholder.message")}
                 value={formikContacts.values.message}
                 error={formikContacts.touched.message && Boolean(formikContacts.errors.message)}
                 helperText={formikContacts.touched.message && formikContacts.errors.message}
@@ -258,13 +258,13 @@ const CustomForm = (props) => {
                 label={
                   <>
                     <span>
-                      Ho letto e accetto il &nbsp;
+                      {t("form.placeholder.agreement.part1")} &nbsp;
                     </span>
                     <span
                       className="form-agreement-link-modal"
-                      onClick={openModal}
+                      onClick={openModal("privacyPolicies")}
                     >
-                      trattamento dei miei dati personali
+                      {t("form.placeholder.agreement.part2")}
                     </span>
                   </>
                 }
@@ -275,8 +275,6 @@ const CustomForm = (props) => {
                     value={formikContacts.values.agreement}
                     checked={formikContacts.values.agreement}
                     error={formikContacts.touched.agreement && Boolean(formikContacts.errors.agreement)}
-                    // onChange={formikContacts.handleChange("agreement")}
-                    // onBlur={(e) => formikContacts.handleBlur(e)}
                     onChange={formikContacts.handleChange}
                     onBlur={formikContacts.handleBlur}
 
@@ -295,7 +293,13 @@ const CustomForm = (props) => {
               <CustomModal
                 callbackClose={closeModal}
               >
-                <PrivacyPolicies />
+                <object
+                  data={t("modal.doc_lang") === "doc_it" ? pdf_privacyPolicies_it : pdf_privacyPolicies_en}
+                  type="application/pdf"
+                  width="100%"
+                  height="100%">
+                  <p>Alternative text - include a link <a href={pdf_privacyPolicies_en}>to the PDF!</a></p>
+                </object>
               </CustomModal>
             </Grid>
             <Grid
@@ -316,7 +320,7 @@ const CustomForm = (props) => {
             >
               <CustomButton
                 type={"btn-form-primary"}
-                content={"Invia"}
+                content={t("form.btn")}
                 callback={formikContacts.submitForm}
               // disabled={!(state.captchaCheck && formikContacts.isValid && formikContacts.dirty)}
               />

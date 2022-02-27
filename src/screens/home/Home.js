@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { truncate } from "lodash";
 
 // Redux
 import { connect } from "react-redux";
@@ -290,7 +289,9 @@ const Home = (props) => {
           <Box
             className={"home-seventh-section-box-form"}
           >
-            <CustomForm />
+            <CustomForm
+              formTitle={t("home.form.title")}
+            />
           </Box>
         </Container>
       </Box>

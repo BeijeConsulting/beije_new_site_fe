@@ -40,6 +40,10 @@ const CustomIconButton = (props) => {
     return currentIconClassName;
   }
 
+  const handleClick = () => {
+    props.callback()
+  }
+
 
   return (
     <IconButton
@@ -47,6 +51,7 @@ const CustomIconButton = (props) => {
       className={switchClassName()}
       href={props.href}
       target={props.target}
+      onClick={handleClick}
     >
       {props.fontAwesomeIcon &&
         <FontAwesomeIcon

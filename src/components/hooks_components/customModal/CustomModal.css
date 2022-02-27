@@ -1,6 +1,6 @@
 .modal-container {
   margin: auto;
-  height: 60vh;
+  height: 90vh;
 }
 
 .modal-txt-container {
@@ -12,9 +12,24 @@
   border: 1px solid var(--dark-grey);
   padding: 30px;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.modal-header {
+  margin-right: 20px;
+  margin-bottom: 30px;
 }
 
 .modal-content {
-  height: 100%;
-  overflow-y: scroll;
+  height: 80%;
+}
+
+.modal-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: 30px;
 }
