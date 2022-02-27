@@ -25,7 +25,8 @@ const BurgerMenu = (props) => {
   const [state, setState] = useState({
     openMenu: undefined,
     stateLink: false,
-    idElement: null
+    idElement: null,
+    firstClick: false
   })
 
   const handleOpenNavMenu = () => {
@@ -37,7 +38,8 @@ const BurgerMenu = (props) => {
     }
 
     setState({
-      openMenu: !state.openMenu
+      openMenu: !state.openMenu,
+      firstClick: true
     });
   };
 
@@ -131,7 +133,10 @@ const BurgerMenu = (props) => {
       </IconButton>
 
       {/* Background menu */}
-      <div className={state.openMenu ? "burgerMenu-background" : "burgerMenu-background-reverse"} />
+      {state.firstClick &&
+        <div className={state.openMenu ? "burgerMenu-background" : "burgerMenu-background-reverse"} />
+      }
+
 
       {
         state.openMenu &&
