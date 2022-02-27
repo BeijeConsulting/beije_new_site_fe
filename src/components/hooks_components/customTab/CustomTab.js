@@ -1,10 +1,8 @@
 import React, { useState } from "react"
+import { useTranslation } from "react-i18next";
 
 // MUI 
-import { Box, Grid, Tab, Typography } from '@mui/material';
-import TabContext from '@mui/lab/TabContext';
-import TabList from '@mui/lab/TabList';
-import TabPanel from '@mui/lab/TabPanel';
+import { Box } from '@mui/material';
 
 // Style
 import "./CustomTab.css"
@@ -14,19 +12,47 @@ import CustomButton from "../../functional_components/ui/customButton/CustomButt
 const tabObj = [
   {
     labelTab: "Item 1",
-    contentPanel: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.",
+    contentPanel: [
+      {
+        spanContent: "ciccio ",
+        classNameSpan: "hightlight-txt-white"
+      },
+      {
+        spanContent: "bello",
+        classNameSpan: ""
+      }
+    ]
   },
   {
     labelTab: "Item 2",
-    contentPanel: "Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. ",
+    contentPanel: [
+      {
+        spanContent: "casa ",
+        classNameSpan: "hightlight-txt-white"
+      },
+      {
+        spanContent: "blanca",
+        classNameSpan: ""
+      }
+    ]
   },
   {
     labelTab: "Item 3",
-    contentPanel: "Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.",
+    contentPanel: [
+      {
+        spanContent: "ciccio",
+        classNameSpan: "hightlight-txt-white"
+      },
+      {
+        spanContent: "bello",
+        classNameSpan: ""
+      }
+    ]
   }
 ]
 
 const CustomTab = (props) => {
+  const { t } = useTranslation()
   const [state, setState] = useState({
     value: 0
   })
@@ -55,7 +81,6 @@ const CustomTab = (props) => {
 
     )
   }
-
   const printPanelContent = (item, key) => {
     if (key === state.value) {
       return (
@@ -65,10 +90,43 @@ const CustomTab = (props) => {
           className={props.classNamePanel}
 
         >
-          {item.contentPanel}
+          {item.contentPanel.map(printAllSpan)}
         </Box >
       )
     }
+  }
+
+  const printAllSpan = (interItem, interalKey) => {
+    return (
+      <span
+        key={interalKey}
+        className={interItem.classNameSpan}
+      >
+        {t(interItem.spanContent)}
+      </span>
+    )
+  }
+
+  const switchClassName = () => {
+    let currentClassName = null;
+    switch (props.bgPanel) {
+      case "vision":
+        currentClassName = "tab-panels-container tab-panel-vision-bg"
+        break;
+      case "mission":
+        currentClassName = "tab-panels-container tab-panel-mission-bg"
+        break;
+      case "history":
+        currentClassName = "tab-panels-container tab-panel-history-bg"
+        break;
+      case "value":
+        currentClassName = "tab-panels-container tab-panel-vision-bg"
+        break;
+      default:
+        currentClassName = "tab-panels-container"
+        break;
+    }
+    return currentClassName;
   }
 
   return (
@@ -76,7 +134,9 @@ const CustomTab = (props) => {
       <Box className={"tab-labels-container"}>
         {props.obj.map(printLabels)}
       </Box>
-      <Box className={"tab-panels-container"}>
+      <Box
+        className={switchClassName()}
+      >
         {props.obj.map(printPanelContent)}
       </Box>
     </Box>
@@ -91,7 +151,8 @@ CustomTab.defaultProps = {
   classNameLabelActive: "tab-lables tab-lables-active",
   typographyPanel: "p",
   classNamePanel: "tab-panels",
-  obj: tabObj
+  obj: tabObj,
+  bgPanel: "vision"
 }
 
 export default CustomTab

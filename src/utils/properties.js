@@ -158,23 +158,132 @@ export const social_list = [
   }
 ]
 
+
 // Tab About Us
 export const tab_aboutUs = [
   {
     labelTab: "La nostra visione",
-    contentPanel: "Le persone al centro del nostro futuro.",
+    contentPanel: [
+      {
+        spanContent: "home.tab.vision.content.part1",
+        classNameSpan: ""
+      },
+      {
+        spanContent: "home.tab.vision.content.part2",
+        classNameSpan: "hightlight-txt-white"
+      },
+      {
+        spanContent: "home.tab.vision.content.part3",
+        classNameSpan: ""
+      },
+      {
+        spanContent: "home.tab.vision.content.part4",
+        classNameSpan: "hightlight-txt-white"
+      }
+    ]
   },
   {
     labelTab: "La nostra missione",
-    contentPanel: "Aiutiamo le aziende a realizzare progetti innovativi attraverso Team di Valore. ",
+    contentPanel: [
+      {
+        spanContent: "home.tab.mission.content.part1",
+        classNameSpan: ""
+      },
+      {
+        spanContent: "home.tab.mission.content.part2",
+        classNameSpan: "hightlight-txt-white"
+      },
+      {
+        spanContent: "home.tab.mission.content.part3",
+        classNameSpan: ""
+      },
+      {
+        spanContent: "home.tab.mission.content.part4",
+        classNameSpan: "hightlight-txt-white"
+      }
+    ]
   },
   {
     labelTab: "La nostra storia",
-    contentPanel: "Al centro del modello Beije c’è una vision people first: le persone al centro per la creazione di un’azienda di valore. Da un ideale ad un business: da più di 10 anni ci impegniamo costantemente per aggiornare il nostro know-how e siamo in grado di fornire le metodologie più moderne e le tecnologie più innovative per la realizzazione di progetti altamente specializzati.",
+    contentPanel: [
+      {
+        spanContent: "home.tab.history.content.part1",
+        classNameSpan: ""
+      },
+      {
+        spanContent: "home.tab.history.content.part2",
+        classNameSpan: "hightlight-txt-white"
+      },
+      {
+        spanContent: "home.tab.history.content.part3",
+        classNameSpan: ""
+      },
+      {
+        spanContent: "home.tab.history.content.part4",
+        classNameSpan: "hightlight-txt-white"
+      },
+      {
+        spanContent: "home.tab.history.content.part5",
+        classNameSpan: ""
+      },
+      {
+        spanContent: "home.tab.history.content.part6",
+        classNameSpan: "hightlight-txt-white"
+      },
+      {
+        spanContent: "home.tab.history.content.part7",
+        classNameSpan: ""
+      },
+      {
+        spanContent: "home.tab.history.content.part8",
+        classNameSpan: "hightlight-txt-white"
+      }
+    ]
   },
   {
     labelTab: "I nostri valori",
-    contentPanel: "Crediamo in quello che facciamo e abbiamo un profondo RISPETTO per gli altri Mostriamo GRATITUDINE per l’impegno che ogni giorno mettiamo nel nostro lavoro Prima viene la squadra e poi l’individuo, il nostro è un lavoro di TEAM La base per costruire la nostra community è sviluppare un SENSO DI APPARTENENZA. ",
+    contentPanel: [
+      {
+        spanContent: "home.tab.values.content.part1",
+        classNameSpan: ""
+      },
+      {
+        spanContent: "home.tab.values.content.part2",
+        classNameSpan: "hightlight-txt-white"
+      },
+      {
+        spanContent: "home.tab.values.content.part3",
+        classNameSpan: ""
+      },
+      {
+        spanContent: "home.tab.values.content.part4",
+        classNameSpan: ""
+      },
+      {
+        spanContent: "home.tab.values.content.part5",
+        classNameSpan: "hightlight-txt-white"
+      },
+      {
+        spanContent: "home.tab.values.content.part6",
+        classNameSpan: ""
+      },
+      {
+        spanContent: "home.tab.values.content.part7",
+        classNameSpan: ""
+      },
+      {
+        spanContent: "home.tab.values.content.part8",
+        classNameSpan: "hightlight-txt-white"
+      },
+      {
+        spanContent: "home.tab.values.content.part9",
+        classNameSpan: ""
+      },
+      {
+        spanContent: "home.tab.values.content.part10",
+        classNameSpan: "hightlight-txt-white"
+      }
+    ]
   }
 ]
 

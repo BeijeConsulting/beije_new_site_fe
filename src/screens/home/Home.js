@@ -97,7 +97,14 @@ const Home = (props) => {
       >
         <h2 className={"home-second-section-txt"}>
           <span className={"home-second-section-quotation-marks"}>&#8220;</span>
-          <span>Lavoriamo costantemente per arrivare <br />alla piena soddisfazione <br />dei nostri clienti</span>
+          <span>
+            {t("home.secondSection.part1")}
+            <br />
+            {t("home.secondSection.part2")}
+            <br />
+            {t("home.secondSection.part3")}
+          </span>
+          {/* <span>Lavoriamo costantemente per arrivare <br />alla piena soddisfazione <br />dei nostri clienti</span> */}
           <span className={"home-second-section-quotation-marks"}>&#8222;</span>
         </h2>
       </Container>
@@ -137,9 +144,9 @@ const Home = (props) => {
           className={"home-fourth-section-container paddingX-container-default top-oblique-line"}
         >
           <Box>
-            <p><strong>Le persone</strong></p>
-            <p><strong>Al centro</strong></p>
-            <p><strong>Del nostro futuro</strong></p>
+            <p><strong>{t("home.fourthSection.title.part1")}</strong></p>
+            <p><strong>{t("home.fourthSection.title.part2")}</strong></p>
+            <p><strong>{t("home.fourthSection.title.part3")}</strong></p>
           </Box>
         </Container>
 
@@ -155,20 +162,111 @@ const Home = (props) => {
             className={"home-fifth-section-container paddingX-container-default"}
           >
             <Box className={"home-fifth-section-first-box "}>
-              <h2>Chi siamo</h2>
+              <h2>{t("home.fifthSection.title")}</h2>
             </Box>
             <Box className={"home-fifth-section-second-box"}>
               <p>
-                Siamo una community di professionisti informatici, ricercatori di nuovi talenti e marketers con un obiettivo: le persone al centro del nostro futuro.
-                Ci impegniamo per progettare ed offrire soluzioni che danno vita a nuove realtà
-                e formiamo gli sviluppatori del domani.
-                È la condivisione di uno scopo comune, è un approccio “out of the box”, è il rapporto con il cliente, è un sistema People First.
-                Ti aspettiamo, segui il cambiamento.
+                <span
+                  className="home-fifth-section-span"
+                >
+                  {t("home.fifthSection.content.part1")}
+                </span>
+
+                <span
+                  className="home-fifth-section-span-strong"
+                >
+                  <strong>{t("home.fifthSection.content.part2")}</strong>
+                </span>
+
+                <span
+                  className="home-fifth-section-span"
+                >
+                  {t("home.fifthSection.content.part3")}
+                </span>
+
+                <span
+                  className="home-fifth-section-span-strong"
+                >
+                  <strong>{t("home.fifthSection.content.part4")}</strong>
+                </span>
+
+                <span
+                  className="home-fifth-section-span"
+                >
+                  {t("home.fifthSection.content.part5")}
+                </span>
+
+                <span
+                  className="home-fifth-section-span-strong"
+                >
+                  <strong>{t("home.fifthSection.content.part6")}</strong>
+                </span>
+
+                <span
+                  className="home-fifth-section-span"
+                >
+                  {t("home.fifthSection.content.part7")}
+                </span>
+
+                <span
+                  className="home-fifth-section-span-strong"
+                >
+                  <strong>{t("home.fifthSection.content.part8")}</strong>
+                </span>
+
+                <span
+                  className="home-fifth-section-span"
+                >
+                  {t("home.fifthSection.content.part9")}
+                </span>
+
+                <span
+                  className="home-fifth-section-span-strong"
+                >
+                  <strong>{t("home.fifthSection.content.part10")}</strong>
+                </span>
+
+                <span
+                  className="home-fifth-section-span"
+                >
+                  {t("home.fifthSection.content.part11")}
+                </span>
+
+                <span
+                  className="home-fifth-section-span-strong"
+                >
+                  <strong>{t("home.fifthSection.content.part12")}</strong>
+                </span>
+
+                <span
+                  className="home-fifth-section-span"
+                >
+                  {t("home.fifthSection.content.part13")}
+                </span>
+
+                <span
+                  className="home-fifth-section-span-strong"
+                >
+                  <strong>{t("home.fifthSection.content.part14")}</strong>
+                </span>
+
+                <span
+                  className="home-fifth-section-span"
+                >
+                  {t("home.fifthSection.content.part15")}
+                </span>
+
+                <br />
+                <span
+                  className="home-fifth-section-span"
+                >
+                  {t("home.fifthSection.content.part16")}
+                </span>
               </p>
-              <CustomLink
+              {/* <CustomLink
                 linkTo=""
                 content="Read more"
-              />
+              /> */}
             </Box>
           </Container>
 

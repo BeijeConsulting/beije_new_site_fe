@@ -18,14 +18,95 @@
     "contacts": "Contacts",
     "blog": "Blog",
     "community": "Community",
-    "focusAcademy": "FocusAcademy"
+    "focusAcademy": "Focus Academy"
   },
   "home": {
     "firstSection": {
       "title": {
-        "part1": "We help companies to implement",
-        "part2": "innovative projects through",
+        "part1": "We help companies to implement ",
+        "part2": "innovative projects through ",
         "part3": "Valuable Teams"
+      }
+    },
+    "secondSection": {
+      "part1": "We are constantly working to achieve ",
+      "part2": "full satisfaction ",
+      "part3": "of our customers"
+    },
+    "tab": {
+      "vision": {
+        "title": "La nostra visione",
+        "content": {
+          "part1": "",
+          "part2": "People ",
+          "part3": "at the heart of our ",
+          "part4": "future "
+        }
+      },
+      "mission": {
+        "title": "La nostra missione",
+        "content": {
+          "part1": "We help companies to implement ",
+          "part2": "innovative projects ",
+          "part3": "through ",
+          "part4": "Valuable Teams "
+        }
+      },
+      "history": {
+        "title": "La nostra storia",
+        "content": {
+          "part1": "At the heart of the ",
+          "part2": "Beije model ",
+          "part3": "is a people first vision: people at the center for a ",
+          "part4": "valuable ",
+          "part5": "company. From an ideal to a business: for more than 10 years we are constantly committed to update our ",
+          "part6": "know-how ",
+          "part7": "and we are able to provide the most advanced methodologies and the most innovative technologies for the realization of ",
+          "part8": "highly specialized projects"
+        }
+      },
+      "values": {
+        "title": "I nostri valori",
+        "content": {
+          "part1": "We believe in what we do and have a deep ",
+          "part2": "RESPECT ",
+          "part3": "for the others ",
+          "part4": "We show ",
+          "part5": "GRATITUDE ",
+          "part6": "for the commitment we put into our work every day ",
+          "part7": "First comes the team and then the individual, ours is a ",
+          "part8": "TEAM ",
+          "part9": "work The basis for building our community is developing a ",
+          "part10": "SENSE OF BELONGING"
+        }
+      }
+    },
+    "fourthSection": {
+      "title": {
+        "part1": "People at the",
+        "part2": "heart",
+        "part3": "of our future"
+      }
+    },
+    "fifthSection": {
+      "title": "About Us",
+      "content": {
+        "part1": "We are a ",
+        "part2": "community ",
+        "part3": "of IT professionals, talent seekers and marketers with one goal: ",
+        "part4": "people ",
+        "part5": "at the ",
+        "part6": "heart ",
+        "part7": "of our ",
+        "part8": "future ",
+        "part9": ". We strive to design and deliver solutions that bring ",
+        "part10": "new realities ",
+        "part11": "to life and train the ",
+        "part12": "developers of tomorrow ",
+        "part13": ". It is the sharing of a common purpose, it is an “out of the box” approach, it is the relationship with the customer, it is a ",
+        "part14": "People First",
+        "part15": " system.",
+        "part16": "We are waiting for you, follow the change."
       }
     }
   }

@@ -14,11 +14,15 @@
     "academy": "Beije Talent Academy",
     "up": "Beije Up",
     "career": "Lavora con noi",
-    "whoWeAre": "Chi siamo",
-    "contacts": "Contacts",
+    "aboutUs": "Chi siamo",
+    "contacts": "Contatti",
     "blog": "Blog",
     "community": "Community",
-    "focusAcademy": "FocusAcademy"
+    "focusAcademy": "Focus Academy"
+  },
+  "contactInfo": {
+    "location": "Dove siamo",
+    "contact": "Contattaci"
   },
   "home": {
     "firstSection": {
@@ -26,6 +30,87 @@
         "part1": "Aiutiamo le aziende a realizzare",
         "part2": "progetti innovativi attraverso",
         "part3": "Team di Valore"
+      }
+    },
+    "secondSection": {
+      "part1": "Lavoriamo costantemente per arrivare",
+      "part2": "alla piena soddisfazione",
+      "part3": "dei nostri clienti"
+    },
+    "tab": {
+      "vision": {
+        "title": "La nostra visione",
+        "content": {
+          "part1": "Le ",
+          "part2": "persone ",
+          "part3": "al centro del nostro ",
+          "part4": "futuro "
+        }
+      },
+      "mission": {
+        "title": "La nostra missione",
+        "content": {
+          "part1": "Aiutiamo le aziende a realizzare ",
+          "part2": "progetti innovativi ",
+          "part3": "attraverso un ",
+          "part4": "Team di Valore "
+        }
+      },
+      "history": {
+        "title": "La nostra storia",
+        "content": {
+          "part1": "Al centro del ",
+          "part2": "modello Beije ",
+          "part3": "c’è una vision people first: le persone al centro per la creazione di un’azienda di ",
+          "part4": "valore",
+          "part5": ". Da un ideale ad un business: da più di 10 anni ci impegniamo costantemente per aggiornare il nostro ",
+          "part6": "know-how ",
+          "part7": "e siamo in grado di fornire le metodologie più moderne e le tecnologie più innovative per la realizzazione di ",
+          "part8": "progetti altamente specializzati"
+        }
+      },
+      "values": {
+        "title": "I nostri valori",
+        "content": {
+          "part1": "Crediamo in quello che facciamo e abbiamo un profondo ",
+          "part2": "RISPETTO ",
+          "part3": "per gli altri ",
+          "part4": "Mostriamo ",
+          "part5": "GRATITUDINE ",
+          "part6": "per l’impegno che ogni giorno mettiamo nel nostro lavoro",
+          "part7": "Prima viene la squadra e poi l’individuo, il nostro è un lavoro di ",
+          "part8": "TEAM ",
+          "part9": "La base per costruire la nostra community è sviluppare un ",
+          "part10": "SENSO DI APPARTENENZA"
+        }
+      }
+    },
+    "fourthSection": {
+      "title": {
+        "part1": "Le persone",
+        "part2": "Al centro",
+        "part3": "Del nostro futuro"
+      }
+    },
+    "fifthSection": {
+      "title": "Chi siamo",
+      "content": {
+        "part1": "Siamo una ",
+        "part2": "community ",
+        "part3": "di professionisti informatici, ricercatori di nuovi talenti e marketers con un obiettivo: le ",
+        "part4": "persone ",
+        "part5": "al ",
+        "part6": "centro ",
+        "part7": "del nostro ",
+        "part8": "futuro ",
+        "part9": ". Ci impegniamo per progettare ed offrire soluzioni che danno vita a ",
+        "part10": "nuove realtà ",
+        "part11": "e formiamo gli ",
+        "part12": "sviluppatori del domani ",
+        "part13": ". È la condivisione di uno scopo comune, è un approccio “out of the box”, è il rapporto con il cliente, è un sistema ",
+        "part14": "People First",
+        "part15": ".",
+        "part16": "Ti aspettiamo, segui il cambiamento."
       }
     }
   }

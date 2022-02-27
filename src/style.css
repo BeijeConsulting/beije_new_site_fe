@@ -219,6 +219,11 @@ h3, h4, h5, h6 {
   color: var(--red)
 }
 
+.hightlight-txt-white {
+  color: var(--white);
+  font-family: var(--moderat-bold);
+}
+
 /* DISPLAY */
 .display-none {
   display: none;
