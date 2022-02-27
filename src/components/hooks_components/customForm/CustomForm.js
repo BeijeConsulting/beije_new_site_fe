@@ -298,7 +298,7 @@ const CustomForm = (props) => {
                   modalTitle="Privacy Policy"
                   src={t("modal.doc_lang") === "doc_it" ? privacyPolicies_it : privacyPolicies_en}
                   alt={t("altImages.privacyPolicies")}
-                  style={{ width: "100%" }}
+                  className="width-100"
                 />
               </CustomModal>
             </Grid>

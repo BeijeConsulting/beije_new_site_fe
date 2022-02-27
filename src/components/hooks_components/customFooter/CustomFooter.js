@@ -138,7 +138,7 @@ const CustomFooter = (props) => {
             modalTitle="Privacy Policy"
             src={t("modal.doc_lang") === "doc_it" ? privacyPolicies_it : privacyPolicies_en}
             alt={t("altImages.privacyPolicies")}
-            style={{ width: "100%" }}
+            className="width-100"
           />
         }
         {
@@ -147,7 +147,7 @@ const CustomFooter = (props) => {
           <img
             src={t("modal.doc_lang") === "doc_it" ? legalNotes_it : legalNotes_en}
             alt={t("altImages.legalNotes")}
-            style={{ width: "100%" }}
+            className="width-100"
           />
         }
 
