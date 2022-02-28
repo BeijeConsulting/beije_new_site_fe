@@ -42,6 +42,7 @@
   -ms-flex-pack: end;
   justify-content: flex-end;
   aspect-ratio: 1 / 1;
+  /* min-height: 144px; */
 }
 
 .swiper-slide p {
@@ -103,13 +104,27 @@
   background-image: var(--profile_francesca_bellini);
 }
 
+/* @media(max-width: 400px) {
+  .swiper-slide {
+    height: 190px;
+  }
+} */
+
 @media(max-width: 600px) {
+  /* .swiper-slide {
+    height: 200px;
+  } */
+
   .swiper-slide p {
     font-size: 0.7rem;
   }
 }
 
 @media(min-width: 768px) {
+  /* .swiper-slide {
+    height: 240px;
+  } */
+
   .swiper-button-prev, .swiper-button-next {
     color: var(--white);
     display: block;
