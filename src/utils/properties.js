@@ -179,19 +179,28 @@ export const tab_aboutUs = [
     contentPanel: [
       {
         spanContent: "home.tab.vision.content.part1",
-        classNameSpan: ""
+        classNameSpan: "hightlight-on-hover",
+        test: ""
       },
       {
         spanContent: "home.tab.vision.content.part2",
-        classNameSpan: "hightlight-txt-white"
+        classNameSpan: "hightlight-txt-white hightlight-on-hover",
+        test: ""
       },
       {
         spanContent: "home.tab.vision.content.part3",
-        classNameSpan: ""
+        classNameSpan: "hightlight-on-hover",
+        test: ""
       },
       {
         spanContent: "home.tab.vision.content.part4",
-        classNameSpan: "hightlight-txt-white"
+        classNameSpan: "hightlight-txt-white hightlight-on-hover",
+        test: "break"
+      },
+      {
+        spanContent: "home.tab.vision.content.part5",
+        classNameSpan: "",
+        test: ""
       }
     ]
   },

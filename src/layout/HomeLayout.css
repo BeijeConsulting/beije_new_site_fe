@@ -22,3 +22,123 @@
 .homeLayout-up-bg {
   background-color: var(--blue);
 }
+
+/* Loading */
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--dark-grey);
+  z-index: 9999;
+}
+
+.loading-text {
+  position: center;
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+}
+
+.loading-text span {
+  display: inline-block;
+  margin: 0 5px;
+  color: #fff;
+  font-family: 'Quattrocento Sans', sans-serif;
+}
+
+.loading-text span:nth-child(n) {
+  filter: blur(0px);
+  animation: blur-text 1.5s (n/5)+s infinite linear alternate;
+}
+
+/* .loading-text span:nth-child(1) {
+  animation: blur-text 1.5s infinite 1 alternate;
+}
+
+.loading-text span:nth-child(2) {
+  filter: blur(0px);
+  animation: blur-text 1.5s infinite 1.15 alternate;
+}
+
+.loading-text span:nth-child(3) {
+  filter: blur(0px);
+  animation: blur-text 1.5s infinite 1.2 alternate;
+}
+
+.loading-text span:nth-child(4) {
+  filter: blur(0px);
+  animation: blur-text 1.5s infinite 1.25 alternate;
+}
+
+.loading-text span:nth-child(5) {
+  filter: blur(0px);
+  animation: blur-text 1.5s infinite 1.3 alternate;
+}
+
+.loading-text span:nth-child(6) {
+  filter: blur(0px);
+  animation: blur-text 1.5s infinite 1.35 alternate;
+}
+
+.loading-text span:nth-child(7) {
+  filter: blur(0px);
+  animation: blur-text 1.5s infinite 1.4 alternate;
+}
+
+.loading-text span:nth-child(8) {
+  filter: blur(0px);
+  animation: blur-text 1.5s infinite 1.45 alternate;
+}
+
+.loading-text span:nth-child(9) {
+  filter: blur(0px);
+  animation: blur-text 1.5s infinite 1.5 alternate;
+}
+
+.loading-text span:nth-child(10) {
+  filter: blur(0px);
+  animation: blur-text 1.5s infinite 1.55 alternate;
+}
+
+.loading-text span:nth-child(11) {
+  filter: blur(0px);
+  animation: blur-text 1.5s infinite 1.6 alternate;
+}
+
+.loading-text span:nth-child(12) {
+  filter: blur(0px);
+  animation: blur-text 1.5s infinite 1.65 alternate;
+}
+
+.loading-text span:nth-child(13) {
+  filter: blur(0px);
+  animation: blur-text 1.5s infinite 1.7 alternate;
+}
+
+.loading-text span:nth-child(14) {
+  filter: blur(0px);
+  animation: blur-text 1.5s infinite 1.75 alternate;
+}
+
+.loading-text span:nth-child(15) {
+  filter: blur(0px);
+  animation: blur-text 1.5s infinite 1.8 alternate;
+
+}
+
+.loading-text span:nth-child(16) {
+  filter: blur(0px);
+  animation: blur-text 1.5s infinite 1.85 alternate;
+} */
+
+@keyframes blur-text {
+  0% {
+    filter: blur(0px);
+  }
+
+  100% {
+    filter: blur(4px);
+  }
+}

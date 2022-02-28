@@ -1,3 +1,8 @@
+.tab-container:hover .hightlight-on-hover {
+  font-size: 3rem;
+  transition: 1.5s;
+}
+
 .tab-container {
   display: -webkit-box;
   display: -ms-flexbox;
