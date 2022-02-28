@@ -1,6 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+// Redux
+import { connect } from 'react-redux';
+
 // Style
 import "./CustomNavbar.css";
 
@@ -40,7 +43,12 @@ const CustomNavbar = (props) => {
       // }
       >
         Beije Up
+        {
+          props.currentPageDuck.currentPage === "up" &&
+          <div className="navbarTop-up-hightlight"></div>
+        }
       </NavLink>
+
 
       <NavLink
         to=""
@@ -61,4 +69,11 @@ CustomNavbar.defaultProps = {
   // notActiveClassName: "navbar-not-active-links"
 }
 
-export default CustomNavbar
+const mapStateToProps = state => (
+  {
+    currentPageDuck: state.currentPageDuck
+  }
+)
+
+
+export default connect(mapStateToProps)(CustomNavbar)

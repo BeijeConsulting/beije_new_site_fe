@@ -61,6 +61,50 @@
   }
 }
 
+/* Page on focus */
+.navbarTop-up-hightlight {
+  position: absolute;
+  width: 100%;
+  bottom: -5px;
+  left: 0;
+  border-bottom: 2px solid var(--blue);
+  -webkit-animation: createUndeline linear 1.5s;
+  animation: createUndeline linear 1.5s;
+}
+
+@-webkit-keyframes createUndeline {
+  0% {
+    width: 0%;
+  }
+
+  50% {
+    width: 50%;
+  }
+
+  100% {
+    width: 100%;
+  }
+
+}
+
+@keyframes createUndeline {
+  0% {
+    width: 0%;
+  }
+
+  50% {
+    width: 50%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+.navbarTop-up-hightlight:hover {
+  display: none;
+}
+
 /* NAVBAR HOME */
 .navbar-container-secondary {
   display: flex;
