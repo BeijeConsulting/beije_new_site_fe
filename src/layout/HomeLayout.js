@@ -22,9 +22,6 @@ import HideOnScroll from "../components/functional_components/ui/hideOnScroll/Hi
 import BackToTopButton from "../components/functional_components/ui/backToTopButton/BackToTopButton";
 
 const HomeLayout = (props) => {
-
-  console.log("currentPage", props.currentPageDuck.currentPage);
-
   const [state, setState] = useState({
     isMobile: window.innerWidth < 1024
   })

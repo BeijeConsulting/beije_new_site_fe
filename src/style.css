@@ -58,7 +58,6 @@
   --line-height-h2-xlg: 60px;
   --font-size-more-h3-xlg: 1.5rem;
   --line-height-more-h3-xlg: 35px;
-
 }
 
 * {
@@ -293,6 +292,10 @@ h3, h4, h5, h6 {
 }
 
 /* PADDING */
+.padding-0 {
+  padding: 0px !important;
+}
+
 .paddingX-container-default {
   padding-left: 11.2% !important;
   padding-right: 11.2% !important;
