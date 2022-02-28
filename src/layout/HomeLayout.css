@@ -48,90 +48,91 @@
   font-family: 'Quattrocento Sans', sans-serif;
 }
 
-.loading-text span:nth-child(n) {
+/* .loading-text span:nth-child(n) {
   filter: blur(0px);
   animation: blur-text 1.5s (n/5)+s infinite linear alternate;
-}
+} */
 
-/* .loading-text span:nth-child(1) {
-  animation: blur-text 1.5s infinite 1 alternate;
+.loading-text span:nth-child(1) {
+  /* filter: blur(0px); */
+  animation: blur-text 1.5s 2s infinite linear alternate;
 }
 
 .loading-text span:nth-child(2) {
-  filter: blur(0px);
-  animation: blur-text 1.5s infinite 1.15 alternate;
+  /* filter: blur(0px); */
+  animation: blur-text 1.5s 2s infinite linear alternate;
 }
 
 .loading-text span:nth-child(3) {
-  filter: blur(0px);
-  animation: blur-text 1.5s infinite 1.2 alternate;
+  /* filter: blur(0px); */
+  animation: blur-text 1.5s 2s infinite linear alternate;
 }
 
 .loading-text span:nth-child(4) {
-  filter: blur(0px);
-  animation: blur-text 1.5s infinite 1.25 alternate;
+  /* filter: blur(0px); */
+  animation: blur-text 1.5s 2s infinite linear alternate;
 }
 
 .loading-text span:nth-child(5) {
-  filter: blur(0px);
-  animation: blur-text 1.5s infinite 1.3 alternate;
+  /* filter: blur(0px); */
+  animation: blur-text 1.5s 2s infinite linear alternate;
 }
 
 .loading-text span:nth-child(6) {
-  filter: blur(0px);
-  animation: blur-text 1.5s infinite 1.35 alternate;
+  /* filter: blur(0px); */
+  animation: blur-text 1.5s 2s infinite linear alternate;
 }
 
 .loading-text span:nth-child(7) {
-  filter: blur(0px);
-  animation: blur-text 1.5s infinite 1.4 alternate;
+  /* filter: blur(0px); */
+  animation: blur-text 1.5s 2s infinite linear alternate;
 }
 
 .loading-text span:nth-child(8) {
-  filter: blur(0px);
-  animation: blur-text 1.5s infinite 1.45 alternate;
+  /* filter: blur(0px); */
+  animation: blur-text 1.5s 2s infinite linear alternate;
 }
 
 .loading-text span:nth-child(9) {
-  filter: blur(0px);
-  animation: blur-text 1.5s infinite 1.5 alternate;
+  /* filter: blur(0px); */
+  animation: blur-text 1.5s 2s infinite linear alternate;
 }
 
 .loading-text span:nth-child(10) {
-  filter: blur(0px);
-  animation: blur-text 1.5s infinite 1.55 alternate;
+  /* filter: blur(0px); */
+  animation: blur-text 1.5s 2s infinite linear alternate;
 }
 
 .loading-text span:nth-child(11) {
-  filter: blur(0px);
-  animation: blur-text 1.5s infinite 1.6 alternate;
+  /* filter: blur(0px); */
+  animation: blur-text 1.5s 2s infinite linear alternate;
 }
 
 .loading-text span:nth-child(12) {
-  filter: blur(0px);
-  animation: blur-text 1.5s infinite 1.65 alternate;
+  /* filter: blur(0px); */
+  animation: blur-text 1.5s 2s infinite linear alternate;
 }
 
 .loading-text span:nth-child(13) {
-  filter: blur(0px);
-  animation: blur-text 1.5s infinite 1.7 alternate;
+  /* filter: blur(0px); */
+  animation: blur-text 1.5s 2s infinite linear alternate;
 }
 
 .loading-text span:nth-child(14) {
-  filter: blur(0px);
-  animation: blur-text 1.5s infinite 1.75 alternate;
+  /* filter: blur(0px); */
+  animation: blur-text 1.5s 2s infinite linear alternate;
 }
 
 .loading-text span:nth-child(15) {
-  filter: blur(0px);
-  animation: blur-text 1.5s infinite 1.8 alternate;
+  /* filter: blur(0px); */
+  animation: blur-text 1.5s 2s infinite linear alternate;
 
 }
 
 .loading-text span:nth-child(16) {
-  filter: blur(0px);
-  animation: blur-text 1.5s infinite 1.85 alternate;
-} */
+  /* filter: blur(0px); */
+  animation: blur-text 1.5s 2s infinite linear alternate;
+}
 
 @keyframes blur-text {
   0% {

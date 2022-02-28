@@ -25,7 +25,7 @@ const HomeLayout = (props) => {
 
   const [state, setState] = useState({
     isMobile: window.innerWidth < 1024,
-    loadingEnd: true
+    loadingEnd: false
   })
 
   useEffect(() => {
