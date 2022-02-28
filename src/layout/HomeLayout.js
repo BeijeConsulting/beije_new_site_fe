@@ -23,6 +23,8 @@ import BackToTopButton from "../components/functional_components/ui/backToTopBut
 
 const HomeLayout = (props) => {
 
+  console.log("currentPage", props.currentPageDuck.currentPage);
+
   const [state, setState] = useState({
     isMobile: window.innerWidth < 1024
   })
@@ -51,17 +53,43 @@ const HomeLayout = (props) => {
     }
   }
 
+  const switchClassBgLayout = () => {
+    let classNameBgLayout = null;
+    switch (props.currentPageDuck.currentPage) {
+      case "up":
+        classNameBgLayout = "homeLayout-fixed-bg homeLayout-up-bg"
+        break;
+      default:
+        classNameBgLayout = "homeLayout-fixed-bg homeLayout-video-filter"
+        break;
+    }
+    return classNameBgLayout;
+  }
+
+  const switchClassAppBar = () => {
+    let classNameAppBar = "bg-transparent";
+    if (props.colorHeaderDuck.colorHeader === "#262E36" || props.currentPageDuck.currentPage !== "") {
+      classNameAppBar = "bg-dark-grey"
+    }
+
+    return classNameAppBar
+  }
+
   return (
     <Box className={props.burgerMenuDuck.menuOpen ? "position-fixed" : ""} >
-      <div className={"homeLayout-video-filter"} />
-      <video className="homeLayout-video" autoPlay muted loop playsinline>
-        <source src="https://beije.s3.eu-west-1.amazonaws.com/video_home.mp4" type="video/mp4" />
-      </video>
+      <div className={switchClassBgLayout()} />
+      {
+        props.currentPageDuck.currentPage === "" &&
+        <video className="homeLayout-video" autoPlay muted loop playsinline>
+          <source src="https://beije.s3.eu-west-1.amazonaws.com/video_home.mp4" type="video/mp4" />
+        </video>
+      }
+
       {state.isMobile &&
         <HideOnScroll>
           <AppBar
             id="back-to-top-anchor"
-            className="bg-transparent"
+            className={props.currentPageDuck.currentPage === "" ? "bg-transparent" : "bg-dark-grey"}
           >
             <CustomHeader />
           </AppBar>
@@ -70,15 +98,16 @@ const HomeLayout = (props) => {
       {!state.isMobile &&
         <AppBar
           position="fixed"
-          className={props.colorHeaderDuck.colorHeader === "#262E36" ? "bg-dark-grey" : "bg-transparent"}
+          className={switchClassAppBar()}
         >
           <CustomHeader />
         </AppBar>
       }
-      <main className="scrollX-hidden">
+      <main className="scrollX-hidden min-height-main">
         <Outlet />
       </main>
-      {state.isMobile &&
+      {
+        state.isMobile &&
         <BackToTopButton>
           <Fab color="colorInherit" size="small" aria-label="scroll back to top">
             <KeyboardArrowUpIcon />
@@ -88,7 +117,7 @@ const HomeLayout = (props) => {
       <footer>
         <CustomFooter />
       </footer>
-    </Box>
+    </Box >
 
 
   );
@@ -97,7 +126,8 @@ const HomeLayout = (props) => {
 const mapStateToProps = state => (
   {
     burgerMenuDuck: state.burgerMenuDuck,
-    colorHeaderDuck: state.colorHeaderDuck
+    colorHeaderDuck: state.colorHeaderDuck,
+    currentPageDuck: state.currentPageDuck
   }
 )
 

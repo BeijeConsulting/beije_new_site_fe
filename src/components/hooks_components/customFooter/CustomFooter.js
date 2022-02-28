@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 // Redux
 import { connect } from "react-redux";
@@ -43,10 +44,24 @@ const CustomFooter = (props) => {
         className={"footer-logo-lang d-flex footer-padding-elements"}
       >
         <div>
-          <img src={logo_primary_light} alt="Logo Beije People First" className="footer-container-logo-desktop" />
+          <Link
+            to=""
+          >
+            <img
+              src={logo_primary_light}
+              alt="Logo Beije People First"
+              className="footer-container-logo-desktop" />
+          </Link>
         </div>
         <div>
-          <img src={logo_secondary_light} alt="Logo Beije People First" className="footer-container-logo-mobile" />
+          <Link
+            to=""
+          >
+            <img
+              src={logo_secondary_light}
+              alt="Logo Beije People First"
+              className="footer-container-logo-mobile" />
+          </Link>
         </div>
         <div>
           <SwitchLang />

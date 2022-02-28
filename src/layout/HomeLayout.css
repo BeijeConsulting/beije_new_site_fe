@@ -7,11 +7,18 @@
   z-index: -1000;
 }
 
-.homeLayout-video-filter {
+.homeLayout-fixed-bg {
   position: fixed;
   height: 100vh;
-  background-color: var(--dark-grey);
-  opacity: 85%;
   width: 100vw;
   z-index: -1;
+}
+
+.homeLayout-video-filter {
+  background-color: var(--dark-grey);
+  opacity: 85%;
+}
+
+.homeLayout-up-bg {
+  background-color: var(--blue);
 }

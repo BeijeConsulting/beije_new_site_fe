@@ -3,7 +3,7 @@ import React from "react";
 import Home from "./screens/home/Home";
 import NoMatch from "./screens/NoMatch";
 import HomeLayout from "./layout/HomeLayout";
-import TestScreen from "./screens/testScreen/TestScreen";
+import Up from "./screens/up/Up";
 
 export default [
   {
@@ -12,8 +12,8 @@ export default [
     children: [
       { index: true, element: <Home /> },
       {
-        path: "/test",
-        element: <TestScreen />,
+        path: "/beije-up",
+        element: <Up />,
         // children: [
         //   { index: true, element: <CoursesIndex /> },
         //   { path: "/courses/:id", element: <Course /> }

@@ -23,7 +23,7 @@ const CustomNavbar = (props) => {
     <nav className={switchClassName()}>
 
       <NavLink
-        to="/test"
+        to=""
       // className={switchClassName}
       // className={({ isActive }) =>
       //   isActive ? props.activeClassName : props.notActiveClassName
@@ -33,7 +33,7 @@ const CustomNavbar = (props) => {
       </NavLink>
 
       <NavLink
-        to=""
+        to="/beije-up"
       // className={switchClassName}
       // className={({ isActive }) =>
       //   isActive ? props.activeClassName : props.notActiveClassName

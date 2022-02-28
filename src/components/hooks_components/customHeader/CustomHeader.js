@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 // Redux
 import { connect } from 'react-redux';
@@ -15,7 +16,6 @@ import BurgerMenu from '../burgerMenu/BurgerMenu';
 import CustomNavbar from '../customNavbar/CustomNavbar';
 import SwitchLang from '../switchLang/SwitchLang';
 
-
 const CustomHeader = (props) => {
 
   return (
@@ -24,7 +24,15 @@ const CustomHeader = (props) => {
       maxWidth={"none"}
       className={"header-container bg-transparent"}
     >
-      <img src={props.logoDuck.logo} alt="Logo Beije People First" className="header-container-logo" />
+      <Link
+        to=""
+      >
+        <img
+          src={props.logoDuck.logo}
+          alt="Logo Beije People First"
+          className="header-container-logo"
+        />
+      </Link>
 
       {props.showNavbarTopDuck.showNavbar &&
         <Box className={"header-navbar-container"}>
