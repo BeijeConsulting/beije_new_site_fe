@@ -137,7 +137,6 @@ const BurgerMenu = (props) => {
         <div className={state.openMenu ? "burgerMenu-background" : "burgerMenu-background-reverse"} />
       }
 
-
       {
         state.openMenu &&
         <nav

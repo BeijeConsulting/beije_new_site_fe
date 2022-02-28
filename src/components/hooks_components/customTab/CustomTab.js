@@ -102,7 +102,8 @@ const CustomTab = (props) => {
         key={interalKey}
         className={interItem.classNameSpan}
       >
-        {t(interItem.spanContent)}
+        {t(interItem.spanContent)} {interItem.test === "break" ? <><br /> <br /> </> : <></>}
+
       </span>
     )
   }
@@ -120,7 +121,7 @@ const CustomTab = (props) => {
         currentClassName = "tab-panels-container tab-panel-history-bg"
         break;
       case "value":
-        currentClassName = "tab-panels-container tab-panel-vision-bg"
+        currentClassName = "tab-panels-container tab-panel-values-bg"
         break;
       default:
         currentClassName = "tab-panels-container"
@@ -152,7 +153,7 @@ CustomTab.defaultProps = {
   typographyPanel: "p",
   classNamePanel: "tab-panels",
   obj: tabObj,
-  bgPanel: "vision"
+  bgPanel: "values"
 }
 
 export default CustomTab
