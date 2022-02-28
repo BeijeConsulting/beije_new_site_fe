@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 :root {
   --profile_chiara_balsamini: url("../../../assets/images/profile_picture/chiara_balsamini.jpg");
   --profile_erica_mauro: url("../../../assets/images/profile_picture/erica_mauro.jpg");
@@ -24,8 +31,15 @@
   background-image: url(https://source.unsplash.com/random);
   background-position: center;
   background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
   aspect-ratio: 1 / 1;
 }
@@ -117,15 +131,19 @@
 @media(min-width: 1024px) {
   .swiper-slide p {
     padding-left: 30px;
+    -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
+    -webkit-transform: translate3d(4px, -2px, 60px);
     transform: translate3d(4px, -2px, 60px);
   }
 
   .swiper-slide-prev p {
+    -webkit-transform: translate3d(-33px, -2px, 60px);
     transform: translate3d(-33px, -2px, 60px);
   }
 
   .swiper-slide-next p {
+    -webkit-transform: translate3d(33px, -2px, 60px);
     transform: translate3d(33px, -2px, 60px);
   }
 

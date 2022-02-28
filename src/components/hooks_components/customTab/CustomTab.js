@@ -107,35 +107,13 @@ const CustomTab = (props) => {
     )
   }
 
-  const switchClassName = () => {
-    let currentClassName = null;
-    switch (props.bgPanel) {
-      case "vision":
-        currentClassName = "tab-panels-container tab-panel-vision-bg"
-        break;
-      case "mission":
-        currentClassName = "tab-panels-container tab-panel-mission-bg"
-        break;
-      case "history":
-        currentClassName = "tab-panels-container tab-panel-history-bg"
-        break;
-      case "value":
-        currentClassName = "tab-panels-container tab-panel-vision-bg"
-        break;
-      default:
-        currentClassName = "tab-panels-container"
-        break;
-    }
-    return currentClassName;
-  }
-
   return (
     <Box className={"tab-container"}>
       <Box className={"tab-labels-container"}>
         {props.obj.map(printLabels)}
       </Box>
       <Box
-        className={switchClassName()}
+        className={"tab-panels-container"}
       >
         {props.obj.map(printPanelContent)}
       </Box>
@@ -152,7 +130,6 @@ CustomTab.defaultProps = {
   typographyPanel: "p",
   classNamePanel: "tab-panels",
   obj: tabObj,
-  bgPanel: "vision"
 }
 
 export default CustomTab

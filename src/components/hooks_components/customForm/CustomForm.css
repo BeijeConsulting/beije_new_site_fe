@@ -22,6 +22,22 @@
   padding-left: 10px;
 }
 
+.form-field::-webkit-input-placeholder {
+  font-family: var(--moderat-regular);
+}
+
+.form-field::-moz-placeholder {
+  font-family: var(--moderat-regular);
+}
+
+.form-field:-ms-input-placeholder {
+  font-family: var(--moderat-regular);
+}
+
+.form-field::-ms-input-placeholder {
+  font-family: var(--moderat-regular);
+}
+
 .form-field::placeholder {
   font-family: var(--moderat-regular);
 }
@@ -42,6 +58,26 @@
   padding-top: 20px;
   border-bottom: 1px solid var(--grey-tone-1);
   margin-top: 40px;
+}
+
+.form-text-area::-webkit-input-placeholder {
+  font-size: 1rem;
+  color: var(--grey-tone-1);
+}
+
+.form-text-area::-moz-placeholder {
+  font-size: 1rem;
+  color: var(--grey-tone-1);
+}
+
+.form-text-area:-ms-input-placeholder {
+  font-size: 1rem;
+  color: var(--grey-tone-1);
+}
+
+.form-text-area::-ms-input-placeholder {
+  font-size: 1rem;
+  color: var(--grey-tone-1);
 }
 
 .form-text-area::placeholder {
@@ -75,7 +111,11 @@
 }
 
 .form-submit-btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
   margin-top: 30px !important;
 }

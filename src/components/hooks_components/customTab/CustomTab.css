@@ -1,40 +1,28 @@
-:root {
-  --vision-bg: url("../../../assets/images/burgerMenu/consulting_burger.jpg");
-  --mission-bg: url("../../../assets/images/burgerMenu/consulting_burger.jpg");
-  --history-bg: url("../../../assets/images/burgerMenu/consulting_burger.jpg");
-  --value-bg: url("../../../assets/images/burgerMenu/consulting_burger.jpg")
-}
-
-/* *****************TEST****************** */
-
-.tab-panel-vision-bg {
-  background-image: linear-gradient(90deg, rgba(38, 46, 54, 0.74) 0%, rgba(38, 46, 54, 0.74) 35%, rgba(38, 46, 54, 0.74) 100%), var(--vision-bg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.tab-panel-mission-bg {
-  background: linear-gradient(275deg, rgba(255, 255, 255, 1) -430%, rgba(38, 46, 54, 1) 100%);
-}
-
-.tab-panel-history-bg {
-  box-shadow: 5px 5px 10px 1px #000;
-}
-
-/* *****************TEST****************** */
-
 .tab-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   width: 100%;
 }
 
 .tab-labels-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   width: 100%;
-  justify-content: space-evenly;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
   padding-left: 10%;
 }
@@ -75,6 +63,8 @@
 
   /* Test */
   padding: 20px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -84,6 +74,9 @@
 
 @media(min-width: 768px) {
   .tab-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
   }
 

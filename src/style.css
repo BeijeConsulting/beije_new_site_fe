@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 :root {
   --white: #fff;
   --light-grey: #D8D8D8;
@@ -27,12 +34,31 @@
   --sofiaPro-regular: "SofiaPro-Regular", sans-serif;
   --sofiaPro-bold: "SofiaPro-Bold", sans-serif;
 
-  --breakpoint-sm: 576px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 992px;
-  --breakpoint-xl: 1200px;
-  --breakpoint-xxl: 1600px;
-  --breakpoint-xxxl: 2000px;
+  --font-size-body-xs: 1rem;
+  --line-height-body-xs: 22px;
+  --font-size-h1-xs: 1.7rem;
+  --line-height-h1-xs: 30px;
+  --font-size-h2-xs: 1.25rem;
+  --font-size-more-h3-xs: 1.25rem;
+
+  --font-size-body-md: 1rem;
+  --line-height-body-md: 30px;
+  --font-size-h1-md: 2.7rem;
+  --line-height-h1-md: 70px;
+  --font-size-h2-md: 1.6rem;
+  --line-height-h2-md: 40px;
+  --font-size-more-h3-md: 1.4rem;
+  --line-height-more-h3-md: 30px;
+
+  --font-size-body-xlg: 1.5rem;
+  --line-height-body-xlg: 35px;
+  --font-size-h1-xlg: 4.375rem;
+  --line-height-h1-xlg: 90px;
+  --font-size-h2-xlg: 3rem;
+  --line-height-h2-xlg: 60px;
+  --font-size-more-h3-xlg: 1.5rem;
+  --line-height-more-h3-xlg: 35px;
+
 }
 
 * {
@@ -71,20 +97,20 @@ html {
 
 body {
   font-family: var(--moderat-regular);
-  font-size: 1rem;
+  font-size: var(--font-size-body-xs);
   letter-spacing: 0px;
   color: var(--grey-tone-4);
-  line-height: 22px;
+  line-height: var(--line-height-body-xs);
 }
 
 h1, h2 {
   font-family: var(--sofiaPro-bold);
-  font-size: 1.7rem;
-  line-height: 30px;
+  font-size: var(--font-size-h1-xs);
+  line-height: var(--line-height-h1-xs);
 }
 
 h2 {
-  font-size: 1.25rem;
+  font-size: var(--font-size-h2-xs);
 }
 
 h3, h4, h5, h6 {
@@ -96,44 +122,44 @@ h3, h4, h5, h6 {
 @media (min-width: 768px) {
 
   body {
-    line-height: 30px;
+    line-height: var(--line-height-body-md);
   }
 
   h1 {
-    font-size: 2.7rem;
-    line-height: 70px;
+    font-size: var(--font-size-h1-md);
+    line-height: var(--line-height-h1-md);
   }
 
   h2 {
-    font-size: 1.6rem;
-    line-height: 40px;
+    font-size: var(--font-size-h2-md);
+    line-height: var(--line-height-h2-md);
   }
 
   h3, h4, h5, h6 {
-    font-size: 1.4rem;
-    line-height: 30px;
+    font-size: var(--font-size-more-h3-md);
+    line-height: var(--line-height-more-h3-md);
   }
 }
 
 @media (min-width: 1600px) {
   body {
-    font-size: 1.5rem;
-    line-height: 35px;
+    font-size: var(--font-size-body-xlg);
+    line-height: var(--line-height-body-xlg);
   }
 
   h1 {
-    font-size: 4.375rem;
-    line-height: 90px;
+    font-size: var(--font-size-h1-xlg);
+    line-height: var(--line-height-h1-xlg);
   }
 
   h2 {
-    font-size: 3rem;
-    line-height: 60px;
+    font-size: var(--font-size-h2-xlg);
+    line-height: var(--line-height-h2-xlg);
   }
 
   h3, h4, h5, h6 {
-    font-size: 1.5rem;
-    line-height: 35px;
+    font-size: var(--font-size-more-h3-xlg);
+    line-height: var(--line-height-more-h3-xlg);
   }
 }
 
@@ -204,14 +230,19 @@ h3, h4, h5, h6 {
 }
 
 .justify-between {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
 .justify-around {
+  -ms-flex-pack: distribute;
   justify-content: space-around;
 }
 
 .justify-envely {
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
 }
 
@@ -276,29 +307,35 @@ h3, h4, h5, h6 {
 
 /* CLIP-PATH */
 .top-oblique-line {
+  -webkit-clip-path: polygon(0 0, 100% 5%, 100% 100%, 0% 100%);
   clip-path: polygon(0 0, 100% 5%, 100% 100%, 0% 100%);
 }
 
 .bottom-oblique-line {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
 }
 
 @media (min-width: 768px) {
   .top-oblique-line {
+    -webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
     clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
   }
 
   .bottom-oblique-line {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
   }
 }
 
 @media (min-width: 1600px) {
   .top-oblique-line {
+    -webkit-clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
     clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
   }
 
   .bottom-oblique-line {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
   }
 }
