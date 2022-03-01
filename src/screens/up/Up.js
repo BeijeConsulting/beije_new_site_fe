@@ -63,7 +63,15 @@ const Up = (props) => {
               </div>
             </div>
           </IntroSectionImgTxt>
+        </Container>
 
+        {/* Second section */}
+        <Container
+          component={"section"}
+          maxWidth={"false"}
+          className={"padding-0"}
+        >
+          
         </Container>
 
       </Box>
