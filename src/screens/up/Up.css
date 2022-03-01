@@ -1,0 +1,21 @@
+/* First section */
+.first-section-list-container {
+  margin: 25px 0;
+}
+
+.first-section-list-container p {
+  margin: 5px 0;
+}
+
+/* Media queries */
+@media(min-width: 1024px) {
+  .first-section-list-container {
+    margin: 25px 0 5px 0;
+  }
+}
+
+@media(min-width: 1600px) {
+  .first-section-list-container {
+    margin: 25px 0 15px 0;
+  }
+}

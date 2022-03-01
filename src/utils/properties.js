@@ -111,11 +111,6 @@ export const menu_voices = [
     key_link: "academy"
   },
   {
-    name: "aboutUs",
-    link_to: "#",
-    key_link: "aboutUs"
-  },
-  {
     name: "blog",
     link_to: "#",
     key_link: "blog"

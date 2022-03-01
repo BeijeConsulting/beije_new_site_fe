@@ -65,7 +65,7 @@ const Home = (props) => {
       <Container
         component={"section"}
         maxWidth={"false"}
-        className={"home-fist-section-container paddingX-container-default d-flex flex-column home-first-section-gsap"}
+        className={"home-fist-section-container paddingX-container-default d-flex flex-column"}
       >
         <Box className={"home-first-section-title-container d-flex flex-column justify-center"}>
           <h1>
