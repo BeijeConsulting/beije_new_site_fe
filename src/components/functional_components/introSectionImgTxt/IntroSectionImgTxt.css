@@ -1,5 +1,6 @@
 :root {
   --intro-section-img-up: url("../../../assets/images/up/up1.jpg");
+  --download-icon: url("../../../assets/icons/download.svg");
 }
 
 .intro-section {
@@ -41,12 +42,29 @@
 
 .intro-section-download-container {
   display: block;
-  position: absolute;
-  bottom: 20px;
+}
+
+.intro-sec-download-icon {
+  background-image: var(--download-icon);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 30px;
+  width: 30px;
+}
+
+.intro-section-up-download span:nth-child(1) {
+  border-radius: 100%;
+  background-color: #000;
 }
 
 .intro-section-up-download p {
   color: var(--blue) !important;
+  text-decoration: underline;
+}
+
+.intro-section-up-download:hover p {
+  text-decoration: none;
 }
 
 .intro-section-scroll-down-container {
@@ -149,10 +167,6 @@
 
   .intro-section-title {
     line-height: calc(var(--line-height-h1-xl) - 10px);
-  }
-
-  .intro-section-download-container {
-    bottom: 40px;
   }
 
   .intro-section-scroll-down-container {

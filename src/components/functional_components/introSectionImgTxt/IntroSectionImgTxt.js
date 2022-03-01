@@ -10,12 +10,6 @@ import { Box } from "@mui/material";
 // Style
 import "./IntroSectionImgTxt.css"
 
-// Icons
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
-// Constants
-import { downloadIcon } from "../../../utils/properties";
-
 // Components
 import ScrollDownButton from "../scrollDownButton/ScrollDownButton";
 import CustomButton from "../ui/customButton/CustomButton";
@@ -73,22 +67,22 @@ const IntroSectionImgTxt = (props) => {
           {props.sectionTitle}
         </h1>
 
-        <Box className="intro-section-download-container">
-          <CustomButton
-            content="Scarica la presentazione"
-            startIcon={<FontAwesomeIcon icon={downloadIcon} />}
-            className={switchClassNameDownloadBtn()}
-            callback={props.callback}
-            download={true}
-          />
-        </Box>
-
         <Box className={"intro-section-scroll-down-container"}>
           <ScrollDownButton
             callback={props.callback}
           />
         </Box>
         {props.children}
+
+        <Box className="intro-section-download-container">
+          <CustomButton
+            content="Scarica la presentazione"
+            startIcon={<span className="intro-sec-download-icon" />}
+            className={switchClassNameDownloadBtn()}
+            callback={props.callback}
+            download={true}
+          />
+        </Box>
 
       </div>
     </Box >

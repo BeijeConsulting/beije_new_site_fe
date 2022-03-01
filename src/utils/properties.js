@@ -6,7 +6,7 @@ import logo_official_white from "../assets/images/logos/logo_official_white.svg"
 import logo_short_white from "../assets/images/logos/logo_short_white.svg";
 import logo_short_grey from "../assets/images/logos/logo_short_grey.svg";
 import { faFacebookF, faLinkedinIn, faYoutube } from '@fortawesome/free-brands-svg-icons';
-import { faN, faArrowDownLong, faSquareXmark, faDownload } from '@fortawesome/free-solid-svg-icons';
+import { faN, faArrowDownLong, faSquareXmark } from '@fortawesome/free-solid-svg-icons';
 
 import chiara_balsamini from "../assets/images/profile_picture/chiara_balsamini.jpg";
 import erica_mauro from "../assets/images/profile_picture/erica_mauro.jpg";
@@ -85,7 +85,6 @@ export const logo_secondary_grey = logo_short_grey;
 export const defaultIcon = faN;
 export const downArrow = faArrowDownLong;
 export const closeIcon = faSquareXmark;
-export const downloadIcon = faDownload;
 
 export const privacyPolicies_it = png_privacyPolicies_it;
 export const privacyPolicies_en = png_privacyPolicies_en;
