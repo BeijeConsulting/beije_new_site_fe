@@ -2,7 +2,6 @@
   --profile_chiara_balsamini: url("../../../assets/images/profile_picture/chiara_balsamini.jpg");
   --profile_erica_mauro: url("../../../assets/images/profile_picture/erica_mauro.jpg");
   --profile_francesca_bellini: url("../../../assets/images/profile_picture/francesca_bellini.jpg");
-  --profile_francesca_ferioli: url("../../../assets/images/profile_picture/francesca_ferioli.jpg");
   --profile_francesco_cesana: url("../../../assets/images/profile_picture/francesco_cesana.jpg");
   --profile_ivo_mosca: url("../../../assets/images/profile_picture/ivo_mosca.jpg");
   --profile_maria_rodrigez: url("../../../assets/images/profile_picture/maria_rodrigez.jpg");
@@ -72,10 +71,6 @@
 
 .carousel-bg-ivo-mosca {
   background-image: var(--profile_ivo_mosca);
-}
-
-.carousel-bg-farcesca-ferioli {
-  background-image: var(--profile_francesca_ferioli);
 }
 
 .carousel-bg-maria-rodrigez {

@@ -372,16 +372,6 @@ export const carouselProfile = [
     picture: ivo_mosca
   },
   {
-    id: 7,
-    name: 'Francesca',
-    surname: 'Ferioli',
-    role: 'HR specialist',
-    description: 'long descriprion',
-    alt: 'FrancescaFerioli',
-    pictureClassName: "carousel-bg-farcesca-ferioli",
-    picture: francesca_ferioli
-  },
-  {
     id: 8,
     name: 'Maria',
     surname: 'Amigo Rodrigez',
