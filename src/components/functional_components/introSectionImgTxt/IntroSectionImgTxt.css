@@ -1,5 +1,5 @@
 :root {
-  --intro-section-img-up: url("../../../assets/images/up/up1.jpg");
+  --intro-section-img-up: url("../../../assets/images/up/up1.png");
   --download-icon: url("../../../assets/icons/download.svg");
 }
 
@@ -73,7 +73,7 @@
 
 /* Backgorund images */
 .intro-section-img-up {
-  background-image: linear-gradient(90deg, rgba(38, 46, 54, 0.74) 0%, rgba(38, 46, 54, 0.74) 35%, rgba(38, 46, 54, 0.74) 100%), var(--intro-section-img-up);
+  background-image: var(--intro-section-img-up);
 }
 
 /* Media Queries */
