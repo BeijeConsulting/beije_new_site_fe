@@ -256,6 +256,7 @@ const Home = (props) => {
                 </span>
 
                 <br />
+                <br />
                 <span
                   className="home-fifth-section-span"
                 >
