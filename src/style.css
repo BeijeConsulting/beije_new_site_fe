@@ -59,10 +59,14 @@
   --font-size-more-h3-xl: 1.5rem;
   --line-height-more-h3-xl: 35px;
 
-  --header-height-xs: 64px; /*xs - 320px*/
-  --header-height-md: 88px; /*md- 768px*/
-  --header-height-lg: 99px; /*lg - 1200px*/
-  --header-height-xlg: 147px; /*xlg - 1600px*/
+  --header-height-xs: 64px;
+  /*xs - 320px*/
+  --header-height-md: 88px;
+  /*md- 768px*/
+  --header-height-lg: 99px;
+  /*lg - 1200px*/
+  --header-height-xlg: 147px;
+  /*xlg - 1600px*/
 }
 
 * {
@@ -259,6 +263,10 @@ h3, h4, h5, h6 {
   background-color: var(--dark-grey) !important;
 }
 
+.bg-blue {
+  background-color: var(--blue) !important;
+}
+
 .hightlight-txt {
   color: var(--red)
 }
@@ -306,10 +314,20 @@ h3, h4, h5, h6 {
   padding-right: 11.2% !important;
 }
 
+.paddingX-container-general-pages {
+  padding-left: 11.2% !important;
+  padding-right: 11.2% !important;
+}
+
 @media (min-width: 1024px) {
   .paddingX-container-default {
     padding-left: 21.8% !important;
     padding-right: 21.2% !important;
+  }
+
+  .paddingX-container-general-pages {
+    padding-left: 14.7% !important;
+    padding-right: 14.7% !important;
   }
 }
 
