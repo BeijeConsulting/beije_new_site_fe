@@ -31,8 +31,8 @@ const Up = (props) => {
     <Box>
 
       <Box
-        className={"bg-dark-grey bottom-oblique-line"}
-        style={{ height: "1500px", marginTop: props.heightHeaderDuck.heightHeader + 5 }}
+        className={"bg-dark-grey"}
+        style={{ height: "3000px", marginTop: props.heightHeaderDuck.heightHeader + 5 }}
       >
 
         {/* First section */}
@@ -69,9 +69,36 @@ const Up = (props) => {
         <Container
           component={"section"}
           maxWidth={"false"}
-          className={"padding-0"}
+          className={"up-second-section paddingX-container-general-pages"}
         >
-          
+          <Box className="up-second-section-all-texts-container">
+            <Box
+              className="up-second-section-text-container up-second-section-text1-container"
+            >
+              <p>Attraverso metodologia AGILE, verranno definiti step di verifica e di aggiornamento del prodotto già durante lo sviluppo, con frequenti rilasci di versioni testabili dal cliente, in modo da ottimizzare puntualmente miglioramenti e modifiche sulle attività concordate. Dall’analisi del progetto alla stesura della documentazione fino all’implementazione: vi seguiamo in ogni fase.
+              </p>
+            </Box>
+
+            <Box
+              className="up-second-section-text-mobile-container"
+            >
+              Vi seguiamo in ogni fase
+            </Box>
+
+            <Box
+              className="up-second-section-text-container up-second-section-text2-container"
+            >
+              <p>Le tecnologie utilizzate vanno dall’ecosistema Java a quello .Net per il Backend , mentre Javascript e i principali framework per il Frontend (React, Angular e Vue). Per l’infrastruttura basiamo abitualmente i progetti in Cloud su servizi Amazon Web Services.</p>
+            </Box>
+          </Box>
+        </Container>
+
+        {/* Third section */}
+        <Container
+          component={"section"}
+          maxWidth={"false"}
+          className={"up-third-section paddingX-container-general-pages bg-blue top-oblique-line"}
+        >
         </Container>
 
       </Box>
