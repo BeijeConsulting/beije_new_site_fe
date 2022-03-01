@@ -12,6 +12,10 @@
 }
 
 /* Second section */
+.up-logo-bg {
+  display: none;
+}
+
 .up-second-section-all-texts-container {
   padding: 50px 0px;
 }
@@ -44,6 +48,15 @@
     background-size: cover;
     background-repeat: no-repeat;
     height: 130vh;
+    position: relative;
+  }
+
+  .up-logo-bg {
+    display: block;
+    position: absolute;
+    height: 50%;
+    top: 100px;
+    right: 60px;
   }
 
   .up-second-section-all-texts-container {
@@ -74,12 +87,20 @@
 
 @media(min-width: 1200px) {
   .first-section-list-container {
-    margin: 25px 0 20px 0;
+    margin: 20px 0 20px 0;
+  }
+
+  .up-logo-bg {
+    height: 50%;
   }
 }
 
 @media(min-width: 1600px) {
   .first-section-list-container {
     margin: 25px 0;
+  }
+
+  .up-logo-bg {
+    height: 60%;
   }
 }
