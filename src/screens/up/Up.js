@@ -16,6 +16,8 @@ import IntroSectionImgTxt from "../../components/functional_components/introSect
 
 const Up = (props) => {
 
+  console.log("window.innerHeight", window.innerHeight);
+
   useEffect(() => {
     props.dispatch(setCurrentPage("up"));
     props.dispatch(setVisibilityNavbar(true));
@@ -30,7 +32,7 @@ const Up = (props) => {
 
       <Box
         className={"bg-dark-grey bottom-oblique-line"}
-        style={{ height: "1000px", marginTop: props.heightHeaderDuck.heightHeader + 5 }}
+        style={{ height: "1500px", marginTop: props.heightHeaderDuck.heightHeader + 5 }}
       >
 
         {/* First section */}
