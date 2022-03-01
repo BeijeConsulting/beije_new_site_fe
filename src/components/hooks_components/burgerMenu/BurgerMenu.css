@@ -11,7 +11,6 @@
   --bg_academy: url(../../../assets/images/burgerMenu/talentAcademy_burger.jpg);
   --bg_up: url(../../../assets/images/burgerMenu/up_burger.jpg);
   --bg_career: url(../../../assets/images/burgerMenu/career_burger.jpg);
-  --bg_whoWeAre: url(../../../assets/images/burgerMenu/whoweare_burger.jpg);
   --bg_contacts: url(../../../assets/images/burgerMenu/contacts_burger.jpg);
   --bg_blog: url(../../../assets/images/burgerMenu/blog_burger.jpg);
   --bg_focusAcademy: url(../../../assets/images/burgerMenu/focusAcademy_burger.jpg);
@@ -329,12 +328,6 @@
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(38, 46, 54, 0.87)), to(rgba(38, 46, 54, 0.87))), var(--bg_career);
   background-image: -o-linear-gradient(top, rgba(38, 46, 54, 0.87), rgba(38, 46, 54, 0.87)), var(--bg_career);
   background-image: linear-gradient(to bottom, rgba(38, 46, 54, 0.87), rgba(38, 46, 54, 0.87)), var(--bg_career);
-}
-
-.burgerMenu-aboutUs {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(38, 46, 54, 0.87)), to(rgba(38, 46, 54, 0.87))), var(--bg_whoWeAre);
-  background-image: -o-linear-gradient(top, rgba(38, 46, 54, 0.87), rgba(38, 46, 54, 0.87)), var(--bg_whoWeAre);
-  background-image: linear-gradient(to bottom, rgba(38, 46, 54, 0.87), rgba(38, 46, 54, 0.87)), var(--bg_whoWeAre);
 }
 
 .burgerMenu-blog {

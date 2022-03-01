@@ -50,14 +50,14 @@
   --font-size-more-h3-md: 1.4rem;
   --line-height-more-h3-md: 30px;
 
-  --font-size-body-xlg: 1.5rem;
-  --line-height-body-xlg: 35px;
-  --font-size-h1-xlg: 4.375rem;
-  --line-height-h1-xlg: 90px;
-  --font-size-h2-xlg: 3rem;
-  --line-height-h2-xlg: 60px;
-  --font-size-more-h3-xlg: 1.5rem;
-  --line-height-more-h3-xlg: 35px;
+  --font-size-body-xl: 1.5rem;
+  --line-height-body-xl: 35px;
+  --font-size-h1-xl: 4.375rem;
+  --line-height-h1-xl: 90px;
+  --font-size-h2-xl: 3rem;
+  --line-height-h2-xl: 60px;
+  --font-size-more-h3-xl: 1.5rem;
+  --line-height-more-h3-xl: 35px;
 }
 
 * {
@@ -142,23 +142,23 @@ h3, h4, h5, h6 {
 
 @media (min-width: 1600px) {
   body {
-    font-size: var(--font-size-body-xlg);
-    line-height: var(--line-height-body-xlg);
+    font-size: var(--font-size-body-xl);
+    line-height: var(--line-height-body-xl);
   }
 
   h1 {
-    font-size: var(--font-size-h1-xlg);
-    line-height: var(--line-height-h1-xlg);
+    font-size: var(--font-size-h1-xl);
+    line-height: var(--line-height-h1-xl);
   }
 
   h2 {
-    font-size: var(--font-size-h2-xlg);
-    line-height: var(--line-height-h2-xlg);
+    font-size: var(--font-size-h2-xl);
+    line-height: var(--line-height-h2-xl);
   }
 
   h3, h4, h5, h6 {
-    font-size: var(--font-size-more-h3-xlg);
-    line-height: var(--line-height-more-h3-xlg);
+    font-size: var(--font-size-more-h3-xl);
+    line-height: var(--line-height-more-h3-xl);
   }
 }
 

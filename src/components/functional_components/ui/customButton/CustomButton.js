@@ -37,6 +37,7 @@ const CustomButton = (props) => {
       startIcon={props.startIcon}
       endIcon={props.endIcon}
       className={props.className === undefined ? switchClassName() : props.className}
+      download={props.download}
     >
       <Typography
         component={props.btnTypeContent}
@@ -52,7 +53,8 @@ CustomButton.defaultProps = {
   disabled: false,
   colorBtn: "inherit",
   size: "small",
-  btnTypeContent: "p"
+  btnTypeContent: "p",
+  download: false
 }
 
 export default CustomButton

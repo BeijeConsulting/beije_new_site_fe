@@ -15,7 +15,7 @@ import "./CustomModal.css";
 import { downloadIcon } from "../../../utils/properties";
 
 // Components
-import CustomIconButton from "../../functional_components/ui/customIconButton/CustomIconButton";
+// import CustomIconButton from "../../functional_components/ui/customIconButton/CustomIconButton"; Remove
 import CustomButton from "../../functional_components/ui/customButton/CustomButton";
 
 const CustomModal = (props) => {

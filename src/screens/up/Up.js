@@ -30,7 +30,7 @@ const Up = (props) => {
 
       <Box
         className={"bg-dark-grey bottom-oblique-line"}
-        style={{ height: "1000px", marginTop: props.heightHeaderDuck.heightHeader + 10 }}
+        style={{ height: "1000px", marginTop: props.heightHeaderDuck.heightHeader + 5 }}
       >
 
         {/* First section */}
@@ -40,16 +40,19 @@ const Up = (props) => {
           className={"padding-0"}
         >
           <IntroSectionImgTxt
+            typeSection="up"
             classNameBgImgDesktop="intro-section-img-up"
             classNameBgImgMobile="intro-section-img-up"
+            sectionName="Beije Up"
+            sectionTitle="La nostra software factory"
           >
             <div>
-              <p>BEIJE UP</p>
-              <h1>La nostra software factory</h1>
               <p>Lavoriamo con dedizione al fianco dei nostri clienti.<br />
                 Realizziamo progetti partendo dall’analisi tecnica frontend / backend, realizzazione mockup fino all’implementazione del software attraverso le tecnologie presenti sul mercato.
               </p>
-              <div>
+              <div
+                className={"first-section-list-container"}
+              >
                 <p>PROGETTAZIONE</p>
                 <p>IMPLEMENTAZIONE</p>
                 <p>DELIVERY</p>
