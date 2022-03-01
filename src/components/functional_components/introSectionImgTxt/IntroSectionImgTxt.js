@@ -55,7 +55,9 @@ const IntroSectionImgTxt = (props) => {
     >
       <div
         className={`${props.classNameImgContainer} ${props.classNameBgImgDesktop}`}
-      />
+      >
+        <p>UP</p>
+      </div>
       <div
         className={`${props.classNameTxtContainer} ${props.classNameBgImgMobile} `}
       >
