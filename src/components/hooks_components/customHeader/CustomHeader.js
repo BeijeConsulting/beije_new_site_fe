@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 // Redux
 import { connect } from 'react-redux';
-import { setHeightHeader, initHeightHeader } from "../../../redux/ducks/heightHeaderDuck";
 
 // MUI
 import { Toolbar } from "@mui/material";
@@ -19,23 +18,8 @@ import SwitchLang from '../switchLang/SwitchLang';
 
 const CustomHeader = (props) => {
 
-  const refAppBar = useRef();
-
-  useEffect(() => {
-    let heightAppBar = refAppBar.current.clientHeight;
-    props.dispatch(setHeightHeader(heightAppBar))
-    console.log("heightAppBar: ", heightAppBar);
-
-    return () => {
-      props.dispatch(initHeightHeader())
-    }
-
-  }, [])
-
-
   return (
     <Toolbar
-      ref={refAppBar}
       disableGutters
       maxWidth={"none"}
       className={"header-container bg-transparent"}

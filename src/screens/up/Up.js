@@ -11,6 +11,9 @@ import { Box, Container } from "@mui/material";
 // Style
 import "./Up.css";
 
+// Constants
+import { logo_secondary_transparent } from "../../utils/properties";
+
 // Components
 import IntroSectionImgTxt from "../../components/functional_components/introSectionImgTxt/IntroSectionImgTxt";
 
@@ -31,12 +34,12 @@ const Up = (props) => {
     <Box>
 
       <Box
-        className={"bg-dark-grey"}
-        style={{ height: "3000px", marginTop: props.heightHeaderDuck.heightHeader + 5 }}
+        className={"bg-dark-grey margin-top-container-screens"}
+        style={{ height: "3000px" }}
       >
 
         {/* First section */}
-        <Container
+        < Container
           component={"section"}
           maxWidth={"false"}
           className={"padding-0"}
@@ -71,6 +74,12 @@ const Up = (props) => {
           maxWidth={"false"}
           className={"up-second-section paddingX-container-general-pages"}
         >
+
+          <img
+            src={logo_secondary_transparent}
+            alt="logo sullo sfondo"
+            className="up-logo-bg" />
+
           <Box className="up-second-section-all-texts-container">
             <Box
               className="up-second-section-text-container up-second-section-text1-container"
@@ -107,10 +116,4 @@ const Up = (props) => {
   )
 }
 
-const mapStateToProps = state => (
-  {
-    heightHeaderDuck: state.heightHeaderDuck
-  }
-)
-
-export default connect(mapStateToProps)(Up)
+export default connect()(Up)

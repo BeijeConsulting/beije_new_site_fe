@@ -123,7 +123,7 @@ const Home = (props) => {
         >People first
         </p>
 
-        {/* Third section */}
+        {/* Third section with tab */}
         <Container
           component={"section"}
           maxWidth={"false"}
@@ -136,7 +136,7 @@ const Home = (props) => {
           </Box>
         </Container>
 
-        {/* Fourth section desktop */}
+        {/* Fourth section desktop with center sentence*/}
         <Container
           component={"section"}
           maxWidth={"false"}
@@ -149,7 +149,7 @@ const Home = (props) => {
           </Box>
         </Container>
 
-        {/* Fifth section desktop */}
+        {/* Fifth section desktop with about us description and carousel*/}
         <Container
           component={"section"}
           maxWidth={"false"}
@@ -279,9 +279,7 @@ const Home = (props) => {
           </Container>
         </Container>
 
-
-
-        {/* Sixth section desktop */}
+        {/* Sixth section with form*/}
         <Container
           component={"section"}
           maxWidth={"false"}

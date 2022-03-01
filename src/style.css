@@ -331,6 +331,26 @@ h3, h4, h5, h6 {
   }
 }
 
+/* MARGIN */
+@media(min-width: 1024px) {
+  .margin-top-container-screens {
+    margin-top: calc(var(--header-height-md) + 5px)
+  }
+}
+
+@media(min-width: 1200px) {
+  .margin-top-container-screens {
+    margin-top: calc(var(--header-height-lg) + 5px)
+  }
+}
+
+@media(min-width: 1600px) {
+  .margin-top-container-screens {
+    margin-top: calc(var(--header-height-xlg) + 5px)
+  }
+}
+
+
 /* CLIP-PATH */
 .top-oblique-line {
   -webkit-clip-path: polygon(0 0, 100% 5%, 100% 100%, 0% 100%);

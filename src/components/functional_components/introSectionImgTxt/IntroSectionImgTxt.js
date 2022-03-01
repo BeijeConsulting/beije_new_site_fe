@@ -1,8 +1,5 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-
-// Redux
-import { connect } from "react-redux";
 
 // MUI
 import { Box } from "@mui/material";
@@ -16,6 +13,21 @@ import CustomButton from "../ui/customButton/CustomButton";
 
 const IntroSectionImgTxt = (props) => {
   const { t } = useTranslation()
+
+  // const refTxtContainer = useRef();
+  // const refContainer = useRef();
+
+  // useEffect(() => {
+  //   let heightContainer = refContainer.current.clientHeight;
+  //   let heightTxtContainer = refContainer.current.clientHeight;
+  //   console.log("heightContainer: ", heightContainer);
+  //   console.log("heightTxtContainer: ", heightTxtContainer);
+
+
+  // }, [])
+
+  // console.log("refTxtContainer", refTxtContainer.current.clientHeight);
+  // console.log("refContainer", refContainer.current.clientHeight);
 
   const switchClassNameSecName = () => {
     let currentClassName = null;
@@ -45,6 +57,7 @@ const IntroSectionImgTxt = (props) => {
 
   return (
     <Box
+      // ref={refContainer}
       className={props.classNameContainer}
     >
       <div
@@ -53,6 +66,7 @@ const IntroSectionImgTxt = (props) => {
         <p>UP</p>
       </div>
       <div
+        // ref={refTxtContainer}
         className={`${props.classNameTxtContainer} ${props.classNameBgImgMobile} `}
       >
         <p
@@ -95,10 +109,4 @@ IntroSectionImgTxt.defaultProps = {
   classNameTxtContainer: "intro-section-txt-container"
 }
 
-const mapStateToProps = state => (
-  {
-    heightHeaderDuck: state.heightHeaderDuck
-  }
-)
-
-export default connect(mapStateToProps)(IntroSectionImgTxt)
+export default IntroSectionImgTxt
