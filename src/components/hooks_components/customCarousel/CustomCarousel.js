@@ -21,8 +21,6 @@ import { carouselProfile } from "../../../utils/properties"
 const CustomCarousel = (props) => {
 
   const slideRef = useRef();
-  const usingSwiperSlide = useSwiperSlide();
-  const usingSwiper = useSwiper()
 
   const [state, setState] = useState({
     windowWidth: window.innerWidth,
@@ -51,6 +49,7 @@ const CustomCarousel = (props) => {
   }
 
   const printSwiperSlides = (item, key) => {
+
     return (
       <SwiperSlide
         key={key}

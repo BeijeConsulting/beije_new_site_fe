@@ -11,6 +11,10 @@ import { setVisibilityNavbar, initVisibilityNavbar } from "../../redux/ducks/sho
 import { Container } from "@mui/material";
 import { Box } from "@mui/system";
 
+//import gsap
+import { gsap } from 'gsap'
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 // Style
 import "./Home.css";
 
@@ -29,14 +33,30 @@ const Home = (props) => {
   const { t } = useTranslation();
   const refDarkContainer = useRef();
 
+  gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
+
+    const element = refDarkContainer.current;
+    const fourthSectionP = element.querySelector('.home-fourth-section-p');
+
+    const t1 = gsap.timeline({
+      scrollTrigger: {
+        trigger: fourthSectionP,
+        start: 'top 75%',
+        toggleClass: { targets: fourthSectionP, className: "home-fourth-section-p-animation" }
+      },
+    });
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     }
   }, [])
+
+  const callTrial = () => {
+    console.log("elemento on focus");
+  }
 
   const handleScroll = () => {
     let elementTop = refDarkContainer.current.offsetTop;
@@ -143,9 +163,13 @@ const Home = (props) => {
           className={"home-fourth-section-container paddingX-container-default top-oblique-line"}
         >
           <Box>
-            <p><strong>{t("home.fourthSection.title.part1")}</strong></p>
-            <p><strong>{t("home.fourthSection.title.part2")}</strong></p>
-            <p><strong>{t("home.fourthSection.title.part3")}</strong></p>
+            <p
+              className="home-fourth-section-p"
+            >
+              <strong>{t("home.fourthSection.title.part1")}</strong>&nbsp;<br />
+              <strong>{t("home.fourthSection.title.part2")}</strong>&nbsp;<br />
+              <strong>{t("home.fourthSection.title.part3")}</strong>
+            </p>
           </Box>
         </Container>
 
