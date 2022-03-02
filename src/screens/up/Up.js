@@ -39,7 +39,7 @@ const Up = (props) => {
         style={{ height: "3000px" }}
       >
 
-        {/* First section */}
+        {/* First section Img + text*/}
         < Container
           component={"section"}
           maxWidth={"false"}
