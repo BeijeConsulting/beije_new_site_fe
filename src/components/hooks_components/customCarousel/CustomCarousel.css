@@ -128,7 +128,7 @@
 
 @media(min-width: 1024px) {
   .swiper-slide-active .swipe-txt-container {
-    background-color: rgb(38, 46, 54, 0.4);
+    background-color: rgb(38, 46, 54, 0.6);
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
     -webkit-transform: translate3d(4px, -2px, 60px);
@@ -144,6 +144,7 @@
     transform: translate3d(4px, -2px, 60px);
     width: 90%;
     font-size: 1rem;
+    line-height: 23px;
   }
 
   .swiper-slide-active p {

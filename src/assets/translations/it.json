@@ -74,7 +74,7 @@
     },
     "tab": {
       "vision": {
-        "title": "La nostra visione",
+        "title": "La visione",
         "content": {
           "part1": "Le ",
           "part2": "persone ",
@@ -83,7 +83,7 @@
           "part5": "Investiamo ogni giorno nelle persone per garantire un miglioramento, ",
           "part6": "costante ",
           "part7": "dei nostri servizi. Vogliamo creare un sistema in cui ",
-          "part8": "capacita ",
+          "part8": "capacità ",
           "part9": "e ",
           "part10": "qualità ",
           "part11": "passano attraverso persone di valore: un ambiente di riferimento per coloro che ci accompagnano in questo percorso di ",
@@ -91,13 +91,13 @@
         }
       },
       "mission": {
-        "title": "La nostra missione",
+        "title": "La missione",
         "content": {
           "part1": "Aiutiamo le aziende a realizzare ",
           "part2": "progetti innovativi ",
           "part3": "attraverso un Team di ",
           "part4": "Valore ",
-          "part5": "La nostra missione è quella di",
+          "part5": "La nostra missione è quella di ",
           "part6": "crescere ",
           "part7": "insieme ai nostri clienti ed essere in grado di creare un sistema all’avanguardia in cui ",
           "part8": "innovazione",
@@ -111,7 +111,7 @@
         }
       },
       "history": {
-        "title": "La nostra storia",
+        "title": "La storia",
         "content": {
           "part1": "Al centro del modello Beije c’è una ",
           "part2": "vision People First ",
@@ -128,7 +128,7 @@
         }
       },
       "values": {
-        "title": "I nostri valori",
+        "title": "I valori",
         "content": {
           "part1": "Crediamo in quello che facciamo e abbiamo un profondo ",
           "part2": "RISPETTO ",

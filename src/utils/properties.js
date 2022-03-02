@@ -171,7 +171,7 @@ export const social_list = [
 // Tab About Us
 export const tab_aboutUs = [
   {
-    labelTab: "La nostra visione",
+    labelTab: "La visione",
     contentPanel: [
       {
         spanContent: "home.tab.vision.content.part1",
@@ -236,7 +236,7 @@ export const tab_aboutUs = [
     ]
   },
   {
-    labelTab: "La nostra missione",
+    labelTab: "La missione",
     contentPanel: [
       {
         spanContent: "home.tab.mission.content.part1",
@@ -316,7 +316,7 @@ export const tab_aboutUs = [
     ]
   },
   {
-    labelTab: "La nostra storia",
+    labelTab: "La storia",
     contentPanel: [
       {
         spanContent: "home.tab.history.content.part1",
@@ -381,7 +381,7 @@ export const tab_aboutUs = [
     ]
   },
   {
-    labelTab: "I nostri valori",
+    labelTab: "I valori",
     contentPanel: [
       {
         spanContent: "home.tab.values.content.part1",
