@@ -189,17 +189,3 @@
     bottom: 40px;
   }
 }
-
-
-/* test */
-@media (-webkit-min-device-pixel-ratio: 1.1) {
-  .intro-section-txt-container {
-    zoom: 80%;
-  }
-}
-
-/* @media (-webkit-min-device-pixel-ratio: 1.3) {
-  .intro-section-txt-container {
-    zoom: 80%;
-  }
-} */
