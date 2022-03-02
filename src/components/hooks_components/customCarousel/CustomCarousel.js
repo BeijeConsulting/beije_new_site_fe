@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 // Gsap
 import gsap from "gsap";
@@ -20,6 +21,7 @@ import { carouselProfile } from "../../../utils/properties"
 
 const CustomCarousel = (props) => {
 
+  const { t } = useTranslation();
   const slideRef = useRef();
 
   const [state, setState] = useState({
@@ -57,9 +59,14 @@ const CustomCarousel = (props) => {
         ref={slideRef}
         onMouseMove={tiltEffect()}
       >
-        <p>{item.name} {item.surname}</p>
-        <p>_{item.role}</p>
-      </SwiperSlide>
+        <div
+          className={"swipe-txt-container"}
+        >
+          <p>{item.name} {item.surname}</p>
+          <p>_{item.role}</p>
+          <p><i>&ldquo;{t(item.description)}&rdquo;</i></p>
+        </div>
+      </SwiperSlide >
     )
   }
 

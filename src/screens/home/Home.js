@@ -54,10 +54,6 @@ const Home = (props) => {
     }
   }, [])
 
-  const callTrial = () => {
-    console.log("elemento on focus");
-  }
-
   const handleScroll = () => {
     let elementTop = refDarkContainer.current.offsetTop;
     if (window.pageYOffset >= elementTop) {

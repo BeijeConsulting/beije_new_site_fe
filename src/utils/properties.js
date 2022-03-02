@@ -312,7 +312,7 @@ export const carouselProfile = [
     name: 'Francesco',
     surname: 'Cesana',
     role: 'General Manager',
-    description: "long descriprion",
+    description: "home.fifthSection.carouselProfile.francesco_cesana.desc",
     alt: 'FrancescoCesana',
     pictureClassName: "carousel-bg-francesco-cesana",
     picture: francesco_cesana
@@ -322,7 +322,7 @@ export const carouselProfile = [
     name: 'Erica',
     surname: 'Mauro',
     role: 'Sales manager',
-    description: "long descriprion",
+    description: "home.fifthSection.carouselProfile.erica_mauro.desc",
     alt: 'EricaMauro',
     pictureClassName: "carousel-bg-erica-mauro",
     picture: erica_mauro
@@ -332,7 +332,7 @@ export const carouselProfile = [
     name: 'Chiara',
     surname: 'Balsamini',
     role: 'Talent Consultant',
-    description: "long descriprion",
+    description: "home.fifthSection.carouselProfile.chiara_balsamini.desc",
     alt: 'ChiaraBalsamini',
     pictureClassName: "carousel-bg-chiara-balsamini",
     picture: chiara_balsamini
@@ -342,7 +342,7 @@ export const carouselProfile = [
     name: 'Marianna',
     surname: 'Fulginiti',
     role: 'Account Manager',
-    description: 'long descriprion',
+    description: 'home.fifthSection.carouselProfile.marianna_fulginiti.desc',
     alt: 'MariannaFulginiti',
     pictureClassName: "carousel-bg-marianna-fulginiti",
     picture: marianna_fulginiti
@@ -352,7 +352,7 @@ export const carouselProfile = [
     name: 'Roberto',
     surname: 'Brogi',
     role: 'CTO & Master Trainer',
-    description: 'long descriprion',
+    description: 'home.fifthSection.carouselProfile.roberto_brogi.desc',
     alt: 'RobertoBrogi',
     pictureClassName: "carousel-bg-roberto-brogi",
     picture: roberto_brogi
@@ -362,7 +362,7 @@ export const carouselProfile = [
     name: 'Ivo',
     surname: 'Mosca',
     role: 'CIO & Master Trainer',
-    description: 'long descriprion',
+    description: 'home.fifthSection.carouselProfile.ivo_mosca.desc',
     alt: 'IvoMosca',
     pictureClassName: "carousel-bg-ivo-mosca",
     picture: ivo_mosca
@@ -372,7 +372,7 @@ export const carouselProfile = [
     name: 'Maria',
     surname: 'Amigo Rodrigez',
     role: 'Junior IT Recruiter',
-    description: 'long descriprion',
+    description: 'home.fifthSection.carouselProfile.maria_rodrigez.desc',
     alt: 'MariaAmigoRodrigez',
     pictureClassName: "carousel-bg-maria-rodrigez",
     picture: maria_rodrigez
@@ -382,7 +382,7 @@ export const carouselProfile = [
     name: 'Francesca',
     surname: 'Bellini',
     role: 'Marketing specialist',
-    description: 'long descriprion',
+    description: 'home.fifthSection.carouselProfile.francesca_bellini.desc',
     alt: 'FrancescaBellini',
     pictureClassName: "carousel-bg-francesca-bellini",
     picture: francesca_bellini

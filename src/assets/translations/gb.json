@@ -147,6 +147,32 @@
         "part14": "People First",
         "part15": " system.",
         "part16": "We are waiting for you, follow the change."
+      },
+      "carouselProfile": {
+        "francesco_cesana": {
+          "desc": "Wine, art and good food: making a virtue out of necessity."
+        },
+        "erica_mauro": {
+          "desc": "Promotrice di buon umore e di nuove scoperte: c'è sempre un buon motivo per sorridere e per imparare qualcosa di nuovo."
+        },
+        "chiara_balsamini": {
+          "desc": "I have worn more ice skates than heels in my life. Spoiler: smile addicted. "
+        },
+        "marianna_fulginiti": {
+          "desc": "Never a winner at the quiet game, assiduous seeker of new destinations to explore and learn about"
+        },
+        "roberto_brogi": {
+          "desc": "I am a simple man: I program by day, turn into John Deacon by night."
+        },
+        "ivo_mosca": {
+          "desc": "Make it simple."
+        },
+        "maria_rodrigez": {
+          "desc": "Nerd sotto copertura in ambito IT, cosa potrebbe andare storto?"
+        },
+        "francesca_bellini": {
+          "desc": "Give me three words: fashion, dance and carbonara"
+        }
       }
     },
     "form": {

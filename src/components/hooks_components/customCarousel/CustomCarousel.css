@@ -100,26 +100,13 @@
   background-image: var(--profile_francesca_bellini);
 }
 
-/* @media(max-width: 400px) {
-  .swiper-slide {
-    height: 190px;
-  }
-} */
-
 @media(max-width: 600px) {
-  /* .swiper-slide {
-    height: 200px;
-  } */
-
   .swiper-slide p {
     font-size: 0.7rem;
   }
 }
 
 @media(min-width: 768px) {
-  /* .swiper-slide {
-    height: 240px;
-  } */
 
   .swiper-button-prev, .swiper-button-next {
     color: var(--white);
@@ -140,12 +127,35 @@
 }
 
 @media(min-width: 1024px) {
+  .swiper-slide-active .swipe-txt-container {
+    background-color: rgb(38, 46, 54, 0.4);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: translate3d(4px, -2px, 60px);
+    transform: translate3d(4px, -2px, 60px);
+    margin: 0px 20px 20px 20px;
+  }
+
   .swiper-slide p {
     padding-left: 30px;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
     -webkit-transform: translate3d(4px, -2px, 60px);
     transform: translate3d(4px, -2px, 60px);
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  .swiper-slide-active p {
+    padding-left: 15px;
+  }
+
+  .swiper-slide-prev .swipe-txt-container {
+    margin: 0 30px
+  }
+
+  .swiper-slide-next .swipe-txt-container {
+    margin: 0 30px 0 -30px;
   }
 
   .swiper-slide-prev p {
@@ -153,12 +163,28 @@
     transform: translate3d(-33px, -2px, 60px);
   }
 
+
+
   .swiper-slide-next p {
     -webkit-transform: translate3d(33px, -2px, 60px);
     transform: translate3d(33px, -2px, 60px);
   }
 
-  .swiper-slide p:nth-child(2) {
-    padding-bottom: 30px;
+  .swiper-slide-active p:nth-child(1) {
+    padding-top: 10px;
+  }
+
+  .swiper-slide p:nth-child(3) {
+    padding-bottom: 10px;
+  }
+}
+
+@media(min-width:1600px) {
+  .swiper-slide-active .swipe-txt-container {
+    padding: 0 20px;
+  }
+
+  .swiper-slide p:nth-child(3) {
+    padding-bottom: 25px;
   }
 }

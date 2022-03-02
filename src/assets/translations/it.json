@@ -147,6 +147,32 @@
         "part14": "People First",
         "part15": ".",
         "part16": "Ti aspettiamo, segui il cambiamento."
+      },
+      "carouselProfile": {
+        "francesco_cesana": {
+          "desc": "Vino, arte e buon cibo: bisogna fare di necessità virtù"
+        },
+        "erica_mauro": {
+          "desc": "Promotrice di buon umore e di nuove scoperte: c'è sempre un buon motivo per sorridere e per imparare qualcosa di nuovo."
+        },
+        "chiara_balsamini": {
+          "desc": "Nella vita ho indossato più pattini che tacchi. Spoiler: sorriso dipendente."
+        },
+        "marianna_fulginiti": {
+          "desc": "Mai vinto al gioco del silenzio, ricercatrice assidua di nuove mete da esplorare e conoscere."
+        },
+        "roberto_brogi": {
+          "desc": "Sono un uomo semplice: programmo di giorno, mi trasformo in John Deacon di notte."
+        },
+        "ivo_mosca": {
+          "desc": "Make it simple."
+        },
+        "maria_rodrigez": {
+          "desc": "Nerd sotto copertura in ambito IT, cosa potrebbe andare storto?"
+        },
+        "francesca_bellini": {
+          "desc": "Dammi tre parole: fashion, danza e carbonara."
+        }
       }
     },
     "form": {
