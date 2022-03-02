@@ -36,6 +36,7 @@ const Home = (props) => {
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     window.addEventListener("scroll", handleScroll);
 
     const element = refDarkContainer.current;
@@ -135,7 +136,7 @@ const Home = (props) => {
           className="home-logo-bg" />
 
         <p
-          className={"home-written-bg"}
+          className={"home-written-bg-desktop"}
         >People first
         </p>
 
@@ -167,6 +168,11 @@ const Home = (props) => {
               <strong>{t("home.fourthSection.title.part3")}</strong>
             </p>
           </Box>
+
+          <p
+            className={"home-written-bg-mobile"}
+          >People first
+          </p>
         </Container>
 
         {/* Fifth section desktop with about us description and carousel*/}

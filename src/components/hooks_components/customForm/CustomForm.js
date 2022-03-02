@@ -294,12 +294,12 @@ const CustomForm = (props) => {
                 callbackClose={closeModal}
                 modalTitle={t("footer.privacyPolicies")}
               >
-                <img
+                {/* <img
                   modalTitle="Privacy Policy"
                   src={t("modal.doc_lang") === "doc_it" ? privacyPolicies_it : privacyPolicies_en}
                   alt={t("altImages.privacyPolicies")}
                   className="width-100"
-                />
+                /> */}
               </CustomModal>
             </Grid>
             <Grid

@@ -74,7 +74,7 @@
     },
     "tab": {
       "vision": {
-        "title": "La visione",
+        "title": "Visione",
         "content": {
           "part1": "Le ",
           "part2": "persone ",
@@ -91,7 +91,7 @@
         }
       },
       "mission": {
-        "title": "La missione",
+        "title": "Missione",
         "content": {
           "part1": "Aiutiamo le aziende a realizzare ",
           "part2": "progetti innovativi ",
@@ -111,7 +111,7 @@
         }
       },
       "history": {
-        "title": "La storia",
+        "title": "Storia",
         "content": {
           "part1": "Al centro del modello Beije c’è una ",
           "part2": "vision People First ",
@@ -128,16 +128,16 @@
         }
       },
       "values": {
-        "title": "I valori",
+        "title": "Valori",
         "content": {
           "part1": "Crediamo in quello che facciamo e abbiamo un profondo ",
           "part2": "RISPETTO ",
-          "part3": "per gli altri ",
+          "part3": "per gli altri. ",
           "part4": "Mostriamo ",
           "part5": "GRATITUDINE ",
-          "part6": "per l’impegno che ogni giorno mettiamo nel nostro lavoro",
+          "part6": "per l’impegno che ogni giorno mettiamo nel nostro lavoro. ",
           "part7": "Prima viene la squadra e poi l’individuo, il nostro è un lavoro di ",
-          "part8": "TEAM ",
+          "part8": "TEAM. ",
           "part9": "La base per costruire la nostra community è sviluppare un ",
           "part10": "SENSO DI APPARTENENZA"
         }

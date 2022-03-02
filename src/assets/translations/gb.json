@@ -74,7 +74,7 @@
     },
     "tab": {
       "vision": {
-        "title": "La nostra visione",
+        "title": "Vision",
         "content": {
           "part1": "",
           "part2": "People ",
@@ -84,7 +84,7 @@
         }
       },
       "mission": {
-        "title": "La nostra missione",
+        "title": "Mission",
         "content": {
           "part1": "We help companies to implement ",
           "part2": "innovative projects ",
@@ -93,7 +93,7 @@
         }
       },
       "history": {
-        "title": "La nostra storia",
+        "title": "History",
         "content": {
           "part1": "At the heart of the ",
           "part2": "Beije model ",
@@ -106,7 +106,7 @@
         }
       },
       "values": {
-        "title": "I nostri valori",
+        "title": "Values",
         "content": {
           "part1": "We believe in what we do and have a deep ",
           "part2": "RESPECT ",

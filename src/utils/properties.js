@@ -20,10 +20,10 @@ import marianna_fulginiti from "../assets/images/profile_picture/marianna_fulgin
 import roberto_brogi from "../assets/images/profile_picture/roberto_brogi.jpg";
 
 // Docs
-import png_privacyPolicies_it from "../assets/images/privacy/Beije_PrivacyPolicies_IT.png";
-import png_privacyPolicies_en from "../assets/images/privacy/Beije_PrivacyPolicies_EN.png";
-import png_legalNotes_it from "../assets/images/privacy/Beije_legalNotes_IT.png";
-import png_legalNotes_en from "../assets/images/privacy/Beije_legalNotes_EN.png";
+import png_privacyPolicies_it from "../assets/docs/Beije_PrivacyPolicies_IT.pdf";
+import png_privacyPolicies_en from "../assets/docs/Beije_PrivacyPolicies_EN.pdf";
+import png_legalNotes_it from "../assets/docs/Beije_legalNotes_IT.pdf";
+import png_legalNotes_en from "../assets/docs/Beije_legalNotes_EN.pdf";
 
 // Link
 const linkFb = "https://www.facebook.com/beijepeoplefirst";
@@ -171,7 +171,7 @@ export const social_list = [
 // Tab About Us
 export const tab_aboutUs = [
   {
-    labelTab: "La visione",
+    labelTab: "home.tab.vision.title",
     contentPanel: [
       {
         spanContent: "home.tab.vision.content.part1",
@@ -236,7 +236,7 @@ export const tab_aboutUs = [
     ]
   },
   {
-    labelTab: "La missione",
+    labelTab: "home.tab.mission.title",
     contentPanel: [
       {
         spanContent: "home.tab.mission.content.part1",
@@ -316,7 +316,7 @@ export const tab_aboutUs = [
     ]
   },
   {
-    labelTab: "La storia",
+    labelTab: "home.tab.history.title",
     contentPanel: [
       {
         spanContent: "home.tab.history.content.part1",
@@ -381,7 +381,7 @@ export const tab_aboutUs = [
     ]
   },
   {
-    labelTab: "I valori",
+    labelTab: "home.tab.values.title",
     contentPanel: [
       {
         spanContent: "home.tab.values.content.part1",
@@ -396,7 +396,7 @@ export const tab_aboutUs = [
       {
         spanContent: "home.tab.values.content.part3",
         classNameSpan: "",
-        addHtml: "one-break"
+        addHtml: ""
       },
       {
         spanContent: "home.tab.values.content.part4",
@@ -411,7 +411,7 @@ export const tab_aboutUs = [
       {
         spanContent: "home.tab.values.content.part6",
         classNameSpan: "",
-        addHtml: "one-break"
+        addHtml: ""
       },
       {
         spanContent: "home.tab.values.content.part7",
@@ -426,7 +426,7 @@ export const tab_aboutUs = [
       {
         spanContent: "home.tab.values.content.part9",
         classNameSpan: "",
-        addHtml: "one-break"
+        addHtml: ""
       },
       {
         spanContent: "home.tab.values.content.part10",
@@ -483,7 +483,7 @@ export const carouselProfile = [
     id: 5,
     name: 'Roberto',
     surname: 'Brogi',
-    role: 'CTO & Master Trainer',
+    role: 'CTO & Academy Trainer',
     description: 'home.fifthSection.carouselProfile.roberto_brogi.desc',
     alt: 'RobertoBrogi',
     pictureClassName: "carousel-bg-roberto-brogi",
@@ -493,7 +493,7 @@ export const carouselProfile = [
     id: 6,
     name: 'Ivo',
     surname: 'Mosca',
-    role: 'CIO & Master Trainer',
+    role: 'CIO & Academy Trainer',
     description: 'home.fifthSection.carouselProfile.ivo_mosca.desc',
     alt: 'IvoMosca',
     pictureClassName: "carousel-bg-ivo-mosca",

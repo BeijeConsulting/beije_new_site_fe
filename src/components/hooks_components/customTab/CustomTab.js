@@ -71,7 +71,7 @@ const CustomTab = (props) => {
         className={key === state.value ? props.classNameLabelBoxActive : props.classNameLabelBox}
       >
         <CustomButton
-          content={item.labelTab}
+          content={t(item.labelTab)}
           className={key === state.value ? props.classNameLabelActive : props.classNameLabels}
           btnTypeContent={props.btnTypeContent}
           callback={changeContent(key)}
