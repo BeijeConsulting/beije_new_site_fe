@@ -22,6 +22,7 @@ const Up = (props) => {
   console.log("window.innerHeight", window.innerHeight);
 
   useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
     props.dispatch(setCurrentPage("up"));
     props.dispatch(setVisibilityNavbar(true));
     return () => {
