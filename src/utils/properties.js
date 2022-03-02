@@ -176,27 +176,62 @@ export const tab_aboutUs = [
       {
         spanContent: "home.tab.vision.content.part1",
         classNameSpan: "hightlight-on-hover",
-        test: ""
+        addHtml: ""
       },
       {
         spanContent: "home.tab.vision.content.part2",
         classNameSpan: "hightlight-txt-white hightlight-on-hover",
-        test: ""
+        addHtml: ""
       },
       {
         spanContent: "home.tab.vision.content.part3",
         classNameSpan: "hightlight-on-hover",
-        test: ""
+        addHtml: ""
       },
       {
         spanContent: "home.tab.vision.content.part4",
         classNameSpan: "hightlight-txt-white hightlight-on-hover",
-        test: "break"
+        addHtml: "two-break"
       },
       {
         spanContent: "home.tab.vision.content.part5",
-        classNameSpan: "",
-        test: ""
+        classNameSpan: "reduce-on-hover",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.vision.content.part6",
+        classNameSpan: "hightlight-txt-white reduce-on-hover",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.vision.content.part7",
+        classNameSpan: "reduce-on-hover",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.vision.content.part8",
+        classNameSpan: "hightlight-txt-white reduce-on-hover",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.vision.content.part9",
+        classNameSpan: "reduce-on-hover",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.vision.content.part10",
+        classNameSpan: "hightlight-txt-white reduce-on-hover",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.vision.content.part11",
+        classNameSpan: "reduce-on-hover",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.vision.content.part12",
+        classNameSpan: "hightlight-txt-white reduce-on-hover",
+        addHtml: ""
       }
     ]
   },
@@ -205,19 +240,78 @@ export const tab_aboutUs = [
     contentPanel: [
       {
         spanContent: "home.tab.mission.content.part1",
-        classNameSpan: ""
+        classNameSpan: "hightlight-on-hover",
+        addHtml: ""
       },
       {
         spanContent: "home.tab.mission.content.part2",
-        classNameSpan: "hightlight-txt-white"
+        classNameSpan: "hightlight-txt-white hightlight-on-hover",
+        addHtml: ""
       },
       {
         spanContent: "home.tab.mission.content.part3",
-        classNameSpan: ""
+        classNameSpan: "hightlight-on-hover",
+        addHtml: ""
       },
       {
         spanContent: "home.tab.mission.content.part4",
-        classNameSpan: "hightlight-txt-white"
+        classNameSpan: "hightlight-txt-white hightlight-on-hover",
+        addHtml: "two-break"
+      },
+      {
+        spanContent: "home.tab.mission.content.part5",
+        classNameSpan: "reduce-on-hover",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.mission.content.part6",
+        classNameSpan: "hightlight-txt-white reduce-on-hover",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.mission.content.part7",
+        classNameSpan: "reduce-on-hover",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.mission.content.part8",
+        classNameSpan: "hightlight-txt-white reduce-on-hover",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.mission.content.part9",
+        classNameSpan: "reduce-on-hover",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.mission.content.part10",
+        classNameSpan: "hightlight-txt-white reduce-on-hover",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.mission.content.part11",
+        classNameSpan: "reduce-on-hover",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.mission.content.part12",
+        classNameSpan: "hightlight-txt-white reduce-on-hover",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.mission.content.part13",
+        classNameSpan: "reduce-on-hover",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.mission.content.part14",
+        classNameSpan: "hightlight-txt-white reduce-on-hover",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.mission.content.part15",
+        classNameSpan: "reduce-on-hover",
+        addHtml: ""
       }
     ]
   },
@@ -226,35 +320,63 @@ export const tab_aboutUs = [
     contentPanel: [
       {
         spanContent: "home.tab.history.content.part1",
-        classNameSpan: ""
+        classNameSpan: "",
+        addHtml: ""
       },
       {
         spanContent: "home.tab.history.content.part2",
-        classNameSpan: "hightlight-txt-white"
+        classNameSpan: "hightlight-txt-white",
+        addHtml: ""
       },
       {
         spanContent: "home.tab.history.content.part3",
-        classNameSpan: ""
+        classNameSpan: "",
+        addHtml: ""
       },
       {
         spanContent: "home.tab.history.content.part4",
-        classNameSpan: "hightlight-txt-white"
+        classNameSpan: "hightlight-txt-white",
+        addHtml: ""
       },
       {
         spanContent: "home.tab.history.content.part5",
-        classNameSpan: ""
+        classNameSpan: "",
+        addHtml: ""
       },
       {
         spanContent: "home.tab.history.content.part6",
-        classNameSpan: "hightlight-txt-white"
+        classNameSpan: "hightlight-txt-white",
+        addHtml: ""
       },
       {
         spanContent: "home.tab.history.content.part7",
-        classNameSpan: ""
+        classNameSpan: "",
+        addHtml: ""
       },
       {
         spanContent: "home.tab.history.content.part8",
-        classNameSpan: "hightlight-txt-white"
+        classNameSpan: "hightlight-txt-white",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.history.content.part9",
+        classNameSpan: "",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.history.content.part10",
+        classNameSpan: "hightlight-txt-white",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.history.content.part11",
+        classNameSpan: "",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.history.content.part12",
+        classNameSpan: "hightlight-txt-white",
+        addHtml: ""
       }
     ]
   },
@@ -263,43 +385,53 @@ export const tab_aboutUs = [
     contentPanel: [
       {
         spanContent: "home.tab.values.content.part1",
-        classNameSpan: ""
+        classNameSpan: "",
+        addHtml: ""
       },
       {
         spanContent: "home.tab.values.content.part2",
-        classNameSpan: "hightlight-txt-white"
+        classNameSpan: "hightlight-txt-white",
+        addHtml: ""
       },
       {
         spanContent: "home.tab.values.content.part3",
-        classNameSpan: ""
+        classNameSpan: "",
+        addHtml: "one-break"
       },
       {
         spanContent: "home.tab.values.content.part4",
-        classNameSpan: ""
+        classNameSpan: "",
+        addHtml: ""
       },
       {
         spanContent: "home.tab.values.content.part5",
-        classNameSpan: "hightlight-txt-white"
+        classNameSpan: "hightlight-txt-white",
+        addHtml: ""
       },
       {
         spanContent: "home.tab.values.content.part6",
-        classNameSpan: ""
+        classNameSpan: "",
+        addHtml: "one-break"
       },
       {
         spanContent: "home.tab.values.content.part7",
-        classNameSpan: ""
+        classNameSpan: "",
+        addHtml: ""
       },
       {
         spanContent: "home.tab.values.content.part8",
-        classNameSpan: "hightlight-txt-white"
+        classNameSpan: "hightlight-txt-white",
+        addHtml: ""
       },
       {
         spanContent: "home.tab.values.content.part9",
-        classNameSpan: ""
+        classNameSpan: "",
+        addHtml: "one-break"
       },
       {
         spanContent: "home.tab.values.content.part10",
-        classNameSpan: "hightlight-txt-white"
+        classNameSpan: "hightlight-txt-white",
+        addHtml: ""
       }
     ]
   }

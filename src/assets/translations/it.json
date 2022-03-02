@@ -80,7 +80,14 @@
           "part2": "persone ",
           "part3": "al centro del nostro ",
           "part4": "futuro ",
-          "part5": "La nostra Visione è il quadro di riferimento della nostra tabella di marcia. Guida ogni aspetto della nostra attività, delineando le azioni necessarie a proseguire una crescita sostenibile e di qualità."
+          "part5": "Investiamo ogni giorno nelle persone per garantire un miglioramento, ",
+          "part6": "costante ",
+          "part7": "dei nostri servizi. Vogliamo creare un sistema in cui ",
+          "part8": "capacita ",
+          "part9": "e ",
+          "part10": "qualità ",
+          "part11": "passano attraverso persone di valore: un ambiente di riferimento per coloro che ci accompagnano in questo percorso di ",
+          "part12": "crescita."
         }
       },
       "mission": {
@@ -88,21 +95,36 @@
         "content": {
           "part1": "Aiutiamo le aziende a realizzare ",
           "part2": "progetti innovativi ",
-          "part3": "attraverso un ",
-          "part4": "Team di Valore "
+          "part3": "attraverso un Team di ",
+          "part4": "Valore ",
+          "part5": "La nostra missione è quella di",
+          "part6": "crescere ",
+          "part7": "insieme ai nostri clienti ed essere in grado di creare un sistema all’avanguardia in cui ",
+          "part8": "innovazione",
+          "part9": ", ",
+          "part10": "trasparenza ",
+          "part11": "ed ",
+          "part12": "equità",
+          "part13": "sono asset fondamentali nella costruzione di un sistema ",
+          "part14": "People First ",
+          "part15": "orientato allo sviluppo di progetti di valore."
         }
       },
       "history": {
         "title": "La nostra storia",
         "content": {
-          "part1": "Al centro del ",
-          "part2": "modello Beije ",
-          "part3": "c’è una vision people first: le persone al centro per la creazione di un’azienda di ",
+          "part1": "Al centro del modello Beije c’è una ",
+          "part2": "vision People First ",
+          "part3": ": le persone al centro per la creazione di un’azienda di ",
           "part4": "valore",
-          "part5": ". Da un ideale ad un business: da più di 10 anni ci impegniamo costantemente per aggiornare il nostro ",
-          "part6": "know-how ",
-          "part7": "e siamo in grado di fornire le metodologie più moderne e le tecnologie più innovative per la realizzazione di ",
-          "part8": "progetti altamente specializzati"
+          "part5": ". Da un ideale ad un business: da più di 10 anni ci impegniamo costantemente per aggiornare il nostro know-how e siamo in grado di fornire le metodologie più moderne e le ",
+          "part6": "tecnologie ",
+          "part7": "più ",
+          "part8": "innovative ",
+          "part9": "per la realizzazione di ",
+          "part10": "progetti ",
+          "part11": "altamente ",
+          "part12": "specializzati"
         }
       },
       "values": {

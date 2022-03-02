@@ -97,15 +97,28 @@ const CustomTab = (props) => {
   }
 
   const printAllSpan = (interItem, interalKey) => {
-    return (
-      <span
-        key={interalKey}
-        className={interItem.classNameSpan}
-      >
-        {t(interItem.spanContent)} {interItem.test === "break" ? <><br /> <br /> </> : <></>}
+    if (interItem.addHtml === "" || interItem.addHtml === "two-break") {
+      return (
+        <span
+          key={interalKey}
+          className={interItem.classNameSpan}
+        >
+          {t(interItem.spanContent)} {interItem.addHtml === "two-break" ? <><br /><br /></> : <></>}
 
-      </span>
-    )
+        </span>
+      )
+    }
+    else {
+      return (
+        <p
+          key={interalKey}
+          className={interItem.classNameSpan}
+        >
+          {t(interItem.spanContent)}
+
+        </p>
+      )
+    }
   }
 
   return (
