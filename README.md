@@ -19,4 +19,5 @@ Library:
   react-google-recaptcha - https://www.npmjs.com/package/react-google-recaptcha
   yup - https://www.npmjs.com/package/yup
   react-pdf - https://www.npmjs.com/package/react-pdf <!--Remove-->
-  react-pdf-viewer - https://react-pdf-viewer.dev/docs/getting-started/
+  react-pdf-viewer - https://react-pdf-viewer.dev/docs/getting-started/ <!--Remove-->
+  material-ui-carousel - https://www.npmjs.com/package/react-material-ui-carousel
