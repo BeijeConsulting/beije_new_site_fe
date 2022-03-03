@@ -111,7 +111,7 @@ const Home = (props) => {
         maxWidth={"false"}
         className={"home-second-section-container d-flex flex-column justify-center"}
       >
-        <h2 className={"home-second-section-txt"}>
+        <h3 className={"home-second-section-txt"}>
           <span className={"home-second-section-quotation-marks"}>&#8220;</span>
           <span>
             {t("home.secondSection.part1")}
@@ -122,7 +122,7 @@ const Home = (props) => {
           </span>
           {/* <span>Lavoriamo costantemente per arrivare <br />alla piena soddisfazione <br />dei nostri clienti</span> */}
           <span className={"home-second-section-quotation-marks"}>&#8222;</span>
-        </h2>
+        </h3>
       </Container>
 
       {/* Box with dark bg for next sections */}

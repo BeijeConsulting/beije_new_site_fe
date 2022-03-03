@@ -136,7 +136,7 @@ const CustomTab = (props) => {
 }
 
 CustomTab.defaultProps = {
-  btnTypeContent: "h3",
+  btnTypeContent: "h2",
   classNameLabelBoxActive: "tab-lables-box tab-lables-box-active",
   classNameLabelBox: "tab-lables-box",
   classNameLabels: "tab-lables",
