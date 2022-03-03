@@ -19,8 +19,16 @@
   opacity: 85%;
 }
 
+.homeLayout-consulting-bg {
+  background-color: var(--lightblue);
+}
+
 .homeLayout-up-bg {
   background-color: var(--blue);
+}
+
+.homeLayout-academy-bg {
+  background-color: var(--yellow);
 }
 
 /* Loading */

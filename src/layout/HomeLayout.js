@@ -55,8 +55,14 @@ const HomeLayout = (props) => {
   const switchClassBgLayout = () => {
     let classNameBgLayout = null;
     switch (props.currentPageDuck.currentPage) {
+      case "consulting":
+        classNameBgLayout = "homeLayout-fixed-bg homeLayout-consulting-bg"
+        break;
       case "up":
         classNameBgLayout = "homeLayout-fixed-bg homeLayout-up-bg"
+        break;
+      case "academy":
+        classNameBgLayout = "homeLayout-fixed-bg homeLayout-academy-bg"
         break;
       default:
         classNameBgLayout = "homeLayout-fixed-bg homeLayout-video-filter"
