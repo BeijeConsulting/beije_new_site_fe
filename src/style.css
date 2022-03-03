@@ -67,6 +67,10 @@
   /*lg - 1200px*/
   --header-height-xlg: 147px;
   /*xlg - 1600px*/
+
+  --photos-filter: linear-gradient(90deg, rgba(38, 46, 54, 0.74) 0%, rgba(38, 46, 54, 0.74) 35%, rgba(38, 46, 54, 0.74) 100%);
+  --o-photos-filter: -o-linear-gradient(left, rgba(38, 46, 54, 0.74) 0%, rgba(38, 46, 54, 0.74) 35%, rgba(38, 46, 54, 0.74) 100%);
+  --webkit-photos-filter: -webkit-linear-gradient(left top, right top, from(rgba(38, 46, 54, 0.74)), color-stop(35%, rgba(38, 46, 54, 0.74)), to(rgba(38, 46, 54, 0.74)));
 }
 
 * {

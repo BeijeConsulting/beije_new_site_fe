@@ -1,0 +1,19 @@
+.simple-carousel-container {
+  width: 100%;
+}
+
+.simple-carousel-content-container {
+  width: 90%;
+}
+
+@media(min-width: 768px) {
+  .simple-carousel-container {
+    width: 50%;
+    margin: auto;
+  }
+
+  .simple-carousel-content-container {
+    width: 70%;
+    margin: auto;
+  }
+}

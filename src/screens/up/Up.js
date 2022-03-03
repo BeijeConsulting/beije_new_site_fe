@@ -12,10 +12,11 @@ import { Box, Container } from "@mui/material";
 import "./Up.css";
 
 // Constants
-import { logo_secondary_transparent } from "../../utils/properties";
+import { logo_secondary_transparent, clientComments } from "../../utils/properties";
 
 // Components
 import IntroSectionImgTxt from "../../components/functional_components/introSectionImgTxt/IntroSectionImgTxt";
+import SimpleCarousel from "../../components/functional_components/simpleCarousel/SimpleCarousel";
 
 const Up = (props) => {
 
@@ -69,7 +70,7 @@ const Up = (props) => {
           </IntroSectionImgTxt>
         </Container>
 
-        {/* Second section */}
+        {/* Second section description up*/}
         <Container
           component={"section"}
           maxWidth={"false"}
@@ -103,12 +104,21 @@ const Up = (props) => {
           </Box>
         </Container>
 
-        {/* Third section */}
+        {/* Third section comments*/}
         <Container
           component={"section"}
           maxWidth={"false"}
           className={"up-third-section paddingX-container-general-pages bg-blue top-oblique-line"}
         >
+          <Box>
+            <h2>Dicono di noi</h2>
+          </Box>
+
+          <Box>
+            <SimpleCarousel
+              obj={clientComments}
+            />
+          </Box>
         </Container>
 
       </Box>

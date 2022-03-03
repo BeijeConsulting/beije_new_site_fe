@@ -32,9 +32,16 @@
 
 /* Third section */
 .up-third-section {
+  padding-top: 100px;
+  color: var(--white);
   /* Remove */
   height: 1000px;
 }
+
+.up-third-section h2 {
+  text-transform: uppercase;
+}
+
 
 /* Media queries */
 @media(min-width: 1024px) {
@@ -82,6 +89,7 @@
 
   .up-third-section {
     margin-top: -300px;
+    padding-top: 200px;
   }
 }
 
@@ -102,5 +110,10 @@
 
   .up-logo-bg {
     height: 60%;
+  }
+
+  .up-third-section {
+    margin-top: -300px;
+    padding-top: 235px;
   }
 }
