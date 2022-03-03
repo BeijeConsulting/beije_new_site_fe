@@ -8,6 +8,7 @@ import logo_short_grey from "../assets/images/logos/logo_short_grey.svg";
 import logo_short_transparent from "../assets/images/logos/logo_short_transparent.svg";
 import { faFacebookF, faLinkedinIn, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faN, faArrowDownLong, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import quotation_mark from "../assets/icons/quote.png";
 
 // Docs
 import png_privacyPolicies_it from "../assets/docs/Beije_PrivacyPolicies_IT.pdf";
@@ -78,6 +79,7 @@ export const defaultIcon = faN;
 export const downArrow = faArrowDownLong;
 export const leftArrow = faAngleLeft;
 export const rightArrow = faAngleRight;
+export const quotationMark = quotation_mark;
 
 export const privacyPolicies_it = png_privacyPolicies_it;
 export const privacyPolicies_en = png_privacyPolicies_en;
@@ -524,6 +526,6 @@ export const clientComments = [
   {
     name: "Name",
     surname: "Surname",
-    content: "4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar lorem quis metus mollis commodo. Duis eget quam faucibus, vulputate augue et, imperdiet elit. Nam faucibus ipsum enim, at aliquam lorem dictum at. Vestibulum bibendum eu purus vel mattis. Ut at tortor et neque bibendum ultricies id id diam."
+    content: "4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar lorem quis metus mollis commodo. Duis eget quam faucibus, vulputate augue et, imperdiet elit. Nam faucibus ipsum enim, at aliquam lorem dictum at. Vestibulum bibendum eu purus vel mattis. Ut at tortor et neque bibendum ultricies id id diam. "
   }
 ]
