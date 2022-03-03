@@ -26,38 +26,34 @@ const CustomNavbar = (props) => {
     <nav className={switchClassName()}>
 
       <NavLink
-        to=""
-      // className={switchClassName}
-      // className={({ isActive }) =>
-      //   isActive ? props.activeClassName : props.notActiveClassName
-      // }
+        to="/beije-consulting"
       >
         Beije Consulting
+        {
+          props.currentPageDuck.currentPage === "consulting" &&
+          <div className="navbarTop-hightlight navbarTop-hightlight-consulting"></div>
+        }
       </NavLink>
 
       <NavLink
         to="/beije-up"
-      // className={switchClassName}
-      // className={({ isActive }) =>
-      //   isActive ? props.activeClassName : props.notActiveClassName
-      // }
       >
         Beije Up
         {
           props.currentPageDuck.currentPage === "up" &&
-          <div className="navbarTop-up-hightlight"></div>
+          <div className="navbarTop-hightlight navbarTop-hightlight-up"></div>
         }
       </NavLink>
 
 
       <NavLink
-        to=""
-      // className={switchClassName}
-      // className={({ isActive }) =>
-      //   isActive ? props.activeClassName : props.notActiveClassName
-      // }
+        to="/beije-talent-academy"
       >
         Beije Talent Academy
+        {
+          props.currentPageDuck.currentPage === "academy" &&
+          <div className="navbarTop-hightlight navbarTop-hightlight-academy"></div>
+        }
       </NavLink>
 
     </nav>

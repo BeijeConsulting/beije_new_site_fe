@@ -267,6 +267,10 @@ h3, h4, h5, h6 {
   background-color: var(--blue) !important;
 }
 
+.bg-lightblue {
+  background-color: var(--lightblue) !important;
+}
+
 .hightlight-txt {
   color: var(--red)
 }
@@ -332,6 +336,16 @@ h3, h4, h5, h6 {
 }
 
 /* MARGIN */
+.margin-top-container-screens {
+  margin-top: var(--header-height-xs)
+}
+
+@media(min-width: 768px) {
+  .margin-top-container-screens {
+    margin-top: calc(var(--header-height-md))
+  }
+}
+
 @media(min-width: 1024px) {
   .margin-top-container-screens {
     margin-top: calc(var(--header-height-md) + 5px)

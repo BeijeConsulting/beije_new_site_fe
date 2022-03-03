@@ -49,8 +49,10 @@ const Up = (props) => {
             typeSection="up"
             classNameBgImgDesktop="intro-section-img-up"
             classNameBgImgMobile="intro-section-img-up"
+            bgIconDownload="intro-section-download-icon-up"
             sectionName="Beije Up"
             sectionTitle="La nostra software factory"
+            photoTitle="UP"
           >
             <div>
               <p>Lavoriamo con dedizione al fianco dei nostri clienti.<br />

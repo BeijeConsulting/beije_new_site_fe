@@ -32,8 +32,14 @@ const IntroSectionImgTxt = (props) => {
   const switchClassNameSecName = () => {
     let currentClassName = null;
     switch (props.typeSection) {
+      case "consulting":
+        currentClassName = "intro-section-name intro-section-consulting-name"
+        break;
       case "up":
         currentClassName = "intro-section-name intro-section-up-name"
+        break;
+      case "academy":
+        currentClassName = "intro-section-name intro-section-academy-name"
         break;
       default:
         currentClassName = ""
@@ -45,8 +51,14 @@ const IntroSectionImgTxt = (props) => {
   const switchClassNameDownloadBtn = () => {
     let currentClassName = null;
     switch (props.typeSection) {
+      case "consulting":
+        currentClassName = "intro-section-consulting-download"
+        break;
       case "up":
         currentClassName = "intro-section-up-download"
+        break;
+      case "academy":
+        currentClassName = "intro-section-academy-download"
         break;
       default:
         currentClassName = ""
@@ -63,7 +75,7 @@ const IntroSectionImgTxt = (props) => {
       <div
         className={`${props.classNameImgContainer} ${props.classNameBgImgDesktop}`}
       >
-        <p>UP</p>
+        <p>{props.photoTitle}</p>
       </div>
       <div
         // ref={refTxtContainer}
@@ -81,17 +93,20 @@ const IntroSectionImgTxt = (props) => {
           {props.sectionTitle}
         </h1>
 
-        <Box className={"intro-section-scroll-down-container"}>
-          <ScrollDownButton
-            callback={props.callback}
-          />
+        <Box className={"intro-section-scroll-down-external-container"}>
+          <Box className={"intro-section-scroll-down-container"}>
+            <ScrollDownButton
+              callback={props.callback}
+            />
+          </Box>
         </Box>
+
         {props.children}
 
         <Box className="intro-section-download-container">
           <CustomButton
             content="Scarica la presentazione"
-            startIcon={<span className="intro-sec-download-icon" />}
+            startIcon={<span className={`intro-sec-download-icon ${props.bgIconDownload}`} />}
             className={switchClassNameDownloadBtn()}
             callback={props.callback}
             download={true}

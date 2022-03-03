@@ -88,17 +88,17 @@ export const legalNotes_en = png_legalNotes_en;
 export const menu_voices = [
   {
     name: "consulting",
-    link_to: "#",
+    link_to: "beije-consulting",
     key_link: "consulting"
   },
   {
     name: "up",
-    link_to: "#",
+    link_to: "beije-up",
     key_link: "up"
   },
   {
     name: "academy",
-    link_to: "#",
+    link_to: "beije-talent-academy",
     key_link: "academy"
   },
   {
