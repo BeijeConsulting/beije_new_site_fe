@@ -1,5 +1,6 @@
 :root {
-  --up-second-section-bg: url("../../assets/images/up/up2.jpg")
+  --up-second-section-bg: url("../../assets/images/up/up2.png");
+  --up-fourth-section-bg: url("../../assets/images/up/up3.png")
 }
 
 /* First section */
@@ -33,18 +34,65 @@
 /* Third section */
 .up-third-section,
 .consulting-third-section {
+  padding: 100px 0;
+  color: var(--white);
   /* Remove */
   height: 1000px;
 }
 
+.up-third-section h2 {
+  text-transform: uppercase;
+}
+
+/* Fourth section */
+.up-fourth-section {
+  background-image: var(--up-fourth-section-bg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 30vh;
+  padding-top: 60px;
+}
+
+.up-fourth-section h2 {
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+/* Fifth section */
+.home-fifth-section-container {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+
+
 /* Media queries */
+@media(min-width: 400px) {
+  .up-fourth-section {
+    min-height: 400px;
+  }
+
+  .home-fifth-section-container {
+    bottom: -347px;
+  }
+}
+
+@media(min-width: 768px) {
+
+  .up-fourth-section {
+    padding-top: 100px;
+  }
+
+}
+
 @media(min-width: 1024px) {
   .first-section-list-container {
     margin: 25px 0;
   }
 
   .up-second-section {
-    background-image: linear-gradient(90deg, rgba(38, 46, 54, 0.74) 0%, rgba(38, 46, 54, 0.74) 35%, rgba(38, 46, 54, 0.74) 100%), var(--up-second-section-bg);
+    background-image: var(--up-second-section-bg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -84,6 +132,11 @@
   .up-third-section,
   .consulting-third-section {
     margin-top: -300px;
+    padding-top: 200px;
+  }
+
+  .home-fifth-section-container {
+    bottom: -350px;
   }
 }
 
@@ -95,6 +148,11 @@
   .up-logo-bg {
     height: 50%;
   }
+
+  .home-fifth-section-container {
+    bottom: -333px;
+    padding: 0 8.3% !important;
+  }
 }
 
 @media(min-width: 1600px) {
@@ -104,5 +162,18 @@
 
   .up-logo-bg {
     height: 60%;
+  }
+
+  .up-third-section {
+    margin-top: -300px;
+    padding-top: 235px;
+  }
+
+  .up-fourth-section {
+    min-height: 700px;
+  }
+
+  .home-fifth-section-container {
+    bottom: -468px;
   }
 }

@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 // Redux
 import { connect } from "react-redux";
@@ -12,14 +13,17 @@ import { Box, Container } from "@mui/material";
 import "./Up.css";
 
 // Constants
-import { logo_secondary_transparent } from "../../utils/properties";
+import { logo_secondary_transparent, clientComments, quotationMarks } from "../../utils/properties";
 
 // Components
 import IntroSectionImgTxt from "../../components/functional_components/introSectionImgTxt/IntroSectionImgTxt";
+import SimpleCarousel from "../../components/functional_components/simpleCarousel/SimpleCarousel";
+import CustomCarousel from "../../components/hooks_components/customCarousel/CustomCarousel";
+import CustomForm from "../../components/hooks_components/customForm/CustomForm";
 
 const Up = (props) => {
 
-  console.log("window.innerHeight", window.innerHeight);
+  const { t } = useTranslation();
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
@@ -70,7 +74,7 @@ const Up = (props) => {
           </IntroSectionImgTxt>
         </Container>
 
-        {/* Second section */}
+        {/* Second section description up*/}
         <Container
           component={"section"}
           maxWidth={"false"}
@@ -104,13 +108,57 @@ const Up = (props) => {
           </Box>
         </Container>
 
-        {/* Third section */}
+        {/* Third section comments*/}
         <Container
           component={"section"}
           maxWidth={"false"}
           className={"up-third-section paddingX-container-general-pages bg-blue top-oblique-line"}
         >
+          <Box>
+            <h2>Dicono di noi</h2>
+          </Box>
+
+          <Box>
+            <SimpleCarousel
+              obj={clientComments}
+            />
+          </Box>
         </Container>
+
+        {/* Fourth section case studies*/}
+        <Container
+          component={"section"}
+          maxWidth={"false"}
+          className={"up-fourth-section paddingX-container-general-pages position-relative"}
+        >
+          <Box>
+            <h2>Case studies</h2>
+          </Box>
+
+          <Container
+            component={"section"}
+            maxWidth={"false"}
+            className={"home-fifth-section-container"}
+          >
+            <CustomCarousel />
+          </Container>
+        </Container>
+
+        {/* sixth section form*/}
+        <Container
+          component={"section"}
+          maxWidth={"false"}
+          className={"home-seventh-section-container paddingX-container-default"}
+        >
+          <Box
+            className={"home-seventh-section-box-form"}
+          >
+            <CustomForm
+              formTitle={t("home.form.title")}
+            />
+          </Box>
+        </Container>
+
 
       </Box>
 
