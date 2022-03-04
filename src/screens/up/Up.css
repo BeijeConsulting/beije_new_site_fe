@@ -87,6 +87,7 @@
 
   .up-fifth-section-container {
     bottom: -215px;
+    padding: 0 11.2% !important;
   }
 
   .up-sixth-section-box-form {
@@ -143,6 +144,10 @@
     padding-top: 200px;
   }
 
+  .up-fifth-section-container {
+    padding: 0 14.7% !important;
+  }
+
   .up-sixth-section-box-form {
     margin-top: 300px;
   }
@@ -163,7 +168,6 @@
 
   .up-fifth-section-container {
     bottom: -240px;
-    padding: 0 11.2% !important;
   }
 
   .up-sixth-section-box-form {
