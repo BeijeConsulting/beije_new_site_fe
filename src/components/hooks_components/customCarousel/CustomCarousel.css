@@ -1,10 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.3.6,
-* Autoprefixer: v10.3.1
-* Browsers: last 4 version
-*/
-
 :root {
   --profile_chiara_balsamini: url("../../../assets/images/profile_picture/chiara_balsamini.jpg");
   --profile_erica_mauro: url("../../../assets/images/profile_picture/erica_mauro.jpg");
@@ -15,6 +8,9 @@
   --profile_maria_rodrigez: url("../../../assets/images/profile_picture/maria_rodrigez.jpg");
   --profile_marianna_fulginiti: url("../../../assets/images/profile_picture/marianna_fulginiti.jpg");
   --profile_roberto_brogi: url("../../../assets/images/profile_picture/roberto_brogi.jpg");
+
+  --caseStudies-youthquake: url("../../../assets/images/up/caseStudies/youthquake.jpg");
+  --caseStudies-pininfarina: url("../../../assets/images/up/caseStudies/pininfarina.jpg");
 }
 
 .swiper {
@@ -70,8 +66,31 @@
   background-color: var(--dark-grey);
 }
 
+/* CSS ONLY FOR UP PAGE */
+.swiper-container-up .swiper-slide-next, .swiper-container-up .swiper-slide-prev {
+  filter: brightness(0.8);
+  -webkit-filter: brightness(0.8);
+}
 
-/* Bg pictures */
+.swiper-container-up .swiper-slide-active {
+  cursor: pointer;
+}
+
+.swiper-container-up .swiper-slide p:nth-child(2) {
+  padding-bottom: 20px;
+}
+
+.swiper-container-up .swiper-slide-active .swipe-txt-container {
+  background-color: rgb(38, 46, 54, 0.8);
+}
+
+.swiper-container-up .swiper-slide-next .swipe-txt-container, .swiper-container-up .swiper-slide-prev .swipe-txt-container {
+  display: none;
+}
+
+
+/* BG PICTURE */
+/* for home */
 .carousel-bg-francesco-cesana {
   background-image: var(--profile_francesco_cesana);
 }
@@ -103,6 +122,16 @@
 .carousel-bg-francesca-bellini {
   background-image: var(--profile_francesca_bellini);
 }
+
+/* for up */
+.carousel-bg-youthquake {
+  background-image: var(--caseStudies-youthquake);
+}
+
+.carousel-bg-pininfarina {
+  background-image: var(--caseStudies-pininfarina);
+}
+
 
 @media(max-width: 600px) {
   .swiper-slide p {
@@ -168,8 +197,6 @@
     transform: translate3d(-33px, -2px, 60px);
   }
 
-
-
   .swiper-slide-next p {
     -webkit-transform: translate3d(33px, -2px, 60px);
     transform: translate3d(33px, -2px, 60px);
@@ -182,6 +209,11 @@
   .swiper-slide p:nth-child(3) {
     display: block;
     padding-bottom: 10px;
+  }
+
+  /* CSS ONLY FOR UP PAGE */
+  .swiper-container-up .swiper-slide-active .swipe-txt-container {
+    background-color: rgb(38, 46, 54, 0.6);
   }
 }
 

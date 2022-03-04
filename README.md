@@ -20,4 +20,5 @@ Library:
   yup - https://www.npmjs.com/package/yup
   pdf reader - https://www.npmjs.com/package/pdfreader
   react-pdf - https://www.npmjs.com/package/react-pdf <!--Remove-->
-  react-pdf-viewer - https://react-pdf-viewer.dev/docs/getting-started/
+  react-pdf-viewer - https://react-pdf-viewer.dev/docs/getting-started/ <!--Remove-->
+  material-ui-carousel - https://www.npmjs.com/package/react-material-ui-carousel

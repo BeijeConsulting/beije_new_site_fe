@@ -43,11 +43,13 @@ const BurgerMenu = (props) => {
     });
   };
 
+
   const printMenuLinks = (item, key) => {
     return (
       <Link
         key={key}
         to={item.link_to}
+        onClick={handleOpenNavMenu}
         className={"burgerMenu-links-voices"}
         onMouseEnter={mouseOver(key, item.key_link)}
         onMouseLeave={mouseLeave(key, item.key_link)}

@@ -76,14 +76,25 @@
 }
 
 /* Page on focus */
-.navbarTop-up-hightlight {
+.navbarTop-hightlight {
   position: absolute;
   width: 100%;
   bottom: -5px;
   left: 0;
-  border-bottom: 2px solid var(--blue);
   -webkit-animation: createUndeline linear 1.5s;
   animation: createUndeline linear 1.5s;
+}
+
+.navbarTop-hightlight-consulting {
+  border-bottom: 2px solid var(--lightblue);
+}
+
+.navbarTop-hightlight-up {
+  border-bottom: 2px solid var(--blue);
+}
+
+.navbarTop-hightlight-academy {
+  border-bottom: 2px solid var(--yellow);
 }
 
 @-webkit-keyframes createUndeline {
@@ -115,7 +126,7 @@
   }
 }
 
-.navbarTop-up-hightlight:hover {
+.navbarTop-hightlight:hover {
   display: none;
 }
 

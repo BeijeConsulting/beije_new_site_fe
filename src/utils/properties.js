@@ -7,17 +7,8 @@ import logo_short_white from "../assets/images/logos/logo_short_white.svg";
 import logo_short_grey from "../assets/images/logos/logo_short_grey.svg";
 import logo_short_transparent from "../assets/images/logos/logo_short_transparent.svg";
 import { faFacebookF, faLinkedinIn, faYoutube } from '@fortawesome/free-brands-svg-icons';
-import { faN, faArrowDownLong, faSquareXmark } from '@fortawesome/free-solid-svg-icons';
-
-import chiara_balsamini from "../assets/images/profile_picture/chiara_balsamini.jpg";
-import erica_mauro from "../assets/images/profile_picture/erica_mauro.jpg";
-import francesca_bellini from "../assets/images/profile_picture/francesca_bellini.jpg";
-import francesca_ferioli from "../assets/images/profile_picture/francesca_ferioli.jpg";
-import francesco_cesana from "../assets/images/profile_picture/francesco_cesana.jpg";
-import ivo_mosca from "../assets/images/profile_picture/ivo_mosca.jpg";
-import maria_rodrigez from "../assets/images/profile_picture/maria_rodrigez.jpg";
-import marianna_fulginiti from "../assets/images/profile_picture/marianna_fulginiti.jpg";
-import roberto_brogi from "../assets/images/profile_picture/roberto_brogi.jpg";
+import { faN, faArrowDownLong, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import quotation_mark from "../assets/icons/quote.png";
 
 // Docs
 import png_privacyPolicies_it from "../assets/docs/Beije_PrivacyPolicies_IT.pdf";
@@ -86,7 +77,9 @@ export const logo_secondary_transparent = logo_short_transparent;
 
 export const defaultIcon = faN;
 export const downArrow = faArrowDownLong;
-export const closeIcon = faSquareXmark;
+export const leftArrow = faAngleLeft;
+export const rightArrow = faAngleRight;
+export const quotationMark = quotation_mark;
 
 export const privacyPolicies_it = png_privacyPolicies_it;
 export const privacyPolicies_en = png_privacyPolicies_en;
@@ -98,17 +91,17 @@ export const legalNotes_en = png_legalNotes_en;
 export const menu_voices = [
   {
     name: "consulting",
-    link_to: "#",
+    link_to: "beije-consulting",
     key_link: "consulting"
   },
   {
     name: "up",
-    link_to: "#",
+    link_to: "beije-up",
     key_link: "up"
   },
   {
     name: "academy",
-    link_to: "#",
+    link_to: "beije-talent-academy",
     key_link: "academy"
   },
   {
@@ -447,7 +440,6 @@ export const carouselProfile = [
     description: "home.fifthSection.carouselProfile.francesco_cesana.desc",
     alt: 'FrancescoCesana',
     pictureClassName: "carousel-bg-francesco-cesana",
-    picture: francesco_cesana
   },
   {
     id: 2,
@@ -457,7 +449,6 @@ export const carouselProfile = [
     description: "home.fifthSection.carouselProfile.erica_mauro.desc",
     alt: 'EricaMauro',
     pictureClassName: "carousel-bg-erica-mauro",
-    picture: erica_mauro
   },
   {
     id: 3,
@@ -467,7 +458,6 @@ export const carouselProfile = [
     description: "home.fifthSection.carouselProfile.chiara_balsamini.desc",
     alt: 'ChiaraBalsamini',
     pictureClassName: "carousel-bg-chiara-balsamini",
-    picture: chiara_balsamini
   },
   {
     id: 4,
@@ -477,7 +467,6 @@ export const carouselProfile = [
     description: 'home.fifthSection.carouselProfile.marianna_fulginiti.desc',
     alt: 'MariannaFulginiti',
     pictureClassName: "carousel-bg-marianna-fulginiti",
-    picture: marianna_fulginiti
   },
   {
     id: 5,
@@ -487,7 +476,6 @@ export const carouselProfile = [
     description: 'home.fifthSection.carouselProfile.roberto_brogi.desc',
     alt: 'RobertoBrogi',
     pictureClassName: "carousel-bg-roberto-brogi",
-    picture: roberto_brogi
   },
   {
     id: 6,
@@ -497,7 +485,6 @@ export const carouselProfile = [
     description: 'home.fifthSection.carouselProfile.ivo_mosca.desc',
     alt: 'IvoMosca',
     pictureClassName: "carousel-bg-ivo-mosca",
-    picture: ivo_mosca
   },
   {
     id: 8,
@@ -507,7 +494,6 @@ export const carouselProfile = [
     description: 'home.fifthSection.carouselProfile.maria_rodrigez.desc',
     alt: 'MariaAmigoRodrigez',
     pictureClassName: "carousel-bg-maria-rodrigez",
-    picture: maria_rodrigez
   },
   {
     id: 9,
@@ -517,18 +503,47 @@ export const carouselProfile = [
     description: 'home.fifthSection.carouselProfile.francesca_bellini.desc',
     alt: 'FrancescaBellini',
     pictureClassName: "carousel-bg-francesca-bellini",
-    picture: francesca_bellini
   }
 ]
 
-export const list_images = [
-  chiara_balsamini,
-  erica_mauro,
-  francesca_bellini,
-  francesca_ferioli,
-  francesco_cesana,
-  ivo_mosca,
-  maria_rodrigez,
-  marianna_fulginiti,
-  roberto_brogi
+
+export const clientComments = [
+  {
+    name: "Name",
+    surname: "Surname",
+    content: "1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar lorem quis metus mollis commodo. Duis eget quam faucibus, vulputate augue et, imperdiet elit. Nam faucibus ipsum enim, at aliquam lorem dictum at. Vestibulum bibendum eu purus vel mattis. Ut at tortor et neque bibendum ultricies id id diam."
+  },
+  {
+    name: "Name",
+    surname: "Surname",
+    content: "2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar lorem quis metus mollis commodo. Duis eget quam faucibus, vulputate augue et, imperdiet elit. Nam faucibus ipsum enim, at aliquam lorem dictum at. Vestibulum bibendum eu purus vel mattis. Ut at tortor et neque bibendum ultricies id id diam."
+  },
+  {
+    name: "Name",
+    surname: "Surname",
+    content: "3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar lorem quis metus mollis commodo. Duis eget quam faucibus, vulputate augue et, imperdiet elit. Nam faucibus ipsum enim, at aliquam lorem dictum at. Vestibulum bibendum eu purus vel mattis. Ut at tortor et neque bibendum ultricies id id diam."
+  },
+  {
+    name: "Name",
+    surname: "Surname",
+    content: "4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar lorem quis metus mollis commodo. Duis eget quam faucibus, vulputate augue et, imperdiet elit. Nam faucibus ipsum enim, at aliquam lorem dictum at. Vestibulum bibendum eu purus vel mattis. Ut at tortor et neque bibendum ultricies id id diam. "
+  }
+]
+
+export const caseStudies = [
+  {
+    title: "Nome Progetto",
+    subtitle: "Subtitle progetto poco più lungo, da definire",
+    pictureClassName: "carousel-bg-youthquake"
+  },
+  {
+    title: "Nome Progetto",
+    subtitle: "Subtitle progetto poco più lungo, da definire",
+    pictureClassName: "carousel-bg-pininfarina"
+  },
+  {
+    title: "Nome Progetto",
+    subtitle: "Subtitle progetto poco più lungo, da definire",
+    pictureClassName: "carousel-bg-youthquake"
+  }
 ]

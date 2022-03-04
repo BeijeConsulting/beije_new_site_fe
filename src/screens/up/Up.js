@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 // Redux
 import { connect } from "react-redux";
@@ -12,14 +13,17 @@ import { Box, Container } from "@mui/material";
 import "./Up.css";
 
 // Constants
-import { logo_secondary_transparent } from "../../utils/properties";
+import { logo_secondary_transparent, clientComments, caseStudies } from "../../utils/properties";
 
 // Components
 import IntroSectionImgTxt from "../../components/functional_components/introSectionImgTxt/IntroSectionImgTxt";
+import SimpleCarousel from "../../components/functional_components/simpleCarousel/SimpleCarousel";
+import CustomCarousel from "../../components/hooks_components/customCarousel/CustomCarousel";
+import CustomForm from "../../components/hooks_components/customForm/CustomForm";
 
 const Up = (props) => {
 
-  console.log("window.innerHeight", window.innerHeight);
+  const { t } = useTranslation();
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
@@ -36,7 +40,7 @@ const Up = (props) => {
 
       <Box
         className={"bg-dark-grey margin-top-container-screens"}
-        style={{ height: "3000px" }}
+      // style={{ height: "3000px" }}
       >
 
         {/* First section Img + text*/}
@@ -49,12 +53,22 @@ const Up = (props) => {
             typeSection="up"
             classNameBgImgDesktop="intro-section-img-up"
             classNameBgImgMobile="intro-section-img-up"
+            bgIconDownload="intro-section-download-icon-up"
             sectionName="Beije Up"
-            sectionTitle="La nostra software factory"
+            sectionTitle={t("up.title")}
+            photoTitle="UP"
           >
             <div>
-              <p>Lavoriamo con dedizione al fianco dei nostri clienti.<br />
-                Realizziamo progetti partendo dall’analisi tecnica frontend / backend, realizzazione mockup fino all’implementazione del software attraverso le tecnologie presenti sul mercato.
+              <p>{t("up.intro.part1")}<br />
+                {t("up.intro.part2")}
+                <strong>{t("up.intro.part3")}</strong>
+                {t("up.intro.part4")}
+                <strong>{t("up.intro.part5")}</strong>
+                {t("up.intro.part6")}
+                <strong>{t("up.intro.part7")}</strong>
+                {t("up.intro.part8")}
+                <strong>{t("up.intro.part9")}</strong>
+                {t("up.intro.part10")}
               </p>
               <div
                 className={"first-section-list-container"}
@@ -69,7 +83,7 @@ const Up = (props) => {
           </IntroSectionImgTxt>
         </Container>
 
-        {/* Second section */}
+        {/* Second section description up*/}
         <Container
           component={"section"}
           maxWidth={"false"}
@@ -85,7 +99,27 @@ const Up = (props) => {
             <Box
               className="up-second-section-text-container up-second-section-text1-container"
             >
-              <p>Attraverso metodologia AGILE, verranno definiti step di verifica e di aggiornamento del prodotto già durante lo sviluppo, con frequenti rilasci di versioni testabili dal cliente, in modo da ottimizzare puntualmente miglioramenti e modifiche sulle attività concordate. Dall’analisi del progetto alla stesura della documentazione fino all’implementazione: vi seguiamo in ogni fase.
+              <p>
+                {t("up.desc1.part1")}
+                <strong>{t("up.desc1.part2")}</strong>
+                {t("up.desc1.part3")}
+                <strong>{t("up.desc1.part4")}</strong>
+                {t("up.desc1.part5")}
+                <strong>{t("up.desc1.part6")}</strong>
+                {t("up.desc1.part7")}
+                <strong>{t("up.desc1.part8")}</strong>
+                {t("up.desc1.part9")}
+                <strong>{t("up.desc1.part10")}</strong>
+                {t("up.desc1.part11")}
+                <strong>{t("up.desc1.part12")}</strong>
+                {t("up.desc1.part13")}
+                <strong>{t("up.desc1.part14")}</strong>
+                {t("up.desc1.part15")}
+                <span
+                  className="up-second-section-text-span-desktop"
+                >
+                  <strong>{t("up.desc1.part16")}</strong>
+                </span>
               </p>
             </Box>
 
@@ -98,18 +132,87 @@ const Up = (props) => {
             <Box
               className="up-second-section-text-container up-second-section-text2-container"
             >
-              <p>Le tecnologie utilizzate vanno dall’ecosistema Java a quello .Net per il Backend , mentre Javascript e i principali framework per il Frontend (React, Angular e Vue). Per l’infrastruttura basiamo abitualmente i progetti in Cloud su servizi Amazon Web Services.</p>
+              <p>
+                {t("up.desc2.part1")}
+                <strong>{t("up.desc2.part2")}</strong>
+                {t("up.desc2.part3")}
+                <strong>{t("up.desc2.part4")}</strong>
+                {t("up.desc2.part5")}
+                <strong>{t("up.desc2.part6")}</strong>
+                {t("up.desc2.part7")}
+                <strong>{t("up.desc2.part8")}</strong>
+                {t("up.desc2.part9")}
+                <strong>{t("up.desc2.part10")}</strong>
+                {t("up.desc2.part11")}
+                <strong>{t("up.desc2.part12")}</strong>
+                {t("up.desc2.part13")}
+                <strong>{t("up.desc2.part14")}</strong>
+                {t("up.desc2.part15")}
+                <strong>{t("up.desc2.part16")}</strong>
+                {t("up.desc2.part17")}
+                <strong>{t("up.desc2.part18")}</strong>
+                {t("up.desc2.part19")}
+                <strong>{t("up.desc2.part20")}</strong>
+              </p>
             </Box>
           </Box>
         </Container>
 
-        {/* Third section */}
+        {/* Third section comments*/}
         <Container
           component={"section"}
           maxWidth={"false"}
           className={"up-third-section paddingX-container-general-pages bg-blue top-oblique-line"}
         >
+          <Box>
+            <h2>Dicono di noi</h2>
+          </Box>
+
+          <Box>
+            <SimpleCarousel
+              obj={clientComments}
+            />
+          </Box>
         </Container>
+
+        {/* Fourth section case studies*/}
+        <Container
+          component={"section"}
+          maxWidth={"false"}
+          className={"up-fourth-section paddingX-container-general-pages position-relative"}
+        >
+          <Box>
+            <h2>Case studies</h2>
+          </Box>
+
+          <Container
+            component={"section"}
+            maxWidth={"false"}
+            className={"up-fifth-section-container"}
+          >
+            <CustomCarousel
+              upCarousel
+              obj={caseStudies}
+              classNameSwiperContainer={"swiper-container-up"}
+            />
+          </Container>
+        </Container>
+
+        {/* sixth section form*/}
+        <Container
+          component={"section"}
+          maxWidth={"false"}
+          className={"up-sixth-section-container paddingX-container-general-pages"}
+        >
+          <Box
+            className={"up-sixth-section-box-form"}
+          >
+            <CustomForm
+              formTitle={t("up.form.title")}
+            />
+          </Box>
+        </Container>
+
 
       </Box>
 

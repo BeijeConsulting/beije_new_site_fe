@@ -6,16 +6,12 @@ import { connect } from "react-redux";
 import { initModal } from "../../../redux/ducks/modalDuck";
 
 // MUI
-import { Modal, Backdrop, Fade, Box, Typography } from "@mui/material";
+import { Modal, Backdrop, Fade, Box } from "@mui/material";
 
 // Style
 import "./CustomModal.css";
 
-// Constants
-import { downloadIcon } from "../../../utils/properties";
-
 // Components
-// import CustomIconButton from "../../functional_components/ui/customIconButton/CustomIconButton"; Remove
 import CustomButton from "../../functional_components/ui/customButton/CustomButton";
 
 const CustomModal = (props) => {

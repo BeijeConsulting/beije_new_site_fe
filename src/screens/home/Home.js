@@ -25,7 +25,6 @@ import { tab_aboutUs, logo_secondary_grey } from "../../utils/properties"
 import CustomNavbar from "../../components/hooks_components/customNavbar/CustomNavbar";
 import ScrollDownButton from "../../components/functional_components/scrollDownButton/ScrollDownButton";
 import CustomTab from "../../components/hooks_components/customTab/CustomTab";
-import CustomLink from "../../components/functional_components/ui/customLink/CustomLink";
 import CustomCarousel from "../../components/hooks_components/customCarousel/CustomCarousel";
 import CustomForm from "../../components/hooks_components/customForm/CustomForm";
 
@@ -42,7 +41,7 @@ const Home = (props) => {
     const element = refDarkContainer.current;
     const fourthSectionP = element.querySelector('.home-fourth-section-p');
 
-    const t1 = gsap.timeline({
+    gsap.timeline({
       scrollTrigger: {
         trigger: fourthSectionP,
         start: 'top 75%',
@@ -111,7 +110,7 @@ const Home = (props) => {
         maxWidth={"false"}
         className={"home-second-section-container d-flex flex-column justify-center"}
       >
-        <h2 className={"home-second-section-txt"}>
+        <h3 className={"home-second-section-txt"}>
           <span className={"home-second-section-quotation-marks"}>&#8220;</span>
           <span>
             {t("home.secondSection.part1")}
@@ -122,7 +121,7 @@ const Home = (props) => {
           </span>
           {/* <span>Lavoriamo costantemente per arrivare <br />alla piena soddisfazione <br />dei nostri clienti</span> */}
           <span className={"home-second-section-quotation-marks"}>&#8222;</span>
-        </h2>
+        </h3>
       </Container>
 
       {/* Box with dark bg for next sections */}
@@ -301,7 +300,9 @@ const Home = (props) => {
             maxWidth={"false"}
             className={"home-sixth-section-container"}
           >
-            <CustomCarousel />
+            <CustomCarousel
+              homeCarousel
+            />
           </Container>
         </Container>
 

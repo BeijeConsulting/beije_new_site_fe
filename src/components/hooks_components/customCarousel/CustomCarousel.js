@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import gsap from "gsap";
 
 // Swiper
-import { Swiper, SwiperSlide, useSwiper, useSwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide} from "swiper/react";
 import SwiperCore, { Navigation, Pagination, EffectCoverflow } from "swiper";
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -60,11 +60,21 @@ const CustomCarousel = (props) => {
         onMouseMove={tiltEffect()}
       >
         <div
-          className={"swipe-txt-container"}
+          className={props.classNameTxtContainer}
         >
-          <p>{item.name} {item.surname}</p>
-          <p>_{item.role}</p>
-          <p><i>&ldquo;{t(item.description)}&rdquo;</i></p>
+          {props.homeCarousel &&
+            <>
+              <p>{item?.name} {item?.surname}</p>
+              <p>_{item?.role}</p>
+              <p><i>&ldquo;{t(item?.description)}&rdquo;</i></p>
+            </>
+          }
+          {props.upCarousel &&
+            <>
+              <p>{item?.title}</p>
+              <p><i>_{item?.subtitle}</i></p>
+            </>
+          }
         </div>
       </SwiperSlide >
     )
@@ -86,6 +96,7 @@ const CustomCarousel = (props) => {
 
   return (
     <Swiper
+      className={props.classNameSwiperContainer}
       effect='coverflow'
       centeredSlides={true}
       slidesPerView={1}
@@ -111,20 +122,16 @@ const CustomCarousel = (props) => {
         }
       }}
       pagination
-      // pagination={{
-      //   el: '.swiper-pagination',
-      //   clickable: true
-      // }}
       navigation
-
-    // navigation={{
-    //   nextEl: '.swiper-button-next',
-    //   prevEl: '.swiper-button-prev'
-    // }}
     >
-      {carouselProfile.map(printSwiperSlides)}
+      {props.obj.map(printSwiperSlides)}
     </Swiper >
   )
+}
+
+CustomCarousel.defaultProps = {
+  classNameTxtContainer: "swipe-txt-container",
+  obj: carouselProfile
 }
 
 export default CustomCarousel
