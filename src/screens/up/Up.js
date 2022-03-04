@@ -153,13 +153,13 @@ const Up = (props) => {
         <Container
           component={"section"}
           maxWidth={"false"}
-          className={"home-seventh-section-container paddingX-container-default"}
+          className={"up-sixth-section-container paddingX-container-general-pages"}
         >
           <Box
             className={"home-seventh-section-box-form"}
           >
             <CustomForm
-              formTitle={t("home.form.title")}
+              formTitle={t("up.form.title")}
             />
           </Box>
         </Container>

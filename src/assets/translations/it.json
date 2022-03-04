@@ -200,5 +200,10 @@
     "form": {
       "title": "Contattaci"
     }
+  },
+  "up": {
+    "form": {
+      "title": "Richiedi maggiori informazioni"
+    }
   }
 }

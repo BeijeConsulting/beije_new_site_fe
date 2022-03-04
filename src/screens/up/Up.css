@@ -63,6 +63,13 @@
   left: 0px;
 }
 
+/* Sixth section */
+.up-sixth-section-container {
+  background-color: var(--white);
+  padding-bottom: 80px;
+  padding-top: 40px;
+}
+
 
 /* Media queries */
 

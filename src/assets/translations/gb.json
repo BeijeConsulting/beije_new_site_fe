@@ -178,5 +178,10 @@
     "form": {
       "title": "Contact us"
     }
+  },
+  "up": {
+    "form": {
+      "title": "Ask for more information"
+    }
   }
 }
