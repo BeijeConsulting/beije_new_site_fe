@@ -1,0 +1,58 @@
+.percentage-card-box-container {
+  width: 255px;
+  height: 284px;
+  box-shadow: 8px 8px 24px #090E1466;
+  border-radius: 12px;
+  background: transparent linear-gradient(138deg, #2D2F33 0%, #272A2E 52%, #222529 100%) 0% 0% no-repeat padding-box;
+  margin: 22px auto 0;
+}
+
+.percentage-card-icon-container {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background-color: #2B2F36;
+  margin: 24px 0 0 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.percentage-card-icon {
+  width: 45px;
+}
+
+.percentage-card-data-container {
+  padding: 0 24px;
+}
+
+.percentage-card-data-number {
+  font-size: 50px;
+  font-family: var(--moderat-regular);
+  height: 65px;
+  display: flex;
+  align-items: center;
+}
+
+.percentage-card-data-text {
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--lightblue);
+  font-family: var(--moderat-regular);
+}
+
+@media (min-width: 768px) {
+
+  .percentage-card-box-container {
+    margin: 30px 10px;
+  }
+
+}
+
+@media (min-width: 1024px) {
+
+  .percentage-card-box-container {
+    margin: 40px 40px 0 0;
+  }
+
+}

@@ -36,7 +36,8 @@
 }
 
 /* Third section */
-.up-third-section {
+.up-third-section,
+.consulting-third-section {
   padding: 100px 0;
   color: var(--white);
 }
@@ -147,7 +148,8 @@
     align-self: flex-end;
   }
 
-  .up-third-section {
+  .up-third-section,
+  .consulting-third-section {
     margin-top: -300px;
     padding-top: 200px;
   }

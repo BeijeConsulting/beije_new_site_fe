@@ -21,7 +21,6 @@ const CustomHeader = (props) => {
   return (
     <Toolbar
       disableGutters
-      maxWidth={"none"}
       className={"header-container bg-transparent"}
     >
       <Link

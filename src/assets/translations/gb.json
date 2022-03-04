@@ -236,5 +236,12 @@
     "form": {
       "title": "Ask for more information"
     }
+  },
+  "consulting": {
+    "cardsDescription": {
+      "card1": "Believe that there is a good business climate",
+      "card2": "Believe that the company pays attention to the well-being of its employees",
+      "card3": "Would recommend Beije People First"
+    }
   }
 }

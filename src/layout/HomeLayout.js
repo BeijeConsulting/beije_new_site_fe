@@ -112,7 +112,7 @@ const HomeLayout = (props) => {
           <div className={switchClassBgLayout()} />
           {
             props.currentPageDuck.currentPage === "" &&
-            <video className="homeLayout-video" autoPlay muted loop playsinline>
+            <video className="homeLayout-video" autoPlay muted loop>
               <source src="https://beije.s3.eu-west-1.amazonaws.com/video_home.mp4" type="video/mp4" />
             </video>
           }
@@ -141,7 +141,7 @@ const HomeLayout = (props) => {
           {
             state.isMobile &&
             <BackToTopButton>
-              <Fab color="colorInherit" size="small" aria-label="scroll back to top">
+              <Fab color="default" size="small" aria-label="scroll back to top">
                 <KeyboardArrowUpIcon />
               </Fab>
             </BackToTopButton>

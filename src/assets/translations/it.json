@@ -258,5 +258,12 @@
     "form": {
       "title": "Richiedi maggiori informazioni"
     }
+  },
+  "consulting": {
+    "cardsDescription": {
+      "card1": "Ritiene che ci sia un buon clima aziendale",
+      "card2": "Ritiene che l'azienda sia attenta al benessere dei dipendenti",
+      "card3": "Raccomanderebbe Beije People First"
+    }
   }
 }
