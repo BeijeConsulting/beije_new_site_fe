@@ -378,7 +378,7 @@ export const tab_aboutUs = [
     contentPanel: [
       {
         spanContent: "home.tab.values.content.part1",
-        classNameSpan: "",
+        classNameSpan: "reduce-on-hover",
         addHtml: ""
       },
       {
@@ -388,12 +388,12 @@ export const tab_aboutUs = [
       },
       {
         spanContent: "home.tab.values.content.part3",
-        classNameSpan: "",
+        classNameSpan: "reduce-on-hover",
         addHtml: ""
       },
       {
         spanContent: "home.tab.values.content.part4",
-        classNameSpan: "",
+        classNameSpan: "reduce-on-hover",
         addHtml: ""
       },
       {
@@ -403,12 +403,12 @@ export const tab_aboutUs = [
       },
       {
         spanContent: "home.tab.values.content.part6",
-        classNameSpan: "",
+        classNameSpan: "reduce-on-hover",
         addHtml: ""
       },
       {
         spanContent: "home.tab.values.content.part7",
-        classNameSpan: "",
+        classNameSpan: "reduce-on-hover",
         addHtml: ""
       },
       {
@@ -418,7 +418,7 @@ export const tab_aboutUs = [
       },
       {
         spanContent: "home.tab.values.content.part9",
-        classNameSpan: "",
+        classNameSpan: "reduce-on-hover",
         addHtml: ""
       },
       {
