@@ -55,7 +55,7 @@ const Up = (props) => {
             classNameBgImgMobile="intro-section-img-up"
             bgIconDownload="intro-section-download-icon-up"
             sectionName="Beije Up"
-            sectionTitle="La nostra software factory"
+            sectionTitle={t("up.title")}
             photoTitle="UP"
           >
             <div>
@@ -156,7 +156,7 @@ const Up = (props) => {
           className={"up-sixth-section-container paddingX-container-general-pages"}
         >
           <Box
-            className={"home-seventh-section-box-form"}
+            className={"up-sixth-section-box-form"}
           >
             <CustomForm
               formTitle={t("up.form.title")}

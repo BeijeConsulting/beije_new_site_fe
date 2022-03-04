@@ -202,6 +202,8 @@
     }
   },
   "up": {
+    "title": "La nostra Software Factory",
+    "intro": "Lavoriamo con dedizione al fianco dei nostri clienti per fornire servizi di progettazione, implementazione, delivery, integration e application maintenance di software. Realizziamo progetti partendo dall’analisi tecnica frontend & backend, realizzazione mockup fino all’implementazione del software attraverso le tecnologie presenti sul mercato.",
     "form": {
       "title": "Richiedi maggiori informazioni"
     }

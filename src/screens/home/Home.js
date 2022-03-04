@@ -25,7 +25,6 @@ import { tab_aboutUs, logo_secondary_grey } from "../../utils/properties"
 import CustomNavbar from "../../components/hooks_components/customNavbar/CustomNavbar";
 import ScrollDownButton from "../../components/functional_components/scrollDownButton/ScrollDownButton";
 import CustomTab from "../../components/hooks_components/customTab/CustomTab";
-import CustomLink from "../../components/functional_components/ui/customLink/CustomLink";
 import CustomCarousel from "../../components/hooks_components/customCarousel/CustomCarousel";
 import CustomForm from "../../components/hooks_components/customForm/CustomForm";
 
@@ -42,7 +41,7 @@ const Home = (props) => {
     const element = refDarkContainer.current;
     const fourthSectionP = element.querySelector('.home-fourth-section-p');
 
-    const t1 = gsap.timeline({
+    gsap.timeline({
       scrollTrigger: {
         trigger: fourthSectionP,
         start: 'top 75%',
