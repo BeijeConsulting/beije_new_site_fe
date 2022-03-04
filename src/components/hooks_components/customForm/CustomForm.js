@@ -240,7 +240,6 @@ const CustomForm = (props) => {
                 placeholder={t("form.placeholder.message")}
                 value={formikContacts.values.message}
                 error={formikContacts.touched.message && Boolean(formikContacts.errors.message)}
-                helperText={formikContacts.touched.message && formikContacts.errors.message}
                 onChange={formikContacts.handleChange}
                 onBlur={formikContacts.handleBlur}
 
@@ -281,7 +280,6 @@ const CustomForm = (props) => {
                     classes={{ checked: 'form-ckeckbox-checked' }}
                   />
                 }
-                helperText={formikContacts.touched.agreement && formikContacts.errors.agreement}
                 className="form-field"
               />
               <div
