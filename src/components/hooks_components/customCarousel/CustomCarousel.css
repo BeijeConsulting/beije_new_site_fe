@@ -65,6 +65,24 @@
   background-color: var(--dark-grey);
 }
 
+/* CSS ONLY FOR UP PAGE */
+.swiper-container-up .swiper-slide-next, .swiper-container-up .swiper-slide-prev {
+  filter: brightness(0.8);
+  -webkit-filter: brightness(0.8);
+}
+
+.swiper-container-up .swiper-slide p:nth-child(2) {
+  padding-bottom: 20px;
+}
+
+.swiper-container-up .swiper-slide-active .swipe-txt-container {
+  background-color: rgb(38, 46, 54, 0.8);
+}
+
+.swiper-container-up .swiper-slide-next .swipe-txt-container, .swiper-container-up .swiper-slide-prev .swipe-txt-container {
+  display: none;
+}
+
 
 /* BG PICTURE */
 /* for home */
@@ -182,6 +200,11 @@
   .swiper-slide p:nth-child(3) {
     display: block;
     padding-bottom: 10px;
+  }
+
+  /* CSS ONLY FOR UP PAGE */
+  .swiper-container-up .swiper-slide-active .swipe-txt-container {
+    background-color: rgb(38, 46, 54, 0.6);
   }
 }
 
