@@ -147,7 +147,7 @@
 
 @media(min-width: 1024px) {
   .form-field {
-    margin: 20px 0px !important;
+    margin-top: 20px !important;
   }
 
   .form-text-area {

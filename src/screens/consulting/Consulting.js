@@ -38,7 +38,6 @@ const Consulting = (props) => {
   return (
     <Box
       className={"bg-dark-grey margin-top-container-screens"}
-      style={{ height: "3000px" }}
     >
 
       {/* First section Img + text*/}
@@ -89,7 +88,15 @@ const Consulting = (props) => {
       <Container
         component={"section"}
         maxWidth={"false"}
-        className={"up-third-section paddingX-container-general-pages bg-lightblue top-oblique-line"}
+        className={"consulting-third-section paddingX-container-general-pages bg-lightblue top-oblique-line"}
+      >
+      </Container>
+
+      {/* section */}
+      <Container
+        component={"section"}
+        maxWidth={"false"}
+        className={"paddingX-container-general-pages consulting-fourth-section"}
       >
       </Container>
 
@@ -97,7 +104,7 @@ const Consulting = (props) => {
       <Container
           component={"section"}
           maxWidth={"false"}
-          className={"home-seventh-section-container paddingX-container-default top-oblique-line"}
+          className={"home-seventh-section-container paddingX-container-default"}
         >
           <Box
             className={"home-seventh-section-box-form"}

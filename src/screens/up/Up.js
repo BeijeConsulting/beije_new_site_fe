@@ -36,7 +36,6 @@ const Up = (props) => {
 
       <Box
         className={"bg-dark-grey margin-top-container-screens"}
-        style={{ height: "3000px" }}
       >
 
         {/* First section Img + text*/}

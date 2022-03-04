@@ -31,7 +31,8 @@
 }
 
 /* Third section */
-.up-third-section {
+.up-third-section,
+.consulting-third-section {
   /* Remove */
   height: 1000px;
 }
@@ -80,7 +81,8 @@
     align-self: flex-end;
   }
 
-  .up-third-section {
+  .up-third-section,
+  .consulting-third-section {
     margin-top: -300px;
   }
 }
