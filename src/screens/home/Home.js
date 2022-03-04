@@ -301,7 +301,9 @@ const Home = (props) => {
             maxWidth={"false"}
             className={"home-sixth-section-container"}
           >
-            <CustomCarousel />
+            <CustomCarousel
+              homeCarousel
+            />
           </Container>
         </Container>
 

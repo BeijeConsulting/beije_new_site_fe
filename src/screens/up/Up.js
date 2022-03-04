@@ -13,7 +13,7 @@ import { Box, Container } from "@mui/material";
 import "./Up.css";
 
 // Constants
-import { logo_secondary_transparent, clientComments, quotationMarks } from "../../utils/properties";
+import { logo_secondary_transparent, clientComments, caseStudies } from "../../utils/properties";
 
 // Components
 import IntroSectionImgTxt from "../../components/functional_components/introSectionImgTxt/IntroSectionImgTxt";
@@ -139,9 +139,13 @@ const Up = (props) => {
           <Container
             component={"section"}
             maxWidth={"false"}
-            className={"home-fifth-section-container"}
+            className={"up-fifth-section-container"}
           >
-            <CustomCarousel />
+            <CustomCarousel
+              upCarousel
+              obj={caseStudies}
+              classNameSwiperContainer={"swiper-container-up"}
+            />
           </Container>
         </Container>
 

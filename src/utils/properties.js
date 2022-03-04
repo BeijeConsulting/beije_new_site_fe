@@ -529,3 +529,21 @@ export const clientComments = [
     content: "4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar lorem quis metus mollis commodo. Duis eget quam faucibus, vulputate augue et, imperdiet elit. Nam faucibus ipsum enim, at aliquam lorem dictum at. Vestibulum bibendum eu purus vel mattis. Ut at tortor et neque bibendum ultricies id id diam. "
   }
 ]
+
+export const caseStudies = [
+  {
+    title: "Nome Progetto",
+    subtitle: "Subtitle progetto poco più lungo, da definire",
+    pictureClassName: "carousel-bg-youthquake"
+  },
+  {
+    title: "Nome Progetto",
+    subtitle: "Subtitle progetto poco più lungo, da definire",
+    pictureClassName: "carousel-bg-youthquake"
+  },
+  {
+    title: "Nome Progetto",
+    subtitle: "Subtitle progetto poco più lungo, da definire",
+    pictureClassName: "carousel-bg-youthquake"
+  }
+]
