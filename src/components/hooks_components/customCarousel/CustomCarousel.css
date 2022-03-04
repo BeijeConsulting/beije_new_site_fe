@@ -10,6 +10,7 @@
   --profile_roberto_brogi: url("../../../assets/images/profile_picture/roberto_brogi.jpg");
 
   --caseStudies-youthquake: url("../../../assets/images/up/caseStudies/youthquake.jpg");
+  --caseStudies-pininfarina: url("../../../assets/images/up/caseStudies/pininfarina.jpg");
 }
 
 .swiper {
@@ -125,6 +126,10 @@
 /* for up */
 .carousel-bg-youthquake {
   background-image: var(--caseStudies-youthquake);
+}
+
+.carousel-bg-pininfarina {
+  background-image: var(--caseStudies-pininfarina);
 }
 
 

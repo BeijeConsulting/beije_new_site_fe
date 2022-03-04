@@ -539,7 +539,7 @@ export const caseStudies = [
   {
     title: "Nome Progetto",
     subtitle: "Subtitle progetto poco più lungo, da definire",
-    pictureClassName: "carousel-bg-youthquake"
+    pictureClassName: "carousel-bg-pininfarina"
   },
   {
     title: "Nome Progetto",
