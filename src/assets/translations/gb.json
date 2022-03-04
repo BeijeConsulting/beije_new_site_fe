@@ -180,7 +180,59 @@
     }
   },
   "up": {
-    "title":"Our Software Factory",
+    "title": "Our Software Factory",
+    "intro": {
+      "part1": "We work with dedication beside our customers.",
+      "part2": "We realize projects starting from the ",
+      "part3": "frontend ",
+      "part4": "& ",
+      "part5": "backend ",
+      "part6": "technical analysis, ",
+      "part7": "mockup ",
+      "part8": "realization up to the ",
+      "part9": "software ",
+      "part10": "implementation through the technologies on the market."
+    },
+    "desc1": {
+      "part1": "Through the ",
+      "part2": "Agile ",
+      "part3": "method, verification and ",
+      "part4": "update ",
+      "part5": "steps of the product are defined already during ",
+      "part6": "development ",
+      "part7": ", with frequent ",
+      "part8": "releases ",
+      "part9": "of versions that can be tested by the customer, in order to optimize improvements or any changes on the agreed activities. From the ",
+      "part10": "analysis ",
+      "part11": "of the project to the ",
+      "part12": "drafting ",
+      "part13": "of the documentation up to the ",
+      "part14": "implementation",
+      "part15": ": ",
+      "part16": "we follow you in every phase"
+    },
+    "desc2": {
+      "part1": "the technologies used are ",
+      "part2": "Java ",
+      "part3": "and ",
+      "part4": ".Net ",
+      "part5": "for the ",
+      "part6": "Backend ",
+      "part7": "and ",
+      "part8": "Javascript ",
+      "part9": "and the main frameworks for the ",
+      "part10": "frontend ",
+      "part11": "(",
+      "part12": "React ",
+      "part13": ", ",
+      "part14": "Angular",
+      "part15": "and ",
+      "part16": "Vue ",
+      "part17": "). Per l’infrastruttura basiamo abitualmente i progetti in ",
+      "part18": "cloud ",
+      "part19": "su servizi ",
+      "part20": "Amazon Web Services"
+    },
     "form": {
       "title": "Ask for more information"
     }

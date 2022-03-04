@@ -25,6 +25,10 @@
   color: var(--white);
 }
 
+.up-second-section-text-span-desktop {
+  display: none;
+}
+
 .up-second-section-text-mobile-container {
   text-transform: uppercase;
   color: var(--blue);
@@ -129,6 +133,10 @@
 
   .up-second-section-text-container {
     width: 40%;
+  }
+
+  .up-second-section-text-span-desktop {
+    display: inline;
   }
 
   .up-second-section-text-mobile-container {

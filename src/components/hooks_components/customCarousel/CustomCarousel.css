@@ -71,6 +71,10 @@
   -webkit-filter: brightness(0.8);
 }
 
+.swiper-container-up .swiper-slide-active {
+  cursor: pointer;
+}
+
 .swiper-container-up .swiper-slide p:nth-child(2) {
   padding-bottom: 20px;
 }
