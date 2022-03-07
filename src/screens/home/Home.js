@@ -40,6 +40,8 @@ const Home = (props) => {
 
     const element = refDarkContainer.current;
     const fourthSectionP = element.querySelector('.home-fourth-section-p');
+    const fifthSection = element.querySelector('.home-fifth-section-container-gsap');
+    const fifthSectionFinalSpan = element.querySelector('.home-fifth-section-final-span-gsap')
 
     gsap.timeline({
       scrollTrigger: {
@@ -48,6 +50,17 @@ const Home = (props) => {
         toggleClass: { targets: fourthSectionP, className: "home-fourth-section-p-animation" }
       },
     });
+
+    const t1 = gsap.timeline({
+      scrollTrigger: {
+        trigger: fifthSection,
+        start: 'top 75%',
+        markers: true
+      },
+    });
+
+    t1.from(fifthSectionFinalSpan, { opacity: 0, duration: 1, ease: 'power2.in' })
+
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -183,9 +196,9 @@ const Home = (props) => {
           <Container
             component={"section"}
             maxWidth={"false"}
-            className={"home-fifth-section-container paddingX-container-default"}
+            className={"home-fifth-section-container paddingX-container-default home-fifth-section-container-gsap"}
           >
-            <Box className={"home-fifth-section-first-box "}>
+            <Box className={"home-fifth-section-first-box"}>
               <h2>{t("home.fifthSection.title")}</h2>
             </Box>
             <Box className={"home-fifth-section-second-box"}>
@@ -283,7 +296,7 @@ const Home = (props) => {
                 <br />
                 <br />
                 <span
-                  className="home-fifth-section-span"
+                  className="home-fifth-section-span-strong home-fifth-section-final-span-gsap"
                 >
                   {t("home.fifthSection.content.part16")}
                 </span>

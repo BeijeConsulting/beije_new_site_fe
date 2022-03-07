@@ -238,6 +238,7 @@
   .home-third-section-container {
     padding-top: 122px;
     margin-bottom: 250px;
+    min-height: 550px;
   }
 
   .home-third-section-tab-container {
@@ -254,7 +255,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 50vh;
+    min-height: 50vh;
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
@@ -342,10 +343,11 @@
   .home-third-section-container {
     padding-top: 200px;
     margin-bottom: 350px;
+    min-height: 600px;
   }
 
   .home-fourth-section-container {
-    height: 90vh;
+    min-height: 90vh;
   }
 
   .home-fourth-section-container p {
@@ -393,6 +395,7 @@
   .home-third-section-container {
     padding-top: 250px;
     margin-bottom: 400px;
+    min-height: 700px;
   }
 
   .home-fourth-section-container p {

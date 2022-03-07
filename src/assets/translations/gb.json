@@ -74,35 +74,57 @@
     },
     "tab": {
       "vision": {
-        "title": "Vision",
+        "title": "Visione",
         "content": {
           "part1": "",
           "part2": "People ",
           "part3": "at the heart of our ",
           "part4": "future ",
-          "part5": "La nostra Visione è il quadro di riferimento della nostra tabella di marcia. Guida ogni aspetto della nostra attività, delineando le azioni necessarie a proseguire una crescita sostenibile e di qualità."
+          "part5": "We invest in people every day to ensure the ",
+          "part6": "constant ",
+          "part7": "improvement of our services. We want to create a system in which ",
+          "part8": "capacity ",
+          "part9": "and ",
+          "part10": "quality ",
+          "part11": "pass through people value: an environment of reference for those who accompany us on this path of ",
+          "part12": "growth"
         }
       },
       "mission": {
-        "title": "Mission",
+        "title": "Missione",
         "content": {
           "part1": "We help companies to implement ",
           "part2": "innovative projects ",
           "part3": "through ",
-          "part4": "Valuable Teams "
+          "part4": "Valuable Teams ",
+          "part5": "Our mission is to ",
+          "part6": "grow up ",
+          "part7": "with our clients ed essere capable of creating a high-tech system in which ",
+          "part8": "innovation",
+          "part9": ", ",
+          "part10": "transparency ",
+          "part11": "and ",
+          "part12": "equity",
+          "part13": "are fundamental assets in the construction of a ",
+          "part14": "People First ",
+          "part15": "system oriented to the development of valuable projects"
         }
       },
       "history": {
-        "title": "History",
+        "title": "Storia",
         "content": {
-          "part1": "At the heart of the ",
-          "part2": "Beije model ",
-          "part3": "is a people first vision: people at the center for a ",
+          "part1": "At the heart of the Beije model is a ",
+          "part2": "People First Vision ",
+          "part3": ": people at the center for the creation of a ",
           "part4": "valuable ",
-          "part5": "company. From an ideal to a business: for more than 10 years we are constantly committed to update our ",
-          "part6": "know-how ",
-          "part7": "and we are able to provide the most advanced methodologies and the most innovative technologies for the realization of ",
-          "part8": "highly specialized projects"
+          "part5": "company. From an ideal to a business: for more than 10 years we have been constantly striving to update our know-how and we are able to provide the most modern methodologies and the most ",
+          "part6": "innovative",
+          "part7": " ",
+          "part8": "technologies ",
+          "part9": "for the realization of highly ",
+          "part10": "specialized",
+          "part11": " ",
+          "part12": "projects"
         }
       },
       "values": {
@@ -146,14 +168,14 @@
         "part13": ". It is the sharing of a common purpose, it is an “out of the box” approach, it is the relationship with the customer, it is a ",
         "part14": "People First",
         "part15": " system.",
-        "part16": "We are waiting for you, follow the change."
+        "part16": "We are waiting for you, follow the change!"
       },
       "carouselProfile": {
         "francesco_cesana": {
           "desc": "Wine, art and good food: making a virtue out of necessity."
         },
         "erica_mauro": {
-          "desc": "Promotrice di buon umore e di nuove scoperte: c'è sempre un buon motivo per sorridere e per imparare qualcosa di nuovo."
+          "desc": "Promoter of good humor and new discoveries: there is always a good reason to smile and learn something new."
         },
         "chiara_balsamini": {
           "desc": "I have worn more ice skates than heels in my life. Spoiler: smile addicted. "
@@ -168,7 +190,7 @@
           "desc": "Make it simple."
         },
         "maria_rodrigez": {
-          "desc": "Nerd sotto copertura in ambito IT, cosa potrebbe andare storto?"
+          "desc": "Undercover nerds in IT, what could go wrong?"
         },
         "francesca_bellini": {
           "desc": "Give me three words: fashion, dance and carbonara"
