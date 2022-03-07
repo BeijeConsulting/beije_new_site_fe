@@ -1,5 +1,10 @@
 .percentage-container {
   margin-top: 60px;
+  display: flex;
+}
+
+.percentage-container>div {
+  display: inline-block;
 }
 
 .percentage-container-title {
@@ -45,6 +50,10 @@
     max-width: 350px;
   }
 
+  .percentage-container-right {
+    justify-content: flex-end;
+  }
+
 }
 
 @media (min-width: 1024px) {
@@ -63,6 +72,10 @@
     font-size: 70px;
     line-height: 75px;
     max-width: 600px;
+  }
+
+  .percentage-container-right {
+    margin-top: 120px;
   }
 
 }

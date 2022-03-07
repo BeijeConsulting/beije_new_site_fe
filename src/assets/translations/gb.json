@@ -260,10 +260,32 @@
     }
   },
   "consulting": {
+    "title": "Titolo Ipsum Lorem",
+    "intro": {
+      "part1": "Our Beije consultants provide professional",
+      "part2": "IT consultancy",
+      "part3": "for software development able to offer the best solutions that fit the client's needs. We are committed to obtaining the best results through targeted updates and constant training for the realization of INNOVATIVE PROJECTS."
+    },
+    "firstSection": {
+      "description": "IN A PEOPLE FIRST PERSPECTIVE WE HELP COMPANIES TO BUILD VALUE TEAMS THROUGH HIGHLY SPECIALIZED FIGURES",
+      "list": {
+        "element1": "ARCHITECT",
+        "element2": "PROJECT MANAGER",
+        "element3": "ANALYST",
+        "element4": "DEVELOPER"
+      }
+    },
+    "percentageBox": {
+      "title1": "Consultant satisfaction",
+      "title2": "Customer satisfaction",
+      "subtitle": "Survey data 2021"
+    },
     "cardsDescription": {
       "card1": "Believe that there is a good business climate",
       "card2": "Believe that the company pays attention to the well-being of its employees",
       "card3": "Would recommend Beije People First"
-    }
+    },
+    "bannerTitle": "Follow the change!",
+    "contactFormTitle": "Request more information"
   }
 }

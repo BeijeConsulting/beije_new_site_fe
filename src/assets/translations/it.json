@@ -260,10 +260,32 @@
     }
   },
   "consulting": {
+    "title": "Titolo Ipsum Lorem",
+    "intro": {
+      "part1": "I nostri consulenti Beije forniscono",
+      "part2": "consulenza informatica",
+      "part3": "professionale per lo sviluppo di software in grado di offrire le migliori soluzioni che si adattino alle esigenze del cliente. Ci impegniamo ad ottenere i risultati migliori attraverso aggiornamenti mirati e formazione costante per la realizzazione di PROGETTI INNOVATIVI."
+    },
+    "firstSection": {
+      "description": "IN OTTICA PEOPLE FIRST AIUTIAMO LE AZIENDE A COSTRUIRE TEAM DI VALORE ATTRAVERSO FIGUARE ALTAMENTE SPECIALIZZATE",
+      "list": {
+        "element1": "ARCHITECT",
+        "element2": "PROJECT MANAGER",
+        "element3": "ANALYST",
+        "element4": "DEVELOPER"
+      }
+    },
+    "percentageBox": {
+      "title1": "Soddisfazione consulenti",
+      "title2": "Soddisfazione clienti",
+      "subtitle": "Dati survey 2021"
+    },
     "cardsDescription": {
       "card1": "Ritiene che ci sia un buon clima aziendale",
       "card2": "Ritiene che l'azienda sia attenta al benessere dei dipendenti",
       "card3": "Raccomanderebbe Beije People First"
-    }
+    },
+    "bannerTitle": "Segui il cambiamento!",
+    "contactFormTitle": "Richiedi maggiori informazioni"
   }
 }
