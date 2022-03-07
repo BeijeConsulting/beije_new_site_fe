@@ -8,6 +8,9 @@ const CustomLink = (props) => {
   const switchClassName = () => {
     let currentClassName = null;
     switch (props.typeLink) {
+      case "apply":
+        currentClassName = "link-default link-apply"
+        break;
       default:
         currentClassName = "link-default"
         break;

@@ -15,6 +15,8 @@ import './TalentAcademy.css'
 // Components
 import IntroSectionImgTxt from "../../components/functional_components/introSectionImgTxt/IntroSectionImgTxt";
 import CustomForm from "../../components/hooks_components/customForm/CustomForm";
+import CustomLink from "../../components/functional_components/ui/customLink/CustomLink";
+import CustomBanner from "../../components/functional_components/customBanner/CustomBanner";
 
 
 const TalentAcademy = (props) => {
@@ -45,32 +47,36 @@ const TalentAcademy = (props) => {
         className={"padding-0"}
       >
         <IntroSectionImgTxt
-          typeSection="up"
-          classNameBgImgDesktop="intro-section-img-up"
-          classNameBgImgMobile="intro-section-img-up"
-          bgIconDownload="intro-section-download-icon-up"
-          sectionName="Beije Up"
-          sectionTitle="La nostra software factory"
-          photoTitle="UP"
+          typeSection="academy"
+          classNameBgImgDesktop="intro-section-img-academy"
+          classNameBgImgMobile="intro-section-img-academy"
+          bgIconDownload="intro-section-download-icon-academy"
+          sectionName="Beije talent academy"
+          sectionTitle="Corsi specializzati"
         >
-          <div>
-            <p>Lavoriamo con dedizione al fianco dei nostri clienti.<br />
-              Realizziamo progetti partendo dall’analisi tecnica frontend / backend, realizzazione mockup fino all’implementazione del software attraverso le tecnologie presenti sul mercato.
+          <h3>Frontend &#38; Backend per diventare Software Developer</h3>
+          <div className="academy-intro-section-description">
+            <p>Svilupperai le tue competenze attraverso lezioni frontali, esercitazioni, valutazioni e progetti reali.
             </p>
-            <div
-              className={"first-section-list-container"}
-            >
-              <p>PROGETTAZIONE</p>
-              <p>IMPLEMENTAZIONE</p>
-              <p>DELIVERY</p>
-              <p>INTEGRATION SOFTWARE</p>
-              <p>APPLICATION MAINTENACE</p>
-            </div>
           </div>
+
+          <div className="academy-intro-section-apply-container">
+            <CustomLink
+              content={"candidati"}
+              linkTo={"#"}
+              typeLink={"apply"}
+            />
+          </div>
+
         </IntroSectionImgTxt>
       </Container>
 
-
+      <Container
+        component={"section"}
+        maxWidth={"false"}
+      > 
+        <CustomBanner />
+      </Container>
 
       {/* sixth section form*/}
       <Container

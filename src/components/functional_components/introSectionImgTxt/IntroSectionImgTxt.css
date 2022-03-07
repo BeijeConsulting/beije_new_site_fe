@@ -1,6 +1,7 @@
 :root {
   --intro-section-img-up: url("../../../assets/images/up/up1.png");
   --intro-section-img-consulting: url("../../../assets/images/consulting/consulting1.png");
+  --intro-section-img-academy: url("../../../assets/images/academy/academy1.png");
   --download-consulting-icon: url("../../../assets/icons/consultingDownload.svg");
   --download-up-icon: url("../../../assets/icons/upDownload.svg");
   --download-academy-icon: url("../../../assets/icons/academyDownload.svg");
@@ -116,6 +117,10 @@
 
 .intro-section-img-consulting {
   background-image: var(--intro-section-img-consulting);
+}
+
+.intro-section-img-academy {
+  background-image: var(--intro-section-img-academy);
 }
 
 /* Media Queries */
