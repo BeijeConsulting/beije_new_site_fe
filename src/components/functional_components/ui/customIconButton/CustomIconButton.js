@@ -20,6 +20,9 @@ const CustomIconButton = (props) => {
       case "social-primary":
         currentClassName = "icon-btn-social-primary"
         break;
+      case "youtube-videos-primary":
+        currentClassName = "icon-btn-youtube-videos-primary"
+        break;
       default:
         currentClassName = ""
         break;
@@ -33,6 +36,9 @@ const CustomIconButton = (props) => {
       case "social-icon-primary":
         currentIconClassName = "icon-btn-social-icon-primary"
         break;
+      case "youtube-videos-icon-primary":
+        currentIconClassName = "icon-btn-youtube-videos-icon-primary"
+        break
       default:
         currentIconClassName = ""
         break;

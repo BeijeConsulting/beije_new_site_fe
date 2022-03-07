@@ -287,5 +287,19 @@
     },
     "bannerTitle": "Segui il cambiamento!",
     "contactFormTitle": "Richiedi maggiori informazioni"
+  },
+  "academy": {
+    "fourthSection": {
+      "comments_txt": {
+        "comments1": "Nell'Academy FrontEnd di Beije ho approfondito tecnologie e nozioni nuove, mi è stato inoltre fornito supporto per entrare nel mondo del lavoro, cosa che la sola università non mi ha fornito, per questo lo reputo un percorso che rifarei volentieri.",
+        "comments2": "Beije mi ha da subito dato un'ottima impressione e non si è smentita con il tempo. Ho avuto un contratto a tempo indeterminato dopo un breve periodo di formazione e sono entrato in un team che mi ha accolto ben oltre le mie aspettative.",
+        "comments3": "Beije Academy è stata un’esperienza costruttiva e stimolante: mi ha permesso di apprendere le tecnologie usate nel mondo lavorativo e mi ha incoraggiato a mettermi in gioco in ogni circostanza.",
+        "comments4": "Nonostante fosse la prima Academy tutta da remoto è stata gestita ottimamente, sia nelle lezioni frontali che nella divisione dei gruppi in mini-progetti. Ritengo che l'Academy mi abbia fornito una preparazione più che adeguata per svolgere attività in ambito Java.",
+        "comments5": "Una formazione completa, un'esperienza professionalizzante che ti lascia con delle competenze reali e applicabili nell'immediato. Alla Beije Talent Academy non si impara solo a programmare, ma a farlo con consapevolezza e ingegno.",
+        "comments6": "Beije Accademy mi è stata molto utile per introdurmi nel mondo del lavoro con sicurezza grazie alle simulazioni in team, dove ho potuto mettere in pratica ciò che ho studiato in Accademy ed in Università.",
+        "comments7": "L’Academy di Beije è stata un’esperienza formativa davvero importante per il mio percorso di crescita. Non credevo che in soli tre mesi sarei riuscito ad apprendere tanto da poter lavorare in autonomia su progetti complessi. Sicuramente la consiglierei a tutti!",
+        "comments8": "Grazie all'Academy Java di Beije ho capito quello che differenzia l'università dal mondo del lavoro e soprattutto ho capito come gestire un progetto vero e proprio, capendo come usare le tecnologie java piu usate dalle aziende."
+      }
+    }
   }
 }

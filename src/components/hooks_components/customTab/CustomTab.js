@@ -88,7 +88,6 @@ const CustomTab = (props) => {
           key={key === state.value}
           component={props.typographyPanel}
           className={props.classNamePanel}
-
         >
           {item.contentPanel.map(printAllSpan)}
         </Box >

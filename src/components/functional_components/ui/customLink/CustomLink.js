@@ -11,6 +11,9 @@ const CustomLink = (props) => {
       case "apply":
         currentClassName = "link-default link-apply"
         break;
+      case "detail-academy":
+        currentClassName = "link-default link-detail-academy"
+        break;
       default:
         currentClassName = "link-default"
         break;
@@ -29,6 +32,7 @@ const CustomLink = (props) => {
 }
 
 CustomLink.defaultProps = {
+  linkTo: "#",
   content: "link",
   typeLink: "default"
 }

@@ -86,6 +86,8 @@ export const privacyPolicies_en = png_privacyPolicies_en;
 export const legalNotes_it = png_legalNotes_it;
 export const legalNotes_en = png_legalNotes_en;
 
+export const linkYoutube = linkYt;
+
 
 // Menu voices
 export const menu_voices = [
@@ -506,7 +508,6 @@ export const carouselProfile = [
   }
 ]
 
-
 export const clientComments = [
   {
     name: "Name",
@@ -545,5 +546,28 @@ export const caseStudies = [
     title: "Nome Progetto",
     subtitle: "Subtitle progetto poco più lungo, da definire",
     pictureClassName: "carousel-bg-youthquake"
+  }
+]
+
+export const employeesComments = [
+  {
+    name: "Name",
+    surname: "Surname",
+    content: "1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar lorem quis metus mollis commodo. Duis eget quam faucibus, vulputate augue et, imperdiet elit. Nam faucibus ipsum enim, at aliquam lorem dictum at. Vestibulum bibendum eu purus vel mattis. Ut at tortor et neque bibendum ultricies id id diam."
+  },
+  {
+    name: "Name",
+    surname: "Surname",
+    content: "2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar lorem quis metus mollis commodo. Duis eget quam faucibus, vulputate augue et, imperdiet elit. Nam faucibus ipsum enim, at aliquam lorem dictum at. Vestibulum bibendum eu purus vel mattis. Ut at tortor et neque bibendum ultricies id id diam."
+  },
+  {
+    name: "Name",
+    surname: "Surname",
+    content: "3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar lorem quis metus mollis commodo. Duis eget quam faucibus, vulputate augue et, imperdiet elit. Nam faucibus ipsum enim, at aliquam lorem dictum at. Vestibulum bibendum eu purus vel mattis. Ut at tortor et neque bibendum ultricies id id diam."
+  },
+  {
+    name: "Name",
+    surname: "Surname",
+    content: "4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar lorem quis metus mollis commodo. Duis eget quam faucibus, vulputate augue et, imperdiet elit. Nam faucibus ipsum enim, at aliquam lorem dictum at. Vestibulum bibendum eu purus vel mattis. Ut at tortor et neque bibendum ultricies id id diam. "
   }
 ]

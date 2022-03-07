@@ -24,6 +24,12 @@
   /* margin: 20px 0; */
 }
 
+.link-detail-academy {
+  text-transform: capitalize;
+  font-size: var(--font-size-h1-xs);
+  line-height: var(--line-height-h1-xs);
+}
+
 /* Hover */
 @media (hover: hover) and (pointer: fine) {
   .link-default:hover::before {
@@ -38,10 +44,21 @@
   .link-apply {
     font-size: var(--font-size-h3-md);
   }
+
+  .link-detail-academy {
+    font-size: var(--font-size-h1-md);
+    line-height: var(--line-height-h1-md);
+  }
+
 }
 
 @media(min-width: 1600px) {
   .link-apply {
     font-size: calc(var(--font-size-h3-xl) - 10px);
+  }
+
+  .link-detail-academy {
+    font-size: var(--font-size-h1-xl);
+    line-height: var(--line-height-h1-xl);
   }
 }

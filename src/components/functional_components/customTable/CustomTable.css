@@ -1,0 +1,45 @@
+.table-default tr {
+  vertical-align: bottom;
+}
+
+.table-default th, .table-default td {
+  color: var(--white);
+  font-family: var(--moderat-regular);
+}
+
+.table-default th {
+  color: var(--white);
+  font-size: var(--font-size-h3-xs);
+  width: 30%;
+}
+
+.table-default td {
+  font-size: var(--font-size-p-xs);
+}
+
+.table-default td a {
+  color: var(--yellow);
+  font-family: var(--moderat-bold);
+  text-decoration: none;
+}
+
+
+@media(min-width: 768px) {
+  .table-default th {
+    font-size: var(--font-size-h3-md);
+  }
+
+  .table-default td {
+    font-size: var(--font-size-p-md);
+  }
+}
+
+@media(min-width: 1600px) {
+  .table-default th {
+    font-size: var(--font-size-h3-xl);
+  }
+
+  .table-default td {
+    font-size: var(--font-size-p-xl);
+  }
+}

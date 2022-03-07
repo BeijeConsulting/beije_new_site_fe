@@ -1,9 +1,60 @@
 /* first-section */
-
 .academy-intro-section-description {
   margin: 20px 0;
 }
 
 .academy-intro-section-apply-container {
   margin: 40px 0;
+}
+
+/* Third section */
+.academy-third-section-container h2 {
+  text-transform: uppercase;
+  color: var(--yellow);
+  padding-top: 100px;
+}
+
+.academy-third-section-links-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 50px 0;
+}
+
+.academy-third-section-links-container div {
+  margin-bottom: 30px;
+}
+
+.academy-third-section-table-container {
+  padding: 90px 0 30px 0;
+}
+
+.academy-third-section-go-to-career-link-container {
+  margin: 50px 0 150px 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Fourth section */
+.academy-fourth-section-container {
+  padding-top: 130px;
+  color: var(--dark-grey);
+  /* Remove */
+  min-height: 800px;
+}
+
+.academy-fourth-section-container h2 {
+  text-transform: uppercase;
+}
+
+
+@media(min-width: 768px) {
+  .academy-third-section-links-container {
+    flex-direction: row;
+  }
+
+  .academy-third-section-links-container div:nth-child(2) {
+    margin-left: 25px;
+  }
 }
