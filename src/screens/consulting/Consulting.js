@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 
 // Style
@@ -12,24 +12,52 @@ import { connect } from "react-redux";
 // MUI
 import { Box, Container } from "@mui/material";
 
-// Constants
-import { logo_secondary_transparent } from "../../utils/properties";
-
 // Components
 import IntroSectionImgTxt from "../../components/functional_components/introSectionImgTxt/IntroSectionImgTxt";
 import CustomForm from "../../components/hooks_components/customForm/CustomForm";
 import PercentageContainer from "../../components/functional_components/percentageContainer/PercentageContainer";
 
-
+//import gsap
+import { gsap } from 'gsap'
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Consulting = (props) => {
 
   const { t } = useTranslation();
+  const refCountUp = useRef();
+
+  gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     props.dispatch(setCurrentPage("consulting"));
     props.dispatch(setVisibilityNavbar(true));
+
+    const element = refCountUp.current;
+    const thirdSectionNumber1 = element.querySelectorAll('.percentage-card-data-number-gsap');
+    const thirdSectionNumber2 = element.querySelectorAll('.percentage-card-data-number-right-gsap');
+    const thirdSection1Container = element.querySelectorAll('.percentage-container');
+    const thirdSection2Container = element.querySelectorAll('.percentage-container-right');
+
+    const t1 = gsap.timeline({
+      scrollTrigger: {
+        trigger: thirdSection1Container,
+        start: '28% 100%',
+        toggleActions: "play none restart none"
+      }
+    })
+
+    const t2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: thirdSection2Container,
+        start: '28% 100%',
+        toggleActions: "play none restart none"
+      }
+    })
+
+    t1.from(thirdSectionNumber1, { textContent: 0, duration: 3, ease: 'Power2.easeOut', snap: { textContent: 1 } });
+    t2.from(thirdSectionNumber2, { textContent: 0, duration: 3, ease: 'Power2.easeOut', snap: { textContent: 1 } });
+
     return () => {
       props.dispatch(initCurrentPage());
       props.dispatch(initVisibilityNavbar());
@@ -39,6 +67,7 @@ const Consulting = (props) => {
   return (
     <Box
       className={"bg-dark-grey margin-top-container-screens"}
+      ref={refCountUp}
     >
 
       {/* First section Img + text*/}
@@ -53,11 +82,10 @@ const Consulting = (props) => {
           classNameBgImgMobile="intro-section-img-consulting"
           bgIconDownload="intro-section-download-icon-consulting"
           sectionName="Beije COnsulting"
-          sectionTitle="Titolo lorem ipsum"
+          sectionTitle={t("consulting.title")}
         >
           <div className="consulting-first-section-description-container">
-            <p>I nostri consulenti Beije forniscono 𝗰𝗼𝗻𝘀𝘂𝗹𝗲𝗻𝘇𝗮 𝗶𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗰𝗮 professionale per lo sviluppo di software in grado di offrire le migliori soluzioni che si adattino alle esigenze del cliente. Ci impegniamo ad ottenere i risultati migliori attraverso aggiornamenti mirati e formazione costante per la realizzazione di PROGETTI INNOVATIVI.
-            </p>
+            <p>{t("consulting.intro.part1")} <span className="text-lightblue">{t("consulting.intro.part2")}</span> {t("consulting.intro.part3")}</p>
           </div>
         </IntroSectionImgTxt>
       </Container>
@@ -72,16 +100,16 @@ const Consulting = (props) => {
           <Box
             className="consulting-second-section-text-container"
           >
-            <p>IN OTTICA PEOPLE FIRST AIUTIAMO LE AZIENDE A COSTRUIRE TEAM DI VALORE ATTRAVERSO FIGUARE ALTAMENTE SPECIALIZZATE</p>
+            <p>{t("consulting.firstSection.description")}</p>
           </Box>
 
           <Box
             className="consulting-second-section-text-list-container up-second-section-text2-container"
           >
-            <p>ARCHITECT</p>
-            <p>PROJECT MANAGER</p>
-            <p>ANALYST</p>
-            <p>DEVELOPER</p>
+            <p>{t("consulting.firstSection.list.element1")}</p>
+            <p>{t("consulting.firstSection.list.element2")}</p>
+            <p>{t("consulting.firstSection.list.element3")}</p>
+            <p>{t("consulting.firstSection.list.element4")}</p>
           </Box>
         </Box>
       </Container>
@@ -93,18 +121,19 @@ const Consulting = (props) => {
         className={"consulting-third-section paddingX-container-general-pages bg-lightblue top-oblique-line"}
       >
         <PercentageContainer
-          percentageContainer1Title={"Soddisfazione consulenti"}
-          percentageContainer1Subtitle={"Dati survey 2021"}
-          percentage1={96.5}
-          percentage2={92.2}
-          percentage3={89.3}
+          percentageContainer1Title={t("consulting.percentageBox.title1")}
+          percentageContainer1Subtitle={t("consulting.percentageBox.subtitle")}
+          percentage1={"96,5"}
+          percentage2={"92,2"}
+          percentage3={"89,3"}
         />
         <PercentageContainer
-          percentageContainer1Title={"Soddisfazione clienti"}
-          percentageContainer1Subtitle={"Dati survey 2021"}
-          percentage1={100}
-          percentage2={94}
-          percentage3={100}
+          percentageContainer1Title={t("consulting.percentageBox.title2")}
+          percentageContainer1Subtitle={t("consulting.percentageBox.subtitle")}
+          percentage1={"100"}
+          percentage2={"94"}
+          percentage3={"100"}
+          right
         />
       </Container>
 
@@ -116,7 +145,7 @@ const Consulting = (props) => {
       >
         <Box className="consulting-fourth-section-banner">
           <div className="consulting-fourth-section-banner-text">
-            Segui il cambiamento!
+            {t("consulting.bannerTitle")}
           </div>
         </Box>
       </Container>
@@ -127,11 +156,9 @@ const Consulting = (props) => {
         maxWidth={"false"}
         className={"home-seventh-section-container paddingX-container-default"}
       >
-        <Box
-          className={"home-seventh-section-box-form"}
-        >
+        <Box>
           <CustomForm
-            formTitle={t("home.form.title")}
+            formTitle={t("consulting.contactFormTitle")}
           />
         </Box>
       </Container>

@@ -19,7 +19,7 @@ const PercentageCard = (props) => {
       </Box>
       <Box className="percentage-card-data-container">
         <div className="percentage-card-data-number">
-          {props.percentage}%
+          <span className={props.right ? "percentage-card-data-number-right-gsap" : "percentage-card-data-number-gsap"}>{props.percentage}</span>%
         </div>
         <div className="percentage-card-data-text">
           {props.cardDescription}
