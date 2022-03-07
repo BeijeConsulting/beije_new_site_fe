@@ -55,7 +55,6 @@ const Home = (props) => {
       scrollTrigger: {
         trigger: fifthSection,
         start: '50% 75%',
-        markers: true
       },
     });
 
