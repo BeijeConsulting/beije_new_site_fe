@@ -38,6 +38,7 @@ const Consulting = (props) => {
     const thirdSectionNumber2 = element.querySelectorAll('.percentage-card-data-number-right-gsap');
     const thirdSection1Container = element.querySelectorAll('.percentage-container');
     const thirdSection2Container = element.querySelectorAll('.percentage-container-right');
+    const bannerText = element.querySelector('.consulting-fourth-section-banner-text');
 
     const t1 = gsap.timeline({
       scrollTrigger: {
@@ -54,6 +55,14 @@ const Consulting = (props) => {
         toggleActions: "play none restart none"
       }
     })
+
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: bannerText,
+        start: 'top 75%',
+        toggleClass: { targets: bannerText, className: "home-fourth-section-p-animation" }
+      },
+    });
 
     t1.from(thirdSectionNumber1, { textContent: 0, duration: 3, ease: 'Power2.easeOut', snap: { textContent: 1 } });
     t2.from(thirdSectionNumber2, { textContent: 0, duration: 3, ease: 'Power2.easeOut', snap: { textContent: 1 } });
