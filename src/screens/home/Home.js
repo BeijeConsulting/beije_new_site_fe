@@ -25,7 +25,6 @@ import { tab_aboutUs, logo_secondary_grey } from "../../utils/properties"
 import CustomNavbar from "../../components/hooks_components/customNavbar/CustomNavbar";
 import ScrollDownButton from "../../components/functional_components/scrollDownButton/ScrollDownButton";
 import CustomTab from "../../components/hooks_components/customTab/CustomTab";
-import CustomLink from "../../components/functional_components/ui/customLink/CustomLink";
 import CustomCarousel from "../../components/hooks_components/customCarousel/CustomCarousel";
 import CustomForm from "../../components/hooks_components/customForm/CustomForm";
 
@@ -41,14 +40,27 @@ const Home = (props) => {
 
     const element = refDarkContainer.current;
     const fourthSectionP = element.querySelector('.home-fourth-section-p');
+    const fifthSection = element.querySelector('.home-fifth-section-container-gsap');
+    const fifthSectionFinalSpan = element.querySelector('.home-fifth-section-final-span-gsap')
 
-    const t1 = gsap.timeline({
+    gsap.timeline({
       scrollTrigger: {
         trigger: fourthSectionP,
         start: 'top 75%',
         toggleClass: { targets: fourthSectionP, className: "home-fourth-section-p-animation" }
       },
     });
+
+    const t1 = gsap.timeline({
+      scrollTrigger: {
+        trigger: fifthSection,
+        start: '50% 75%',
+        markers: true
+      },
+    });
+
+    t1.from(fifthSectionFinalSpan, { opacity: 0, duration: 1, ease: 'power2.in' })
+
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -184,9 +196,9 @@ const Home = (props) => {
           <Container
             component={"section"}
             maxWidth={"false"}
-            className={"home-fifth-section-container paddingX-container-default"}
+            className={"home-fifth-section-container paddingX-container-default home-fifth-section-container-gsap"}
           >
-            <Box className={"home-fifth-section-first-box "}>
+            <Box className={"home-fifth-section-first-box"}>
               <h2>{t("home.fifthSection.title")}</h2>
             </Box>
             <Box className={"home-fifth-section-second-box"}>
@@ -284,7 +296,7 @@ const Home = (props) => {
                 <br />
                 <br />
                 <span
-                  className="home-fifth-section-span"
+                  className="home-fifth-section-span-strong home-fifth-section-final-span-gsap"
                 >
                   {t("home.fifthSection.content.part16")}
                 </span>

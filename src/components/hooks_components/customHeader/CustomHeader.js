@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 // Redux
@@ -21,7 +21,6 @@ const CustomHeader = (props) => {
   return (
     <Toolbar
       disableGutters
-      maxWidth={"none"}
       className={"header-container bg-transparent"}
     >
       <Link

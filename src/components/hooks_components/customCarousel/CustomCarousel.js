@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import gsap from "gsap";
 
 // Swiper
-import { Swiper, SwiperSlide, useSwiper, useSwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide} from "swiper/react";
 import SwiperCore, { Navigation, Pagination, EffectCoverflow } from "swiper";
 import 'swiper/css';
 import 'swiper/css/navigation';

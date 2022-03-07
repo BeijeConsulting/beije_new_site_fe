@@ -74,35 +74,57 @@
     },
     "tab": {
       "vision": {
-        "title": "Vision",
+        "title": "Visione",
         "content": {
           "part1": "",
           "part2": "People ",
           "part3": "at the heart of our ",
           "part4": "future ",
-          "part5": "La nostra Visione è il quadro di riferimento della nostra tabella di marcia. Guida ogni aspetto della nostra attività, delineando le azioni necessarie a proseguire una crescita sostenibile e di qualità."
+          "part5": "We invest in people every day to ensure the ",
+          "part6": "constant ",
+          "part7": "improvement of our services. We want to create a system in which ",
+          "part8": "capacity ",
+          "part9": "and ",
+          "part10": "quality ",
+          "part11": "pass through people value: an environment of reference for those who accompany us on this path of ",
+          "part12": "growth"
         }
       },
       "mission": {
-        "title": "Mission",
+        "title": "Missione",
         "content": {
           "part1": "We help companies to implement ",
           "part2": "innovative projects ",
           "part3": "through ",
-          "part4": "Valuable Teams "
+          "part4": "Valuable Teams ",
+          "part5": "Our mission is to ",
+          "part6": "grow up ",
+          "part7": "with our clients ed essere capable of creating a high-tech system in which ",
+          "part8": "innovation",
+          "part9": ", ",
+          "part10": "transparency ",
+          "part11": "and ",
+          "part12": "equity",
+          "part13": "are fundamental assets in the construction of a ",
+          "part14": "People First ",
+          "part15": "system oriented to the development of valuable projects"
         }
       },
       "history": {
-        "title": "History",
+        "title": "Storia",
         "content": {
-          "part1": "At the heart of the ",
-          "part2": "Beije model ",
-          "part3": "is a people first vision: people at the center for a ",
+          "part1": "At the heart of the Beije model is a ",
+          "part2": "People First Vision ",
+          "part3": ": people at the center for the creation of a ",
           "part4": "valuable ",
-          "part5": "company. From an ideal to a business: for more than 10 years we are constantly committed to update our ",
-          "part6": "know-how ",
-          "part7": "and we are able to provide the most advanced methodologies and the most innovative technologies for the realization of ",
-          "part8": "highly specialized projects"
+          "part5": "company. From an ideal to a business: for more than 10 years we have been constantly striving to update our know-how and we are able to provide the most modern methodologies and the most ",
+          "part6": "innovative",
+          "part7": " ",
+          "part8": "technologies ",
+          "part9": "for the realization of highly ",
+          "part10": "specialized",
+          "part11": " ",
+          "part12": "projects"
         }
       },
       "values": {
@@ -146,14 +168,14 @@
         "part13": ". It is the sharing of a common purpose, it is an “out of the box” approach, it is the relationship with the customer, it is a ",
         "part14": "People First",
         "part15": " system.",
-        "part16": "We are waiting for you, follow the change."
+        "part16": "We are waiting for you, follow the change!"
       },
       "carouselProfile": {
         "francesco_cesana": {
           "desc": "Wine, art and good food: making a virtue out of necessity."
         },
         "erica_mauro": {
-          "desc": "Promotrice di buon umore e di nuove scoperte: c'è sempre un buon motivo per sorridere e per imparare qualcosa di nuovo."
+          "desc": "Promoter of good humor and new discoveries: there is always a good reason to smile and learn something new."
         },
         "chiara_balsamini": {
           "desc": "I have worn more ice skates than heels in my life. Spoiler: smile addicted. "
@@ -168,7 +190,7 @@
           "desc": "Make it simple."
         },
         "maria_rodrigez": {
-          "desc": "Nerd sotto copertura in ambito IT, cosa potrebbe andare storto?"
+          "desc": "Undercover nerds in IT, what could go wrong?"
         },
         "francesca_bellini": {
           "desc": "Give me three words: fashion, dance and carbonara"
@@ -180,8 +202,90 @@
     }
   },
   "up": {
+    "title": "Our Software Factory",
+    "intro": {
+      "part1": "We work with dedication beside our customers.",
+      "part2": "We realize projects starting from the ",
+      "part3": "frontend ",
+      "part4": "& ",
+      "part5": "backend ",
+      "part6": "technical analysis, ",
+      "part7": "mockup ",
+      "part8": "realization up to the ",
+      "part9": "software ",
+      "part10": "implementation through the technologies on the market."
+    },
+    "desc1": {
+      "part1": "Through the ",
+      "part2": "Agile ",
+      "part3": "method, verification and ",
+      "part4": "update ",
+      "part5": "steps of the product are defined already during ",
+      "part6": "development ",
+      "part7": ", with frequent ",
+      "part8": "releases ",
+      "part9": "of versions that can be tested by the customer, in order to optimize improvements or any changes on the agreed activities. From the ",
+      "part10": "analysis ",
+      "part11": "of the project to the ",
+      "part12": "drafting ",
+      "part13": "of the documentation up to the ",
+      "part14": "implementation",
+      "part15": ": ",
+      "part16": "we follow you in every phase"
+    },
+    "desc2": {
+      "part1": "the technologies used are ",
+      "part2": "Java ",
+      "part3": "and ",
+      "part4": ".Net ",
+      "part5": "for the ",
+      "part6": "Backend ",
+      "part7": "and ",
+      "part8": "Javascript ",
+      "part9": "and the main frameworks for the ",
+      "part10": "frontend ",
+      "part11": "(",
+      "part12": "React ",
+      "part13": ", ",
+      "part14": "Angular",
+      "part15": "and ",
+      "part16": "Vue ",
+      "part17": "). Per l’infrastruttura basiamo abitualmente i progetti in ",
+      "part18": "cloud ",
+      "part19": "su servizi ",
+      "part20": "Amazon Web Services"
+    },
     "form": {
       "title": "Ask for more information"
     }
+  },
+  "consulting": {
+    "title": "Titolo Ipsum Lorem",
+    "intro": {
+      "part1": "Our Beije consultants provide professional",
+      "part2": "IT consultancy",
+      "part3": "for software development able to offer the best solutions that fit the client's needs. We are committed to obtaining the best results through targeted updates and constant training for the realization of INNOVATIVE PROJECTS."
+    },
+    "firstSection": {
+      "description": "IN A PEOPLE FIRST PERSPECTIVE WE HELP COMPANIES TO BUILD VALUE TEAMS THROUGH HIGHLY SPECIALIZED FIGURES",
+      "list": {
+        "element1": "ARCHITECT",
+        "element2": "PROJECT MANAGER",
+        "element3": "ANALYST",
+        "element4": "DEVELOPER"
+      }
+    },
+    "percentageBox": {
+      "title1": "Consultant satisfaction",
+      "title2": "Customer satisfaction",
+      "subtitle": "Survey data 2021"
+    },
+    "cardsDescription": {
+      "card1": "Believe that there is a good business climate",
+      "card2": "Believe that the company pays attention to the well-being of its employees",
+      "card3": "Would recommend Beije People First"
+    },
+    "bannerTitle": "Follow the change!",
+    "contactFormTitle": "Request more information"
   }
 }
