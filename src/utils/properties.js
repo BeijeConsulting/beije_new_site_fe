@@ -315,7 +315,7 @@ export const tab_aboutUs = [
     contentPanel: [
       {
         spanContent: "home.tab.history.content.part1",
-        classNameSpan: "",
+        classNameSpan: "reduce-on-hover",
         addHtml: ""
       },
       {
@@ -325,7 +325,7 @@ export const tab_aboutUs = [
       },
       {
         spanContent: "home.tab.history.content.part3",
-        classNameSpan: "",
+        classNameSpan: "reduce-on-hover",
         addHtml: ""
       },
       {
@@ -335,7 +335,7 @@ export const tab_aboutUs = [
       },
       {
         spanContent: "home.tab.history.content.part5",
-        classNameSpan: "",
+        classNameSpan: "reduce-on-hover",
         addHtml: ""
       },
       {
@@ -345,7 +345,7 @@ export const tab_aboutUs = [
       },
       {
         spanContent: "home.tab.history.content.part7",
-        classNameSpan: "",
+        classNameSpan: "reduce-on-hover",
         addHtml: ""
       },
       {
@@ -355,7 +355,7 @@ export const tab_aboutUs = [
       },
       {
         spanContent: "home.tab.history.content.part9",
-        classNameSpan: "",
+        classNameSpan: "reduce-on-hover",
         addHtml: ""
       },
       {
@@ -365,7 +365,7 @@ export const tab_aboutUs = [
       },
       {
         spanContent: "home.tab.history.content.part11",
-        classNameSpan: "",
+        classNameSpan: "reduce-on-hover",
         addHtml: ""
       },
       {

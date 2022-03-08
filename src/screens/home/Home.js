@@ -54,7 +54,7 @@ const Home = (props) => {
     const t1 = gsap.timeline({
       scrollTrigger: {
         trigger: fifthSection,
-        start: '50% 75%',
+        start: '50% 75%'
       },
     });
 
