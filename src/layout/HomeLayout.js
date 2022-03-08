@@ -28,11 +28,8 @@ const HomeLayout = (props) => {
     loadingEnd: true
   })
 
-  console.log("current page: ", props.currentPageDuck.currentPage);
-
   useEffect(() => {
     window.addEventListener("resize", updateMedia);
-    console.log("current page in useEffect: ", props.currentPageDuck.currentPage);
     if (props.currentPageDuck.currentPage === "") {
       window.addEventListener("scroll", handleScroll);
     }
