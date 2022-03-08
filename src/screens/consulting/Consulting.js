@@ -25,7 +25,7 @@ const Consulting = (props) => {
 
   const { t } = useTranslation();
   const refCountUp = useRef();
-  const secondSectionRef = useRef();
+  const secondContainerRef = useRef();
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -75,7 +75,7 @@ const Consulting = (props) => {
   }, [])
 
   const scrollToSection = () => {
-    let elementTop = secondSectionRef.current.offsetTop;
+    let elementTop = secondContainerRef.current.offsetTop;
     window.scrollTo({
       top: elementTop,
       left: 0,
@@ -113,7 +113,7 @@ const Consulting = (props) => {
 
       <div
         className="bg-dark-grey position-relative"
-        ref={secondSectionRef}
+        ref={secondContainerRef}
       >
         {/* Second section */}
         <Container

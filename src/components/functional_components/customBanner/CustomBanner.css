@@ -26,6 +26,12 @@
   }
 }
 
+@media(min-width: 1024px) {
+  .banner-container {
+    padding: 140px 0;
+  }
+}
+
 @media(min-width: 1600px) {
   .banner-container h2 {
     font-size: var(--font-size-h3-xl);
