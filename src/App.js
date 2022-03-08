@@ -1,3 +1,4 @@
+import React from "react";
 import { useRoutes } from "react-router-dom";
 import SiteRoutes from './routes';
 import ReactGa from 'react-ga';
@@ -10,6 +11,7 @@ import RouteChangeTracker from "./components/functional_components/RouteChangeTr
 
 export default function App() {
   ReactGa.initialize(googleAnalyticsKey);
+  <RouteChangeTracker />
   let element = useRoutes(SiteRoutes);
 
   return element;
