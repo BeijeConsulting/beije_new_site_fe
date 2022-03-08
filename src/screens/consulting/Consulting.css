@@ -2,15 +2,13 @@
   --consulting-banner-bg: url("../../assets/images/consulting/consulting2.png")
 }
 
-.consulting-fourth-section {
-  padding: 0 !important;
-}
-
+/* First section */
 .consulting-first-section-description-container {
   margin-bottom: 80px;
   line-height: 35px;
 }
 
+/* Second section */
 .consulting-second-section-all-texts-container {
   padding: 60px 0 100px 0;
   display: flex;
@@ -35,6 +33,7 @@
   margin-top: 50px;
 }
 
+/* Fourth section */
 .consulting-fourth-section-banner {
   padding-top: 60px;
   width: 100%;

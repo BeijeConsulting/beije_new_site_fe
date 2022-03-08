@@ -14,21 +14,6 @@ import CustomButton from "../ui/customButton/CustomButton";
 const IntroSectionImgTxt = (props) => {
   const { t } = useTranslation()
 
-  // const refTxtContainer = useRef();
-  // const refContainer = useRef();
-
-  // useEffect(() => {
-  //   let heightContainer = refContainer.current.clientHeight;
-  //   let heightTxtContainer = refContainer.current.clientHeight;
-  //   console.log("heightContainer: ", heightContainer);
-  //   console.log("heightTxtContainer: ", heightTxtContainer);
-
-
-  // }, [])
-
-  // console.log("refTxtContainer", refTxtContainer.current.clientHeight);
-  // console.log("refContainer", refContainer.current.clientHeight);
-
   const switchClassNameSecName = () => {
     let currentClassName = null;
     switch (props.typeSection) {
@@ -66,6 +51,8 @@ const IntroSectionImgTxt = (props) => {
     }
     return currentClassName;
   }
+
+
 
   return (
     <Box
@@ -108,8 +95,10 @@ const IntroSectionImgTxt = (props) => {
             content="Scarica la presentazione"
             startIcon={<span className={`intro-sec-download-icon ${props.bgIconDownload}`} />}
             className={switchClassNameDownloadBtn()}
-            callback={props.callback}
-            download={true}
+            callback={props.callbackDownload}
+            downloadButton={true}
+            normalButton={false}
+            download={props.download}
           />
         </Box>
 

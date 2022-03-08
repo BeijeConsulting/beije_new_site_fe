@@ -50,7 +50,7 @@
   --font-size-more-h4-md: 1.4rem;
   --line-height-more-h4-md: 30px;
 
-  --font-size-body-xl: 1.5rem;
+  --font-size-body-xl: 1.3rem;
   --line-height-body-xl: 35px;
   --font-size-h1-xl: 4.375rem;
   --line-height-h1-xl: 90px;
@@ -119,6 +119,7 @@ h1, h2 {
   font-family: var(--sofiaPro-bold);
   font-size: var(--font-size-h1-xs);
   line-height: var(--line-height-h1-xs);
+  font-weight: 700;
 }
 
 h3 {
