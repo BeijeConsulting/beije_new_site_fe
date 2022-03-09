@@ -26,8 +26,8 @@
 
 .link-detail-academy {
   text-transform: capitalize;
-  font-size: var(--font-size-h1-xs);
-  line-height: var(--line-height-h1-xs);
+  font-size: var(--font-size-h3-xs);
+  line-height: var(--line-height-h3-xs);
 }
 
 /* Hover */
@@ -46,19 +46,19 @@
   }
 
   .link-detail-academy {
-    font-size: var(--font-size-h1-md);
-    line-height: var(--line-height-h1-md);
+    font-size: var(--font-size-h3-md);
+    line-height: var(--line-height-h3-md);
   }
 
 }
 
-@media(min-width: 1600px) {
+@media(min-width: 1440px) {
   .link-apply {
     font-size: calc(var(--font-size-h3-xl) - 10px);
   }
 
   .link-detail-academy {
-    font-size: var(--font-size-h1-xl);
-    line-height: var(--line-height-h1-xl);
+    font-size: var(--font-size-h3-xl);
+    line-height: var(--line-height-h3-xl);
   }
 }

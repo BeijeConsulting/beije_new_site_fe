@@ -16,7 +16,6 @@ import "./CustomForm.css";
 
 // Constants and functions
 import { googleReCaptchaKey, privacyPolicies_en, privacyPolicies_it } from "../../../utils/properties";
-import { openFile } from "../../../utils/utilities";
 
 // Components
 import CustomButton from "../../functional_components/ui/customButton/CustomButton";

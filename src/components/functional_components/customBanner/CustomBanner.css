@@ -32,7 +32,7 @@
   }
 }
 
-@media(min-width: 1600px) {
+@media(min-width: 1440px) {
   .banner-container h2 {
     font-size: var(--font-size-h3-xl);
   }

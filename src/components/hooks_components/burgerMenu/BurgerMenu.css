@@ -413,7 +413,7 @@
   }
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1440px) {
   .burgerMenu-background {
     top: 1.3rem;
     right: 8.3rem;

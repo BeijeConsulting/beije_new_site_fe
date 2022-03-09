@@ -222,7 +222,7 @@
   }
 }
 
-@media(min-width: 1600px) {
+@media(min-width: 1440px) {
   .intro-section {
     min-height: calc(100vh - var(--header-height-xlg));
   }

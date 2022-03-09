@@ -22,7 +22,7 @@ const PercentageContainer = (props) => {
       <div>
         <Box className="percentage-container-title-container">
           <div className="percentage-container-title">
-            {props.percentageContainer1Title}
+            <h2>{props.percentageContainer1Title}</h2>
           </div>
           <div className="percentage-container-title-line-separator" />
           <div className="percentage-container-subtitle">

@@ -17,7 +17,7 @@
 }
 
 .consulting-second-section-text-container {
-  font-size: 23px;
+  font-size: var(--font-size-h3-xs);
   font-family: var(--moderat-regular);
   color: var(--lightblue);
   line-height: 30px;
@@ -26,7 +26,7 @@
 }
 
 .consulting-second-section-text-list-container {
-  font-size: 23px;
+  font-size: var(--font-size-h1-xs);
   font-family: var(--sofiaPro-bold);
   line-height: 50px;
   color: #FFFFFF;
@@ -89,7 +89,7 @@
     flex-direction: row;
     justify-content: space-between;
     padding-top: 150px;
-    padding-bottom: 500px;
+    padding-bottom: 300px;
   }
 
   .consulting-second-section-text-container {
@@ -117,16 +117,16 @@
   }
 
   .consulting-second-section-text-container {
-    font-size: 30px;
+    font-size: var(--font-size-h3-md);
   }
 
   .consulting-second-section-text-list-container {
-    font-size: 32px;
+    font-size: var(--font-size-h1-md);
   }
 
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1440px) {
 
   .consulting-fourth-section-banner {
     height: 574px;
@@ -145,7 +145,7 @@
   }
 
   .consulting-second-section-text-list-container {
-    font-size: 53px;
+    font-size: var(--font-size-h1-xl);
     line-height: 120px;
   }
 

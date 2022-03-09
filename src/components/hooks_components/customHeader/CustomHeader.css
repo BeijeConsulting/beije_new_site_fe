@@ -70,7 +70,7 @@
   }
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1440px) {
   .header-container {
     padding: 1.875rem 8.3% !important;
   }

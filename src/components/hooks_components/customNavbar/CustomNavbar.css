@@ -216,7 +216,7 @@
 }
 
 
-@media(min-width: 1600px) {
+@media(min-width: 1440px) {
   .navbar-container a:nth-child(2) {
     margin: 0 57px
   }
