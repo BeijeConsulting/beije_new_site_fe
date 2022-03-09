@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 
 // Redux
@@ -27,6 +27,7 @@ import SimpleCarousel from "../../components/functional_components/simpleCarouse
 const TalentAcademy = (props) => {
 
   const { t } = useTranslation();
+  const secondContainerRef = useRef();
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
@@ -37,6 +38,16 @@ const TalentAcademy = (props) => {
       props.dispatch(initVisibilityNavbar());
     };
   }, [])
+
+  const scrollToSection = () => {
+    let elementTop = secondContainerRef.current.offsetTop;
+    window.scrollTo({
+      top: elementTop,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }
+
 
   return (
 
@@ -58,6 +69,8 @@ const TalentAcademy = (props) => {
           bgIconDownload="intro-section-download-icon-academy"
           sectionName="Beije talent academy"
           sectionTitle="Corsi specializzati"
+          callback={scrollToSection}
+          download={"consulting"}
         >
           <h3>Frontend &#38; Backend per diventare Software Developer</h3>
           <div className="academy-intro-section-description">
@@ -75,96 +88,99 @@ const TalentAcademy = (props) => {
 
         </IntroSectionImgTxt>
       </Container>
-
-      {/* Second section */}
-      <Container
-        component={"section"}
-        maxWidth={"false"}
-        className={"padding-0"}
+      <div
+        className="bg-dark-grey position-relative"
+        ref={secondContainerRef}
       >
-        <CustomBanner
-          ariaLabel={"Icon button link to youtube Beije channel"}
-          title={"DIVENTA IL PROSSIMO SOFTWARE NINJANEER!"}
-          text={"Vieni a scoprire il nostro canale YouTube: troverai le pillole digitali dei nostri esperti Frontend e Backend, i webinar e molto altro ancora."}
-          enphasisTxt={"Ti aspettiamo!"}
-        />
-      </Container>
-
-      {/* Third section */}
-      <Container
-        component={"section"}
-        maxWidth={"false"}
-        className={"academy-third-section-container paddingX-container-general-pages"}
-      >
-
-        <h2>Le nostre academy</h2>
-        <div
-          className="academy-third-section-links-container"
+        {/* Second section */}
+        <Container
+          component={"section"}
+          maxWidth={"false"}
+          className={"padding-0"}
         >
-          <div>
+          <CustomBanner
+            ariaLabel={"Icon button link to youtube Beije channel"}
+            title={"DIVENTA IL PROSSIMO SOFTWARE NINJANEER!"}
+            text={"Vieni a scoprire il nostro canale YouTube: troverai le pillole digitali dei nostri esperti Frontend e Backend, i webinar e molto altro ancora."}
+            enphasisTxt={"Ti aspettiamo!"}
+          />
+        </Container>
+
+        {/* Third section */}
+        <Container
+          component={"section"}
+          maxWidth={"false"}
+          className={"academy-third-section-container paddingX-container-general-pages"}
+        >
+
+          <h2>Le nostre academy</h2>
+          <div
+            className="academy-third-section-links-container"
+          >
+            <div>
+              <CustomLink
+                content={"Academy Frontend"}
+                typeLink={"detail-academy"}
+              />
+            </div>
+            <div>
+              <CustomLink
+                content={"Academy Backend"}
+                typeLink={"detail-academy"}
+              />
+            </div>
+          </div>
+
+          <h2>I nostri prossimi corsi</h2>
+
+          <Box
+            className={"academy-third-section-table-container"}
+          >
+            <CustomTable />
+          </Box>
+          <div
+            className={"academy-third-section-go-to-career-link-container"}
+          >
             <CustomLink
-              content={"Academy Frontend"}
-              typeLink={"detail-academy"}
+              content={"Vedi tutti"}
             />
           </div>
-          <div>
-            <CustomLink
-              content={"Academy Backend"}
-              typeLink={"detail-academy"}
+        </Container>
+
+        {/* Fourth section */}
+
+        <Container
+          component={"section"}
+          maxWidth={"false"}
+          className={"academy-fourth-section-container paddingX-container-general-pages top-oblique-line bg-yellow"}
+        >
+
+          <Box>
+            <h2>Dicono di noi</h2>
+          </Box>
+          <Box>
+            <SimpleCarousel
+              obj={employeesComments}
             />
-          </div>
-        </div>
+          </Box>
+        </Container>
 
-        <h2>I nostri prossimi corsi</h2>
-
-        <Box
-          className={"academy-third-section-table-container"}
+        {/* sixth section form*/}
+        <Container
+          component={"section"}
+          maxWidth={"false"}
+          className={"up-sixth-section-container paddingX-container-general-pages"}
         >
-          <CustomTable />
-        </Box>
-        <div
-          className={"academy-third-section-go-to-career-link-container"}
-        >
-          <CustomLink
-            content={"Vedi tutti"}
-          />
-        </div>
-      </Container>
+          <Box
+            className={"academy-sixth-section-box-form"}
+          >
+            <CustomForm
+              formTitle={t("up.form.title")}
+            />
+          </Box>
+        </Container>
 
-      {/* Fourth section */}
-
-      <Container
-        component={"section"}
-        maxWidth={"false"}
-        className={"academy-fourth-section-container paddingX-container-general-pages top-oblique-line bg-yellow"}
-      >
-
-        <Box>
-          <h2>Dicono di noi</h2>
-        </Box>
-        <Box>
-          <SimpleCarousel
-            obj={employeesComments}
-          />
-        </Box>
-      </Container>
-
-      {/* sixth section form*/}
-      <Container
-        component={"section"}
-        maxWidth={"false"}
-        className={"up-sixth-section-container paddingX-container-general-pages"}
-      >
-        <Box
-          className={"home-seventh-section-box-form"}
-        >
-          <CustomForm
-            formTitle={t("up.form.title")}
-          />
-        </Box>
-      </Container>
-
-
+      </div>
     </Box>
 
   )

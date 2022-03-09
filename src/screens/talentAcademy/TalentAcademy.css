@@ -11,7 +11,7 @@
 .academy-third-section-container h2 {
   text-transform: uppercase;
   color: var(--yellow);
-  padding-top: 100px;
+  padding-top: 150px;
 }
 
 .academy-third-section-links-container {
@@ -41,13 +41,17 @@
   padding-top: 130px;
   color: var(--dark-grey);
   /* Remove */
-  min-height: 800px;
+  /* min-height: 800px; */
 }
 
 .academy-fourth-section-container h2 {
   text-transform: uppercase;
 }
 
+/* Sixth section */
+.academy-sixth-section-box-form {
+  margin-top: 80px;
+}
 
 @media(min-width: 768px) {
   .academy-third-section-links-container {
@@ -56,5 +60,11 @@
 
   .academy-third-section-links-container div:nth-child(2) {
     margin-left: 25px;
+  }
+}
+
+@media(min-width: 1024px) {
+  .academy-sixth-section-box-form {
+    margin-top: 100px;
   }
 }

@@ -15,6 +15,8 @@ import png_privacyPolicies_it from "../assets/docs/Beije_PrivacyPolicies_IT.pdf"
 import png_privacyPolicies_en from "../assets/docs/Beije_PrivacyPolicies_EN.pdf";
 import png_legalNotes_it from "../assets/docs/Beije_legalNotes_IT.pdf";
 import png_legalNotes_en from "../assets/docs/Beije_legalNotes_EN.pdf";
+import presentation_consulting from "../assets/docs/Presentazione_consulting_BeijePeopleFirst.pdf"
+import presentation_up from "../assets/docs/Presentazione_up_BeijePeopleFirst.pdf"
 
 // Link
 const linkFb = "https://www.facebook.com/beijepeoplefirst";
@@ -85,8 +87,11 @@ export const privacyPolicies_it = png_privacyPolicies_it;
 export const privacyPolicies_en = png_privacyPolicies_en;
 export const legalNotes_it = png_legalNotes_it;
 export const legalNotes_en = png_legalNotes_en;
+export const pdf_presentation_consulting = presentation_consulting;
+export const pdf_presentation_up = presentation_up;
 
 export const linkYoutube = linkYt;
+
 
 
 // Menu voices
@@ -315,7 +320,7 @@ export const tab_aboutUs = [
     contentPanel: [
       {
         spanContent: "home.tab.history.content.part1",
-        classNameSpan: "",
+        classNameSpan: "reduce-on-hover",
         addHtml: ""
       },
       {
@@ -325,7 +330,7 @@ export const tab_aboutUs = [
       },
       {
         spanContent: "home.tab.history.content.part3",
-        classNameSpan: "",
+        classNameSpan: "reduce-on-hover",
         addHtml: ""
       },
       {
@@ -335,7 +340,7 @@ export const tab_aboutUs = [
       },
       {
         spanContent: "home.tab.history.content.part5",
-        classNameSpan: "",
+        classNameSpan: "reduce-on-hover",
         addHtml: ""
       },
       {
@@ -345,7 +350,7 @@ export const tab_aboutUs = [
       },
       {
         spanContent: "home.tab.history.content.part7",
-        classNameSpan: "",
+        classNameSpan: "reduce-on-hover",
         addHtml: ""
       },
       {
@@ -355,7 +360,7 @@ export const tab_aboutUs = [
       },
       {
         spanContent: "home.tab.history.content.part9",
-        classNameSpan: "",
+        classNameSpan: "reduce-on-hover",
         addHtml: ""
       },
       {
@@ -365,7 +370,7 @@ export const tab_aboutUs = [
       },
       {
         spanContent: "home.tab.history.content.part11",
-        classNameSpan: "",
+        classNameSpan: "reduce-on-hover",
         addHtml: ""
       },
       {
