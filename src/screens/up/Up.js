@@ -100,74 +100,80 @@ const Up = (props) => {
         <Container
           component={"section"}
           maxWidth={"false"}
-          className={"up-second-section paddingX-container-general-pages"}
+          className={"up-second-section padding-0"}
         >
 
-          <img
-            src={logo_secondary_transparent}
-            alt="logo sullo sfondo"
-            className="up-logo-bg" />
-
-          <Box className="up-second-section-all-texts-container">
+          <Box className="up-second-section-all-texts-external-container">
             <Box
-              className="up-second-section-text-container up-second-section-text1-container"
+              className="up-second-section-all-texts-container"
             >
-              <p>
-                {t("up.desc1.part1")}
-                <strong>{t("up.desc1.part2")}</strong>
-                {t("up.desc1.part3")}
-                <strong>{t("up.desc1.part4")}</strong>
-                {t("up.desc1.part5")}
-                <strong>{t("up.desc1.part6")}</strong>
-                {t("up.desc1.part7")}
-                <strong>{t("up.desc1.part8")}</strong>
-                {t("up.desc1.part9")}
-                <strong>{t("up.desc1.part10")}</strong>
-                {t("up.desc1.part11")}
-                <strong>{t("up.desc1.part12")}</strong>
-                {t("up.desc1.part13")}
-                <strong>{t("up.desc1.part14")}</strong>
-                {t("up.desc1.part15")}
-                <span
-                  className="up-second-section-text-span-desktop"
-                >
-                  <strong>{t("up.desc1.part16")}</strong>
-                </span>
-              </p>
-            </Box>
+              <Box
+                className="up-second-section-text-container up-second-section-text1-container"
+              >
+                <p>
+                  {t("up.desc1.part1")}
+                  <strong>{t("up.desc1.part2")}</strong>
+                  {t("up.desc1.part3")}
+                  <strong>{t("up.desc1.part4")}</strong>
+                  {t("up.desc1.part5")}
+                  <strong>{t("up.desc1.part6")}</strong>
+                  {t("up.desc1.part7")}
+                  <strong>{t("up.desc1.part8")}</strong>
+                  {t("up.desc1.part9")}
+                  <strong>{t("up.desc1.part10")}</strong>
+                  {t("up.desc1.part11")}
+                  <strong>{t("up.desc1.part12")}</strong>
+                  {t("up.desc1.part13")}
+                  <strong>{t("up.desc1.part14")}</strong>
+                  {t("up.desc1.part15")}
+                  <span
+                    className="up-second-section-text-span-desktop"
+                  >
+                    <strong>{t("up.desc1.part16")}</strong>
+                  </span>
+                </p>
+                <br />
+              </Box>
 
-            <Box
-              className="up-second-section-text-mobile-container"
-            >
-              Vi seguiamo in ogni fase
-            </Box>
+              <Box
+                className="up-second-section-text-mobile-container"
+              >
+                Vi seguiamo in ogni fase
+              </Box>
 
-            <Box
-              className="up-second-section-text-container up-second-section-text2-container"
-            >
-              <p>
-                {t("up.desc2.part1")}
-                <strong>{t("up.desc2.part2")}</strong>
-                {t("up.desc2.part3")}
-                <strong>{t("up.desc2.part4")}</strong>
-                {t("up.desc2.part5")}
-                <strong>{t("up.desc2.part6")}</strong>
-                {t("up.desc2.part7")}
-                <strong>{t("up.desc2.part8")}</strong>
-                {t("up.desc2.part9")}
-                <strong>{t("up.desc2.part10")}</strong>
-                {t("up.desc2.part11")}
-                <strong>{t("up.desc2.part12")}</strong>
-                {t("up.desc2.part13")}
-                <strong>{t("up.desc2.part14")}</strong>
-                {t("up.desc2.part15")}
-                <strong>{t("up.desc2.part16")}</strong>
-                {t("up.desc2.part17")}
-                <strong>{t("up.desc2.part18")}</strong>
-                {t("up.desc2.part19")}
-                <strong>{t("up.desc2.part20")}</strong>
-              </p>
+              <Box
+                className="up-second-section-text-container up-second-section-text2-container"
+              >
+                <p>
+                  {t("up.desc2.part1")}
+                  <strong>{t("up.desc2.part2")}</strong>
+                  {t("up.desc2.part3")}
+                  <strong>{t("up.desc2.part4")}</strong>
+                  {t("up.desc2.part5")}
+                  <strong>{t("up.desc2.part6")}</strong>
+                  {t("up.desc2.part7")}
+                  <strong>{t("up.desc2.part8")}</strong>
+                  {t("up.desc2.part9")}
+                  <strong>{t("up.desc2.part10")}</strong>
+                  {t("up.desc2.part11")}
+                  <strong>{t("up.desc2.part12")}</strong>
+                  {t("up.desc2.part13")}
+                  <strong>{t("up.desc2.part14")}</strong>
+                  {t("up.desc2.part15")}
+                  <strong>{t("up.desc2.part16")}</strong>
+                  {t("up.desc2.part17")}
+                  <strong>{t("up.desc2.part18")}</strong>
+                  {t("up.desc2.part19")}
+                  <strong>{t("up.desc2.part20")}</strong>
+                </p>
+              </Box>
             </Box>
+          </Box>
+          {/* Box with image visible only from desktop */}
+          <Box
+            className="up-second-section-box-img"
+          >
+
           </Box>
         </Container>
 
@@ -227,7 +233,7 @@ const Up = (props) => {
         </Container>
 
       </div>
-    </Box>
+    </Box >
   )
 }
 
