@@ -35,6 +35,7 @@
   line-height: var(--line-height-h1-xs);
   text-transform: uppercase;
   margin-bottom: 30px;
+  font-weight: 700;
 }
 
 .intro-section-consulting-name {
