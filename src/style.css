@@ -101,7 +101,7 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-body {
+body, .simple-paragraph {
   font-family: var(--moderat-regular);
   font-size: var(--font-size-body-xs);
   letter-spacing: 0px;
@@ -109,18 +109,18 @@ body {
   line-height: var(--line-height-body-xs);
 }
 
-h1, h2 {
+h1, h2, .titles-level-1-2 {
   font-family: var(--sofiaPro-bold);
   font-size: var(--font-size-h1-xs);
   line-height: var(--line-height-h1-xs);
   font-weight: 700;
 }
 
-h3 {
+h3, .titles-level3 {
   font-size: var(--font-size-h3-xs);
 }
 
-h4, h5, h6 {
+h4, h5, h6, .minor-titles {
   font-family: var(--sofiaPro-regular);
 }
 
@@ -128,43 +128,43 @@ h4, h5, h6 {
 
 @media (min-width: 768px) {
 
-  body {
+  body, .simple-paragraph {
     line-height: var(--line-height-body-md);
   }
 
-  h1, h2 {
+  h1, h2, .titles-level-1-2 {
     font-size: var(--font-size-h1-md);
     line-height: var(--line-height-h1-md);
   }
 
-  h3 {
+  h3, .titles-level3 {
     font-size: var(--font-size-h3-md);
     line-height: var(--line-height-h3-md);
   }
 
-  h4, h5, h6 {
+  h4, h5, h6, .minor-titles {
     font-size: var(--font-size-more-h4-md);
     line-height: var(--line-height-more-h4-md);
   }
 }
 
 @media (min-width: 1440px) {
-  body {
+  body, .simple-paragraph {
     font-size: var(--font-size-body-xl);
     line-height: var(--line-height-body-xl);
   }
 
-  h1, h2 {
+  h1, h2, .titles-level-1-2 {
     font-size: var(--font-size-h1-xl);
     line-height: var(--line-height-h1-xl);
   }
 
-  h3 {
+  h3, .titles-level3 {
     font-size: var(--font-size-h3-xl);
     line-height: var(--line-height-h3-xl);
   }
 
-  h4, h5, h6 {
+  h4, h5, h6, .minor-titles {
     font-size: var(--font-size-more-h4-xl);
     line-height: var(--line-height-more-h4-xl);
   }

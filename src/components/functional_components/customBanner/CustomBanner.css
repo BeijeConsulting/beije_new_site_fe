@@ -9,7 +9,6 @@
 
 .banner-container h2 {
   text-transform: uppercase;
-  font-size: var(--font-size-h3-xs);
 }
 
 .banner-enphasis-txt {
@@ -20,20 +19,8 @@
   margin: 25px 0
 }
 
-@media(min-width: 768px) {
-  .banner-container h2 {
-    font-size: var(--font-size-h3-md);
-  }
-}
-
 @media(min-width: 1024px) {
   .banner-container {
     padding: 140px 0;
-  }
-}
-
-@media(min-width: 1440px) {
-  .banner-container h2 {
-    font-size: var(--font-size-h3-xl);
   }
 }

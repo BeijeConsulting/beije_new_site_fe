@@ -275,7 +275,6 @@
   height: calc(100vh - 87px);
   margin-top: 82px;
   font-family: var(--sofiaPro-bold);
-  font-size: 1rem !important;
 }
 
 .burgerMenu-links-voices {
@@ -307,52 +306,52 @@
 }
 
 .burgerMenu-consulting {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(38, 46, 54, 0.87)), to(rgba(38, 46, 54, 0.87))), var(--bg_consulting);
-  background-image: -o-linear-gradient(top, rgba(38, 46, 54, 0.87), rgba(38, 46, 54, 0.87)), var(--bg_consulting);
-  background-image: linear-gradient(to bottom, rgba(38, 46, 54, 0.87), rgba(38, 46, 54, 0.87)), var(--bg_consulting);
+  background-image: var(--webkit-photos-filter), var(--bg_consulting);
+  background-image: var(--o-photos-filter), var(--bg_consulting);
+  background-image: var(--photos-filter), var(--bg_consulting);
 }
 
 .burgerMenu-academy {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(38, 46, 54, 0.87)), to(rgba(38, 46, 54, 0.87))), var(--bg_academy);
-  background-image: -o-linear-gradient(top, rgba(38, 46, 54, 0.87), rgba(38, 46, 54, 0.87)), var(--bg_academy);
-  background-image: linear-gradient(to bottom, rgba(38, 46, 54, 0.87), rgba(38, 46, 54, 0.87)), var(--bg_academy);
+  background-image: var(--webkit-photos-filter), var(--bg_academy);
+  background-image: var(--o-photos-filter), var(--bg_academy);
+  background-image: var(--photos-filter), var(--bg_academy);
 }
 
 .burgerMenu-up {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(38, 46, 54, 0.87)), to(rgba(38, 46, 54, 0.87))), var(--bg_up);
-  background-image: -o-linear-gradient(top, rgba(38, 46, 54, 0.87), rgba(38, 46, 54, 0.87)), var(--bg_up);
-  background-image: linear-gradient(to bottom, rgba(38, 46, 54, 0.87), rgba(38, 46, 54, 0.87)), var(--bg_up);
+  background-image: var(--webkit-photos-filter), var(--bg_up);
+  background-image: var(--o-photos-filter), var(--bg_up);
+  background-image: var(--photos-filter), var(--bg_up);
 }
 
 .burgerMenu-career {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(38, 46, 54, 0.87)), to(rgba(38, 46, 54, 0.87))), var(--bg_career);
-  background-image: -o-linear-gradient(top, rgba(38, 46, 54, 0.87), rgba(38, 46, 54, 0.87)), var(--bg_career);
-  background-image: linear-gradient(to bottom, rgba(38, 46, 54, 0.87), rgba(38, 46, 54, 0.87)), var(--bg_career);
+  background-image: var(--webkit-photos-filter), var(--bg_career);
+  background-image: var(--o-photos-filter), var(--bg_career);
+  background-image: var(--photos-filter), var(--bg_career);
 }
 
 .burgerMenu-blog {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(38, 46, 54, 0.87)), to(rgba(38, 46, 54, 0.87))), var(--bg_blog);
-  background-image: -o-linear-gradient(top, rgba(38, 46, 54, 0.87), rgba(38, 46, 54, 0.87)), var(--bg_blog);
-  background-image: linear-gradient(to bottom, rgba(38, 46, 54, 0.87), rgba(38, 46, 54, 0.87)), var(--bg_blog);
+  background-image: var(--webkit-photos-filter), var(--bg_blog);
+  background-image: var(--o-photos-filter), var(--bg_blog);
+  background-image: var(--photos-filter), var(--bg_blog);
   background-position: bottom;
 }
 
 .burgerMenu-focusAcademy {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(38, 46, 54, 0.87)), to(rgba(38, 46, 54, 0.87))), var(--bg_focusAcademy);
-  background-image: -o-linear-gradient(top, rgba(38, 46, 54, 0.87), rgba(38, 46, 54, 0.87)), var(--bg_focusAcademy);
-  background-image: linear-gradient(to bottom, rgba(38, 46, 54, 0.87), rgba(38, 46, 54, 0.87)), var(--bg_focusAcademy);
+  background-image: var(--webkit-photos-filter), var(--bg_focusAcademy);
+  background-image: var(--o-photos-filter), var(--bg_focusAcademy);
+  background-image: var(--photos-filter), var(--bg_focusAcademy);
 }
 
 .burgerMenu-community {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(38, 46, 54, 0.87)), to(rgba(38, 46, 54, 0.87))), var(--bg_community);
-  background-image: -o-linear-gradient(top, rgba(38, 46, 54, 0.87), rgba(38, 46, 54, 0.87)), var(--bg_community);
-  background-image: linear-gradient(to bottom, rgba(38, 46, 54, 0.87), rgba(38, 46, 54, 0.87)), var(--bg_community);
+  background-image: var(--webkit-photos-filter), var(--bg_community);
+  background-image: var(--o-photos-filter), var(--bg_community);
+  background-image: var(--photos-filter), var(--bg_community);
 }
 
 .burgerMenu-contacts {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(38, 46, 54, 0.87)), to(rgba(38, 46, 54, 0.87))), var(--bg_contacts);
-  background-image: -o-linear-gradient(top, rgba(38, 46, 54, 0.87), rgba(38, 46, 54, 0.87)), var(--bg_contacts);
-  background-image: linear-gradient(to bottom, rgba(38, 46, 54, 0.87), rgba(38, 46, 54, 0.87)), var(--bg_contacts);
+  background-image: var(--webkit-photos-filter), var(--bg_contacts);
+  background-image: var(--o-photos-filter), var(--bg_contacts);
+  background-image: var(--photos-filter), var(--bg_contacts);
 }
 
 /* Media Query */
@@ -390,7 +389,6 @@
   .burgerMenu-nav-links-container {
     height: calc(100vh - 125px);
     margin-top: 90px;
-    font-size: 2.5rem !important;
   }
 }
 
@@ -408,8 +406,11 @@
   }
 
   .burgerMenu-nav-links-container {
-    font-size: 2.2rem !important;
     margin-top: 107px;
+  }
+
+  .burgerMenu-links-voices {
+    font-size: var(--font-size-h1-xl);
   }
 }
 
@@ -429,7 +430,6 @@
   }
 
   .burgerMenu-nav-links-container {
-    font-size: 3rem !important;
     height: calc(100vh - 289px);
     margin-top: 202px;
   }

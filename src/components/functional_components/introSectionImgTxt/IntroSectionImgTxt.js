@@ -18,13 +18,13 @@ const IntroSectionImgTxt = (props) => {
     let currentClassName = null;
     switch (props.typeSection) {
       case "consulting":
-        currentClassName = "intro-section-name intro-section-consulting-name"
+        currentClassName = "intro-section-name titles-level-1-2 intro-section-consulting-name"
         break;
       case "up":
-        currentClassName = "intro-section-name intro-section-up-name"
+        currentClassName = "intro-section-name titles-level-1-2 intro-section-up-name"
         break;
       case "academy":
-        currentClassName = "intro-section-name intro-section-academy-name"
+        currentClassName = "intro-section-name titles-level-1-2 intro-section-academy-name"
         break;
       default:
         currentClassName = ""

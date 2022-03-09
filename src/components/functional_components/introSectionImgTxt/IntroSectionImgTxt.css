@@ -30,12 +30,8 @@
 }
 
 .intro-section-name {
-  font-size: var(--font-size-h1-xs);
-  font-family: var(--sofiaPro-bold);
-  line-height: var(--line-height-h1-xs);
   text-transform: uppercase;
   margin-bottom: 30px;
-  font-weight: 700;
 }
 
 .intro-section-consulting-name {
@@ -59,7 +55,6 @@
 }
 
 .intro-sec-download-icon {
-  /* background-image: var(--download-icon); */
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -135,11 +130,6 @@
 @media(min-width: 768px) {
   .intro-section-txt-container {
     padding: 30px 11.2%;
-  }
-
-  .intro-section-name {
-    font-size: var(--font-size-h1-md);
-    line-height: var(--line-height-h1-md);
   }
 
   .intro-section-title {
@@ -239,8 +229,6 @@
 
 
   .intro-section-name {
-    font-size: var(--font-size-h1-xl);
-    line-height: var(--line-height-h1-xl);
     margin-bottom: 15px;
   }
 

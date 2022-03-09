@@ -26,8 +26,8 @@
 }
 
 .consulting-second-section-text-list-container {
-  font-size: var(--font-size-h1-xs);
-  font-family: var(--sofiaPro-bold);
+  /* font-size: var(--font-size-h1-xs);
+  font-family: var(--sofiaPro-bold);*/
   line-height: 50px;
   color: #FFFFFF;
   margin-top: 50px;
@@ -121,7 +121,7 @@
   }
 
   .consulting-second-section-text-list-container {
-    font-size: var(--font-size-h1-md);
+    /* font-size: var(--font-size-h1-md); */
   }
 
 }
@@ -134,7 +134,7 @@
   }
 
   .consulting-fourth-section-banner-text {
-    font-size: 100px;
+    font-size: 80px;
     line-height: 100%;
   }
 
@@ -145,7 +145,7 @@
   }
 
   .consulting-second-section-text-list-container {
-    font-size: var(--font-size-h1-xl);
+    /* font-size: var(--font-size-h1-xl); */
     line-height: 120px;
   }
 

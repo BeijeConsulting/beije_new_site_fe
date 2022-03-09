@@ -18,7 +18,10 @@ const CustomBanner = (props) => {
       maxWidth={"false"}
       className={"banner-container paddingX-container-general-pages"}
     >
-      <h2>{props.title}</h2>
+      <h2
+        className="titles-level3"
+      >{props.title}
+      </h2>
       <p>{props.text}</p>
       <p
         className={props.classNameEphasiesTxt}
