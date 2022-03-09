@@ -123,15 +123,16 @@
   background-image: var(--profile_francesca_bellini);
 }
 
-/* for up */
-.carousel-bg-youthquake {
-  background-image: var(--caseStudies-youthquake);
+/* for case studies */
+.carousel-bg-youthquake, .carousel-bg-pininfarina {
+  background-color: var(--white);
+  background-image: none;
 }
 
-.carousel-bg-pininfarina {
-  background-image: var(--caseStudies-pininfarina);
+.carousel-img-container {
+  width: 100%;
+  height: 80%;
 }
-
 
 @media(max-width: 600px) {
   .swiper-slide p {
@@ -167,6 +168,10 @@
     -webkit-transform: translate3d(4px, -2px, 60px);
     transform: translate3d(4px, -2px, 60px);
     margin: 0px 20px 20px 20px;
+  }
+
+  .swiper-container-up .swiper-slide-active .swipe-txt-container {
+    margin: 0px 20px 45px 20px;
   }
 
   .swiper-slide p {

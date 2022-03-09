@@ -9,6 +9,8 @@ import logo_short_transparent from "../assets/images/logos/logo_short_transparen
 import { faFacebookF, faLinkedinIn, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faN, faArrowDownLong, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import quotation_mark from "../assets/icons/quote.png";
+import logo_pininfarina from "../assets/images/up/caseStudies/pininfarina.jpg";
+import logo_youthquake from "../assets/images/up/caseStudies/youthquake.jpg";
 
 // Docs
 import png_privacyPolicies_it from "../assets/docs/Beije_PrivacyPolicies_IT.pdf";
@@ -540,17 +542,20 @@ export const caseStudies = [
   {
     title: "Nome Progetto",
     subtitle: "Subtitle progetto poco più lungo, da definire",
-    pictureClassName: "carousel-bg-youthquake"
+    pictureClassName: "carousel-bg-youthquake",
+    imgCarousel: logo_youthquake
   },
   {
     title: "Nome Progetto",
     subtitle: "Subtitle progetto poco più lungo, da definire",
-    pictureClassName: "carousel-bg-pininfarina"
+    pictureClassName: "carousel-bg-pininfarina",
+    imgCarousel: logo_pininfarina
   },
   {
     title: "Nome Progetto",
     subtitle: "Subtitle progetto poco più lungo, da definire",
-    pictureClassName: "carousel-bg-youthquake"
+    pictureClassName: "carousel-bg-youthquake",
+    imgCarousel: logo_youthquake
   }
 ]
 
