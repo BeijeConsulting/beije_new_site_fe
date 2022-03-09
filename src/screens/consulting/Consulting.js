@@ -43,7 +43,7 @@ const Consulting = (props) => {
       scrollTrigger: {
         trigger: thirdSection1Container,
         start: '28% 100%',
-        toggleActions: "play none restart none"
+        toggleActions: "play none restart restart"
       }
     })
 
@@ -51,7 +51,7 @@ const Consulting = (props) => {
       scrollTrigger: {
         trigger: thirdSection2Container,
         start: '28% 100%',
-        toggleActions: "play none restart none"
+        toggleActions: "play none restart restart"
       }
     })
 
