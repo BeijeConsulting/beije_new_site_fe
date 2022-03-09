@@ -231,10 +231,10 @@
       "part13": "of the documentation up to the ",
       "part14": "implementation",
       "part15": ": ",
-      "part16": "we follow you in every phase"
+      "part16": "we follow you in every phase."
     },
     "desc2": {
-      "part1": "the technologies used are ",
+      "part1": "The technologies used are ",
       "part2": "Java ",
       "part3": "and ",
       "part4": ".Net ",
@@ -253,7 +253,7 @@
       "part17": "). Per l’infrastruttura basiamo abitualmente i progetti in ",
       "part18": "cloud ",
       "part19": "su servizi ",
-      "part20": "Amazon Web Services"
+      "part20": "Amazon Web Services."
     },
     "form": {
       "title": "Ask for more information"
