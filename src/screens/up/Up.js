@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 
 // Redux
@@ -24,6 +24,7 @@ import CustomForm from "../../components/hooks_components/customForm/CustomForm"
 const Up = (props) => {
 
   const { t } = useTranslation();
+  const secondContainerRef = useRef();
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
@@ -35,53 +36,66 @@ const Up = (props) => {
     };
   }, [])
 
+  const scrollToSection = () => {
+    let elementTop = secondContainerRef.current.offsetTop;
+    window.scrollTo({
+      top: elementTop,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }
+
   return (
-    <Box>
+    <Box
+      className={"bg-dark-grey margin-top-container-screens"}
+    >
 
-      <Box
-        className={"bg-dark-grey margin-top-container-screens"}
+      {/* First section Img + text*/}
+      < Container
+        component={"section"}
+        maxWidth={"false"}
+        className={"padding-0"}
       >
-
-        {/* First section Img + text*/}
-        < Container
-          component={"section"}
-          maxWidth={"false"}
-          className={"padding-0"}
+        <IntroSectionImgTxt
+          typeSection="up"
+          classNameBgImgDesktop="intro-section-img-up"
+          classNameBgImgMobile="intro-section-img-up"
+          bgIconDownload="intro-section-download-icon-up"
+          sectionName="Beije Up"
+          sectionTitle={t("up.title")}
+          photoTitle="UP"
+          callback={scrollToSection}
+          download={"up"}
         >
-          <IntroSectionImgTxt
-            typeSection="up"
-            classNameBgImgDesktop="intro-section-img-up"
-            classNameBgImgMobile="intro-section-img-up"
-            bgIconDownload="intro-section-download-icon-up"
-            sectionName="Beije Up"
-            sectionTitle={t("up.title")}
-            photoTitle="UP"
-          >
-            <div>
-              <p>{t("up.intro.part1")}<br />
-                {t("up.intro.part2")}
-                <strong>{t("up.intro.part3")}</strong>
-                {t("up.intro.part4")}
-                <strong>{t("up.intro.part5")}</strong>
-                {t("up.intro.part6")}
-                <strong>{t("up.intro.part7")}</strong>
-                {t("up.intro.part8")}
-                <strong>{t("up.intro.part9")}</strong>
-                {t("up.intro.part10")}
-              </p>
-              <div
-                className={"first-section-list-container"}
-              >
-                <p>PROGETTAZIONE</p>
-                <p>IMPLEMENTAZIONE</p>
-                <p>DELIVERY</p>
-                <p>INTEGRATION SOFTWARE</p>
-                <p>APPLICATION MAINTENACE</p>
-              </div>
+          <div>
+            <p>{t("up.intro.part1")}<br />
+              {t("up.intro.part2")}
+              <strong>{t("up.intro.part3")}</strong>
+              {t("up.intro.part4")}
+              <strong>{t("up.intro.part5")}</strong>
+              {t("up.intro.part6")}
+              <strong>{t("up.intro.part7")}</strong>
+              {t("up.intro.part8")}
+              <strong>{t("up.intro.part9")}</strong>
+              {t("up.intro.part10")}
+            </p>
+            <div
+              className={"first-section-list-container"}
+            >
+              <p>PROGETTAZIONE</p>
+              <p>IMPLEMENTAZIONE</p>
+              <p>DELIVERY</p>
+              <p>INTEGRATION SOFTWARE</p>
+              <p>APPLICATION MAINTENACE</p>
             </div>
-          </IntroSectionImgTxt>
-        </Container>
+          </div>
+        </IntroSectionImgTxt>
+      </Container>
 
+      <div
+        className="bg-dark-grey position-relative"
+        ref={secondContainerRef}
+      >
         {/* Second section description up*/}
         <Container
           component={"section"}
@@ -212,10 +226,8 @@ const Up = (props) => {
           </Box>
         </Container>
 
-
-      </Box>
-
-    </Box >
+      </div>
+    </Box>
   )
 }
 

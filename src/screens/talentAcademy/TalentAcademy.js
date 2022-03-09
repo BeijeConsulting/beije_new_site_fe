@@ -70,7 +70,7 @@ const TalentAcademy = (props) => {
           sectionName="Beije talent academy"
           sectionTitle="Corsi specializzati"
           callback={scrollToSection}
-          download={"consulting"}
+          download={"academy"}
         >
           <h3>Frontend &#38; Backend per diventare Software Developer</h3>
           <div className="academy-intro-section-description">

@@ -30,13 +30,15 @@ const HomeLayout = (props) => {
 
   useEffect(() => {
     window.addEventListener("resize", updateMedia);
+    console.log("current page in useEffect: ", props.currentPageDuck.currentPage);
     window.addEventListener("scroll", handleScroll);
+
 
     return () => {
       window.removeEventListener("resize", updateMedia);
       window.removeEventListener("scroll", handleScroll);
     }
-  }, [])
+  }, [props.currentPageDuck.currentPage])
 
   const updateMedia = () => {
     setState({
@@ -47,7 +49,7 @@ const HomeLayout = (props) => {
 
   const handleScroll = () => {
     props.dispatch(initLogo())
-    if (window.pageYOffset > 150) {
+    if (window.pageYOffset > 150 && props.currentPageDuck.currentPage === "") {
       props.dispatch(setLogo(logo_secondary_light))
     }
   }
