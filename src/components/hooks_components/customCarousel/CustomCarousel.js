@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import gsap from "gsap";
 
 // Swiper
-import { Swiper, SwiperSlide} from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Pagination, EffectCoverflow } from "swiper";
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -59,6 +59,13 @@ const CustomCarousel = (props) => {
         ref={slideRef}
         onMouseMove={tiltEffect()}
       >
+        {props.imgCarousel &&
+          <img
+            className="carousel-img-container"
+            src={item.imgCarousel}
+          >
+          </img>
+        }
         <div
           className={props.classNameTxtContainer}
         >

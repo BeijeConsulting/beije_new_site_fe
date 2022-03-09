@@ -213,6 +213,7 @@ const Up = (props) => {
               upCarousel
               obj={caseStudies}
               classNameSwiperContainer={"swiper-container-up"}
+              imgCarousel
             />
           </Container>
         </Container>
