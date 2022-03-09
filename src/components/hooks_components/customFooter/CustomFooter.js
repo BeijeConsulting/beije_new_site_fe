@@ -12,8 +12,9 @@ import { Box } from '@mui/material';
 // style
 import './CustomFooter.css'
 
-// Constants
+// Constants and functions
 import { logo_primary_light, logo_secondary_light, legalNotes_en, legalNotes_it, privacyPolicies_en, privacyPolicies_it } from "../../../utils/properties";
+import { openFile } from "../../../utils/utilities";
 
 // Components
 import SwitchLang from "../switchLang/SwitchLang"
@@ -150,26 +151,24 @@ const CustomFooter = (props) => {
       >
         {
           props.modalDuck.typeModal === "privacyPolicies" &&
-          <PdfViewer
-            fileUrl={t("modal.doc_lang") === "doc_it" ? privacyPolicies_it : privacyPolicies_en}
-          />
-          // <img
-          //   modalTitle="Privacy Policy"
-          //   src={t("modal.doc_lang") === "doc_it" ? privacyPolicies_it : privacyPolicies_en}
-          //   alt={t("altImages.privacyPolicies")}
-          //   className="width-100"
-          // />
+
+          <object
+            data={t("modal.doc_lang") === "doc_it" ? privacyPolicies_it : privacyPolicies_en}
+            type="application/pdf"
+            height="100%"
+            width="100%"
+          >
+          </object>
         }
         {
           props.modalDuck.typeModal === "legalNotes" &&
-          <PdfViewer
-            fileUrl={t("modal.doc_lang") === "doc_it" ? legalNotes_it : legalNotes_en}
-          />
-          // <img
-          //   src={t("modal.doc_lang") === "doc_it" ? legalNotes_it : legalNotes_en}
-          //   alt={t("altImages.legalNotes")}
-          //   className="width-100"
-          // />
+          <object
+            data={t("modal.doc_lang") === "doc_it" ? legalNotes_it : legalNotes_en}
+            type="application/pdf"
+            height="100%"
+            width="100%"
+          >
+          </object>
         }
 
       </CustomModal>

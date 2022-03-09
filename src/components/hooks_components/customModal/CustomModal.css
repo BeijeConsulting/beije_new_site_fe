@@ -7,7 +7,7 @@
 
 .modal-container {
   margin: auto;
-  height: 90vh;
+  height: 60vh;
 }
 
 .modal-txt-container {
@@ -41,7 +41,6 @@
 
 .modal-content {
   height: 80%;
-  overflow-y: scroll;
 }
 
 .modal-footer {
@@ -56,4 +55,10 @@
   -ms-flex-pack: end;
   justify-content: flex-end;
   margin-top: 30px;
+}
+
+@media(min-width: 1024px) {
+  .modal-container {
+    height: 90vh;
+  }
 }
