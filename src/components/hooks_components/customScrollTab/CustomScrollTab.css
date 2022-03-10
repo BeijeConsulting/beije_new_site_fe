@@ -1,0 +1,100 @@
+/* Tab academy */
+.scroll-tab-container {
+  background-color: transparent;
+  max-width: 50%;
+  align-self: center;
+  margin: 50px 0;
+}
+
+.scroll-tab-lables {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(0.5);
+  height: 70px;
+  width: 60px !important;
+  margin: 0 5px !important;
+}
+
+.MuiButtonBase-root-MuiTab-root.Mui-selected {
+  filter: brightness(1) !important;
+}
+
+/* .scroll-tab-container button:nth-child(1) {
+  filter: brightness(1) !important;
+}
+
+.scroll-tab-container button:active, .scroll-tab-container button:focus {
+  filter: brightness(1) !important;
+  border: 1px solid var(--dark-grey);
+}
+
+.scroll-tab-container button:active, .scroll-tab-container button:focus {
+  filter: brightness(1) !important;
+  border: 1px solid var(--dark-grey);
+} */
+
+.scroll-tab-labels-container span {
+  display: none;
+}
+
+.scroll-tab-lables-bg-diMonaco {
+  background-image: url("../../../assets/images/comments/diMonaco_comments.jpeg");
+}
+
+.scroll-tab-lables-bg-pignorio {
+  background-image: url("../../../assets/images/comments/pignorio_comments.png");
+}
+
+.scroll-tab-lables-bg-ezpeleta {
+  background-image: url("../../../assets/images/comments/ezpeleta_comments.jpg");
+}
+
+.scroll-tab-lables-bg-savallo {
+  background-image: url("../../../assets/images/comments/savallo_comments.jpeg");
+}
+
+.scroll-tab-lables-bg-zacheo {
+  background-image: url("../../../assets/images/comments/zacheo_comments.jpg");
+}
+
+.scroll-tab-lables-bg-fraioli {
+  background-image: url("../../../assets/images/comments/fraioli_comments.jpg");
+}
+
+.scroll-tab-lables-bg-busseni {
+  background-image: url("../../../assets/images/comments/busseni_comments.jpg");
+}
+
+.scroll-tab-lables-bg-farina {
+  background-image: url("../../../assets/images/comments/farina_comments.jpg");
+}
+
+.scroll-tab-content-quotation-marks {
+  align-self: center;
+  border: 1px solid var(--white);
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  margin: 30px auto 15px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-tab-panels-container {
+  margin: auto;
+  width: 85%;
+}
+
+.scroll-tab-content-quotation-marks img {
+  width: 100%;
+}
+
+.scroll-tab-content-txt {
+  margin: 10px 0;
+}
+
+.scroll-tab-content-sign {
+  margin-bottom: 20px;
+}

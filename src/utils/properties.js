@@ -173,6 +173,10 @@ export const social_list = [
 // Tab About Us
 export const tab_aboutUs = [
   {
+    classNameLabelBoxActive: "tab-lables-box tab-lables-box-active",
+    classNameLabelBox: "tab-lables-box",
+    classNameLabels: "tab-lables",
+    classNameLabelActive: "tab-lables tab-lables-active",
     labelTab: "home.tab.vision.title",
     contentPanel: [
       {
@@ -238,6 +242,10 @@ export const tab_aboutUs = [
     ]
   },
   {
+    classNameLabelBoxActive: "tab-lables-box tab-lables-box-active",
+    classNameLabelBox: "tab-lables-box",
+    classNameLabels: "tab-lables",
+    classNameLabelActive: "tab-lables tab-lables-active",
     labelTab: "home.tab.mission.title",
     contentPanel: [
       {
@@ -318,6 +326,10 @@ export const tab_aboutUs = [
     ]
   },
   {
+    classNameLabelBoxActive: "tab-lables-box tab-lables-box-active",
+    classNameLabelBox: "tab-lables-box",
+    classNameLabels: "tab-lables",
+    classNameLabelActive: "tab-lables tab-lables-active",
     labelTab: "home.tab.history.title",
     contentPanel: [
       {
@@ -383,6 +395,10 @@ export const tab_aboutUs = [
     ]
   },
   {
+    classNameLabelBoxActive: "tab-lables-box tab-lables-box-active",
+    classNameLabelBox: "tab-lables-box",
+    classNameLabels: "tab-lables",
+    classNameLabelActive: "tab-lables tab-lables-active",
     labelTab: "home.tab.values.title",
     contentPanel: [
       {
@@ -559,25 +575,68 @@ export const caseStudies = [
   }
 ]
 
+// export const employeesComments = [
+//   {
+//     name: "Name",
+//     surname: "Surname",
+//     content: "1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar lorem quis metus mollis commodo. Duis eget quam faucibus, vulputate augue et, imperdiet elit. Nam faucibus ipsum enim, at aliquam lorem dictum at. Vestibulum bibendum eu purus vel mattis. Ut at tortor et neque bibendum ultricies id id diam."
+//   },
+//   {
+//     name: "Name",
+//     surname: "Surname",
+//     content: "2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar lorem quis metus mollis commodo. Duis eget quam faucibus, vulputate augue et, imperdiet elit. Nam faucibus ipsum enim, at aliquam lorem dictum at. Vestibulum bibendum eu purus vel mattis. Ut at tortor et neque bibendum ultricies id id diam."
+//   },
+//   {
+//     name: "Name",
+//     surname: "Surname",
+//     content: "3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar lorem quis metus mollis commodo. Duis eget quam faucibus, vulputate augue et, imperdiet elit. Nam faucibus ipsum enim, at aliquam lorem dictum at. Vestibulum bibendum eu purus vel mattis. Ut at tortor et neque bibendum ultricies id id diam."
+//   },
+//   {
+//     name: "Name",
+//     surname: "Surname",
+//     content: "4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar lorem quis metus mollis commodo. Duis eget quam faucibus, vulputate augue et, imperdiet elit. Nam faucibus ipsum enim, at aliquam lorem dictum at. Vestibulum bibendum eu purus vel mattis. Ut at tortor et neque bibendum ultricies id id diam. "
+//   }
+// ]
+
 export const employeesComments = [
   {
-    name: "Name",
-    surname: "Surname",
-    content: "1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar lorem quis metus mollis commodo. Duis eget quam faucibus, vulputate augue et, imperdiet elit. Nam faucibus ipsum enim, at aliquam lorem dictum at. Vestibulum bibendum eu purus vel mattis. Ut at tortor et neque bibendum ultricies id id diam."
+    contentPanel: "academy.fourthSection.comments_txt.commentsDiMonaco",
+    name: "Federica",
+    surname: "Di Monaco"
   },
   {
-    name: "Name",
-    surname: "Surname",
-    content: "2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar lorem quis metus mollis commodo. Duis eget quam faucibus, vulputate augue et, imperdiet elit. Nam faucibus ipsum enim, at aliquam lorem dictum at. Vestibulum bibendum eu purus vel mattis. Ut at tortor et neque bibendum ultricies id id diam."
+    contentPanel: "academy.fourthSection.comments_txt.commentsPignorio",
+    name: "Luca",
+    surname: "Pignorio"
   },
   {
-    name: "Name",
-    surname: "Surname",
-    content: "3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar lorem quis metus mollis commodo. Duis eget quam faucibus, vulputate augue et, imperdiet elit. Nam faucibus ipsum enim, at aliquam lorem dictum at. Vestibulum bibendum eu purus vel mattis. Ut at tortor et neque bibendum ultricies id id diam."
+    contentPanel: "academy.fourthSection.comments_txt.commentsEzpeleta",
+    name: "Clark",
+    surname: "Ezpeleta"
   },
   {
-    name: "Name",
-    surname: "Surname",
-    content: "4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar lorem quis metus mollis commodo. Duis eget quam faucibus, vulputate augue et, imperdiet elit. Nam faucibus ipsum enim, at aliquam lorem dictum at. Vestibulum bibendum eu purus vel mattis. Ut at tortor et neque bibendum ultricies id id diam. "
+    contentPanel: "academy.fourthSection.comments_txt.commentsSavallo",
+    name: "Alessandro",
+    surname: "Savallo"
+  },
+  {
+    contentPanel: "academy.fourthSection.comments_txt.commentsZacheo",
+    name: "Emanuele",
+    surname: "Zacheo"
+  },
+  {
+    contentPanel: "academy.fourthSection.comments_txt.commentsFraioli",
+    name: "Samuele",
+    surname: "Fraioli"
+  },
+  {
+    contentPanel: "academy.fourthSection.comments_txt.commentsBusseni",
+    name: "Samuele",
+    surname: "Busseni"
+  },
+  {
+    contentPanel: "academy.fourthSection.comments_txt.commentsFarina",
+    name: "Alessandro",
+    surname: "Farina"
   }
 ]

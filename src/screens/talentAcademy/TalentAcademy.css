@@ -11,7 +11,7 @@
 .academy-third-section-container h2 {
   text-transform: uppercase;
   color: var(--yellow);
-  padding-top: 150px;
+  padding: 50px 0 ;
 }
 
 .academy-third-section-links-container {
@@ -48,6 +48,12 @@
   text-transform: uppercase;
 }
 
+.academy-fourth-section-tab-comments {
+  display: flex;
+  flex-direction: column;
+  min-height: 550px;
+}
+
 /* Sixth section */
 .academy-sixth-section-box-form {
   margin-top: 80px;
@@ -66,5 +72,9 @@
 @media(min-width: 1024px) {
   .academy-sixth-section-box-form {
     margin-top: 100px;
+  }
+
+  .academy-fourth-section-tab-comments {
+    min-height: 600px;
   }
 }
