@@ -7,7 +7,7 @@ import { setVisibilityNavbar, initVisibilityNavbar } from "../../redux/ducks/sho
 import { connect } from "react-redux";
 
 // MUI
-import { Box, Container } from "@mui/material";
+import { Box, Container, Tab } from "@mui/material";
 
 // styles
 import './TalentAcademy.css'
@@ -23,6 +23,7 @@ import CustomBanner from "../../components/functional_components/customBanner/Cu
 import CustomTable from "../../components/functional_components/customTable/CustomTable";
 import SimpleCarousel from "../../components/functional_components/simpleCarousel/SimpleCarousel";
 import CustomTab from "../../components/hooks_components/customTab/CustomTab";
+import CustomScrollTab from "../../components/hooks_components/customScrollTab/CustomScrollTab";
 
 
 const TalentAcademy = (props) => {
@@ -159,14 +160,44 @@ const TalentAcademy = (props) => {
           <Box>
             <h2>Dicono di noi</h2>
           </Box>
-          <Box>
+          <Box
+            className={"academy-fourth-section-tab-comments"}
+          >
             {/* <SimpleCarousel
               obj={employeesComments}
             /> */}
-            <CustomTab
+            {/* <CustomTab
               obj={employeesComments}
               classNameContainer={"tab-container-academy"}
-            />
+            /> */}
+            <CustomScrollTab
+              obj={employeesComments}
+            >
+              <Tab
+                className={"scroll-tab-lables scroll-tab-lables-bg-diMonaco"}
+              />
+              <Tab
+                className={"scroll-tab-lables scroll-tab-lables-bg-pignorio"}
+              />
+              <Tab
+                className={"scroll-tab-lables scroll-tab-lables-bg-ezpeleta"}
+              />
+              <Tab
+                className={"scroll-tab-lables scroll-tab-lables-bg-savallo"}
+              />
+              <Tab
+                className={"scroll-tab-lables scroll-tab-lables-bg-zacheo"}
+              />
+              <Tab
+                className={"scroll-tab-lables scroll-tab-lables-bg-fraioli"}
+              />
+              <Tab
+                className={"scroll-tab-lables scroll-tab-lables-bg-busseni"}
+              />
+              <Tab
+                className={"scroll-tab-lables scroll-tab-lables-bg-farina"}
+              />
+            </CustomScrollTab>
           </Box>
         </Container>
 

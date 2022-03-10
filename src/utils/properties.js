@@ -595,139 +595,43 @@ export const caseStudies = [
 
 export const employeesComments = [
   {
-    classNameLabelBoxActive: "tab-lables-box  tab-lables-box-active",
-    classNameLabelBox: "tab-lables-box",
-    classNameLabels: "tab-lables tab-lables-bg-diMonaco",
-    classNameLabelActive: "tab-lables tab-lables-bg-diMonaco tab-lables-active",
-    labelTab: "",
-    contentPanel: [
-      {
-        spanContent: "ciccio ",
-        classNameSpan: "hightlight-txt-white"
-      },
-      {
-        spanContent: "bello",
-        classNameSpan: ""
-      }
-    ]
+    contentPanel: "academy.fourthSection.comments_txt.commentsDiMonaco",
+    name: "Federica",
+    surname: "Di Monaco"
   },
   {
-    classNameLabelBoxActive: "tab-lables-box tab-lables-box-active",
-    classNameLabelBox: "tab-lables-box ",
-    classNameLabels: "tab-lables tab-lables-bg-ezpeleta",
-    classNameLabelActive: "tab-lables tab-lables-bg-ezpeleta tab-lables-active",
-    labelTab: "",
-    contentPanel: [
-      {
-        spanContent: "casa ",
-        classNameSpan: "hightlight-txt-white"
-      },
-      {
-        spanContent: "blanca",
-        classNameSpan: ""
-      }
-    ]
+    contentPanel: "academy.fourthSection.comments_txt.commentsPignorio",
+    name: "Luca",
+    surname: "Pignorio"
   },
   {
-    classNameLabelBoxActive: "tab-lables-box tab-lables-box-active",
-    classNameLabelBox: "tab-lables-box ",
-    classNameLabels: "tab-lables tab-lables-bg-pignorio ",
-    classNameLabelActive: "tab-lables tab-lables-bg-pignorio tab-lables-active",
-    labelTab: "",
-    contentPanel: [
-      {
-        spanContent: "ciccio",
-        classNameSpan: "hightlight-txt-white"
-      },
-      {
-        spanContent: "bello",
-        classNameSpan: ""
-      }
-    ]
+    contentPanel: "academy.fourthSection.comments_txt.commentsEzpeleta",
+    name: "Clark",
+    surname: "Ezpeleta"
   },
   {
-    classNameLabelBoxActive: "tab-lables-box tab-lables-box-active",
-    classNameLabelBox: "tab-lables-box ",
-    classNameLabels: "tab-lables tab-lables-bg-fraioli ",
-    classNameLabelActive: "tab-lables tab-lables-bg-fraioli tab-lables-active",
-    labelTab: "",
-    contentPanel: [
-      {
-        spanContent: "ciccio",
-        classNameSpan: "hightlight-txt-white"
-      },
-      {
-        spanContent: "bello",
-        classNameSpan: ""
-      }
-    ]
+    contentPanel: "academy.fourthSection.comments_txt.commentsSavallo",
+    name: "Alessandro",
+    surname: "Savallo"
   },
   {
-    classNameLabelBoxActive: "tab-lables-box tab-lables-box-active",
-    classNameLabelBox: "tab-lables-box ",
-    classNameLabels: "tab-lables tab-lables-bg-savallo ",
-    classNameLabelActive: "tab-lables tab-lables-bg-savallo tab-lables-active",
-    labelTab: "",
-    contentPanel: [
-      {
-        spanContent: "ciccio",
-        classNameSpan: "hightlight-txt-white"
-      },
-      {
-        spanContent: "bello",
-        classNameSpan: ""
-      }
-    ]
+    contentPanel: "academy.fourthSection.comments_txt.commentsZacheo",
+    name: "Emanuele",
+    surname: "Zacheo"
   },
   {
-    classNameLabelBoxActive: "tab-lables-box tab-lables-box-active",
-    classNameLabelBox: "tab-lables-box ",
-    classNameLabels: "tab-lables tab-lables-bg-zacheo ",
-    classNameLabelActive: "tab-lables tab-lables-bg-zacheo tab-lables-active",
-    labelTab: "",
-    contentPanel: [
-      {
-        spanContent: "ciccio",
-        classNameSpan: "hightlight-txt-white"
-      },
-      {
-        spanContent: "bello",
-        classNameSpan: ""
-      }
-    ]
+    contentPanel: "academy.fourthSection.comments_txt.commentsFraioli",
+    name: "Samuele",
+    surname: "Fraioli"
   },
   {
-    classNameLabelBoxActive: "tab-lables-box tab-lables-box-active",
-    classNameLabelBox: "tab-lables-box ",
-    classNameLabels: "tab-lables tab-lables-bg-farina ",
-    classNameLabelActive: "tab-lables tab-lables-bg-farina tab-lables-active",
-    labelTab: "",
-    contentPanel: [
-      {
-        spanContent: "ciccio",
-        classNameSpan: "hightlight-txt-white"
-      },
-      {
-        spanContent: "bello",
-        classNameSpan: ""
-      }
-    ]
+    contentPanel: "academy.fourthSection.comments_txt.commentsBusseni",
+    name: "Samuele",
+    surname: "Busseni"
   },
   {
-    classNameLabelBoxActive: "tab-lables-box tab-lables-box-active",
-    classNameLabelBox: "tab-lables-box ",
-    classNameLabels: "tab-lables tab-lables-bg-busseni ",
-    classNameLabelActive: "tab-lables tab-lables-bg-busseni tab-lables-active",
-    labelTab: "",
-    contentPanel: [
-      {
-        spanContent: "ciccio",
-        classNameSpan: "hightlight-txt-white"
-      },
-      {
-        spanContent: "bello",
-        classNameSpan: ""
-      }
-    ]
+    contentPanel: "academy.fourthSection.comments_txt.commentsFarina",
+    name: "Alessandro",
+    surname: "Farina"
   }
 ]
