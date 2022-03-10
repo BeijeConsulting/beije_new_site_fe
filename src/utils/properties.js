@@ -171,6 +171,10 @@ export const social_list = [
 // Tab About Us
 export const tab_aboutUs = [
   {
+    classNameLabelBoxActive: "tab-lables-box tab-lables-box-active",
+    classNameLabelBox: "tab-lables-box",
+    classNameLabels: "tab-lables",
+    classNameLabelActive: "tab-lables tab-lables-active",
     labelTab: "home.tab.vision.title",
     contentPanel: [
       {
@@ -236,6 +240,10 @@ export const tab_aboutUs = [
     ]
   },
   {
+    classNameLabelBoxActive: "tab-lables-box tab-lables-box-active",
+    classNameLabelBox: "tab-lables-box",
+    classNameLabels: "tab-lables",
+    classNameLabelActive: "tab-lables tab-lables-active",
     labelTab: "home.tab.mission.title",
     contentPanel: [
       {
@@ -316,6 +324,10 @@ export const tab_aboutUs = [
     ]
   },
   {
+    classNameLabelBoxActive: "tab-lables-box tab-lables-box-active",
+    classNameLabelBox: "tab-lables-box",
+    classNameLabels: "tab-lables",
+    classNameLabelActive: "tab-lables tab-lables-active",
     labelTab: "home.tab.history.title",
     contentPanel: [
       {
@@ -381,6 +393,10 @@ export const tab_aboutUs = [
     ]
   },
   {
+    classNameLabelBoxActive: "tab-lables-box tab-lables-box-active",
+    classNameLabelBox: "tab-lables-box",
+    classNameLabels: "tab-lables",
+    classNameLabelActive: "tab-lables tab-lables-active",
     labelTab: "home.tab.values.title",
     contentPanel: [
       {
@@ -554,25 +570,164 @@ export const caseStudies = [
   }
 ]
 
+// export const employeesComments = [
+//   {
+//     name: "Name",
+//     surname: "Surname",
+//     content: "1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar lorem quis metus mollis commodo. Duis eget quam faucibus, vulputate augue et, imperdiet elit. Nam faucibus ipsum enim, at aliquam lorem dictum at. Vestibulum bibendum eu purus vel mattis. Ut at tortor et neque bibendum ultricies id id diam."
+//   },
+//   {
+//     name: "Name",
+//     surname: "Surname",
+//     content: "2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar lorem quis metus mollis commodo. Duis eget quam faucibus, vulputate augue et, imperdiet elit. Nam faucibus ipsum enim, at aliquam lorem dictum at. Vestibulum bibendum eu purus vel mattis. Ut at tortor et neque bibendum ultricies id id diam."
+//   },
+//   {
+//     name: "Name",
+//     surname: "Surname",
+//     content: "3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar lorem quis metus mollis commodo. Duis eget quam faucibus, vulputate augue et, imperdiet elit. Nam faucibus ipsum enim, at aliquam lorem dictum at. Vestibulum bibendum eu purus vel mattis. Ut at tortor et neque bibendum ultricies id id diam."
+//   },
+//   {
+//     name: "Name",
+//     surname: "Surname",
+//     content: "4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar lorem quis metus mollis commodo. Duis eget quam faucibus, vulputate augue et, imperdiet elit. Nam faucibus ipsum enim, at aliquam lorem dictum at. Vestibulum bibendum eu purus vel mattis. Ut at tortor et neque bibendum ultricies id id diam. "
+//   }
+// ]
+
 export const employeesComments = [
   {
-    name: "Name",
-    surname: "Surname",
-    content: "1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar lorem quis metus mollis commodo. Duis eget quam faucibus, vulputate augue et, imperdiet elit. Nam faucibus ipsum enim, at aliquam lorem dictum at. Vestibulum bibendum eu purus vel mattis. Ut at tortor et neque bibendum ultricies id id diam."
+    classNameLabelBoxActive: "tab-lables-box  tab-lables-box-active",
+    classNameLabelBox: "tab-lables-box",
+    classNameLabels: "tab-lables tab-lables-bg-diMonaco",
+    classNameLabelActive: "tab-lables tab-lables-bg-diMonaco tab-lables-active",
+    labelTab: "",
+    contentPanel: [
+      {
+        spanContent: "ciccio ",
+        classNameSpan: "hightlight-txt-white"
+      },
+      {
+        spanContent: "bello",
+        classNameSpan: ""
+      }
+    ]
   },
   {
-    name: "Name",
-    surname: "Surname",
-    content: "2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar lorem quis metus mollis commodo. Duis eget quam faucibus, vulputate augue et, imperdiet elit. Nam faucibus ipsum enim, at aliquam lorem dictum at. Vestibulum bibendum eu purus vel mattis. Ut at tortor et neque bibendum ultricies id id diam."
+    classNameLabelBoxActive: "tab-lables-box tab-lables-box-active",
+    classNameLabelBox: "tab-lables-box ",
+    classNameLabels: "tab-lables tab-lables-bg-ezpeleta",
+    classNameLabelActive: "tab-lables tab-lables-bg-ezpeleta tab-lables-active",
+    labelTab: "",
+    contentPanel: [
+      {
+        spanContent: "casa ",
+        classNameSpan: "hightlight-txt-white"
+      },
+      {
+        spanContent: "blanca",
+        classNameSpan: ""
+      }
+    ]
   },
   {
-    name: "Name",
-    surname: "Surname",
-    content: "3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar lorem quis metus mollis commodo. Duis eget quam faucibus, vulputate augue et, imperdiet elit. Nam faucibus ipsum enim, at aliquam lorem dictum at. Vestibulum bibendum eu purus vel mattis. Ut at tortor et neque bibendum ultricies id id diam."
+    classNameLabelBoxActive: "tab-lables-box tab-lables-box-active",
+    classNameLabelBox: "tab-lables-box ",
+    classNameLabels: "tab-lables tab-lables-bg-pignorio ",
+    classNameLabelActive: "tab-lables tab-lables-bg-pignorio tab-lables-active",
+    labelTab: "",
+    contentPanel: [
+      {
+        spanContent: "ciccio",
+        classNameSpan: "hightlight-txt-white"
+      },
+      {
+        spanContent: "bello",
+        classNameSpan: ""
+      }
+    ]
   },
   {
-    name: "Name",
-    surname: "Surname",
-    content: "4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar lorem quis metus mollis commodo. Duis eget quam faucibus, vulputate augue et, imperdiet elit. Nam faucibus ipsum enim, at aliquam lorem dictum at. Vestibulum bibendum eu purus vel mattis. Ut at tortor et neque bibendum ultricies id id diam. "
+    classNameLabelBoxActive: "tab-lables-box tab-lables-box-active",
+    classNameLabelBox: "tab-lables-box ",
+    classNameLabels: "tab-lables tab-lables-bg-fraioli ",
+    classNameLabelActive: "tab-lables tab-lables-bg-fraioli tab-lables-active",
+    labelTab: "",
+    contentPanel: [
+      {
+        spanContent: "ciccio",
+        classNameSpan: "hightlight-txt-white"
+      },
+      {
+        spanContent: "bello",
+        classNameSpan: ""
+      }
+    ]
+  },
+  {
+    classNameLabelBoxActive: "tab-lables-box tab-lables-box-active",
+    classNameLabelBox: "tab-lables-box ",
+    classNameLabels: "tab-lables tab-lables-bg-savallo ",
+    classNameLabelActive: "tab-lables tab-lables-bg-savallo tab-lables-active",
+    labelTab: "",
+    contentPanel: [
+      {
+        spanContent: "ciccio",
+        classNameSpan: "hightlight-txt-white"
+      },
+      {
+        spanContent: "bello",
+        classNameSpan: ""
+      }
+    ]
+  },
+  {
+    classNameLabelBoxActive: "tab-lables-box tab-lables-box-active",
+    classNameLabelBox: "tab-lables-box ",
+    classNameLabels: "tab-lables tab-lables-bg-zacheo ",
+    classNameLabelActive: "tab-lables tab-lables-bg-zacheo tab-lables-active",
+    labelTab: "",
+    contentPanel: [
+      {
+        spanContent: "ciccio",
+        classNameSpan: "hightlight-txt-white"
+      },
+      {
+        spanContent: "bello",
+        classNameSpan: ""
+      }
+    ]
+  },
+  {
+    classNameLabelBoxActive: "tab-lables-box tab-lables-box-active",
+    classNameLabelBox: "tab-lables-box ",
+    classNameLabels: "tab-lables tab-lables-bg-farina ",
+    classNameLabelActive: "tab-lables tab-lables-bg-farina tab-lables-active",
+    labelTab: "",
+    contentPanel: [
+      {
+        spanContent: "ciccio",
+        classNameSpan: "hightlight-txt-white"
+      },
+      {
+        spanContent: "bello",
+        classNameSpan: ""
+      }
+    ]
+  },
+  {
+    classNameLabelBoxActive: "tab-lables-box tab-lables-box-active",
+    classNameLabelBox: "tab-lables-box ",
+    classNameLabels: "tab-lables tab-lables-bg-busseni ",
+    classNameLabelActive: "tab-lables tab-lables-bg-busseni tab-lables-active",
+    labelTab: "",
+    contentPanel: [
+      {
+        spanContent: "ciccio",
+        classNameSpan: "hightlight-txt-white"
+      },
+      {
+        spanContent: "bello",
+        classNameSpan: ""
+      }
+    ]
   }
 ]

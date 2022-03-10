@@ -22,6 +22,7 @@ import CustomLink from "../../components/functional_components/ui/customLink/Cus
 import CustomBanner from "../../components/functional_components/customBanner/CustomBanner";
 import CustomTable from "../../components/functional_components/customTable/CustomTable";
 import SimpleCarousel from "../../components/functional_components/simpleCarousel/SimpleCarousel";
+import CustomTab from "../../components/hooks_components/customTab/CustomTab";
 
 
 const TalentAcademy = (props) => {
@@ -159,8 +160,12 @@ const TalentAcademy = (props) => {
             <h2>Dicono di noi</h2>
           </Box>
           <Box>
-            <SimpleCarousel
+            {/* <SimpleCarousel
               obj={employeesComments}
+            /> */}
+            <CustomTab
+              obj={employeesComments}
+              classNameContainer={"tab-container-academy"}
             />
           </Box>
         </Container>
