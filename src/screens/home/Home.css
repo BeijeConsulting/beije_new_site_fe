@@ -369,7 +369,7 @@
   }
 }
 
-@media(min-width: 1440px) {
+@media(min-width: 1600px) {
 
   .home-first-section-navbar-container {
     margin-top: calc(100vh - 117vh);

@@ -35,21 +35,21 @@
   --font-size-h3-xs: 1.25rem;
   --font-size-more-h4-xs: 1.25rem;
 
-  --font-size-body-md: 1.25rem;
+  --font-size-body-md: 1.125rem;
   --line-height-body-md: 30px;
-  --font-size-h1-md: 2.5rem;
-  --line-height-h1-md: 70px;
-  --font-size-h3-md: 1.8rem;
-  --line-height-h3-md: 40px;
+  --font-size-h1-md: 2.1rem;
+  --line-height-h1-md: 60px;
+  --font-size-h3-md: 1.75rem;
+  --line-height-h3-md: 35px;
   --font-size-more-h4-md: 1.4rem;
   --line-height-more-h4-md: 30px;
 
   --font-size-body-xl: 1.25rem;
   --line-height-body-xl: 35px;
-  --font-size-h1-xl: 3.125rem;
-  --line-height-h1-xl: 90px;
-  --font-size-h3-xl: 2.5rem;
-  --line-height-h3-xl: 60px;
+  --font-size-h1-xl: 2.5rem;
+  --line-height-h1-xl: 60px;
+  --font-size-h3-xl: 1.875rem;
+  --line-height-h3-xl: 40px;
   --font-size-more-h4-xl: 1.5rem;
   --line-height-more-h4-xl: 35px;
 
@@ -60,7 +60,7 @@
   --header-height-lg: 99px;
   /*lg - 1200px*/
   --header-height-xlg: 147px;
-  /*xlg - 1440px*/
+  /*xlg - 1600px*/
 
   --photos-filter: linear-gradient(90deg, rgba(38, 46, 54, 0.74) 0%, rgba(38, 46, 54, 0.74) 35%, rgba(38, 46, 54, 0.74) 100%);
   --o-photos-filter: -o-linear-gradient(left, rgba(38, 46, 54, 0.74) 0%, rgba(38, 46, 54, 0.74) 35%, rgba(38, 46, 54, 0.74) 100%);
@@ -148,7 +148,7 @@ h4, h5, h6, .minor-titles {
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1600px) {
   body, .simple-paragraph {
     font-size: var(--font-size-body-xl);
     line-height: var(--line-height-body-xl);
@@ -365,7 +365,7 @@ h4, h5, h6, .minor-titles {
   }
 }
 
-@media(min-width: 1440px) {
+@media(min-width: 1600px) {
   .margin-top-container-screens {
     margin-top: calc(var(--header-height-xlg) + 5px)
   }
@@ -395,7 +395,7 @@ h4, h5, h6, .minor-titles {
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1600px) {
   .top-oblique-line {
     -webkit-clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
     clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);

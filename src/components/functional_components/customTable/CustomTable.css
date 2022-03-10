@@ -34,7 +34,7 @@
   }
 }
 
-@media(min-width: 1440px) {
+@media(min-width: 1600px) {
   .table-default th {
     font-size: var(--font-size-h3-xl);
   }
