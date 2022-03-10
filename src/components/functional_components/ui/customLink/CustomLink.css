@@ -21,6 +21,7 @@
 
 .link-detail-academy {
   text-transform: capitalize;
+  white-space: nowrap;
 }
 
 /* Hover */

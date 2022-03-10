@@ -2,7 +2,7 @@
   vertical-align: bottom;
 }
 
-.table-default th, .table-default td {
+.table-default th, .table-default th p, .table-default td {
   color: var(--white);
   font-family: var(--moderat-regular);
 }
@@ -10,11 +10,22 @@
 .table-default th {
   color: var(--white);
   font-size: var(--font-size-h3-xs);
-  width: 30%;
+  width: 60%;
 }
 
 .table-default td {
   font-size: var(--font-size-p-xs);
+}
+
+.table-default td:last-child {
+  text-transform: uppercase;
+  vertical-align: baseline;
+}
+
+.table-default td:last-child svg {
+  height: 30px;
+  width: 30px;
+  color: var(--white);
 }
 
 .table-default td a {
@@ -32,6 +43,17 @@
   .table-default td {
     font-size: var(--font-size-p-md);
   }
+}
+
+@media(min-width:1024px) {
+  .table-default th {
+    width: 30%;
+  }
+
+  .table-default td:last-child {
+    vertical-align: bottom;
+  }
+
 }
 
 @media(min-width: 1600px) {

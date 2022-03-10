@@ -1,64 +1,49 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 // MUI
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material";
 
+// Assets
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 // Style
 import "./CustomTable.css";
 
+// Constants
+import { addIcon } from "../../../utils/properties";
+
 const tempObj = [
   {
-    singleRow: [
-      {
-        name: "Stage Java",
-        component: "th",
-        align: "",
-        linkTo: ""
-      },
-      {
-        name: "Gennaio - Aprile 2022",
-        component: "",
-        scope: "",
-        align: "",
-        linkTo: ""
-      },
-      {
-        name: "APPROFONDISCI",
-        component: "",
-        scope: "",
-        align: "right",
-        linkTo: "/"
-      }
-    ]
+    name: "Stage Java",
+    when: "Gennaio - Aprile 2022",
+    linkTo: "/"
   },
   {
-    singleRow: [
-      {
-        name: "Stage Java",
-        component: "th",
-        align: "",
-        linkTo: ""
-      },
-      {
-        name: "Gennaio - Aprile 2022",
-        component: "",
-        scope: "",
-        align: "",
-        linkTo: ""
-      },
-      {
-        name: "APPROFONDISCI",
-        component: "",
-        scope: "",
-        align: "right",
-        linkTo: "/"
-      }
-    ]
+    name: "Stage Java",
+    when: "Gennaio - Aprile 2022",
+    linkTo: "/"
   }
+
 ]
 
 const CustomTable = (props) => {
+
+  const [state, setState] = useState({
+    isMobile: window.innerWidth < 1024,
+  })
+
+  useEffect(() => {
+    window.addEventListener("resize", updateMedia);
+  }, [])
+
+  const updateMedia = () => {
+    setState({
+      ...state,
+      isMobile: window.innerWidth < 1024
+    });
+  };
+
   const printTableHaed = (item, key) => {
     return (
       <TableCell
@@ -74,36 +59,48 @@ const CustomTable = (props) => {
     return (
       <TableRow
         key={key}
-      // sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
       >
+        <TableCell
+          component={"th"}
+        >
+          {item.name}
+          {
+            state.isMobile &&
+            <p
+              className="simple-paragraph"
+            >
+              {item.when}
+            </p>
+          }
+        </TableCell>
 
-        {item.singleRow.map(printTableColums)}
-      </TableRow>
-    )
-  }
-
-  const printTableColums = (internalItem, internalKey) => {
-    return (
-      <TableCell
-        key={internalKey}
-        component={internalItem.component}
-        scope={internalItem.scope}
-        align={internalItem.align}
-      >
         {
-          internalItem.linkTo !== "" &&
+          !state.isMobile &&
+          <TableCell>
+            {item.when}
+          </TableCell>
+        }
+
+        <TableCell
+          align={"right"}
+        >
           <Link
-            to={internalItem.linkTo}
+            to={item.linkTo}
           >
-            {internalItem.name}
+            {
+              state.isMobile &&
+              <div>
+                <FontAwesomeIcon icon={addIcon} />
+              </div>
+            }
+            {
+              !state.isMobile &&
+              <span>approfondisci</span>
+            }
           </Link>
-        }
-        {
-          internalItem.linkTo === "" &&
-          internalItem.name
-        }
+        </TableCell>
 
-      </TableCell>
+      </TableRow>
     )
   }
 
