@@ -16,23 +16,9 @@
   margin: 0 5px !important;
 }
 
-.MuiButtonBase-root-MuiTab-root.Mui-selected {
+.scroll-tab-lables.Mui-selected {
   filter: brightness(1) !important;
 }
-
-/* .scroll-tab-container button:nth-child(1) {
-  filter: brightness(1) !important;
-}
-
-.scroll-tab-container button:active, .scroll-tab-container button:focus {
-  filter: brightness(1) !important;
-  border: 1px solid var(--dark-grey);
-}
-
-.scroll-tab-container button:active, .scroll-tab-container button:focus {
-  filter: brightness(1) !important;
-  border: 1px solid var(--dark-grey);
-} */
 
 .scroll-tab-labels-container span {
   display: none;
