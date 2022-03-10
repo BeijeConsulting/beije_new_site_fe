@@ -13,7 +13,7 @@ import { Box, Container } from "@mui/material";
 import "./Up.css";
 
 // Constants
-import { logo_secondary_transparent, clientComments, caseStudies } from "../../utils/properties";
+import { clientComments, caseStudies } from "../../utils/properties";
 
 // Components
 import IntroSectionImgTxt from "../../components/functional_components/introSectionImgTxt/IntroSectionImgTxt";

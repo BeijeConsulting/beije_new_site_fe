@@ -21,8 +21,6 @@ import CustomForm from "../../components/hooks_components/customForm/CustomForm"
 import CustomLink from "../../components/functional_components/ui/customLink/CustomLink";
 import CustomBanner from "../../components/functional_components/customBanner/CustomBanner";
 import CustomTable from "../../components/functional_components/customTable/CustomTable";
-import SimpleCarousel from "../../components/functional_components/simpleCarousel/SimpleCarousel";
-import CustomTab from "../../components/hooks_components/customTab/CustomTab";
 import CustomScrollTab from "../../components/hooks_components/customScrollTab/CustomScrollTab";
 
 

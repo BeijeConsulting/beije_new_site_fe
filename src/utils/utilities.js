@@ -1,5 +1,4 @@
 import React from "react";
-import { getTranslation } from "../i18n/i18n-config";
 import { replace, toNumber } from "lodash";
 import NumberFormat from "react-number-format";
 import ReactGa from 'react-ga';

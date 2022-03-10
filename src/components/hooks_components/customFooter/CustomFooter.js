@@ -14,13 +14,11 @@ import './CustomFooter.css'
 
 // Constants and functions
 import { logo_primary_light, logo_secondary_light, legalNotes_en, legalNotes_it, privacyPolicies_en, privacyPolicies_it } from "../../../utils/properties";
-import { openFile } from "../../../utils/utilities";
 
 // Components
 import SwitchLang from "../switchLang/SwitchLang"
 import SocialLinks from "../../functional_components/socialLinks/SocialLinks";
 import CustomModal from "../customModal/CustomModal";
-import PdfViewer from "../../functional_components/pdfViewer/PdfViewer";
 
 const CustomFooter = (props) => {
   const { t } = useTranslation();

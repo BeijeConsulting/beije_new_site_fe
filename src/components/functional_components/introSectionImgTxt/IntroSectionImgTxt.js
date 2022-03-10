@@ -1,5 +1,4 @@
-import React, { useRef, useEffect } from "react";
-import { useTranslation } from "react-i18next";
+import React from "react";
 
 // MUI
 import { Box } from "@mui/material";
@@ -12,7 +11,6 @@ import ScrollDownButton from "../scrollDownButton/ScrollDownButton";
 import CustomButton from "../ui/customButton/CustomButton";
 
 const IntroSectionImgTxt = (props) => {
-  const { t } = useTranslation()
 
   const switchClassNameSecName = () => {
     let currentClassName = null;

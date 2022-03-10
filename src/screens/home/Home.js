@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
 
 // Redux
 import { connect } from "react-redux";

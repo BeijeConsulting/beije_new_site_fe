@@ -1,7 +1,7 @@
 import React from "react";
 
 // MUI
-import { IconButton, Stack } from "@mui/material";
+import {Stack } from "@mui/material";
 
 // Style
 import "./SocialLinks.css"

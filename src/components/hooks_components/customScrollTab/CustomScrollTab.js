@@ -42,7 +42,7 @@ const CustomScrollTab = (props) => {
     if (key === value) {
       return (
         < Box
-          key={key === value}
+          key={key}
           component={props.typographyPanel}
           className={props.classNamePanel}
         >

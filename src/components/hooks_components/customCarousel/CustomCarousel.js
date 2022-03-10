@@ -71,15 +71,15 @@ const CustomCarousel = (props) => {
         >
           {props.homeCarousel &&
             <>
-              <p>{item?.name} {item?.surname}</p>
-              <p>_{item?.role}</p>
-              <p><i>&ldquo;{t(item?.description)}&rdquo;</i></p>
+              <p>{item.name} {item.surname}</p>
+              <p>_{item.role}</p>
+              <p><i>&ldquo;{t(item.description)}&rdquo;</i></p>
             </>
           }
           {props.upCarousel &&
             <>
-              <p>{item?.title}</p>
-              <p><i>_{item?.subtitle}</i></p>
+              <p>{item.title}</p>
+              <p><i>_{item.subtitle}</i></p>
             </>
           }
         </div>

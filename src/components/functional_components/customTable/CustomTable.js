@@ -35,6 +35,10 @@ const CustomTable = (props) => {
 
   useEffect(() => {
     window.addEventListener("resize", updateMedia);
+
+    return () => {
+      window.removeEventListener("resize", updateMedia);
+    }
   }, [])
 
   const updateMedia = () => {
