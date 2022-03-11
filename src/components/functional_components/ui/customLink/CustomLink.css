@@ -24,6 +24,10 @@
   white-space: nowrap;
 }
 
+.link-apply-secondary {
+  color: var(--yellow) !important;
+}
+
 /* Hover */
 @media (hover: hover) and (pointer: fine) {
   .link-default:hover::before {
@@ -32,10 +36,14 @@
     width: 100%;
     background-color: var(--white);
   }
-}
 
-@media(min-width: 1600px) {
-  .link-apply {
-    font-size: calc(var(--font-size-h3-xl) - 10px);
+  .link-apply-secondary:hover::before {
+    background-color: var(--yellow);
   }
 }
+
+/* @media(min-width: 1600px) {
+  .link-apply {
+    font-size: var(--font-size-h3-xl);
+  }
+} */

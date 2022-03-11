@@ -6,6 +6,7 @@ import HomeLayout from "./layout/HomeLayout";
 import Up from "./screens/up/Up";
 import Consulting from "./screens/consulting/Consulting";
 import TalentAcademy from "./screens/talentAcademy/TalentAcademy";
+import AcademyFrontend from "./screens/academyFrontend/AcademyFrontend";
 
 export default [
   {
@@ -33,8 +34,22 @@ export default [
         path: "/beije-talent-academy",
         element: <TalentAcademy />,
         // children: [
-        //   { index: true, element: <CoursesIndex /> },
-        //   { path: "/courses/:id", element: <Course /> }
+        //   { index: true, element: <TalentAcademy /> },
+        //   {
+        //     path: "/beije-talent-academy/academy-frontend",
+        //     element: <AcademyFrontend />
+        //   }
+        // ]
+      },
+      {
+        path: "/beije-talent-academy/academy-frontend",
+        element: <AcademyFrontend />,
+        // children: [
+        //   { index: true, element: <TalentAcademy /> },
+        //   {
+        //     path: "/beije-talent-academy/academy-frontend",
+        //     element: <AcademyFrontend />
+        //   }
         // ]
       },
       { path: "*", element: <NoMatch /> }

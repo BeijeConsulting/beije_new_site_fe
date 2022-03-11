@@ -16,7 +16,7 @@ import "./Up.css";
 import { clientComments, caseStudies } from "../../utils/properties";
 
 // Components
-import IntroSectionImgTxt from "../../components/functional_components/introSectionImgTxt/IntroSectionImgTxt";
+import IntroSectionImgTxt from "../../components/functional_components/introSections/introSectionImgTxt/IntroSectionImgTxt";
 import SimpleCarousel from "../../components/functional_components/simpleCarousel/SimpleCarousel";
 import CustomCarousel from "../../components/hooks_components/customCarousel/CustomCarousel";
 import CustomForm from "../../components/hooks_components/customForm/CustomForm";

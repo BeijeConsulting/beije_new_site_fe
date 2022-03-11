@@ -1,22 +1,10 @@
 :root {
-  --intro-section-img-up: url("../../../assets/images/up/up1.png");
-  --intro-section-img-consulting: url("../../../assets/images/consulting/consulting1.png");
-  --intro-section-img-academy: url("../../../assets/images/academy/academy1.png");
-  --download-consulting-icon: url("../../../assets/icons/consultingDownload.svg");
-  --download-up-icon: url("../../../assets/icons/upDownload.svg");
-  --download-academy-icon: url("../../../assets/icons/academyDownload.svg");
-}
-
-.intro-section {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  padding: 0px;
-  /* margin-top: var(--header-height-xs); */
-}
-
-.intro-section-img-container {
-  display: none;
+  --intro-section-img-up: url("../../../../assets/images/up/up1.png");
+  --intro-section-img-consulting: url("../../../../assets/images/consulting/consulting1.png");
+  --intro-section-img-academy: url("../../../../assets/images/academy/academy1.png");
+  --download-consulting-icon: url("../../../../assets/icons/consultingDownload.svg");
+  --download-up-icon: url("../../../../assets/icons/upDownload.svg");
+  --download-academy-icon: url("../../../../assets/icons/academyDownload.svg");
 }
 
 .intro-section-txt-container {
@@ -29,11 +17,6 @@
   position: relative;
 }
 
-.intro-section-name {
-  text-transform: uppercase;
-  margin-bottom: 30px;
-}
-
 .intro-section-consulting-name {
   color: var(--lightblue);
 }
@@ -44,10 +27,6 @@
 
 .intro-section-academy-name {
   color: var(--yellow);
-}
-
-.intro-section-title {
-  margin-bottom: 25px;
 }
 
 .intro-section-download-container {
@@ -132,10 +111,6 @@
     padding: 30px 11.2%;
   }
 
-  .intro-section-title {
-    line-height: calc(var(--line-height-h1-md) - 10px);
-  }
-
   .intro-section-consulting-download a,
   .intro-section-up-download a,
   .intro-section-academy-download a {
@@ -145,12 +120,8 @@
 
 @media(min-width: 1024px) {
 
-  .intro-section {
-    min-height: calc(100vh - var(--header-height-md));
-  }
-
-  .intro-section-img-container {
-    width: 60%;
+  .intro-section-txt-img .intro-section-img-container {
+    width: 55%;
     display: block;
     position: relative;
     background-position: center;
@@ -158,7 +129,7 @@
     background-repeat: no-repeat;
   }
 
-  .intro-section-img-container p {
+  .intro-section-txt-img .intro-section-img-container p {
     color: var(--grey-tone-6);
     opacity: 16%;
     font-size: 387px;
@@ -172,19 +143,11 @@
     text-align: center;
   }
 
-  .intro-section-txt-container {
-    width: 40%;
+  .intro-section-txt-img .intro-section-txt-container {
+    width: 31.1%;
     background-image: none;
     background-color: transparent;
-    padding: 10px 8.3% 50px 3%;
-  }
-
-  .intro-section-name {
-    margin-bottom: 0px;
-  }
-
-  .intro-section-title {
-    margin-bottom: 5px;
+    padding: 40px 14.2% 50px 3%;
   }
 
   .intro-section-scroll-down-external-container {
@@ -225,16 +188,6 @@
 
   .intro-section-txt-container {
     padding: 30px 11.2% 50px 3%;
-  }
-
-
-  .intro-section-name {
-    margin-bottom: 15px;
-  }
-
-  .intro-section-title {
-    line-height: calc(var(--line-height-h1-xl) - 10px);
-    margin-bottom: 25px;
   }
 
   .intro-section-consulting-download a,

@@ -16,7 +16,7 @@ import './TalentAcademy.css'
 import { employeesComments } from "../../utils/properties";
 
 // Components
-import IntroSectionImgTxt from "../../components/functional_components/introSectionImgTxt/IntroSectionImgTxt";
+import IntroSectionImgTxt from "../../components/functional_components/introSections/introSectionImgTxt/IntroSectionImgTxt";
 import CustomForm from "../../components/hooks_components/customForm/CustomForm";
 import CustomLink from "../../components/functional_components/ui/customLink/CustomLink";
 import CustomBanner from "../../components/functional_components/customBanner/CustomBanner";
@@ -119,12 +119,14 @@ const TalentAcademy = (props) => {
           >
             <div>
               <CustomLink
+                linkTo={"/beije-talent-academy/academy-frontend"}
                 content={"Academy Frontend"}
                 typeLink={"detail-academy"}
               />
             </div>
             <div>
               <CustomLink
+                linkTo={"/academy-backend"}
                 content={"Academy Backend"}
                 typeLink={"detail-academy"}
               />

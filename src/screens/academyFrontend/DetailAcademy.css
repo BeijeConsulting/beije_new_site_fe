@@ -1,0 +1,9 @@
+/* Second section */
+.detail-academy-second-section {
+  padding-top: 150px;
+}
+
+.detail-academy-second-section h2 {
+  color: var(--yellow);
+  text-transform: uppercase;
+}

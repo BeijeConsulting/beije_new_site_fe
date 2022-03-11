@@ -1,0 +1,67 @@
+.intro-section-txt-info-graphic .intro-section-txt-container {
+  padding: 0;
+}
+
+.intro-section-txt-info-graphic .intro-section-name {
+  margin-top: 25px;
+}
+
+.intro-section-txt-info-graphic .intro-section-title {
+  text-transform: uppercase;
+}
+
+.intro-section-txt-info-graphic .intro-section-first-paragraph {
+  padding: 25px 0 50px 0;
+}
+
+.intro-section-txt-info-graphic .intro-section-first-paragraph p:nth-child(1),
+.intro-section-txt-info-graphic .intro-section-second-paragraph-title {
+  color: var(--yellow);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.intro-section-txt-info-graphic .intro-section-second-paragraph-title {
+  font-weight: bold;
+}
+
+.intro-section-second-paragraph-grid-title {
+  text-transform: uppercase;
+}
+
+.intro-section-txt-info-graphic .intro-section-apply-container-mobile {
+  margin: 30px 0;
+}
+
+@media(min-width: 1024px) {
+
+  .intro-section-txt-info-graphic .intro-section-txt-container {
+    width: 50%;
+    background-image: none;
+    background-color: transparent;
+    padding: 40px 10% 50px 0;
+  }
+
+  .intro-section-txt-info-graphic .intro-section-img-container {
+    width: 40%;
+    display: flex;
+    position: relative;
+  }
+
+  .intro-section-txt-info-graphic .intro-section-img-container img {
+    height: auto;
+    width: 100%;
+    margin: auto;
+  }
+
+  .intro-section-txt-info-graphic .intro-section-apply-container-mobile {
+    display: none;
+  }
+
+  .intro-section-txt-info-graphic .intro-section-apply-container-desktop {
+    position: absolute;
+    bottom: 80px;
+    left: -40px;
+  }
+
+}

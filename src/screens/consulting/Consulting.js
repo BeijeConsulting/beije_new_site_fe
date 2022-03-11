@@ -13,7 +13,7 @@ import { connect } from "react-redux";
 import { Box, Container } from "@mui/material";
 
 // Components
-import IntroSectionImgTxt from "../../components/functional_components/introSectionImgTxt/IntroSectionImgTxt";
+import IntroSectionImgTxt from "../../components/functional_components/introSections/introSectionImgTxt/IntroSectionImgTxt";
 import CustomForm from "../../components/hooks_components/customForm/CustomForm";
 import PercentageContainer from "../../components/functional_components/percentageContainer/PercentageContainer";
 

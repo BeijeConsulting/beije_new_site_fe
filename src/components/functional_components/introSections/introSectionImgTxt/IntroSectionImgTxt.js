@@ -5,10 +5,11 @@ import { Box } from "@mui/material";
 
 // Style
 import "./IntroSectionImgTxt.css"
+import "../IntroSection.css";
 
 // Components
-import ScrollDownButton from "../scrollDownButton/ScrollDownButton";
-import CustomButton from "../ui/customButton/CustomButton";
+import ScrollDownButton from "../../scrollDownButton/ScrollDownButton";
+import CustomButton from "../../ui/customButton/CustomButton";
 
 const IntroSectionImgTxt = (props) => {
 
@@ -54,7 +55,6 @@ const IntroSectionImgTxt = (props) => {
 
   return (
     <Box
-      // ref={refContainer}
       className={props.classNameContainer}
     >
       <div
@@ -63,7 +63,6 @@ const IntroSectionImgTxt = (props) => {
         <p>{props.photoTitle}</p>
       </div>
       <div
-        // ref={refTxtContainer}
         className={`${props.classNameTxtContainer} ${props.classNameBgImgMobile} `}
       >
         <p
@@ -106,7 +105,7 @@ const IntroSectionImgTxt = (props) => {
 }
 
 IntroSectionImgTxt.defaultProps = {
-  classNameContainer: "intro-section",
+  classNameContainer: "intro-section intro-section-txt-img",
   classNameImgContainer: "intro-section-img-container",
   classNameTxtContainer: "intro-section-txt-container"
 }

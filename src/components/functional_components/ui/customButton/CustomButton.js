@@ -21,6 +21,9 @@ const CustomButton = (props) => {
       case "btn-form-primary":
         currentClassName = "button-form-primary"
         break;
+      case "go-back-btn":
+        currentClassName = "button-go-back-primary"
+        break;
       default:
         currentClassName = ""
         break;
