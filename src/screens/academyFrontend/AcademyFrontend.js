@@ -9,11 +9,12 @@ import { connect } from "react-redux";
 import { Box, Container } from "@mui/material";
 
 // styles
-import './DetailAcademy.css'
+import './DetailAcademy.css';
 
 // Components
 import IntroSectionTxtInfoGraphic from "../../components/functional_components/introSections/introSectionTxtInfoGraphic/IntroSectionTxtInfoGraphic";
 import CustomAccordion from "../../components/functional_components/customAccordion/CustomAccordion";
+import CustomForm from "../../components/hooks_components/customForm/CustomForm";
 
 const TalentAcademy = (props) => {
 
@@ -67,6 +68,8 @@ const TalentAcademy = (props) => {
         className="bg-dark-grey position-relative"
         ref={secondContainerRef}
       >
+
+        {/* Second section accordion */}
         < Container
           component={"section"}
           maxWidth={"false"}
@@ -74,6 +77,18 @@ const TalentAcademy = (props) => {
         >
           <h2>Programma</h2>
           <CustomAccordion />
+        </Container>
+
+        {/* Third section form */}
+        < Container
+          component={"section"}
+          maxWidth={"false"}
+          className={"detail-academy-third-section paddingX-container-general-pages top-oblique-line bg-yellow"}
+        >
+          <CustomForm
+            cvForm
+            formTitle={"Invia la tua candidatura"}
+          />
         </Container>
       </div>
     </Box>

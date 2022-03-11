@@ -118,6 +118,11 @@
   -ms-flex-pack: end;
   justify-content: flex-end;
   margin-top: 30px !important;
+  flex-direction: column;
+}
+
+.form-submit-btn-container button:nth-child(1) {
+  margin-bottom: 30px;
 }
 
 /* Media queries */
@@ -154,5 +159,14 @@
     height: 300px !important;
     border: 1px solid var(--grey-tone-1);
     margin-top: 40px !important;
+  }
+
+  .form-submit-btn-container {
+    flex-direction: row;
+  }
+
+  .form-submit-btn-container button:nth-child(1) {
+    margin-right: 30px;
+    margin-bottom: 0;
   }
 }

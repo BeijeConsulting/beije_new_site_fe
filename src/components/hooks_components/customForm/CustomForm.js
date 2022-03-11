@@ -188,7 +188,7 @@ const CustomForm = (props) => {
             >
               <Grid
                 item
-                xs={6}
+                xs={props.cvForm ? 12 : 6}
               >
                 <TextField
                   id="email"
@@ -206,48 +206,54 @@ const CustomForm = (props) => {
                   className="form-field"
                 />
               </Grid>
+              {!props.cvForm &&
+                <Grid
+                  item
+                  xs={6}
+                >
+                  <TextField
+                    id="town"
+                    name="town"
+                    label={t("form.placeholder.town")}
+                    type="text"
+                    value={formikContacts.values.town}
+                    error={formikContacts.touched.town && Boolean(formikContacts.errors.town)}
+                    helperText={formikContacts.touched.town && formikContacts.errors.town}
+                    onChange={formikContacts.handleChange}
+                    onBlur={formikContacts.handleBlur}
+
+                    variant="standard"
+                    size="normal"
+                    className="form-field"
+                  />
+                </Grid>
+              }
+
+            </Grid>
+
+            {/* Text area */}
+            {!props.cvForm &&
               <Grid
                 item
-                xs={6}
+                xs={12}
               >
-                <TextField
-                  id="town"
-                  name="town"
-                  label={t("form.placeholder.town")}
+                <TextareaAutosize
+                  id="message"
+                  name="message"
                   type="text"
-                  value={formikContacts.values.town}
-                  error={formikContacts.touched.town && Boolean(formikContacts.errors.town)}
-                  helperText={formikContacts.touched.town && formikContacts.errors.town}
+                  placeholder={t("form.placeholder.message")}
+                  value={formikContacts.values.message}
+                  error={formikContacts.touched.message && Boolean(formikContacts.errors.message)}
                   onChange={formikContacts.handleChange}
                   onBlur={formikContacts.handleBlur}
 
                   variant="standard"
                   size="normal"
-                  className="form-field"
+                  className="form-field form-text-area"
                 />
               </Grid>
-            </Grid>
+            }
 
-            {/* Text area */}
-            <Grid
-              item
-              xs={12}
-            >
-              <TextareaAutosize
-                id="message"
-                name="message"
-                type="text"
-                placeholder={t("form.placeholder.message")}
-                value={formikContacts.values.message}
-                error={formikContacts.touched.message && Boolean(formikContacts.errors.message)}
-                onChange={formikContacts.handleChange}
-                onBlur={formikContacts.handleBlur}
-
-                variant="standard"
-                size="normal"
-                className="form-field form-text-area"
-              />
-            </Grid>
             <Grid
               item
               xs={12}
@@ -317,11 +323,19 @@ const CustomForm = (props) => {
               xs={12}
               className={"form-submit-btn-container"}
             >
+              {props.cvForm &&
+                < CustomButton
+                  type={"btn-form-primary"}
+                  content={"Allega il tuo cv"}
+                // callback={formikContacts.submitForm}
+                />
+              }
+
               <CustomButton
                 type={"btn-form-primary"}
                 content={t("form.btn")}
                 callback={formikContacts.submitForm}
-              // disabled={!(state.captchaCheck && formikContacts.isValid && formikContacts.dirty)}
+                disabled={!(state.captchaCheck && formikContacts.isValid && formikContacts.dirty)}
               />
             </Grid>
           </form>
@@ -335,7 +349,8 @@ CustomForm.defaultProps = {
   classNameContainer: "form-container",
   classNameTitleContainer: "form-title-container",
   classNameInfoColumn: "form-info-container-column",
-  classNameInfoContainer: "form-info-container"
+  classNameInfoContainer: "form-info-container",
+  cvForm: false
 }
 
 export default connect()(CustomForm)
