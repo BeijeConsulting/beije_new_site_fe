@@ -120,7 +120,7 @@ export const menu_voices = [
   },
   {
     name: "blog",
-    link_to: "#",
+    link_to: "blog",
     key_link: "blog"
   },
   {

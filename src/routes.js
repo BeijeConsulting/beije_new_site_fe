@@ -7,6 +7,7 @@ import Up from "./screens/up/Up";
 import Consulting from "./screens/consulting/Consulting";
 import TalentAcademy from "./screens/talentAcademy/TalentAcademy";
 import AcademyFrontend from "./screens/academyFrontend/AcademyFrontend";
+import Blog from "./screens/blog/Blog";
 
 export default [
   {
@@ -44,6 +45,17 @@ export default [
       {
         path: "/beije-talent-academy/academy-frontend",
         element: <AcademyFrontend />,
+        // children: [
+        //   { index: true, element: <TalentAcademy /> },
+        //   {
+        //     path: "/beije-talent-academy/academy-frontend",
+        //     element: <AcademyFrontend />
+        //   }
+        // ]
+      },
+      {
+        path: "/blog",
+        element: <Blog />,
         // children: [
         //   { index: true, element: <TalentAcademy /> },
         //   {

@@ -301,5 +301,9 @@
         "commentsFarina": "Nell'Academy FrontEnd di Beije ho approfondito tecnologie e nozioni nuove, mi è stato inoltre fornito supporto per entrare nel mondo del lavoro, cosa che la sola università non mi ha fornito, per questo lo reputo un percorso che rifarei volentieri."
       }
     }
+  },
+  "blog": {
+    "postedBy": "Pubblicato da",
+    "postedOn": "il"
   }
 }

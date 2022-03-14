@@ -100,7 +100,7 @@ const Consulting = (props) => {
           classNameBgImgDesktop="intro-section-img-consulting"
           classNameBgImgMobile="intro-section-img-consulting"
           bgIconDownload="intro-section-download-icon-consulting"
-          sectionName="Beije COnsulting"
+          sectionName="Beije Consulting"
           sectionTitle={t("consulting.title")}
           callback={scrollToSection}
           download={"consulting"}
