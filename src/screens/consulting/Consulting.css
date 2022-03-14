@@ -1,5 +1,5 @@
 :root {
-  --consulting-banner-bg: url("../../assets/images/consulting/consulting2.png")
+  --consulting-banner-bg: url("../../assets/images/consulting/consulting2.webp")
 }
 
 /* First section */
@@ -118,10 +118,6 @@
 
   .consulting-second-section-text-container {
     font-size: var(--font-size-h3-md);
-  }
-
-  .consulting-second-section-text-list-container {
-    /* font-size: var(--font-size-h1-md); */
   }
 
 }

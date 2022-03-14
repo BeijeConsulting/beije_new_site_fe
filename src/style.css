@@ -17,12 +17,6 @@
   --dark-blue: #323e48;
   --blue: #52798e;
 
-  /* --first-color: #323e48;
-  --second-color: #52798e;
-  --third-color: #9ec1db;
-  --fourth-color: #d6e3e5;
-  --fifth-color: #feef87; */
-
   --moderat-regular: "Moderat-Regular", sans-serif;
   --moderat-bold: "Moderat-Bold", sans-serif;
   --sofiaPro-regular: "SofiaPro-Regular", sans-serif;
@@ -75,21 +69,25 @@
 @font-face {
   font-family: "Moderat-Regular";
   src: url("./assets/font/moderat/Moderat-Regular.woff");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Moderat-Bold";
   src: url("./assets/font/moderat/Moderat-Bold.woff");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "SofiaPro-Regular";
   src: url("./assets/font/sofiaPro/SofiaPro-Regular.otf");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "SofiaPro-Bold";
   src: url("./assets/font/sofiaPro/SofiaPro-Bold.otf");
+  font-display: swap;
 }
 
 body, html {

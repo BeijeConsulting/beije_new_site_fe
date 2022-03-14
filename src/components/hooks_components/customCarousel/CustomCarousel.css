@@ -1,18 +1,3 @@
-:root {
-  --profile_chiara_balsamini: url("../../../assets/images/profile_picture/chiara_balsamini.jpg");
-  --profile_erica_mauro: url("../../../assets/images/profile_picture/erica_mauro.jpg");
-  --profile_francesca_bellini: url("../../../assets/images/profile_picture/francesca_bellini.jpg");
-  --profile_francesca_ferioli: url("../../../assets/images/profile_picture/francesca_ferioli.jpg");
-  --profile_francesco_cesana: url("../../../assets/images/profile_picture/francesco_cesana.jpg");
-  --profile_ivo_mosca: url("../../../assets/images/profile_picture/ivo_mosca.jpg");
-  --profile_maria_rodrigez: url("../../../assets/images/profile_picture/maria_rodrigez.jpg");
-  --profile_marianna_fulginiti: url("../../../assets/images/profile_picture/marianna_fulginiti.jpg");
-  --profile_roberto_brogi: url("../../../assets/images/profile_picture/roberto_brogi.jpg");
-
-  --caseStudies-youthquake: url("../../../assets/images/up/caseStudies/youthquake.jpg");
-  --caseStudies-pininfarina: url("../../../assets/images/up/caseStudies/pininfarina.jpg");
-}
-
 .swiper {
   padding: 50px 0px;
 }
@@ -88,39 +73,38 @@
   display: none;
 }
 
-
 /* BG PICTURE */
 /* for home */
 .carousel-bg-francesco-cesana {
-  background-image: var(--profile_francesco_cesana);
+  background-image: url("../../../assets/images/profile_picture/francesco_cesana.webp");
 }
 
 .carousel-bg-erica-mauro {
-  background-image: var(--profile_erica_mauro);
+  background-image: url("../../../assets/images/profile_picture/erica_mauro.webp");
 }
 
 .carousel-bg-chiara-balsamini {
-  background-image: var(--profile_chiara_balsamini);
+  background-image: url("../../../assets/images/profile_picture/chiara_balsamini.webp");
 }
 
 .carousel-bg-marianna-fulginiti {
-  background-image: var(--profile_marianna_fulginiti);
+  background-image: url("../../../assets/images/profile_picture/marianna_fulginiti.webp");
 }
 
 .carousel-bg-roberto-brogi {
-  background-image: var(--profile_roberto_brogi);
+  background-image: url("../../../assets/images/profile_picture/roberto_brogi.webp");
 }
 
 .carousel-bg-ivo-mosca {
-  background-image: var(--profile_ivo_mosca);
+  background-image: url("../../../assets/images/profile_picture/ivo_mosca.webp");
 }
 
 .carousel-bg-maria-rodrigez {
-  background-image: var(--profile_maria_rodrigez);
+  background-image: url("../../../assets/images/profile_picture/maria_rodrigez.webp");
 }
 
 .carousel-bg-francesca-bellini {
-  background-image: var(--profile_francesca_bellini);
+  background-image: url("../../../assets/images/profile_picture/francesca_bellini.webp");
 }
 
 /* for case studies */
