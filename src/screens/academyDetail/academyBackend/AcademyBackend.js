@@ -1,24 +1,29 @@
 import React, { useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
 
 // Redux
-import { setCurrentPage, initCurrentPage } from "../../redux/ducks/currentPageDuck";
-import { setVisibilityNavbar, initVisibilityNavbar } from "../../redux/ducks/showNavbarTopDuck";
+import { setCurrentPage, initCurrentPage } from "../../../redux/ducks/currentPageDuck";
+import { setVisibilityNavbar, initVisibilityNavbar } from "../../../redux/ducks/showNavbarTopDuck";
 import { connect } from "react-redux";
 
 // MUI
 import { Box, Container } from "@mui/material";
 
 // styles
-import './DetailAcademy.css';
+import '../DetailAcademy.css';
+
+// Constants
+import { academyCourseStructure, programBackendAcademy } from "../../../utils/properties";
 
 // Components
-import IntroSectionTxtInfoGraphic from "../../components/functional_components/introSections/introSectionTxtInfoGraphic/IntroSectionTxtInfoGraphic";
-import CustomAccordion from "../../components/functional_components/customAccordion/CustomAccordion";
-import CustomForm from "../../components/hooks_components/customForm/CustomForm";
+import IntroSectionTxtInfoGraphic from "../../../components/functional_components/introSections/introSectionTxtInfoGraphic/IntroSectionTxtInfoGraphic";
+import CustomAccordion from "../../../components/functional_components/customAccordion/CustomAccordion";
+import CustomForm from "../../../components/hooks_components/customForm/CustomForm";
 
-const TalentAcademy = (props) => {
+const AcademyBackend = (props) => {
 
   const secondContainerRef = useRef();
+  const { t } = useTranslation();
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
@@ -44,7 +49,6 @@ const TalentAcademy = (props) => {
 
     <Box
       className={"bg-dark-grey margin-top-container-screens"}
-      style={{ height: "3000px" }}
     >
 
       {/* First section Img + text*/}
@@ -57,9 +61,12 @@ const TalentAcademy = (props) => {
         <IntroSectionTxtInfoGraphic
           typeSection="academy"
           sectionName="Beije talent academy"
-          sectionTitle="Academy backend"
+          sectionTitle={t("academyFrontend.title")}
           callback={scrollToSection}
-          paragraph1Txt={"3 mesi di crescita professionale Formazione costante attraverso progetti individuali e di gruppo Utilizzo delle tecnologie più richieste dal mercato."}
+          paragraph1Title={t("academyFrontend.titleParagraph1")}
+          paragraph2Title={t("academyFrontend.titleParagraph2")}
+          paragraph1Txt={t("academyFrontend.paragraph1Txt")}
+          obj={academyCourseStructure}
         >
 
         </IntroSectionTxtInfoGraphic>
@@ -76,7 +83,9 @@ const TalentAcademy = (props) => {
           className={"detail-academy-second-section paddingX-container-general-pages"}
         >
           <h2>Programma</h2>
-          <CustomAccordion />
+          <CustomAccordion
+            obj={programBackendAcademy}
+          />
         </Container>
 
         {/* Third section form */}
@@ -91,9 +100,9 @@ const TalentAcademy = (props) => {
           />
         </Container>
       </div>
-    </Box>
+    </Box >
 
   )
 }
 
-export default connect()(TalentAcademy)
+export default connect()(AcademyBackend)

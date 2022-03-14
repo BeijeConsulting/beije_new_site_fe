@@ -68,13 +68,14 @@ const TalentAcademy = (props) => {
           classNameBgImgMobile="intro-section-img-academy"
           bgIconDownload="intro-section-download-icon-academy"
           sectionName="Beije talent academy"
-          sectionTitle="Corsi specializzati"
+          sectionTitle={t("academy.firstSection.title")}
           callback={scrollToSection}
           download={"academy"}
         >
-          <h3>Frontend &#38; Backend per diventare Software Developer</h3>
+          <h3>{t("academy.firstSection.subtitle")}</h3>
           <div className="academy-intro-section-description">
-            <p>Svilupperai le tue competenze attraverso lezioni frontali, esercitazioni, valutazioni e progetti reali.
+            <p>
+              {t("academy.firstSection.description")}
             </p>
           </div>
 
@@ -100,9 +101,9 @@ const TalentAcademy = (props) => {
         >
           <CustomBanner
             ariaLabel={"Icon button link to youtube Beije channel"}
-            title={"DIVENTA IL PROSSIMO SOFTWARE NINJANEER!"}
-            text={"Vieni a scoprire il nostro canale YouTube: troverai le pillole digitali dei nostri esperti Frontend e Backend, i webinar e molto altro ancora."}
-            enphasisTxt={"Ti aspettiamo!"}
+            title={t("academy.secondSection.title")}
+            text={t("academy.secondSection.description1")}
+            enphasisTxt={t("academy.secondSection.description2")}
           />
         </Container>
 
@@ -113,27 +114,27 @@ const TalentAcademy = (props) => {
           className={"academy-third-section-container paddingX-container-general-pages"}
         >
 
-          <h2>Le nostre academy</h2>
+          <h2>{t("academy.thirdSection.title1")}</h2>
           <div
             className="academy-third-section-links-container"
           >
             <div>
               <CustomLink
                 linkTo={"/beije-talent-academy/academy-frontend"}
-                content={"Academy Frontend"}
+                content={t("academy.thirdSection.link1")}
                 typeLink={"detail-academy"}
               />
             </div>
             <div>
               <CustomLink
-                linkTo={"/academy-backend"}
-                content={"Academy Backend"}
+                linkTo={"/beije-talent-academy/academy-backend"}
+                content={t("academy.thirdSection.link2")}
                 typeLink={"detail-academy"}
               />
             </div>
           </div>
 
-          <h2>I nostri prossimi corsi</h2>
+          <h2>{t("academy.thirdSection.title2")}</h2>
 
           <Box
             className={"academy-third-section-table-container"}
@@ -158,18 +159,11 @@ const TalentAcademy = (props) => {
         >
 
           <Box>
-            <h2>Dicono di noi</h2>
+            <h2>{t("academy.fourthSection.title")}</h2>
           </Box>
           <Box
             className={"academy-fourth-section-tab-comments"}
           >
-            {/* <SimpleCarousel
-              obj={employeesComments}
-            /> */}
-            {/* <CustomTab
-              obj={employeesComments}
-              classNameContainer={"tab-container-academy"}
-            /> */}
             <CustomScrollTab
               obj={employeesComments}
             >

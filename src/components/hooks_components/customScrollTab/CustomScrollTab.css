@@ -10,14 +10,14 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  filter: brightness(0.5);
+  filter: brightness(0.3) blur(2px);
   height: 70px;
   width: 60px !important;
   margin: 0 5px !important;
 }
 
 .scroll-tab-lables.Mui-selected {
-  filter: brightness(1) !important;
+  filter: brightness(1) blur(0px) !important;
 }
 
 .scroll-tab-labels-container span {

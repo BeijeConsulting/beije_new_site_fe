@@ -289,7 +289,24 @@
     "contactFormTitle": "Richiedi maggiori informazioni"
   },
   "academy": {
+    "firstSection": {
+      "title": "Corsi specializzati",
+      "subtitle": "Frontend & Backend per diventare Software Developer",
+      "description": "Svilupperai le tue competenze attraverso lezioni frontali, esercitazioni, valutazioni e progetti reali."
+    },
+    "secondSection": {
+      "title": "DIVENTA IL PROSSIMO SOFTWARE NINJANEER!",
+      "description1": "Vieni a scoprire il nostro canale YouTube: troverai le pillole digitali dei nostri esperti Frontend e Backend, i webinar e molto altro ancora.",
+      "description2": "Ti aspettiamo!"
+    },
+    "thirdSection": {
+      "title1": "Le nostre academy",
+      "link1": "Academy Frontend",
+      "link2": "Academy Backend",
+      "title2": "I nostri prossimi corsi"
+    },
     "fourthSection": {
+      "title": "Dicono di noi",
       "comments_txt": {
         "commentsDiMonaco": "Una formazione completa, un'esperienza professionalizzante che ti lascia con delle competenze reali e applicabili nell'immediato. Alla Beije Talent Academy non si impara solo a programmare, ma a farlo con consapevolezza e ingegno.",
         "commentsPignorio": "L’Academy di Beije è stata un’esperienza formativa davvero importante per il mio percorso di crescita. Non credevo che in soli tre mesi sarei riuscito ad apprendere tanto da poter lavorare in autonomia su progetti complessi. Sicuramente la consiglierei a tutti!",
@@ -299,6 +316,120 @@
         "commentsFraioli": "Beije mi ha da subito dato un'ottima impressione e non si è smentita con il tempo. Ho avuto un contratto a tempo indeterminato dopo un breve periodo di formazione e sono entrato in un team che mi ha accolto ben oltre le mie aspettative.",
         "commentsBusseni": "Nonostante fosse la prima Academy tutta da remoto è stata gestita ottimamente, sia nelle lezioni frontali che nella divisione dei gruppi in mini-progetti. Ritengo che l'Academy mi abbia fornito una preparazione più che adeguata per svolgere attività in ambito Java.",
         "commentsFarina": "Nell'Academy FrontEnd di Beije ho approfondito tecnologie e nozioni nuove, mi è stato inoltre fornito supporto per entrare nel mondo del lavoro, cosa che la sola università non mi ha fornito, per questo lo reputo un percorso che rifarei volentieri."
+      }
+    }
+  },
+  "academyFrontend": {
+    "title": "Academy Frontend",
+    "titleParagraph1": "Diventa Frontend developer con noi!",
+    "paragraph1Txt": "3 mesi di crescita professionale, formazione costante attraverso progetti individuali e di gruppo, utilizzo delle tecnologie più richieste dal mercato.",
+    "titleParagraph2": "Struttura del corso",
+    "table": {
+      "row1Title": "Academy",
+      "row2Title": "Compenso",
+      "row3Title": "Modalità",
+      "row1Desc": "Academy di 3 mesi retribuito",
+      "row2Desc": "Rimborso spese",
+      "row3Desc": "Remoto"
+    },
+    "program": {
+      "section1": {
+        "title": "Javascript, HTML5, CSS3",
+        "subsection1": "Javascript",
+        "subsection2": "HTML5",
+        "subsection3": "CSS3",
+        "subsection4": "ES6",
+        "subsection5": "Programmazione generale",
+        "subsection6": "Git"
+      },
+      "section2": {
+        "title": "React",
+        "subsection1": "React, la libreria dedicata al frontend",
+        "subsection2": "React vs JQuery vs AngularJS Vs Vue",
+        "subsection3": "Gestione e organizzazione del Progetto",
+        "subsection4": "Hooks & Class",
+        "subsection5": "Components, State, Props and Lifecycle events",
+        "subsection6": "Routing and Navigation",
+        "subsection7": "Virtual Dom",
+        "subsection8": "Redux"
+      },
+      "section3": {
+        "title": "React Native",
+        "subsection1": "React Vs React Native",
+        "subsection2": "Style and Component",
+        "subsection3": "Expo",
+        "subsection4": "Routing and Navigation",
+        "subsection5": "Build & pubblicazione Store Ios/Android",
+        "subsection6": "Redux"
+      },
+      "section4": {
+        "title": "Approfondimenti",
+        "subsection1": "Npm module custom",
+        "subsection2": "Interactive application (Ar/Vr)",
+        "subsection3": "Games"
+      }
+    }
+  },
+  "academyBackend": {
+    "title": "Academy Backend",
+    "titleParagraph1": "Diventa Java developer con noi!",
+    "paragraph1Txt": "3 mesi di crescita professionale, formazione costante attraverso progetti individuali e di gruppo, utilizzo delle tecnologie più richieste dal mercato.",
+    "titleParagraph2": "Struttura del corso",
+    "table": {
+      "row1Title": "Academy",
+      "row2Title": "Compenso",
+      "row3Title": "Modalità",
+      "row1Desc": "Academy di 3 mesi retribuito",
+      "row2Desc": "Rimborso spese",
+      "row3Desc": "Remoto"
+    },
+    "program": {
+      "section1": {
+        "title": "Java basi e teoria",
+        "subsection1": "Fondamenti di Java e di programmazione ad oggetti",
+        "subsection2": "Variabili: differenza tra tipi primitivi e rifermenti ad oggetti",
+        "subsection3": "Gli operatori in Java: aritmetici, unari e binari",
+        "subsection4": "Costrutti condizionali ed iterativi; controllo avanzato del flusso",
+        "subsection5": "La classe String ed il concetto di immutabilità",
+        "subsection6": "La classe StringBuilder ed il concetto di “uguaglianza” tra oggetti in Java",
+        "subsection7": "Gli array mono e multidimensionali in Java; la classe ArrayList",
+        "subsection8": "La gestione di data ed orario in Java",
+        "subsection9": "Design dei metodi: modificatori di accesso e passaggio di parametri",
+        "subsection10": "I metodi “Costruttori” e l’overloading di metodi in una classe",
+        "subsection11": "Ereditarietà e classi astratte",
+        "subsection12": "Interfacce e Polimorfismo",
+        "subsection13": "Gestire le eccezioni in Java",
+        "subsection14": "Accenni di programmazione funzionale in Java: scrivere semplici funzioni Lambda",
+        "subsection15": "I Design Patterns: Builder, Factory, Singleton e Decorator"
+      },
+      "section2": {
+        "title": "Java I/O",
+        "subsection1": "Leggere e scrivere file in Java",
+        "subsection2": "Organizzare dati in file CSV",
+        "subsection3": "Il formato XML e come gestirlo in Java",
+        "subsection4": "Importare ed esportare dati da fonti e formati differenti"
+      },
+      "section3": {
+        "title": "Java e database",
+        "subsection1": "Teoria dei DataBase",
+        "subsection2": "Il linguaggio SQL",
+        "subsection3": "Interfacciarsi ad un database con JDBC",
+        "subsection4": "JPA: Java Persistence Api",
+        "subsection5": "Il framework Hibernate per ORM e JPA",
+        "subsection6": "Usare Maven per la gestione dei progetti"
+      },
+      "section4": {
+        "title": "Java per il web",
+        "subsection1": "Java per il Web: Servlet e JSP, HTML e CSS",
+        "subsection2": "Il concetto di sessione e l’utilizzo di bean per il mantenimento e trasporto dei dati",
+        "subsection3": "Il Design Pattern Model-View-Controller",
+        "subsection4": "Il framework Spring: Inversion of Control & Dependencies Injection",
+        "subsection5": "SpringMVC: DispatcherServlet, controller, model e views",
+        "subsection6": "Spring JPA e Spring Security",
+        "subsection7": "Web Service SOAP: implementazione di un server ed un client",
+        "subsection8": "Web Service REST: il formato JSON ed implementazione di un WS REST con SpringMVC",
+        "subsection9": "DOM e Javascript",
+        "subsection10": "AJAX: utilizzo del comando fetch per le chiamate asincrone"
       }
     }
   }

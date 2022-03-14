@@ -580,29 +580,6 @@ export const caseStudies = [
   }
 ]
 
-// export const employeesComments = [
-//   {
-//     name: "Name",
-//     surname: "Surname",
-//     content: "1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar lorem quis metus mollis commodo. Duis eget quam faucibus, vulputate augue et, imperdiet elit. Nam faucibus ipsum enim, at aliquam lorem dictum at. Vestibulum bibendum eu purus vel mattis. Ut at tortor et neque bibendum ultricies id id diam."
-//   },
-//   {
-//     name: "Name",
-//     surname: "Surname",
-//     content: "2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar lorem quis metus mollis commodo. Duis eget quam faucibus, vulputate augue et, imperdiet elit. Nam faucibus ipsum enim, at aliquam lorem dictum at. Vestibulum bibendum eu purus vel mattis. Ut at tortor et neque bibendum ultricies id id diam."
-//   },
-//   {
-//     name: "Name",
-//     surname: "Surname",
-//     content: "3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar lorem quis metus mollis commodo. Duis eget quam faucibus, vulputate augue et, imperdiet elit. Nam faucibus ipsum enim, at aliquam lorem dictum at. Vestibulum bibendum eu purus vel mattis. Ut at tortor et neque bibendum ultricies id id diam."
-//   },
-//   {
-//     name: "Name",
-//     surname: "Surname",
-//     content: "4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar lorem quis metus mollis commodo. Duis eget quam faucibus, vulputate augue et, imperdiet elit. Nam faucibus ipsum enim, at aliquam lorem dictum at. Vestibulum bibendum eu purus vel mattis. Ut at tortor et neque bibendum ultricies id id diam. "
-//   }
-// ]
-
 export const employeesComments = [
   {
     contentPanel: "academy.fourthSection.comments_txt.commentsDiMonaco",
@@ -643,5 +620,156 @@ export const employeesComments = [
     contentPanel: "academy.fourthSection.comments_txt.commentsFarina",
     name: "Alessandro",
     surname: "Farina"
+  }
+]
+
+export const academyCourseStructure = [
+  {
+    colMobile: 12,
+    colDesktop: 6,
+    name: "academyFrontend.table.row1Title",
+    type: "title"
+  },
+  {
+    colMobile: 12,
+    colDesktop: 6,
+    name: "academyFrontend.table.row1Desc",
+    type: ""
+  },
+  {
+    colMobile: 12,
+    colDesktop: 6,
+    name: "academyFrontend.table.row2Title",
+    type: "title"
+  },
+  {
+    colMobile: 12,
+    colDesktop: 6,
+    name: "academyFrontend.table.row2Desc",
+    type: ""
+  },
+  {
+    colMobile: 12,
+    colDesktop: 6,
+    name: "academyFrontend.table.row3Title",
+    type: "title"
+  },
+  {
+    colMobile: 12,
+    colDesktop: 6,
+    name: "academyFrontend.table.row3Desc",
+    type: ""
+  }
+]
+
+export const programFrontendAcademy = [
+  {
+    sectionTitle: 'academyFrontend.program.section1.title',
+    description:
+      [
+        { p: 'academyFrontend.program.section1.subsection1' },
+        { p: 'academyFrontend.program.section1.subsection2' },
+        { p: 'academyFrontend.program.section1.subsection3' },
+        { p: 'academyFrontend.program.section1.subsection4' },
+        { p: 'academyFrontend.program.section1.subsection5' },
+        { p: 'academyFrontend.program.section1.subsection6' }
+      ]
+  },
+  {
+    sectionTitle: 'academyFrontend.program.section2.title',
+    description:
+      [
+        { p: 'academyFrontend.program.section2.subsection1' },
+        { p: 'academyFrontend.program.section2.subsection2' },
+        { p: 'academyFrontend.program.section2.subsection3' },
+        { p: 'academyFrontend.program.section2.subsection4' },
+        { p: 'academyFrontend.program.section2.subsection5' },
+        { p: 'academyFrontend.program.section2.subsection6' },
+        { p: 'academyFrontend.program.section2.subsection7' },
+        { p: 'academyFrontend.program.section2.subsection8' }
+      ]
+  },
+  {
+    sectionTitle: 'academyFrontend.program.section3.title',
+    description:
+      [
+        { p: 'academyFrontend.program.section3.subsection1' },
+        { p: 'academyFrontend.program.section3.subsection2' },
+        { p: 'academyFrontend.program.section3.subsection3' },
+        { p: 'academyFrontend.program.section3.subsection4' },
+        { p: 'academyFrontend.program.section3.subsection5' },
+        { p: 'academyFrontend.program.section3.subsection6' }
+      ]
+  },
+  {
+    sectionTitle: 'academyFrontend.program.section4.title',
+    description:
+      [
+        { p: 'academyFrontend.program.section4.subsection1' },
+        { p: 'academyFrontend.program.section4.subsection2' },
+        { p: 'academyFrontend.program.section4.subsection3' }
+      ]
+  }
+]
+
+export const programBackendAcademy = [
+  {
+    sectionTitle: 'academyBackend.program.section1.title',
+    description:
+      [
+        { p: 'academyBackend.program.section1.subsection1' },
+        { p: 'academyBackend.program.section1.subsection2' },
+        { p: 'academyBackend.program.section1.subsection3' },
+        { p: 'academyBackend.program.section1.subsection4' },
+        { p: 'academyBackend.program.section1.subsection5' },
+        { p: 'academyBackend.program.section1.subsection6' },
+        { p: 'academyBackend.program.section1.subsection7' },
+        { p: 'academyBackend.program.section1.subsection8' },
+        { p: 'academyBackend.program.section1.subsection9' },
+        { p: 'academyBackend.program.section1.subsection10' },
+        { p: 'academyBackend.program.section1.subsection11' },
+        { p: 'academyBackend.program.section1.subsection12' },
+        { p: 'academyBackend.program.section1.subsection13' },
+        { p: 'academyBackend.program.section1.subsection14' },
+        { p: 'academyBackend.program.section1.subsection15' },
+      ]
+  },
+  {
+    sectionTitle: 'academyBackend.program.section2.title',
+    description:
+      [
+        { p: 'academyBackend.program.section2.subsection1' },
+        { p: 'academyBackend.program.section2.subsection2' },
+        { p: 'academyBackend.program.section2.subsection3' },
+        { p: 'academyBackend.program.section2.subsection4' }
+      ]
+  },
+  {
+    sectionTitle: 'academyBackend.program.section3.title',
+    description:
+      [
+        { p: 'academyBackend.program.section3.subsection1' },
+        { p: 'academyBackend.program.section3.subsection2' },
+        { p: 'academyBackend.program.section3.subsection3' },
+        { p: 'academyBackend.program.section3.subsection4' },
+        { p: 'academyBackend.program.section3.subsection5' },
+        { p: 'academyBackend.program.section3.subsection6' }
+      ]
+  },
+  {
+    sectionTitle: 'academyBackend.program.section4.title',
+    description:
+      [
+        { p: 'academyBackend.program.section4.subsection1' },
+        { p: 'academyBackend.program.section4.subsection2' },
+        { p: 'academyBackend.program.section4.subsection3' },
+        { p: 'academyBackend.program.section4.subsection4' },
+        { p: 'academyBackend.program.section4.subsection5' },
+        { p: 'academyBackend.program.section4.subsection6' },
+        { p: 'academyBackend.program.section4.subsection7' },
+        { p: 'academyBackend.program.section4.subsection8' },
+        { p: 'academyBackend.program.section4.subsection9' },
+        { p: 'academyBackend.program.section4.subsection10' }
+      ]
   }
 ]

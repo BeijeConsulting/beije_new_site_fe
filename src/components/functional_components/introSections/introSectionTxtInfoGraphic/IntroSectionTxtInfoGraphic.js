@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 // MUI
 import { Box, Grid } from "@mui/material";
@@ -56,6 +57,8 @@ const tempObj = [
 
 const IntroSectionTxtInfoGraphic = (props) => {
 
+  const { t } = useTranslation();
+
   const printGridItems = (item, key) => {
     return (
       <Grid
@@ -65,7 +68,7 @@ const IntroSectionTxtInfoGraphic = (props) => {
         md={item.colDesktop}
         className={item.type === "title" ? "intro-section-second-paragraph-grid-title" : ""}
       >
-        <p>{item.name}</p>
+        <p>{t(item.name)}</p>
       </Grid>
     )
   }
@@ -125,12 +128,10 @@ const IntroSectionTxtInfoGraphic = (props) => {
         </div>
 
 
-        <Box className={"intro-section-scroll-down-external-container"}>
-          <Box className={"intro-section-scroll-down-container"}>
-            <ScrollDownButton
-              callback={props.callback}
-            />
-          </Box>
+        <Box className={"intro-section-scroll-down-container"}>
+          <ScrollDownButton
+            callback={props.callback}
+          />
         </Box>
 
         {props.children}
@@ -161,8 +162,6 @@ IntroSectionTxtInfoGraphic.defaultProps = {
   classNameContainer: "intro-section intro-section-txt-info-graphic",
   classNameImgContainer: "intro-section-img-container",
   classNameTxtContainer: "intro-section-txt-container",
-  paragraph1Title: "Diventa Java developer con noi!",
-  paragraph2Title: "Struttura del corso",
   obj: tempObj
 }
 

@@ -77,12 +77,10 @@ const IntroSectionImgTxt = (props) => {
           {props.sectionTitle}
         </h1>
 
-        <Box className={"intro-section-scroll-down-external-container"}>
-          <Box className={"intro-section-scroll-down-container"}>
-            <ScrollDownButton
-              callback={props.callback}
-            />
-          </Box>
+        <Box className={"intro-section-scroll-down-container"}>
+          <ScrollDownButton
+            callback={props.callback}
+          />
         </Box>
 
         {props.children}
