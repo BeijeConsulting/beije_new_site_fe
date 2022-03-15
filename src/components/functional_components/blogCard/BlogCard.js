@@ -7,6 +7,12 @@ import './BlogCard.css';
 // MUI
 import { Box, Container } from "@mui/material";
 
+// Constants
+import { clock } from "../../../utils/properties";
+
+// Assets
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 const BlogCard = (props) => {
 
@@ -31,7 +37,7 @@ const BlogCard = (props) => {
         <div className={"blog-card-text-subtitle"}>{props.subtitle}</div>
         <div className={"blog-card-text-description"}>{props.description}</div>
         <div className={"blog-card-text-postedby"}>
-          {t("blog.postedBy")} {props.postedby} {t("blog.postedOn")} {props.posted}
+        <FontAwesomeIcon icon={clock} className={"blog-card-clock-icon"} />{t("blog.postedBy")} {props.postedby} {t("blog.postedOn")} {props.posted}
         </div>
       </Container>
     </Box>

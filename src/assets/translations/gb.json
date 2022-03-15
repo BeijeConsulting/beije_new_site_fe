@@ -303,6 +303,8 @@
     }
   },
   "blog": {
+    "title": "Blog",
+    "description": "Lorem ipsum dolor sit amet. Aut impedit totam ut consequuntur earum qui quis neque quo sint labore et sapiente dignissimos. Lorem ipsum dolor sit amet. Aut impedit totam ut consequuntur earum qui quis neque quo sint labore et sapiente dignissimos.",
     "postedBy": "Posted by",
     "postedOn": "on"
   }

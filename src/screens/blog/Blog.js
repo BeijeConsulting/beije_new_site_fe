@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 // Style
@@ -9,124 +9,27 @@ import { Box, Container } from "@mui/material";
 
 // Components
 import BlogCard from "../../components/functional_components/blogCard/BlogCard";
+import arrayTest from "../../arrayTest.json";
 
 // Redux
+import { setCurrentPage, initCurrentPage } from "../../redux/ducks/currentPageDuck";
+import { setVisibilityNavbar, initVisibilityNavbar } from "../../redux/ducks/showNavbarTopDuck";
 import { connect } from "react-redux";
 
 const Blog = (props) => {
 
   const { t } = useTranslation();
 
-  const arrayTest = [
-    {
-      id: 0,
-      image: "https://static0.cbrimages.com/wordpress/wp-content/uploads/2020/06/Hawk-Thumbs-up--e1593406623219.jpg?q=50&fit=crop&w=740&h=370&dpr=1.5",
-      title: [
-        {
-          lang: "IT",
-          translation: "Titolo"
-        },
-        {
-          lang: "GB",
-          translation: "Title"
-        }
-      ],
-      subtitle: [
-        {
-          lang: "IT",
-          translation: "Sottotitolo"
-        },
-        {
-          lang: "GB",
-          translation: "Subitle"
-        }
-      ],
-      description: [
-        {
-          lang: "IT",
-          translation: "Descrizione bla bla bla..."
-        },
-        {
-          lang: "GB",
-          translation: "Description bla bla bla..."
-        }
-      ],
-      postedBy: "nome dell'autore",
-      posted: "data"
-    },
-    {
-      id: 1,
-      image: "https://static0.cbrimages.com/wordpress/wp-content/uploads/2020/06/Hawk-Thumbs-up--e1593406623219.jpg?q=50&fit=crop&w=740&h=370&dpr=1.5",
-      title: [
-        {
-          lang: "IT",
-          translation: "Titolo"
-        },
-        {
-          lang: "GB",
-          translation: "Title"
-        }
-      ],
-      subtitle: [
-        {
-          lang: "IT",
-          translation: "Sottotitolo"
-        },
-        {
-          lang: "GB",
-          translation: "Subitle"
-        }
-      ],
-      description: [
-        {
-          lang: "IT",
-          translation: "Descrizione bla bla bla..."
-        },
-        {
-          lang: "GB",
-          translation: "Description bla bla bla..."
-        }
-      ],
-      postedBy: "nome dell'autore",
-      posted: "data"
-    },
-    {
-      id: 2,
-      image: "https://static0.cbrimages.com/wordpress/wp-content/uploads/2020/06/Hawk-Thumbs-up--e1593406623219.jpg?q=50&fit=crop&w=740&h=370&dpr=1.5",
-      title: [
-        {
-          lang: "IT",
-          translation: "Titolo"
-        },
-        {
-          lang: "GB",
-          translation: "Title"
-        }
-      ],
-      subtitle: [
-        {
-          lang: "IT",
-          translation: "Sottotitolo"
-        },
-        {
-          lang: "GB",
-          translation: "Subitle"
-        }
-      ],
-      description: [
-        {
-          lang: "IT",
-          translation: "Descrizione bla bla bla..."
-        },
-        {
-          lang: "GB",
-          translation: "Description bla bla bla..."
-        }
-      ],
-      postedBy: "nome dell'autore",
-      posted: "data"
-    }
-  ]
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
+    props.dispatch(setCurrentPage("blog"));
+    props.dispatch(setVisibilityNavbar(true));
+    return () => {
+      props.dispatch(initCurrentPage());
+      props.dispatch(initVisibilityNavbar());
+    };
+  }, [])
+
 
   const getValueFromLang = (values, lang) => {
     let response;
@@ -145,26 +48,35 @@ const Blog = (props) => {
       <Container
         component={"section"}
         maxWidth={"false"}
-        className={"padding-0"}>
-        BLOG
+        className={"paddingX-container-general-pages blog-first-section-container"}
+      >
+        <h1>{t("blog.title")}</h1>
+        <p>{t("blog.description")}</p>
       </Container>
 
-      {
-        arrayTest.map((post, index) => {
-          return (
-            <div key={index}>
-              <BlogCard
-                src={post.image}
-                title={getValueFromLang(post.title, props.languageDuck.currentLanguage)}
-                subtitle={getValueFromLang(post.subtitle, props.languageDuck.currentLanguage)}
-                description={getValueFromLang(post.description, props.languageDuck.currentLanguage)}
-                postedby={post.postedBy}
-                posted={post.posted}
-              />
-            </div>
-          )
-        })
-      }
+      <Container
+        component={"section"}
+        maxWidth={"false"}
+        className={"paddingX-container-general-pages blog-second-section-container"}
+      >
+        {
+          arrayTest.map((post, index) => {
+            return (
+              <div key={index} className={"blog-second-section-card-container"}>
+                <BlogCard
+                  src={post.image}
+                  title={getValueFromLang(post.title, props.languageDuck.currentLanguage)}
+                  subtitle={getValueFromLang(post.subtitle, props.languageDuck.currentLanguage)}
+                  description={getValueFromLang(post.description, props.languageDuck.currentLanguage)}
+                  postedby={post.postedBy}
+                  posted={post.posted}
+                />
+              </div>
+            )
+          })
+        }
+      </Container>
+
 
     </Box>
   )

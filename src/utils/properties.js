@@ -7,7 +7,7 @@ import logo_short_white from "../assets/images/logos/logo_short_white.svg";
 import logo_short_grey from "../assets/images/logos/logo_short_grey.svg";
 import logo_short_transparent from "../assets/images/logos/logo_short_transparent.svg";
 import { faFacebookF, faLinkedinIn, faYoutube } from '@fortawesome/free-brands-svg-icons';
-import { faN, faArrowDownLong, faAngleLeft, faAngleRight, faPlus, faArrowLeft, faMinus } from '@fortawesome/free-solid-svg-icons';
+import { faN, faArrowDownLong, faAngleLeft, faAngleRight, faPlus, faArrowLeft, faMinus, faClock } from '@fortawesome/free-solid-svg-icons';
 import quotation_mark from "../assets/icons/quote.png";
 import logo_pininfarina from "../assets/images/up/caseStudies/pininfarina.jpg";
 import logo_youthquake from "../assets/images/up/caseStudies/youthquake.jpg";
@@ -89,6 +89,7 @@ export const addIcon = faPlus;
 export const minusIcon = faMinus;
 export const infoGraphicFrontend = infoGraphic1;
 export const backArrow = faArrowLeft;
+export const clock = faClock;
 
 export const privacyPolicies_it = png_privacyPolicies_it;
 export const privacyPolicies_en = png_privacyPolicies_en;

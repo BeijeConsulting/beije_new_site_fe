@@ -53,7 +53,7 @@
   --font-size-more-h4-xl: 1.5rem;
   --line-height-more-h4-xl: 35px;
 
-  --header-height-xs: 64px;
+  --header-height-xs: 72px;
   /*xs - 320px*/
   --header-height-md: 88px;
   /*md- 768px*/
@@ -328,6 +328,10 @@ h4, h5, h6, .minor-titles {
 .paddingX-container-general-pages {
   padding-left: 11.2% !important;
   padding-right: 11.2% !important;
+}
+
+.paddingY-container-general-pages {
+  padding-top: var(--header-height-xs);
 }
 
 @media (min-width: 1024px) {
