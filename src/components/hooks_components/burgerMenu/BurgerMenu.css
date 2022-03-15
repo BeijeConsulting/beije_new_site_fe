@@ -7,14 +7,14 @@
 
 :root {
   /* all bg images on menu voices hover */
-  --bg_consulting: url(../../../assets/images/burgerMenu/consulting_burger.webp);
-  --bg_academy: url(../../../assets/images/burgerMenu/talentAcademy_burger.webp);
-  --bg_up: url(../../../assets/images/burgerMenu/up_burger.webp);
-  --bg_career: url(../../../assets/images/burgerMenu/career_burger.webp);
-  --bg_contacts: url(../../../assets/images/burgerMenu/contacts_burger.webp);
-  --bg_blog: url(../../../assets/images/burgerMenu/blog_burger.webp);
-  --bg_focusAcademy: url(../../../assets/images/burgerMenu/focusAcademy_burger.webp);
-  --bg_community: url(../../../assets/images/burgerMenu/community_burger.webp);
+  --bg_consulting: url(../../../assets/images/burgerMenu/consulting_burger.jpg);
+  --bg_academy: url(../../../assets/images/burgerMenu/talentAcademy_burger.jpg);
+  --bg_up: url(../../../assets/images/burgerMenu/up_burger.jpg);
+  --bg_career: url(../../../assets/images/burgerMenu/career_burger.jpg);
+  --bg_contacts: url(../../../assets/images/burgerMenu/contacts_burger.jpg);
+  --bg_blog: url(../../../assets/images/burgerMenu/blog_burger.jpg);
+  --bg_focusAcademy: url(../../../assets/images/burgerMenu/focusAcademy_burger.jpg);
+  --bg_community: url(../../../assets/images/burgerMenu/community_burger.jpg);
 }
 
 /* Icon hamburger menu */
