@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 // MUI
 import { Box, Accordion, AccordionDetails, AccordionSummary } from "@mui/material";
@@ -45,6 +46,8 @@ const tempObj = [
 
 const CustomAccordion = (props) => {
 
+  const { t } = useTranslation();
+
   const printAccordion = (item, key) => {
     return (
       <Accordion
@@ -57,7 +60,7 @@ const CustomAccordion = (props) => {
           id="panel1a-header"
           className="accordion-header"
         >
-          <h3>{item.sectionTitle}</h3>
+          <h3>{t(item.sectionTitle)}</h3>
         </AccordionSummary>
         <AccordionDetails
           className="accordion-content"
@@ -73,7 +76,7 @@ const CustomAccordion = (props) => {
       <p
         key={internalKey}
       >
-        {internalItem.p}
+        {t(internalItem.p)}
       </p>
     )
   }
@@ -110,10 +113,14 @@ const CustomAccordion = (props) => {
 
   return (
     <Box>
-      {tempObj.map(printAccordion)}
+      {props.obj.map(printAccordion)}
     </Box>
 
   )
+}
+
+CustomAccordion.defaultProps = {
+  obj: tempObj
 }
 
 export default CustomAccordion

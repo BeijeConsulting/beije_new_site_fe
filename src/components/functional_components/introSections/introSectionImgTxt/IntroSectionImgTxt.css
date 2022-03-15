@@ -150,14 +150,6 @@
     padding: 40px 14.2% 50px 3%;
   }
 
-  .intro-section-scroll-down-external-container {
-    height: calc(100vh - var(--header-height-lg));
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
   .intro-section-scroll-down-container {
     display: block;
     position: fixed;

@@ -30,3 +30,11 @@
 .icon-btn-youtube-videos-icon-primary {
   color: var(--white);
 }
+
+.icon-btn-youtube-videos-primary:hover {
+  background-color: var(--grey-tone-4) !important;
+}
+
+.icon-btn-youtube-videos-icon-primary:hover>.icon-btn-youtube-videos-primary {
+  color: var(--grey-tone-4);
+}

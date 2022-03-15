@@ -37,14 +37,14 @@
   .intro-section-title {
     margin-bottom: 5px;
   }
-
+/* 
   .intro-section-scroll-down-external-container {
     height: calc(100vh - var(--header-height-lg));
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
-  }
+  } */
 
   .intro-section-scroll-down-container {
     display: block;

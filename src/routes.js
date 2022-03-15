@@ -6,8 +6,11 @@ import HomeLayout from "./layout/HomeLayout";
 import Up from "./screens/up/Up";
 import Consulting from "./screens/consulting/Consulting";
 import TalentAcademy from "./screens/talentAcademy/TalentAcademy";
-import AcademyFrontend from "./screens/academyFrontend/AcademyFrontend";
 import Blog from "./screens/blog/Blog";
+import AcademyFrontend from "./screens/academyDetail/academyFrontend/AcademyFrontend";
+import AcademyBackend from "./screens/academyDetail/academyBackend/AcademyBackend";
+import Career from "./screens/career/Career"
+import Contacts from "./screens/contacts/Contacts";
 
 export default [
   {
@@ -55,7 +58,33 @@ export default [
       },
       {
         path: "/blog",
-        element: <Blog />,
+        element: <Blog />
+      },
+      {
+        path: "/beije-talent-academy/academy-backend",
+        element: <AcademyBackend />,
+        // children: [
+        //   { index: true, element: <TalentAcademy /> },
+        //   {
+        //     path: "/beije-talent-academy/academy-frontend",
+        //     element: <AcademyFrontend />
+        //   }
+        // ]
+      },
+      {
+        path: "/career",
+        element: <Career />,
+        // children: [
+        //   { index: true, element: <TalentAcademy /> },
+        //   {
+        //     path: "/beije-talent-academy/academy-frontend",
+        //     element: <AcademyFrontend />
+        //   }
+        // ]
+      },
+      {
+        path: "/contacts",
+        element: <Contacts />,
         // children: [
         //   { index: true, element: <TalentAcademy /> },
         //   {

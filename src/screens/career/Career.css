@@ -1,0 +1,27 @@
+/* First section */
+.career-first-section, .career-second-section {
+  color: var(--white);
+}
+
+.career-first-section h1, .career-second-section h3 {
+  text-transform: uppercase;
+  padding: 50px 0 35px 0;
+}
+
+.career-first-section-description {
+  padding-bottom: 50px;
+}
+
+.career-first-section-button-container {
+  padding-bottom: 30px;
+}
+
+.career-first-section-button-container button:nth-child(1) {
+  margin-right: 30px;
+}
+
+
+.career-second-section-button-container button:nth-child(1),
+.career-second-section-button-container button:nth-child(2) {
+  margin-right: 10px;
+}

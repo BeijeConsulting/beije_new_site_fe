@@ -31,3 +31,18 @@
 .button-go-back-primary svg {
   padding-right: 15px;
 }
+
+/* Filter Button */
+.button-filter-primary {
+  border: 1px solid var(--grey-tone-4) !important;
+  padding: 12px 40px !important;
+  border-radius: 0% !important;
+}
+
+.button-filter-primary p {
+  color: var(--grey-tone-4) !important;
+}
+
+.button-filter-secondary {
+  padding: 5px 40px !important;
+}

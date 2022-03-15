@@ -120,10 +120,6 @@
     font-size: var(--font-size-h3-md);
   }
 
-  .consulting-second-section-text-list-container {
-    /* font-size: var(--font-size-h1-md); */
-  }
-
 }
 
 @media (min-width: 1600px) {
