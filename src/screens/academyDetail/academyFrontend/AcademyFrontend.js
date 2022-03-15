@@ -55,7 +55,7 @@ const AcademyFrontend = (props) => {
       < Container
         component={"section"}
         maxWidth={"false"}
-        className={"paddingX-container-general-pages"}
+        className={"paddingX-container-general-pages "}
       >
 
         <IntroSectionTxtInfoGraphic

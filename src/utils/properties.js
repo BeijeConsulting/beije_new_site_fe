@@ -135,7 +135,7 @@ export const menu_voices = [
   },
   {
     name: "career",
-    link_to: "#",
+    link_to: "/career",
     key_link: "career"
   },
   {
