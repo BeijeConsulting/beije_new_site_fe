@@ -99,12 +99,17 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-body, .simple-paragraph {
-  font-family: var(--moderat-regular);
+body, .simple-paragraph, button p {
+  font-family: var(--moderat-regular) !important;
   font-size: var(--font-size-body-xs);
   letter-spacing: 0px;
   color: var(--grey-tone-4);
   line-height: var(--line-height-body-xs);
+  font-weight: normal !important;
+}
+
+button p {
+  color: var(--white);
 }
 
 h1, h2, .titles-level-1-2 {
@@ -283,6 +288,11 @@ h4, h5, h6, .minor-titles {
 .hightlight-txt-white {
   color: var(--white);
   font-family: var(--moderat-bold);
+}
+
+.divider {
+  border-color: var(--grey-tone-4) !important;
+  margin: 0px 9% !important;
 }
 
 /* DISPLAY */
