@@ -69,9 +69,10 @@ const Contacts = (props) => {
               <CustomButton
                 type={"btn-form-primary"}
                 content={"Contattaci"}
+                href={"mailto:hr@beije.it"}
               />
               <SocialLinks
-              classNameSocialContainer={"contacts-socials-container"}
+                classNameSocialContainer={"contacts-socials-container"}
               />
             </Box>
           </Grid>
