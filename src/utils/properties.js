@@ -140,7 +140,7 @@ export const menu_voices = [
   },
   {
     name: "contacts",
-    link_to: "#",
+    link_to: "/contacts",
     key_link: "contacts"
   },
 ]
