@@ -5,14 +5,16 @@ import { get as __get } from 'lodash';
 import { useDispatch, useSelector } from 'react-redux';
 import { switchLang } from "../../../i18n/i18n-config";
 import { setLanguage } from "../../../redux/ducks/Language";
+import { useLocation } from "react-router-dom";
 
 // Style
-import "./SwitchLang.css"
+import "./SwitchLang.css";
 
 const SwitchLang = (props) => {
   const dispatch = useDispatch();
   const [selected, setSelected] = useState('IT');
   const currentLanguage = useSelector((state) => __get(state.languageDuck, 'currentLanguage', {}));
+  const { pathname } = useLocation();
 
   useEffect(() => {
     setSelected(currentLanguage);
@@ -21,6 +23,7 @@ const SwitchLang = (props) => {
   const selectLanguage = (code) => () => {
     switchLang(code);
     dispatch(setLanguage(code));
+    window.location.href = "/" + code.toLowerCase() + pathname;
   }
 
   return (
@@ -33,8 +36,8 @@ const SwitchLang = (props) => {
       </span>
       <span className={props.classNameSeparator}> | </span>
       <span
-        className={selected === 'GB' ? props.classNameSelectedLang : props.classNameUnSelectedLang}
-        onClick={selectLanguage('GB')}
+        className={selected === 'EN' ? props.classNameSelectedLang : props.classNameUnSelectedLang}
+        onClick={selectLanguage('EN')}
       >
         en
       </span>

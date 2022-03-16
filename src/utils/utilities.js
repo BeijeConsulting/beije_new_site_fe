@@ -55,8 +55,8 @@ export const formatNumber = (props) => {
     value={props.value}
     key={props.key}
     displayType={props.displayType ? props.displayType : "text"}
-    thousandSeparator={props.lang === "GB" ? "," : "."}
-    decimalSeparator={props.lang === "GB" ? "." : ","}
+    thousandSeparator={props.lang === "EN" ? "," : "."}
+    decimalSeparator={props.lang === "EN" ? "." : ","}
     decimalScale={2}
     fixedDecimalScale
     suffix={numberSuffix}
@@ -70,8 +70,8 @@ export const formatNumber = (props) => {
 }
 
 export const unformatNumber = (value, lang) => {
-  const regexThousand = lang === "GB" ? /([, €])/g : /([. €])/g;
-  const regexDecimal = lang === "GB" ? /([.])/g : /([,])/g;
+  const regexThousand = lang === "EN" ? /([, €])/g : /([. €])/g;
+  const regexDecimal = lang === "EN" ? /([.])/g : /([,])/g;
   let number = replace(value, regexThousand, "");
   number = replace(number, regexDecimal, ".");
   return toNumber(number);

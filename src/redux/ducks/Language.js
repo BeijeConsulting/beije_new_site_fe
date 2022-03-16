@@ -1,4 +1,5 @@
 import { switchLang } from "../../i18n/i18n-config";
+import i18n from "../../i18n/i18n-config";
 
 const SET_LANGUAGE = 'SET_LANGUAGE'
 const INIT_LANGUAGE = 'INIT_LANGUAGE'
@@ -21,7 +22,7 @@ export function initLanguage() {
 
 
 const INIT_STATE = {
-  currentLanguage: ''
+  currentLanguage: i18n.language.slice(0,2).toUpperCase()
 }
 
 export default function languageDuck(state = INIT_STATE, action) {
@@ -33,7 +34,7 @@ export default function languageDuck(state = INIT_STATE, action) {
       localStorage.setItem('currentLanguage', action.payload.currentLanguage);
       break;
     case INIT_LANGUAGE:
-      newState.currentLanguage = 'GB';
+      newState.currentLanguage = i18n.language.toUpperCase();
       break;
     default:
       /*
