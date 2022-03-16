@@ -25,29 +25,28 @@ const HomeLayout = (props) => {
 
   const [state, setState] = useState({
     isMobile: window.innerWidth < 1024,
-    loadingEnd: window.sessionStorage.getItem("firstLoadDone")
+    // loadingEnd: window.sessionStorage.getItem("firstLoadDone")
   })
 
   useEffect(() => {
     window.addEventListener("resize", updateMedia);
-    console.log("current page in useEffect: ", props.currentPageDuck.currentPage);
     window.addEventListener("scroll", handleScroll);
 
-    if (window.sessionStorage.getItem("firstLoadDone") === null) {
+    // if (window.sessionStorage.getItem("firstLoadDone") === null) {
 
-      setTimeout(() => {
-        window.sessionStorage.setItem("firstLoadDone", true)
-        setState({
-          ...state,
-          loadingEnd: true
-        })
-      }, 8000)
-    } else {
-      setState({
-        ...state,
-        loadingEnd: true
-      })
-    }
+    //   setTimeout(() => {
+    //     window.sessionStorage.setItem("firstLoadDone", true)
+    //     setState({
+    //       ...state,
+    //       loadingEnd: true
+    //     })
+    //   }, 8000)
+    // } else {
+    //   setState({
+    //     ...state,
+    //     loadingEnd: true
+    //   })
+    // }
 
     return () => {
       window.removeEventListener("resize", updateMedia);
@@ -107,33 +106,14 @@ const HomeLayout = (props) => {
   }
 
   return (
-    <>
-      {
-        !state.loadingEnd &&
-        <div className="loading">
-          <div className="loading-text">
-            <span className="loading-text-words">B</span>
-            <span className="loading-text-words">E</span>
-            <span className="loading-text-words">I</span>
-            <span className="loading-text-words">J</span>
-            <span className="loading-text-words">E &nbsp;</span>
-            <span className="loading-text-words">P</span>
-            <span className="loading-text-words">E</span>
-            <span className="loading-text-words">O</span>
-            <span className="loading-text-words">P</span>
-            <span className="loading-text-words">L</span>
-            <span className="loading-text-words">E &nbsp;</span>
-            <span className="loading-text-words">F</span>
-            <span className="loading-text-words">I</span>
-            <span className="loading-text-words">R</span>
-            <span className="loading-text-words">S</span>
-            <span className="loading-text-words">T</span>
-          </div>
-        </div>
-      }
+    // <>
+    //   {
+    //     !state.loadingEnd &&
+    //    
+    //   }
 
-      {
-        state.loadingEnd &&
+    //   {
+    //     state.loadingEnd &&
         <Box className={props.burgerMenuDuck.menuOpen ? "position-fixed" : ""} >
           <div className={switchClassBgLayout()} />
           {
@@ -176,10 +156,10 @@ const HomeLayout = (props) => {
             <CustomFooter />
           </footer>
         </Box >
-      }
+    //   }
 
 
-    </>
+    // </>
   );
 }
 
