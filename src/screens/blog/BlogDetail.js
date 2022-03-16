@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 // Style
@@ -24,12 +24,16 @@ const Blog = (props) => {
 
   const permalink = new URLSearchParams(location.search).get("article");
 
+  const [state, setState] = useState({
+    blogData: null
+  })
+
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
     props.dispatch(setCurrentPage("blog"));
     props.dispatch(setVisibilityNavbar(true));
 
-    // getData();
+    getData();
 
     return () => {
       props.dispatch(initCurrentPage());
@@ -48,20 +52,21 @@ const Blog = (props) => {
     return response;
   }
 
-  // const getData = () => {
-  //   let blogData
-  // }
-
-  const getText = () => {
-    let text;
+  const getData = () => {
+    let blogData;
     arrayTest.map((blog, i) => {
       if (blog.id == permalink) {
-        text = getValueFromLang(blog.description, props.languageDuck.currentLanguage)
+        blogData = blog;
       }
     })
-    return text;
+
+    setState({
+      ...state,
+      blogData: blogData
+    })
   }
 
+  console.log(state.blogData)
   return (
     <Box
       className={"bg-dark-grey margin-top-container-screens"}
@@ -71,7 +76,7 @@ const Blog = (props) => {
         maxWidth={"false"}
         className={"paddingX-container-general-pages blog-first-section-container"}
       >
-        <h1>{t("blog.title")}</h1>
+        <h2 className={"uppercase"}>{t("blog.title")}</h2>
         <p>{t("blog.description")}</p>
       </Container>
 
@@ -79,20 +84,32 @@ const Blog = (props) => {
         className={"divider"}
       />
 
-      <Container
-        className={"paddingX-container-general-pages blog-detail-second-section-container"}
-      >
+      {
+        state.blogData &&
         <Container
-          className={"blog-detail-image-container"}
+          className={"paddingX-container-general-pages blog-detail-second-section-container"}
+          component={"article"}
         >
-          <img
-            alt="blog image"
-            src={props.src}
-          />
+          <Container
+            className={"blog-detail-image-container"}
+          >
+            <img
+              alt="blog image"
+              src={state.blogData.image}
+            />
+          </Container>
+          <Box className={"blog-detail-text-container"}>
+            <h1>
+              {getValueFromLang(state.blogData.title, props.languageDuck.currentLanguage)}
+            </h1>
+            <div>
+              {getValueFromLang(state.blogData.description, props.languageDuck.currentLanguage)}
+            </div>
+          </Box>
         </Container>
-        {/* <div>{getText()}</div> */}
-      </Container>
-{/* 
+      }
+
+      {/* 
       <Container
         component={"section"}
         maxWidth={"false"}
