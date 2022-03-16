@@ -25,7 +25,7 @@ const HomeLayout = (props) => {
 
   const [state, setState] = useState({
     isMobile: window.innerWidth < 1024,
-    loadingEnd: false
+    loadingEnd: window.sessionStorage.getItem("firstLoadDone")
   })
 
   useEffect(() => {
@@ -80,15 +80,6 @@ const HomeLayout = (props) => {
         break;
       case "academy":
         classNameBgLayout = "homeLayout-fixed-bg homeLayout-academy-bg"
-        break;
-      case "blog":
-        classNameBgLayout = "homeLayout-fixed-bg bg-dark-grey"
-        break;
-      case "career":
-        classNameBgLayout = "homeLayout-fixed-bg bg-dark-grey"
-        break;
-      case "contacts":
-        classNameBgLayout = "homeLayout-fixed-bg bg-dark-grey"
         break;
       default:
         classNameBgLayout = "homeLayout-fixed-bg homeLayout-video-filter"
