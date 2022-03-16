@@ -69,18 +69,52 @@ const CustomTable = (props) => {
         >
           {item.name}
           {
-            state.isMobile &&
+            state.isMobile && !props.careerTable &&
             <p
               className="simple-paragraph"
             >
               {item.when}
             </p>
           }
+
+          {
+            state.isMobile && props.careerTable &&
+            <>
+              <p
+                className="simple-paragraph"
+              >
+                <span>{item.type} {item.mode}</span>
+              </p>
+              <p
+                className="simple-paragraph"
+              >
+                {item.when}
+              </p>
+            </>
+          }
         </TableCell>
 
         {
+          !state.isMobile && props.careerTable &&
+          <>
+            <TableCell
+              align={"center"}
+            >
+              {item.type}
+            </TableCell>
+            <TableCell
+              align={"center"}
+            >
+              {item.mode}
+            </TableCell>
+          </>
+        }
+
+        {
           !state.isMobile &&
-          <TableCell>
+          <TableCell
+            align={"center"}
+          >
             {item.when}
           </TableCell>
         }
@@ -98,8 +132,12 @@ const CustomTable = (props) => {
               </div>
             }
             {
-              !state.isMobile &&
+              !state.isMobile && !props.careerTable &&
               <span>approfondisci</span>
+            }
+            {
+              !state.isMobile && props.careerTable &&
+              <span>Scopri di più</span>
             }
           </Link>
         </TableCell>
@@ -111,6 +149,9 @@ const CustomTable = (props) => {
   const switchTableClassName = () => {
     let currentClassName = null;
     switch (props.typeTable) {
+      case "table-career":
+        currentClassName = "table-default table-career"
+        break;
       default:
         currentClassName = "table-default"
         break;
@@ -144,7 +185,8 @@ const CustomTable = (props) => {
 }
 
 CustomTable.defaultProps = {
-  obj: tempObj
+  obj: tempObj,
+  careerTable: false
 }
 
 export default CustomTable
