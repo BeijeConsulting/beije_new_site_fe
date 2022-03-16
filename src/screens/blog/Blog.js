@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import './Blog.css';
 
 // MUI
-import { Box, Container } from "@mui/material";
+import { Box, Container, Divider } from "@mui/material";
 
 // Components
 import BlogCard from "../../components/functional_components/blogCard/BlogCard";
@@ -54,6 +54,10 @@ const Blog = (props) => {
         <p>{t("blog.description")}</p>
       </Container>
 
+      <Divider
+        className={"divider"}
+      />
+
       <Container
         component={"section"}
         maxWidth={"false"}
@@ -69,7 +73,7 @@ const Blog = (props) => {
                   subtitle={getValueFromLang(post.subtitle, props.languageDuck.currentLanguage)}
                   description={getValueFromLang(post.description, props.languageDuck.currentLanguage)}
                   postedby={post.postedBy}
-                  posted={post.posted}
+                  posted={post.posted} 
                 />
               </div>
             )
