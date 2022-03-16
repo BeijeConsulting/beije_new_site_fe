@@ -63,23 +63,7 @@ const Blog = (props) => {
         maxWidth={"false"}
         className={"paddingX-container-general-pages blog-second-section-container"}
       >
-        {
-          arrayTest.map((post, index) => {
-            return (
-              <div key={index} className={"blog-second-section-card-container"}>
-                <BlogCard
-                  permalink={post.id}
-                  src={post.image}
-                  title={getValueFromLang(post.title, props.languageDuck.currentLanguage)}
-                  subtitle={getValueFromLang(post.subtitle, props.languageDuck.currentLanguage)}
-                  description={getValueFromLang(post.description, props.languageDuck.currentLanguage)}
-                  postedby={post.postedBy}
-                  posted={post.posted}
-                />
-              </div>
-            )
-          })
-        }
+        
       </Container>
 
 

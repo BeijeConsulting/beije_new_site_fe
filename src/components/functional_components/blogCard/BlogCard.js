@@ -18,9 +18,14 @@ const BlogCard = (props) => {
 
   const { t } = useTranslation();
 
+  const goToDetail = () => {
+    console.log(props.permalink)
+  }
+
   return (
     <Box
       className={"blog-card-container"}
+      onClick={goToDetail}
     >
       <Container
         className={"blog-card-image-container"}

@@ -11,6 +11,7 @@ import AcademyFrontend from "./screens/academyDetail/academyFrontend/AcademyFron
 import AcademyBackend from "./screens/academyDetail/academyBackend/AcademyBackend";
 import Career from "./screens/career/Career"
 import Contacts from "./screens/contacts/Contacts";
+import BlogDetail from "./screens/blog/BlogDetail";
 
 export default [
   {
@@ -59,6 +60,10 @@ export default [
       {
         path: "/blog",
         element: <Blog />
+      },
+      {
+        path: `/blog/${permalink}`,
+        element: <BlogDetail />
       },
       {
         path: "/beije-talent-academy/academy-backend",
