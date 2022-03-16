@@ -25,7 +25,7 @@ const HomeLayout = (props) => {
 
   const [state, setState] = useState({
     isMobile: window.innerWidth < 1024,
-    loadingEnd: true
+    loadingEnd: window.sessionStorage.getItem("firstLoadDone")
   })
 
   useEffect(() => {
@@ -33,6 +33,21 @@ const HomeLayout = (props) => {
     console.log("current page in useEffect: ", props.currentPageDuck.currentPage);
     window.addEventListener("scroll", handleScroll);
 
+    if (window.sessionStorage.getItem("firstLoadDone") === null) {
+
+      setTimeout(() => {
+        window.sessionStorage.setItem("firstLoadDone", true)
+        setState({
+          ...state,
+          loadingEnd: true
+        })
+      }, 8000)
+    } else {
+      setState({
+        ...state,
+        loadingEnd: true
+      })
+    }
 
     return () => {
       window.removeEventListener("resize", updateMedia);
@@ -65,15 +80,6 @@ const HomeLayout = (props) => {
         break;
       case "academy":
         classNameBgLayout = "homeLayout-fixed-bg homeLayout-academy-bg"
-        break;
-      case "blog":
-        classNameBgLayout = "homeLayout-fixed-bg bg-dark-grey"
-        break;
-      case "career":
-        classNameBgLayout = "homeLayout-fixed-bg bg-dark-grey"
-        break;
-      case "contacts":
-        classNameBgLayout = "homeLayout-fixed-bg bg-dark-grey"
         break;
       default:
         classNameBgLayout = "homeLayout-fixed-bg homeLayout-video-filter"
