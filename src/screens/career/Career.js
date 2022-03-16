@@ -15,6 +15,30 @@ import "./Career.css";
 import CustomTable from "../../components/functional_components/customTable/CustomTable";
 import CustomButton from "../../components/functional_components/ui/customButton/CustomButton";
 
+const prevObj = [
+  {
+    name: "React developer",
+    type: "frontend",
+    mode: "Remoto",
+    when: "2 settimane fa",
+    linkTo: "/"
+  },
+  {
+    name: "React developer",
+    type: "frontend",
+    mode: "Remoto",
+    when: "2 settimane fa",
+    linkTo: "/"
+  },
+  {
+    name: "React developer",
+    type: "frontend",
+    mode: "Remoto",
+    when: "2 settimane fa",
+    linkTo: "/"
+  }
+]
+
 const Career = (props) => {
 
   useEffect(() => {
@@ -81,7 +105,11 @@ const Career = (props) => {
             content={"Backend"}
           />
         </Box>
-        <CustomTable />
+        <CustomTable
+          obj={prevObj}
+          careerTable={true}
+          typeTable={"table-career"}
+        />
       </Container>
     </Box>
   )
