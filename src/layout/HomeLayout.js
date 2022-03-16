@@ -81,6 +81,15 @@ const HomeLayout = (props) => {
       case "academy":
         classNameBgLayout = "homeLayout-fixed-bg homeLayout-academy-bg"
         break;
+      case "blog":
+        classNameBgLayout = "homeLayout-fixed-bg bg-dark-grey"
+        break;
+      case "career":
+        classNameBgLayout = "homeLayout-fixed-bg bg-dark-grey"
+        break;
+      case "contacts":
+        classNameBgLayout = "homeLayout-fixed-bg bg-dark-grey"
+        break;
       default:
         classNameBgLayout = "homeLayout-fixed-bg homeLayout-video-filter"
         break;

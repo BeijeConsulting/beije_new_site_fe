@@ -16,7 +16,24 @@
 }
 
 .blog-detail-second-section-container {
+  /* padding: 60px 0 120px !important; */
+  width: 100%;
+  max-width: none !important;
   border: 1px solid red;
+}
+
+.blog-detail-image-container {
+  height: 600px;
+  width: 100%;
+  /* max-width: 100% !important;
+  padding: 0 !important; */
+  /* border: 1px solid red; */
+}
+
+.blog-detail-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 @media (min-width: 390px) {

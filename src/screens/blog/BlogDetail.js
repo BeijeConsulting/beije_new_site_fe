@@ -28,6 +28,9 @@ const Blog = (props) => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
     props.dispatch(setCurrentPage("blog"));
     props.dispatch(setVisibilityNavbar(true));
+
+    // getData();
+
     return () => {
       props.dispatch(initCurrentPage());
       props.dispatch(initVisibilityNavbar());
@@ -44,6 +47,10 @@ const Blog = (props) => {
     })
     return response;
   }
+
+  // const getData = () => {
+  //   let blogData
+  // }
 
   const getText = () => {
     let text;
@@ -83,16 +90,16 @@ const Blog = (props) => {
             src={props.src}
           />
         </Container>
-        <div>{getText()}</div>
+        {/* <div>{getText()}</div> */}
       </Container>
-
+{/* 
       <Container
         component={"section"}
         maxWidth={"false"}
         className={"paddingX-container-general-pages blog-second-section-container"}
       >
 
-      </Container>
+      </Container> */}
 
 
     </Box>
