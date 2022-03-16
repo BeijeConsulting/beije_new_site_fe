@@ -640,18 +640,6 @@ export const academyCourseStructure = [
   {
     colMobile: 12,
     colDesktop: 6,
-    name: "academyFrontend.table.row2Title",
-    type: "title"
-  },
-  {
-    colMobile: 12,
-    colDesktop: 6,
-    name: "academyFrontend.table.row2Desc",
-    type: ""
-  },
-  {
-    colMobile: 12,
-    colDesktop: 6,
     name: "academyFrontend.table.row3Title",
     type: "title"
   },

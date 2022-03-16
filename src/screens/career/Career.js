@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 // Redux
 import { setCurrentPage, initCurrentPage } from "../../redux/ducks/currentPageDuck";
@@ -15,31 +15,9 @@ import "./Career.css";
 import CustomTable from "../../components/functional_components/customTable/CustomTable";
 import CustomButton from "../../components/functional_components/ui/customButton/CustomButton";
 
-const prevObj = [
-  {
-    name: "React developer",
-    type: "frontend",
-    mode: "Remoto",
-    when: "2 settimane fa",
-    linkTo: "/"
-  },
-  {
-    name: "React developer",
-    type: "frontend",
-    mode: "Remoto",
-    when: "2 settimane fa",
-    linkTo: "/"
-  },
-  {
-    name: "React developer",
-    type: "frontend",
-    mode: "Remoto",
-    when: "2 settimane fa",
-    linkTo: "/"
-  }
-]
-
 const Career = (props) => {
+
+  const [state, setState] = useState();
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -89,26 +67,8 @@ const Career = (props) => {
         className={"career-second-section paddingX-container-general-pages"}
       >
         <h3>Posizioni aperte</h3>
-        <Box
-          className="career-second-section-button-container"
-        >
-          <CustomButton
-            type={"filter-btn-secondary"}
-            content={"All"}
-          />
-          <CustomButton
-            type={"filter-btn-secondary"}
-            content={"Frontend"}
-          />
-          <CustomButton
-            type={"filter-btn-secondary"}
-            content={"Backend"}
-          />
-        </Box>
         <CustomTable
-          obj={prevObj}
           careerTable={true}
-          typeTable={"table-career"}
         />
       </Container>
     </Box>

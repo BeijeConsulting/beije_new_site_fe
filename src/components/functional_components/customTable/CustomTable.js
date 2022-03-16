@@ -15,16 +15,19 @@ import { addIcon } from "../../../utils/properties";
 
 const tempObj = [
   {
-    name: "Stage Java",
-    when: "Gennaio - Aprile 2022",
-    linkTo: "/"
+    name: "Frontend developer",
+    type: "frontend",
+    mode: "Remoto",
+    when: "2 settimane fa",
+    linkTo: "/beije-talent-academy/academy-frontend"
   },
   {
-    name: "Stage Java",
-    when: "Gennaio - Aprile 2022",
-    linkTo: "/"
+    name: "Backend developer",
+    type: "frontend",
+    mode: "Remoto",
+    when: "2 settimane fa",
+    linkTo: "/beije-talent-academy/academy-backend"
   }
-
 ]
 
 const CustomTable = (props) => {
@@ -69,33 +72,24 @@ const CustomTable = (props) => {
         >
           {item.name}
           {
-            state.isMobile && !props.careerTable &&
-            <p
-              className="simple-paragraph"
-            >
-              {item.when}
-            </p>
-          }
-
-          {
-            state.isMobile && props.careerTable &&
+            state.isMobile &&
             <>
               <p
                 className="simple-paragraph"
               >
-                <span>{item.type} {item.mode}</span>
+                {item.type}
               </p>
               <p
                 className="simple-paragraph"
               >
-                {item.when}
+                {item.mode}
               </p>
             </>
           }
         </TableCell>
 
         {
-          !state.isMobile && props.careerTable &&
+          !state.isMobile &&
           <>
             <TableCell
               align={"center"}
@@ -109,16 +103,6 @@ const CustomTable = (props) => {
             </TableCell>
           </>
         }
-
-        {
-          !state.isMobile &&
-          <TableCell
-            align={"center"}
-          >
-            {item.when}
-          </TableCell>
-        }
-
         <TableCell
           align={"right"}
         >

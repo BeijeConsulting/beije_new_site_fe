@@ -326,16 +326,14 @@
     "postedOn": "il"
   },
   "academyFrontend": {
-    "title": "Academy Frontend",
+    "title": "Frontend",
     "titleParagraph1": "Diventa Frontend developer con noi!",
     "paragraph1Txt": "3 mesi di crescita professionale, formazione costante attraverso progetti individuali e di gruppo, utilizzo delle tecnologie più richieste dal mercato.",
-    "titleParagraph2": "Struttura del corso",
+    "titleParagraph2": "Struttura",
     "table": {
-      "row1Title": "Academy",
-      "row2Title": "Compenso",
+      "row1Title": "Durata",
       "row3Title": "Modalità",
       "row1Desc": "Academy di 3 mesi retribuito",
-      "row2Desc": "Rimborso spese",
       "row3Desc": "Remoto"
     },
     "program": {
@@ -377,16 +375,14 @@
     }
   },
   "academyBackend": {
-    "title": "Academy Backend",
+    "title": "Backend",
     "titleParagraph1": "Diventa Java developer con noi!",
     "paragraph1Txt": "3 mesi di crescita professionale, formazione costante attraverso progetti individuali e di gruppo, utilizzo delle tecnologie più richieste dal mercato.",
-    "titleParagraph2": "Struttura del corso",
+    "titleParagraph2": "Struttura",
     "table": {
-      "row1Title": "Academy",
-      "row2Title": "Compenso",
+      "row1Title": "Durata",
       "row3Title": "Modalità",
       "row1Desc": "Academy di 3 mesi retribuito",
-      "row2Desc": "Rimborso spese",
       "row3Desc": "Remoto"
     },
     "program": {

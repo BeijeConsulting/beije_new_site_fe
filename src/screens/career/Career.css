@@ -20,11 +20,7 @@
   margin-right: 30px;
 }
 
-.career-second-section-button-container {
-  margin-bottom: 30px;
-}
-
-.career-second-section-button-container button:nth-child(1),
-.career-second-section-button-container button:nth-child(2) {
-  margin-right: 10px;
+/* Second section */
+.career-second-section {
+  margin-bottom: 100px;
 }
