@@ -12,14 +12,16 @@ import { clock } from "../../../utils/properties";
 
 // Assets
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useNavigate } from "react-router-dom";
 
 
 const BlogCard = (props) => {
 
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   const goToDetail = () => {
-    console.log(props.permalink)
+    navigate(`/blogDetail?article=${props.permalink}`)
   }
 
   return (

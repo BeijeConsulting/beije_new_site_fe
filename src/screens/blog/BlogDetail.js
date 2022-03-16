@@ -15,10 +15,14 @@ import arrayTest from "../../arrayTest.json";
 import { setCurrentPage, initCurrentPage } from "../../redux/ducks/currentPageDuck";
 import { setVisibilityNavbar, initVisibilityNavbar } from "../../redux/ducks/showNavbarTopDuck";
 import { connect } from "react-redux";
+import { useLocation } from "react-router-dom";
 
 const Blog = (props) => {
 
   const { t } = useTranslation();
+  const location = useLocation();
+
+  const permalink = new URLSearchParams(location.search).get("article");
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
@@ -30,15 +34,25 @@ const Blog = (props) => {
     };
   }, [])
 
-
   const getValueFromLang = (values, lang) => {
     let response;
+
     values.map((value) => {
       if (value.lang === lang) {
         response = value.translation
       }
     })
     return response;
+  }
+
+  const getText = () => {
+    let text;
+    arrayTest.map((blog, i) => {
+      if (blog.id == permalink) {
+        text = getValueFromLang(blog.description, props.languageDuck.currentLanguage)
+      }
+    })
+    return text;
   }
 
   return (
@@ -59,11 +73,25 @@ const Blog = (props) => {
       />
 
       <Container
+        className={"paddingX-container-general-pages blog-detail-second-section-container"}
+      >
+        <Container
+          className={"blog-detail-image-container"}
+        >
+          <img
+            alt="blog image"
+            src={props.src}
+          />
+        </Container>
+        <div>{getText()}</div>
+      </Container>
+
+      <Container
         component={"section"}
         maxWidth={"false"}
         className={"paddingX-container-general-pages blog-second-section-container"}
       >
-        
+
       </Container>
 
 
