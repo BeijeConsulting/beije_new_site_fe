@@ -17,7 +17,9 @@ import CustomButton from "../../components/functional_components/ui/customButton
 
 const Career = (props) => {
 
-  const [state, setState] = useState();
+  const [state, setState] = useState({
+    
+  });
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
