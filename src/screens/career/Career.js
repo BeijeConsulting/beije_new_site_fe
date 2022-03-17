@@ -23,14 +23,14 @@ const jobObj = [
     type: "frontend",
     mode: "Remoto",
     when: "2 settimane fa",
-    linkTo: "/beije-talent-academy/academy-frontend"
+    linkTo: "/career/career-detail"
   },
   {
     name: "Backend developer",
     type: "frontend",
     mode: "Remoto",
     when: "2 settimane fa",
-    linkTo: "/beije-talent-academy/academy-backend"
+    linkTo: "/career/career-detail"
   }
 ]
 

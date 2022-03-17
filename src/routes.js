@@ -11,6 +11,7 @@ import AcademyFrontend from "./screens/academyDetail/academyFrontend/AcademyFron
 import AcademyBackend from "./screens/academyDetail/academyBackend/AcademyBackend";
 import Career from "./screens/career/Career"
 import Contacts from "./screens/contacts/Contacts";
+import CareerDeatil from "./screens/career/CareerDetail";
 
 export default [
   {
@@ -74,6 +75,17 @@ export default [
       {
         path: "/career",
         element: <Career />,
+        // children: [
+        //   { index: true, element: <TalentAcademy /> },
+        //   {
+        //     path: "/beije-talent-academy/academy-frontend",
+        //     element: <AcademyFrontend />
+        //   }
+        // ]
+      },
+      {
+        path: "/career/career-detail",
+        element: <CareerDeatil />,
         // children: [
         //   { index: true, element: <TalentAcademy /> },
         //   {
