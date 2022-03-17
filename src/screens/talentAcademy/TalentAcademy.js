@@ -13,7 +13,7 @@ import { Box, Container, Tab } from "@mui/material";
 import './TalentAcademy.css'
 
 // Constants
-import { employeesComments, infoGraphicAcademy } from "../../utils/properties";
+import { employeesComments, infoGraphicAcademy, logo_fondazione_lavoro } from "../../utils/properties";
 
 // Components
 import IntroSectionImgTxt from "../../components/functional_components/introSections/introSectionImgTxt/IntroSectionImgTxt";
@@ -135,7 +135,7 @@ const TalentAcademy = (props) => {
           </Box>
 
           <Box
-           className="academy-third-section-img-container"
+            className="academy-third-section-img-container"
           >
             <img
               alt="iconography developer"
@@ -203,6 +203,20 @@ const TalentAcademy = (props) => {
               formTitle={t("up.form.title")}
             />
           </Box>
+        </Container>
+
+        {/* seventh section partner*/}
+        <Container
+          component={"section"}
+          maxWidth={"false"}
+          className={"academy-seventh-section-container paddingX-container-general-pages"}
+        >
+          <p>Partner</p>
+
+          <img
+            alt="logo partner Fondazione Lavoro"
+            src={logo_fondazione_lavoro}
+          />
         </Container>
 
       </div>

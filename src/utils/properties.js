@@ -14,6 +14,7 @@ import logo_youthquake from "../assets/images/up/caseStudies/youthquake.jpg";
 import infoGraphic2 from "../assets/images/academyDetail/infoGraphicAcademyFrontend.svg"
 import infoGraphic3 from "../assets/images/academyDetail/infoGraphicAcademyBackend.svg"
 import infoGraphic1 from "../assets/images/academy/infoGraphicAcademy.svg"
+import fondazioneLavoro from "../assets/images/academy/fondazione_lavoro_logo.png"
 
 
 // Docs
@@ -95,6 +96,7 @@ export const infoGraphicBackend = infoGraphic3;
 export const infoGraphicAcademy = infoGraphic1;
 export const backArrow = faArrowLeft;
 export const clock = faClock;
+export const logo_fondazione_lavoro = fondazioneLavoro;
 
 export const privacyPolicies_it = png_privacyPolicies_it;
 export const privacyPolicies_en = png_privacyPolicies_en;

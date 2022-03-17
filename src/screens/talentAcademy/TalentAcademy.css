@@ -61,6 +61,24 @@
   margin-top: 80px;
 }
 
+/* Seventh section */
+.academy-seventh-section-container {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px;
+}
+
+.academy-seventh-section-container p {
+  text-transform: uppercase;
+  padding-bottom: 30px;
+}
+
+.academy-seventh-section-container img {
+  width: 40%;
+}
+
 @media(min-width: 1024px) {
 
   .academy-third-section-container {
