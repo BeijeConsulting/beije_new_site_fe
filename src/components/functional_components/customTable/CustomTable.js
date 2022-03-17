@@ -63,77 +63,92 @@ const CustomTable = (props) => {
   }
 
   const printTableRows = (item, key) => {
-    return (
-      <TableRow
-        key={key}
-      >
-        <TableCell
-          component={"th"}
+    if ((props.isAcademy && item.academy) || (!props.isAcademy && !item.academy)) {
+      return (
+        <TableRow
+          key={key}
         >
-          {item.name}
-          {
-            state.isMobile &&
-            <>
-              <p
-                className="simple-paragraph"
-              >
-                {item.type}
-              </p>
-              <p
-                className="simple-paragraph"
-              >
-                {item.mode}
-              </p>
-            </>
-          }
-        </TableCell>
-
-        {
-          !state.isMobile &&
-          <>
-            <TableCell
-              align={"center"}
-            >
-              {item.type}
-            </TableCell>
-            <TableCell
-              align={"center"}
-            >
-              {item.mode}
-            </TableCell>
-          </>
-        }
-        <TableCell
-          align={"right"}
-        >
-          <Link
-            to={item.linkTo}
+          <TableCell
+            component={"th"}
           >
+            {item.title}
             {
               state.isMobile &&
-              <div
-                className={props.classNameLink}
-              >
-                <FontAwesomeIcon icon={addIcon} />
-              </div>
+              <>
+                <p
+                  className="simple-paragraph"
+                >
+                  {item.type}
+                </p>
+                <p
+                  className="simple-paragraph"
+                >
+                  {item.mode}
+                </p>
+              </>
             }
-            {
-              !state.isMobile && !props.careerTable &&
-              <span
-                className={props.classNameLink}
-              >approfondisci</span>
-            }
-            {
-              !state.isMobile && props.careerTable &&
-              <span
-                className={props.classNameLink}
-              >Scopri di più</span>
-            }
-          </Link>
-        </TableCell>
+          </TableCell>
 
-      </TableRow>
-    )
+          {
+            !state.isMobile &&
+            <>
+              <TableCell
+                align={"left"}
+              >
+                {item.type}
+              </TableCell>
+              <TableCell
+                align={"left"}
+              >
+                {item.mode}
+              </TableCell>
+            </>
+          }
+          <TableCell
+            align={"right"}
+          >
+            <Link
+              to={sendToPage(item.type, item.permalink)}
+            >
+              {
+                state.isMobile &&
+                <div
+                  className={props.classNameLink}
+                >
+                  <FontAwesomeIcon icon={addIcon} />
+                </div>
+              }
+              {
+                !state.isMobile &&
+                <span
+                  className={props.classNameLink}
+                >Scopri di più</span>
+              }
+            </Link>
+          </TableCell>
+
+        </TableRow>
+      )
+
+    }
+
+  }
+
+  const sendToPage = (param1, param2) => {
+    let response = "#";
+    if (props.isAcademy) {
+      if (param1.toLowerCase() === "frontend") {
+        response = "/beije-talent-academy/academy-frontend"
+      }
+      if (param1.toLowerCase() === "backend") {
+        response = "/beije-talent-academy/academy-backend"
+      }
+    }
+    else {
+      response = `/career/career-detail?jobOffer=${param2}`
+    }
+
+    return response
   }
 
   const switchTableClassName = () => {
@@ -151,7 +166,6 @@ const CustomTable = (props) => {
 
   return (
     <TableContainer
-      component={"table"}
       className={switchTableClassName()}
     >
       <Table

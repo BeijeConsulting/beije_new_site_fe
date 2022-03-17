@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 // Redux
 import { setCurrentPage, initCurrentPage } from "../../redux/ducks/currentPageDuck";
@@ -6,23 +6,51 @@ import { setVisibilityNavbar, initVisibilityNavbar } from "../../redux/ducks/sho
 import { connect } from "react-redux";
 
 // MUI
-import { Box, Container, Divider } from "@mui/material";
+import { Box, Container } from "@mui/material";
 
 // Stayle
 import "./Career.css";
 
+// Remove
+import careerTrialObj from "./careerTrialObj.json";
+
 const CareerDeatil = (props) => {
+  const [state, setState] = useState({
+    careerResponse: null
+  })
+
+  const permalink = new URLSearchParams(location.search).get("jobOffer");
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     props.dispatch(setCurrentPage("career"));
     props.dispatch(setVisibilityNavbar(true));
 
+    getCareerData();
+
     return () => {
       props.dispatch(initCurrentPage());
       props.dispatch(initVisibilityNavbar());
     };
   }, [])
+
+  // Add async and await. Here add call to API
+  const getCareerData = () => {
+    let careerResponse = careerTrialObj;
+
+    careerResponse.map(findJobOffer)
+
+  }
+
+  const findJobOffer = (item) => {
+    if (item.permalink === permalink) {
+      return (
+        setState({
+          careerResponse: item
+        })
+      )
+    }
+  }
 
   return (
     <Box
@@ -39,17 +67,22 @@ const CareerDeatil = (props) => {
         >
           Job Opportunities
         </p>
-        <h1>Frontend developer</h1>
-        <Box
-          className="career-detail-txt-container"
-        >
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-          </p>
+        {
+          state.careerResponse &&
+          <>
+            <h1>{state.careerResponse.title}</h1>
 
-        </Box>
+
+            <Box
+              className="career-detail-txt-container"
+            >
+              <p>
+                {state.careerResponse.description}
+              </p>
+
+            </Box>
+          </>
+        }
       </Container>
     </Box>
   )

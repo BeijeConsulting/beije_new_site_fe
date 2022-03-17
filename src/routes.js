@@ -23,41 +23,19 @@ export default [
       { index: true, element: <Home /> },
       {
         path: "/beije-consulting",
-        element: <Consulting />,
-        // children: [
-        //   { index: true, element: <CoursesIndex /> },
-        //   { path: "/courses/:id", element: <Course /> }
-        // ]
+        element: <Consulting />
       },
       {
         path: "/beije-up",
-        element: <Up />,
-        // children: [
-        //   { index: true, element: <CoursesIndex /> },
-        //   { path: "/courses/:id", element: <Course /> }
-        // ]
+        element: <Up />
       },
       {
         path: "/beije-talent-academy",
-        element: <TalentAcademy />,
-        // children: [
-        //   { index: true, element: <TalentAcademy /> },
-        //   {
-        //     path: "/beije-talent-academy/academy-frontend",
-        //     element: <AcademyFrontend />
-        //   }
-        // ]
+        element: <TalentAcademy />
       },
       {
         path: "/beije-talent-academy/academy-frontend",
-        element: <AcademyFrontend />,
-        // children: [
-        //   { index: true, element: <TalentAcademy /> },
-        //   {
-        //     path: "/beije-talent-academy/academy-frontend",
-        //     element: <AcademyFrontend />
-        //   }
-        // ]
+        element: <AcademyFrontend />
       },
       {
         path: "/blog",
@@ -69,49 +47,21 @@ export default [
       },
       {
         path: "/beije-talent-academy/academy-backend",
-        element: <AcademyBackend />,
-        // children: [
-        //   { index: true, element: <TalentAcademy /> },
-        //   {
-        //     path: "/beije-talent-academy/academy-frontend",
-        //     element: <AcademyFrontend />
-        //   }
-        // ]
+        element: <AcademyBackend />
       },
       {
         path: "/career",
-        element: <Career />,
-        // children: [
-        //   { index: true, element: <TalentAcademy /> },
-        //   {
-        //     path: "/beije-talent-academy/academy-frontend",
-        //     element: <AcademyFrontend />
-        //   }
-        // ]
+        element: <Career />
       },
       {
         path: "/career/career-detail",
-        element: <CareerDetail />,
-        // children: [
-        //   { index: true, element: <TalentAcademy /> },
-        //   {
-        //     path: "/beije-talent-academy/academy-frontend",
-        //     element: <AcademyFrontend />
-        //   }
-        // ]
+        element: <RequireCareerPermalink><CareerDetail /></RequireCareerPermalink>
       },
       {
         path: "/contacts",
-        element: <Contacts />,
-        // children: [
-        //   { index: true, element: <TalentAcademy /> },
-        //   {
-        //     path: "/beije-talent-academy/academy-frontend",
-        //     element: <AcademyFrontend />
-        //   }
-        // ]
+        element: <Contacts />
       },
-      { path: "*", element: <NoMatch /> }
+      { path: "*", element: <RedirectUrlNewSite><NoMatch /></RedirectUrlNewSite> }
     ]
   }
 ];
@@ -123,4 +73,36 @@ function RequireBlogPermalink({ children }) {
   }
 
   return children;
+}
+
+function RequireCareerPermalink({ children }) {
+  let permalink = new URLSearchParams(location.search).get("jobOffer");
+  if (!permalink) {
+    return <Navigate to={`/career`} />
+  }
+
+  return children;
+}
+
+function RedirectUrlNewSite({ children }) {
+  let oldUrl = window.location.pathname;
+  console.log("old url", oldUrl)
+  switch (oldUrl.substring(3)) {
+    case "/home/consulting":
+      location.href = "/beije-consulting";
+      break;
+    case "/portfolio-articoli/academy - java":
+      location.href = "/beije-talent-academy";
+      break;
+    case "/home/community":
+      location.href = "/beije-community";
+      break;
+    case "/home/up":
+      location.href = "/beije-up";
+      break;
+    case "/home/academy":
+      location.href = "/beije-talent-academy";
+      break;
+  }
+  return children
 }
