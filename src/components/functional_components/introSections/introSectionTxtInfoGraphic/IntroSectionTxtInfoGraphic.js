@@ -8,9 +8,6 @@ import { Box, Grid } from "@mui/material";
 import "../introSectionTxtInfoGraphic/IntroSectionTxtInfoGraphic.css";
 import "../IntroSection.css";
 
-// Constants
-import { infoGraphicFrontend } from "../../../../utils/properties";
-
 // Components
 import ScrollDownButton from "../../scrollDownButton/ScrollDownButton";
 import GoBackBtn from "../../goBackBtn/GoBackBtn";
@@ -142,7 +139,7 @@ const IntroSectionTxtInfoGraphic = (props) => {
       >
         <img
           alt="iconography developer"
-          src={infoGraphicFrontend}
+          src={props.srcImage}
         />
 
         <div className="intro-section-apply-container-desktop">

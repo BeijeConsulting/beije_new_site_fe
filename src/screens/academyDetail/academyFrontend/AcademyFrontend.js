@@ -13,7 +13,7 @@ import { Box, Container } from "@mui/material";
 import '../DetailAcademy.css';
 
 // Constants
-import { academyCourseStructure, programFrontendAcademy } from "../../../utils/properties";
+import { academyCourseStructure, programFrontendAcademy, infoGraphicFrontend } from "../../../utils/properties";
 
 // Components
 import IntroSectionTxtInfoGraphic from "../../../components/functional_components/introSections/introSectionTxtInfoGraphic/IntroSectionTxtInfoGraphic";
@@ -67,6 +67,7 @@ const AcademyFrontend = (props) => {
           paragraph2Title={t("academyFrontend.titleParagraph2")}
           paragraph1Txt={t("academyFrontend.paragraph1Txt")}
           obj={academyCourseStructure}
+          srcImage={infoGraphicFrontend}
         >
 
         </IntroSectionTxtInfoGraphic>

@@ -8,10 +8,17 @@
 }
 
 /* Third section */
+.academy-third-section-container {
+  padding: 150px 0;
+}
+
+.academy-third-section-container img {
+  display: none;
+}
+
 .academy-third-section-container h2 {
   text-transform: uppercase;
   color: var(--yellow);
-  padding-top: 150px;
 }
 
 .academy-third-section-links-container {
@@ -23,10 +30,6 @@
 
 .academy-third-section-links-container div {
   margin-bottom: 30px;
-}
-
-.academy-third-section-table-container {
-  padding: 50px 0 150px 0;
 }
 
 /* .academy-third-section-go-to-career-link-container {
@@ -58,17 +61,27 @@
   margin-top: 80px;
 }
 
-@media(min-width: 768px) {
-  .academy-third-section-links-container {
-    flex-direction: row;
-  }
-
-  .academy-third-section-links-container div:nth-child(2) {
-    margin-left: 155px;
-  }
-}
-
 @media(min-width: 1024px) {
+
+  .academy-third-section-container {
+    display: flex !important;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: space-between;
+  }
+
+  .academy-third-section-img-container {
+    display: flex !important;
+    align-self: flex-end;
+    width: 40%;
+  }
+
+  .academy-third-section-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
   .academy-sixth-section-box-form {
     margin-top: 100px;
   }

@@ -13,14 +13,13 @@ import { Box, Container, Tab } from "@mui/material";
 import './TalentAcademy.css'
 
 // Constants
-import { employeesComments } from "../../utils/properties";
+import { employeesComments, infoGraphicAcademy } from "../../utils/properties";
 
 // Components
 import IntroSectionImgTxt from "../../components/functional_components/introSections/introSectionImgTxt/IntroSectionImgTxt";
 import CustomForm from "../../components/hooks_components/customForm/CustomForm";
 import CustomLink from "../../components/functional_components/ui/customLink/CustomLink";
 import CustomBanner from "../../components/functional_components/customBanner/CustomBanner";
-import CustomTable from "../../components/functional_components/customTable/CustomTable";
 import CustomScrollTab from "../../components/hooks_components/customScrollTab/CustomScrollTab";
 
 
@@ -113,41 +112,37 @@ const TalentAcademy = (props) => {
           maxWidth={"false"}
           className={"academy-third-section-container paddingX-container-general-pages"}
         >
-
-          <h2>{t("academy.thirdSection.title1")}</h2>
-          <div
-            className="academy-third-section-links-container"
-          >
-            <div>
-              <CustomLink
-                linkTo={"/beije-talent-academy/academy-frontend"}
-                content={t("academy.thirdSection.link1")}
-                typeLink={"detail-academy"}
-              />
+          <Box>
+            <h2>{t("academy.thirdSection.title1")}</h2>
+            <div
+              className="academy-third-section-links-container"
+            >
+              <div>
+                <CustomLink
+                  linkTo={"/beije-talent-academy/academy-frontend"}
+                  content={t("academy.thirdSection.link1")}
+                  typeLink={"detail-academy"}
+                />
+              </div>
+              <div>
+                <CustomLink
+                  linkTo={"/beije-talent-academy/academy-backend"}
+                  content={t("academy.thirdSection.link2")}
+                  typeLink={"detail-academy"}
+                />
+              </div>
             </div>
-            <div>
-              <CustomLink
-                linkTo={"/beije-talent-academy/academy-backend"}
-                content={t("academy.thirdSection.link2")}
-                typeLink={"detail-academy"}
-              />
-            </div>
-          </div>
-
-          <h2>{t("academy.thirdSection.title2")}</h2>
+          </Box>
 
           <Box
-            className={"academy-third-section-table-container"}
+           className="academy-third-section-img-container"
           >
-            <CustomTable />
-          </Box>
-          {/* <div
-            className={"academy-third-section-go-to-career-link-container"}
-          >
-            <CustomLink
-              content={"Vedi tutti"}
+            <img
+              alt="iconography developer"
+              src={infoGraphicAcademy}
             />
-          </div> */}
+          </Box>
+
         </Container>
 
         {/* Fourth section */}

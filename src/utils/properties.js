@@ -11,7 +11,10 @@ import { faN, faArrowDownLong, faAngleLeft, faAngleRight, faPlus, faArrowLeft, f
 import quotation_mark from "../assets/icons/quote.png";
 import logo_pininfarina from "../assets/images/up/caseStudies/pininfarina.jpg";
 import logo_youthquake from "../assets/images/up/caseStudies/youthquake.jpg";
-import infoGraphic1 from "../assets/images/academyDetail/infoGraphicAcademyFrontend.svg"
+import infoGraphic2 from "../assets/images/academyDetail/infoGraphicAcademyFrontend.svg"
+import infoGraphic3 from "../assets/images/academyDetail/infoGraphicAcademyBackend.svg"
+import infoGraphic1 from "../assets/images/academy/infoGraphicAcademy.svg"
+
 
 // Docs
 import png_privacyPolicies_it from "../assets/docs/Beije_PrivacyPolicies_IT.pdf";
@@ -87,7 +90,9 @@ export const rightArrow = faAngleRight;
 export const quotationMark = quotation_mark;
 export const addIcon = faPlus;
 export const minusIcon = faMinus;
-export const infoGraphicFrontend = infoGraphic1;
+export const infoGraphicFrontend = infoGraphic2;
+export const infoGraphicBackend = infoGraphic3;
+export const infoGraphicAcademy = infoGraphic1;
 export const backArrow = faArrowLeft;
 export const clock = faClock;
 
@@ -129,11 +134,11 @@ export const menu_voices = [
     link_to: "#",
     key_link: "community"
   },
-  {
-    name: "focusAcademy",
-    link_to: "#",
-    key_link: "focusAcademy"
-  },
+  // {
+  //   name: "focusAcademy",
+  //   link_to: "#",
+  //   key_link: "focusAcademy"
+  // },
   {
     name: "career",
     link_to: "/career",
