@@ -200,6 +200,7 @@ const TalentAcademy = (props) => {
             className={"academy-sixth-section-box-form"}
           >
             <CustomForm
+              cvForm
               formTitle={t("up.form.title")}
             />
           </Box>

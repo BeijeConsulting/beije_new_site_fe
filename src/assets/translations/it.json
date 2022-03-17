@@ -23,7 +23,7 @@
       "surname": "Cognome obbligatorio",
       "email": "Email obbligatoria",
       "emailInvalid": "Email invalida",
-      "town": "Città obbligatoria",
+      "numberInvalid": "Numero invalido",
       "agreement": "I Termini e le Condizioni devono essere accettate"
     },
     "placeholder": {
@@ -31,6 +31,7 @@
       "surname": "Cognome",
       "email": "Email",
       "town": "Città",
+      "number": "Numero di telefono",
       "message": "Scrivi qui il tuo messaggio",
       "agreement": {
         "part1": "Ho letto e accetto il ",

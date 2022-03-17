@@ -23,6 +23,7 @@
       "surname": "Surname is required",
       "email": "Email is required",
       "emailInvalid": "Email is invalid",
+      "numberInvalid": "Number is invalid",
       "town": "Town is required",
       "agreement": "Terms and Conditions must be accepted"
     },
@@ -31,6 +32,7 @@
       "surname": "Surname",
       "email": "Email",
       "town": "Town",
+      "number": "Telephone number",
       "message": "Write here your message",
       "agreement": {
         "part1": "I have read and accept the ",

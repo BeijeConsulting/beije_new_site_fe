@@ -53,9 +53,8 @@ const CustomForm = (props) => {
       .string('Enter your email')
       .email(t("form.errorMessage.emailInvalid"))
       .required(t("form.errorMessage.email")),
-    town: yup
-      .string('Enter your name')
-      .required(t("form.errorMessage.town")),
+    number: yup
+      .number(t("form.errorMessage.numberInvalid")),
     message: yup
       .string('Enter your name'),
     agreement: yup
@@ -188,7 +187,7 @@ const CustomForm = (props) => {
             >
               <Grid
                 item
-                xs={props.cvForm ? 12 : 6}
+                xs={props.cvForm ? 6 : 5}
               >
                 <TextField
                   id="email"
@@ -206,10 +205,31 @@ const CustomForm = (props) => {
                   className="form-field"
                 />
               </Grid>
+
+              <Grid
+                item
+                xs={props.cvForm ? 6 : 4}
+              >
+                <TextField
+                  id="number"
+                  name="number"
+                  label={t("form.placeholder.number")}
+                  type="number"
+                  value={formikContacts.values.number}
+                  error={formikContacts.touched.number && Boolean(formikContacts.errors.number)}
+                  onChange={formikContacts.handleChange}
+                  onBlur={formikContacts.handleBlur}
+
+                  variant="standard"
+                  size="normal"
+                  className="form-field"
+                />
+              </Grid>
+
               {!props.cvForm &&
                 <Grid
                   item
-                  xs={6}
+                  xs={3}
                 >
                   <TextField
                     id="town"
@@ -218,7 +238,6 @@ const CustomForm = (props) => {
                     type="text"
                     value={formikContacts.values.town}
                     error={formikContacts.touched.town && Boolean(formikContacts.errors.town)}
-                    helperText={formikContacts.touched.town && formikContacts.errors.town}
                     onChange={formikContacts.handleChange}
                     onBlur={formikContacts.handleBlur}
 
@@ -253,6 +272,19 @@ const CustomForm = (props) => {
                 />
               </Grid>
             }
+            <Grid
+              item
+              xs={12}
+              className="form-upload-cv"
+            >
+              {props.cvForm &&
+                < CustomButton
+                  type={"btn-form-primary"}
+                  content={"Allega il tuo cv"}
+                // callback={formikContacts.submitForm}
+                />
+              }
+            </Grid>
 
             <Grid
               item
@@ -323,14 +355,6 @@ const CustomForm = (props) => {
               xs={12}
               className={"form-submit-btn-container"}
             >
-              {props.cvForm &&
-                < CustomButton
-                  type={"btn-form-primary"}
-                  content={"Allega il tuo cv"}
-                // callback={formikContacts.submitForm}
-                />
-              }
-
               <CustomButton
                 type={"btn-form-primary"}
                 content={t("form.btn")}
