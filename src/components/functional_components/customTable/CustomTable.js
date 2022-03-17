@@ -111,17 +111,23 @@ const CustomTable = (props) => {
           >
             {
               state.isMobile &&
-              <div>
+              <div
+                className={props.classNameLink}
+              >
                 <FontAwesomeIcon icon={addIcon} />
               </div>
             }
             {
               !state.isMobile && !props.careerTable &&
-              <span>approfondisci</span>
+              <span
+                className={props.classNameLink}
+              >approfondisci</span>
             }
             {
               !state.isMobile && props.careerTable &&
-              <span>Scopri di più</span>
+              <span
+                className={props.classNameLink}
+              >Scopri di più</span>
             }
           </Link>
         </TableCell>

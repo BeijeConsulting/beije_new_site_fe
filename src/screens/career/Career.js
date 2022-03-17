@@ -15,10 +15,46 @@ import "./Career.css";
 import CustomTable from "../../components/functional_components/customTable/CustomTable";
 import CustomButton from "../../components/functional_components/ui/customButton/CustomButton";
 
+
+// Remove
+const jobObj = [
+  {
+    name: "Frontend developer",
+    type: "frontend",
+    mode: "Remoto",
+    when: "2 settimane fa",
+    linkTo: "/beije-talent-academy/academy-frontend"
+  },
+  {
+    name: "Backend developer",
+    type: "frontend",
+    mode: "Remoto",
+    when: "2 settimane fa",
+    linkTo: "/beije-talent-academy/academy-backend"
+  }
+]
+
+const academyObj = [
+  {
+    name: "Trainer developer",
+    type: "frontend",
+    mode: "Remoto",
+    when: "2 settimane fa",
+    linkTo: "/beije-talent-academy/academy-frontend"
+  },
+  {
+    name: "Trainer developer",
+    type: "frontend",
+    mode: "Remoto",
+    when: "2 settimane fa",
+    linkTo: "/beije-talent-academy/academy-backend"
+  }
+]
+
 const Career = (props) => {
 
   const [state, setState] = useState({
-    
+    buttonSelected: "academy"
   });
 
   useEffect(() => {
@@ -31,6 +67,18 @@ const Career = (props) => {
       props.dispatch(initVisibilityNavbar());
     };
   }, [])
+
+  const showJobOpportunities = () => {
+    setState({
+      buttonSelected: "job"
+    })
+  }
+
+  const showAcademy = () => {
+    setState({
+      buttonSelected: "academy"
+    })
+  }
 
   return (
     <Box
@@ -53,10 +101,14 @@ const Career = (props) => {
           <CustomButton
             type={"filter-btn"}
             content={"Academy"}
+            classNameFilterBtn={state.buttonSelected === "academy" ? "career-selected-academy" : ""}
+            callback={showAcademy}
           />
           <CustomButton
             type={"filter-btn"}
             content={"Job Opportunities"}
+            classNameFilterBtn={state.buttonSelected === "job" ? "career-selected-job" : ""}
+            callback={showJobOpportunities}
           />
         </Box>
       </Container>
@@ -70,7 +122,8 @@ const Career = (props) => {
       >
         <h3>Posizioni aperte</h3>
         <CustomTable
-          careerTable={true}
+          obj={state.buttonSelected === "academy" ? academyObj : jobObj}
+          classNameLink={state.buttonSelected === "academy" ? "career-table-academy-link" : "career-table-job-link"}
         />
       </Container>
     </Box>
