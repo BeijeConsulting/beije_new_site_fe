@@ -141,13 +141,13 @@ const TalentAcademy = (props) => {
           >
             <CustomTable />
           </Box>
-          <div
+          {/* <div
             className={"academy-third-section-go-to-career-link-container"}
           >
             <CustomLink
               content={"Vedi tutti"}
             />
-          </div>
+          </div> */}
         </Container>
 
         {/* Fourth section */}

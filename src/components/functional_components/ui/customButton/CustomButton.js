@@ -25,10 +25,7 @@ const CustomButton = (props) => {
         currentClassName = "button-go-back-primary"
         break;
       case "filter-btn":
-        currentClassName = "button-filter-primary"
-        break;
-      case "filter-btn-secondary":
-        currentClassName = "button-filter-primary button-filter-secondary"
+        currentClassName = `button-filter-primary ${props.classNameFilterBtn}`
         break;
       default:
         currentClassName = ""

@@ -26,14 +26,14 @@
 }
 
 .academy-third-section-table-container {
-  padding: 50px 0 30px 0;
+  padding: 50px 0 150px 0;
 }
 
-.academy-third-section-go-to-career-link-container {
+/* .academy-third-section-go-to-career-link-container {
   margin: 50px 0 150px 0;
   display: flex;
   justify-content: flex-end;
-}
+} */
 
 /* Fourth section */
 .academy-fourth-section-container {
