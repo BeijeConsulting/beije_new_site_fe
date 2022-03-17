@@ -13,6 +13,7 @@ import Career from "./screens/career/Career"
 import Contacts from "./screens/contacts/Contacts";
 import BlogDetail from "./screens/blog/BlogDetail";
 import { Navigate } from "react-router-dom";
+import CareerDetail from "./screens/career/CareerDetail";
 
 export default [
   {
@@ -89,6 +90,17 @@ export default [
         // ]
       },
       {
+        path: "/career/career-detail",
+        element: <CareerDetail />,
+        // children: [
+        //   { index: true, element: <TalentAcademy /> },
+        //   {
+        //     path: "/beije-talent-academy/academy-frontend",
+        //     element: <AcademyFrontend />
+        //   }
+        // ]
+      },
+      {
         path: "/contacts",
         element: <Contacts />,
         // children: [
@@ -106,7 +118,7 @@ export default [
 
 function RequireBlogPermalink({ children }) {
   let permalink = new URLSearchParams(location.search).get("article");
-  if(!permalink) {
+  if (!permalink) {
     return <Navigate to={`/blog`} />
   }
 

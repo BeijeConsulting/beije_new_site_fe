@@ -43,5 +43,22 @@
 
 /* Second section */
 .career-second-section {
+  padding: 100px;
+}
+
+/* CAREER DETAIL */
+.career-detail-container {
   margin-bottom: 100px;
+  color: var(--white);
+}
+
+.career-detail-container h1, .career-detail-tag {
+  text-transform: uppercase;
+  padding: 50px 0 35px 0;
+}
+
+.career-detail-txt-container {
+  background-color: var(--grey-tone-8);
+  padding: 70px 7%;
+  border-top: 2px solid var(--lightblue);
 }
