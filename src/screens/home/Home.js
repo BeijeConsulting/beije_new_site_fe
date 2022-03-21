@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import { connect } from "react-redux";
 import { setColorHeader, initColorHeader } from "../../redux/ducks/colorHeaderDuck";
 import { setVisibilityNavbar, initVisibilityNavbar } from "../../redux/ducks/showNavbarTopDuck";
+import { setCurrentPage, initCurrentPage } from "../../redux/ducks/currentPageDuck";
 
 // MUI
 import { Container } from "@mui/material";
@@ -33,22 +34,18 @@ const Home = (props) => {
   const refDarkContainer = useRef();
 
   const [state, setState] = useState({
-    loadingEnd: false
+    loadingEnd: true
   })
 
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
-
-    setTimeout(() => {
-      setState({
-        ...state,
-        loadingEnd: true
-      })
-    }, 2000)
+    loadingAnimation();
 
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     window.addEventListener("scroll", handleScroll);
+    props.dispatch(setCurrentPage(""));
+    props.dispatch(setVisibilityNavbar(false));
 
     const element = refDarkContainer.current;
     const fourthSectionP = element.querySelector('.home-fourth-section-p');
@@ -72,11 +69,21 @@ const Home = (props) => {
 
     t1.from(fifthSectionFinalSpan, { opacity: 0, duration: 1, ease: 'power2.in' })
 
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      props.dispatch(initCurrentPage());
+      props.dispatch(initVisibilityNavbar());
     }
   }, [])
+
+  const loadingAnimation = () => {
+    setTimeout(() => {
+      setState({
+        ...state,
+        loadingEnd: true
+      })
+    }, 2000)
+  }
 
   const handleScroll = () => {
     let elementTop = refDarkContainer.current.offsetTop;
