@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useFormik } from "formik";
@@ -8,6 +8,9 @@ import * as yup from 'yup';
 import { connect } from "react-redux";
 import { setModal, initModal } from "../../../redux/ducks/modalDuck"
 
+// Api
+import ApiForm from "../../../services/api/ApiForm";
+
 // MUI
 import { Grid, Box, TextField, TextareaAutosize, FormControlLabel, Checkbox } from "@mui/material";
 
@@ -16,6 +19,7 @@ import "./CustomForm.css";
 
 // Constants and functions
 import { googleReCaptchaKey, privacyPolicies_en, privacyPolicies_it } from "../../../utils/properties";
+import { toBase64 } from "../../../utils/utilities";
 
 // Components
 import CustomButton from "../../functional_components/ui/customButton/CustomButton";
@@ -24,10 +28,14 @@ import CustomModal from "../customModal/CustomModal";
 const CustomForm = (props) => {
   const { t } = useTranslation();
 
+  const uploadedFile = useRef();
+
   const [state, setState] = useState({
     captchaCheck: false,
     captcha: undefined,
-    captchaValue: ''
+    captchaValue: '',
+    fileName: "nessun file selezionato",
+    base64Value: null
   });
 
   const reCaptchaChange = (value) => {
@@ -35,11 +43,11 @@ const CustomForm = (props) => {
     if (value !== null) {
       captchaCheck = true;
     }
-    setState({
-      ...state,
+    setState(prevState => ({
+      ...prevState,
       captchaCheck,
-      captchaValue: value,
-    });
+      captchaValue: value
+    }));
   }
 
   const validationSchema = yup.object({
@@ -68,6 +76,7 @@ const CustomForm = (props) => {
       name: '',
       surname: '',
       email: '',
+      number: '',
       town: '',
       message: '',
       agreement: false
@@ -75,12 +84,30 @@ const CustomForm = (props) => {
     validationSchema: validationSchema,
     enableReinitialize: true,
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
-      console.log('Send Form', props.origin, values, state.captchaValue);
       formikContacts.resetForm();
       state.captcha.reset();
+
+      sendDataForm(values);
     }
   });
+
+  const sendDataForm = async (values) => {
+    const formData = {
+      captcha: state.captcha,
+      city: values.town,
+      surname: values.surname,
+      cv: state.base64Value,
+      cv_name: state.fileName,
+      email: values.email,
+      lang: "it",
+      message: values.message,
+      name: values.name,
+      origin: "academy",
+      privacy_check: values.agreement
+    }
+
+    await ApiForm.sendForm(formData);
+  }
 
   const openModal = (param) => () => {
     props.dispatch(setModal(true, param))
@@ -90,6 +117,15 @@ const CustomForm = (props) => {
     props.dispatch(initModal())
   }
 
+  const uploadFile = async () => {
+    const file_base64 = await toBase64(uploadedFile.current.files[0]);
+    console.log("base64", file_base64);
+    setState(prevState => ({
+      ...prevState,
+      fileName: uploadedFile.current.files[0].name,
+      base64Value: file_base64
+    }));
+  }
 
   return (
     <Grid
@@ -278,11 +314,27 @@ const CustomForm = (props) => {
               className="form-upload-cv"
             >
               {props.cvForm &&
-                < CustomButton
-                  type={"btn-form-primary"}
-                  content={"Allega il tuo cv"}
-                // callback={formikContacts.submitForm}
-                />
+                <>
+                  <input
+                    ref={uploadedFile}
+                    type="file"
+                    id="uploadCV"
+                    name="uploadCV"
+                    hidden
+                    onChange={uploadFile}
+                    accept="application/pdf"
+                  />
+                  <label
+                    htmlFor="uploadCV"
+                    className="button-form-primary"
+                  >Allega il tuo cv</label>
+                  <span id="file-chosen">{state.fileName}</span>
+                </>
+                // < CustomButton
+                //   type={"btn-form-primary"}
+                //   content={"Allega il tuo cv"}
+                // // callback={formikContacts.submitForm}
+                // />
               }
             </Grid>
 

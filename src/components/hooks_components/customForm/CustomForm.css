@@ -87,6 +87,9 @@
 
 .form-upload-cv {
   margin: 40px 0 30px 0 !important;
+  display: flex;
+  flex-direction: column !important;
+  align-items: flex-start;
 }
 
 .form-agreement-container {

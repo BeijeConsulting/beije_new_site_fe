@@ -212,7 +212,11 @@ const TalentAcademy = (props) => {
           maxWidth={"false"}
           className={"academy-seventh-section-container paddingX-container-general-pages"}
         >
-          <p>Partner</p>
+          <p
+            className="titles-level3"
+          >
+            Partner
+          </p>
 
           <img
             alt="logo partner Fondazione Lavoro"

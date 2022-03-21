@@ -19,6 +19,7 @@ import fondazioneLavoro from "../assets/images/academy/fondazione_lavoro_logo.pn
 
 // Docs
 import png_privacyPolicies_it from "../assets/docs/Beije_PrivacyPolicies_IT.pdf";
+// import png_privacyPolicies_it from "../../public/pdf/Beije_PrivacyPolicies_IT.pdf";
 import png_privacyPolicies_en from "../assets/docs/Beije_PrivacyPolicies_EN.pdf";
 import png_legalNotes_it from "../assets/docs/Beije_legalNotes_IT.pdf";
 import png_legalNotes_en from "../assets/docs/Beije_legalNotes_EN.pdf";

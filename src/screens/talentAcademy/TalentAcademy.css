@@ -68,11 +68,13 @@
   align-items: center;
   justify-content: center;
   padding: 80px;
+  background-color: var(--yellow);
 }
 
 .academy-seventh-section-container p {
+  color: var(--dark-grey);
   text-transform: uppercase;
-  padding-bottom: 30px;
+  margin-bottom: 7px;
 }
 
 .academy-seventh-section-container img {

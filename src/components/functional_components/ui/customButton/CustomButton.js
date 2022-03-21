@@ -12,7 +12,9 @@ import "./CustomButton.css";
 const CustomButton = (props) => {
 
   const handleClick = () => {
-    props.callback();
+    if (props.callback) {
+      props.callback();
+    }
   }
 
   const switchClassName = () => {
@@ -68,7 +70,7 @@ const CustomButton = (props) => {
       download={props.download}
     >
       {props.normalButton &&
-        < Typography
+        <Typography
           component={props.btnTypeContent}
         >
           {props.content}
@@ -83,7 +85,7 @@ const CustomButton = (props) => {
           {props.content}
         </a>
       }
-    </Button >
+    </Button>
   )
 }
 
