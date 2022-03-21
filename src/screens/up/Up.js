@@ -60,7 +60,7 @@ const Up = (props) => {
           typeSection="up"
           classNameBgImgDesktop="intro-section-img-up"
           classNameBgImgMobile="intro-section-img-up"
-          bgIconDownload="intro-section-download-icon-up"
+          bgIconDownload="download-btn-icon-up"
           sectionName="Beije Up"
           sectionTitle={t("up.title")}
           photoTitle="UP"

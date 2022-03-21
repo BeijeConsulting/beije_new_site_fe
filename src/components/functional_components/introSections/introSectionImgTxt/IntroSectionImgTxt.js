@@ -9,7 +9,8 @@ import "../IntroSection.css";
 
 // Components
 import ScrollDownButton from "../../scrollDownButton/ScrollDownButton";
-import CustomButton from "../../ui/customButton/CustomButton";
+// import CustomButton from "../../ui/customButton/CustomButton";
+import DownloadBtn from "../../downloadBtn/DownloadBtn";
 
 const IntroSectionImgTxt = (props) => {
 
@@ -31,27 +32,6 @@ const IntroSectionImgTxt = (props) => {
     }
     return currentClassName;
   }
-
-  const switchClassNameDownloadBtn = () => {
-    let currentClassName = null;
-    switch (props.typeSection) {
-      case "consulting":
-        currentClassName = "intro-section-consulting-download"
-        break;
-      case "up":
-        currentClassName = "intro-section-up-download"
-        break;
-      case "academy":
-        currentClassName = "intro-section-academy-download"
-        break;
-      default:
-        currentClassName = ""
-        break;
-    }
-    return currentClassName;
-  }
-
-
 
   return (
     <Box
@@ -86,14 +66,10 @@ const IntroSectionImgTxt = (props) => {
         {props.children}
 
         <Box className="intro-section-download-container">
-          <CustomButton
+          <DownloadBtn
             content="Scarica la presentazione"
-            startIcon={<span className={`intro-sec-download-icon ${props.bgIconDownload}`} />}
-            className={switchClassNameDownloadBtn()}
-            callback={props.callbackDownload}
-            downloadButton={true}
-            normalButton={false}
-            download={props.download}
+            bgIconDownload={props.bgIconDownload}
+            typeSection={props.typeSection}
           />
         </Box>
 

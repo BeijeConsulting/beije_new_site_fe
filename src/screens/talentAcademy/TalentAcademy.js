@@ -65,7 +65,7 @@ const TalentAcademy = (props) => {
           typeSection="academy"
           classNameBgImgDesktop="intro-section-img-academy"
           classNameBgImgMobile="intro-section-img-academy"
-          bgIconDownload="intro-section-download-icon-academy"
+          bgIconDownload="download-btn-icon-academy"
           sectionName="Beije talent academy"
           sectionTitle={t("academy.firstSection.title")}
           callback={scrollToSection}

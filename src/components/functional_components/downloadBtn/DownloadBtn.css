@@ -1,0 +1,51 @@
+.download-btn-icon {
+  height: 30px;
+  width: 30px;
+  margin-right: 5px;
+  border-radius: 100%;
+  background-color: #000;
+}
+
+.download-btn-container {
+  cursor: pointer;
+  display: flex;
+}
+
+.download-btn-container a {
+  font-family: var(--moderat-regular);
+  font-size: var(--font-size-body-xs);
+  text-transform: uppercase;
+}
+
+.download-btn-consulting-download a {
+  color: var(--lightblue) !important;
+  text-decoration: underline;
+}
+
+.download-btn-up-download a {
+  color: var(--blue) !important;
+  text-decoration: underline;
+}
+
+.download-btn-academy-download a {
+  color: var(--yellow) !important;
+  text-decoration: underline;
+}
+
+.download-btn-container:hover a {
+  text-decoration: none;
+}
+
+@media(min-width: 768px) {
+
+  .download-btn-container a {
+    font-size: var(--font-size-body-md);
+  }
+}
+
+@media(min-width: 1600px) {
+
+  .download-btn-container a {
+    font-size: var(--font-size-body-xl);
+  }
+}
