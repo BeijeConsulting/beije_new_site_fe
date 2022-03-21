@@ -13,6 +13,8 @@ import Career from "./screens/career/Career"
 import Contacts from "./screens/contacts/Contacts";
 import BlogDetail from "./screens/blog/BlogDetail";
 import { Navigate } from "react-router-dom";
+import Community from "./screens/community/Community";
+import CommunityDetail from "./screens/community/CommunityDetail";
 
 export default [
   {
@@ -63,8 +65,16 @@ export default [
         element: <Blog />
       },
       {
+        path: "/community",
+        element: <Community />
+      },
+      {
         path: `/blogDetail`,
         element: <RequireBlogPermalink><BlogDetail /></RequireBlogPermalink>
+      },
+      {
+        path: `/communityDetail`,
+        element: <RequireCommunityPermalink><CommunityDetail /></RequireCommunityPermalink>
       },
       {
         path: "/beije-talent-academy/academy-backend",
@@ -108,6 +118,15 @@ function RequireBlogPermalink({ children }) {
   let permalink = new URLSearchParams(location.search).get("article");
   if(!permalink) {
     return <Navigate to={`/blog`} />
+  }
+
+  return children;
+}
+
+function RequireCommunityPermalink({ children }) {
+  let permalink = new URLSearchParams(location.search).get("event");
+  if(!permalink) {
+    return <Navigate to={`/community`} />
   }
 
   return children;

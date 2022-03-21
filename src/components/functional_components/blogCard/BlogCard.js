@@ -21,7 +21,8 @@ const BlogCard = (props) => {
   const navigate = useNavigate();
 
   const goToDetail = () => {
-    navigate(`/blogDetail?article=${props.permalink}`)
+    let route = props.community ? `/communityDetail?event=${props.permalink}` : `/blogDetail?article=${props.permalink}`
+    navigate(route)
   }
 
   return (
@@ -41,11 +42,19 @@ const BlogCard = (props) => {
         className={"blog-card-text-container"}
       >
         <div className={"blog-card-text-title"}>{props.title}</div>
-        <div className={"blog-card-text-subtitle"}>{props.subtitle}</div>
+        {
+          !props.community &&
+          <div className={"blog-card-text-subtitle"}>{props.subtitle}</div>
+        }
+
         <div className={"blog-card-text-description"}>{props.description}</div>
-        <div className={"blog-card-text-postedby"}>
-        <FontAwesomeIcon icon={clock} className={"blog-card-clock-icon"} />{t("blog.postedBy")} {props.postedby} {t("blog.postedOn")} {props.posted}
-        </div>
+        {
+          !props.community &&
+          <div className={"blog-card-text-postedby"}>
+            <FontAwesomeIcon icon={clock} className={"blog-card-clock-icon"} />{t("blog.postedBy")} {props.postedby} {t("blog.postedOn")} {props.posted}
+          </div>
+        }
+
       </Container>
     </Box>
   )

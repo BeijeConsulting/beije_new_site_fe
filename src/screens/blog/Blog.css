@@ -3,7 +3,7 @@
   color: var(--white);
 }
 
-.blog-first-section-container h1 {
+.blog-first-section-container h2 {
   margin-bottom: 20px;
   text-transform: uppercase;
 }
@@ -23,7 +23,7 @@
 }
 
 .blog-detail-image-container {
-  height: 600px;
+  height: 200px;
   width: 100%;
   max-width: none !important;
   padding: 0 !important;
@@ -37,13 +37,47 @@
 
 .blog-detail-text-container {
   background-color: var(--grey-tone-8);
+  color: var(--white);
+  padding: 17px;
+}
+
+.blog-detail-text-container h1 {
+  margin-bottom: 5px;
+  letter-spacing: .5px;
+}
+
+.blog-detail-text-container h3,
+.blog-detail-third-section-container h3 {
+  margin-bottom: 15px;
+  letter-spacing: .5px;
+}
+
+.blog-detail-third-section-container {
+  color: var(--white);
+}
+
+.blog-detail-third-section-carousel-card-container {
+  width: 100%;
 }
 
 @media (min-width: 390px) {
 
   .blog-second-section-container {
     grid-template-columns: repeat(auto-fit, 303px);
-  grid-gap: 60px;
+    grid-gap: 60px;
+  }
+
+  .blog-detail-third-section-carousel-card-container {
+    width: 303px;
+  }
+
+}
+
+@media (min-width: 550px) {
+
+
+  .blog-detail-image-container {
+    height: 280px;
   }
 
 }
@@ -55,6 +89,18 @@
     grid-gap: 40px;
   }
 
+  .blog-detail-third-section-carousel-card-container {
+    width: 276px;
+  }
+
+  .blog-detail-image-container {
+    height: 360px;
+  }
+
+  .blog-detail-text-container {
+    padding: 20px;
+  }
+
 }
 
 @media (min-width: 1024px) {
@@ -62,6 +108,18 @@
   .blog-second-section-container {
     grid-template-columns: repeat(auto-fit, 330px);
     grid-gap: 50px;
+  }
+
+  .blog-detail-third-section-carousel-card-container {
+    width: 330px;
+  }
+
+  .blog-detail-image-container {
+    height: 440px;
+  }
+
+  .blog-detail-text-container {
+    padding: 45px;
   }
 
 }
@@ -73,6 +131,18 @@
     grid-gap: 40px;
   }
 
+  .blog-detail-third-section-carousel-card-container {
+    width: 312px;
+  }
+
+  .blog-detail-image-container {
+    height: 560px;
+  }
+
+  .blog-detail-text-container {
+    padding: 60px;
+  }
+
 }
 
 @media (min-width: 1600px) {
@@ -80,6 +150,18 @@
   .blog-second-section-container {
     grid-template-columns: repeat(auto-fit, 336px);
     grid-gap: 60px;
+  }
+
+  .blog-detail-third-section-carousel-card-container {
+    width: 336px;
+  }
+
+  .blog-detail-image-container {
+    height: 600px;
+  }
+
+  .blog-detail-text-container {
+    padding: 70px;
   }
 
 }

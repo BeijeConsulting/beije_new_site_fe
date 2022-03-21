@@ -8,14 +8,20 @@ import './Blog.css';
 import { Box, Container, Divider } from "@mui/material";
 
 // Components
-import BlogCard from "../../components/functional_components/blogCard/BlogCard";
-import arrayTest from "../../arrayTest.json";
+import blogArrayTest from "../../blogArrayTest.json";
 
 // Redux
 import { setCurrentPage, initCurrentPage } from "../../redux/ducks/currentPageDuck";
 import { setVisibilityNavbar, initVisibilityNavbar } from "../../redux/ducks/showNavbarTopDuck";
 import { connect } from "react-redux";
 import { useLocation } from "react-router-dom";
+
+// Constants
+import { clock } from "../../utils/properties";
+
+// Assets
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import BlogCard from "../../components/functional_components/blogCard/BlogCard";
 
 const Blog = (props) => {
 
@@ -25,7 +31,8 @@ const Blog = (props) => {
   const permalink = new URLSearchParams(location.search).get("article");
 
   const [state, setState] = useState({
-    blogData: null
+    blogData: null,
+    latestArticles: null
   })
 
   useEffect(() => {
@@ -54,19 +61,30 @@ const Blog = (props) => {
 
   const getData = () => {
     let blogData;
-    arrayTest.map((blog, i) => {
+    blogArrayTest.map((blog) => {
       if (blog.id == permalink) {
         blogData = blog;
       }
     })
 
+    let latestArticles = removeThisBlogFromList(blogArrayTest);
+
     setState({
       ...state,
-      blogData: blogData
+      blogData: blogData,
+      latestArticles: latestArticles.slice(0, 4)
     })
   }
 
-  console.log(state.blogData)
+  // questa funzione rimuove l'articolo aperto dall'elenco degli articoli che ritornano dall'API
+  const removeThisBlogFromList = (latestArticles) => {
+    let value = latestArticles;
+    value.splice(value.findIndex(function (i) {
+      return i.id == permalink;
+    }), 1);
+    return value;
+  }
+
   return (
     <Box
       className={"bg-dark-grey margin-top-container-screens"}
@@ -76,7 +94,7 @@ const Blog = (props) => {
         maxWidth={"false"}
         className={"paddingX-container-general-pages blog-first-section-container"}
       >
-        <h2 className={"uppercase"}>{t("blog.title")}</h2>
+        <h2>{t("blog.title")}</h2>
         <p>{t("blog.description")}</p>
       </Container>
 
@@ -102,6 +120,12 @@ const Blog = (props) => {
             <h1>
               {getValueFromLang(state.blogData.title, props.languageDuck.currentLanguage)}
             </h1>
+            <h3>
+              {getValueFromLang(state.blogData.subtitle, props.languageDuck.currentLanguage)}
+            </h3>
+            <div className={"blog-card-text-postedby"}>
+              <FontAwesomeIcon icon={clock} className={"blog-card-clock-icon"} />{t("blog.postedBy")} {state.blogData.postedBy} {t("blog.postedOn")} {state.blogData.posted}
+            </div>
             <div>
               {getValueFromLang(state.blogData.description, props.languageDuck.currentLanguage)}
             </div>
@@ -109,15 +133,35 @@ const Blog = (props) => {
         </Container>
       }
 
-      {/* 
       <Container
-        component={"section"}
-        maxWidth={"false"}
-        className={"paddingX-container-general-pages blog-second-section-container"}
+        className={"paddingX-container-general-pages blog-detail-third-section-container"}
+        component={"article"}
       >
+        <h3>{t("blog.latestArticles")}</h3>
+        {
+          state.latestArticles &&
+          <Box>
+            {
+              state.latestArticles.map((post, i) => {
+                return (
+                  <div key={i} className={"blog-detail-third-section-carousel-card-container"}>
+                    <BlogCard
+                      permalink={post.id}
+                      src={post.image}
+                      title={getValueFromLang(post.title, props.languageDuck.currentLanguage)}
+                      subtitle={getValueFromLang(post.subtitle, props.languageDuck.currentLanguage)}
+                      description={getValueFromLang(post.description, props.languageDuck.currentLanguage)}
+                      postedby={post.postedBy}
+                      posted={post.posted}
+                    />
+                  </div>
+                )
+              })
+            }
+          </Box>
 
-      </Container> */}
-
+        }
+      </Container>
 
     </Box>
   )
