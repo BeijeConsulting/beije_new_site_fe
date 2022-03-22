@@ -66,6 +66,7 @@ const CaseStudiesDetail = (props) => {
         >
           <Box
             className={"case-studies-detail-img-container"}
+            style={{ backgroundColor: state.caseStudiesResponse.colorBg }}
           >
             <img
               alt="logo"
