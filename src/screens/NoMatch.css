@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 500px;
+  min-height: 650px;
 }
 
 .noMatch-container img {
@@ -39,5 +39,11 @@
   .noMatch-desktop-img-container {
     display: block;
     width: 50%;
+  }
+}
+
+@media(min-width: 1440px) {
+  .noMatch-container {
+    min-height: 750px;
   }
 }
