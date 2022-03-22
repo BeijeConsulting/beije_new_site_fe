@@ -102,7 +102,6 @@ function RequireCaseStudiesPermalink({ children }) {
 
 function RedirectUrlNewSite({ children }) {
   let oldUrl = window.location.pathname;
-  console.log("old url", oldUrl)
   switch (oldUrl.substring(3)) {
     case "/home/consulting":
       location.href = "/beije-consulting";

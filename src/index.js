@@ -8,16 +8,37 @@ import './i18n/i18n-config';
 import { Provider } from "react-redux";
 import store from "./redux/createStore";
 
+// function RedirectToLanguage() {
+//   const { pathname, search } = useLocation();
+//   const { i18n } = useTranslation();
+//   if (
+//     !["/it/", "/en/"].some((l) =>
+//       pathname.includes(l)
+//     )
+//   ) {
+//     console.log(i18n.resolvedLanguage)
+//     window.location.href = "/" + i18n.resolvedLanguage + pathname + (search ? search : "");
+//   }
+//   return null;
+// }
+
 function RedirectToLanguage() {
   const { pathname, search } = useLocation();
   const { i18n } = useTranslation();
-  if (
-    !["/it/", "/en/"].some((l) =>
-      pathname.includes(l)
-    )
-  ) {
-    console.log(i18n.resolvedLanguage)
-    window.location.href = "/" + i18n.resolvedLanguage + pathname + (search ? search : "");
+  const langs = ["/it/", "/en/"];
+  if (!langs.some((l) => pathname.includes(l))) {
+    window.location.href =
+      "/" + i18n.resolvedLanguage + pathname + (search ? search : "");
+  } else {
+    const chosenLang = langs
+      .find((l) => pathname.includes(l))
+      .replace(/\//g, "");
+    if (i18n.resolvedLanguage !== chosenLang) {
+      i18n.changeLanguage(
+        langs.find((l) => pathname.includes(l)).replace(/\//g, "")
+      );
+      window.location.reload();
+    }
   }
   return null;
 }
@@ -44,6 +65,6 @@ function Root() {
 
 
 ReactDOM.render(
-<Root />,
+  <Root />,
   document.getElementById('root')
 );

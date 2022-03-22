@@ -22,8 +22,8 @@ export const getTranslation = (father, key) => {
     : key;
 }
 
-export const switchLang = (lang) => {
-  i18n.changeLanguage(toLower(lang));
+export const switchLang = async (lang) => {
+  await i18n.changeLanguage(toLower(lang));
 }
 
 i18n

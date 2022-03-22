@@ -78,7 +78,6 @@ const BurgerMenu = (props) => {
   }
 
   const switchBgMenu = () => {
-    console.log('stateLink: ', state.stateLink, "keyElement: ", state.keyElement);
     let className = "burgerMenu-nav-container burgerMenu-nav-container-img"
     switch (state.keyElement) {
       case "consulting":

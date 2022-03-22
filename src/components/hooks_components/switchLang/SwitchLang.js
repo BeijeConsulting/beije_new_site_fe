@@ -20,8 +20,8 @@ const SwitchLang = (props) => {
     setSelected(currentLanguage);
   }, [currentLanguage]);
 
-  const selectLanguage = (code) => () => {
-    switchLang(code);
+  const selectLanguage = (code) => async () => {
+    await switchLang(code);
     dispatch(setLanguage(code));
     window.location.href = "/" + code.toLowerCase() + pathname;
   }

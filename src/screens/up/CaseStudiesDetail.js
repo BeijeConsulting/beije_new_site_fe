@@ -43,7 +43,6 @@ const CaseStudiesDetail = (props) => {
   }
 
   const findCaseStudy = (item) => {
-    console.log("img carousel:", item.imgCarousel);
     if (item.permalink === permalink) {
       return (
         setState({

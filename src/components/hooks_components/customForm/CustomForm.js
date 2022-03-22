@@ -93,7 +93,7 @@ const CustomForm = (props) => {
 
   const sendDataForm = async (values) => {
     const formData = {
-      captcha: state.captcha,
+      captcha: state.captchaValue,
       city: values.town,
       surname: values.surname,
       cv: state.base64Value,
@@ -102,10 +102,10 @@ const CustomForm = (props) => {
       lang: "it",
       message: values.message,
       name: values.name,
-      origin: "academy",
+      origin: window.location.href,
       privacy_check: values.agreement
     }
-
+    console.log("send form data: ", formData)
     await ApiCalls.form_sendForm(formData);
   }
 
@@ -119,7 +119,6 @@ const CustomForm = (props) => {
 
   const uploadFile = async () => {
     const file_base64 = await toBase64(uploadedFile.current.files[0]);
-    console.log("base64", file_base64);
     setState(prevState => ({
       ...prevState,
       fileName: uploadedFile.current.files[0].name,
