@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 // Style
 import './Blog.css';
 
 // MUI
-import { Box, Container, Divider } from "@mui/material";
+import { Box, Container, Divider, Skeleton } from "@mui/material";
 
 // Components
 import BlogCard from "../../components/functional_components/blogCard/BlogCard";
@@ -19,26 +19,29 @@ import { connect } from "react-redux";
 const Blog = (props) => {
 
   const { t } = useTranslation();
+  const [state, setState] = useState({
+    blogDataResponse: null
+  })
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
     props.dispatch(setCurrentPage("blog"));
     props.dispatch(setVisibilityNavbar(true));
+
+    getBlogData();
+
     return () => {
       props.dispatch(initCurrentPage());
       props.dispatch(initVisibilityNavbar());
     };
   }, [])
 
-
-  const getValueFromLang = (values, lang) => {
-    let response;
-    values.map((value) => {
-      if (value.lang === lang) {
-        response = value.translation
-      }
+  const getBlogData = async () => {
+    // let blogDataResponse = await blog_getList();
+    let blogDataResponse = blogArrayTest;
+    setState({
+      blogDataResponse: blogDataResponse
     })
-    return response;
   }
 
   return (
@@ -64,15 +67,24 @@ const Blog = (props) => {
         className={"paddingX-container-general-pages blog-second-section-container"}
       >
         {
-          blogArrayTest.map((post, index) => {
+          !state.blogDataResponse &&
+          <>
+            <Skeleton variant="rectangular" width={300} height={200} />
+            <Skeleton />
+            <Skeleton width="60%" />
+          </>
+        }
+        {
+          state.blogDataResponse &&
+          state.blogDataResponse.map((post, index) => {
             return (
               <div key={index} className={"blog-second-section-card-container"}>
                 <BlogCard
-                  permalink={post.id}
-                  src={post.image}
-                  title={getValueFromLang(post.title, props.languageDuck.currentLanguage)}
-                  subtitle={getValueFromLang(post.subtitle, props.languageDuck.currentLanguage)}
-                  description={getValueFromLang(post.description, props.languageDuck.currentLanguage)}
+                  permalink={post.permalink}
+                  src={post.cover_img}
+                  title={post.title}
+                  subtitle={post.subtitle}
+                  description={post.description}
                   postedby={post.postedBy}
                   posted={post.posted}
                 />

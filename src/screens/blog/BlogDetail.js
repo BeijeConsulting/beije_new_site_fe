@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import './Blog.css';
 
 // MUI
-import { Box, Container, Divider } from "@mui/material";
+import { Box, Container, Divider, Skeleton } from "@mui/material";
 
 // Components
 import blogArrayTest from "../../blogArrayTest.json";
@@ -48,24 +48,12 @@ const Blog = (props) => {
     };
   }, [])
 
-  const getValueFromLang = (values, lang) => {
-    let response;
-
-    values.map((value) => {
-      if (value.lang === lang) {
-        response = value.translation
-      }
-    })
-    return response;
-  }
-
-  const getData = () => {
+  const getData = async () => {
     let blogData;
-    blogArrayTest.map((blog) => {
-      if (blog.id == permalink) {
-        blogData = blog;
-      }
-    })
+    // let blogData = await blog_getListDetail(permalink);
+
+    // let blogDataResponse = await blog_getList();
+    // let latestArticles = removeThisBlogFromList(blogDataResponse);
 
     let latestArticles = removeThisBlogFromList(blogArrayTest);
 
@@ -101,7 +89,10 @@ const Blog = (props) => {
       <Divider
         className={"divider"}
       />
-
+      {
+        !state.blogData &&
+        <Skeleton />
+      }
       {
         state.blogData &&
         <Container
@@ -118,16 +109,16 @@ const Blog = (props) => {
           </Container>
           <Box className={"blog-detail-text-container"}>
             <h1>
-              {getValueFromLang(state.blogData.title, props.languageDuck.currentLanguage)}
+              {state.blogData.title}
             </h1>
             <h3>
-              {getValueFromLang(state.blogData.subtitle, props.languageDuck.currentLanguage)}
+              {state.blogData.subtitle}
             </h3>
             <div className={"blog-card-text-postedby"}>
               <FontAwesomeIcon icon={clock} className={"blog-card-clock-icon"} />{t("blog.postedBy")} {state.blogData.postedBy} {t("blog.postedOn")} {state.blogData.posted}
             </div>
             <div>
-              {getValueFromLang(state.blogData.description, props.languageDuck.currentLanguage)}
+              {state.blogData.description}
             </div>
           </Box>
         </Container>
@@ -139,6 +130,10 @@ const Blog = (props) => {
       >
         <h3>{t("blog.latestArticles")}</h3>
         {
+          !state.latestArticles &&
+          <Skeleton />
+        }
+        {
           state.latestArticles &&
           <Box>
             {
@@ -146,11 +141,11 @@ const Blog = (props) => {
                 return (
                   <div key={i} className={"blog-detail-third-section-carousel-card-container"}>
                     <BlogCard
-                      permalink={post.id}
-                      src={post.image}
-                      title={getValueFromLang(post.title, props.languageDuck.currentLanguage)}
-                      subtitle={getValueFromLang(post.subtitle, props.languageDuck.currentLanguage)}
-                      description={getValueFromLang(post.description, props.languageDuck.currentLanguage)}
+                      permalink={post.permalink}
+                      src={post.cover_img}
+                      title={post.title}
+                      subtitle={post.subtitle}
+                      description={post.description}
                       postedby={post.postedBy}
                       posted={post.posted}
                     />
