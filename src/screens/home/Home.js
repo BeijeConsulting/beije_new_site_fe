@@ -34,7 +34,7 @@ const Home = (props) => {
   const refDarkContainer = useRef();
 
   const [state, setState] = useState({
-    loadingEnd: true
+    loadingEnd: false
   })
 
   gsap.registerPlugin(ScrollTrigger);
