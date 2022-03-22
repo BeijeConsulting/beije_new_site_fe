@@ -89,6 +89,9 @@ const HomeLayout = (props) => {
       case "contacts":
         classNameBgLayout = "homeLayout-fixed-bg bg-dark-grey"
         break;
+      case "noMatch":
+        classNameBgLayout = "homeLayout-fixed-bg bg-dark-grey"
+        break;
       default:
         classNameBgLayout = "homeLayout-fixed-bg homeLayout-video-filter"
         break;
@@ -114,48 +117,48 @@ const HomeLayout = (props) => {
 
     //   {
     //     state.loadingEnd &&
-        <Box className={props.burgerMenuDuck.menuOpen ? "position-fixed" : ""} >
-          <div className={switchClassBgLayout()} />
-          {
-            props.currentPageDuck.currentPage === "" &&
-            <video className="homeLayout-video" autoPlay muted loop>
-              <source src="https://beije.s3.eu-west-1.amazonaws.com/video_home.mp4" type="video/mp4" />
-            </video>
-          }
+    <Box className={props.burgerMenuDuck.menuOpen ? "position-fixed" : ""} >
+      <div className={switchClassBgLayout()} />
+      {
+        props.currentPageDuck.currentPage === "" &&
+        <video className="homeLayout-video" autoPlay muted loop>
+          <source src="https://beije.s3.eu-west-1.amazonaws.com/video_home.mp4" type="video/mp4" />
+        </video>
+      }
 
-          {state.isMobile &&
-            <HideOnScroll>
-              <AppBar
-                id="back-to-top-anchor"
-                className={props.currentPageDuck.currentPage === "" ? "bg-transparent" : "bg-dark-grey"}
-              >
-                <CustomHeader />
-              </AppBar>
-            </HideOnScroll>
-          }
-          {!state.isMobile &&
-            <AppBar
-              position="fixed"
-              className={switchClassAppBar()}
-            >
-              <CustomHeader />
-            </AppBar>
-          }
-          <main className="scrollX-hidden min-height-main">
-            <Outlet />
-          </main>
-          {
-            state.isMobile &&
-            <BackToTopButton>
-              <Fab color="default" size="small" aria-label="scroll back to top">
-                <KeyboardArrowUpIcon />
-              </Fab>
-            </BackToTopButton>
-          }
-          <footer>
-            <CustomFooter />
-          </footer>
-        </Box >
+      {state.isMobile &&
+        <HideOnScroll>
+          <AppBar
+            id="back-to-top-anchor"
+            className={props.currentPageDuck.currentPage === "" ? "bg-transparent" : "bg-dark-grey"}
+          >
+            <CustomHeader />
+          </AppBar>
+        </HideOnScroll>
+      }
+      {!state.isMobile &&
+        <AppBar
+          position="fixed"
+          className={switchClassAppBar()}
+        >
+          <CustomHeader />
+        </AppBar>
+      }
+      <main className="scrollX-hidden min-height-main">
+        <Outlet />
+      </main>
+      {
+        state.isMobile &&
+        <BackToTopButton>
+          <Fab color="default" size="small" aria-label="scroll back to top">
+            <KeyboardArrowUpIcon />
+          </Fab>
+        </BackToTopButton>
+      }
+      <footer>
+        <CustomFooter />
+      </footer>
+    </Box >
     //   }
 
 

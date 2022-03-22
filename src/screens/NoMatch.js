@@ -66,6 +66,7 @@ const NoMatch = (props) => {
           </p>
 
           <CustomLink
+            linkTo="/"
             content="Go to Homepage"
           />
         </Box>
