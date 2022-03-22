@@ -9,7 +9,7 @@ import { connect } from "react-redux";
 import { setModal, initModal } from "../../../redux/ducks/modalDuck"
 
 // Api
-import ApiForm from "../../../services/api/ApiForm";
+import ApiCalls from "../../../services/api/ApiCalls";
 
 // MUI
 import { Grid, Box, TextField, TextareaAutosize, FormControlLabel, Checkbox } from "@mui/material";
@@ -106,7 +106,7 @@ const CustomForm = (props) => {
       privacy_check: values.agreement
     }
 
-    await ApiForm.sendForm(formData);
+    await ApiCalls.form_sendForm(formData);
   }
 
   const openModal = (param) => () => {

@@ -13,13 +13,16 @@ import { Box, Container } from "@mui/material";
 import "./Up.css";
 
 // Constants
-import { clientComments, caseStudies } from "../../utils/properties";
+import { clientComments } from "../../utils/properties";
 
 // Components
 import IntroSectionImgTxt from "../../components/functional_components/introSections/introSectionImgTxt/IntroSectionImgTxt";
 import SimpleCarousel from "../../components/functional_components/simpleCarousel/SimpleCarousel";
 import CustomCarousel from "../../components/hooks_components/customCarousel/CustomCarousel";
 import CustomForm from "../../components/hooks_components/customForm/CustomForm";
+
+// Remove
+import caseStudiesTrialObj from "./caseStudiesTrialObj.json";
 
 const Up = (props) => {
 
@@ -211,7 +214,7 @@ const Up = (props) => {
           >
             <CustomCarousel
               upCarousel
-              obj={caseStudies}
+              obj={caseStudiesTrialObj}
               classNameSwiperContainer={"swiper-container-up"}
               imgCarousel
             />

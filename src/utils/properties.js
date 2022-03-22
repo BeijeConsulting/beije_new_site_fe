@@ -572,19 +572,19 @@ export const caseStudies = [
   {
     title: "Nome Progetto",
     subtitle: "Subtitle progetto poco più lungo, da definire",
-    pictureClassName: "carousel-bg-youthquake",
+    colorBg: "#fff",
     imgCarousel: logo_youthquake
   },
   {
     title: "Nome Progetto",
     subtitle: "Subtitle progetto poco più lungo, da definire",
-    pictureClassName: "carousel-bg-pininfarina",
+    colorBg: "#fff",
     imgCarousel: logo_pininfarina
   },
   {
     title: "Nome Progetto",
     subtitle: "Subtitle progetto poco più lungo, da definire",
-    pictureClassName: "carousel-bg-youthquake",
+    colorBg: "#fff",
     imgCarousel: logo_youthquake
   }
 ]
