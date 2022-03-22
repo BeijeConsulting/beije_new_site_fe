@@ -24,6 +24,7 @@ import { toBase64 } from "../../../utils/utilities";
 // Components
 import CustomButton from "../../functional_components/ui/customButton/CustomButton";
 import CustomModal from "../customModal/CustomModal";
+import PrivacyPolicies from "../../functional_components/privacyPolicies/PrivacyPolicies";
 
 const CustomForm = (props) => {
   const { t } = useTranslation();
@@ -34,7 +35,7 @@ const CustomForm = (props) => {
     captchaCheck: false,
     captcha: undefined,
     captchaValue: '',
-    fileName: "nessun file selezionato",
+    fileName: "Nessun file selezionato",
     base64Value: null
   });
 
@@ -97,7 +98,7 @@ const CustomForm = (props) => {
       city: values.town,
       surname: values.surname,
       cv: state.base64Value,
-      cv_name: state.fileName,
+      cv_name: state.fileName === "Nessun file selezionato" ? null : state.fileName,
       email: values.email,
       lang: "it",
       message: values.message,
@@ -381,13 +382,14 @@ const CustomForm = (props) => {
                 callbackClose={closeModal}
                 modalTitle={t("footer.privacyPolicies")}
               >
-                <object
+                {/* <object
                   data={t("modal.doc_lang") === "doc_it" ? privacyPolicies_it : privacyPolicies_en}
                   type="application/pdf"
                   height="100%"
                   width="100%"
                 >
-                </object>
+                </object> */}
+                <PrivacyPolicies />
               </CustomModal>
             </Grid>
             <Grid

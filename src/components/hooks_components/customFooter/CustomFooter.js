@@ -19,6 +19,7 @@ import { logo_primary_light, logo_secondary_light, legalNotes_en, legalNotes_it,
 import SwitchLang from "../switchLang/SwitchLang"
 import SocialLinks from "../../functional_components/socialLinks/SocialLinks";
 import CustomModal from "../customModal/CustomModal";
+import PrivacyPolicies from "../../functional_components/privacyPolicies/PrivacyPolicies";
 
 const CustomFooter = (props) => {
   const { t } = useTranslation();
@@ -150,13 +151,14 @@ const CustomFooter = (props) => {
         {
           props.modalDuck.typeModal === "privacyPolicies" &&
 
-          <object
-            data={t("modal.doc_lang") === "doc_it" ? privacyPolicies_it : privacyPolicies_en}
-            type="application/pdf"
-            height="100%"
-            width="100%"
-          >
-          </object>
+          // <object
+          //   data={t("modal.doc_lang") === "doc_it" ? privacyPolicies_it : privacyPolicies_en}
+          //   type="application/pdf"
+          //   height="100%"
+          //   width="100%"
+          // >
+          // </object>
+          <PrivacyPolicies />
         }
         {
           props.modalDuck.typeModal === "legalNotes" &&

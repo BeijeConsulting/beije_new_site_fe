@@ -34,7 +34,7 @@ const Home = (props) => {
   const refDarkContainer = useRef();
 
   const [state, setState] = useState({
-    loadingEnd: true
+    loadingEnd: false
   })
 
   gsap.registerPlugin(ScrollTrigger);
@@ -111,7 +111,6 @@ const Home = (props) => {
       {
         !state.loadingEnd &&
         <Loading />
-        // <div>Ciao</div>
       }
 
 
@@ -160,7 +159,6 @@ const Home = (props) => {
               <br />
               {t("home.secondSection.part3")}
             </span>
-            {/* <span>Lavoriamo costantemente per arrivare <br />alla piena soddisfazione <br />dei nostri clienti</span> */}
             <span className={"home-second-section-quotation-marks"}>&#8222;</span>
           </h3>
         </Container>
