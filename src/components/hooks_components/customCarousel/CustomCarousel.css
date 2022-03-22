@@ -108,8 +108,7 @@
 }
 
 /* for case studies */
-.carousel-bg-youthquake, .carousel-bg-pininfarina {
-  background-color: var(--white);
+.carousel-up-bg {
   background-image: none;
 }
 
