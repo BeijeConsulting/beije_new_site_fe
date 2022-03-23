@@ -86,7 +86,7 @@ const Home = (props) => {
         ...state,
         loadingEnd: true
       })
-    }, 2000)
+    }, 3000)
   }
 
   const handleScroll = () => {
@@ -112,10 +112,11 @@ const Home = (props) => {
 
   return (
     <>
-      {
-        !state.loadingEnd &&
-        <Loading />
-      }
+
+      <Loading
+        className={state.loadingEnd ? "loading-disappear" : "loading"}
+        classNameSingleWords={state.loadingEnd ? "loading-text-words-disappear" : "loading-text-words"}
+      />
 
 
       <Box
