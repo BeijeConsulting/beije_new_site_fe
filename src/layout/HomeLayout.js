@@ -24,29 +24,12 @@ import BackToTopButton from "../components/functional_components/ui/backToTopBut
 const HomeLayout = (props) => {
 
   const [state, setState] = useState({
-    isMobile: window.innerWidth < 1024,
-    // loadingEnd: window.sessionStorage.getItem("firstLoadDone")
+    isMobile: window.innerWidth < 1024
   })
 
   useEffect(() => {
     window.addEventListener("resize", updateMedia);
     window.addEventListener("scroll", handleScroll);
-
-    // if (window.sessionStorage.getItem("firstLoadDone") === null) {
-
-    //   setTimeout(() => {
-    //     window.sessionStorage.setItem("firstLoadDone", true)
-    //     setState({
-    //       ...state,
-    //       loadingEnd: true
-    //     })
-    //   }, 8000)
-    // } else {
-    //   setState({
-    //     ...state,
-    //     loadingEnd: true
-    //   })
-    // }
 
     return () => {
       window.removeEventListener("resize", updateMedia);
@@ -109,20 +92,12 @@ const HomeLayout = (props) => {
   }
 
   return (
-    // <>
-    //   {
-    //     !state.loadingEnd &&
-    //    
-    //   }
-
-    //   {
-    //     state.loadingEnd &&
     <Box className={props.burgerMenuDuck.menuOpen ? "position-fixed" : ""} >
       <div className={switchClassBgLayout()} />
       {
         props.currentPageDuck.currentPage === "" &&
         <video className="homeLayout-video" autoPlay muted loop>
-          <source src="https://beije.s3.eu-west-1.amazonaws.com/video_home.mp4" type="video/mp4" />
+          <source src="https://beije-people-first.s3.eu-south-1.amazonaws.com/site/video_home.mp4" type="video/mp4" />
         </video>
       }
 
@@ -159,10 +134,6 @@ const HomeLayout = (props) => {
         <CustomFooter />
       </footer>
     </Box >
-    //   }
-
-
-    // </>
   );
 }
 

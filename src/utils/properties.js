@@ -16,16 +16,6 @@ import infoGraphic3 from "../assets/images/academyDetail/infoGraphicAcademyBacke
 import infoGraphic1 from "../assets/images/academy/infoGraphicAcademy.svg"
 import fondazioneLavoro from "../assets/images/academy/fondazione_lavoro_logo.png"
 
-
-// Docs
-import png_privacyPolicies_it from "../assets/docs/Beije_PrivacyPolicies_IT.pdf";
-// import png_privacyPolicies_it from "../../public/pdf/Beije_PrivacyPolicies_IT.pdf";
-import png_privacyPolicies_en from "../assets/docs/Beije_PrivacyPolicies_EN.pdf";
-import png_legalNotes_it from "../assets/docs/Beije_legalNotes_IT.pdf";
-import png_legalNotes_en from "../assets/docs/Beije_legalNotes_EN.pdf";
-import presentation_consulting from "../assets/docs/Presentazione_consulting_BeijePeopleFirst.pdf"
-import presentation_up from "../assets/docs/Presentazione_up_BeijePeopleFirst.pdf"
-
 // Link
 const linkFb = "https://www.facebook.com/beijepeoplefirst";
 const linkIn = "https://www.linkedin.com/company/beije";
@@ -98,13 +88,6 @@ export const infoGraphicAcademy = infoGraphic1;
 export const backArrow = faArrowLeft;
 export const clock = faClock;
 export const logo_fondazione_lavoro = fondazioneLavoro;
-
-export const privacyPolicies_it = png_privacyPolicies_it;
-export const privacyPolicies_en = png_privacyPolicies_en;
-export const legalNotes_it = png_legalNotes_it;
-export const legalNotes_en = png_legalNotes_en;
-export const pdf_presentation_consulting = presentation_consulting;
-export const pdf_presentation_up = presentation_up;
 
 export const linkYoutube = linkYt;
 
