@@ -31,7 +31,7 @@ const DownloadBtn = (props) => {
 
   const switchDownload = () => {
     let currentDownload = null;
-    switch (props.download) {
+    switch (props.typeSection) {
       case "consulting":
         currentDownload = "https://beije-people-first.s3.eu-south-1.amazonaws.com/site/beije-people-first_presentazione_consulting.pdf"
         break;
@@ -79,7 +79,9 @@ const DownloadBtn = (props) => {
 
       <a
         href={switchDownload()}
-        download
+        download={true}
+        target={"_blank"}
+        rel="noreferrer"
       >
         {props.content}
       </a>
