@@ -40,17 +40,21 @@ const Home = (props) => {
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
+
     loadingAnimation();
 
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     window.addEventListener("scroll", handleScroll);
     props.dispatch(setCurrentPage(""));
     props.dispatch(setVisibilityNavbar(false));
+    props.dispatch(initColorHeader())
 
     const element = refDarkContainer.current;
     const fourthSectionP = element.querySelector('.home-fourth-section-p');
     const fifthSection = element.querySelector('.home-fifth-section-container-gsap');
     const fifthSectionFinalSpan = element.querySelector('.home-fifth-section-final-span-gsap')
+
+    console.log("element ref", element);
 
     gsap.timeline({
       scrollTrigger: {
@@ -74,7 +78,7 @@ const Home = (props) => {
       props.dispatch(initCurrentPage());
       props.dispatch(initVisibilityNavbar());
     }
-  }, [])
+  }, [state.loadingEnd])
 
   const loadingAnimation = () => {
     setTimeout(() => {
