@@ -92,6 +92,7 @@ const Home = (props) => {
 
   const handleScroll = () => {
     let elementTop = refDarkContainer.current.offsetTop;
+    
     if (window.pageYOffset >= elementTop) {
       props.dispatch(setColorHeader("#262E36"));
       props.dispatch(setVisibilityNavbar(true));
