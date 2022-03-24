@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
+
 // Redux
 import { setCurrentPage, initCurrentPage } from "../../redux/ducks/currentPageDuck";
 import { setVisibilityNavbar, initVisibilityNavbar } from "../../redux/ducks/showNavbarTopDuck";
@@ -84,7 +87,12 @@ const CaseStudiesDetail = (props) => {
               {state.caseStudiesResponse.subtitle}
             </h2>
             <p>
-              {state.caseStudiesResponse.description}
+              <ReactMarkdown
+                remarkPlugins={[remarkGfm]}
+              >
+                {state.caseStudiesResponse.description}
+              </ReactMarkdown>
+              {/* {state.caseStudiesResponse.description} */}
             </p>
           </Box>
         </Container>
