@@ -40,17 +40,21 @@ const Home = (props) => {
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
+
     loadingAnimation();
 
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     window.addEventListener("scroll", handleScroll);
     props.dispatch(setCurrentPage(""));
     props.dispatch(setVisibilityNavbar(false));
+    props.dispatch(initColorHeader())
 
     const element = refDarkContainer.current;
     const fourthSectionP = element.querySelector('.home-fourth-section-p');
     const fifthSection = element.querySelector('.home-fifth-section-container-gsap');
     const fifthSectionFinalSpan = element.querySelector('.home-fifth-section-final-span-gsap')
+
+    console.log("element ref", element);
 
     gsap.timeline({
       scrollTrigger: {
@@ -74,7 +78,7 @@ const Home = (props) => {
       props.dispatch(initCurrentPage());
       props.dispatch(initVisibilityNavbar());
     }
-  }, [])
+  }, [state.loadingEnd])
 
   const loadingAnimation = () => {
     setTimeout(() => {
@@ -82,7 +86,7 @@ const Home = (props) => {
         ...state,
         loadingEnd: true
       })
-    }, 2000)
+    }, 3000)
   }
 
   const handleScroll = () => {
@@ -109,11 +113,11 @@ const Home = (props) => {
 
   return (
     <>
-      {
-        !state.loadingEnd &&
-        <Loading />
-        // <div>Ciao</div>
-      }
+
+      <Loading
+        className={state.loadingEnd ? "loading-disappear" : "loading"}
+        classNameSingleWords={state.loadingEnd ? "loading-text-words-disappear" : "loading-text-words"}
+      />
 
 
       <Box
@@ -161,7 +165,6 @@ const Home = (props) => {
               <br />
               {t("home.secondSection.part3")}
             </span>
-            {/* <span>Lavoriamo costantemente per arrivare <br />alla piena soddisfazione <br />dei nostri clienti</span> */}
             <span className={"home-second-section-quotation-marks"}>&#8222;</span>
           </h3>
         </Container>

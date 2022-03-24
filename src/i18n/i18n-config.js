@@ -34,6 +34,9 @@ i18n
     resources,
     interpolation: {
       escapeValue: false // react already safes from xss
+    },
+    react: {
+      transSupportBasicHtmlNodes: true,
     }
   });
 

@@ -3,26 +3,26 @@ import React from "react";
 // Style
 import "./Loading.css";
 
-const Loading = () => {
+const Loading = (props) => {
   return (
-    <div className="loading">
+    <div className={props.className}>
       <div className="loading-text">
-        <span className="loading-text-words">B</span>
-        <span className="loading-text-words">E</span>
-        <span className="loading-text-words">I</span>
-        <span className="loading-text-words">J</span>
-        <span className="loading-text-words">E &nbsp;</span>
-        <span className="loading-text-words">P</span>
-        <span className="loading-text-words">E</span>
-        <span className="loading-text-words">O</span>
-        <span className="loading-text-words">P</span>
-        <span className="loading-text-words">L</span>
-        <span className="loading-text-words">E &nbsp;</span>
-        <span className="loading-text-words">F</span>
-        <span className="loading-text-words">I</span>
-        <span className="loading-text-words">R</span>
-        <span className="loading-text-words">S</span>
-        <span className="loading-text-words">T</span>
+        <span className={props.classNameSingleWords}>B</span>
+        <span className={props.classNameSingleWords}>E</span>
+        <span className={props.classNameSingleWords}>I</span>
+        <span className={props.classNameSingleWords}>J</span>
+        <span className={props.classNameSingleWords}>E &nbsp;</span>
+        <span className={props.classNameSingleWords}>P</span>
+        <span className={props.classNameSingleWords}>E</span>
+        <span className={props.classNameSingleWords}>O</span>
+        <span className={props.classNameSingleWords}>P</span>
+        <span className={props.classNameSingleWords}>L</span>
+        <span className={props.classNameSingleWords}>E &nbsp;</span>
+        <span className={props.classNameSingleWords}>F</span>
+        <span className={props.classNameSingleWords}>I</span>
+        <span className={props.classNameSingleWords}>R</span>
+        <span className={props.classNameSingleWords}>S</span>
+        <span className={props.classNameSingleWords}>T</span>
       </div>
     </div>
   )

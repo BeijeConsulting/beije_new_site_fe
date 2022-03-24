@@ -1,7 +1,6 @@
 import React from "react";
 
 // Constants and assets
-import { pdf_presentation_consulting, pdf_presentation_up } from "../../../utils/properties";
 import downloadConsultingIcon from "../../../assets/icons/consultingDownload.svg";
 import downloadUpIcon from "../../../assets/icons/upDownload.svg";
 import downloadAcademyIcon from "../../../assets/icons/academyDownload.svg";
@@ -32,15 +31,15 @@ const DownloadBtn = (props) => {
 
   const switchDownload = () => {
     let currentDownload = null;
-    switch (props.download) {
+    switch (props.typeSection) {
       case "consulting":
-        currentDownload = pdf_presentation_consulting
+        currentDownload = "https://beije-people-first.s3.eu-south-1.amazonaws.com/site/beije-people-first_presentazione_consulting.pdf"
         break;
       case "up":
-        currentDownload = pdf_presentation_up
+        currentDownload = "https://beije-people-first.s3.eu-south-1.amazonaws.com/site/beije-people-first_presentazione_up.pdf"
         break;
       case "academy":
-        currentDownload = pdf_presentation_up
+        currentDownload = "https://beije-people-first.s3.eu-south-1.amazonaws.com/site/beije-people-first_presentazione_consulting.pdf"
         break;
       default:
         currentDownload = ""
@@ -81,6 +80,8 @@ const DownloadBtn = (props) => {
       <a
         href={switchDownload()}
         download={true}
+        target={"_blank"}
+        rel="noreferrer"
       >
         {props.content}
       </a>

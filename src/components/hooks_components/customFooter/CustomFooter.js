@@ -13,12 +13,14 @@ import { Box } from '@mui/material';
 import './CustomFooter.css'
 
 // Constants and functions
-import { logo_primary_light, logo_secondary_light, legalNotes_en, legalNotes_it, privacyPolicies_en, privacyPolicies_it } from "../../../utils/properties";
+import { logo_primary_light, logo_secondary_light } from "../../../utils/properties";
 
 // Components
 import SwitchLang from "../switchLang/SwitchLang"
 import SocialLinks from "../../functional_components/socialLinks/SocialLinks";
 import CustomModal from "../customModal/CustomModal";
+import PrivacyPolicies from "../../functional_components/privacyPolicies/PrivacyPolicies";
+import LegalNotes from "../../functional_components/legalNotes/LegalNotes";
 
 const CustomFooter = (props) => {
   const { t } = useTranslation();
@@ -149,24 +151,11 @@ const CustomFooter = (props) => {
       >
         {
           props.modalDuck.typeModal === "privacyPolicies" &&
-
-          <object
-            data={t("modal.doc_lang") === "doc_it" ? privacyPolicies_it : privacyPolicies_en}
-            type="application/pdf"
-            height="100%"
-            width="100%"
-          >
-          </object>
+          <PrivacyPolicies />
         }
         {
           props.modalDuck.typeModal === "legalNotes" &&
-          <object
-            data={t("modal.doc_lang") === "doc_it" ? legalNotes_it : legalNotes_en}
-            type="application/pdf"
-            height="100%"
-            width="100%"
-          >
-          </object>
+          <LegalNotes />
         }
 
       </CustomModal>

@@ -18,12 +18,13 @@ import { Grid, Box, TextField, TextareaAutosize, FormControlLabel, Checkbox } fr
 import "./CustomForm.css";
 
 // Constants and functions
-import { googleReCaptchaKey, privacyPolicies_en, privacyPolicies_it } from "../../../utils/properties";
+import { googleReCaptchaKey } from "../../../utils/properties";
 import { toBase64 } from "../../../utils/utilities";
 
 // Components
 import CustomButton from "../../functional_components/ui/customButton/CustomButton";
 import CustomModal from "../customModal/CustomModal";
+import PrivacyPolicies from "../../functional_components/privacyPolicies/PrivacyPolicies";
 
 const CustomForm = (props) => {
   const { t } = useTranslation();
@@ -34,7 +35,7 @@ const CustomForm = (props) => {
     captchaCheck: false,
     captcha: undefined,
     captchaValue: '',
-    fileName: "nessun file selezionato",
+    fileName: "Nessun file selezionato",
     base64Value: null
   });
 
@@ -63,8 +64,8 @@ const CustomForm = (props) => {
       .required(t("form.errorMessage.email")),
     number: yup
       .number(t("form.errorMessage.numberInvalid")),
-    message: yup
-      .string('Enter your name'),
+    // message: yup
+    //   .string('Enter your name'),
     agreement: yup
       .boolean()
       .oneOf([true], t("form.errorMessage.agreement"))
@@ -97,12 +98,12 @@ const CustomForm = (props) => {
       city: values.town,
       surname: values.surname,
       cv: state.base64Value,
-      cv_name: state.fileName,
+      cv_name: state.fileName === "Nessun file selezionato" ? null : state.fileName,
       email: values.email,
       lang: "it",
       message: values.message,
       name: values.name,
-      origin: window.location.href,
+      origin: "test",
       privacy_check: values.agreement
     }
     console.log("send form data: ", formData)
@@ -297,7 +298,7 @@ const CustomForm = (props) => {
                   type="text"
                   placeholder={t("form.placeholder.message")}
                   value={formikContacts.values.message}
-                  error={formikContacts.touched.message && Boolean(formikContacts.errors.message)}
+                  // error={formikContacts.touched.message && Boolean(formikContacts.errors.message)}
                   onChange={formikContacts.handleChange}
                   onBlur={formikContacts.handleBlur}
 
@@ -381,13 +382,7 @@ const CustomForm = (props) => {
                 callbackClose={closeModal}
                 modalTitle={t("footer.privacyPolicies")}
               >
-                <object
-                  data={t("modal.doc_lang") === "doc_it" ? privacyPolicies_it : privacyPolicies_en}
-                  type="application/pdf"
-                  height="100%"
-                  width="100%"
-                >
-                </object>
+                <PrivacyPolicies />
               </CustomModal>
             </Grid>
             <Grid
