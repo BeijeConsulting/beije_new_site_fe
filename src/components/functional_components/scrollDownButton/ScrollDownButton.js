@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 // Style
 import "./ScrollDownButton.css"
@@ -13,9 +14,10 @@ import { downArrow } from "../../../utils/properties";
 import CustomButton from "../ui/customButton/CustomButton";
 
 const ScrollDownButton = (props) => {
+  const { t } = useTranslation();
   return (
     <CustomButton
-      content="Scroll Down"
+      content={t("btn.scroll")}
       endIcon={<FontAwesomeIcon icon={downArrow} />}
       className={"scrollDown-btn"}
       callback={props.callback}

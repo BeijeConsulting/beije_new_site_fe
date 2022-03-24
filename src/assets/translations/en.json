@@ -9,6 +9,10 @@
     "youWantLogout": "Do you want to exit the portal? ",
     "cancel": "Cancel"
   },
+  "btn": {
+    "send": "Send",
+    "scroll": "Scroll down"
+  },
   "contactInfo": {
     "location": "Where we are",
     "contact": "Contact us"
@@ -38,8 +42,7 @@
         "part1": "I have read and accept the ",
         "part2": "Treatment of my personal data"
       }
-    },
-    "btn": "Send"
+    }
   },
   "altImages": {
     "privacyPolicies": "Beije Privacy Policy",

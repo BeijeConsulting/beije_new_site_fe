@@ -9,6 +9,10 @@
     "youWantLogout": "Vuoi uscire dal portale?",
     "cancel": "Annulla"
   },
+  "btn": {
+    "send": "Invia",
+    "scroll": "scorri in basso"
+  },
   "contactInfo": {
     "location": "Dove siamo",
     "contact": "Contattaci"
@@ -37,8 +41,7 @@
         "part1": "Ho letto e accetto il ",
         "part2": "Trattamento dei miei dati personali"
       }
-    },
-    "btn": "Invia"
+    }
   },
   "altImages": {
     "privacyPolicies": "Beije Privacy Policy",

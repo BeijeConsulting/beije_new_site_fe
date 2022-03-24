@@ -120,7 +120,7 @@ const Home = (props) => {
 
 
       <Box
-        className={!state.loadingEnd ? "display-none" : ""}
+        // className={!state.loadingEnd ? "" : ""}
       >
         {/* First section with title */}
         <Container
