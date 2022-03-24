@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 // Style
@@ -27,6 +27,7 @@ const Blog = (props) => {
 
   const { t } = useTranslation();
   const location = useLocation();
+  const ref = useRef(null);
 
   const permalink = new URLSearchParams(location.search).get("article");
 
@@ -36,7 +37,7 @@ const Blog = (props) => {
   })
 
   useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
+    // window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
     props.dispatch(setCurrentPage("blog"));
     props.dispatch(setVisibilityNavbar(true));
 
@@ -74,6 +75,15 @@ const Blog = (props) => {
     return value;
   }
 
+  const scrollCarousel = (value) => {
+    ref.current.scrollLeft += value;
+    // console.log("ciao")
+    // document.getElementById("blog-detail-latest-articles-container").scrollRight += 100;
+    // console.log(container)
+    // container.scrollRight += 100
+    // scrollTo(Y: )
+  }
+
   return (
     <Box
       className={"bg-dark-grey margin-top-container-screens"}
@@ -81,10 +91,12 @@ const Blog = (props) => {
       <Container
         component={"section"}
         maxWidth={"false"}
-        className={"paddingX-container-general-pages blog-first-section-container"}
+        className={"paddingX-container-general-pages blog-first-section-container d-flex justify-center"}
       >
-        <h2>{t("blog.title")}</h2>
-        <p>{t("blog.description")}</p>
+        <Box className={"max-width-1200"}>
+          <h2>{t("blog.title")}</h2>
+          <p>{t("blog.description")}</p>
+        </Box>
       </Container>
 
       <Divider
@@ -97,69 +109,88 @@ const Blog = (props) => {
       {
         state.blogData &&
         <Container
-          className={"paddingX-container-general-pages blog-detail-second-section-container"}
+          className={"paddingX-container-general-pages blog-detail-second-section-container d-flex justify-center"}
           component={"article"}
         >
-          <Container
-            className={"blog-detail-image-container"}
-          >
-            <img
-              alt="blog image"
-              src={state.blogData.cover_img}
-            />
-          </Container>
-          <Box className={"blog-detail-text-container"}>
-            <h1>
-              {state.blogData.title}
-            </h1>
-            <h3>
-              {state.blogData.subtitle}
-            </h3>
-            <div className={"blog-card-text-postedby"}>
-              <FontAwesomeIcon icon={clock} className={"blog-card-clock-icon"} />{t("blog.postedBy")} {state.blogData.postedBy} {t("blog.postedOn")} {state.blogData.posted}
-            </div>
-            <div>
-              {state.blogData.description}
-            </div>
+          <Box className={"max-width-1200"}>
+            <Container
+              className={"blog-detail-image-container"}
+            >
+              <img
+                alt="blog image"
+                src={state.blogData.cover_img}
+              />
+            </Container>
+            <Box className={"blog-detail-text-container"}>
+              <h1>
+                {state.blogData.title}
+              </h1>
+              <h3>
+                {state.blogData.subtitle}
+              </h3>
+              <div className={"blog-card-text-postedby"}>
+                <FontAwesomeIcon icon={clock} className={"blog-card-clock-icon"} />{t("blog.postedBy")} {state.blogData.postedBy} {t("blog.postedOn")} {state.blogData.posted}
+              </div>
+              <div>
+                {state.blogData.description}
+              </div>
+            </Box>
           </Box>
         </Container>
       }
 
-      <Container
-        className={"paddingX-container-general-pages blog-detail-third-section-container"}
+      <Box
+        className={"paddingX-container-general-pages blog-detail-third-section-container d-flex justify-center"}
         component={"article"}
       >
-        <h3>{t("blog.latestArticles")}</h3>
-        {
-          !state.latestArticles &&
-          <Skeleton />
-        }
-        {
-          state.latestArticles &&
-          <Box>
-            {
-              state.latestArticles.map((post, i) => {
-                return (
-                  <div key={i} className={"blog-detail-third-section-carousel-card-container"}>
-                    <BlogCard
-                      permalink={post.permalink}
-                      src={post.cover_img}
-                      title={post.title}
-                      subtitle={post.subtitle}
-                      description={post.description}
-                      postedby={post.postedBy}
-                      posted={post.posted}
-                    />
-                  </div>
-                )
-              })
-            }
-          </Box>
+        <Box className={"width-100 max-width-1200"}>
+          <h3>{t("blog.latestArticles")}</h3>
+          {
+            !state.latestArticles &&
+            <Skeleton />
+          }
+          {
+            state.latestArticles &&
+            <Box className={"position-relative"}>
+              <Box className={"blog-detail-latest-articles-container"} ref={ref}>
+                {
+                  state.latestArticles.map((post, i) => {
+                    return (
+                      <div key={i} className={"blog-detail-third-section-carousel-card-container"}>
+                        <BlogCard
+                          permalink={post.permalink}
+                          src={post.cover_img}
+                          title={post.title}
+                          subtitle={post.subtitle}
+                          description={post.description}
+                          postedby={post.postedBy}
+                          posted={post.posted}
+                        />
+                      </div>
+                    )
+                  })
+                }
+              </Box>
+              <Box className={"blog-detail-latest-articles-buttons-container max-width-1200"}>
+                <button
+                  className={"blog-detail-latest-articles-left-button"}
+                  onClick={() => scrollCarousel(-345)}
+                >
+                  &#8249;
+                </button>
+                <button
+                  className={"blog-detail-latest-articles-right-button"}
+                  onClick={() => scrollCarousel(345)}
+                >
+                  &#8250;
+                </button>
+              </Box>
+            </Box>
+          }
+        </Box>
+      </Box>
 
-        }
-      </Container>
-
-    </Box>
+    </Box >
   )
 }
 

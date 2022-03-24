@@ -51,10 +51,12 @@ const Blog = (props) => {
       <Container
         component={"section"}
         maxWidth={"false"}
-        className={"paddingX-container-general-pages blog-first-section-container"}
+        className={"paddingX-container-general-pages blog-first-section-container d-flex justify-center"}
       >
-        <h1>{t("blog.title")}</h1>
-        <p>{t("blog.description")}</p>
+        <Box className={"max-width-1200"}>
+          <h1>{t("blog.title")}</h1>
+          <p>{t("blog.description")}</p>
+        </Box>
       </Container>
 
       <Divider
@@ -64,37 +66,37 @@ const Blog = (props) => {
       <Container
         component={"section"}
         maxWidth={"false"}
-        className={"paddingX-container-general-pages blog-second-section-container"}
+        className={"paddingX-container-general-pages d-flex justify-center"}
       >
-        {
-          !state.blogDataResponse &&
-          <>
-            <Skeleton variant="rectangular" width={300} height={200} />
-            <Skeleton />
-            <Skeleton width="60%" />
-          </>
-        }
-        {
-          state.blogDataResponse &&
-          state.blogDataResponse.map((post, index) => {
-            return (
-              <div key={index} className={"blog-second-section-card-container"}>
-                <BlogCard
-                  permalink={post.permalink}
-                  src={post.cover_img}
-                  title={post.title}
-                  subtitle={post.subtitle}
-                  description={post.description}
-                  postedby={post.postedBy}
-                  posted={post.posted}
-                />
-              </div>
-            )
-          })
-        }
+        <Box className={"width-100 max-width-1200 blog-second-section-container"}>
+          {
+            !state.blogDataResponse &&
+            <>
+              <Skeleton variant="rectangular" width={300} height={200} />
+              <Skeleton />
+              <Skeleton width="60%" />
+            </>
+          }
+          {
+            state.blogDataResponse &&
+            state.blogDataResponse.map((post, index) => {
+              return (
+                <div key={index} className={"blog-second-section-card-container"}>
+                  <BlogCard
+                    permalink={post.permalink}
+                    src={post.cover_img}
+                    title={post.title}
+                    subtitle={post.subtitle}
+                    description={post.description}
+                    postedby={post.postedBy}
+                    posted={post.posted}
+                  />
+                </div>
+              )
+            })
+          }
+        </Box>
       </Container>
-
-
     </Box>
   )
 }
