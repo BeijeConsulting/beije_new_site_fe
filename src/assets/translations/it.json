@@ -368,7 +368,12 @@
     "title": "Blog",
     "description": "Lorem ipsum dolor sit amet. Aut impedit totam ut consequuntur earum qui quis neque quo sint labore et sapiente dignissimos. Lorem ipsum dolor sit amet. Aut impedit totam ut consequuntur earum qui quis neque quo sint labore et sapiente dignissimos.",
     "postedBy": "Pubblicato da",
-    "postedOn": "il"
+    "postedOn": "il",
+    "latestArticles": "Ultimi articoli"
+  },
+  "community": {
+    "title": "Community",
+    "description": "Lorem ipsum dolor sit amet. Aut impedit totam ut consequuntur earum qui quis neque quo sint labore et sapiente dignissimos. Lorem ipsum dolor sit amet. Aut impedit totam ut consequuntur earum qui quis neque quo sint labore et sapiente dignissimos."
   },
   "academyFrontend": {
     "title": "Frontend",

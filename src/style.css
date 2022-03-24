@@ -127,6 +127,10 @@ h4, h5, h6, .minor-titles {
   font-family: var(--sofiaPro-regular);
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 /* @media (min-width: 768px) {} */
 
 @media (min-width: 768px) {
@@ -180,6 +184,10 @@ h4, h5, h6, .minor-titles {
 
 .min-height-main {
   min-height: 50vh;
+}
+
+.max-width-1200 {
+  max-width: 1200px;
 }
 
 /* Container FLEX */
