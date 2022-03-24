@@ -8,9 +8,6 @@ import { setCurrentPage, initCurrentPage } from "../../redux/ducks/currentPageDu
 import { setVisibilityNavbar, initVisibilityNavbar } from "../../redux/ducks/showNavbarTopDuck";
 import { connect } from "react-redux";
 
-// Api
-import { caseStudies_getList } from "../../services/api/ApiCalls";
-
 // MUI
 import { Box, Container } from "@mui/material";
 
@@ -43,8 +40,7 @@ const CaseStudiesDetail = (props) => {
 
   // Add async and await. Here add call to API
   const getCaseStudiesData = async () => {
-    // let caseStudiesResponse = caseStudiesTrialObj;
-    let caseStudiesResponse = await caseStudies_getList()
+    let caseStudiesResponse = caseStudiesTrialObj;
 
     caseStudiesResponse.map(findCaseStudy)
   }
