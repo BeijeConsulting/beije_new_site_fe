@@ -208,7 +208,7 @@ const TalentAcademy = (props) => {
             >
               <CustomForm
                 cvForm
-                formTitle={t("up.form.title")}
+                formTitle={t("form.title.apply")}
               />
             </Box>
           </Container>

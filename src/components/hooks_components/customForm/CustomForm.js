@@ -403,7 +403,7 @@ const CustomForm = (props) => {
             >
               <CustomButton
                 type={"btn-form-primary"}
-                content={t("form.btn")}
+                content={t("btn.send")}
                 callback={formikContacts.submitForm}
                 disabled={!(state.captchaCheck && formikContacts.isValid && formikContacts.dirty)}
               />
