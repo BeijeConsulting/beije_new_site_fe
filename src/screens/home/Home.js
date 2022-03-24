@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet";
 
 // Redux
 import { connect } from "react-redux";
@@ -112,6 +113,11 @@ const Home = (props) => {
 
   return (
     <>
+      <Helmet>
+        <title>{t('helmet.meta_title.home')}</title>
+        <meta name="description" content={t('helmet.meta_description.home')} />
+        <meta name="keywords" content={t('helmet.keywords.home')} />
+      </Helmet>
 
       <Loading
         className={state.loadingEnd ? "loading-disappear" : "loading"}
@@ -120,7 +126,7 @@ const Home = (props) => {
 
 
       <Box
-        // className={!state.loadingEnd ? "" : ""}
+      // className={!state.loadingEnd ? "" : ""}
       >
         {/* First section with title */}
         <Container

@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet";
 
 // Redux
 import { setCurrentPage, initCurrentPage } from "../../redux/ducks/currentPageDuck";
@@ -34,70 +35,77 @@ const Contacts = (props) => {
 
 
   return (
-    <Box
-      className={"bg-dark-grey margin-top-container-screens"}
-    >
-      <Container
-        component={"section"}
-        maxWidth={"false"}
-        className={"contacts-first-section-container paddingX-container-general-pages"}
+    <>
+      <Helmet>
+        <title>{t('helmet.meta_title.contacts')}</title>
+        <meta name="description" content={t('helmet.meta_description.contacts')} />
+        <meta name="keywords" content={t('helmet.keywords.contacts')} />
+      </Helmet>
+
+      <Box
+        className={"bg-dark-grey margin-top-container-screens"}
       >
+        <Container
+          component={"section"}
+          maxWidth={"false"}
+          className={"contacts-first-section-container paddingX-container-general-pages"}
+        >
 
-        <h1>Contatti</h1>
-        <Grid container>
-          <Grid
-            item
-            xs={12}
-            md={6}
-            className={"contacts-info-external-container"}
-          >
-            <Box
-              className={"contacts-info-container"}
+          <h1>Contatti</h1>
+          <Grid container>
+            <Grid
+              item
+              xs={12}
+              md={6}
+              className={"contacts-info-external-container"}
             >
-              <p>{t("contactInfo.location")}</p>
-              <p>Via Varese, 27/38</p>
-              <p>Lissone (MB)</p>
+              <Box
+                className={"contacts-info-container"}
+              >
+                <p>{t("contactInfo.location")}</p>
+                <p>Via Varese, 27/38</p>
+                <p>Lissone (MB)</p>
 
-              <p>{t("contactInfo.contact")}</p>
-              <p>job@beije.it</p>
-              <p>commerciale@beije.it</p>
-            </Box>
+                <p>{t("contactInfo.contact")}</p>
+                <p>job@beije.it</p>
+                <p>commerciale@beije.it</p>
+              </Box>
 
-            <Box
-              className={"contacts-links-container"}
+              <Box
+                className={"contacts-links-container"}
+              >
+                <CustomButton
+                  type={"btn-form-primary"}
+                  content={"Contattaci"}
+                  href={"mailto:hr@beije.it"}
+                />
+                <SocialLinks
+                  classNameSocialContainer={"contacts-socials-container"}
+                />
+              </Box>
+            </Grid>
+            <Grid
+              item
+              xs={12}
+              md={6}
+              className={"contacts-map-container"}
             >
-              <CustomButton
-                type={"btn-form-primary"}
-                content={"Contattaci"}
-                href={"mailto:hr@beije.it"}
-              />
-              <SocialLinks
-                classNameSocialContainer={"contacts-socials-container"}
-              />
-            </Box>
-          </Grid>
-          <Grid
-            item
-            xs={12}
-            md={6}
-            className={"contacts-map-container"}
-          >
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2791.0225292376213!2d9.231592751500617!3d45.61019123160779!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786b9a1b81342db%3A0x10fa075f2e281289!2sBeije!5e0!3m2!1sit!2sit!4v1647341464190!5m2!1sit!2sit"
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2791.0225292376213!2d9.231592751500617!3d45.61019123160779!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786b9a1b81342db%3A0x10fa075f2e281289!2sBeije!5e0!3m2!1sit!2sit!4v1647341464190!5m2!1sit!2sit"
 
-              width="100%"
-              height="100%"
-              // style="border:0;"
-              // allowfullscreen=""
-              loading="lazy"
-            />
+                width="100%"
+                height="100%"
+                // style="border:0;"
+                // allowfullscreen=""
+                loading="lazy"
+              />
+            </Grid>
+
           </Grid>
 
-        </Grid>
+        </Container>
 
-      </Container>
-
-      {/* <Container
+        {/* <Container
         component={"section"}
         maxWidth={"false"}
         className={"paddingX-container-general-pages"}
@@ -109,7 +117,9 @@ const Contacts = (props) => {
           />
         </Box>
       </Container> */}
-    </Box>
+      </Box>
+
+    </>
   )
 }
 

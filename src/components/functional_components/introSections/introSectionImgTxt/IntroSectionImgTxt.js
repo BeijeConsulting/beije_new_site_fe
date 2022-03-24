@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 // MUI
 import { Box } from "@mui/material";
@@ -9,10 +10,10 @@ import "../IntroSection.css";
 
 // Components
 import ScrollDownButton from "../../scrollDownButton/ScrollDownButton";
-// import CustomButton from "../../ui/customButton/CustomButton";
 import DownloadBtn from "../../downloadBtn/DownloadBtn";
 
 const IntroSectionImgTxt = (props) => {
+  const { t } = useTranslation()
 
   const switchClassNameSecName = () => {
     let currentClassName = null;
@@ -67,7 +68,7 @@ const IntroSectionImgTxt = (props) => {
 
         <Box className="intro-section-download-container">
           <DownloadBtn
-            content="Scarica la presentazione"
+            content={t("btn.downloadPwd")}
             bgIconDownload={props.bgIconDownload}
             typeSection={props.typeSection}
           />
