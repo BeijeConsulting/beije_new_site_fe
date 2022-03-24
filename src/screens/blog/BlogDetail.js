@@ -23,6 +23,9 @@ import { clock } from "../../utils/properties";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import BlogCard from "../../components/functional_components/blogCard/BlogCard";
 
+// API
+import ApiCalls from "../../services/api/ApiCalls";
+
 const Blog = (props) => {
 
   const { t } = useTranslation();
@@ -37,7 +40,7 @@ const Blog = (props) => {
   })
 
   useEffect(() => {
-    // window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
     props.dispatch(setCurrentPage("blog"));
     props.dispatch(setVisibilityNavbar(true));
 
@@ -52,10 +55,12 @@ const Blog = (props) => {
   const getData = async () => {
     let blogData;
     blogData = blogArrayTest[0];
-    // let blogData = await blog_getListDetail(permalink);
+    // let blogDataAPI = await ApiCalls.blog_getListDetail(permalink);
+    // console.log("AOCFHAEIOFVHOEWI", blogDataAPI)
 
-    // let blogDataResponse = await blog_getList();
-    // let latestArticles = removeThisBlogFromList(blogDataResponse);
+    // let blogDataResponseAPI = await ApiCalls.blog_getList(props.languageDuck.currentLanguage);
+    // console.log("WOFIUHWOFI", blogDataResponseAPI)
+    // let latestArticles = removeThisBlogFromList(blogDataResponseAPI);
 
     let latestArticles = removeThisBlogFromList(blogArrayTest);
 
@@ -77,11 +82,6 @@ const Blog = (props) => {
 
   const scrollCarousel = (value) => {
     ref.current.scrollLeft += value;
-    // console.log("ciao")
-    // document.getElementById("blog-detail-latest-articles-container").scrollRight += 100;
-    // console.log(container)
-    // container.scrollRight += 100
-    // scrollTo(Y: )
   }
 
   return (

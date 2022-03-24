@@ -1,11 +1,11 @@
 import { get, post } from "../GenericServices";
 
 const ApiCalls = {
-  blog_getList: () => {
-    return get("blogs");
+  blog_getList: (lang) => {
+    return get(`blogs/${lang}`);
   },
-  blog_getListDetail: (id) => {
-    return get(`blog/${id}`);
+  blog_getListDetail: (permalink) => {
+    return get(`blog/${permalink}`);
   },
 
   career_getList: () => {
@@ -26,8 +26,8 @@ const ApiCalls = {
     return get(`case_study/${id}`);
   },
 
-  community_getList: () => {
-    return get("communities");
+  community_getList: (lang) => {
+    return get(`communityL/${lang}`);
   },
   community_getListDetail: (id) => {
     return get(`community/${id}`);

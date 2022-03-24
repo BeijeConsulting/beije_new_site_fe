@@ -16,6 +16,9 @@ import { setCurrentPage, initCurrentPage } from "../../redux/ducks/currentPageDu
 import { setVisibilityNavbar, initVisibilityNavbar } from "../../redux/ducks/showNavbarTopDuck";
 import { connect } from "react-redux";
 
+// API
+import ApiCalls from "../../services/api/ApiCalls";
+
 const Blog = (props) => {
 
   const { t } = useTranslation();
@@ -37,7 +40,8 @@ const Blog = (props) => {
   }, [])
 
   const getBlogData = async () => {
-    // let blogDataResponse = await blog_getList();
+    let blogDataResponseAPI = await ApiCalls.blog_getList(props.languageDuck.currentLanguage);
+    console.log("AHHHHHHHHHHHHHH", blogDataResponseAPI);
     let blogDataResponse = blogArrayTest;
     setState({
       blogDataResponse: blogDataResponse
