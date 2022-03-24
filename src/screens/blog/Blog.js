@@ -42,10 +42,21 @@ const Blog = (props) => {
   const getBlogData = async () => {
     let blogDataResponseAPI = await ApiCalls.blog_getList(props.languageDuck.currentLanguage);
     console.log("AHHHHHHHHHHHHHH", blogDataResponseAPI);
+    // let blogDataResponse = blogDataResponseAPI;
     let blogDataResponse = blogArrayTest;
     setState({
       blogDataResponse: blogDataResponse
     })
+  }
+
+  const checkItemApi = (param) => {
+    let datePosted = ""
+    if (param.createDateTime) {
+      if (param.createDateTime.dayOfMonth && param.createDateTime.monthValue && param.createDateTime.year) {
+        datePosted = param.createDateTime.dayOfMonth + "/" + param.createDateTime.monthValue + "/" + param.createDateTime.year
+      }
+    }
+    return datePosted
   }
 
   return (
@@ -92,8 +103,8 @@ const Blog = (props) => {
                     title={post.title}
                     subtitle={post.subtitle}
                     description={post.description}
-                    postedby={post.postedBy}
-                    posted={post.posted}
+                    postedby={post.author}
+                    posted={checkItemApi(post)}
                   />
                 </div>
               )

@@ -1,13 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 // Style
 import './Community.css';
 
 // MUI
-import { Box, Container, Divider } from "@mui/material";
+import { Box, Container, Divider, Skeleton } from "@mui/material";
 
-// Components
+// Remove
 import communityArrayTest from "../../communityArrayTest.json";
 
 // Redux
@@ -16,7 +16,13 @@ import { setVisibilityNavbar, initVisibilityNavbar } from "../../redux/ducks/sho
 import { connect } from "react-redux";
 import BlogCard from "../../components/functional_components/blogCard/BlogCard";
 
+// Api
+import ApiCalls from "../../services/api/ApiCalls";
+
 const Community = (props) => {
+  const [state, setState] = useState({
+    communityDataResponse: null
+  })
 
   const { t } = useTranslation();
 
@@ -24,20 +30,24 @@ const Community = (props) => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
     props.dispatch(setCurrentPage("community"));
     props.dispatch(setVisibilityNavbar(true));
+
+    getDataCommunities()
+
     return () => {
       props.dispatch(initCurrentPage());
       props.dispatch(initVisibilityNavbar());
     };
   }, [])
 
-  const getValueFromLang = (values, lang) => {
-    let response;
-    values.map((value) => {
-      if (value.lang === lang) {
-        response = value.translation
-      }
+  const getDataCommunities = async () => {
+    let communityDataResponse = communityArrayTest;
+    // let communityDataResponse = await ApiCalls.community_getList(props.languageDuck.currentLanguage);
+    // console.log("communityDataResponse: ", communityDataResponse);
+
+    setState({
+      ...state,
+      communityDataResponse: communityDataResponse
     })
-    return response;
   }
 
   return (
@@ -63,14 +73,18 @@ const Community = (props) => {
         className={"paddingX-container-general-pages blog-second-section-container"}
       >
         {
-          communityArrayTest.map((event, index) => {
+          !state.communityDataResponse &&
+          <Skeleton />
+        }
+        {state.communityDataResponse &&
+          state.communityDataResponse.map((event, index) => {
             return (
               <div key={index} className={"blog-second-section-card-container"}>
                 <BlogCard
                   permalink={event.id}
                   src={event.image}
-                  title={getValueFromLang(event.title, props.languageDuck.currentLanguage)}
-                  description={getValueFromLang(event.description, props.languageDuck.currentLanguage)}
+                  title={event.title}
+                  description={event.description}
                   community
                 />
               </div>

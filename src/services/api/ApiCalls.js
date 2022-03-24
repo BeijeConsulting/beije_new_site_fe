@@ -29,8 +29,8 @@ const ApiCalls = {
   community_getList: (lang) => {
     return get(`communityL/${lang}`);
   },
-  community_getListDetail: (id) => {
-    return get(`community/${id}`);
+  community_getListDetail: (permalink) => {
+    return get(`community/${permalink}`);
   }
 }
 export default ApiCalls

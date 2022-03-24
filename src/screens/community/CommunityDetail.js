@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 // Style
@@ -14,6 +14,12 @@ import { setVisibilityNavbar, initVisibilityNavbar } from "../../redux/ducks/sho
 
 import Gallery from "react-grid-gallery";
 
+// Api
+import ApiCalls from "../../services/api/ApiCalls";
+
+// Remove
+import communityArrayTest from "../../communityArrayTest.json";
+
 const CommunityDetail = (props) => {
 
   const IMAGES =
@@ -22,14 +28,14 @@ const CommunityDetail = (props) => {
       thumbnail: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
       thumbnailWidth: 320,
       thumbnailHeight: 174,
-      caption: "Federica ubriaca"
+      caption: "Prova caption 1"
     },
     {
       src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
       thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
       thumbnailWidth: 320,
       thumbnailHeight: 212,
-      caption: "Federica che ci prova con Ivo"
+      caption: "Prova caption 2"
     },
     {
       src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
@@ -58,16 +64,36 @@ const CommunityDetail = (props) => {
 
   const { t } = useTranslation();
 
+  const [state, setState] = useState({
+    communityDetailDataResponse: null
+  })
+
+  const permalink = new URLSearchParams(location.search).get("event");
+
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
     props.dispatch(setCurrentPage("community"));
     props.dispatch(setVisibilityNavbar(true));
+
+    getCommunityData()
 
     return () => {
       props.dispatch(initCurrentPage());
       props.dispatch(initVisibilityNavbar());
     };
   }, [])
+
+  const getCommunityData = async () => {
+    // let communityDetailDataResponse = await ApiCalls.community_getListDetail(permalink)
+    // console.log("communityDetailDataResponse: ", communityDetailDataResponse);
+
+    let communityDetailDataResponse = communityArrayTest;
+
+    setState({
+      ...state,
+      communityDetailDataResponse: communityDetailDataResponse
+    })
+  }
 
   return (
     <Box

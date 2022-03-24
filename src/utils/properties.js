@@ -117,7 +117,7 @@ export const menu_voices = [
   },
   {
     name: "community",
-    link_to: "#",
+    link_to: "community",
     key_link: "community"
   },
   // {
