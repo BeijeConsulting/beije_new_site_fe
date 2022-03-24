@@ -64,6 +64,11 @@
     "doc_lang": "doc_it"
   },
   "form": {
+    "title": {
+      "contacts": "Contattaci",
+      "info": "Richiedi maggiori informazioni",
+      "apply": "Invia la tua candidatura"
+    },
     "errorMessage": {
       "name": "Nome obbligatorio",
       "surname": "Cognome obbligatorio",
@@ -242,9 +247,6 @@
           "desc": "Dammi tre parole: fashion, danza e carbonara."
         }
       }
-    },
-    "form": {
-      "title": "Contattaci"
     }
   },
   "up": {
@@ -301,8 +303,8 @@
       "part19": "projects on ",
       "part20": "Amazon Web Services."
     },
-    "form": {
-      "title": "Richiedi maggiori informazioni"
+    "commentsSection": {
+      "title": "Dicono di noi"
     }
   },
   "consulting": {
@@ -484,6 +486,9 @@
         "subsection10": "AJAX: utilizzo del comando fetch per le chiamate asincrone"
       }
     }
+  },
+  "career": {
+    "title": "Posizioni aperte"
   },
   "privacyPolicies": {
     "list1": {

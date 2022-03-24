@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 // Redux
 import { setCurrentPage, initCurrentPage } from "../../redux/ducks/currentPageDuck";
@@ -20,6 +21,8 @@ import CustomButton from "../../components/functional_components/ui/customButton
 import careerTrialObj from "./careerTrialObj.json"
 
 const Career = (props) => {
+
+  const { t } = useTranslation();
 
   const [state, setState] = useState({
     buttonSelected: "academy"
@@ -88,7 +91,7 @@ const Career = (props) => {
         maxWidth={"false"}
         className={"career-second-section paddingX-container-general-pages"}
       >
-        <h3>Posizioni aperte</h3>
+        <h3>{t("career.title")}</h3>
         <CustomTable
           isAcademy={state.buttonSelected === "academy"}
           // obj={state.buttonSelected === "academy" ? academyObj : jobObj}

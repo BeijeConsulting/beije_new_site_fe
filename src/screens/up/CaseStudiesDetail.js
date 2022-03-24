@@ -39,7 +39,7 @@ const CaseStudiesDetail = (props) => {
   }, [])
 
   // Add async and await. Here add call to API
-  const getCaseStudiesData = () => {
+  const getCaseStudiesData = async () => {
     let caseStudiesResponse = caseStudiesTrialObj;
 
     caseStudiesResponse.map(findCaseStudy)
@@ -92,7 +92,6 @@ const CaseStudiesDetail = (props) => {
               >
                 {state.caseStudiesResponse.description}
               </ReactMarkdown>
-              {/* {state.caseStudiesResponse.description} */}
             </p>
           </Box>
         </Container>
