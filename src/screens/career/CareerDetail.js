@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 // Redux
 import { setCurrentPage, initCurrentPage } from "../../redux/ducks/currentPageDuck";
@@ -8,13 +9,19 @@ import { connect } from "react-redux";
 // MUI
 import { Box, Container } from "@mui/material";
 
-// Stayle
+// Style
 import "./Career.css";
+
+// Components
+import CustomForm from "../../components/hooks_components/customForm/CustomForm";
+import GoBackBtn from "../../components/functional_components/goBackBtn/GoBackBtn";
 
 // Remove
 import careerTrialObj from "./careerTrialObj.json";
 
 const CareerDeatil = (props) => {
+  const { t } = useTranslation();
+
   const [state, setState] = useState({
     careerResponse: null
   })
@@ -62,11 +69,12 @@ const CareerDeatil = (props) => {
         maxWidth={"false"}
         className={"career-detail-container paddingX-container-general-pages"}
       >
-        <p
+        <GoBackBtn />
+        {/* <p
           className="career-detail-tag"
         >
           Job Opportunities
-        </p>
+        </p> */}
         {
           state.careerResponse &&
           <>
@@ -83,6 +91,21 @@ const CareerDeatil = (props) => {
             </Box>
           </>
         }
+      </Container>
+
+      <Container
+        component={"section"}
+        maxWidth={"false"}
+        className={"up-sixth-section-container paddingX-container-general-pages"}
+      >
+        <Box
+          className={"academy-sixth-section-box-form"}
+        >
+          <CustomForm
+            cvForm
+            formTitle={t("form.title.apply")}
+          />
+        </Box>
       </Container>
     </Box>
   )

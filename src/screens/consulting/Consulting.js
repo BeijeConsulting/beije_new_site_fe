@@ -191,7 +191,7 @@ const Consulting = (props) => {
           >
             <Box>
               <CustomForm
-                formTitle={t("consulting.contactFormTitle")}
+                formTitle={t("form.title.info")}
               />
             </Box>
           </Container>

@@ -197,7 +197,7 @@ const Up = (props) => {
             className={"up-third-section paddingX-container-general-pages bg-blue top-oblique-line"}
           >
             <Box>
-              <h2>Dicono di noi</h2>
+              <h2>{t("up.commentsSection.title")}</h2>
             </Box>
 
             <Box>
@@ -241,7 +241,7 @@ const Up = (props) => {
               className={"up-sixth-section-box-form"}
             >
               <CustomForm
-                formTitle={t("up.form.title")}
+                formTitle={t("form.title.info")}
               />
             </Box>
           </Container>

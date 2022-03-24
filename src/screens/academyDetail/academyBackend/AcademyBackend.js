@@ -105,7 +105,7 @@ const AcademyBackend = (props) => {
           >
             <CustomForm
               cvForm
-              formTitle={"Invia la tua candidatura"}
+              formTitle={t("form.title.apply")}
             />
           </Container>
         </div>

@@ -20,7 +20,7 @@ const ApiCalls = {
   },
 
   caseStudies_getList: () => {
-    return get("case_studies");
+    return get("casestudies");
   },
   caseStudies_getListDetail: (id) => {
     return get(`case_study/${id}`);
