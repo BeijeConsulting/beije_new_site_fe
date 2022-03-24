@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet";
 
 // Redux
 import { setCurrentPage, initCurrentPage } from "../../../redux/ducks/currentPageDuck";
@@ -46,63 +47,70 @@ const AcademyBackend = (props) => {
 
 
   return (
+    <>
+      <Helmet>
+        <title>{t('helmet.meta_title.academy_backend')}</title>
+        <meta name="description" content={t('helmet.meta_description.academy_backend')} />
+        <meta name="keywords" content={t('helmet.keywords.academy_backend')} />
+      </Helmet>
 
-    <Box
-      className={"bg-dark-grey margin-top-container-screens"}
-    >
 
-      {/* First section Img + text*/}
-      < Container
-        component={"section"}
-        maxWidth={"false"}
-        className={"paddingX-container-general-pages"}
+      <Box
+        className={"bg-dark-grey margin-top-container-screens"}
       >
 
-        <IntroSectionTxtInfoGraphic
-          typeSection="academy"
-          sectionName="Beije talent academy"
-          sectionTitle={t("academyBackend.title")}
-          callback={scrollToSection}
-          paragraph1Title={t("academyBackend.titleParagraph1")}
-          paragraph2Title={t("academyBackend.titleParagraph2")}
-          paragraph1Txt={t("academyBackend.paragraph1Txt")}
-          obj={academyCourseStructure}
-          srcImage={infoGraphicBackend}
-        >
-
-        </IntroSectionTxtInfoGraphic>
-      </Container>
-      <div
-        className="bg-dark-grey position-relative"
-        ref={secondContainerRef}
-      >
-
-        {/* Second section accordion */}
+        {/* First section Img + text*/}
         < Container
           component={"section"}
           maxWidth={"false"}
-          className={"detail-academy-second-section paddingX-container-general-pages"}
+          className={"paddingX-container-general-pages"}
         >
-          <h2>Programma</h2>
-          <CustomAccordion
-            obj={programBackendAcademy}
-          />
-        </Container>
 
-        {/* Third section form */}
-        < Container
-          component={"section"}
-          maxWidth={"false"}
-          className={"detail-academy-third-section paddingX-container-general-pages top-oblique-line bg-yellow"}
+          <IntroSectionTxtInfoGraphic
+            typeSection="academy"
+            sectionName="Beije talent academy"
+            sectionTitle={t("academyBackend.title")}
+            callback={scrollToSection}
+            paragraph1Title={t("academyBackend.titleParagraph1")}
+            paragraph2Title={t("academyBackend.titleParagraph2")}
+            paragraph1Txt={t("academyBackend.paragraph1Txt")}
+            obj={academyCourseStructure}
+            srcImage={infoGraphicBackend}
+          >
+
+          </IntroSectionTxtInfoGraphic>
+        </Container>
+        <div
+          className="bg-dark-grey position-relative"
+          ref={secondContainerRef}
         >
-          <CustomForm
-            cvForm
-            formTitle={"Invia la tua candidatura"}
-          />
-        </Container>
-      </div>
-    </Box >
 
+          {/* Second section accordion */}
+          < Container
+            component={"section"}
+            maxWidth={"false"}
+            className={"detail-academy-second-section paddingX-container-general-pages"}
+          >
+            <h2>Programma</h2>
+            <CustomAccordion
+              obj={programBackendAcademy}
+            />
+          </Container>
+
+          {/* Third section form */}
+          < Container
+            component={"section"}
+            maxWidth={"false"}
+            className={"detail-academy-third-section paddingX-container-general-pages top-oblique-line bg-yellow"}
+          >
+            <CustomForm
+              cvForm
+              formTitle={"Invia la tua candidatura"}
+            />
+          </Container>
+        </div>
+      </Box >
+    </>
   )
 }
 

@@ -72,8 +72,9 @@ const SimpleCarousel = (props) => {
       navButtonsAlwaysInvisible={state.isDesktop ? false : true}
       indicators={state.isDesktop ? false : true}
       className={"simple-carousel-container"}
-      autoPlay={false}
-      style={{ height: "500px" }}
+      autoPlay={true}
+      stopAutoPlayOnHover={true}
+      style={{ minHeight: "600px" }}
       cycleNavigation
     >
       {

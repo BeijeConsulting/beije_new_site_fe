@@ -47,7 +47,8 @@
 }
 
 .loading-text-words-disappear {
-  animation: fadeOut 0.5s linear;
+  display: none;
+  /* animation: fadeOut 0.5s linear; */
 }
 
 @keyframes fadeOut {

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet";
 
 // Style
 import './Consulting.css'
@@ -84,111 +85,119 @@ const Consulting = (props) => {
   }
 
   return (
-    <Box
-      className={"bg-dark-grey margin-top-container-screens"}
-      ref={refCountUp}
-    >
+    <>
+      <Helmet>
+        <title>{t('helmet.meta_title.consulting')}</title>
+        <meta name="description" content={t('helmet.meta_description.consulting')} />
+        <meta name="keywords" content={t('helmet.keywords.consulting')} />
+      </Helmet>
 
-      {/* First section Img + text*/}
-      < Container
-        component={"section"}
-        maxWidth={"false"}
-        className={"padding-0"}
+      <Box
+        className={"bg-dark-grey margin-top-container-screens"}
+        ref={refCountUp}
       >
-        <IntroSectionImgTxt
-          typeSection="consulting"
-          classNameBgImgDesktop="intro-section-img-consulting"
-          classNameBgImgMobile="intro-section-img-consulting"
-          bgIconDownload="download-btn-icon-consulting"
-          sectionName="Beije Consulting"
-          sectionTitle={t("consulting.title")}
-          callback={scrollToSection}
-          download={"consulting"}
-        >
-          <div className="consulting-first-section-description-container">
-            <p>{t("consulting.intro.part1")} <span className="text-lightblue">{t("consulting.intro.part2")}</span> {t("consulting.intro.part3")}</p>
-          </div>
-        </IntroSectionImgTxt>
-      </Container>
 
-      <div
-        className="bg-dark-grey position-relative"
-        ref={secondContainerRef}
-      >
-        {/* Second section */}
-        <Container
-          component={"section"}
-          maxWidth={"false"}
-          className={"paddingX-container-general-pages"}
-        >
-          <Box className="consulting-second-section-all-texts-container">
-            <Box
-              className="consulting-second-section-text-container"
-            >
-              <p>{t("consulting.firstSection.description")}</p>
-            </Box>
-
-            <Box
-              className="consulting-second-section-text-list-container up-second-section-text2-container titles-level-1-2"
-            >
-              <p>{t("consulting.firstSection.list.element1")}</p>
-              <p>{t("consulting.firstSection.list.element2")}</p>
-              <p>{t("consulting.firstSection.list.element3")}</p>
-              <p>{t("consulting.firstSection.list.element4")}</p>
-            </Box>
-          </Box>
-        </Container>
-
-        {/* Third section */}
-        <Container
-          component={"section"}
-          maxWidth={"false"}
-          className={"consulting-third-section paddingX-container-general-pages bg-lightblue top-oblique-line"}
-        >
-          <PercentageContainer
-            percentageContainer1Title={t("consulting.percentageBox.title1")}
-            percentageContainer1Subtitle={t("consulting.percentageBox.subtitle")}
-            percentage1={"96,5"}
-            percentage2={"92,2"}
-            percentage3={"89,3"}
-          />
-          <PercentageContainer
-            percentageContainer1Title={t("consulting.percentageBox.title2")}
-            percentageContainer1Subtitle={t("consulting.percentageBox.subtitle")}
-            percentage1={"100"}
-            percentage2={"94"}
-            percentage3={"100"}
-            right
-          />
-        </Container>
-
-        {/* Fourth section */}
-        <Container
+        {/* First section Img + text*/}
+        < Container
           component={"section"}
           maxWidth={"false"}
           className={"padding-0"}
         >
-          <Box className="consulting-fourth-section-banner">
-            <div className="consulting-fourth-section-banner-text">
-              {t("consulting.bannerTitle")}
+          <IntroSectionImgTxt
+            typeSection="consulting"
+            classNameBgImgDesktop="intro-section-img-consulting"
+            classNameBgImgMobile="intro-section-img-consulting"
+            bgIconDownload="download-btn-icon-consulting"
+            sectionName="Beije Consulting"
+            sectionTitle={t("consulting.title")}
+            callback={scrollToSection}
+            download={"consulting"}
+          >
+            <div className="consulting-first-section-description-container">
+              <p>{t("consulting.intro.part1")} <span className="text-lightblue">{t("consulting.intro.part2")}</span> {t("consulting.intro.part3")}</p>
             </div>
-          </Box>
+          </IntroSectionImgTxt>
         </Container>
 
-        {/* Fifth section with form*/}
-        <Container
-          component={"section"}
-          maxWidth={"false"}
-          className={"home-seventh-section-container paddingX-container-general-pages"}
+        <div
+          className="bg-dark-grey position-relative"
+          ref={secondContainerRef}
         >
-          <Box>
-            <CustomForm
-              formTitle={t("consulting.contactFormTitle")}
+          {/* Second section */}
+          <Container
+            component={"section"}
+            maxWidth={"false"}
+            className={"paddingX-container-general-pages"}
+          >
+            <Box className="consulting-second-section-all-texts-container">
+              <Box
+                className="consulting-second-section-text-container"
+              >
+                <p>{t("consulting.firstSection.description")}</p>
+              </Box>
+
+              <Box
+                className="consulting-second-section-text-list-container up-second-section-text2-container titles-level-1-2"
+              >
+                <p>{t("consulting.firstSection.list.element1")}</p>
+                <p>{t("consulting.firstSection.list.element2")}</p>
+                <p>{t("consulting.firstSection.list.element3")}</p>
+                <p>{t("consulting.firstSection.list.element4")}</p>
+              </Box>
+            </Box>
+          </Container>
+
+          {/* Third section */}
+          <Container
+            component={"section"}
+            maxWidth={"false"}
+            className={"consulting-third-section paddingX-container-general-pages bg-lightblue top-oblique-line"}
+          >
+            <PercentageContainer
+              percentageContainer1Title={t("consulting.percentageBox.title1")}
+              percentageContainer1Subtitle={t("consulting.percentageBox.subtitle")}
+              percentage1={"96,5"}
+              percentage2={"92,2"}
+              percentage3={"89,3"}
             />
-          </Box>
-        </Container>
-      </div>
-    </Box>
+            <PercentageContainer
+              percentageContainer1Title={t("consulting.percentageBox.title2")}
+              percentageContainer1Subtitle={t("consulting.percentageBox.subtitle")}
+              percentage1={"100"}
+              percentage2={"94"}
+              percentage3={"100"}
+              right
+            />
+          </Container>
+
+          {/* Fourth section */}
+          <Container
+            component={"section"}
+            maxWidth={"false"}
+            className={"padding-0"}
+          >
+            <Box className="consulting-fourth-section-banner">
+              <div className="consulting-fourth-section-banner-text">
+                {t("consulting.bannerTitle")}
+              </div>
+            </Box>
+          </Container>
+
+          {/* Fifth section with form*/}
+          <Container
+            component={"section"}
+            maxWidth={"false"}
+            className={"home-seventh-section-container paddingX-container-general-pages"}
+          >
+            <Box>
+              <CustomForm
+                formTitle={t("consulting.contactFormTitle")}
+              />
+            </Box>
+          </Container>
+        </div>
+      </Box>
+    </>
   )
 }
 

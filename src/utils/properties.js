@@ -8,7 +8,7 @@ import logo_short_grey from "../assets/images/logos/logo_short_grey.svg";
 import logo_short_transparent from "../assets/images/logos/logo_short_transparent.svg";
 import { faFacebookF, faLinkedinIn, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faN, faArrowDownLong, faAngleLeft, faAngleRight, faPlus, faArrowLeft, faMinus, faClock } from '@fortawesome/free-solid-svg-icons';
-import quotation_mark from "../assets/icons/quote.png";
+import quotation_mark from "../assets/icons/quote.svg";
 import logo_pininfarina from "../assets/images/up/caseStudies/pininfarina.jpg";
 import logo_youthquake from "../assets/images/up/caseStudies/youthquake.jpg";
 import infoGraphic2 from "../assets/images/academyDetail/infoGraphicAcademyFrontend.svg"
@@ -530,24 +530,14 @@ export const carouselProfile = [
 
 export const clientComments = [
   {
-    name: "Name",
-    surname: "Surname",
-    content: "1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar lorem quis metus mollis commodo. Duis eget quam faucibus, vulputate augue et, imperdiet elit. Nam faucibus ipsum enim, at aliquam lorem dictum at. Vestibulum bibendum eu purus vel mattis. Ut at tortor et neque bibendum ultricies id id diam."
+    name: "Francesco Pancaro,",
+    surname: "Head of Financial Planning & Control",
+    content: "Il progetto è stato seguito da un team professionale, organizzato e disponibile. Ci hanno seguiti in ogni fase del progetto arrivando sempre puntuali e offrendoci soluzioni ottimali dando un risultato ben oltre le aspettative"
   },
   {
-    name: "Name",
-    surname: "Surname",
-    content: "2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar lorem quis metus mollis commodo. Duis eget quam faucibus, vulputate augue et, imperdiet elit. Nam faucibus ipsum enim, at aliquam lorem dictum at. Vestibulum bibendum eu purus vel mattis. Ut at tortor et neque bibendum ultricies id id diam."
-  },
-  {
-    name: "Name",
-    surname: "Surname",
-    content: "3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar lorem quis metus mollis commodo. Duis eget quam faucibus, vulputate augue et, imperdiet elit. Nam faucibus ipsum enim, at aliquam lorem dictum at. Vestibulum bibendum eu purus vel mattis. Ut at tortor et neque bibendum ultricies id id diam."
-  },
-  {
-    name: "Name",
-    surname: "Surname",
-    content: "4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar lorem quis metus mollis commodo. Duis eget quam faucibus, vulputate augue et, imperdiet elit. Nam faucibus ipsum enim, at aliquam lorem dictum at. Vestibulum bibendum eu purus vel mattis. Ut at tortor et neque bibendum ultricies id id diam. "
+    name: "Matteo Milione,",
+    surname: "Managing Partner",
+    content: "Quella con Beije e’ stata una collaborazione super efficiente grazia alla ottima sinergia con il nostro team interno e alla condivisione della stessa visione progettuale."
   }
 ]
 

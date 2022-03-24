@@ -9,6 +9,36 @@
     "youWantLogout": "Do you want to exit the portal? ",
     "cancel": "Cancel"
   },
+  "helmet": {
+    "meta_title": {
+      "home": "Beije – People First",
+      "consulting": "Consulting – Beije People First",
+      "academy": "Academy – Beije People First",
+      "academy_backend": "Master frontend– Beije People First",
+      "academy_frontend": "Master backend – Beije People First",
+      "up": "Up – Beije People First",
+      "whoweare": "About us – Beije People First"
+    },
+    "meta_description": {
+      "home": "",
+      "consulting": "",
+      "academy": "",
+      "up": "",
+      "whoweare": ""
+    },
+    "keywords": {
+      "home": "",
+      "consulting": "",
+      "academy": "",
+      "up": "",
+      "whoweare": ""
+    }
+  },
+  "btn": {
+    "send": "Send",
+    "scroll": "Scroll down",
+    "downloadPwd": "Download the presentation"
+  },
   "contactInfo": {
     "location": "Where we are",
     "contact": "Contact us"
@@ -38,8 +68,7 @@
         "part1": "I have read and accept the ",
         "part2": "Treatment of my personal data"
       }
-    },
-    "btn": "Send"
+    }
   },
   "altImages": {
     "privacyPolicies": "Beije Privacy Policy",
