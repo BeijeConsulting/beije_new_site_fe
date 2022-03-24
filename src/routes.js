@@ -15,6 +15,8 @@ import BlogDetail from "./screens/blog/BlogDetail";
 import { Navigate } from "react-router-dom";
 import Community from "./screens/community/Community";
 import CommunityDetail from "./screens/community/CommunityDetail";
+import CareerDetail from "./screens/career/CareerDetail";
+import CaseStudiesDetail from "./screens/up/CaseStudiesDetail";
 
 export default [
   {
@@ -24,41 +26,23 @@ export default [
       { index: true, element: <Home /> },
       {
         path: "/beije-consulting",
-        element: <Consulting />,
-        // children: [
-        //   { index: true, element: <CoursesIndex /> },
-        //   { path: "/courses/:id", element: <Course /> }
-        // ]
+        element: <Consulting />
       },
       {
         path: "/beije-up",
-        element: <Up />,
-        // children: [
-        //   { index: true, element: <CoursesIndex /> },
-        //   { path: "/courses/:id", element: <Course /> }
-        // ]
+        element: <Up />
+      },
+      {
+        path: "/beije-up/case-studies",
+        element: <RequireCaseStudiesPermalink><CaseStudiesDetail /></RequireCaseStudiesPermalink>
       },
       {
         path: "/beije-talent-academy",
-        element: <TalentAcademy />,
-        // children: [
-        //   { index: true, element: <TalentAcademy /> },
-        //   {
-        //     path: "/beije-talent-academy/academy-frontend",
-        //     element: <AcademyFrontend />
-        //   }
-        // ]
+        element: <TalentAcademy />
       },
       {
         path: "/beije-talent-academy/academy-frontend",
-        element: <AcademyFrontend />,
-        // children: [
-        //   { index: true, element: <TalentAcademy /> },
-        //   {
-        //     path: "/beije-talent-academy/academy-frontend",
-        //     element: <AcademyFrontend />
-        //   }
-        // ]
+        element: <AcademyFrontend />
       },
       {
         path: "/blog",
@@ -78,45 +62,28 @@ export default [
       },
       {
         path: "/beije-talent-academy/academy-backend",
-        element: <AcademyBackend />,
-        // children: [
-        //   { index: true, element: <TalentAcademy /> },
-        //   {
-        //     path: "/beije-talent-academy/academy-frontend",
-        //     element: <AcademyFrontend />
-        //   }
-        // ]
+        element: <AcademyBackend />
       },
       {
         path: "/career",
-        element: <Career />,
-        // children: [
-        //   { index: true, element: <TalentAcademy /> },
-        //   {
-        //     path: "/beije-talent-academy/academy-frontend",
-        //     element: <AcademyFrontend />
-        //   }
-        // ]
+        element: <Career />
+      },
+      {
+        path: "/career/career-detail",
+        element: <RequireCareerPermalink><CareerDetail /></RequireCareerPermalink>
       },
       {
         path: "/contacts",
-        element: <Contacts />,
-        // children: [
-        //   { index: true, element: <TalentAcademy /> },
-        //   {
-        //     path: "/beije-talent-academy/academy-frontend",
-        //     element: <AcademyFrontend />
-        //   }
-        // ]
+        element: <Contacts />
       },
-      { path: "*", element: <NoMatch /> }
+      { path: "*", element: <RedirectUrlNewSite><NoMatch /></RedirectUrlNewSite> }
     ]
   }
 ];
 
 function RequireBlogPermalink({ children }) {
   let permalink = new URLSearchParams(location.search).get("article");
-  if(!permalink) {
+  if (!permalink) {
     return <Navigate to={`/blog`} />
   }
 
@@ -125,9 +92,51 @@ function RequireBlogPermalink({ children }) {
 
 function RequireCommunityPermalink({ children }) {
   let permalink = new URLSearchParams(location.search).get("event");
-  if(!permalink) {
+  if (!permalink) {
     return <Navigate to={`/community`} />
   }
 
   return children;
+}
+
+function RequireCareerPermalink({ children }) {
+  let permalink = new URLSearchParams(location.search).get("jobOffer");
+  if (!permalink) {
+    return <Navigate to={`/career`} />
+  }
+
+  return children;
+}
+
+function RequireCaseStudiesPermalink({ children }) {
+  let permalink = new URLSearchParams(location.search).get("caseStudy");
+  if (!permalink) {
+    return <Navigate to={`/beije-up`} />
+  }
+
+  return children;
+}
+
+
+
+function RedirectUrlNewSite({ children }) {
+  let oldUrl = window.location.pathname;
+  switch (oldUrl.substring(3)) {
+    case "/home/consulting":
+      location.href = "/beije-consulting";
+      break;
+    case "/portfolio-articoli/academy - java":
+      location.href = "/beije-talent-academy";
+      break;
+    case "/home/community":
+      location.href = "/beije-community";
+      break;
+    case "/home/up":
+      location.href = "/beije-up";
+      break;
+    case "/home/academy":
+      location.href = "/beije-talent-academy";
+      break;
+  }
+  return children
 }

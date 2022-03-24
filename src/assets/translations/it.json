@@ -23,7 +23,7 @@
       "surname": "Cognome obbligatorio",
       "email": "Email obbligatoria",
       "emailInvalid": "Email invalida",
-      "town": "Città obbligatoria",
+      "numberInvalid": "Numero invalido",
       "agreement": "I Termini e le Condizioni devono essere accettate"
     },
     "placeholder": {
@@ -31,6 +31,7 @@
       "surname": "Cognome",
       "email": "Email",
       "town": "Città",
+      "number": "Numero di telefono",
       "message": "Scrivi qui il tuo messaggio",
       "agreement": {
         "part1": "Ho letto e accetto il ",
@@ -260,7 +261,7 @@
     }
   },
   "consulting": {
-    "title": "Titolo Ipsum Lorem",
+    "title": "Persone di valore per progetti di valore",
     "intro": {
       "part1": "I nostri consulenti Beije forniscono",
       "part2": "consulenza informatica",
@@ -302,8 +303,7 @@
     "thirdSection": {
       "title1": "Le nostre academy",
       "link1": "Academy Frontend",
-      "link2": "Academy Backend",
-      "title2": "I nostri prossimi corsi"
+      "link2": "Academy Backend"
     },
     "fourthSection": {
       "title": "Dicono di noi",
@@ -331,16 +331,14 @@
     "description": "Lorem ipsum dolor sit amet. Aut impedit totam ut consequuntur earum qui quis neque quo sint labore et sapiente dignissimos. Lorem ipsum dolor sit amet. Aut impedit totam ut consequuntur earum qui quis neque quo sint labore et sapiente dignissimos."
   },
   "academyFrontend": {
-    "title": "Academy Frontend",
+    "title": "Frontend",
     "titleParagraph1": "Diventa Frontend developer con noi!",
     "paragraph1Txt": "3 mesi di crescita professionale, formazione costante attraverso progetti individuali e di gruppo, utilizzo delle tecnologie più richieste dal mercato.",
-    "titleParagraph2": "Struttura del corso",
+    "titleParagraph2": "Struttura",
     "table": {
-      "row1Title": "Academy",
-      "row2Title": "Compenso",
+      "row1Title": "Durata",
       "row3Title": "Modalità",
       "row1Desc": "Academy di 3 mesi retribuito",
-      "row2Desc": "Rimborso spese",
       "row3Desc": "Remoto"
     },
     "program": {
@@ -382,16 +380,14 @@
     }
   },
   "academyBackend": {
-    "title": "Academy Backend",
+    "title": "Backend",
     "titleParagraph1": "Diventa Java developer con noi!",
     "paragraph1Txt": "3 mesi di crescita professionale, formazione costante attraverso progetti individuali e di gruppo, utilizzo delle tecnologie più richieste dal mercato.",
-    "titleParagraph2": "Struttura del corso",
+    "titleParagraph2": "Struttura",
     "table": {
-      "row1Title": "Academy",
-      "row2Title": "Compenso",
+      "row1Title": "Durata",
       "row3Title": "Modalità",
       "row1Desc": "Academy di 3 mesi retribuito",
-      "row2Desc": "Rimborso spese",
       "row3Desc": "Remoto"
     },
     "program": {
@@ -442,6 +438,84 @@
         "subsection9": "DOM e Javascript",
         "subsection10": "AJAX: utilizzo del comando fetch per le chiamate asincrone"
       }
+    }
+  },
+  "privacyPolicies": {
+    "list1": {
+      "part1": "Marketing diretto ",
+      "part2": "– Con tale termine s’intende lo svolgimento di attività promozionali (con modalità sia di tipo automatizzato che tradizionale) dei prodotti e/o servizi di tuo interesse venduti e/o erogati dal Titolare. Relativamente a tale finalità di marketing diretto, è opportuno precisare che, in virtù dell’art. 6 comma 1 lett. f) del Regolamento e dell’art. 130 comma 4 del Codice Privacy (c.d. soft spam exception), il Titolare potrà svolgere tale attività basandosi sul suo interesse legittimo, a prescindere da un tuo consenso esplicito, come meglio esplicitato nel Considerando 47 del Regolamento nel quale viene “",
+      "part3": "considerato legittimo interesse del titolare trattare dati personali per finalità di marketing diretto",
+      "part4": "”. Ciò sarà possibile a seguito delle valutazioni effettuate dal Titolare in merito all’eventuale e possibile prevalenza dei tuoi interessi, diritti e libertà fondamentali che richiedono la protezione dei Dati Personali sul proprio interesse legittimo ad inviare comunicazioni di marketing diretto. Peraltro, potrai opporti lecitamente ed in ogni momento (anche in modo parziale) alla ricezione di comunicazioni promozionali, senza che ciò pregiudichi in alcun modo il trattamento per le altre finalità."
+    },
+    "list2": {
+      "li1": {
+        "part1": "la ",
+        "part2": "conferma ",
+        "part3": "che sia o meno in corso un trattamento dei tuoi Dati Personali e di ottenere l’accesso ai dati e alle seguenti informazioni: finalità del trattamento, categorie di dati personali, destinatari e/o categorie di destinatari a cui i dati sono stati e/o saranno comunicati nonché il relativo periodo di conservazione;"
+      },
+      "li2": {
+        "part1": "la ",
+        "part2": "rettifica ",
+        "part3": "dei tuoi Dati Personali inesatti e/o l’integrazione dei Dati Personali incompleti, anche fornendo una dichiarazione integrativa;"
+      },
+      "li3": {
+        "part1": "la ",
+        "part2": "cancellazione ",
+        "part3": "dei tuoi Dati Personali e la ",
+        "part4": "limitazione ",
+        "part5": "al trattamento nelle ipotesi previste dal GDPR e dalla normativa privacy vigente;"
+      },
+      "li4": {
+        "part1": "ove applicabile, la ",
+        "part2": "portabilità ",
+        "part3": "dei tuoi Dati Personali e, in particolare, la possibilità di richiedere la trasmissione diretta dei tuoi Dati Personali ad un altro titolare del trattamento;"
+      },
+      "li5": {
+        "part1": "l’",
+        "part2": "opposizione ",
+        "part3": "al trattamento in qualsiasi momento, per motivi connessi alla tua situazione particolare, al trattamento dei tuoi Dati Personali nel pieno rispetto della normativa privacy vigente."
+      }
+    }
+  },
+  "legalNotes": {
+    "list1": {
+      "li1": "per “Note legali” si intendono i presenti termini e condizioni;",
+      "li2": "per “Sito web” o “Sito” si intende il dominio web",
+      "li3": "per “Contenuti” si intendono le pagine web, documenti testuali, contenuti redazionali, comunicazioni, disegni, grafica, immagini e fotografie, banche dati, software e ogni altro materiale audiovisivo di qualunque tipo e natura;",
+      "li4": "per “Servizi” si intendono tutte quelle funzioni, dispositivi, applicazioni, informazioni o altre  prestazioni disponibili tramite questo Sito web;",
+      "li5": "per “Visitatore” o “Utente” si intende qualsiasi persona che acceda al Sito web, con o senza il permesso di People First S.r.l., o che lo utilizzi, indipendentemente dall’essersi “registrato”."
+    },
+    "list2": {
+      "li1": "l’area relativa ai “prodotti” ha lo scopo di presentare, anche visualmente, la produzione di Beije Consulting S.r.l.;",
+      "li2": "l’area relativa ai “progetti” ha lo scopo di segnalare alcune rilevanti aree di applicazione dei prodotti di Beije Consulting S.r.l.;",
+      "li3": "l’area “press room” è dedicata alla presentazione al pubblico di notizie su Beije Consulting S.r.l."
+    },
+    "list3": {
+      "li1": " adotta idonee procedure per garantire standard di accuratezza, completezza, adeguatezza, aggiornamento, tempestività delle informazioni contenute nel Sito web;",
+      "li2": "si impegna a eliminare nel minor tempo possibile eventuali errori tecnici o tipografici;",
+      "li3": "si riserva in ogni momento il diritto di apportare, senza preavviso e a propria discrezione, modifiche ai Contenuti e alle modalità funzionali ed operative del Sito web e dei Servizi offerti;",
+      "li4": "non può essere ritenuta responsabile per eventuali imprecisioni, errori, ritardi di aggiornamento."
+    },
+    "list4": {
+      "li1": "Comportamenti ammessi",
+      "li2": "Comportamenti vietati"
+    },
+    "list5": {
+      "li1": "la modifica del Sito web o di qualsiasi suo contenuto o modalità di accesso;",
+      "li2": "i comportamenti che costituiscono reato ai sensi delle normative vigenti (p.e.i.c.d. crimini informatici, come la violazione del domicilio informatico);",
+      "li3": "i comportamenti intesi a frazionare parti o sezioni del presente Sito e/o a incorporarle in altri siti di soggetti terzi, a modificare, copiare, riprodurre, ripubblicare, caricare da programma, rendere pubblico, trasmettere o distribuire in alcun modo il contenuto, in tutto o in parte, compresi codici e software senza il preventivo assenso di People First S.r.l. o in violazione delle presenti condizioni;",
+      "li4": "il tentativo di accesso alle aree riservate del Sito web senza profilo di autorizzazione;",
+      "li5": {
+        "part1": "il caricamento di programmi informatici, file e altri materiali contenenti caratteristiche distruttive o di disturbo quali virus, file manipolati, file nascosti (come ad es. immagini nelle quali sono integrati file audio), “",
+        "part2": "worm",
+        "part3": "”, “",
+        "part4": "trojan horse",
+        "part5": "” o “",
+        "part6": "bot",
+        "part7": "” a scopo di scrolling o per il lancio di schermate multiple e per ulteriori attività in genere in grado di disturbare l’integrità o la funzionalità o la comunicazione on line del Sito web;"
+      },
+      "li6": "in generale, l’utilizzo che causi o possa causare modifiche, danneggiamento, interruzione o limitazione di questo Sito web o di suoi Servizi;",
+      "li7": "la raccolta non autorizzata, tramite il Sito web, di informazioni personali su terzi (p.e. indirizzi di posta elettronica)"
     }
   }
 }

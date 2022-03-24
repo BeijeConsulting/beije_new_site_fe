@@ -115,7 +115,7 @@
   }
 
   .up-second-section-box-img {
-    width: 56%;
+    width: 53%;
     background-image: var(--up-second-section-bg);
     background-position: center;
     background-size: cover;
@@ -134,7 +134,6 @@
   .up-second-section-all-texts-container {
     width: 60%;
     padding: 70px;
-    background-color: var(--grey-tone-8);
   }
 
   .up-second-section-text-span-desktop {

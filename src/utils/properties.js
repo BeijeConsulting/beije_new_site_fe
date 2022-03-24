@@ -11,15 +11,10 @@ import { faN, faArrowDownLong, faAngleLeft, faAngleRight, faPlus, faArrowLeft, f
 import quotation_mark from "../assets/icons/quote.png";
 import logo_pininfarina from "../assets/images/up/caseStudies/pininfarina.jpg";
 import logo_youthquake from "../assets/images/up/caseStudies/youthquake.jpg";
-import infoGraphic1 from "../assets/images/academyDetail/infoGraphicAcademyFrontend.svg"
-
-// Docs
-import png_privacyPolicies_it from "../assets/docs/Beije_PrivacyPolicies_IT.pdf";
-import png_privacyPolicies_en from "../assets/docs/Beije_PrivacyPolicies_EN.pdf";
-import png_legalNotes_it from "../assets/docs/Beije_legalNotes_IT.pdf";
-import png_legalNotes_en from "../assets/docs/Beije_legalNotes_EN.pdf";
-import presentation_consulting from "../assets/docs/Presentazione_consulting_BeijePeopleFirst.pdf"
-import presentation_up from "../assets/docs/Presentazione_up_BeijePeopleFirst.pdf"
+import infoGraphic2 from "../assets/images/academyDetail/infoGraphicAcademyFrontend.svg"
+import infoGraphic3 from "../assets/images/academyDetail/infoGraphicAcademyBackend.svg"
+import infoGraphic1 from "../assets/images/academy/infoGraphicAcademy.svg"
+import fondazioneLavoro from "../assets/images/academy/fondazione_lavoro_logo.png"
 
 // Link
 const linkFb = "https://www.facebook.com/beijepeoplefirst";
@@ -87,16 +82,12 @@ export const rightArrow = faAngleRight;
 export const quotationMark = quotation_mark;
 export const addIcon = faPlus;
 export const minusIcon = faMinus;
-export const infoGraphicFrontend = infoGraphic1;
+export const infoGraphicFrontend = infoGraphic2;
+export const infoGraphicBackend = infoGraphic3;
+export const infoGraphicAcademy = infoGraphic1;
 export const backArrow = faArrowLeft;
 export const clock = faClock;
-
-export const privacyPolicies_it = png_privacyPolicies_it;
-export const privacyPolicies_en = png_privacyPolicies_en;
-export const legalNotes_it = png_legalNotes_it;
-export const legalNotes_en = png_legalNotes_en;
-export const pdf_presentation_consulting = presentation_consulting;
-export const pdf_presentation_up = presentation_up;
+export const logo_fondazione_lavoro = fondazioneLavoro;
 
 export const linkYoutube = linkYt;
 
@@ -129,11 +120,11 @@ export const menu_voices = [
     link_to: "#",
     key_link: "community"
   },
-  {
-    name: "focusAcademy",
-    link_to: "#",
-    key_link: "focusAcademy"
-  },
+  // {
+  //   name: "focusAcademy",
+  //   link_to: "#",
+  //   key_link: "focusAcademy"
+  // },
   {
     name: "career",
     link_to: "/career",
@@ -564,19 +555,19 @@ export const caseStudies = [
   {
     title: "Nome Progetto",
     subtitle: "Subtitle progetto poco più lungo, da definire",
-    pictureClassName: "carousel-bg-youthquake",
+    colorBg: "#fff",
     imgCarousel: logo_youthquake
   },
   {
     title: "Nome Progetto",
     subtitle: "Subtitle progetto poco più lungo, da definire",
-    pictureClassName: "carousel-bg-pininfarina",
+    colorBg: "#fff",
     imgCarousel: logo_pininfarina
   },
   {
     title: "Nome Progetto",
     subtitle: "Subtitle progetto poco più lungo, da definire",
-    pictureClassName: "carousel-bg-youthquake",
+    colorBg: "#fff",
     imgCarousel: logo_youthquake
   }
 ]
@@ -635,18 +626,6 @@ export const academyCourseStructure = [
     colMobile: 12,
     colDesktop: 6,
     name: "academyFrontend.table.row1Desc",
-    type: ""
-  },
-  {
-    colMobile: 12,
-    colDesktop: 6,
-    name: "academyFrontend.table.row2Title",
-    type: "title"
-  },
-  {
-    colMobile: 12,
-    colDesktop: 6,
-    name: "academyFrontend.table.row2Desc",
     type: ""
   },
   {

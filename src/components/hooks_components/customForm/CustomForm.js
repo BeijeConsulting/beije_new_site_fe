@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useFormik } from "formik";
@@ -8,6 +8,9 @@ import * as yup from 'yup';
 import { connect } from "react-redux";
 import { setModal, initModal } from "../../../redux/ducks/modalDuck"
 
+// Api
+import ApiCalls from "../../../services/api/ApiCalls";
+
 // MUI
 import { Grid, Box, TextField, TextareaAutosize, FormControlLabel, Checkbox } from "@mui/material";
 
@@ -15,19 +18,25 @@ import { Grid, Box, TextField, TextareaAutosize, FormControlLabel, Checkbox } fr
 import "./CustomForm.css";
 
 // Constants and functions
-import { googleReCaptchaKey, privacyPolicies_en, privacyPolicies_it } from "../../../utils/properties";
+import { googleReCaptchaKey } from "../../../utils/properties";
+import { toBase64 } from "../../../utils/utilities";
 
 // Components
 import CustomButton from "../../functional_components/ui/customButton/CustomButton";
 import CustomModal from "../customModal/CustomModal";
+import PrivacyPolicies from "../../functional_components/privacyPolicies/PrivacyPolicies";
 
 const CustomForm = (props) => {
   const { t } = useTranslation();
 
+  const uploadedFile = useRef();
+
   const [state, setState] = useState({
     captchaCheck: false,
     captcha: undefined,
-    captchaValue: ''
+    captchaValue: '',
+    fileName: "Nessun file selezionato",
+    base64Value: null
   });
 
   const reCaptchaChange = (value) => {
@@ -35,11 +44,11 @@ const CustomForm = (props) => {
     if (value !== null) {
       captchaCheck = true;
     }
-    setState({
-      ...state,
+    setState(prevState => ({
+      ...prevState,
       captchaCheck,
-      captchaValue: value,
-    });
+      captchaValue: value
+    }));
   }
 
   const validationSchema = yup.object({
@@ -53,11 +62,10 @@ const CustomForm = (props) => {
       .string('Enter your email')
       .email(t("form.errorMessage.emailInvalid"))
       .required(t("form.errorMessage.email")),
-    town: yup
-      .string('Enter your name')
-      .required(t("form.errorMessage.town")),
-    message: yup
-      .string('Enter your name'),
+    number: yup
+      .number(t("form.errorMessage.numberInvalid")),
+    // message: yup
+    //   .string('Enter your name'),
     agreement: yup
       .boolean()
       .oneOf([true], t("form.errorMessage.agreement"))
@@ -69,6 +77,7 @@ const CustomForm = (props) => {
       name: '',
       surname: '',
       email: '',
+      number: '',
       town: '',
       message: '',
       agreement: false
@@ -76,12 +85,30 @@ const CustomForm = (props) => {
     validationSchema: validationSchema,
     enableReinitialize: true,
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
-      console.log('Send Form', props.origin, values, state.captchaValue);
       formikContacts.resetForm();
       state.captcha.reset();
+
+      sendDataForm(values);
     }
   });
+
+  const sendDataForm = async (values) => {
+    const formData = {
+      captcha: state.captchaValue,
+      city: values.town,
+      surname: values.surname,
+      cv: state.base64Value,
+      cv_name: state.fileName === "Nessun file selezionato" ? null : state.fileName,
+      email: values.email,
+      lang: "it",
+      message: values.message,
+      name: values.name,
+      origin: "test",
+      privacy_check: values.agreement
+    }
+    console.log("send form data: ", formData)
+    await ApiCalls.form_sendForm(formData);
+  }
 
   const openModal = (param) => () => {
     props.dispatch(setModal(true, param))
@@ -91,6 +118,14 @@ const CustomForm = (props) => {
     props.dispatch(initModal())
   }
 
+  const uploadFile = async () => {
+    const file_base64 = await toBase64(uploadedFile.current.files[0]);
+    setState(prevState => ({
+      ...prevState,
+      fileName: uploadedFile.current.files[0].name,
+      base64Value: file_base64
+    }));
+  }
 
   return (
     <Grid
@@ -188,7 +223,7 @@ const CustomForm = (props) => {
             >
               <Grid
                 item
-                xs={props.cvForm ? 12 : 6}
+                xs={props.cvForm ? 6 : 5}
               >
                 <TextField
                   id="email"
@@ -206,10 +241,31 @@ const CustomForm = (props) => {
                   className="form-field"
                 />
               </Grid>
+
+              <Grid
+                item
+                xs={props.cvForm ? 6 : 4}
+              >
+                <TextField
+                  id="number"
+                  name="number"
+                  label={t("form.placeholder.number")}
+                  type="number"
+                  value={formikContacts.values.number}
+                  error={formikContacts.touched.number && Boolean(formikContacts.errors.number)}
+                  onChange={formikContacts.handleChange}
+                  onBlur={formikContacts.handleBlur}
+
+                  variant="standard"
+                  size="normal"
+                  className="form-field"
+                />
+              </Grid>
+
               {!props.cvForm &&
                 <Grid
                   item
-                  xs={6}
+                  xs={3}
                 >
                   <TextField
                     id="town"
@@ -218,7 +274,6 @@ const CustomForm = (props) => {
                     type="text"
                     value={formikContacts.values.town}
                     error={formikContacts.touched.town && Boolean(formikContacts.errors.town)}
-                    helperText={formikContacts.touched.town && formikContacts.errors.town}
                     onChange={formikContacts.handleChange}
                     onBlur={formikContacts.handleBlur}
 
@@ -243,7 +298,7 @@ const CustomForm = (props) => {
                   type="text"
                   placeholder={t("form.placeholder.message")}
                   value={formikContacts.values.message}
-                  error={formikContacts.touched.message && Boolean(formikContacts.errors.message)}
+                  // error={formikContacts.touched.message && Boolean(formikContacts.errors.message)}
                   onChange={formikContacts.handleChange}
                   onBlur={formikContacts.handleBlur}
 
@@ -253,6 +308,35 @@ const CustomForm = (props) => {
                 />
               </Grid>
             }
+            <Grid
+              item
+              xs={12}
+              className="form-upload-cv"
+            >
+              {props.cvForm &&
+                <>
+                  <input
+                    ref={uploadedFile}
+                    type="file"
+                    id="uploadCV"
+                    name="uploadCV"
+                    hidden
+                    onChange={uploadFile}
+                    accept="application/pdf"
+                  />
+                  <label
+                    htmlFor="uploadCV"
+                    className="button-form-primary"
+                  >Allega il tuo cv</label>
+                  <span id="file-chosen">{state.fileName}</span>
+                </>
+                // < CustomButton
+                //   type={"btn-form-primary"}
+                //   content={"Allega il tuo cv"}
+                // // callback={formikContacts.submitForm}
+                // />
+              }
+            </Grid>
 
             <Grid
               item
@@ -298,13 +382,7 @@ const CustomForm = (props) => {
                 callbackClose={closeModal}
                 modalTitle={t("footer.privacyPolicies")}
               >
-                <object
-                  data={t("modal.doc_lang") === "doc_it" ? privacyPolicies_it : privacyPolicies_en}
-                  type="application/pdf"
-                  height="100%"
-                  width="100%"
-                >
-                </object>
+                <PrivacyPolicies />
               </CustomModal>
             </Grid>
             <Grid
@@ -323,14 +401,6 @@ const CustomForm = (props) => {
               xs={12}
               className={"form-submit-btn-container"}
             >
-              {props.cvForm &&
-                < CustomButton
-                  type={"btn-form-primary"}
-                  content={"Allega il tuo cv"}
-                // callback={formikContacts.submitForm}
-                />
-              }
-
               <CustomButton
                 type={"btn-form-primary"}
                 content={t("form.btn")}

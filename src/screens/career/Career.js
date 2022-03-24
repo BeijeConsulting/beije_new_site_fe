@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 // Redux
 import { setCurrentPage, initCurrentPage } from "../../redux/ducks/currentPageDuck";
@@ -15,31 +15,15 @@ import "./Career.css";
 import CustomTable from "../../components/functional_components/customTable/CustomTable";
 import CustomButton from "../../components/functional_components/ui/customButton/CustomButton";
 
-const prevObj = [
-  {
-    name: "React developer",
-    type: "frontend",
-    mode: "Remoto",
-    when: "2 settimane fa",
-    linkTo: "/"
-  },
-  {
-    name: "React developer",
-    type: "frontend",
-    mode: "Remoto",
-    when: "2 settimane fa",
-    linkTo: "/"
-  },
-  {
-    name: "React developer",
-    type: "frontend",
-    mode: "Remoto",
-    when: "2 settimane fa",
-    linkTo: "/"
-  }
-]
+
+// Remove
+import careerTrialObj from "./careerTrialObj.json"
 
 const Career = (props) => {
+
+  const [state, setState] = useState({
+    buttonSelected: "academy"
+  });
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -51,6 +35,18 @@ const Career = (props) => {
       props.dispatch(initVisibilityNavbar());
     };
   }, [])
+
+  const showJobOpportunities = () => {
+    setState({
+      buttonSelected: "job"
+    })
+  }
+
+  const showAcademy = () => {
+    setState({
+      buttonSelected: "academy"
+    })
+  }
 
   return (
     <Box
@@ -73,10 +69,14 @@ const Career = (props) => {
           <CustomButton
             type={"filter-btn"}
             content={"Academy"}
+            classNameFilterBtn={state.buttonSelected === "academy" ? "career-selected-academy" : ""}
+            callback={showAcademy}
           />
           <CustomButton
             type={"filter-btn"}
             content={"Job Opportunities"}
+            classNameFilterBtn={state.buttonSelected === "job" ? "career-selected-job" : ""}
+            callback={showJobOpportunities}
           />
         </Box>
       </Container>
@@ -89,26 +89,11 @@ const Career = (props) => {
         className={"career-second-section paddingX-container-general-pages"}
       >
         <h3>Posizioni aperte</h3>
-        <Box
-          className="career-second-section-button-container"
-        >
-          <CustomButton
-            type={"filter-btn-secondary"}
-            content={"All"}
-          />
-          <CustomButton
-            type={"filter-btn-secondary"}
-            content={"Frontend"}
-          />
-          <CustomButton
-            type={"filter-btn-secondary"}
-            content={"Backend"}
-          />
-        </Box>
         <CustomTable
-          obj={prevObj}
-          careerTable={true}
-          typeTable={"table-career"}
+          isAcademy={state.buttonSelected === "academy"}
+          // obj={state.buttonSelected === "academy" ? academyObj : jobObj}
+          obj={careerTrialObj}
+          classNameLink={state.buttonSelected === "academy" ? "career-table-academy-link" : "career-table-job-link"}
         />
       </Container>
     </Box>

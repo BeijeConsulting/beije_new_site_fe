@@ -20,11 +20,45 @@
   margin-right: 30px;
 }
 
-.career-second-section-button-container {
-  margin-bottom: 30px;
+.career-selected-academy {
+  background-color: var(--yellow) !important;
 }
 
-.career-second-section-button-container button:nth-child(1),
-.career-second-section-button-container button:nth-child(2) {
-  margin-right: 10px;
+.career-selected-academy p,
+.career-selected-job p {
+  color: var(--dark-grey) !important;
+}
+
+.career-selected-job {
+  background-color: var(--lightblue) !important;
+}
+
+.career-table-academy-link, .career-table-academy-link svg {
+  color: var(--yellow) !important;
+}
+
+.career-table-job-link, .career-table-job-link svg {
+  color: var(--lightblue) !important;
+}
+
+/* Second section */
+.career-second-section {
+  padding: 100px;
+}
+
+/* CAREER DETAIL */
+.career-detail-container {
+  margin-bottom: 100px;
+  color: var(--white);
+}
+
+.career-detail-container h1, .career-detail-tag {
+  text-transform: uppercase;
+  padding: 50px 0 35px 0;
+}
+
+.career-detail-txt-container {
+  background-color: var(--grey-tone-8);
+  padding: 70px 7%;
+  border-top: 2px solid var(--lightblue);
 }

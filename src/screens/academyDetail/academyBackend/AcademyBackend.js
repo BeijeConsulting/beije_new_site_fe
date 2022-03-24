@@ -13,7 +13,7 @@ import { Box, Container } from "@mui/material";
 import '../DetailAcademy.css';
 
 // Constants
-import { academyCourseStructure, programBackendAcademy } from "../../../utils/properties";
+import { academyCourseStructure, programBackendAcademy, infoGraphicBackend } from "../../../utils/properties";
 
 // Components
 import IntroSectionTxtInfoGraphic from "../../../components/functional_components/introSections/introSectionTxtInfoGraphic/IntroSectionTxtInfoGraphic";
@@ -61,12 +61,13 @@ const AcademyBackend = (props) => {
         <IntroSectionTxtInfoGraphic
           typeSection="academy"
           sectionName="Beije talent academy"
-          sectionTitle={t("academyFrontend.title")}
+          sectionTitle={t("academyBackend.title")}
           callback={scrollToSection}
-          paragraph1Title={t("academyFrontend.titleParagraph1")}
-          paragraph2Title={t("academyFrontend.titleParagraph2")}
-          paragraph1Txt={t("academyFrontend.paragraph1Txt")}
+          paragraph1Title={t("academyBackend.titleParagraph1")}
+          paragraph2Title={t("academyBackend.titleParagraph2")}
+          paragraph1Txt={t("academyBackend.paragraph1Txt")}
           obj={academyCourseStructure}
+          srcImage={infoGraphicBackend}
         >
 
         </IntroSectionTxtInfoGraphic>

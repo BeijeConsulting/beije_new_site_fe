@@ -1,6 +1,6 @@
 import axios from "axios/index";
 import { ENVIRONMENT } from "../utils/properties";
-import {isEmpty} from "lodash";
+import { isEmpty } from "lodash";
 
 const axiosInstance = axios.create({ baseURL: ENVIRONMENT.API_REST_BE });
 const defaultHeaders = {
@@ -29,15 +29,15 @@ export const get = async (path, obj = {}) => {
   try {
     const queryString = Object.keys(obj).map(key => key + "=" + obj[key]).join("&");
     let { data } = await axiosInstance.get(
-        `${ENVIRONMENT.API_REST_BE}${path}${!isEmpty(queryString) ? "?"+queryString : ""}`,
-        {
-          headers: defaultHeaders,
-        }
+      `${ENVIRONMENT.API_REST_BE}${path}${!isEmpty(queryString) ? "?" + queryString : ""}`,
+      {
+        headers: defaultHeaders,
+      }
     );
     return data;
   } catch (error) {
     // generally, it enters here when the call goes to "failed"
-    return { error: {messageCode: "ER000"} };
+    return { error: { messageCode: "ER000" } };
   }
 }
 
@@ -61,24 +61,20 @@ export const get = async (path, obj = {}) => {
 //   }
 // }
 
-// export const post = async (path, obj = {}) => {
-//   try {
-//     const token = getUserInfoLocal('token');
-//     if (token !== null) {
-//       defaultHeaders.Authorization = `Bearer ${token}`;
-//     }
-//     let { data } = await axiosInstance.post(
-//         ENVIRONMENT.API_REST_BE + path,
-//         obj,
-//         {
-//           headers: defaultHeaders
-//         }
-//     );
-//     return data;
-//   } catch (error) {
-//     // generally, it enters here when the call goes to "failed"
-//     return { error: {messageCode: 'ER000'} };
-//   }
-// }
+export const post = async (path, obj = {}) => {
+  try {
+    let { data } = await axiosInstance.post(
+      ENVIRONMENT.API_REST_BE + path,
+      obj,
+      {
+        headers: defaultHeaders
+      }
+    );
+    return data;
+  } catch (error) {
+    // generally, it enters here when the call goes to "failed"
+    return { error: { messageCode: 'ER000' } };
+  }
+}
 
 export default axiosInstance;

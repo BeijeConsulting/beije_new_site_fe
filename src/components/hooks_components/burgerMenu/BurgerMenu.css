@@ -13,7 +13,7 @@
   --bg_career: url(../../../assets/images/burgerMenu/career_burger.jpg);
   --bg_contacts: url(../../../assets/images/burgerMenu/contacts_burger.jpg);
   --bg_blog: url(../../../assets/images/burgerMenu/blog_burger.jpg);
-  --bg_focusAcademy: url(../../../assets/images/burgerMenu/focusAcademy_burger.jpg);
+  /* --bg_focusAcademy: url(../../../assets/images/burgerMenu/focusAcademy_burger.jpg); */
   --bg_community: url(../../../assets/images/burgerMenu/community_burger.jpg);
 }
 
@@ -336,11 +336,11 @@
   background-position: bottom;
 }
 
-.burgerMenu-focusAcademy {
+/* .burgerMenu-focusAcademy {
   background-image: var(--webkit-photos-filter), var(--bg_focusAcademy);
   background-image: var(--o-photos-filter), var(--bg_focusAcademy);
   background-image: var(--photos-filter), var(--bg_focusAcademy);
-}
+} */
 
 .burgerMenu-community {
   background-image: var(--webkit-photos-filter), var(--bg_community);

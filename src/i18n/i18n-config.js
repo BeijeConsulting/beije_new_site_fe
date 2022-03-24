@@ -22,8 +22,8 @@ export const getTranslation = (father, key) => {
     : key;
 }
 
-export const switchLang = (lang) => {
-  i18n.changeLanguage(toLower(lang));
+export const switchLang = async (lang) => {
+  await i18n.changeLanguage(toLower(lang));
 }
 
 i18n
@@ -34,6 +34,9 @@ i18n
     resources,
     interpolation: {
       escapeValue: false // react already safes from xss
+    },
+    react: {
+      transSupportBasicHtmlNodes: true,
     }
   });
 

@@ -3,16 +3,15 @@ import React from "react";
 // MUI
 import { Button, Typography } from "@mui/material";
 
-// Constants
-import { pdf_presentation_consulting, pdf_presentation_up } from "../../../../utils/properties";
-
 // Style
 import "./CustomButton.css";
 
 const CustomButton = (props) => {
 
   const handleClick = () => {
-    props.callback();
+    if (props.callback) {
+      props.callback();
+    }
   }
 
   const switchClassName = () => {
@@ -25,35 +24,13 @@ const CustomButton = (props) => {
         currentClassName = "button-go-back-primary"
         break;
       case "filter-btn":
-        currentClassName = "button-filter-primary"
-        break;
-      case "filter-btn-secondary":
-        currentClassName = "button-filter-primary button-filter-secondary"
+        currentClassName = `button-filter-primary ${props.classNameFilterBtn}`
         break;
       default:
         currentClassName = ""
         break;
     }
     return currentClassName;
-  }
-
-  const switchDownload = () => {
-    let currentDownload = null;
-    switch (props.download) {
-      case "consulting":
-        currentDownload = pdf_presentation_consulting
-        break;
-      case "up":
-        currentDownload = pdf_presentation_up
-        break;
-      case "academy":
-        currentDownload = pdf_presentation_up
-        break;
-      default:
-        currentDownload = ""
-        break;
-    }
-    return currentDownload;
   }
 
   return (
@@ -68,25 +45,13 @@ const CustomButton = (props) => {
       startIcon={props.startIcon}
       endIcon={props.endIcon}
       className={props.className === undefined ? switchClassName() : props.className}
-      download={props.download}
     >
-      {props.normalButton &&
-        < Typography
-          component={props.btnTypeContent}
-        >
-          {props.content}
-        </Typography>
-      }
-
-      {props.downloadButton &&
-        <a
-          href={switchDownload()}
-          download={true}
-        >
-          {props.content}
-        </a>
-      }
-    </Button >
+      <Typography
+        component={props.btnTypeContent}
+      >
+        {props.content}
+      </Typography>
+    </Button>
   )
 }
 
@@ -95,10 +60,7 @@ CustomButton.defaultProps = {
   disabled: false,
   colorBtn: "inherit",
   size: "small",
-  btnTypeContent: "p",
-  download: false,
-  normalButton: true,
-  downloadButton: false
+  btnTypeContent: "p"
 }
 
 export default CustomButton

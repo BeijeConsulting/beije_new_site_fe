@@ -24,30 +24,12 @@ import BackToTopButton from "../components/functional_components/ui/backToTopBut
 const HomeLayout = (props) => {
 
   const [state, setState] = useState({
-    isMobile: window.innerWidth < 1024,
-    loadingEnd: window.sessionStorage.getItem("firstLoadDone")
+    isMobile: window.innerWidth < 1024
   })
 
   useEffect(() => {
     window.addEventListener("resize", updateMedia);
-    console.log("current page in useEffect: ", props.currentPageDuck.currentPage);
     window.addEventListener("scroll", handleScroll);
-
-    if (window.sessionStorage.getItem("firstLoadDone") === null) {
-
-      setTimeout(() => {
-        window.sessionStorage.setItem("firstLoadDone", true)
-        setState({
-          ...state,
-          loadingEnd: true
-        })
-      }, 8000)
-    } else {
-      setState({
-        ...state,
-        loadingEnd: true
-      })
-    }
 
     return () => {
       window.removeEventListener("resize", updateMedia);
@@ -90,6 +72,9 @@ const HomeLayout = (props) => {
       case "contacts":
         classNameBgLayout = "homeLayout-fixed-bg bg-dark-grey"
         break;
+      case "noMatch":
+        classNameBgLayout = "homeLayout-fixed-bg bg-dark-grey"
+        break;
       default:
         classNameBgLayout = "homeLayout-fixed-bg homeLayout-video-filter"
         break;
@@ -107,79 +92,48 @@ const HomeLayout = (props) => {
   }
 
   return (
-    <>
+    <Box className={props.burgerMenuDuck.menuOpen ? "position-fixed" : ""} >
+      <div className={switchClassBgLayout()} />
       {
-        !state.loadingEnd &&
-        <div className="loading">
-          <div className="loading-text">
-            <span className="loading-text-words">B</span>
-            <span className="loading-text-words">E</span>
-            <span className="loading-text-words">I</span>
-            <span className="loading-text-words">J</span>
-            <span className="loading-text-words">E &nbsp;</span>
-            <span className="loading-text-words">P</span>
-            <span className="loading-text-words">E</span>
-            <span className="loading-text-words">O</span>
-            <span className="loading-text-words">P</span>
-            <span className="loading-text-words">L</span>
-            <span className="loading-text-words">E &nbsp;</span>
-            <span className="loading-text-words">F</span>
-            <span className="loading-text-words">I</span>
-            <span className="loading-text-words">R</span>
-            <span className="loading-text-words">S</span>
-            <span className="loading-text-words">T</span>
-          </div>
-        </div>
+        props.currentPageDuck.currentPage === "" &&
+        <video className="homeLayout-video" autoPlay muted loop>
+          <source src="https://beije-people-first.s3.eu-south-1.amazonaws.com/site/video_home.mp4" type="video/mp4" />
+        </video>
       }
 
-      {
-        state.loadingEnd &&
-        <Box className={props.burgerMenuDuck.menuOpen ? "position-fixed" : ""} >
-          <div className={switchClassBgLayout()} />
-          {
-            props.currentPageDuck.currentPage === "" &&
-            <video className="homeLayout-video" autoPlay muted loop>
-              <source src="https://beije.s3.eu-west-1.amazonaws.com/video_home.mp4" type="video/mp4" />
-            </video>
-          }
-
-          {state.isMobile &&
-            <HideOnScroll>
-              <AppBar
-                id="back-to-top-anchor"
-                className={props.currentPageDuck.currentPage === "" ? "bg-transparent" : "bg-dark-grey"}
-              >
-                <CustomHeader />
-              </AppBar>
-            </HideOnScroll>
-          }
-          {!state.isMobile &&
-            <AppBar
-              position="fixed"
-              className={switchClassAppBar()}
-            >
-              <CustomHeader />
-            </AppBar>
-          }
-          <main className="scrollX-hidden min-height-main">
-            <Outlet />
-          </main>
-          {
-            state.isMobile &&
-            <BackToTopButton>
-              <Fab color="default" size="small" aria-label="scroll back to top">
-                <KeyboardArrowUpIcon />
-              </Fab>
-            </BackToTopButton>
-          }
-          <footer>
-            <CustomFooter />
-          </footer>
-        </Box >
+      {state.isMobile &&
+        <HideOnScroll>
+          <AppBar
+            id="back-to-top-anchor"
+            className={props.currentPageDuck.currentPage === "" ? "bg-transparent" : "bg-dark-grey"}
+          >
+            <CustomHeader />
+          </AppBar>
+        </HideOnScroll>
       }
-
-
-    </>
+      {!state.isMobile &&
+        <AppBar
+          position="fixed"
+          className={switchClassAppBar()}
+        >
+          <CustomHeader />
+        </AppBar>
+      }
+      <main className="scrollX-hidden min-height-main">
+        <Outlet />
+      </main>
+      {
+        state.isMobile &&
+        <BackToTopButton>
+          <Fab color="default" size="small" aria-label="scroll back to top">
+            <KeyboardArrowUpIcon />
+          </Fab>
+        </BackToTopButton>
+      }
+      <footer>
+        <CustomFooter />
+      </footer>
+    </Box >
   );
 }
 

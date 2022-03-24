@@ -50,6 +50,7 @@ const Blog = (props) => {
 
   const getData = async () => {
     let blogData;
+    blogData = blogArrayTest[0];
     // let blogData = await blog_getListDetail(permalink);
 
     // let blogDataResponse = await blog_getList();
@@ -104,7 +105,7 @@ const Blog = (props) => {
           >
             <img
               alt="blog image"
-              src={state.blogData.image}
+              src={state.blogData.cover_img}
             />
           </Container>
           <Box className={"blog-detail-text-container"}>

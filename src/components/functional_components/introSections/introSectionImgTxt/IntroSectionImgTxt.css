@@ -2,9 +2,6 @@
   --intro-section-img-up: url("../../../../assets/images/up/up1.png");
   --intro-section-img-consulting: url("../../../../assets/images/consulting/consulting1.png");
   --intro-section-img-academy: url("../../../../assets/images/academy/academy1.png");
-  --download-consulting-icon: url("../../../../assets/icons/consultingDownload.svg");
-  --download-up-icon: url("../../../../assets/icons/upDownload.svg");
-  --download-academy-icon: url("../../../../assets/icons/academyDownload.svg");
 }
 
 .intro-section-txt-container {
@@ -31,61 +28,6 @@
 
 .intro-section-download-container {
   display: block;
-}
-
-.intro-sec-download-icon {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 30px;
-  width: 30px;
-}
-
-.intro-section-download-icon-consulting {
-  background-image: var(--download-consulting-icon);
-}
-
-.intro-section-download-icon-up {
-  background-image: var(--download-up-icon);
-}
-
-.intro-section-download-icon-academy {
-  background-image: var(--download-academy-icon);
-}
-
-.intro-section-consulting-download span:nth-child(1),
-.intro-section-up-download span:nth-child(1),
-.intro-section-academy-download span:nth-child(1) {
-  border-radius: 100%;
-  background-color: #000;
-}
-
-.intro-section-consulting-download a,
-.intro-section-up-download a,
-.intro-section-academy-download a {
-  font-family: var(--moderat-regular);
-  font-size: var(--font-size-body-xs);
-}
-
-.intro-section-consulting-download a {
-  color: var(--lightblue) !important;
-  text-decoration: underline;
-}
-
-.intro-section-up-download a {
-  color: var(--blue) !important;
-  text-decoration: underline;
-}
-
-.intro-section-academy-download a {
-  color: var(--yellow) !important;
-  text-decoration: underline;
-}
-
-.intro-section-consulting-download:hover a,
-.intro-section-up-download:hover a,
-.intro-section-academy-download:hover a {
-  text-decoration: none;
 }
 
 .intro-section-scroll-down-container {

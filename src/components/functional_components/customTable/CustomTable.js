@@ -15,16 +15,19 @@ import { addIcon } from "../../../utils/properties";
 
 const tempObj = [
   {
-    name: "Stage Java",
-    when: "Gennaio - Aprile 2022",
-    linkTo: "/"
+    name: "Frontend developer",
+    type: "frontend",
+    mode: "Remoto",
+    when: "2 settimane fa",
+    linkTo: "/beije-talent-academy/academy-frontend"
   },
   {
-    name: "Stage Java",
-    when: "Gennaio - Aprile 2022",
-    linkTo: "/"
+    name: "Backend developer",
+    type: "frontend",
+    mode: "Remoto",
+    when: "2 settimane fa",
+    linkTo: "/beije-talent-academy/academy-backend"
   }
-
 ]
 
 const CustomTable = (props) => {
@@ -60,90 +63,92 @@ const CustomTable = (props) => {
   }
 
   const printTableRows = (item, key) => {
-    return (
-      <TableRow
-        key={key}
-      >
-        <TableCell
-          component={"th"}
+    if ((props.isAcademy && item.academy) || (!props.isAcademy && !item.academy)) {
+      return (
+        <TableRow
+          key={key}
         >
-          {item.name}
-          {
-            state.isMobile && !props.careerTable &&
-            <p
-              className="simple-paragraph"
-            >
-              {item.when}
-            </p>
-          }
-
-          {
-            state.isMobile && props.careerTable &&
-            <>
-              <p
-                className="simple-paragraph"
-              >
-                <span>{item.type} {item.mode}</span>
-              </p>
-              <p
-                className="simple-paragraph"
-              >
-                {item.when}
-              </p>
-            </>
-          }
-        </TableCell>
-
-        {
-          !state.isMobile && props.careerTable &&
-          <>
-            <TableCell
-              align={"center"}
-            >
-              {item.type}
-            </TableCell>
-            <TableCell
-              align={"center"}
-            >
-              {item.mode}
-            </TableCell>
-          </>
-        }
-
-        {
-          !state.isMobile &&
           <TableCell
-            align={"center"}
+            component={"th"}
           >
-            {item.when}
-          </TableCell>
-        }
-
-        <TableCell
-          align={"right"}
-        >
-          <Link
-            to={item.linkTo}
-          >
+            {item.title}
             {
               state.isMobile &&
-              <div>
-                <FontAwesomeIcon icon={addIcon} />
-              </div>
+              <>
+                <p
+                  className="simple-paragraph"
+                >
+                  {item.type}
+                </p>
+                <p
+                  className="simple-paragraph"
+                >
+                  {item.mode}
+                </p>
+              </>
             }
-            {
-              !state.isMobile && !props.careerTable &&
-              <span>approfondisci</span>
-            }
-            {
-              !state.isMobile && props.careerTable &&
-              <span>Scopri di più</span>
-            }
-          </Link>
-        </TableCell>
+          </TableCell>
 
-      </TableRow>
-    )
+          {
+            !state.isMobile &&
+            <>
+              <TableCell
+                align={"left"}
+              >
+                {item.type}
+              </TableCell>
+              <TableCell
+                align={"left"}
+              >
+                {item.mode}
+              </TableCell>
+            </>
+          }
+          <TableCell
+            align={"right"}
+          >
+            <Link
+              to={sendToPage(item.type, item.permalink)}
+            >
+              {
+                state.isMobile &&
+                <div
+                  className={props.classNameLink}
+                >
+                  <FontAwesomeIcon icon={addIcon} />
+                </div>
+              }
+              {
+                !state.isMobile &&
+                <span
+                  className={props.classNameLink}
+                >Scopri di più</span>
+              }
+            </Link>
+          </TableCell>
+
+        </TableRow>
+      )
+
+    }
+
+  }
+
+  const sendToPage = (param1, param2) => {
+    let response = "#";
+    if (props.isAcademy) {
+      if (param1.toLowerCase() === "frontend") {
+        response = "/beije-talent-academy/academy-frontend"
+      }
+      if (param1.toLowerCase() === "backend") {
+        response = "/beije-talent-academy/academy-backend"
+      }
+    }
+    else {
+      response = `/career/career-detail?jobOffer=${param2}`
+    }
+
+    return response
   }
 
   const switchTableClassName = () => {
@@ -161,7 +166,6 @@ const CustomTable = (props) => {
 
   return (
     <TableContainer
-      component={"table"}
       className={switchTableClassName()}
     >
       <Table

@@ -85,6 +85,13 @@
   color: var(--grey-tone-1);
 }
 
+.form-upload-cv {
+  margin: 40px 0 30px 0 !important;
+  display: flex;
+  flex-direction: column !important;
+  align-items: flex-start;
+}
+
 .form-agreement-container {
   position: relative;
   margin-bottom: 40px !important;
@@ -119,10 +126,6 @@
   justify-content: flex-end;
   margin-top: 30px !important;
   flex-direction: column;
-}
-
-.form-submit-btn-container button:nth-child(1) {
-  margin-bottom: 30px;
 }
 
 /* Media queries */
@@ -163,10 +166,5 @@
 
   .form-submit-btn-container {
     flex-direction: row;
-  }
-
-  .form-submit-btn-container button:nth-child(1) {
-    margin-right: 30px;
-    margin-bottom: 0;
   }
 }

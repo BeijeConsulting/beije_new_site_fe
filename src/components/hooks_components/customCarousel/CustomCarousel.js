@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Navigate } from "react-router-dom";
 
 // Gsap
 import gsap from "gsap";
@@ -18,11 +19,13 @@ import "./CustomCarousel.css";
 
 // Constants
 import { carouselProfile } from "../../../utils/properties"
+import { useNavigate } from "react-router-dom";
 
 const CustomCarousel = (props) => {
 
   const { t } = useTranslation();
   const slideRef = useRef();
+  const navigate = useNavigate();
 
   const [state, setState] = useState({
     windowWidth: window.innerWidth,
@@ -55,9 +58,13 @@ const CustomCarousel = (props) => {
     return (
       <SwiperSlide
         key={key}
-        className={item.pictureClassName}
+        className={props.upCarousel ? "carousel-up-bg" : item.pictureClassName}
         ref={slideRef}
         onMouseMove={tiltEffect()}
+        style={{
+          backgroundColor: props.upCarousel ? item.colorBg : ""
+        }}
+        onClick={props.upCarousel ? sendToPage(item.permalink) : null}
       >
         {props.imgCarousel &&
           <img
@@ -99,6 +106,11 @@ const CustomCarousel = (props) => {
       rotateX: -positionY * 50,
       ease: "none"
     })
+  }
+
+  const sendToPage = (param1) => () => {
+    let response = `/beije-up/case-studies?caseStudy=${param1}`
+    navigate(response)
   }
 
   return (
