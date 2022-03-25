@@ -62,7 +62,7 @@ const Consulting = (props) => {
       scrollTrigger: {
         trigger: bannerText,
         start: 'top 75%',
-        toggleClass: { targets: bannerText, className: "home-fourth-section-p-animation" }
+        toggleClass: { targets: bannerText, className: "containerAnimation" }
       },
     });
 
@@ -178,7 +178,14 @@ const Consulting = (props) => {
           >
             <Box className="consulting-fourth-section-banner">
               <div className="consulting-fourth-section-banner-text">
-                {t("consulting.bannerTitle")}
+                <div className="box">
+
+                  <div className="title">
+                    <span className="block"></span>
+                    <p >{t("consulting.bannerTitle")}</p>
+                  </div>
+
+                </div>
               </div>
             </Box>
           </Container>
