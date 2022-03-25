@@ -17,7 +17,7 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 // Style
-import "./Home.css";
+import "./Home.scss";
 
 // Constants
 import { tab_aboutUs, logo_secondary_grey } from "../../utils/properties"
@@ -61,7 +61,7 @@ const Home = (props) => {
       scrollTrigger: {
         trigger: fourthSectionP,
         start: 'top 75%',
-        toggleClass: { targets: fourthSectionP, className: "home-fourth-section-p-animation" }
+        toggleClass: { targets: fourthSectionP, className: "containerAnimation" }
       },
     });
 
@@ -209,15 +209,27 @@ const Home = (props) => {
             maxWidth={"false"}
             className={"home-fourth-section-container paddingX-container-default top-oblique-line"}
           >
-            <Box>
-              <p
-                className="home-fourth-section-p"
-              >
-                <strong>{t("home.fourthSection.title.part1")}</strong>&nbsp;<br />
-                <strong>{t("home.fourthSection.title.part2")}</strong>&nbsp;<br />
-                <strong>{t("home.fourthSection.title.part3")}</strong>
-              </p>
-            </Box>
+
+            <div className="home-fourth-section-p">
+              <div className="box">
+
+                <div className="title">
+                  <span className="block"></span>
+                  <h1>{t("home.fourthSection.title.part1")}</h1>
+                </div>
+
+                <div className="role">
+                  <div className="block"></div>
+                  <h1>{t("home.fourthSection.title.part2")}</h1>
+                </div>
+
+                <div className="role_2">
+                  <div className="block"></div>
+                  <h1>{t("home.fourthSection.title.part3")}</h1>
+                </div>
+
+              </div>
+            </div>
 
             <p
               className={"home-written-bg-mobile"}
