@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { forwardRef, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useFormik } from "formik";
@@ -107,7 +107,8 @@ const CustomForm = (props) => {
       privacy_check: values.agreement
     }
     console.log("send form data: ", formData)
-    await ApiCalls.form_sendForm(formData);
+    let responseForm = await ApiCalls.form_sendForm(formData);
+    console.log("responseForm", responseForm)
   }
 
   const openModal = (param) => () => {

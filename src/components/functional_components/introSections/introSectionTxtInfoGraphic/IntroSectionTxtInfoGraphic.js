@@ -120,6 +120,7 @@ const IntroSectionTxtInfoGraphic = (props) => {
           <CustomLink
             content={"candidati"}
             linkTo={"#"}
+            callback={props.applyCallback}
             typeLink={"apply-secondary"}
           />
         </div>
@@ -146,6 +147,7 @@ const IntroSectionTxtInfoGraphic = (props) => {
           <CustomLink
             content={"candidati"}
             linkTo={"#"}
+            callback={props.applyCallback}
             typeLink={"apply-secondary"}
           />
         </div>

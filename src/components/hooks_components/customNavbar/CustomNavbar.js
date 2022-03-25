@@ -23,40 +23,44 @@ const CustomNavbar = (props) => {
   }
 
   return (
-    <nav className={switchClassName()}>
+    <>
+      {!props.burgerMenuDuck.menuOpen &&
+        <nav className={switchClassName()}>
 
-      <NavLink
-        to="/beije-consulting"
-      >
-        Beije Consulting
-        {
-          props.currentPageDuck.currentPage === "consulting" &&
-          <div className="navbarTop-hightlight navbarTop-hightlight-consulting"></div>
-        }
-      </NavLink>
+          <NavLink
+            to="/beije-consulting"
+          >
+            Beije Consulting
+            {
+              props.currentPageDuck.currentPage === "consulting" &&
+              <div className="navbarTop-hightlight navbarTop-hightlight-consulting"></div>
+            }
+          </NavLink>
 
-      <NavLink
-        to="/beije-up"
-      >
-        Beije Up
-        {
-          props.currentPageDuck.currentPage === "up" &&
-          <div className="navbarTop-hightlight navbarTop-hightlight-up"></div>
-        }
-      </NavLink>
+          <NavLink
+            to="/beije-up"
+          >
+            Beije Up
+            {
+              props.currentPageDuck.currentPage === "up" &&
+              <div className="navbarTop-hightlight navbarTop-hightlight-up"></div>
+            }
+          </NavLink>
 
 
-      <NavLink
-        to="/beije-talent-academy"
-      >
-        Beije Talent Academy
-        {
-          props.currentPageDuck.currentPage === "academy" &&
-          <div className="navbarTop-hightlight navbarTop-hightlight-academy"></div>
-        }
-      </NavLink>
+          <NavLink
+            to="/beije-talent-academy"
+          >
+            Beije Talent Academy
+            {
+              props.currentPageDuck.currentPage === "academy" &&
+              <div className="navbarTop-hightlight navbarTop-hightlight-academy"></div>
+            }
+          </NavLink>
 
-    </nav>
+        </nav>
+      }
+    </>
   )
 }
 
@@ -67,7 +71,8 @@ CustomNavbar.defaultProps = {
 
 const mapStateToProps = state => (
   {
-    currentPageDuck: state.currentPageDuck
+    currentPageDuck: state.currentPageDuck,
+    burgerMenuDuck: state.burgerMenuDuck
   }
 )
 

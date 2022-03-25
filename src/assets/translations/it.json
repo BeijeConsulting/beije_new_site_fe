@@ -53,7 +53,9 @@
   "btn": {
     "send": "Invia",
     "scroll": "scorri in basso",
-    "downloadPwd": "Scarica la presentazione"
+    "downloadPwd": "Scarica la presentazione",
+    "learnMore": "Scropri di più",
+    "close": "Chiudi"
   },
   "contactInfo": {
     "location": "Dove siamo",

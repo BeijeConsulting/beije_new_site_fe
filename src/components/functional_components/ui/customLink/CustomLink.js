@@ -24,10 +24,17 @@ const CustomLink = (props) => {
     return currentClassName
   }
 
+  const handleCallback = () => {
+    if (props.callback) {
+      props.callback();
+    }
+  }
+
   return (
     <Link
       to={props.linkTo}
       className={switchClassName()}
+      onClick={handleCallback}
     >
       {props.content}
     </Link>
