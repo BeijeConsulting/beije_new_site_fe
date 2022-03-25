@@ -52,7 +52,11 @@ function Root() {
       <Provider store={store}>
         <BrowserRouter basename={i18n.resolvedLanguage}>
           <App />
-          <CookieConsent>ACCETTA I COOKIEEEEEEEEEEEEEEEEEEEEE!</CookieConsent>
+          <CookieConsent
+            style={{ backgorund: "#262E36" }}
+          >
+            Acconsenti i cookies. Clicca <a href="#" target={"_blank"}>qui</a> per leggere l&apos;informativa.
+          </CookieConsent>
         </BrowserRouter>
         <BrowserRouter>
           <Routes>
