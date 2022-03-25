@@ -275,6 +275,8 @@
   height: calc(100vh - 87px);
   margin-top: 82px;
   font-family: var(--sofiaPro-bold);
+  padding-bottom: 60px;
+  box-sizing: border-box;
 }
 
 .burgerMenu-links-voices {
@@ -336,12 +338,6 @@
   background-position: bottom;
 }
 
-/* .burgerMenu-focusAcademy {
-  background-image: var(--webkit-photos-filter), var(--bg_focusAcademy);
-  background-image: var(--o-photos-filter), var(--bg_focusAcademy);
-  background-image: var(--photos-filter), var(--bg_focusAcademy);
-} */
-
 .burgerMenu-community {
   background-image: var(--webkit-photos-filter), var(--bg_community);
   background-image: var(--o-photos-filter), var(--bg_community);
@@ -389,6 +385,7 @@
   .burgerMenu-nav-links-container {
     height: calc(100vh - 125px);
     margin-top: 90px;
+    padding-bottom: 0;
   }
 }
 

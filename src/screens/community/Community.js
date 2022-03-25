@@ -57,10 +57,12 @@ const Community = (props) => {
       <Container
         component={"section"}
         maxWidth={"false"}
-        className={"paddingX-container-general-pages blog-first-section-container"}
+        className={"paddingX-container-general-pages blog-first-section-container d-flex justify-center"}
       >
-        <h1>{t("community.title")}</h1>
-        <p>{t("community.description")}</p>
+        <Box className={"max-width-1200"}>
+          <h1>{t("community.title")}</h1>
+          <p>{t("community.description")}</p>
+        </Box>
       </Container>
 
       <Divider
@@ -70,8 +72,9 @@ const Community = (props) => {
       <Container
         component={"section"}
         maxWidth={"false"}
-        className={"paddingX-container-general-pages blog-second-section-container"}
+        className={"paddingX-container-general-pages d-flex justify-center"}
       >
+        <Box className={"width-100 max-width-1200 blog-second-section-container"}>
         {
           !state.communityDataResponse &&
           <Skeleton />
@@ -91,6 +94,7 @@ const Community = (props) => {
             )
           })
         }
+        </Box>        
       </Container>
 
     </Box>

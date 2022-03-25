@@ -6,10 +6,8 @@
 }
 
 .ReactGridGallery>div {
-  /* border: 1px solid red; */
   width: 100%;
-  max-width: 330px;
-  height: 220px;
+  height: 50vw;
   border-radius: 10px;
   overflow: hidden;
   margin: 10px 0 !important;
@@ -23,12 +21,36 @@
   margin: 0 !important;
 }
 
+.community-detail-second-section-container {
+  width: 100%;
+  background-color: rgb(101, 101, 101, 0.2);
+  margin-top: 30px;
+}
+
+.community-detail-second-section-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.community-detail-second-section-title-container {
+  height: 100%;
+  padding: 30px 15px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  min-height: 200px;
+}
+
+.community-detail-second-section-title-container h2 {
+  margin-bottom: 15px;
+}
 @media (min-width: 768px) {
   .ReactGridGallery {
     padding: 50px 0;
   }
 
   .ReactGridGallery>div {
+    height: 25vw;
     margin: 0 !important;
   }
 
@@ -37,11 +59,10 @@
     grid-template-columns: repeat(auto-fit, calc(50% - 10px));
     grid-gap: 20px;
   }
-}
 
-@media (min-width: 900px) {
-  .ReactGridGallery {
-    grid-template-columns: repeat(auto-fit, 330px);
+  .community-detail-second-section-title-container {
+    padding: 30px;
+    min-height: 250px;
   }
 }
 
@@ -50,11 +71,38 @@
     grid-template-columns: repeat(auto-fit, calc(33.3% - 14px));
     grid-gap: 20px;
   }
+
+  .ReactGridGallery>div {
+    height: 15vw;
+  }
+
+  .community-detail-second-section-container {
+    width: 100%;
+    height: 400px;
+    display: flex;
+  }
+
+  .community-detail-second-section-image-container {
+    width: 55%;
+    height: 100%;
+  }
+
+  .community-detail-second-section-title-container {
+    height: 100%;
+    width: 45%;
+  }
 }
 
 @media (min-width: 1600px) {
   .ReactGridGallery {
-    grid-template-columns: repeat(auto-fit, 330px);
     grid-gap: 20px;
+  }
+
+  .ReactGridGallery>div {
+    height: 240px;
+  }
+
+  .community-detail-second-section-container {
+    height: 450px;
   }
 }
