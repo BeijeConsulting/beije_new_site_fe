@@ -12,7 +12,7 @@ import { setModal, initModal } from "../../../redux/ducks/modalDuck"
 import ApiCalls from "../../../services/api/ApiCalls";
 
 // MUI
-import { Grid, Box, TextField, TextareaAutosize, FormControlLabel, Checkbox, CircularProgress } from "@mui/material";
+import { Grid, Box, TextField, TextareaAutosize, FormControlLabel, Checkbox, CircularProgress, Snackbar } from "@mui/material";
 
 // Style
 import "./CustomForm.css";
@@ -37,7 +37,8 @@ const CustomForm = (props) => {
     captchaValue: '',
     fileName: "Nessun file selezionato",
     base64Value: null,
-    btnLoading: false
+    btnLoading: false,
+    toastShow: false
   });
 
   const reCaptchaChange = (value) => {
@@ -115,9 +116,23 @@ const CustomForm = (props) => {
     let responseForm = await ApiCalls.form_sendForm(formData);
     console.log("responseForm", responseForm)
 
+    let toastShow = false;
+
+    if (responseForm.success) {
+      toastShow = true
+    }
+
     setState({
       ...state,
-      btnLoading: false
+      btnLoading: false,
+      toastShow: true
+    })
+  }
+
+  const handleCloseToast = () => {
+    setState({
+      ...state,
+      toastShow: false
     })
   }
 
@@ -181,6 +196,14 @@ const CustomForm = (props) => {
         md={8}
       >
         <Box >
+          <Snackbar
+            // anchorOrigin={"top" "center"}
+            open={state.toastShow}
+            // autoHideDuration={2000}
+            onClose={handleCloseToast}
+            message="I dati sono stati inviati correttamente. Grazie di averci scritto!"
+          // key={top + horizontal}
+          />
           <form>
 
             {/* Nome */}

@@ -55,6 +55,10 @@
   margin: 0 auto;
 }
 
+.consulting-fourth-section-banner-text p {
+  opacity: 0;
+}
+
 @media (min-width: 600px) {
 
   .consulting-fourth-section-banner {
@@ -79,6 +83,8 @@
   .consulting-fourth-section-banner-text {
     width: 100%;
     font-size: 45px;
+    padding-left: 11.2% !important;
+    padding-right: 11.2% !important;
   }
 
 }
@@ -102,6 +108,11 @@
   .consulting-second-section-text-list-container {
     margin-top: 0;
     line-height: 60px;
+  }
+
+  .consulting-fourth-section-banner-text {
+    padding-left: 14.7% !important;
+    padding-right: 14.7% !important;
   }
 
 }

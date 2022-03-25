@@ -24,6 +24,7 @@
   justify-content: flex-end;
   aspect-ratio: 1 / 1;
   /* min-height: 144px; */
+  box-shadow: 0px 0px 12px 0px rgb(0 0 0 / 20%);
 }
 
 .swiper-slide p {
@@ -76,35 +77,35 @@
 /* BG PICTURE */
 /* for home */
 .carousel-bg-francesco-cesana {
-  background-image: url("../../../assets/images/profile_picture/francesco_cesana.jpg");
+  background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/francesco_cesana_mobile.jpg");
 }
 
 .carousel-bg-erica-mauro {
-  background-image: url("../../../assets/images/profile_picture/erica_mauro.jpg");
+  background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/erica_mauro_mobile.jpg");
 }
 
 .carousel-bg-chiara-balsamini {
-  background-image: url("../../../assets/images/profile_picture/chiara_balsamini.jpg");
+  background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/chiara_balsamini_mobile.jpg");
 }
 
 .carousel-bg-marianna-fulginiti {
-  background-image: url("../../../assets/images/profile_picture/marianna_fulginiti.jpg");
+  background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/marianna_fulginiti_mobile.jpg");
 }
 
 .carousel-bg-roberto-brogi {
-  background-image: url("../../../assets/images/profile_picture/roberto_brogi.jpg");
+  background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/roberto_brogi_mobile.jpg");
 }
 
 .carousel-bg-ivo-mosca {
-  background-image: url("../../../assets/images/profile_picture/ivo_mosca.jpg");
+  background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/ivo_mosca_mobile.jpg");
 }
 
 .carousel-bg-maria-rodrigez {
-  background-image: url("../../../assets/images/profile_picture/maria_rodrigez.jpg");
+  background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/maria_rodrigez_mobile.jpg");
 }
 
 .carousel-bg-francesca-bellini {
-  background-image: url("../../../assets/images/profile_picture/francesca_bellini.jpg");
+  background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/francesca_bellini_mobile.jpg");
 }
 
 /* for case studies */
@@ -143,6 +144,40 @@
 
   .swiper-pagination-bullet {
     display: none;
+  }
+
+  /* BG PICTURE */
+  /* for home */
+  .carousel-bg-francesco-cesana {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/francesco_cesana_mobile.jpg");
+  }
+
+  .carousel-bg-erica-mauro {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/erica_mauro_tablet.jpg");
+  }
+
+  .carousel-bg-chiara-balsamini {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/chiara_balsamini_tablet.jpg");
+  }
+
+  .carousel-bg-marianna-fulginiti {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/marianna_fulginiti_tablet.jpg");
+  }
+
+  .carousel-bg-roberto-brogi {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/roberto_brogi_tablet.jpg");
+  }
+
+  .carousel-bg-ivo-mosca {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/ivo_mosca_tablet.jpg");
+  }
+
+  .carousel-bg-maria-rodrigez {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/maria_rodrigez_tablet.jpg");
+  }
+
+  .carousel-bg-francesca-bellini {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/francesca_bellini_tablet.jpg");
   }
 }
 
@@ -200,6 +235,40 @@
   .swiper-slide p:nth-child(3) {
     display: block;
     padding-bottom: 10px;
+  }
+
+  /* BG PICTURE */
+  /* for home */
+  .carousel-bg-francesco-cesana {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/francesco_cesana_desktop.jpg");
+  }
+
+  .carousel-bg-erica-mauro {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/erica_mauro_desktop.jpg");
+  }
+
+  .carousel-bg-chiara-balsamini {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/chiara_balsamini_desktop.jpg");
+  }
+
+  .carousel-bg-marianna-fulginiti {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/marianna_fulginiti_desktop.jpg");
+  }
+
+  .carousel-bg-roberto-brogi {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/roberto_brogi_desktop.jpg");
+  }
+
+  .carousel-bg-ivo-mosca {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/ivo_mosca_desktop.jpg");
+  }
+
+  .carousel-bg-maria-rodrigez {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/maria_rodrigez_desktop.jpg");
+  }
+
+  .carousel-bg-francesca-bellini {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/francesca_bellini_desktop.jpg");
   }
 
 }

@@ -391,6 +391,7 @@
       "row3Desc": "Remoto"
     },
     "program": {
+      "title": "Programma",
       "section1": {
         "title": "Javascript, HTML5, CSS3",
         "subsection1": "Javascript",
@@ -440,6 +441,7 @@
       "row3Desc": "Remoto"
     },
     "program": {
+      "title": "Programma",
       "section1": {
         "title": "Java basi e teoria",
         "subsection1": "Fondamenti di Java e di programmazione ad oggetti",

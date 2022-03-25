@@ -2,19 +2,12 @@ import 'moment/locale/en-gb';
 import 'moment/locale/it';
 
 // Assets
-import logo_official_white from "../assets/images/logos/logo_official_white.svg";
-import logo_short_white from "../assets/images/logos/logo_short_white.svg";
-import logo_short_grey from "../assets/images/logos/logo_short_grey.svg";
-import logo_short_transparent from "../assets/images/logos/logo_short_transparent.svg";
+
 import { faFacebookF, faLinkedinIn, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faN, faArrowDownLong, faAngleLeft, faAngleRight, faPlus, faArrowLeft, faMinus, faClock } from '@fortawesome/free-solid-svg-icons';
 import quotation_mark from "../assets/icons/quote.svg";
 import logo_pininfarina from "../assets/images/up/caseStudies/pininfarina.jpg";
 import logo_youthquake from "../assets/images/up/caseStudies/youthquake.jpg";
-import infoGraphic2 from "../assets/images/academyDetail/infoGraphicAcademyFrontend.svg"
-import infoGraphic3 from "../assets/images/academyDetail/infoGraphicAcademyBackend.svg"
-import infoGraphic1 from "../assets/images/academy/infoGraphicAcademy.svg"
-import fondazioneLavoro from "../assets/images/academy/fondazione_lavoro_logo.png"
 
 // Link
 const linkFb = "https://www.facebook.com/beijepeoplefirst";
@@ -70,10 +63,10 @@ export const dbMonth = "YYYY-MM";
 
 export const googleAnalyticsKey = "UA-215782182-1";
 
-export const logo_primary_light = logo_official_white;
-export const logo_secondary_light = logo_short_white;
-export const logo_secondary_grey = logo_short_grey;
-export const logo_secondary_transparent = logo_short_transparent;
+export const logo_primary_light = "https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/logos/logo_official_white.svg";
+export const logo_secondary_light = "https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/logos/logo_short_white.svg";
+export const logo_secondary_grey = "https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/logos/logo_short_grey.svg";
+export const logo_secondary_transparent = "https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/logos/logo_short_transparent.svg";
 
 export const defaultIcon = faN;
 export const downArrow = faArrowDownLong;
@@ -82,16 +75,14 @@ export const rightArrow = faAngleRight;
 export const quotationMark = quotation_mark;
 export const addIcon = faPlus;
 export const minusIcon = faMinus;
-export const infoGraphicFrontend = infoGraphic2;
-export const infoGraphicBackend = infoGraphic3;
-export const infoGraphicAcademy = infoGraphic1;
+export const infoGraphicFrontend = "https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/academyDetail/infoGraphicAcademyFrontend.svg";
+export const infoGraphicBackend = "https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/academyDetail/infoGraphicAcademyBackend.svg";
+export const infoGraphicAcademy = "https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/academy/infoGraphicAcademy.svg";
 export const backArrow = faArrowLeft;
 export const clock = faClock;
-export const logo_fondazione_lavoro = fondazioneLavoro;
+export const logo_fondazione_lavoro = "https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/academy/fondazione_lavoro_logo.png";
 
 export const linkYoutube = linkYt;
-
-
 
 // Menu voices
 export const menu_voices = [

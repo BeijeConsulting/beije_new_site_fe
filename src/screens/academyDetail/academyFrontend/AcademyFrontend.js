@@ -104,7 +104,7 @@ const AcademyFrontend = (props) => {
             maxWidth={"false"}
             className={"detail-academy-second-section paddingX-container-general-pages"}
           >
-            <h2>Programma</h2>
+            <h2>{t("academyFrontend.program.title")}</h2>
             <CustomAccordion
               obj={programFrontendAcademy}
             />

@@ -39,7 +39,7 @@ const DownloadBtn = (props) => {
         currentDownload = "https://beije-people-first.s3.eu-south-1.amazonaws.com/site/beije-people-first_presentazione_up.pdf"
         break;
       case "academy":
-        currentDownload = "https://beije-people-first.s3.eu-south-1.amazonaws.com/site/beije-people-first_presentazione_consulting.pdf"
+        currentDownload = "https://beije-people-first.s3.eu-south-1.amazonaws.com/site/beije-people-first_presentazione_talent_academy.pdf"
         break;
       default:
         currentDownload = ""
