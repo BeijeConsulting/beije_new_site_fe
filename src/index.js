@@ -8,6 +8,7 @@ import './i18n/i18n-config';
 import { Provider } from "react-redux";
 import store from "./redux/createStore";
 
+import CookieConsent from "react-cookie-consent";
 // function RedirectToLanguage() {
 //   const { pathname, search } = useLocation();
 //   const { i18n } = useTranslation();
@@ -51,6 +52,7 @@ function Root() {
       <Provider store={store}>
         <BrowserRouter basename={i18n.resolvedLanguage}>
           <App />
+          <CookieConsent>ACCETTA I COOKIEEEEEEEEEEEEEEEEEEEEE!</CookieConsent>
         </BrowserRouter>
         <BrowserRouter>
           <Routes>
