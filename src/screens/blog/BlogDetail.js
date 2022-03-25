@@ -9,6 +9,7 @@ import { Box, Container, Divider, Skeleton } from "@mui/material";
 
 // Components
 import blogArrayTest from "../../blogArrayTest.json";
+import GoBackBtn from "../../components/functional_components/goBackBtn/GoBackBtn";
 
 // Redux
 import { setCurrentPage, initCurrentPage } from "../../redux/ducks/currentPageDuck";
@@ -91,8 +92,11 @@ const Blog = (props) => {
       <Container
         component={"section"}
         maxWidth={"false"}
-        className={"paddingX-container-general-pages blog-first-section-container d-flex justify-center"}
+        className={"paddingX-container-general-pages blog-first-section-container d-flex items-center flex-column"}
       >
+        <Box className={"max-width-1200 width-100 margin-bottom-30"}>
+          <GoBackBtn />
+        </Box>
         <Box className={"max-width-1200"}>
           <h2>{t("blog.title")}</h2>
           <p>{t("blog.description")}</p>

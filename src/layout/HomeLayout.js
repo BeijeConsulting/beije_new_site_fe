@@ -66,6 +66,9 @@ const HomeLayout = (props) => {
       case "blog":
         classNameBgLayout = "homeLayout-fixed-bg bg-dark-grey"
         break;
+      case "community":
+        classNameBgLayout = "homeLayout-fixed-bg bg-dark-grey"
+        break;
       case "career":
         classNameBgLayout = "homeLayout-fixed-bg bg-dark-grey"
         break;
@@ -92,7 +95,7 @@ const HomeLayout = (props) => {
   }
 
   return (
-    <Box className={props.burgerMenuDuck.menuOpen ? "position-fixed" : ""} >
+    <Box className={props.burgerMenuDuck.menuOpen ? "position-fixed width-100" : ""} >
       <div className={switchClassBgLayout()} />
       {
         props.currentPageDuck.currentPage === "" &&

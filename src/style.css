@@ -367,6 +367,10 @@ h4, h5, h6, .minor-titles {
   margin-top: var(--header-height-xs)
 }
 
+.margin-bottom-30 {
+  margin-bottom: 30px;
+}
+
 @media(min-width: 768px) {
   .margin-top-container-screens {
     margin-top: calc(var(--header-height-md))

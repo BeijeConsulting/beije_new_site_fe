@@ -47,10 +47,12 @@ const Community = (props) => {
       <Container
         component={"section"}
         maxWidth={"false"}
-        className={"paddingX-container-general-pages blog-first-section-container"}
+        className={"paddingX-container-general-pages blog-first-section-container d-flex justify-center"}
       >
-        <h1>{t("community.title")}</h1>
-        <p>{t("community.description")}</p>
+        <Box className={"max-width-1200"}>
+          <h1>{t("community.title")}</h1>
+          <p>{t("community.description")}</p>
+        </Box>
       </Container>
 
       <Divider
@@ -60,23 +62,25 @@ const Community = (props) => {
       <Container
         component={"section"}
         maxWidth={"false"}
-        className={"paddingX-container-general-pages blog-second-section-container"}
+        className={"paddingX-container-general-pages d-flex justify-center"}
       >
-        {
-          communityArrayTest.map((event, index) => {
-            return (
-              <div key={index} className={"blog-second-section-card-container"}>
-                <BlogCard
-                  permalink={event.id}
-                  src={event.image}
-                  title={getValueFromLang(event.title, props.languageDuck.currentLanguage)}
-                  description={getValueFromLang(event.description, props.languageDuck.currentLanguage)}
-                  community
-                />
-              </div>
-            )
-          })
-        }
+        <Box className={"width-100 max-width-1200 blog-second-section-container"}>
+          {
+            communityArrayTest.map((event, index) => {
+              return (
+                <div key={index} className={"blog-second-section-card-container"}>
+                  <BlogCard
+                    permalink={event.id}
+                    src={event.image}
+                    title={getValueFromLang(event.title, props.languageDuck.currentLanguage)}
+                    description={getValueFromLang(event.description, props.languageDuck.currentLanguage)}
+                    community
+                  />
+                </div>
+              )
+            })
+          }
+        </Box>
       </Container>
 
     </Box>

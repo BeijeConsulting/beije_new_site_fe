@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import Gallery from "react-grid-gallery";
 
 // Style
 import './Community.css';
@@ -12,48 +13,35 @@ import { connect } from "react-redux";
 import { setCurrentPage, initCurrentPage } from "../../redux/ducks/currentPageDuck";
 import { setVisibilityNavbar, initVisibilityNavbar } from "../../redux/ducks/showNavbarTopDuck";
 
-import Gallery from "react-grid-gallery";
+// Components
+import GoBackBtn from "../../components/functional_components/goBackBtn/GoBackBtn";
 
 const CommunityDetail = (props) => {
 
   const IMAGES =
     [{
       src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
-      thumbnail: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
-      thumbnailWidth: 320,
-      thumbnailHeight: 174,
-      caption: "Federica ubriaca"
+      thumbnail: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg"
     },
     {
       src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-      thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-      thumbnailWidth: 320,
-      thumbnailHeight: 212,
-      caption: "Federica che ci prova con Ivo"
+      thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg"
     },
     {
       src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
-      thumbnail: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
-      thumbnailWidth: 320,
-      thumbnailHeight: 174
+      thumbnail: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg"
     },
     {
       src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-      thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-      thumbnailWidth: 320,
-      thumbnailHeight: 212
+      thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg"
     },
     {
       src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
-      thumbnail: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
-      thumbnailWidth: 320,
-      thumbnailHeight: 174
+      thumbnail: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg"
     },
     {
       src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-      thumbnail: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
-      thumbnailWidth: 320,
-      thumbnailHeight: 212
+      thumbnail: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg"
     }]
 
   const { t } = useTranslation();
@@ -76,10 +64,15 @@ const CommunityDetail = (props) => {
       <Container
         component={"section"}
         maxWidth={"false"}
-        className={"paddingX-container-general-pages blog-first-section-container"}
+        className={"paddingX-container-general-pages blog-first-section-container d-flex items-center flex-column"}
       >
-        <h1>{t("community.title")}</h1>
-        <p>{t("community.description")}</p>
+        <Box className={"max-width-1200 width-100 margin-bottom-30"}>
+          <GoBackBtn />
+        </Box>
+        <Box className={"max-width-1200"}>
+          <h1>{t("community.title")}</h1>
+          <p>{t("community.description")}</p>
+        </Box>
       </Container>
 
       <Divider
@@ -89,13 +82,36 @@ const CommunityDetail = (props) => {
       <Container
         component={"section"}
         maxWidth={"false"}
-        className={"paddingX-container-general-pages"}
+        className={"paddingX-container-general-pages d-flex justify-center"}
       >
-        <Gallery
-          images={IMAGES}
-          enableImageSelection={false}
-          className={"community-gallery-container"}
-        />
+        <Box className={"max-width-1200 width-100"}>
+          <Box className={"community-detail-second-section-container"}>
+            <Box className={"community-detail-second-section-image-container"}>
+              <img
+                alt={"event photo"}
+                src={IMAGES[0].src}
+              />
+            </Box>
+            <Box className={"community-detail-second-section-title-container"}>
+              <h2>CHRISTMAS EVENT</h2>
+              <p>L&apos;evento di natale più bello di sempre xD</p>
+            </Box>
+          </Box>
+        </Box>
+      </Container>
+
+      <Container
+        component={"section"}
+        maxWidth={"false"}
+        className={"paddingX-container-general-pages d-flex justify-center"}
+      >
+        <Box className={"max-width-1200 width-100 "}>
+          <Gallery
+            images={IMAGES}
+            enableImageSelection={false}
+            className={"community-gallery-container"}
+          />
+        </Box>
       </Container>
 
     </Box>
