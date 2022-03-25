@@ -349,11 +349,13 @@ const Home = (props) => {
             <Container
               component={"section"}
               maxWidth={"false"}
-              className={"home-sixth-section-container"}
+              className={"home-sixth-section-container d-flex justify-center"}
             >
-              <CustomCarousel
-                homeCarousel
-              />
+              <Box className={"width-100 max-width-1800"}>
+                <CustomCarousel
+                  homeCarousel
+                />
+              </Box>
             </Container>
           </Container>
 

@@ -12,7 +12,7 @@ import { setModal, initModal } from "../../../redux/ducks/modalDuck"
 import ApiCalls from "../../../services/api/ApiCalls";
 
 // MUI
-import { Grid, Box, TextField, TextareaAutosize, FormControlLabel, Checkbox } from "@mui/material";
+import { Grid, Box, TextField, TextareaAutosize, FormControlLabel, Checkbox, CircularProgress } from "@mui/material";
 
 // Style
 import "./CustomForm.css";
@@ -36,7 +36,8 @@ const CustomForm = (props) => {
     captcha: undefined,
     captchaValue: '',
     fileName: "Nessun file selezionato",
-    base64Value: null
+    base64Value: null,
+    btnLoading: false
   });
 
   const reCaptchaChange = (value) => {
@@ -93,6 +94,10 @@ const CustomForm = (props) => {
   });
 
   const sendDataForm = async (values) => {
+    setState({
+      ...state,
+      btnLoading: true
+    })
     const formData = {
       captcha: state.captchaValue,
       city: values.town,
@@ -109,6 +114,11 @@ const CustomForm = (props) => {
     console.log("send form data: ", formData)
     let responseForm = await ApiCalls.form_sendForm(formData);
     console.log("responseForm", responseForm)
+
+    setState({
+      ...state,
+      btnLoading: false
+    })
   }
 
   const openModal = (param) => () => {
@@ -404,7 +414,7 @@ const CustomForm = (props) => {
             >
               <CustomButton
                 type={"btn-form-primary"}
-                content={t("btn.send")}
+                content={state.btnLoading ? <CircularProgress size={24} /> : t("btn.send")}
                 callback={formikContacts.submitForm}
                 disabled={!(state.captchaCheck && formikContacts.isValid && formikContacts.dirty)}
               />

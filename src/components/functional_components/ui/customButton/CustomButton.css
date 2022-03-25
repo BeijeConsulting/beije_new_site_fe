@@ -6,10 +6,13 @@
   padding: 12px 40px !important;
   border-radius: 0% !important;
   transition: 1s !important;
+  min-width: 125px !important;
 }
 
 .button-form-primary p {
   font-family: var(--moderat-regular) !important;
+  display: flex;
+  align-items: center;
 }
 
 .button-form-primary:disabled {
@@ -24,6 +27,7 @@
 @media(min-width: 1024px) {
   .button-form-primary {
     padding: 15px 50px !important;
+    min-width: 145px !important;
   }
 }
 
