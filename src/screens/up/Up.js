@@ -220,14 +220,16 @@ const Up = (props) => {
             <Container
               component={"section"}
               maxWidth={"false"}
-              className={"up-fifth-section-container"}
+              className={"up-fifth-section-container d-flex justify-center"}
             >
-              <CustomCarousel
-                upCarousel
-                obj={caseStudiesTrialObj}
-                classNameSwiperContainer={"swiper-container-up"}
-                imgCarousel
-              />
+              <Box className="width-100 max-width-1800">
+                <CustomCarousel
+                  upCarousel
+                  obj={caseStudiesTrialObj}
+                  classNameSwiperContainer={"swiper-container-up"}
+                  imgCarousel
+                />
+              </Box>
             </Container>
           </Container>
 
