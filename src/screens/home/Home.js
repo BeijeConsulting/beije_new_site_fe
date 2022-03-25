@@ -215,17 +215,17 @@ const Home = (props) => {
 
                 <div className="title">
                   <span className="block"></span>
-                  <h1>{t("home.fourthSection.title.part1")}</h1>
+                  <p >{t("home.fourthSection.title.part1")}</p>
                 </div>
 
                 <div className="role">
                   <div className="block"></div>
-                  <h1>{t("home.fourthSection.title.part2")}</h1>
+                  <p >{t("home.fourthSection.title.part2")}</p>
                 </div>
 
                 <div className="role_2">
                   <div className="block"></div>
-                  <h1>{t("home.fourthSection.title.part3")}</h1>
+                  <p >{t("home.fourthSection.title.part3")}</p>
                 </div>
 
               </div>

@@ -382,6 +382,7 @@
       "row3Desc": "Remote working"
     },
     "program": {
+      "title": "Program",
       "section1": {
         "title": "Javascript, HTML5, CSS3",
         "subsection1": "Javascript",
@@ -431,6 +432,7 @@
       "row3Desc": "Remote working"
     },
     "program": {
+      "title": "Program",
       "section1": {
         "title": "Java Basis and theory",
         "subsection1": "Fundamentals of Java and object-oriented programming",
