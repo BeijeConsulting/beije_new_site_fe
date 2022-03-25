@@ -14,7 +14,7 @@ import { Box, Container, Tab } from "@mui/material";
 import './TalentAcademy.css'
 
 // Constants
-import { employeesComments, infoGraphicAcademy, logo_fondazione_lavoro } from "../../utils/properties";
+import { employeesComments, infoGraphicAcademy, logo_fondazione_lavoro, linkYoutube, socialYt } from "../../utils/properties";
 
 // Components
 import IntroSectionImgTxt from "../../components/functional_components/introSections/introSectionImgTxt/IntroSectionImgTxt";
@@ -22,12 +22,14 @@ import CustomForm from "../../components/hooks_components/customForm/CustomForm"
 import CustomLink from "../../components/functional_components/ui/customLink/CustomLink";
 import CustomBanner from "../../components/functional_components/customBanner/CustomBanner";
 import CustomScrollTab from "../../components/hooks_components/customScrollTab/CustomScrollTab";
+import CustomIconButton from "../../components/functional_components/ui/customIconButton/CustomIconButton";
 
 
 const TalentAcademy = (props) => {
 
   const { t } = useTranslation();
   const secondContainerRef = useRef();
+  const formContainer = useRef();
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
@@ -48,6 +50,15 @@ const TalentAcademy = (props) => {
     });
   }
 
+  const scrollToForm = () => {
+    let formTop = formContainer.current.offsetTop;
+
+    window.scrollTo({
+      top: formTop + 600,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }
 
   return (
     <>
@@ -59,7 +70,6 @@ const TalentAcademy = (props) => {
 
       <Box
         className={"bg-dark-grey margin-top-container-screens"}
-      // style={{ height: "3000px" }}
       >
 
         {/* First section Img + text*/}
@@ -89,6 +99,7 @@ const TalentAcademy = (props) => {
               <CustomLink
                 content={"candidati"}
                 linkTo={"#"}
+                callback={scrollToForm}
                 typeLink={"apply"}
               />
             </div>
@@ -110,7 +121,15 @@ const TalentAcademy = (props) => {
               title={t("academy.secondSection.title")}
               text={t("academy.secondSection.description1")}
               enphasisTxt={t("academy.secondSection.description2")}
-            />
+            >
+              <CustomIconButton
+                href={linkYoutube}
+                target={"_blank"}
+                type={"youtube-videos-primary"}
+                iconFontAwsome={socialYt}
+                classNameIcon={"youtube-videos-icon-primary"}
+              />
+            </CustomBanner>
           </Container>
 
           {/* Third section */}
@@ -204,7 +223,8 @@ const TalentAcademy = (props) => {
             className={"up-sixth-section-container paddingX-container-general-pages"}
           >
             <Box
-              className={"academy-sixth-section-box-form"}
+              className={"academy-sixth-section-box-form academy-form-gsap"}
+              ref={formContainer}
             >
               <CustomForm
                 cvForm

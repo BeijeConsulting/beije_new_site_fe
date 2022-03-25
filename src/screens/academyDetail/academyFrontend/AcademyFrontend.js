@@ -25,6 +25,7 @@ const AcademyFrontend = (props) => {
 
   const secondContainerRef = useRef();
   const { t } = useTranslation();
+  const formContainer = useRef();
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
@@ -40,6 +41,18 @@ const AcademyFrontend = (props) => {
     let elementTop = secondContainerRef.current.offsetTop;
     window.scrollTo({
       top: elementTop,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }
+
+  const scrollToForm = () => {
+    let formTop = formContainer.current.offsetTop;
+    console.log("formContainer", formContainer);
+    console.log("formTop", formTop);
+
+    window.scrollTo({
+      top: formTop + 800,
       left: 0,
       behavior: 'smooth'
     });
@@ -75,6 +88,7 @@ const AcademyFrontend = (props) => {
             paragraph1Txt={t("academyFrontend.paragraph1Txt")}
             obj={academyCourseStructure}
             srcImage={infoGraphicFrontend}
+            applyCallback={scrollToForm}
           >
 
           </IntroSectionTxtInfoGraphic>
@@ -98,6 +112,7 @@ const AcademyFrontend = (props) => {
 
           {/* Third section form */}
           < Container
+            ref={formContainer}
             component={"section"}
             maxWidth={"false"}
             className={"detail-academy-third-section paddingX-container-general-pages top-oblique-line bg-yellow"}

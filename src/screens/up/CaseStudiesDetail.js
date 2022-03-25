@@ -14,6 +14,9 @@ import { Box, Container } from "@mui/material";
 // Style
 import "./CaseStudiesDetail.css";
 
+// Components
+import GoBackBtn from "../../components/functional_components/goBackBtn/GoBackBtn";
+
 // Remove
 import caseStudiesTrialObj from "./caseStudiesTrialObj.json";
 
@@ -59,6 +62,8 @@ const CaseStudiesDetail = (props) => {
     <Box
       className={"bg-dark-grey margin-top-container-screens"}
     >
+
+
       {
         state.caseStudiesResponse &&
         <Container
@@ -66,6 +71,12 @@ const CaseStudiesDetail = (props) => {
           maxWidth={"false"}
           className={"case-studies-detail-container paddingX-container-general-pages"}
         >
+          <Box
+            className="case-studies-detail-btn-container"
+          >
+            <GoBackBtn />
+          </Box>
+
           <Box
             className={"case-studies-detail-img-container"}
             style={{ backgroundColor: state.caseStudiesResponse.colorBg }}

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 // MUI
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material";
@@ -31,6 +32,8 @@ const tempObj = [
 ]
 
 const CustomTable = (props) => {
+
+  const { t } = useTranslation();
 
   const [state, setState] = useState({
     isMobile: window.innerWidth < 1024,
@@ -122,7 +125,7 @@ const CustomTable = (props) => {
                 !state.isMobile &&
                 <span
                   className={props.classNameLink}
-                >Scopri di più</span>
+                >{t("btn.learnMore")}</span>
               }
             </Link>
           </TableCell>

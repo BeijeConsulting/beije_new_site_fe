@@ -37,7 +37,9 @@
   "btn": {
     "send": "Send",
     "scroll": "Scroll down",
-    "downloadPwd": "Download the presentation"
+    "downloadPwd": "Download the presentation",
+    "learnMore": "Learn more",
+    "close": "Close"
   },
   "contactInfo": {
     "location": "Where we are",

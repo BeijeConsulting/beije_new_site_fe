@@ -100,12 +100,12 @@ const CustomAccordion = (props) => {
         <div
           className="expandIconWrapperDesktop"
         >
-          <p>Chiudi</p>
+          <p>{t("btn.close")}</p>
         </div>
         <div
           className="collapsIconWrapperDesktop"
         >
-          <p>Scopri di più</p>
+          <p>{t("btn.learnMore")}</p>
         </div>
       </Box>
     )
