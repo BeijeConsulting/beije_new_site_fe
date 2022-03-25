@@ -2,97 +2,25 @@
   {
     "id": 0,
     "image": "https://static0.cbrimages.com/wordpress/wp-content/uploads/2020/06/Hawk-Thumbs-up--e1593406623219.jpg?q=50&fit=crop&w=740&h=370&dpr=1.5",
-    "title": [
-      {
-        "lang": "IT",
-        "translation": "Evento di Natale"
-      },
-      {
-        "lang": "EN",
-        "translation": "Christmas event"
-      }
-    ],
-    "description": [
-      {
-        "lang": "IT",
-        "translation": "IT - L'evento di Natale Beije SPACCA!"
-      },
-      {
-        "lang": "EN",
-        "translation": "EN - Beije Christmas event ROCKS!"
-      }
-    ]
+    "title": "Evento di Natale",
+    "description": "IT - L'evento di Natale Beije SPACCA!"
   },
   {
     "id": 1,
     "image": "https://static0.cbrimages.com/wordpress/wp-content/uploads/2020/06/Hawk-Thumbs-up--e1593406623219.jpg?q=50&fit=crop&w=740&h=370&dpr=1.5",
-    "title": [
-      {
-        "lang": "IT",
-        "translation": "Evento di Pasqua"
-      },
-      {
-        "lang": "EN",
-        "translation": "Easter event"
-      }
-    ],
-    "description": [
-      {
-        "lang": "IT",
-        "translation": "IT - L'evento di Pasqua Beije SPACCA!"
-      },
-      {
-        "lang": "EN",
-        "translation": "EN - Beije Easter event ROCKS!"
-      }
-    ]
+    "title": "Evento di Pasqua",
+    "description": "IT - L'evento di Pasqua Beije SPACCA!"
   },
   {
     "id": 2,
     "image": "https://static0.cbrimages.com/wordpress/wp-content/uploads/2020/06/Hawk-Thumbs-up--e1593406623219.jpg?q=50&fit=crop&w=740&h=370&dpr=1.5",
-    "title": [
-      {
-        "lang": "IT",
-        "translation": "Evento di capodanno"
-      },
-      {
-        "lang": "EN",
-        "translation": "New Years event"
-      }
-    ],
-    "description": [
-      {
-        "lang": "IT",
-        "translation": "IT - L'evento di capodanno Beije SPACCA!"
-      },
-      {
-        "lang": "EN",
-        "translation": "EN - Beije New Years event ROCKS!"
-      }
-    ]
+    "title": "Evento di capodanno",
+    "description": "IT - L'evento di capodanno Beije SPACCA!"
   },
   {
     "id": 3,
     "image": "https://static0.cbrimages.com/wordpress/wp-content/uploads/2020/06/Hawk-Thumbs-up--e1593406623219.jpg?q=50&fit=crop&w=740&h=370&dpr=1.5",
-    "title": [
-      {
-        "lang": "IT",
-        "translation": "Evento 1mld di fatturato"
-      },
-      {
-        "lang": "EN",
-        "translation": "1B in turnover event"
-      }
-    ],
-    "description": [
-      {
-        "lang": "IT",
-        "translation": "IT - Beije ha fatturato 1 miliardo, PAZZESCO!"
-      },
-      {
-        "lang": "EN",
-        "translation": "EN - Beije billed 1 billion, CRAZY!"
-      }
-    ]
+    "title": "Evento 1mld di fatturato",
+    "description": "IT - Beije ha fatturato 1 miliardo, PAZZESCO!"
   }
 ]

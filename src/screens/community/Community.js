@@ -96,7 +96,6 @@ const Community = (props) => {
         }
         </Box>        
       </Container>
-
     </Box>
   )
 }
