@@ -5,18 +5,6 @@
 * Browsers: last 4 version
 */
 
-:root {
-  /* all bg images on menu voices hover */
-  --bg_consulting: url(../../../assets/images/burgerMenu/consulting_burger.jpg);
-  --bg_academy: url(../../../assets/images/burgerMenu/talentAcademy_burger.jpg);
-  --bg_up: url(../../../assets/images/burgerMenu/up_burger.jpg);
-  --bg_career: url(../../../assets/images/burgerMenu/career_burger.jpg);
-  --bg_contacts: url(../../../assets/images/burgerMenu/contacts_burger.jpg);
-  --bg_blog: url(../../../assets/images/burgerMenu/blog_burger.jpg);
-  /* --bg_focusAcademy: url(../../../assets/images/burgerMenu/focusAcademy_burger.jpg); */
-  --bg_community: url(../../../assets/images/burgerMenu/community_burger.jpg);
-}
-
 /* Icon hamburger menu */
 .burgerMenu-iconButton {
   padding: 0 !important;
@@ -307,48 +295,143 @@
   background-size: cover;
 }
 
-.burgerMenu-consulting {
-  background-image: var(--webkit-photos-filter), var(--bg_consulting);
-  background-image: var(--o-photos-filter), var(--bg_consulting);
-  background-image: var(--photos-filter), var(--bg_consulting);
+
+@media (hover: hover) {
+  .burgerMenu-consulting {
+    background-image: var(--webkit-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/consulting/consulting_burger_mobile.jpg");
+    background-image: var(--o-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/consulting/consulting_burger_mobile.jpg");
+    background-image: var(--photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/consulting/consulting_burger_mobile.jpg");
+  }
+
+  .burgerMenu-academy {
+    background-image: var(--webkit-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/talentAcademy/talentAcademy_burger_mobile.jpg");
+    background-image: var(--o-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/talentAcademy/talentAcademy_burger_mobile.jpg");
+    background-image: var(--photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/talentAcademy/talentAcademy_burger_mobile.jpg");
+  }
+
+  .burgerMenu-up {
+    background-image: var(--webkit-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/up/up_burger_mobile.jpg");
+    background-image: var(--o-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/up/up_burger_mobile.jpg");
+    background-image: var(--photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/up/up_burger_mobile.jpg");
+  }
+
+  .burgerMenu-career {
+    background-image: var(--webkit-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/career/career_burger_mobile.jpg");
+    background-image: var(--o-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/career/career_burger_mobile.jpg");
+    background-image: var(--photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/career/career_burger_mobile.jpg");
+  }
+
+  .burgerMenu-blog {
+    background-image: var(--webkit-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/blog/blog_burger_mobile.jpg");
+    background-image: var(--o-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/blog/blog_burger_mobile.jpg");
+    background-image: var(--photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/blog/blog_burger_mobile.jpg");
+    background-position: bottom;
+  }
+
+  .burgerMenu-community {
+    background-image: var(--webkit-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/community/community_burger_mobile.jpg");
+    background-image: var(--o-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/community/community_burger_mobile.jpg");
+    background-image: var(--photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/community/community_burger_mobile.jpg");
+  }
+
+  .burgerMenu-contacts {
+    background-image: var(--webkit-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/contacts/contacts_burger_mobile.jpg");
+    background-image: var(--o-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/contacts/contacts_burger_mobile.jpg");
+    background-image: var(--photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/contacts/contacts_burger_mobile.jpg");
+  }
+
+  @media(min-width: 768px) {
+    .burgerMenu-consulting {
+      background-image: var(--webkit-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/consulting/consulting_burger_tablet.jpg");
+      background-image: var(--o-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/consulting/consulting_burger_tablet.jpg");
+      background-image: var(--photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/consulting/consulting_burger_tablet.jpg");
+    }
+
+    .burgerMenu-academy {
+      background-image: var(--webkit-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/talentAcademy/talentAcademy_burger_tablet.jpg");
+      background-image: var(--o-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/talentAcademy/talentAcademy_burger_tablet.jpg");
+      background-image: var(--photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/talentAcademy/talentAcademy_burger_tablet.jpg");
+    }
+
+    .burgerMenu-up {
+      background-image: var(--webkit-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/up/up_burger_tablet.jpg");
+      background-image: var(--o-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/up/up_burger_tablet.jpg");
+      background-image: var(--photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/up/up_burger_tablet.jpg");
+    }
+
+    .burgerMenu-career {
+      background-image: var(--webkit-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/career/career_burger_tablet.jpg");
+      background-image: var(--o-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/career/career_burger_tablet.jpg");
+      background-image: var(--photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/career/career_burger_tablet.jpg");
+    }
+
+    .burgerMenu-blog {
+      background-image: var(--webkit-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/blog/blog_burger_tablet.jpg");
+      background-image: var(--o-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/blog/blog_burger_tablet.jpg");
+      background-image: var(--photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/blog/blog_burger_tablet.jpg");
+      background-position: bottom;
+    }
+
+    .burgerMenu-community {
+      background-image: var(--webkit-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/community/community_burger_tablet.jpg");
+      background-image: var(--o-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/community/community_burger_tablet.jpg");
+      background-image: var(--photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/community/community_burger_tablet.jpg");
+    }
+
+    .burgerMenu-contacts {
+      background-image: var(--webkit-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/contacts/contacts_burger_desktop_Tablet.jpg");
+      background-image: var(--o-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/contacts/contacts_burger_desktop_Tablet.jpg");
+      background-image: var(--photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/contacts/contacts_burger_desktop_Tablet.jpg");
+    }
+  }
+
+  @media(min-width: 1024px) {
+    .burgerMenu-consulting {
+      background-image: var(--webkit-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/consulting/consulting_burger_desktop.jpg");
+      background-image: var(--o-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/consulting/consulting_burger_desktop.jpg");
+      background-image: var(--photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/consulting/consulting_burger_desktop.jpg");
+    }
+
+    .burgerMenu-academy {
+      background-image: var(--webkit-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/talentAcademy/talentAcademy_burger_desktop.jpg");
+      background-image: var(--o-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/talentAcademy/talentAcademy_burger_desktop.jpg");
+      background-image: var(--photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/talentAcademy/talentAcademy_burger_desktop.jpg");
+    }
+
+    .burgerMenu-up {
+      background-image: var(--webkit-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/up/up_burger_desktop.jpg");
+      background-image: var(--o-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/up/up_burger_desktop.jpg");
+      background-image: var(--photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/up/up_burger_desktop.jpg");
+    }
+
+    .burgerMenu-career {
+      background-image: var(--webkit-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/career/career_burger_desktop.jpg");
+      background-image: var(--o-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/career/career_burger_desktop.jpg");
+      background-image: var(--photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/career/career_burger_desktop.jpg");
+    }
+
+    .burgerMenu-blog {
+      background-image: var(--webkit-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/blog/blog_burger_desktop.jpg");
+      background-image: var(--o-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/blog/blog_burger_desktop.jpg");
+      background-image: var(--photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/blog/blog_burger_desktop.jpg");
+      background-position: bottom;
+    }
+
+    .burgerMenu-community {
+      background-image: var(--webkit-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/community/community_burger_desktop.jpg");
+      background-image: var(--o-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/community/community_burger_desktop.jpg");
+      background-image: var(--photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/community/community_burger_desktop.jpg");
+    }
+
+    .burgerMenu-contacts {
+      background-image: var(--webkit-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/contacts/contacts_burger_desktop_Tablet.jpg");
+      background-image: var(--o-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/contacts/contacts_burger_desktop_Tablet.jpg");
+      background-image: var(--photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/contacts/contacts_burger_desktop_Tablet.jpg");
+    }
+  }
+
 }
 
-.burgerMenu-academy {
-  background-image: var(--webkit-photos-filter), var(--bg_academy);
-  background-image: var(--o-photos-filter), var(--bg_academy);
-  background-image: var(--photos-filter), var(--bg_academy);
-}
-
-.burgerMenu-up {
-  background-image: var(--webkit-photos-filter), var(--bg_up);
-  background-image: var(--o-photos-filter), var(--bg_up);
-  background-image: var(--photos-filter), var(--bg_up);
-}
-
-.burgerMenu-career {
-  background-image: var(--webkit-photos-filter), var(--bg_career);
-  background-image: var(--o-photos-filter), var(--bg_career);
-  background-image: var(--photos-filter), var(--bg_career);
-}
-
-.burgerMenu-blog {
-  background-image: var(--webkit-photos-filter), var(--bg_blog);
-  background-image: var(--o-photos-filter), var(--bg_blog);
-  background-image: var(--photos-filter), var(--bg_blog);
-  background-position: bottom;
-}
-
-.burgerMenu-community {
-  background-image: var(--webkit-photos-filter), var(--bg_community);
-  background-image: var(--o-photos-filter), var(--bg_community);
-  background-image: var(--photos-filter), var(--bg_community);
-}
-
-.burgerMenu-contacts {
-  background-image: var(--webkit-photos-filter), var(--bg_contacts);
-  background-image: var(--o-photos-filter), var(--bg_contacts);
-  background-image: var(--photos-filter), var(--bg_contacts);
-}
 
 /* Media Query */
 @media (min-width: 768px) {
