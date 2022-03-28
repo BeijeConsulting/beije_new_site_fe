@@ -54,8 +54,6 @@ const Blog = (props) => {
   }, [])
 
   const getData = async () => {
-    let blogData;
-    blogData = blogArrayTest[0];
     // let blogDataAPI = await ApiCalls.blog_getListDetail(permalink);
     // console.log("AOCFHAEIOFVHOEWI", blogDataAPI)
 
@@ -63,6 +61,8 @@ const Blog = (props) => {
     // console.log("WOFIUHWOFI", blogDataResponseAPI)
     // let latestArticles = removeThisBlogFromList(blogDataResponseAPI);
 
+    let blogData;
+    blogData = blogArrayTest[0];
     let latestArticles = removeThisBlogFromList(blogArrayTest);
 
     setState({
