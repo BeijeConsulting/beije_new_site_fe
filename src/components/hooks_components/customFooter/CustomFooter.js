@@ -25,10 +25,6 @@ import LegalNotes from "../../functional_components/legalNotes/LegalNotes";
 const CustomFooter = (props) => {
   const { t } = useTranslation();
 
-  const [state, setState] = useState({
-    typeModal: 2
-  })
-
   const openModal = (param1) => () => {
     props.dispatch(setModal(true, param1))
   }

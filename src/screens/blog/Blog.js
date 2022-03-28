@@ -40,11 +40,12 @@ const Blog = (props) => {
   }, [])
 
   const getBlogData = async () => {
-    // let blogDataResponseAPI = await ApiCalls.blog_getList(props.languageDuck.currentLanguage);
-    // console.log("AHHHHHHHHHHHHHH", blogDataResponseAPI);
-    // let blogDataResponse = blogDataResponseAPI;
-    let blogDataResponse = blogArrayTest;
+    let blogDataResponseAPI = await ApiCalls.blog_getList(props.languageDuck.currentLanguage);
+    console.log("blogDataResponseAPI", blogDataResponseAPI);
+    let blogDataResponse = blogDataResponseAPI;
+    // let blogDataResponse = blogArrayTest;
     setState({
+      ...state,
       blogDataResponse: blogDataResponse
     })
   }

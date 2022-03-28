@@ -8,6 +8,9 @@ import { setCurrentPage, initCurrentPage } from "../../redux/ducks/currentPageDu
 import { setVisibilityNavbar, initVisibilityNavbar } from "../../redux/ducks/showNavbarTopDuck";
 import { connect } from "react-redux";
 
+// Api
+import ApiCalls from "../../services/api/ApiCalls";
+
 // MUI
 import { Box, Container } from "@mui/material";
 
@@ -43,19 +46,16 @@ const CaseStudiesDetail = (props) => {
 
   // Add async and await. Here add call to API
   const getCaseStudiesData = async () => {
-    let caseStudiesResponse = caseStudiesTrialObj;
+    let caseStudiesResponse = await ApiCalls.caseStudies_getListDetail(permalink);
+    console.log("Detail - caseStudiesResponse", caseStudiesResponse)
 
-    caseStudiesResponse.map(findCaseStudy)
-  }
+    // let caseStudiesResponse = caseStudiesTrialObj;
 
-  const findCaseStudy = (item) => {
-    if (item.permalink === permalink) {
-      return (
-        setState({
-          caseStudiesResponse: item
-        })
-      )
-    }
+    setState({
+      ...state,
+      caseStudiesResponse: caseStudiesResponse
+    })
+
   }
 
   return (

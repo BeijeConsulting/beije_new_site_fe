@@ -6,6 +6,9 @@ import { setCurrentPage, initCurrentPage } from "../../redux/ducks/currentPageDu
 import { setVisibilityNavbar, initVisibilityNavbar } from "../../redux/ducks/showNavbarTopDuck";
 import { connect } from "react-redux";
 
+// 
+import ApiCalls from "../../services/api/ApiCalls";
+
 // MUI
 import { Box, Container } from "@mui/material";
 
@@ -44,19 +47,14 @@ const CareerDeatil = (props) => {
   // Add async and await. Here add call to API
   const getCareerData = () => {
     let careerResponse = careerTrialObj;
+    console.log("careerResponse: ", careerResponse);
+    // let careerResponse = await ApiCalls.career_getListDetail(permalink);
 
-    careerResponse.map(findJobOffer)
+    setState({
+      ...state,
+      careerResponse: careerResponse
+    })
 
-  }
-
-  const findJobOffer = (item) => {
-    if (item.permalink === permalink) {
-      return (
-        setState({
-          careerResponse: item
-        })
-      )
-    }
   }
 
   return (

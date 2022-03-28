@@ -6,8 +6,11 @@ import { setCurrentPage, initCurrentPage } from "../../redux/ducks/currentPageDu
 import { setVisibilityNavbar, initVisibilityNavbar } from "../../redux/ducks/showNavbarTopDuck";
 import { connect } from "react-redux";
 
+// Api
+import ApiCalls from "../../services/api/ApiCalls";
+
 // MUI
-import { Box, Container, Divider } from "@mui/material";
+import { Box, Container, Divider, Skeleton } from "@mui/material";
 
 // Style
 import "./Career.css";
@@ -25,7 +28,8 @@ const Career = (props) => {
   const { t } = useTranslation();
 
   const [state, setState] = useState({
-    buttonSelected: "academy"
+    buttonSelected: "academy",
+    careerDataResponse: null
   });
 
   useEffect(() => {
@@ -33,20 +37,36 @@ const Career = (props) => {
     props.dispatch(setCurrentPage("career"));
     props.dispatch(setVisibilityNavbar(true));
 
+    getCareerData();
+
     return () => {
       props.dispatch(initCurrentPage());
       props.dispatch(initVisibilityNavbar());
     };
   }, [])
 
+  const getCareerData = () => {
+    // let careerDataResponse = await ApiCalls.career_getList(props.languageDuck.currentLanguage);
+    // console.log("careerDataResponse", careerDataResponse);
+    let careerDataResponse = careerTrialObj;
+    console.log("careerDataResponse in career general: ", careerDataResponse);
+
+    setState({
+      ...state,
+      careerDataResponse: careerDataResponse
+    })
+  }
+
   const showJobOpportunities = () => {
     setState({
+      ...state,
       buttonSelected: "job"
     })
   }
 
   const showAcademy = () => {
     setState({
+      ...state,
       buttonSelected: "academy"
     })
   }
@@ -92,15 +112,29 @@ const Career = (props) => {
         className={"career-second-section paddingX-container-general-pages"}
       >
         <h3>{t("career.title")}</h3>
-        <CustomTable
-          isAcademy={state.buttonSelected === "academy"}
-          // obj={state.buttonSelected === "academy" ? academyObj : jobObj}
-          obj={careerTrialObj}
-          classNameLink={state.buttonSelected === "academy" ? "career-table-academy-link" : "career-table-job-link"}
-        />
+        {
+          !state.careerDataResponse &&
+          <Skeleton />
+        }
+        {
+          state.careerDataResponse &&
+          <CustomTable
+            isAcademy={state.buttonSelected === "academy"}
+            // obj={state.buttonSelected === "academy" ? academyObj : jobObj}
+            // obj={careerTrialObj}
+            obj={state.careerDataResponse}
+            classNameLink={state.buttonSelected === "academy" ? "career-table-academy-link" : "career-table-job-link"}
+          />
+        }
       </Container>
     </Box>
   )
 }
 
-export default connect()(Career)
+const mapStateToProps = state => (
+  {
+    languageDuck: state.languageDuck,
+  }
+)
+
+export default connect(mapStateToProps)(Career)

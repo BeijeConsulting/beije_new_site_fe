@@ -8,22 +8,22 @@ const ApiCalls = {
     return get(`blog/${permalink}`);
   },
 
-  career_getList: () => {
-    return get("job_applications");
+  career_getList: (lang) => {
+    return get(`job_applications/${lang}`);
   },
-  career_getListDetail: (id) => {
-    return get(`job_application/${id}`);
+  career_getListDetail: (permalink) => {
+    return get(`job_application/${permalink}`);
   },
 
   form_sendForm: (value) => {
     return post("form", value);
   },
 
-  caseStudies_getList: () => {
-    return get("casestudies");
+  caseStudies_getList: (lang) => {
+    return get(`casestudies/${lang}`);
   },
-  caseStudies_getListDetail: (id) => {
-    return get(`case_study/${id}`);
+  caseStudies_getListDetail: (permalink) => {
+    return get(`casestudy/permalink/${permalink}`);
   },
 
   community_getList: (lang) => {

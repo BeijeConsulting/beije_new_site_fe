@@ -38,6 +38,7 @@ const BurgerMenu = (props) => {
     }
 
     setState({
+      ...state,
       openMenu: !state.openMenu,
       firstClick: true
     });

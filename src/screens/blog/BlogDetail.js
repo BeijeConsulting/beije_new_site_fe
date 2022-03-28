@@ -54,20 +54,21 @@ const Blog = (props) => {
   }, [])
 
   const getData = async () => {
-    // let blogDataAPI = await ApiCalls.blog_getListDetail(permalink);
-    // console.log("AOCFHAEIOFVHOEWI", blogDataAPI)
+    let blogDataAPI = await ApiCalls.blog_getListDetail(permalink);
+    console.log("Detail - blogDataAPI", blogDataAPI)
 
-    // let blogDataResponseAPI = await ApiCalls.blog_getList(props.languageDuck.currentLanguage);
-    // console.log("WOFIUHWOFI", blogDataResponseAPI)
-    // let latestArticles = removeThisBlogFromList(blogDataResponseAPI);
+    let blogDataResponseAPI = await ApiCalls.blog_getList(props.languageDuck.currentLanguage);
+    console.log("Detail - blogDataResponseAPI", blogDataResponseAPI)
+    let latestArticles = removeThisBlogFromList(blogDataResponseAPI);
 
-    let blogData;
-    blogData = blogArrayTest[0];
-    let latestArticles = removeThisBlogFromList(blogArrayTest);
+    // let blogData;
+    // blogData = blogArrayTest[0];
+    // let latestArticles = removeThisBlogFromList(blogArrayTest);
 
     setState({
       ...state,
-      blogData: blogData,
+      // blogData: blogData,
+      blogData: blogDataResponseAPI,
       latestArticles: latestArticles.slice(0, 4)
     })
   }

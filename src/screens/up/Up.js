@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 
@@ -7,8 +7,11 @@ import { connect } from "react-redux";
 import { setCurrentPage, initCurrentPage } from "../../redux/ducks/currentPageDuck";
 import { setVisibilityNavbar, initVisibilityNavbar } from "../../redux/ducks/showNavbarTopDuck";
 
+// Api
+import ApiCalls from "../../services/api/ApiCalls";
+
 // MUI
-import { Box, Container } from "@mui/material";
+import { Box, Container, Skeleton } from "@mui/material";
 
 // Style
 import "./Up.css";
@@ -29,16 +32,33 @@ const Up = (props) => {
 
   const { t } = useTranslation();
   const secondContainerRef = useRef();
+  const [state, setState] = useState({
+    caseStudiesResponse: null
+  })
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
     props.dispatch(setCurrentPage("up"));
     props.dispatch(setVisibilityNavbar(true));
+
+    getCaseStudiesData();
+
     return () => {
       props.dispatch(initCurrentPage());
       props.dispatch(initVisibilityNavbar());
     };
   }, [])
+
+  const getCaseStudiesData = async () => {
+    let caseStudiesResponse = await ApiCalls.caseStudies_getList(props.languageDuck.currentLanguage);
+    console.log("blogDataResponseAPI", caseStudiesResponse);
+    // let caseStudiesResponse = caseStudiesTrialObj;
+    setState({
+      ...state,
+      caseStudiesResponse: caseStudiesResponse
+    })
+
+  }
 
   const scrollToSection = () => {
     let elementTop = secondContainerRef.current.offsetTop;
@@ -223,12 +243,20 @@ const Up = (props) => {
               className={"up-fifth-section-container d-flex justify-center"}
             >
               <Box className="width-100 max-width-1800">
-                <CustomCarousel
-                  upCarousel
-                  obj={caseStudiesTrialObj}
-                  classNameSwiperContainer={"swiper-container-up"}
-                  imgCarousel
-                />
+                {
+                  !state.caseStudiesResponse &&
+                  <Skeleton />
+                }
+                {
+                  state.caseStudiesResponse &&
+                  <CustomCarousel
+                    upCarousel
+                    // obj={caseStudiesTrialObj}
+                    obj={state.caseStudiesResponse}
+                    classNameSwiperContainer={"swiper-container-up"}
+                    imgCarousel
+                  />
+                }
               </Box>
             </Container>
           </Container>
@@ -254,4 +282,12 @@ const Up = (props) => {
   )
 }
 
-export default connect()(Up)
+
+const mapStateToProps = state => (
+  {
+    languageDuck: state.languageDuck,
+  }
+)
+
+
+export default connect(mapStateToProps)(Up)
