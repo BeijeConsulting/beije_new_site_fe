@@ -20,7 +20,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./Home.scss";
 
 // Constants
-import { tab_aboutUs, logo_secondary_grey } from "../../utils/properties"
+import { tab_aboutUs, logo_secondary_grey, quotationMark } from "../../utils/properties"
 
 // Components
 import CustomNavbar from "../../components/hooks_components/customNavbar/CustomNavbar";
@@ -162,17 +162,36 @@ const Home = (props) => {
           maxWidth={"false"}
           className={"home-second-section-container d-flex flex-column justify-center"}
         >
-          <h3 className={"home-second-section-txt"}>
-            <span className={"home-second-section-quotation-marks"}>&#8220;</span>
-            <span>
+          <h3
+            className={"home-second-section-txt"}
+          >
+            <span
+              className="position-relative"
+            >
+              <img
+                alt="Quotation mark icon"
+                src={quotationMark}
+                className="home-second-section-quotation1"
+              />
               {t("home.secondSection.part1")}
-              <br />
-              {t("home.secondSection.part2")}
-              <br />
-              {t("home.secondSection.part3")}
             </span>
-            <span className={"home-second-section-quotation-marks"}>&#8222;</span>
+
+            <br />
+            {t("home.secondSection.part2")}
+            <br />
+            <span
+              className="position-relative"
+            >
+              {t("home.secondSection.part3")}
+
+              <img
+                alt="Quotation mark icon"
+                src={quotationMark}
+                className="home-second-section-quotation2"
+              />
+            </span>
           </h3>
+
         </Container>
 
         {/* Box with dark bg for next sections */}

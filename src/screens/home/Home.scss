@@ -38,6 +38,20 @@
   padding-right: 11.2% !important;
 }
 
+.home-second-section-container img {
+  height: 20px;
+  position: absolute;
+}
+
+.home-second-section-quotation1 {
+  top: -7px;
+  left: -30px;
+}
+.home-second-section-quotation2 {
+  right: -33px;
+  bottom: -10px;
+}
+
 .home-second-section-quotation-marks {
   color: var(--red);
   font-size: 1.5rem;
@@ -304,6 +318,10 @@
 }
 
 @media (min-width: 1024px) {
+  .home-first-section-title-container h1 {
+    font-size: 2.2rem !important;
+  }
+
   .home-first-section-scroll-down-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -384,12 +402,22 @@
     margin-top: calc(100vh - 117vh);
   }
 
+  .home-first-section-title-container h1 {
+    font-size: 2.6rem !important;
+    line-height: 70px;
+  }
+
   .home-first-section-scroll-down-container {
     right: 160px;
   }
 
   .home-second-section-quotation-marks {
     font-size: 4.375rem;
+  }
+
+  .home-second-section-txt {
+    font-size: 2.1rem !important;
+    line-height: 60px !important;
   }
 
   .home-logo-bg {
