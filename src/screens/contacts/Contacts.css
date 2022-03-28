@@ -5,7 +5,7 @@
 .contacts-first-section-container h1 {
   color: var(--white);
   text-transform: uppercase;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
 }
 
 .contacts-info-external-container {
@@ -45,4 +45,9 @@
 
 .contacts-map-container {
   min-height: 470px;
+}
+
+.contacts-form-container {
+  padding: 50px 0;
+  background-color: var(--white);
 }

@@ -14,7 +14,6 @@ import { Box, Container, Grid } from "@mui/material";
 import "./Contacts.css";
 
 // Constants
-import CustomButton from "../../components/functional_components/ui/customButton/CustomButton";
 import SocialLinks from "../../components/functional_components/socialLinks/SocialLinks";
 import CustomForm from "../../components/hooks_components/customForm/CustomForm";
 
@@ -74,11 +73,6 @@ const Contacts = (props) => {
               <Box
                 className={"contacts-links-container"}
               >
-                <CustomButton
-                  type={"btn-form-primary"}
-                  content={"Contattaci"}
-                  href={"mailto:hr@beije.it"}
-                />
                 <SocialLinks
                   classNameSocialContainer={"contacts-socials-container"}
                 />
@@ -105,18 +99,18 @@ const Contacts = (props) => {
 
         </Container>
 
-        {/* <Container
-        component={"section"}
-        maxWidth={"false"}
-        className={"paddingX-container-general-pages"}
-      >
+        <Container
+          component={"section"}
+          maxWidth={"false"}
+          className={"contacts-form-container paddingX-container-general-pages"}
+        >
 
-        <Box>
-          <CustomForm
-            formTitle={t("consulting.contactFormTitle")}
-          />
-        </Box>
-      </Container> */}
+          <Box>
+            <CustomForm
+              formTitle={t("form.title.contacts")}
+            />
+          </Box>
+        </Container>
       </Box>
 
     </>

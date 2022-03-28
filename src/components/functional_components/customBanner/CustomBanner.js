@@ -6,9 +6,6 @@ import { Container } from "@mui/material";
 // Style
 import "./CustomBanner.css"
 
-// Components
-import CustomIconButton from "../ui/customIconButton/CustomIconButton";
-
 const CustomBanner = (props) => {
   return (
     <Container
