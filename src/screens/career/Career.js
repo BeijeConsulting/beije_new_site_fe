@@ -29,7 +29,9 @@ const Career = (props) => {
 
   const [state, setState] = useState({
     buttonSelected: "academy",
-    careerDataResponse: null
+    careerDataResponse: null,
+    academyObjetcs: [],
+    jobApplicationsObjects: []
   });
 
   useEffect(() => {
@@ -45,17 +47,30 @@ const Career = (props) => {
     };
   }, [])
 
-  const getCareerData = () => {
-    // let careerDataResponse = await ApiCalls.career_getList(props.languageDuck.currentLanguage);
-    // console.log("careerDataResponse", careerDataResponse);
-    let careerDataResponse = careerTrialObj;
+  const getCareerData = async () => {
+    let careerDataResponse = await ApiCalls.career_getList();
+    console.log("careerDataResponse", careerDataResponse);
+    // let careerDataResponse = careerTrialObj;
     console.log("careerDataResponse in career general: ", careerDataResponse);
+
+    // findIf(careerDataResponse);
 
     setState({
       ...state,
       careerDataResponse: careerDataResponse
     })
   }
+
+//   const findIf = (param) => {
+//     let academyElements = false;
+//     let jobElements = false;
+//     if(param.isAcademy === true){
+// academyElements = true
+//     }
+//     else{
+
+//     }
+//   }
 
   const showJobOpportunities = () => {
     setState({
@@ -85,7 +100,8 @@ const Career = (props) => {
         <p
           className="career-first-section-description"
         >
-          Lorem ipsum dolor sit amet. Aut impedit totam ut consequuntur earum qui quis neque quo sint labore et sapiente dignissimos. In unde perferendis a internos sit expedita deserunt et quibusdam obcaecati est voluptatem sapiente.</p>
+          {t("career.description")}
+        </p>
         <Box
           className="career-first-section-button-container"
         >
@@ -131,10 +147,4 @@ const Career = (props) => {
   )
 }
 
-const mapStateToProps = state => (
-  {
-    languageDuck: state.languageDuck,
-  }
-)
-
-export default connect(mapStateToProps)(Career)
+export default connect()(Career)

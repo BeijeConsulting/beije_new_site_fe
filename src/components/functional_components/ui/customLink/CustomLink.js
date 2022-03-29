@@ -35,6 +35,8 @@ const CustomLink = (props) => {
       to={props.linkTo}
       className={switchClassName()}
       onClick={handleCallback}
+      download={props.download}
+      target={props.target}
     >
       {props.content}
     </Link>

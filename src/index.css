@@ -1,0 +1,9 @@
+.CookieConsent {
+  background: var(--dark-grey) !important;
+  box-shadow: 0px 7px 17px #000000
+}
+
+.CookieConsent button {
+  background: var(--white) !important;
+  color: var(--dark-grey) !important;
+}

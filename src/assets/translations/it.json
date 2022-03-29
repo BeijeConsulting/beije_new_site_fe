@@ -55,7 +55,15 @@
     "scroll": "scorri in basso",
     "downloadPwd": "Scarica la presentazione",
     "learnMore": "Scropri di più",
-    "close": "Chiudi"
+    "close": "Chiudi",
+    "attachCv": "Allega il tuo cv. Solo pdf ammessi."
+  },
+  "bannerCookie": {
+    "txt": {
+      "part1": "Acconsenti i cookies. Clicca su",
+      "part2": "questo link",
+      "part3": "per leggere l'informativa"
+    }
   },
   "contactInfo": {
     "location": "Dove siamo",
@@ -90,6 +98,10 @@
         "part1": "Ho letto e accetto il ",
         "part2": "Trattamento dei miei dati personali"
       }
+    },
+    "toastMessage": {
+      "txt1": "I dati sono stati inviati correttamente.",
+      "txt2": "Grazie di averci scritto!"
     }
   },
   "altImages": {
@@ -370,14 +382,14 @@
   },
   "blog": {
     "title": "Blog",
-    "description": "Lorem ipsum dolor sit amet. Aut impedit totam ut consequuntur earum qui quis neque quo sint labore et sapiente dignissimos. Lorem ipsum dolor sit amet. Aut impedit totam ut consequuntur earum qui quis neque quo sint labore et sapiente dignissimos.",
+    "description": "Appassionatə di informazioni? Scopri le news, gli aggiornate su innovazione e tecnologia e spazia dai trend del momento al digital business, scienza, ricerca e società con il Blog Beije. Segui il cambiamento!",
     "postedBy": "Pubblicato da",
     "postedOn": "il",
     "latestArticles": "Ultimi articoli"
   },
   "community": {
     "title": "Community",
-    "description": "Lorem ipsum dolor sit amet. Aut impedit totam ut consequuntur earum qui quis neque quo sint labore et sapiente dignissimos. Lorem ipsum dolor sit amet. Aut impedit totam ut consequuntur earum qui quis neque quo sint labore et sapiente dignissimos."
+    "description": "Tutti gli eventi firmati Beije People First: momenti in cui stare insieme, ritrovarsi, conoscersi ma soprattutto divertirsi!"
   },
   "academyFrontend": {
     "title": "Frontend",
@@ -492,7 +504,8 @@
     }
   },
   "career": {
-    "title": "Posizioni aperte"
+    "title": "Posizioni aperte",
+    "description": "Scopri le opportunità di lavoro per diventare un Software Ninjaneer ed entra a far parte della Community Beije: un sistema People First attraverso il quale crescere insieme, formarsi e diventare professionistə del settore. Cosa aspetti? The future is now!"
   },
   "privacyPolicies": {
     "list1": {
@@ -571,5 +584,10 @@
       "li6": "in generale, l’utilizzo che causi o possa causare modifiche, danneggiamento, interruzione o limitazione di questo Sito web o di suoi Servizi;",
       "li7": "la raccolta non autorizzata, tramite il Sito web, di informazioni personali su terzi (p.e. indirizzi di posta elettronica)"
     }
+  },
+  "noMatch": {
+    "shortMessage": "La pagina non è stata trovata",
+    "longMessage": "Ci dispiace, non siamo riusciti a trovare la pagina che stavi cercando. Prova a cliccare sul link in basso per trovare la pagina giusta.",
+    "linkToHome": "Vai alla home"
   }
 }

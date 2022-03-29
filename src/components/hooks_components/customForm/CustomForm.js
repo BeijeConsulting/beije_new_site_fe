@@ -12,7 +12,7 @@ import { setModal, initModal } from "../../../redux/ducks/modalDuck"
 import ApiCalls from "../../../services/api/ApiCalls";
 
 // MUI
-import { Grid, Box, TextField, TextareaAutosize, FormControlLabel, Checkbox, CircularProgress, Snackbar } from "@mui/material";
+import { Grid, Box, TextField, TextareaAutosize, FormControlLabel, Checkbox, CircularProgress, Snackbar, Alert } from "@mui/material";
 
 // Style
 import "./CustomForm.css";
@@ -35,7 +35,7 @@ const CustomForm = (props) => {
     captchaCheck: false,
     captcha: undefined,
     captchaValue: '',
-    fileName: "Nessun file selezionato",
+    fileName: t("form.messageCv"),
     base64Value: null,
     btnLoading: false,
     toastShow: false
@@ -197,13 +197,17 @@ const CustomForm = (props) => {
       >
         <Box >
           <Snackbar
-            // anchorOrigin={"top" "center"}
+            anchorOrigin={{
+              vertical: "bottom",
+              horizontal: "right"
+            }}
             open={state.toastShow}
-            // autoHideDuration={2000}
-            onClose={handleCloseToast}
-            message="I dati sono stati inviati correttamente. Grazie di averci scritto!"
-          // key={top + horizontal}
-          />
+            autoHideDuration={6000}
+          >
+            <Alert onClose={handleCloseToast} severity="success" sx={{ width: '100%' }}>
+              <span>{t("form.toastMessage.txt1")}<br />{t("form.toastMessage.txt2")}</span>
+            </Alert>
+          </Snackbar>
           <form>
 
             {/* Nome */}
@@ -361,14 +365,9 @@ const CustomForm = (props) => {
                   <label
                     htmlFor="uploadCV"
                     className="button-form-primary"
-                  >Allega il tuo cv</label>
+                  >{t("btn.attachCv")}</label>
                   <span id="file-chosen">{state.fileName}</span>
                 </>
-                // < CustomButton
-                //   type={"btn-form-primary"}
-                //   content={"Allega il tuo cv"}
-                // // callback={formikContacts.submitForm}
-                // />
               }
             </Grid>
 
@@ -433,7 +432,7 @@ const CustomForm = (props) => {
             <Grid
               item
               xs={12}
-              className={"form-submit-btn-container"}
+              className={"form-submit-btn-container position-relative"}
             >
               <CustomButton
                 type={"btn-form-primary"}

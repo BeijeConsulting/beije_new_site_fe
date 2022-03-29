@@ -29,7 +29,7 @@
   text-transform: uppercase;
 }
 
-.intro-section-txt-info-graphic .intro-section-apply-container-mobile {
+.intro-section-txt-info-graphic .intro-section-apply-container {
   margin: 30px 0;
 }
 
@@ -54,14 +54,8 @@
     margin: auto;
   }
 
-  .intro-section-txt-info-graphic .intro-section-apply-container-mobile {
-    display: none;
-  }
-
-  .intro-section-txt-info-graphic .intro-section-apply-container-desktop {
-    position: absolute;
-    bottom: 80px;
-    left: -40px;
+  .intro-section-txt-info-graphic .intro-section-apply-container {
+    margin: 50px 0;
   }
 
 }

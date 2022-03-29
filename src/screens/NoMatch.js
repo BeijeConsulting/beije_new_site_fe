@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 // Redux
 import { setCurrentPage, initCurrentPage } from "../redux/ducks/currentPageDuck";
@@ -18,6 +18,8 @@ import CustomLink from "../components/functional_components/ui/customLink/Custom
 
 
 const NoMatch = (props) => {
+
+  const { t } = useTranslation()
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -59,15 +61,16 @@ const NoMatch = (props) => {
           <p className="titles-level-1-2">
             Oops.
             <br />
-            Page Not Found
+            {t("noMatch.shortMessage")}
+
           </p>
-          <p>Sorry, we couldn&apos;t find the page you were looking for.
-            You can try to find the right page by clicking on the following link.
+          <p>
+            {t("noMatch.longMessage")}
           </p>
 
           <CustomLink
             linkTo="/"
-            content="Go to Homepage"
+            content={t("noMatch.linkToHome")}
           />
         </Box>
 

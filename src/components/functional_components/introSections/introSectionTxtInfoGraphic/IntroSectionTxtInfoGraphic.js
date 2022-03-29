@@ -116,7 +116,7 @@ const IntroSectionTxtInfoGraphic = (props) => {
         </div>
 
 
-        <div className="intro-section-apply-container-mobile">
+        <div className="intro-section-apply-container">
           <CustomLink
             content={"candidati"}
             linkTo={"#"}
@@ -142,15 +142,6 @@ const IntroSectionTxtInfoGraphic = (props) => {
           alt="iconography developer"
           src={props.srcImage}
         />
-
-        <div className="intro-section-apply-container-desktop">
-          <CustomLink
-            content={"candidati"}
-            linkTo={"#"}
-            callback={props.applyCallback}
-            typeLink={"apply-secondary"}
-          />
-        </div>
 
       </div>
     </Box >

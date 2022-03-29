@@ -39,7 +39,15 @@
     "scroll": "Scroll down",
     "downloadPwd": "Download the presentation",
     "learnMore": "Learn more",
-    "close": "Close"
+    "close": "Close",
+    "attachCv": "Attach Your CV"
+  },
+  "bannerCookie": {
+    "txt": {
+      "part1": "Acconsenti i cookies. Clicca su",
+      "part2": "questo link",
+      "part3": "per leggere l'informativa"
+    }
   },
   "contactInfo": {
     "location": "Where we are",
@@ -75,7 +83,12 @@
         "part1": "I have read and accept the ",
         "part2": "Treatment of my personal data"
       }
-    }
+    },
+    "toastMessage": {
+      "txt1": "Data has been sent correctly.",
+      "txt2": "Thanks for writing!"
+    },
+    "messageCv": "No file selected. Only pdf allowed."
   },
   "altImages": {
     "privacyPolicies": "Beije Privacy Policy",
@@ -361,14 +374,14 @@
   },
   "blog": {
     "title": "Blog",
-    "description": "Lorem ipsum dolor sit amet. Aut impedit totam ut consequuntur earum qui quis neque quo sint labore et sapiente dignissimos. Lorem ipsum dolor sit amet. Aut impedit totam ut consequuntur earum qui quis neque quo sint labore et sapiente dignissimos.",
+    "description": "Passionate about knowledge? Check out our news, updates on innovation and technology, the current trends from  digital business, science, research to society with the Beije Blog. Follow the change!",
     "postedBy": "Posted by",
     "postedOn": "on",
     "latestArticles": "Latest articles"
   },
   "community": {
     "title": "Community",
-    "description": "Lorem ipsum dolor sit amet. Aut impedit totam ut consequuntur earum qui quis neque quo sint labore et sapiente dignissimos. Lorem ipsum dolor sit amet. Aut impedit totam ut consequuntur earum qui quis neque quo sint labore et sapiente dignissimos."
+    "description": "All events signed Beije People First: a change to be together, know each other but fìrst of all to have fun!"
   },
   "academyFrontend": {
     "title": "Frontend",
@@ -483,7 +496,8 @@
     }
   },
   "career": {
-    "title": "Open positions"
+    "title": "Open positions",
+    "description": "Discover the job opportunities to become a Software Ninjaneer and join the Beije Community: a People First system through which we can grow together, train and become a professional in the IT industry. What are you waiting for? The future is now!"
   },
   "privacyPolicies": {
     "txt": "<0>Privacy Policy</0><1></1><2>pursuant to art. 13 Regulation EU 2016/679</2><3></3><4></4><5>Dear Data Subject,</5> <6></6><7>With this document (the “Policy”), we wish to renew our commitment to ensuring that the processing of personal data collected through the website</7> <8>https://beije.it</8> <9>(the “Site”), carried out using both automated and manual methods, is carried out in full compliance with the protections and rights recognised by Regulation EU 2016/679 (“GDPR” or the “Regulation”) and other applicable rules on the protection of personal data.</9> <10></10> <11>The term personal data refers to the definition contained in Article 4(1) of the Regulation, i.e. </11> <12>“any information relating to an identified or identifiable natural person; an identifiable person is one who can be identified, directly or indirectly, by reference in particular to an identifier such as a name, an identification number, location data, an online identifier or to one or more features of his or her physical, physiological, genetic, mental, economic, cultural or social identity”</12> <13>(the “</13> <14>Personal Data</14><15>”).</15> <16></16> <17>This Privacy Policy - drafted on the basis of the principle of transparency and including all the elements required by art. 13 of the Regulation - aims to provide you, in a simple and intuitive way, with all the useful and necessary information so that you can provide your Personal Data in a conscious and informed manner and, at any time, exercise your rights under the GDPR.</17><18 /><19 /><20>THE DATA CONTROLLER</20> <21/> <22>The company that will process your Personal Data for the purposes set out in this Policy and that, therefore, will play the role of data controller, i.e. “the natural or legal person, public authority, service or other body that, individually or jointly with others, determines the purposes and means of the processing of personal data” is People First S.r.l., with registered office in Viale Giulio Cesare n. 71, 00192 - Rome, VAT No.:16334941008 (the “</22><23>Data Controller</23><24>”).</24><25/><26/><27>DATA PROTECTION OFFICER</27><28/><29>The Data Controller, in order to facilitate relations with data subjects, has appointed a</29><30>Data Protection Officer</30> <31>(the “</31><32>DPO</32><33>”), identifying SAPG Legal Tech S.r.l. with registered office in Via Durini n. 15, 20122 - Milan (MI).</33><34/><35> As provided for by art. 38 of the GDPR, you may freely contact the DPO for all matters relating to the processing of your Personal Data and/or should you wish to exercise your rights as provided for in this Policy, by sending a written communication to the e-mail address: </35> <36>dpo.privact@sapglegal.com</36><37>.</37><38/><39/><40>PURPOSES AND LEGAL BASIS OF PROCESSING</40><41/><42>While browsing the Site, some of your Personal Data may be collected in the following ways.</42><43/><44/><45> - Navigation Data</45><46/><47>The computer systems and software procedures used to operate the Site acquire, during their normal operation, some personal data whose transmission is implicit in the use of Internet communication protocols.</47> <48/> <49>This category of data includes, by way of example: IP addresses, the type of browser used, the operating system, the domain name and addresses of websites accessed or exited from, information on the pages visited by users within the Site, access time, the length of time spent on each page, internal path analysis and other parameters relating to the user's operating system and computer environment.</49> <50/> <51>Such technical/informatics data are collected and used exclusively in an aggregate and non-identifying manner and could be used to ascertain responsibility in the event of hypothetical computer crimes to the detriment of the Site. </51> <52/> <53>The processing will be legally based on the legitimate interest of the Data Controller to improve the functioning of its systems, to optimise and improve the browsing experience, to avoid fraudulent activities and to improve the security of the Site (art. 6, paragraph 1, letter f) of the Regulations).</53><54/><55/><56> - Data provided voluntarily by the visitor</56><57/><58>This refers to all those Personal Data that the visitor freely releases on the Site, for example, to register and/or access a reserved area, download free resources, request information on a specific product or service through a form, subscribe to the newsletter service, write to an e-mail address or call a telephone number displayed on the Site to have direct contact with the company (in order, for example, to request assistance or further information on a product/service of the Data controller). Such processing shall be lawful pursuant to art. 6, paragraph 1, letter b) of the Regulation (performance of a contract or of pre-contractual measures adopted at the request of the data subject) as well as for the fulfilment of any legal obligations.</58><59/><60>In order to allow the Data Controller to carry out the processing activities for such purposes, it will be necessary to provide the Personal Data requested in the appropriate forms. If you fail to fill in even just one of the fields marked as mandatory, it may not be possible to process your Personal Data and, consequently, to provide you with the information and services requested.</60><61/><62>We do not process Personal Data relating to your health and, in general, “special” categories of personal data pursuant to art. 9 of the Regulation.</62><63/><64>In addition to the above, your Personal Data may be processed by the Controller for the following and additional purposes.</64><65/>",
@@ -571,5 +585,10 @@
       "li6": "in general, use that causes or is likely to cause modification, damage, interruption or limitation of this Website or its Services;",
       "li7": "the unauthorised collection, via the Website, of personal information about third parties (e.g. email addresses)."
     }
+  },
+  "noMatch": {
+    "shortMessage": "Page Not Found",
+    "longMessage": "Sorry, we couldn't find the page you were looking for. You can try to find the right page by clicking on the following link.",
+    "linkToHome": "Go to home"
   }
 }

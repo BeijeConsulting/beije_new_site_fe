@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
+// Redux
+import { connect } from "react-redux";
+
 // MUI
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material";
 
@@ -74,7 +77,7 @@ const CustomTable = (props) => {
           <TableCell
             component={"th"}
           >
-            {item.title}
+            {props.languageDuck.currentLanguage === "it" ? item.title_it : item.title_en}
             {
               state.isMobile &&
               <>
@@ -140,10 +143,10 @@ const CustomTable = (props) => {
   const sendToPage = (param1, param2) => {
     let response = "#";
     if (props.isAcademy) {
-      if (param1.toLowerCase() === "frontend") {
+      if (param1.toLowerCase() === "front-end") {
         response = "/beije-talent-academy/academy-frontend"
       }
-      if (param1.toLowerCase() === "backend") {
+      if (param1.toLowerCase() === "back-end") {
         response = "/beije-talent-academy/academy-backend"
       }
     }
@@ -196,4 +199,10 @@ CustomTable.defaultProps = {
   careerTable: false
 }
 
-export default CustomTable
+const mapStateToProps = state => (
+  {
+    languageDuck: state.languageDuck,
+  }
+)
+
+export default connect(mapStateToProps)(CustomTable)

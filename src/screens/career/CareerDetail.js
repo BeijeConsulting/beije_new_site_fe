@@ -29,7 +29,7 @@ const CareerDeatil = (props) => {
     careerResponse: null
   })
 
-  const permalink = new URLSearchParams(location.search).get("jobOffer");
+  const id = new URLSearchParams(location.search).get("jobOffer");
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -45,10 +45,10 @@ const CareerDeatil = (props) => {
   }, [])
 
   // Add async and await. Here add call to API
-  const getCareerData = () => {
-    let careerResponse = careerTrialObj;
+  const getCareerData = async () => {
+    // let careerResponse = careerTrialObj;
+    let careerResponse = await ApiCalls.career_getListDetail(id, props.languageDuck.currentLanguage);
     console.log("careerResponse: ", careerResponse);
-    // let careerResponse = await ApiCalls.career_getListDetail(permalink);
 
     setState({
       ...state,
@@ -76,14 +76,14 @@ const CareerDeatil = (props) => {
         {
           state.careerResponse &&
           <>
-            <h1>{state.careerResponse.title}</h1>
+            <h1>{props.languageDuck.currentLanguage === "it" ? state.careerResponse.title_it : state.careerResponse.title_en}</h1>
 
 
             <Box
               className="career-detail-txt-container"
             >
               <p>
-                {state.careerResponse.description}
+                {props.languageDuck.currentLanguage === "it" ? state.careerResponse.description_it : state.careerResponse.description_en}
               </p>
 
             </Box>
@@ -109,4 +109,10 @@ const CareerDeatil = (props) => {
   )
 }
 
-export default connect()(CareerDeatil)
+const mapStateToProps = state => (
+  {
+    languageDuck: state.languageDuck,
+  }
+)
+
+export default connect(mapStateToProps)(CareerDeatil)

@@ -20,6 +20,11 @@
   opacity: 80%;
 }
 
+.button-form-primary:disabled p {
+  background-color: var(--dark-grey) !important;
+  opacity: 50%;
+}
+
 .button-form-primary:hover {
   box-shadow: 4px 5px 15px var(--dark-grey);
 }

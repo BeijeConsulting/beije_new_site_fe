@@ -42,9 +42,13 @@
   min-height: 25px;
   display: block;
   white-space: nowrap;
-  overflow: hidden;
   text-overflow: ellipsis;
   margin-bottom: 8px;
+}
+
+.blog-card-text-subtitle,
+.blog-card-text-postedby{
+  overflow: hidden;
 }
 
 .blog-card-text-subtitle {
@@ -65,7 +69,7 @@
 }
 
 .blog-card-text-postedby {
-  font-size: 9px;
+  font-size: 12px;
   letter-spacing: .5px;
   margin-top: 10px;
 }

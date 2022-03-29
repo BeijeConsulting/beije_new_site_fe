@@ -9,6 +9,13 @@ import { Provider } from "react-redux";
 import store from "./redux/createStore";
 
 import CookieConsent from "react-cookie-consent";
+
+// Style
+import "./index.css"
+
+// Components 
+import CustomLink from './components/functional_components/ui/customLink/CustomLink';
+
 // function RedirectToLanguage() {
 //   const { pathname, search } = useLocation();
 //   const { i18n } = useTranslation();
@@ -53,9 +60,18 @@ function Root() {
         <BrowserRouter basename={i18n.resolvedLanguage}>
           <App />
           <CookieConsent
-            style={{ backgorund: "#262E36" }}
+            buttonText={<span className='simple-paragraph'>Acconsenti</span>}
           >
-            Acconsenti i cookies. Clicca <a href="#" target={"_blank"}>qui</a> per leggere l&apos;informativa.
+            🍪 Acconsenti i cookies. Clicca su&nbsp;&nbsp;
+
+            <CustomLink
+              linkTo="#"
+              download={true}
+              target={"_blank"}
+              rel="noreferrer"
+              content="questo link"
+            />
+            &nbsp;&nbsp;per leggere l&apos;informativa.
           </CookieConsent>
         </BrowserRouter>
         <BrowserRouter>

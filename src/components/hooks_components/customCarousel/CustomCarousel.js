@@ -61,14 +61,14 @@ const CustomCarousel = (props) => {
         ref={slideRef}
         onMouseMove={tiltEffect()}
         style={{
-          backgroundColor: props.upCarousel ? item.colorBg : ""
+          backgroundColor: props.upCarousel ? item.backgroundColor : ""
         }}
         onClick={props.upCarousel ? sendToPage(item.permalink) : null}
       >
         {props.imgCarousel &&
           <img
             className="carousel-img-container"
-            src={item.imgCarousel}
+            src={item.logo}
           >
           </img>
         }

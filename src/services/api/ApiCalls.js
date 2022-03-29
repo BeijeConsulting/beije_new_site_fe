@@ -8,11 +8,11 @@ const ApiCalls = {
     return get(`blog/${permalink}`);
   },
 
-  career_getList: (lang) => {
-    return get(`job_applications/${lang}`);
+  career_getList: () => {
+    return get(`job_applications`);
   },
-  career_getListDetail: (permalink) => {
-    return get(`job_application/${permalink}`);
+  career_getListDetail: (id, lang) => {
+    return get(`job_application/${id}/${lang}`);
   },
 
   form_sendForm: (value) => {

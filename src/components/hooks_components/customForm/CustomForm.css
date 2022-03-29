@@ -97,6 +97,10 @@
   margin-bottom: 40px !important;
 }
 
+.form-agreement-container .form-field {
+  padding: 0;
+}
+
 .form-ckeckbox-checked {
   color: var(--dark-grey) !important;
 }
