@@ -110,11 +110,11 @@ export const menu_voices = [
     link_to: "blog",
     key_link: "blog"
   },
-  {
-    name: "community",
-    link_to: "community",
-    key_link: "community"
-  },
+  // {
+  //   name: "community",
+  //   link_to: "community",
+  //   key_link: "community"
+  // },
   // {
   //   name: "focusAcademy",
   //   link_to: "#",

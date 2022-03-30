@@ -38,7 +38,8 @@ const CustomForm = (props) => {
     fileName: t("form.messageCv"),
     base64Value: null,
     btnLoading: false,
-    toastShow: false
+    toastShow: false,
+    modalIsOpen: false
   });
 
   const reCaptchaChange = (value) => {
@@ -137,11 +138,19 @@ const CustomForm = (props) => {
   }
 
   const openModal = (param) => () => {
-    props.dispatch(setModal(true, param))
+    // props.dispatch(setModal(true, param))
+    setState({
+      ...state,
+      modalIsOpen: true,
+    })
   }
 
   const closeModal = () => {
-    props.dispatch(initModal())
+    // props.dispatch(initModal())
+    setState({
+      ...state,
+      modalIsOpen: false,
+    })
   }
 
   const uploadFile = async () => {
@@ -412,6 +421,7 @@ const CustomForm = (props) => {
               </div>
 
               <CustomModal
+                stateModal={state.modalIsOpen}
                 callbackClose={closeModal}
                 modalTitle={t("footer.privacyPolicies")}
               >

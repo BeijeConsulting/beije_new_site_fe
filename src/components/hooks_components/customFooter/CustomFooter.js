@@ -25,12 +25,27 @@ import LegalNotes from "../../functional_components/legalNotes/LegalNotes";
 const CustomFooter = (props) => {
   const { t } = useTranslation();
 
+  const [state, setState] = useState({
+    typeModal: "",
+    modalIsOpen: false
+  })
+
   const openModal = (param1) => () => {
-    props.dispatch(setModal(true, param1))
+    // props.dispatch(setModal(true, param1))
+    setState({
+      ...state,
+      modalIsOpen: true,
+      typeModal: param1
+    })
   }
 
   const closeModal = () => {
-    props.dispatch(initModal())
+    // props.dispatch(initModal())
+    setState({
+      ...state,
+      modalIsOpen: false,
+      typeModal: ""
+    })
   }
 
   return (
@@ -142,15 +157,16 @@ const CustomFooter = (props) => {
       </div>
 
       <CustomModal
+        stateModal={state.modalIsOpen}
         callbackClose={closeModal}
-        modalTitle={props.modalDuck.typeModal === "privacyPolicies" ? t("footer.privacyPolicies") : t("footer.legalNotes")}
+        modalTitle={state.typeModal === "privacyPolicies" ? t("footer.privacyPolicies") : t("footer.legalNotes")}
       >
         {
-          props.modalDuck.typeModal === "privacyPolicies" &&
+          state.typeModal === "privacyPolicies" &&
           <PrivacyPolicies />
         }
         {
-          props.modalDuck.typeModal === "legalNotes" &&
+          state.typeModal === "legalNotes" &&
           <LegalNotes />
         }
 

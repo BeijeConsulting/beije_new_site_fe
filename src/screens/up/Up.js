@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
+import { isEmpty } from "lodash";
 
 // Redux
 import { connect } from "react-redux";
@@ -248,14 +249,18 @@ const Up = (props) => {
                   <Skeleton />
                 }
                 {
-                  state.caseStudiesResponse &&
-                  <CustomCarousel
+                  state.caseStudiesResponse && !isEmpty(state.caseStudiesResponse) &&
+                  < CustomCarousel
                     upCarousel
                     // obj={caseStudiesTrialObj}
                     obj={state.caseStudiesResponse}
                     classNameSwiperContainer={"swiper-container-up"}
                     imgCarousel
                   />
+                }
+                {
+                  isEmpty(state.caseStudiesResponse) &&
+                  <div></div>
                 }
               </Box>
             </Container>

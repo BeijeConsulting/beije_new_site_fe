@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -15,6 +15,7 @@ import "./index.css"
 
 // Components 
 import CustomLink from './components/functional_components/ui/customLink/CustomLink';
+// import CookiePolicies_it from "./components/functional_components/cookiePolicies/CookiePolicies_it"
 
 // function RedirectToLanguage() {
 //   const { pathname, search } = useLocation();
@@ -54,6 +55,17 @@ function RedirectToLanguage() {
 function Root() {
   const { i18n } = useTranslation();
 
+  const [state, setState] = useState({
+    modalIsOpen: false
+  })
+
+  const openModal = () => {
+    setState({
+      ...state,
+      modalIsOpen: true,
+    })
+  }
+
   return (
     <React.StrictMode>
       <Provider store={store}>
@@ -66,6 +78,7 @@ function Root() {
 
             <CustomLink
               linkTo="#"
+              callback={openModal}
               download={true}
               target={"_blank"}
               rel="noreferrer"
@@ -73,6 +86,14 @@ function Root() {
             />
             &nbsp;&nbsp;per leggere l&apos;informativa.
           </CookieConsent>
+
+          {/* <CustomModal
+            stateModal={state.modalIsOpen}
+            callbackClose={closeModal}
+            modalTitle={t("footer.privacyPolicies")}
+          >
+            <CookiePolicies_it />
+          </CustomModal> */}
         </BrowserRouter>
         <BrowserRouter>
           <Routes>

@@ -31,7 +31,8 @@ const CustomModal = (props) => {
 
   return (
     <>
-      {props.modalDuck.modalOpen &&
+      {/* {props.modalDuck.modalOpen && */}
+      {props.stateModal &&
         <Modal
           aria-labelledby="transition-modal-title"
           aria-describedby="transition-modal-description"
@@ -44,7 +45,8 @@ const CustomModal = (props) => {
           }}
           className={"modal-container"}
         >
-          <Fade in={props.modalDuck.modalOpen}>
+          {/* <Fade in={props.modalDuck.modalOpen}> */}
+          <Fade in={props.stateModal}>
             <Box
               className={"modal-txt-container"}
             >
@@ -64,7 +66,8 @@ const CustomModal = (props) => {
                 <CustomButton
                   type={"btn-form-primary"}
                   content={t("modal.btn")}
-                  callback={closeModal}
+                  // callback={closeModal}
+                  callback={heandleClose}
                 />
               </Box>
             </Box>
