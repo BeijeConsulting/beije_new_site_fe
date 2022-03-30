@@ -5,6 +5,21 @@
   width: 100%;
   height: 100%;
   z-index: -1000;
+  animation: showVideo 3s linear;
+}
+
+@keyframes showVideo {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .homeLayout-fixed-bg {
@@ -30,4 +45,3 @@
 .homeLayout-academy-bg {
   background-color: var(--yellow);
 }
-

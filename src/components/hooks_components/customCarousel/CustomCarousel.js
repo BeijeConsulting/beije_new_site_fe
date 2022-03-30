@@ -34,7 +34,6 @@ const CustomCarousel = (props) => {
 
   useEffect(() => {
     window.addEventListener("resize", updateDimension);
-
     return () => {
       window.removeEventListener("resize", updateDimension);
     }

@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 // API
 import languageDuck from "../ducks/Language";
-import loadingDuck from "../ducks/Loading";
+import loadingDuck from "../ducks/loadingDuck";
 import burgerMenuDuck from '../ducks/burgerMenuDuck';
 import logoDuck from '../ducks/logoDuck';
 import colorHeaderDuck from '../ducks/colorHeaderDuck';

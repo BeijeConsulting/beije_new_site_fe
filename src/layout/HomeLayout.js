@@ -99,12 +99,16 @@ const HomeLayout = (props) => {
       <div className={switchClassBgLayout()} />
       {
         props.currentPageDuck.currentPage === "" &&
-        <video className="homeLayout-video" autoPlay muted loop>
+        <video
+          className={props.loadingDuck.pageIsLoading ? "display-none" : "homeLayout-video"}
+          autoPlay
+          muted
+          loop>
           <source src="https://beije-people-first.s3.eu-south-1.amazonaws.com/site/video_home.mp4" type="video/mp4" />
         </video>
       }
 
-      {state.isMobile &&
+      {state.isMobile && !props.loadingDuck.pageIsLoading &&
         <HideOnScroll>
           <AppBar
             id="back-to-top-anchor"
@@ -114,7 +118,7 @@ const HomeLayout = (props) => {
           </AppBar>
         </HideOnScroll>
       }
-      {!state.isMobile &&
+      {!state.isMobile && !props.loadingDuck.pageIsLoading &&
         <AppBar
           position="fixed"
           className={switchClassAppBar()}
@@ -144,7 +148,8 @@ const mapStateToProps = state => (
   {
     burgerMenuDuck: state.burgerMenuDuck,
     colorHeaderDuck: state.colorHeaderDuck,
-    currentPageDuck: state.currentPageDuck
+    currentPageDuck: state.currentPageDuck,
+    loadingDuck: state.loadingDuck
   }
 )
 

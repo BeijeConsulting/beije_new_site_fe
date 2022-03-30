@@ -788,3 +788,25 @@
     }
   }
 }
+
+// Test
+.home-little {
+  display: none;
+}
+
+.home-normal {
+  opacity: 1;
+  animation: showHome 5s linear;
+}
+
+@keyframes showHome {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
