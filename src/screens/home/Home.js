@@ -7,7 +7,6 @@ import { connect } from "react-redux";
 import { setColorHeader, initColorHeader } from "../../redux/ducks/colorHeaderDuck";
 import { setVisibilityNavbar, initVisibilityNavbar } from "../../redux/ducks/showNavbarTopDuck";
 import { setCurrentPage, initCurrentPage } from "../../redux/ducks/currentPageDuck";
-import { setLoading, initLoading } from "../../redux/ducks/loadingDuck";
 
 // MUI
 import { Container } from "@mui/material";
@@ -83,9 +82,11 @@ const Home = (props) => {
   }, [state.loadingEnd])
 
   const loadingAnimation = () => {
-    props.dispatch(setLoading(true))
     setTimeout(() => {
-      props.dispatch(initLoading())
+      setState({
+        ...state,
+        loadingEnd: true
+      })
     }, 3000)
   }
 
@@ -120,12 +121,16 @@ const Home = (props) => {
       </Helmet>
 
       <Loading
-        className={props.loadingDuck.pageIsLoading ? "loading" : "display-none"}
+        className={state.loadingEnd ? "loading-disappear" : "loading"}
+      // classNameSingleWordsContainer="loading-text"
+      // classNameSingleWords="loading-text-words"
+      // classNameSingleWordsContainer={state.loadingEnd ? "animate__animated animate__fadeOut" : "loading-text"}
+      // classNameSingleWords={state.loadingEnd ? "animate__animated animate__bounceOut" : "loading-text-words"}
       />
 
 
       <Box
-        className={props.loadingDuck.pageIsLoading ? "home-little" : "home-normal"}
+      // className={!state.loadingEnd ? "" : ""}
       >
         {/* First section with title */}
         <Container
@@ -410,10 +415,4 @@ const Home = (props) => {
   );
 }
 
-const mapStateToProps = state => (
-  {
-    loadingDuck: state.loadingDuck,
-  }
-)
-
-export default connect(mapStateToProps)(Home);
+export default connect()(Home);
