@@ -8,6 +8,8 @@ import { faN, faArrowDownLong, faAngleLeft, faAngleRight, faPlus, faArrowLeft, f
 import quotation_mark from "../assets/icons/quote.svg";
 import logo_pininfarina from "../assets/images/up/caseStudies/pininfarina.jpg";
 import logo_youthquake from "../assets/images/up/caseStudies/youthquake.jpg";
+import empty_academy from "../assets/icons/empty_academy.png"
+import empty_job from "../assets/icons/empty_job.png"
 
 // Link
 const linkFb = "https://www.facebook.com/beijepeoplefirst";
@@ -81,6 +83,8 @@ export const infoGraphicAcademy = "https://beije-people-first.s3.eu-south-1.amaz
 export const backArrow = faArrowLeft;
 export const clock = faClock;
 export const logo_fondazione_lavoro = "https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/academy/fondazione_lavoro_logo.png";
+export const career_empty_academy = empty_academy
+export const career_empty_job = empty_job
 
 export const linkYoutube = linkYt;
 

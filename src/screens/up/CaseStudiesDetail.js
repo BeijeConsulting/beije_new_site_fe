@@ -69,16 +69,16 @@ const CaseStudiesDetail = (props) => {
         <Container
           component={"section"}
           maxWidth={"false"}
-          className={"case-studies-detail-container paddingX-container-general-pages"}
+          className={"case-studies-detail-container paddingX-container-general-pages d-flex items-center flex-column"}
         >
           <Box
-            className="case-studies-detail-btn-container"
+            className="case-studies-detail-btn-container max-width-1200 width-100"
           >
             <GoBackBtn />
           </Box>
 
           <Box
-            className={"case-studies-detail-img-container"}
+            className={"case-studies-detail-img-container max-width-1200 width-100"}
             style={{ backgroundColor: state.caseStudiesResponse.backgroundColor }}
           >
             <img
@@ -89,7 +89,7 @@ const CaseStudiesDetail = (props) => {
 
           </Box>
           <Box
-            className={"case-studies-detail-txt-container"}
+            className={"case-studies-detail-txt-container max-width-1200 width-100"}
           >
             <h1>
               {state.caseStudiesResponse.title}

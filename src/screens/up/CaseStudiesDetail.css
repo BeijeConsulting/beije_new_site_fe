@@ -25,6 +25,7 @@
 .case-studies-detail-txt-container {
   background-color: var(--grey-tone-8);
   padding: 30px 10%;
+  box-sizing: border-box;
 }
 
 .case-studies-detail-txt-container h1 {
