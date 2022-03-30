@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 // Redux
 import { connect } from "react-redux";
-import { setModal, initModal } from "../../../redux/ducks/modalDuck"
 
 // MUI
 import { Box } from '@mui/material';
@@ -31,7 +30,6 @@ const CustomFooter = (props) => {
   })
 
   const openModal = (param1) => () => {
-    // props.dispatch(setModal(true, param1))
     setState({
       ...state,
       modalIsOpen: true,
@@ -40,7 +38,6 @@ const CustomFooter = (props) => {
   }
 
   const closeModal = () => {
-    // props.dispatch(initModal())
     setState({
       ...state,
       modalIsOpen: false,
@@ -172,16 +169,7 @@ const CustomFooter = (props) => {
 
       </CustomModal>
     </Box >
-    // <div className="footer-section">
-    //   <p>Questo è il footer</p>
-    // </div>
   )
 }
 
-const mapStateToProps = state => (
-  {
-    modalDuck: state.modalDuck,
-  }
-)
-
-export default connect(mapStateToProps)(CustomFooter)
+export default connect()(CustomFooter)

@@ -6,7 +6,6 @@ import * as yup from 'yup';
 
 // Redux
 import { connect } from "react-redux";
-import { setModal, initModal } from "../../../redux/ducks/modalDuck"
 
 // Api
 import ApiCalls from "../../../services/api/ApiCalls";
@@ -137,8 +136,7 @@ const CustomForm = (props) => {
     })
   }
 
-  const openModal = (param) => () => {
-    // props.dispatch(setModal(true, param))
+  const openModal = () => {
     setState({
       ...state,
       modalIsOpen: true,
@@ -146,7 +144,6 @@ const CustomForm = (props) => {
   }
 
   const closeModal = () => {
-    // props.dispatch(initModal())
     setState({
       ...state,
       modalIsOpen: false,
@@ -393,7 +390,7 @@ const CustomForm = (props) => {
                     </span>
                     <span
                       className="form-agreement-link-modal"
-                      onClick={openModal("privacyPolicies")}
+                      onClick={openModal}
                     >
                       {t("form.placeholder.agreement.part2")}
                     </span>

@@ -40,14 +40,8 @@
     "downloadPwd": "Download the presentation",
     "learnMore": "Learn more",
     "close": "Close",
-    "attachCv": "Attach Your CV"
-  },
-  "bannerCookie": {
-    "txt": {
-      "part1": "Acconsenti i cookies. Clicca su",
-      "part2": "questo link",
-      "part3": "per leggere l'informativa"
-    }
+    "attachCv": "Attach Your CV",
+    "accept": "Accept"
   },
   "contactInfo": {
     "location": "Where we are",
@@ -586,6 +580,15 @@
       },
       "li6": "in general, use that causes or is likely to cause modification, damage, interruption or limitation of this Website or its Services;",
       "li7": "the unauthorised collection, via the Website, of personal information about third parties (e.g. email addresses)."
+    }
+  },
+  "cookiePolicies": {
+    "title": "Cookie Policy",
+    "lang": "en",
+    "message": {
+      "part1": "Accept cookies. Click on  ",
+      "part2": "this link",
+      "part3": "  to read the leaflet."
     }
   },
   "noMatch": {

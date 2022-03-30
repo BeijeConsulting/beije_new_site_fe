@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { isEmpty } from "lodash";
 
 // Style
 import './Blog.css';
@@ -94,7 +95,7 @@ const Blog = (props) => {
             </>
           }
           {
-            state.blogDataResponse &&
+            state.blogDataResponse && !isEmpty(state.blogDataResponse) &&
             state.blogDataResponse.map((post, index) => {
               return (
                 <div key={index} className={"blog-second-section-card-container"}>
@@ -110,6 +111,10 @@ const Blog = (props) => {
                 </div>
               )
             })
+          }
+          {
+            isEmpty(state.blogDataResponse) &&
+            <div></div>
           }
         </Box>
       </Container>

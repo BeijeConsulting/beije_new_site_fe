@@ -15,7 +15,9 @@ import "./index.css"
 
 // Components 
 import CustomLink from './components/functional_components/ui/customLink/CustomLink';
-// import CookiePolicies_it from "./components/functional_components/cookiePolicies/CookiePolicies_it"
+import CookiePolicies_en from "./components/functional_components/cookiePolicies/CookiePolicies_en"
+import CookiePolicies_it from "./components/functional_components/cookiePolicies/CookiePolicies_it"
+import CustomModal from './components/hooks_components/customModal/CustomModal';
 
 // function RedirectToLanguage() {
 //   const { pathname, search } = useLocation();
@@ -54,6 +56,7 @@ function RedirectToLanguage() {
 
 function Root() {
   const { i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const [state, setState] = useState({
     modalIsOpen: false
@@ -66,34 +69,39 @@ function Root() {
     })
   }
 
+  const closeModal = () => {
+    setState({
+      ...state,
+      modalIsOpen: false,
+    })
+  }
+
   return (
     <React.StrictMode>
       <Provider store={store}>
         <BrowserRouter basename={i18n.resolvedLanguage}>
           <App />
           <CookieConsent
-            buttonText={<span className='simple-paragraph'>Acconsenti</span>}
+            buttonText={<span className='simple-paragraph'>{t("btn.accept")}</span>}
           >
-            🍪 Acconsenti i cookies. Clicca su&nbsp;&nbsp;
+            🍪 {t("cookiePolicies.message.part1")}
 
             <CustomLink
               linkTo="#"
               callback={openModal}
-              download={true}
-              target={"_blank"}
-              rel="noreferrer"
-              content="questo link"
+              content={t("cookiePolicies.message.part2")}
             />
-            &nbsp;&nbsp;per leggere l&apos;informativa.
+            {t("cookiePolicies.message.part3")}
           </CookieConsent>
 
-          {/* <CustomModal
+          <CustomModal
             stateModal={state.modalIsOpen}
             callbackClose={closeModal}
-            modalTitle={t("footer.privacyPolicies")}
+            modalTitle={t("cookiePolicies.title")}
           >
-            <CookiePolicies_it />
-          </CustomModal> */}
+            {t("cookiePolicies.lang") === "it" ? <CookiePolicies_it /> : <CookiePolicies_en />}
+            <CookiePolicies_en />
+          </CustomModal>
         </BrowserRouter>
         <BrowserRouter>
           <Routes>
