@@ -68,8 +68,7 @@ const Home = (props) => {
     const t1 = gsap.timeline({
       scrollTrigger: {
         trigger: fifthSection,
-        start: 'top 75%',
-        markers: true
+        start: 'top 75%'
       },
     });
 
