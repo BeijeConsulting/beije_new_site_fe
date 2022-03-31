@@ -8,8 +8,8 @@ import { faN, faArrowDownLong, faAngleLeft, faAngleRight, faPlus, faArrowLeft, f
 import quotation_mark from "../assets/icons/quote.svg";
 import logo_pininfarina from "../assets/images/up/caseStudies/pininfarina.jpg";
 import logo_youthquake from "../assets/images/up/caseStudies/youthquake.jpg";
-import empty_academy from "../assets/icons/empty_academy.png"
-import empty_job from "../assets/icons/empty_job.png"
+import empty_academy from "../assets/icons/empty_academy.svg"
+import empty_job from "../assets/icons/empty_job.svg"
 
 // Link
 const linkFb = "https://www.facebook.com/beijepeoplefirst";

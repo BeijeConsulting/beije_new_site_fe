@@ -52,8 +52,8 @@ const Home = (props) => {
 
     const element = refDarkContainer.current;
     const fourthSectionP = element.querySelector('.home-fourth-section-p');
-    const fifthSection = element.querySelector('.home-fifth-section-container-gsap');
-    const fifthSectionFinalSpan = element.querySelector('.home-fifth-section-final-span-gsap')
+    // const fifthSection = element.querySelector('.home-fifth-section-container-gsap');
+    // const fifthSectionFinalSpan = element.querySelector('.home-fifth-section-final-span-gsap')
 
     console.log("element ref", element);
 
@@ -65,14 +65,14 @@ const Home = (props) => {
       },
     });
 
-    const t1 = gsap.timeline({
-      scrollTrigger: {
-        trigger: fifthSection,
-        start: 'top 75%'
-      },
-    });
+    // const t1 = gsap.timeline({
+    //   scrollTrigger: {
+    //     trigger: fifthSection,
+    //     start: 'top 75%'
+    //   },
+    // });
 
-    t1.from(fifthSectionFinalSpan, { opacity: 0, duration: 1, ease: 'power2.in' })
+    // t1.from(fifthSectionFinalSpan, { opacity: 0, duration: 1, ease: 'power2.in' })
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -368,9 +368,9 @@ const Home = (props) => {
                   <br />
                   <br />
                   <span
-                    className="home-fifth-section-final-span-gsap"
+                    className="home-fifth-section-span-strong home-fifth-section-final-span"
                   >
-                    {t("home.fifthSection.content.part16")}
+                    <strong>{t("home.fifthSection.content.part16")}</strong>
                   </span>
                 </p>
               </Box>
