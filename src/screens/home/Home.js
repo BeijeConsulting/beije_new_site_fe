@@ -122,10 +122,6 @@ const Home = (props) => {
 
       <Loading
         className={state.loadingEnd ? "loading-disappear" : "loading"}
-      // classNameSingleWordsContainer="loading-text"
-      // classNameSingleWords="loading-text-words"
-      // classNameSingleWordsContainer={state.loadingEnd ? "animate__animated animate__fadeOut" : "loading-text"}
-      // classNameSingleWords={state.loadingEnd ? "animate__animated animate__bounceOut" : "loading-text-words"}
       />
 
 

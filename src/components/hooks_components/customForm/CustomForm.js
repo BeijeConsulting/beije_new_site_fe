@@ -110,6 +110,8 @@ const CustomForm = (props) => {
       message: values.message,
       name: values.name,
       origin: "test",
+      mail_subject: props.titlePage,
+      phone: values.number,
       privacy_check: values.agreement
     }
     console.log("send form data: ", formData)
@@ -214,7 +216,9 @@ const CustomForm = (props) => {
               <span>{t("form.toastMessage.txt1")}<br />{t("form.toastMessage.txt2")}</span>
             </Alert>
           </Snackbar>
-          <form>
+          <form
+            // titlePage={props.titlePage}
+          >
 
             {/* Nome */}
             <Grid

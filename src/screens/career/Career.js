@@ -51,9 +51,8 @@ const Career = (props) => {
   }, [])
 
   const getCareerData = async () => {
-    let careerDataResponse = await ApiCalls.career_getList();
-    console.log("careerDataResponse", careerDataResponse);
-    // let careerDataResponse = careerTrialObj;
+    // let careerDataResponse = await ApiCalls.career_getList();
+    let careerDataResponse = careerTrialObj;
     console.log("careerDataResponse in career general: ", careerDataResponse);
 
     // careerDataResponse.map(findIf(academyElements, jobElements))

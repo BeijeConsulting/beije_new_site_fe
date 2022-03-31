@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
+
 // Redux
 import { setCurrentPage, initCurrentPage } from "../../redux/ducks/currentPageDuck";
 import { setVisibilityNavbar, initVisibilityNavbar } from "../../redux/ducks/showNavbarTopDuck";
@@ -46,13 +49,24 @@ const CareerDeatil = (props) => {
 
   // Add async and await. Here add call to API
   const getCareerData = async () => {
-    // let careerResponse = careerTrialObj;
-    let careerResponse = await ApiCalls.career_getListDetail(id, props.languageDuck.currentLanguage);
-    console.log("careerResponse: ", careerResponse);
+
+    // let careerResponse = await ApiCalls.career_getListDetail(id, props.languageDuck.currentLanguage);
+    // console.log("careerResponse: ", careerResponse);
+
+    let careerResponse = careerTrialObj;
+
+    let item;
+    careerResponse.map((el) => {
+      if (el.permalink == id) {
+        item = el
+      }
+    })
+    console.log("item: ", item);
 
     setState({
       ...state,
-      careerResponse: careerResponse
+      // careerResponse: careerResponse
+      careerResponse: item
     })
 
   }
@@ -68,11 +82,6 @@ const CareerDeatil = (props) => {
         className={"career-detail-container paddingX-container-general-pages"}
       >
         <GoBackBtn />
-        {/* <p
-          className="career-detail-tag"
-        >
-          Job Opportunities
-        </p> */}
         {
           state.careerResponse &&
           <>
@@ -82,9 +91,13 @@ const CareerDeatil = (props) => {
             <Box
               className="career-detail-txt-container"
             >
-              <p>
+
+              <ReactMarkdown
+                remarkPlugins={[remarkGfm]}
+              >
                 {props.languageDuck.currentLanguage === "it" ? state.careerResponse.description_it : state.careerResponse.description_en}
-              </p>
+
+              </ReactMarkdown>
 
             </Box>
           </>
@@ -100,6 +113,7 @@ const CareerDeatil = (props) => {
           className={"academy-sixth-section-box-form"}
         >
           <CustomForm
+            titlePage={state.careerResponse ? state.careerResponse.title_it : ""}
             cvForm
             formTitle={t("form.title.apply")}
           />
