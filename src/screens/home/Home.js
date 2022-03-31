@@ -68,7 +68,8 @@ const Home = (props) => {
     const t1 = gsap.timeline({
       scrollTrigger: {
         trigger: fifthSection,
-        start: '50% 75%'
+        start: 'top 75%',
+        markers: true
       },
     });
 
@@ -368,15 +369,11 @@ const Home = (props) => {
                   <br />
                   <br />
                   <span
-                    className="home-fifth-section-span-strong home-fifth-section-final-span-gsap"
+                    className="home-fifth-section-final-span-gsap"
                   >
                     {t("home.fifthSection.content.part16")}
                   </span>
                 </p>
-                {/* <CustomLink
-                  linkTo=""
-                  content="Read more"
-                /> */}
               </Box>
             </Container>
 
