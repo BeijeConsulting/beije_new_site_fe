@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
@@ -12,17 +13,13 @@ import { connect } from "react-redux";
 import ApiCalls from "../../services/api/ApiCalls";
 
 // MUI
-import { Box, Container } from "@mui/material";
+import { Box, Container, Skeleton } from "@mui/material";
 
 // Style
 import "./CaseStudiesDetail.css";
 
 // Components
 import GoBackBtn from "../../components/functional_components/goBackBtn/GoBackBtn";
-
-// Remove
-import caseStudiesTrialObj from "./caseStudiesTrialObj.json";
-import { useNavigate, useParams } from "react-router-dom";
 
 const CaseStudiesDetail = (props) => {
 
@@ -52,7 +49,6 @@ const CaseStudiesDetail = (props) => {
     if (!caseStudiesResponse) {
       navigate(`/beije-up`);
     }
-    // let caseStudiesResponse = caseStudiesTrialObj;
 
     setState({
       ...state,
@@ -65,6 +61,27 @@ const CaseStudiesDetail = (props) => {
     <Box
       className={"bg-dark-grey margin-top-container-screens"}
     >
+      {
+        !state.caseStudiesResponse &&
+        <div
+          className="d-flex flex-column items-center paddingX-container-general-pages"
+        >
+          <div
+            className="d-flex flex-column max-width-1200 width-100 marginY-30"
+          >
+            <Skeleton variant="text" animation="wave" width={"20%"} className="marginY-30" />
+            <Skeleton variant="rectangular" width={"100%"} height={300} animation="wave" className="marginY-30" />
+            <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+            <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+            <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+            <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+            <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+            <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+            <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+            <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+          </div>
+        </div>
+      }
 
       {
         state.caseStudiesResponse &&

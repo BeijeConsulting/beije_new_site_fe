@@ -13,7 +13,7 @@ import { connect } from "react-redux";
 import ApiCalls from "../../services/api/ApiCalls";
 
 // MUI
-import { Box, Container } from "@mui/material";
+import { Box, Container, Skeleton } from "@mui/material";
 
 // Style
 import "./Career.css";
@@ -68,6 +68,34 @@ const CareerDeatil = (props) => {
       >
         <GoBackBtn />
         {
+          !state.careerResponse &&
+          <div
+            className="d-flex flex-column items-center"
+          >
+            <div
+              className="d-flex flex-column max-width-1200 width-100 marginY-30"
+            >
+              <Skeleton variant="text" animation="wave" width={"50%"} height={100} className="marginY-30" />
+              <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+              <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+              <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+              <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+              <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+              <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+              <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+              <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+              <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+              <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+              <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+              <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+              <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+              <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+              <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+              <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+            </div>
+          </div>
+        }
+        {
           state.careerResponse &&
           <>
             <h1>{state.careerResponse.title}</h1>
@@ -98,7 +126,7 @@ const CareerDeatil = (props) => {
           className={"academy-sixth-section-box-form"}
         >
           <CustomForm
-            titlePage={state.careerResponse ? state.careerResponse.title : "Offerta di lavoro"}
+            titlePage={state.careerResponse ? `Candidatura per ${state.careerResponse.title}` : "Offerta di lavoro"}
             cvForm
             formTitle={t("form.title.apply")}
           />

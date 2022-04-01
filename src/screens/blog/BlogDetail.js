@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useLocation, useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 // Style
 import './Blog.css';
@@ -9,7 +9,6 @@ import './Blog.css';
 import { Box, Container, Divider, Skeleton } from "@mui/material";
 
 // Components
-import blogArrayTest from "../../blogArrayTest.json";
 import GoBackBtn from "../../components/functional_components/goBackBtn/GoBackBtn";
 
 // Redux
@@ -30,7 +29,6 @@ import ApiCalls from "../../services/api/ApiCalls";
 const Blog = (props) => {
 
   const { t } = useTranslation();
-  const location = useLocation();
   const navigate = useNavigate();
   const ref = useRef(null);
 
@@ -107,7 +105,31 @@ const Blog = (props) => {
       />
       {
         !state.blogData &&
-        <Skeleton />
+        <div
+          className="d-flex flex-column items-center paddingX-container-general-pages"
+        >
+          <div
+            className="d-flex flex-column max-width-1200 width-100 marginY-30"
+          >
+            <Skeleton variant="rectangular" width={"100%"} height={300} animation="wave" className="marginY-30" />
+            <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+            <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+            <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+            <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+            <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+            <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+            <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+            <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+            <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+            <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+            <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+            <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+            <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+            <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+            <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+            <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+          </div>
+        </div>
       }
       {
         state.blogData &&
@@ -150,7 +172,13 @@ const Blog = (props) => {
           <h3>{t("blog.latestArticles")}</h3>
           {
             !state.latestArticles &&
-            <Skeleton />
+            <div
+              className="d-flex flex-row max-width-1200 width-100 marginY-30"
+            >
+              <Skeleton variant="rectangular" width={"33.3%"} height={300} animation="wave" />
+              <Skeleton variant="rectangular" width={"33.3%"} height={300} animation="wave" className="marginX-20" />
+              <Skeleton variant="rectangular" width={"33.3%"} height={300} animation="wave" />
+            </div>
           }
           {
             state.latestArticles &&

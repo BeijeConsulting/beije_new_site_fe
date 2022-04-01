@@ -227,6 +227,7 @@ const TalentAcademy = (props) => {
               ref={formContainer}
             >
               <CustomForm
+                titlePage="Candidatura per Academy"
                 cvForm
                 formTitle={t("form.title.apply")}
               />

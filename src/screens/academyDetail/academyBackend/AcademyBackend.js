@@ -116,6 +116,7 @@ const AcademyBackend = (props) => {
             className={"detail-academy-third-section paddingX-container-general-pages top-oblique-line bg-yellow"}
           >
             <CustomForm
+              titlePage={'Candidatura per Academy Backend'}
               cvForm
               formTitle={t("form.title.apply")}
             />

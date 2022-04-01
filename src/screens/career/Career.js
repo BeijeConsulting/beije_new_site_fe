@@ -28,7 +28,7 @@ const Career = (props) => {
   const { t } = useTranslation();
 
   const [state, setState] = useState({
-    buttonSelected: "academy",
+    buttonSelected: "job",
     careerDataResponse: null,
     academyElements: false,
     jobElements: false
@@ -139,7 +139,34 @@ const Career = (props) => {
             <h3>{t("career.title")}</h3>
             {
               !state.careerDataResponse &&
-              <Skeleton />
+              <div
+                className="d-flex flex-column width-100"
+              >
+                <div
+                  className="d-flex flex-row width-100 marginY-30"
+                >
+                  <Skeleton variant="text" animation="wave" width={"25%"} />
+                  <Skeleton variant="text" animation="wave" width={"25%"} className="marginX-20" />
+                  <Skeleton variant="text" animation="wave" width={"25%"} className="marginX-20" />
+                  <Skeleton variant="text" animation="wave" width={"25%"} />
+                </div>
+                <div
+                  className="d-flex flex-row width-100 marginY-30"
+                >
+                  <Skeleton variant="text" animation="wave" width={"25%"} />
+                  <Skeleton variant="text" animation="wave" width={"25%"} className="marginX-20" />
+                  <Skeleton variant="text" animation="wave" width={"25%"} className="marginX-20" />
+                  <Skeleton variant="text" animation="wave" width={"25%"} />
+                </div>
+                <div
+                  className="d-flex flex-row width-100 marginY-30"
+                >
+                  <Skeleton variant="text" animation="wave" width={"25%"} />
+                  <Skeleton variant="text" animation="wave" width={"25%"} className="marginX-20" />
+                  <Skeleton variant="text" animation="wave" width={"25%"} className="marginX-20" />
+                  <Skeleton variant="text" animation="wave" width={"25%"} />
+                </div>
+              </div>
             }
             {
               state.careerDataResponse &&

@@ -371,6 +371,14 @@ h4, h5, h6, .minor-titles {
   margin-top: var(--header-height-xs)
 }
 
+.marginY-30 {
+  margin: 30px 0 30px 0;
+}
+
+.marginX-20 {
+  margin: 0 20px 0 20px;
+}
+
 .margin-bottom-30 {
   margin-bottom: 30px;
 }

@@ -19,17 +19,15 @@ import { addIcon } from "../../../utils/properties";
 
 const tempObj = [
   {
-    name: "Frontend developer",
-    type: "frontend",
-    mode: "Remoto",
-    when: "2 settimane fa",
+    name: " / ",
+    type: " / ",
+    mode: " / ",
     linkTo: "/beije-talent-academy/academy-frontend"
   },
   {
-    name: "Backend developer",
-    type: "frontend",
-    mode: "Remoto",
-    when: "2 settimane fa",
+    name: " / ",
+    type: " / ",
+    mode: " / ",
     linkTo: "/beije-talent-academy/academy-backend"
   }
 ]
@@ -89,7 +87,7 @@ const CustomTable = (props) => {
                 <p
                   className="simple-paragraph"
                 >
-                  {item.mode}
+                  {t(`career.modeOffert.${item.mode.toLowerCase()}`)}
                 </p>
               </>
             }
@@ -106,7 +104,7 @@ const CustomTable = (props) => {
               <TableCell
                 align={"left"}
               >
-                {item.mode}
+                {t(`career.modeOffert.${item.mode.toLowerCase()}`)}
               </TableCell>
             </>
           }

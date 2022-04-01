@@ -107,6 +107,7 @@ const Contacts = (props) => {
 
           <Box>
             <CustomForm
+              titlePage="Richiesta informazioni - sito Beije"
               formTitle={t("form.title.contacts")}
             />
           </Box>

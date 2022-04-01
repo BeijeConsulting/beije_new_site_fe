@@ -11,7 +11,6 @@ import { Box, Container, Divider, Skeleton } from "@mui/material";
 
 // Components
 import BlogCard from "../../components/functional_components/blogCard/BlogCard";
-import blogArrayTest from "../../blogArrayTest.json";
 
 // Redux
 import { setCurrentPage, initCurrentPage } from "../../redux/ducks/currentPageDuck";
@@ -92,38 +91,60 @@ const Blog = (props) => {
           maxWidth={"false"}
           className={"paddingX-container-general-pages d-flex justify-center"}
         >
-          <Box className={"width-100 max-width-1200 blog-second-section-container"}>
-            {
-              !state.blogDataResponse &&
-              <>
-                <Skeleton variant="rectangular" width={300} height={200} />
-                <Skeleton />
-                <Skeleton width="60%" />
-              </>
-            }
-            {
-              state.blogDataResponse && !isEmpty(state.blogDataResponse) &&
-              state.blogDataResponse.map((post, index) => {
-                return (
-                  <div key={index} className={"blog-second-section-card-container"}>
-                    <BlogCard
-                      permalink={post.permalink}
-                      src={post.cover_img}
-                      title={post.title}
-                      subtitle={post.subtitle}
-                      description={post.description}
-                      postedby={post.author}
-                      posted={checkItemApi(post)}
-                    />
-                  </div>
-                )
-              })
-            }
-            {
-              isEmpty(state.blogDataResponse) &&
-              <div></div>
-            }
-          </Box>
+          {
+            !state.blogDataResponse &&
+            <div
+              className="d-flex flex-column items-center width-100"
+            >
+              <div
+                className="d-flex flex-row max-width-1200 width-100 marginY-30"
+              >
+                <Skeleton variant="rectangular" width={"33.3%"} height={300} animation="wave" />
+                <Skeleton variant="rectangular" width={"33.3%"} height={300} animation="wave" className="marginX-20" />
+                <Skeleton variant="rectangular" width={"33.3%"} height={300} animation="wave" />
+              </div>
+              <div
+                className="d-flex flex-row max-width-1200 width-100 marginY-30"
+              >
+                <Skeleton variant="rectangular" width={"33.3%"} height={300} animation="wave" />
+                <Skeleton variant="rectangular" width={"33.3%"} height={300} animation="wave" className="marginX-20" />
+                <Skeleton variant="rectangular" width={"33.3%"} height={300} animation="wave" />
+              </div>
+              <div
+                className="d-flex flex-row max-width-1200 width-100 marginY-30"
+              >
+                <Skeleton variant="rectangular" width={"33.3%"} height={300} animation="wave" />
+                <Skeleton variant="rectangular" width={"33.3%"} height={300} animation="wave" className="marginX-20" />
+                <Skeleton variant="rectangular" width={"33.3%"} height={300} animation="wave" />
+              </div>
+            </div>
+          }
+          {state.blogDataResponse && !isEmpty(state.blogDataResponse) &&
+            <Box className={"width-100 max-width-1200 blog-second-section-container"}>
+
+              {
+                state.blogDataResponse.map((post, index) => {
+                  return (
+                    <div key={index} className={"blog-second-section-card-container"}>
+                      <BlogCard
+                        permalink={post.permalink}
+                        src={post.cover_img}
+                        title={post.title}
+                        subtitle={post.subtitle}
+                        description={post.description}
+                        postedby={post.author}
+                        posted={checkItemApi(post)}
+                      />
+                    </div>
+                  )
+                })
+              }
+            </Box>
+          }
+          {
+            isEmpty(state.blogDataResponse) &&
+            <div></div>
+          }
         </Container>
       </Box>
     </>
