@@ -18,6 +18,8 @@ import CommunityDetail from "./screens/community/CommunityDetail";
 import CareerDetail from "./screens/career/CareerDetail";
 import CaseStudiesDetail from "./screens/up/CaseStudiesDetail";
 
+import { useParams } from "react-router-dom";
+
 export default [
   {
     path: "/",
@@ -33,8 +35,8 @@ export default [
         element: <Up />
       },
       {
-        path: "/beije-up/case-studies",
-        element: <RequireCaseStudiesPermalink><CaseStudiesDetail /></RequireCaseStudiesPermalink>
+        path: "/beije-up/:permalink",
+        element: <CaseStudiesDetail />
       },
       {
         path: "/beije-talent-academy",
@@ -107,16 +109,6 @@ function RequireCareerPermalink({ children }) {
 
   return children;
 }
-
-function RequireCaseStudiesPermalink({ children }) {
-  let permalink = new URLSearchParams(location.search).get("caseStudy");
-  if (!permalink) {
-    return <Navigate to={`/beije-up`} />
-  }
-
-  return children;
-}
-
 
 
 function RedirectUrlNewSite({ children }) {
