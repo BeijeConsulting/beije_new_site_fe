@@ -94,11 +94,15 @@
 
   .hightlight-on-hover {
     font-family: var(--moderat-bold);
+    -webkit-transition: 1.5s;
+    -o-transition: 1.5s;
     transition: 1.5s;
   }
 
   .reduce-on-hover {
     color: var(--white);
+    -webkit-transition: 1.5s;
+    -o-transition: 1.5s;
     transition: 1.5s;
   }
 

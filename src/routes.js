@@ -81,24 +81,6 @@ export default [
   }
 ];
 
-// function RequireBlogPermalink({ children }) {
-//   let permalink = new URLSearchParams(location.search).get("article");
-//   if (!permalink) {
-//     return <Navigate to={`/blog`} />
-//   }
-
-//   return children;
-// }
-
-// function RequireCommunityPermalink({ children }) {
-//   let permalink = new URLSearchParams(location.search).get("event");
-//   if (!permalink) {
-//     return <Navigate to={`/community`} />
-//   }
-
-//   return children;
-// }
-
 function RequireCareerPermalink({ children }) {
   let permalink = new URLSearchParams(location.search).get("jobOffer");
   if (!permalink) {
@@ -115,11 +97,14 @@ function RedirectUrlNewSite({ children }) {
     case "/home/consulting":
       location.href = "/beije-consulting";
       break;
-    case "/portfolio-articoli/academy - java":
-      location.href = "/beije-talent-academy";
+    case "/portfolio-articoli/academy-java":
+      location.href = "/beije-talent-academy/academy-backend";
+      break;
+    case "/portfolio-articoli/stage-javascript":
+      location.href = "/beije-talent-academy/academy-frontend";
       break;
     case "/home/community":
-      location.href = "/beije-community";
+      location.href = "/";
       break;
     case "/home/up":
       location.href = "/beije-up";

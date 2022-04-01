@@ -3,9 +3,6 @@ import React from "react";
 // MUI
 import {Stack } from "@mui/material";
 
-// Style
-import "./SocialLinks.css"
-
 // Constants
 import { social_list } from "../../../utils/properties";
 

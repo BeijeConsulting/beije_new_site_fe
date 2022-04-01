@@ -26,9 +26,6 @@ import SimpleCarousel from "../../components/functional_components/simpleCarouse
 import CustomCarousel from "../../components/hooks_components/customCarousel/CustomCarousel";
 import CustomForm from "../../components/hooks_components/customForm/CustomForm";
 
-// Remove
-import caseStudiesTrialObj from "./caseStudiesTrialObj.json";
-
 const Up = (props) => {
 
   const { t } = useTranslation();

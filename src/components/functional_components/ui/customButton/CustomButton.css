@@ -5,13 +5,19 @@
   color: var(--white) !important;
   padding: 12px 40px !important;
   border-radius: 0% !important;
+  -webkit-transition: 1s !important;
+  -o-transition: 1s !important;
   transition: 1s !important;
   min-width: 125px !important;
 }
 
 .button-form-primary p {
   font-family: var(--moderat-regular) !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -26,6 +32,7 @@
 }
 
 .button-form-primary:hover {
+  -webkit-box-shadow: 4px 5px 15px var(--dark-grey);
   box-shadow: 4px 5px 15px var(--dark-grey);
 }
 

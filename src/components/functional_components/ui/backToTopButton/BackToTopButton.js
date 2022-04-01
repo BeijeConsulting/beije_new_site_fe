@@ -3,9 +3,6 @@ import React from "react";
 // MUI
 import { Zoom, Box, useScrollTrigger } from '@mui/material';
 
-// Style
-import "./BackToTopButton.css"
-
 const BackToTopButton = (props) => {
 
   const trigger = useScrollTrigger();

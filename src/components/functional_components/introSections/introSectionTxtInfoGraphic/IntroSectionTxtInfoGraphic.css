@@ -45,6 +45,8 @@
 
   .intro-section-txt-info-graphic .intro-section-img-container {
     width: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: relative;
   }

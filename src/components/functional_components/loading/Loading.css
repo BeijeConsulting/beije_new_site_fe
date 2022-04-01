@@ -1,5 +1,7 @@
 /* Loading */
 .loading {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: fixed;
   top: 0;
@@ -8,11 +10,19 @@
   height: 100vh;
   background: var(--dark-grey);
   z-index: 9999;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
 .loading-disappear {
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
 
   display: flex;
   position: fixed;
@@ -20,7 +30,11 @@
   left: 0;
   width: 100vw;
   height: 100vh;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   background: var(--dark-grey);
 
@@ -34,14 +48,18 @@
 @keyframes puffOut {
   0% {
     opacity: 1;
+    -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
+    -webkit-transform: scale(1, 1);
     transform: scale(1, 1);
     -webkit-filter: blur(0px);
   }
 
   100% {
     opacity: 0;
+    -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
+    -webkit-transform: scale(10, 10);
     transform: scale(10, 10);
     -webkit-filter: blur(2px);
   }
@@ -80,87 +98,130 @@
 }
 
 .loading-text span {
+  -webkit-animation: animate 1.5s linear;
   animation: animate 1.5s linear;
 }
 
 .loading-text span:nth-child(1) {
+  -webkit-animation-delay: 0s;
   animation-delay: 0s
 }
 
 .loading-text span:nth-child(2) {
+  -webkit-animation-delay: 0.1s;
   animation-delay: 0.1s
 }
 
 .loading-text span:nth-child(3) {
+  -webkit-animation-delay: 0.2s;
   animation-delay: 0.2s
 }
 
 .loading-text span:nth-child(4) {
+  -webkit-animation-delay: 0.3s;
   animation-delay: 0.3s
 }
 
 .loading-text span:nth-child(5) {
+  -webkit-animation-delay: 0.4s;
   animation-delay: 0.4s
 }
 
 .loading-text span:nth-child(6) {
+  -webkit-animation-delay: 0.5s;
   animation-delay: 0.5s
 }
 
 .loading-text span:nth-child(7) {
+  -webkit-animation-delay: 0.6s;
   animation-delay: 0.6s
 }
 
 .loading-text span:nth-child(8) {
+  -webkit-animation-delay: 0.7s;
   animation-delay: 0.7s
 }
 
 .loading-text span:nth-child(9) {
+  -webkit-animation-delay: 0.8s;
   animation-delay: 0.8s
 }
 
 .loading-text span:nth-child(10) {
+  -webkit-animation-delay: 0.9s;
   animation-delay: 0.9s
 }
 
 .loading-text span:nth-child(11) {
+  -webkit-animation-delay: 1s;
   animation-delay: 1s
 }
 
 .loading-text span:nth-child(12) {
+  -webkit-animation-delay: 1.1s;
   animation-delay: 1.1s
 }
 
 .loading-text span:nth-child(13) {
+  -webkit-animation-delay: 1.2s;
   animation-delay: 1.2s
 }
 
 .loading-text span:nth-child(14) {
+  -webkit-animation-delay: 1.3s;
   animation-delay: 1.3s
 }
 
 .loading-text span:nth-child(15) {
+  -webkit-animation-delay: 1.4s;
   animation-delay: 1.4s
 }
 
 .loading-text span:nth-child(16) {
+  -webkit-animation-delay: 1.5s;
   animation-delay: 1.5s
 }
 
-@keyframes animate {
+@-webkit-keyframes animate {
   0% {
+    -webkit-filter: blur(0);
     filter: blur(0);
   }
 
   40% {
+    -webkit-filter: blur(4px);
     filter: blur(4px);
   }
 
   80% {
+    -webkit-filter: blur(0);
     filter: blur(0);
   }
 
   100% {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+  }
+
+  40% {
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+  }
+
+  80% {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+  }
+
+  100% {
+    -webkit-filter: blur(0);
     filter: blur(0);
   }
 }

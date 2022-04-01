@@ -3,9 +3,6 @@ import React from "react";
 // MUI
 import { useScrollTrigger, Slide } from "@mui/material";
 
-// Style
-import "./HideOnScroll"
-
 const HideOnScroll = (props) => {
   const trigger = useScrollTrigger();
 

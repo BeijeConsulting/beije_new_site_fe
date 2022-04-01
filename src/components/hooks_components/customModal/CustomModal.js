@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 
 // Redux
 import { connect } from "react-redux";
-import { initModal } from "../../../redux/ducks/modalDuck";
 
 // MUI
 import { Modal, Backdrop, Fade, Box } from "@mui/material";
@@ -23,10 +22,6 @@ const CustomModal = (props) => {
 
   const heandleClose = () => {
     props.callbackClose();
-  }
-
-  const closeModal = () => {
-    props.dispatch(initModal())
   }
 
   return (

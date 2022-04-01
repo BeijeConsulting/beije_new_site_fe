@@ -8,6 +8,8 @@
 
 .download-btn-container {
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 

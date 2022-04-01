@@ -1,5 +1,6 @@
 .accordion-container {
   background-color: transparent !important;
+  -webkit-box-shadow: none !important;
   box-shadow: none !important;
   border: none !important;
 }
@@ -51,6 +52,8 @@
 @media(min-width: 1024px) {
 
   .accordion-header .MuiAccordionSummary-expandIconWrapper {
+    -webkit-transform: none !important;
+    -ms-transform: none !important;
     transform: none !important;
   }
 

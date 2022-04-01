@@ -1,8 +1,10 @@
 .percentage-card-box-container {
   width: 255px;
   height: 284px;
+  -webkit-box-shadow: 8px 8px 24px #090E1466;
   box-shadow: 8px 8px 24px #090E1466;
   border-radius: 12px;
+  background: transparent -o-linear-gradient(312deg, #2D2F33 0%, #272A2E 52%, #222529 100%) 0% 0% no-repeat padding-box;
   background: transparent linear-gradient(138deg, #2D2F33 0%, #272A2E 52%, #222529 100%) 0% 0% no-repeat padding-box;
   margin: 22px auto 0;
 }
@@ -13,8 +15,14 @@
   border-radius: 50%;
   background-color: #2B2F36;
   margin: 24px 0 0 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -30,7 +38,11 @@
   font-size: 40px;
   font-family: var(--moderat-regular);
   height: 65px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
