@@ -22,6 +22,7 @@ import GoBackBtn from "../../components/functional_components/goBackBtn/GoBackBt
 
 // Remove
 import caseStudiesTrialObj from "./caseStudiesTrialObj.json";
+import { useNavigate, useParams } from "react-router-dom";
 
 const CaseStudiesDetail = (props) => {
 
@@ -29,7 +30,8 @@ const CaseStudiesDetail = (props) => {
     caseStudiesResponse: null
   })
 
-  const permalink = new URLSearchParams(location.search).get("caseStudy");
+  const { permalink } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -47,6 +49,9 @@ const CaseStudiesDetail = (props) => {
   // Add async and await. Here add call to API
   const getCaseStudiesData = async () => {
     let caseStudiesResponse = await ApiCalls.caseStudies_getListDetail(permalink);
+    if (!caseStudiesResponse) {
+      navigate(`/beije-up`);
+    }
     console.log("Detail - caseStudiesResponse", caseStudiesResponse)
 
     // let caseStudiesResponse = caseStudiesTrialObj;
@@ -62,7 +67,6 @@ const CaseStudiesDetail = (props) => {
     <Box
       className={"bg-dark-grey margin-top-container-screens"}
     >
-
 
       {
         state.caseStudiesResponse &&

@@ -108,7 +108,7 @@ const CustomCarousel = (props) => {
   }
 
   const sendToPage = (param1) => () => {
-    let response = `/beije-up/case-studies?caseStudy=${param1}`
+    let response = `/beije-up/${param1}`
     navigate(response)
   }
 
