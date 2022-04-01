@@ -43,6 +43,10 @@ const Blog = (props) => {
   const getBlogData = async () => {
     let blogDataResponseAPI = await ApiCalls.blog_getList(props.languageDuck.currentLanguage);
     let blogDataResponse = blogDataResponseAPI;
+    console.log("blogDataResponse", blogDataResponse)
+
+    
+
     // let blogDataResponse = blogArrayTest;
     setState({
       ...state,

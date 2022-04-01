@@ -1,6 +1,8 @@
 import axios from "axios/index";
 import { ENVIRONMENT } from "../utils/properties";
 import { isEmpty } from "lodash";
+import { useNavigate } from "react-router-dom";
+
 
 const axiosInstance = axios.create({ baseURL: ENVIRONMENT.API_REST_BE });
 const defaultHeaders = {
@@ -37,7 +39,9 @@ export const get = async (path, obj = {}) => {
     return data;
   } catch (error) {
     // generally, it enters here when the call goes to "failed"
-    return { error: { messageCode: "ER000" } };
+    // return { error: { messageCode: "ER000" } };
+    // window.location("/error")
+    location.href = "/error"
   }
 }
 

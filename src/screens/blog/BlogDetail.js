@@ -2,6 +2,9 @@ import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useParams, useNavigate } from "react-router-dom";
 
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
+
 // Style
 import './Blog.css';
 
@@ -33,7 +36,7 @@ const Blog = (props) => {
   const ref = useRef(null);
 
   // const permalink = new URLSearchParams(location.search).get("article");
-  const permalink = useParams();
+  const { permalink } = useParams();
 
   const [state, setState] = useState({
     blogData: null,
@@ -55,16 +58,18 @@ const Blog = (props) => {
 
   const getData = async () => {
     let blogDataAPI = await ApiCalls.blog_getListDetail(permalink);
+    console.log("blogDataAPI", blogDataAPI);
     if (!blogDataAPI) {
       navigate(`/blog`);
     }
 
     let blogDataResponseAPI = await ApiCalls.blog_getList(props.languageDuck.currentLanguage);
+
     let latestArticles = removeThisBlogFromList(blogDataResponseAPI);
 
     setState({
       ...state,
-      blogData: blogDataResponseAPI,
+      blogData: blogDataAPI,
       latestArticles: latestArticles.slice(0, 4)
     })
   }
@@ -80,6 +85,16 @@ const Blog = (props) => {
 
   const scrollCarousel = (value) => {
     ref.current.scrollLeft += value;
+  }
+
+  const checkItemApi = (param) => {
+    let datePosted = ""
+    if (param.createDateTime) {
+      if (param.createDateTime.dayOfMonth && param.createDateTime.monthValue && param.createDateTime.year) {
+        datePosted = param.createDateTime.dayOfMonth + "/" + param.createDateTime.monthValue + "/" + param.createDateTime.year
+      }
+    }
+    return datePosted
   }
 
   return (
@@ -143,7 +158,7 @@ const Blog = (props) => {
             >
               <img
                 alt="blog image"
-                src={state.blogData.cover_img}
+                src={state.blogData.images[0]}
               />
             </Container>
             <Box className={"blog-detail-text-container"}>
@@ -154,10 +169,14 @@ const Blog = (props) => {
                 {state.blogData.subtitle}
               </h3>
               <div className={"blog-card-text-postedby"}>
-                <FontAwesomeIcon icon={clock} className={"blog-card-clock-icon"} />{t("blog.postedBy")} {state.blogData.postedBy} {t("blog.postedOn")} {state.blogData.posted}
+                <FontAwesomeIcon icon={clock} className={"blog-card-clock-icon"} />{t("blog.postedBy")} {state.blogData.author} {t("blog.postedOn")} {checkItemApi(state.blogData)}
               </div>
               <div>
-                {state.blogData.description}
+                <ReactMarkdown
+                  remarkPlugins={[remarkGfm]}
+                >
+                  {state.blogData.description}
+                </ReactMarkdown>
               </div>
             </Box>
           </Box>
@@ -194,8 +213,8 @@ const Blog = (props) => {
                           title={post.title}
                           subtitle={post.subtitle}
                           description={post.description}
-                          postedby={post.postedBy}
-                          posted={post.posted}
+                          postedby={post.author}
+                          posted={checkItemApi(post)}
                         />
                       </div>
                     )

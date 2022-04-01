@@ -17,6 +17,7 @@ import Community from "./screens/community/Community";
 import CommunityDetail from "./screens/community/CommunityDetail";
 import CareerDetail from "./screens/career/CareerDetail";
 import CaseStudiesDetail from "./screens/up/CaseStudiesDetail";
+import ErrorPage from "./screens/ErrorPage";
 
 export default [
   {
@@ -75,6 +76,10 @@ export default [
       {
         path: "/contacts",
         element: <Contacts />
+      },
+      {
+        path: "/error",
+        element: <ErrorPage />
       },
       { path: "*", element: <RedirectUrlNewSite><NoMatch /></RedirectUrlNewSite> }
     ]

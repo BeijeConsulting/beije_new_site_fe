@@ -115,8 +115,7 @@ const BurgerMenu = (props) => {
     <Box>
       <IconButton
         size="large"
-        // aria-label="burger-menu"
-        // aria-controls="menu-appbar"
+        aria-label="burger-menu"
         type="button"
         onClick={handleOpenNavMenu}
         color="inherit"

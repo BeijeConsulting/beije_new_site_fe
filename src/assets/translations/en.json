@@ -618,5 +618,10 @@
     "shortMessage": "Page Not Found",
     "longMessage": "Sorry, we couldn't find the page you were looking for. You can try to find the right page by clicking on the following link.",
     "linkToHome": "Go to home"
+  },
+  "errorGeneric": {
+    "shortMessage": "Error",
+    "longMessage": "Sorry, an error is occured during the page loading. Please try again later!",
+    "linkToHome": "Go to home"
   }
 }

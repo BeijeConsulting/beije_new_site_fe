@@ -603,5 +603,10 @@
     "shortMessage": "La pagina non è stata trovata",
     "longMessage": "Ci dispiace, non siamo riusciti a trovare la pagina che stavi cercando. Prova a cliccare sul link in basso per trovare la pagina giusta.",
     "linkToHome": "Vai alla home"
+  },
+  "errorGeneric": {
+    "shortMessage": "Errore",
+    "longMessage": "Ci dispiace, c'è stato un errore durante il caricamento della pagina. Ti preghiamo di riprovare più tardi!",
+    "linkToHome": "Vai alla home"
   }
 }

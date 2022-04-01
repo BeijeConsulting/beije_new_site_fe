@@ -382,7 +382,7 @@ const CustomForm = (props) => {
                 />
                 <label
                   htmlFor="uploadCV"
-                  className="button-form-primary"
+                  className="button-form-primary cursor-pointer"
                 >{t("btn.attachCv")}</label>
                 <span id="file-chosen">{state.fileName}</span>
               </Grid>
