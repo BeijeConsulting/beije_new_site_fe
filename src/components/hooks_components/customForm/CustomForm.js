@@ -38,7 +38,8 @@ const CustomForm = (props) => {
     base64Value: null,
     btnLoading: false,
     toastShow: false,
-    modalIsOpen: false
+    modalIsOpen: false,
+    toastState: null
   });
 
   const reCaptchaChange = (value) => {
@@ -81,6 +82,7 @@ const CustomForm = (props) => {
       email: '',
       number: '',
       town: '',
+      fileName: t("form.messageCv"),
       message: '',
       agreement: false
     },
@@ -119,15 +121,21 @@ const CustomForm = (props) => {
     console.log("responseForm", responseForm)
 
     let toastShow = false;
+    let toastState = null
 
     if (responseForm.success) {
       toastShow = true
+      toastState = "success"
+    }
+    else {
+      toastState = "error"
     }
 
     setState({
       ...state,
       btnLoading: false,
-      toastShow: true
+      toastShow: true,
+      toastState: toastState
     })
   }
 
@@ -212,12 +220,16 @@ const CustomForm = (props) => {
             open={state.toastShow}
             autoHideDuration={6000}
           >
-            <Alert onClose={handleCloseToast} severity="success" sx={{ width: '100%' }}>
-              <span>{t("form.toastMessage.txt1")}<br />{t("form.toastMessage.txt2")}</span>
+            <Alert onClose={handleCloseToast} severity={state.toastState} sx={{ width: '100%' }}>
+              <span>
+                {state.toastState === "success" ? t("form.toastMessage.success.txt1") : t("form.toastMessage.error.txt1")}
+                <br />
+                {state.toastState === "success" ? t("form.toastMessage.success.txt2") : t("form.toastMessage.error.txt2")}
+              </span>
             </Alert>
           </Snackbar>
           <form
-            // titlePage={props.titlePage}
+          // titlePage={props.titlePage}
           >
 
             {/* Nome */}
@@ -356,30 +368,27 @@ const CustomForm = (props) => {
                 />
               </Grid>
             }
-            <Grid
-              item
-              xs={12}
-              className="form-upload-cv"
-            >
-              {props.cvForm &&
-                <>
-                  <input
-                    ref={uploadedFile}
-                    type="file"
-                    id="uploadCV"
-                    name="uploadCV"
-                    hidden
-                    onChange={uploadFile}
-                    accept="application/pdf"
-                  />
-                  <label
-                    htmlFor="uploadCV"
-                    className="button-form-primary"
-                  >{t("btn.attachCv")}</label>
-                  <span id="file-chosen">{state.fileName}</span>
-                </>
-              }
-            </Grid>
+            {props.cvForm &&
+              <Grid
+                item
+                xs={12}
+                className="form-upload-cv"
+              >
+                <input
+                  ref={uploadedFile}
+                  type="file"
+                  id="uploadCV"
+                  name="uploadCV"
+                  hidden
+                  onChange={uploadFile}
+                />
+                <label
+                  htmlFor="uploadCV"
+                  className="button-form-primary"
+                >{t("btn.attachCv")}</label>
+                <span id="file-chosen">{state.fileName}</span>
+              </Grid>
+            }
 
             <Grid
               item

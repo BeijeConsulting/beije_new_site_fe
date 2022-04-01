@@ -51,52 +51,60 @@ const Community = (props) => {
   }
 
   return (
-    <Box
-      className={"bg-dark-grey margin-top-container-screens"}
-    >
-      <Container
-        component={"section"}
-        maxWidth={"false"}
-        className={"paddingX-container-general-pages blog-first-section-container d-flex justify-center"}
-      >
-        <Box className={"max-width-1200"}>
-          <h1>{t("community.title")}</h1>
-          <p>{t("community.description")}</p>
-        </Box>
-      </Container>
+    <>
+      <Helmet>
+        <title>{t('helmet.meta_title.community')}</title>
+        <meta name="description" content={t('helmet.meta_description.community')} />
+        <meta name="keywords" content={t('helmet.keywords.community')} />
+      </Helmet>
 
-      <Divider
-        className={"divider"}
-      />
-
-      <Container
-        component={"section"}
-        maxWidth={"false"}
-        className={"paddingX-container-general-pages d-flex justify-center"}
+      <Box
+        className={"bg-dark-grey margin-top-container-screens"}
       >
-        <Box className={"width-100 max-width-1200 blog-second-section-container"}>
-        {
-          !state.communityDataResponse &&
-          <Skeleton />
-        }
-        {state.communityDataResponse &&
-          state.communityDataResponse.map((event, index) => {
-            return (
-              <div key={index} className={"blog-second-section-card-container"}>
-                <BlogCard
-                  permalink={event.id}
-                  src={event.image}
-                  title={event.title}
-                  description={event.description}
-                  community
-                />
-              </div>
-            )
-          })
-        }
-        </Box>        
-      </Container>
-    </Box>
+        <Container
+          component={"section"}
+          maxWidth={"false"}
+          className={"paddingX-container-general-pages blog-first-section-container d-flex justify-center"}
+        >
+          <Box className={"max-width-1200"}>
+            <h1>{t("community.title")}</h1>
+            <p>{t("community.description")}</p>
+          </Box>
+        </Container>
+
+        <Divider
+          className={"divider"}
+        />
+
+        <Container
+          component={"section"}
+          maxWidth={"false"}
+          className={"paddingX-container-general-pages d-flex justify-center"}
+        >
+          <Box className={"width-100 max-width-1200 blog-second-section-container"}>
+            {
+              !state.communityDataResponse &&
+              <Skeleton />
+            }
+            {state.communityDataResponse &&
+              state.communityDataResponse.map((event, index) => {
+                return (
+                  <div key={index} className={"blog-second-section-card-container"}>
+                    <BlogCard
+                      permalink={event.id}
+                      src={event.image}
+                      title={event.title}
+                      description={event.description}
+                      community
+                    />
+                  </div>
+                )
+              })
+            }
+          </Box>
+        </Container>
+      </Box>
+    </>
   )
 }
 

@@ -22,9 +22,6 @@ import "./Career.css";
 import CustomForm from "../../components/hooks_components/customForm/CustomForm";
 import GoBackBtn from "../../components/functional_components/goBackBtn/GoBackBtn";
 
-// Remove
-import careerTrialObj from "./careerTrialObj.json";
-
 const CareerDeatil = (props) => {
   const { t } = useTranslation();
 
@@ -50,23 +47,12 @@ const CareerDeatil = (props) => {
   // Add async and await. Here add call to API
   const getCareerData = async () => {
 
-    // let careerResponse = await ApiCalls.career_getListDetail(id, props.languageDuck.currentLanguage);
-    // console.log("careerResponse: ", careerResponse);
-
-    let careerResponse = careerTrialObj;
-
-    let item;
-    careerResponse.map((el) => {
-      if (el.permalink == id) {
-        item = el
-      }
-    })
-    console.log("item: ", item);
+    let careerResponse = await ApiCalls.career_getListDetail(id, props.languageDuck.currentLanguage);
+    console.log("careerResponse: ", careerResponse);
 
     setState({
       ...state,
-      // careerResponse: careerResponse
-      careerResponse: item
+      careerResponse: careerResponse
     })
 
   }
@@ -85,7 +71,7 @@ const CareerDeatil = (props) => {
         {
           state.careerResponse &&
           <>
-            <h1>{props.languageDuck.currentLanguage === "it" ? state.careerResponse.title_it : state.careerResponse.title_en}</h1>
+            <h1>{state.careerResponse.title}</h1>
 
 
             <Box
@@ -95,7 +81,7 @@ const CareerDeatil = (props) => {
               <ReactMarkdown
                 remarkPlugins={[remarkGfm]}
               >
-                {props.languageDuck.currentLanguage === "it" ? state.careerResponse.description_it : state.careerResponse.description_en}
+                {state.careerResponse.description}
 
               </ReactMarkdown>
 
@@ -113,7 +99,7 @@ const CareerDeatil = (props) => {
           className={"academy-sixth-section-box-form"}
         >
           <CustomForm
-            titlePage={state.careerResponse ? state.careerResponse.title_it : ""}
+            titlePage={state.careerResponse ? state.careerResponse.title : "Offerta di lavoro"}
             cvForm
             formTitle={t("form.title.apply")}
           />

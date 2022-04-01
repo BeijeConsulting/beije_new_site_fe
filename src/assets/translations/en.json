@@ -14,24 +14,37 @@
       "home": "Beije – People First",
       "consulting": "Consulting – Beije People First",
       "academy": "Academy – Beije People First",
-      "academy_backend": "Master frontend– Beije People First",
-      "academy_frontend": "Master backend – Beije People First",
+      "academy_backend": "Academy backend – Beije People First",
+      "academy_frontend": "Academy frontend– Beije People First",
       "up": "Up – Beije People First",
-      "whoweare": "About us – Beije People First"
+      "career": "Career – Beije People First",
+      "blog": "Blog – Beije People First",
+      "community": "Community – Beije People First",
+      "contacts": "Contacts – Beije People First"
     },
     "meta_description": {
-      "home": "",
-      "consulting": "",
-      "academy": "",
-      "up": "",
-      "whoweare": ""
+      "home": "Beije People First leading company in the IT sector specializes in consulting, frontend & backend training and development of mobile & web apps.",
+      "consulting": "Our Beije consultants provide professional IT consultancy for software development able to offer the best solutions to adapt to the client's needs.",
+      "academy": "An intensive training experience that aims to develop the skills necessary to become a Software Developer through lessons and real projects.",
+      "academy_backend": "Paid Academy of three months to become Java Developer.",
+      "academy_frontend": "Paid Academy of three months to become Web Developer.",
+      "up": "Management and development of software with the Agile method through the use of the most innovative technologies on the market.",
+      "career": "Become a Software Developer with Beije",
+      "blog": "All the news and updates on the IT industry, frontend & backend",
+      "community": "All the events of our community Beije",
+      "contacts": "Contacts Beije People First"
     },
     "keywords": {
-      "home": "",
-      "consulting": "",
-      "academy": "",
-      "up": "",
-      "whoweare": ""
+      "home": "IT, consulting, training, frontend, backend, beije contacts, software developer, IT developer, web developer, java developer, academy, react, react native, java, database, developer, beije story, beije values, beije mission, beije vision, beije future, valuable team, people first, company beije",
+      "consulting": "IT consulting, people first, values, innovative projects, consulting, react consulting, java consulting, react native consulting, frontend development, backend development, frontend consulting, backend consulting, difference frontend and backend, consulting Milano",
+      "academy": "IT consulting, people first, values, innovative projects, consulting, react consulting, java consulting, react native consulting, frontend development, backend development, frontend consulting, backend consulting, difference frontend and backend, consulting Milano",
+      "academy_backend": "java, fondamenti java, string builder, cvs, xml, database, linguaggio java, java per web, spring, javascript, DOM, come diventare java developer",
+      "academy_frontend": "react, react native, frontend, academy frontend, how to become a frontend developer,  academy course, web course, how to create web page, how to create a web app, android, iOS, how to become a frontend expert , javascript, android developer, iOS developer",
+      "up": "agile, project, implementation, delivery, integration, application maintenance, software, frontend, backend, software company, IT,  IT company, company Milano, consulting Milano, company Lissone, IT company lissone, IT company Milano",
+      "career": "job offers beije, stage frontend, stage backend, stage, stage milano IT, stage frontend milano, stage backend milano, academy frontend, academybackend, how to work in beije, beije career, work, academy, frontend salary, software developer salary, backend salary",
+      "blog": "",
+      "community": "community, community beije, beije community, beije events, team beije, team, beije story",
+      "contacts": "beije contacts, beije headquarter, where is beije, beije telephone, email beije"
     }
   },
   "btn": {
@@ -40,7 +53,7 @@
     "downloadPwd": "Download the presentation",
     "learnMore": "Learn more",
     "close": "Close",
-    "attachCv": "Attach Your CV",
+    "attachCv": "Attach Your CV*",
     "accept": "Accept"
   },
   "contactInfo": {
@@ -67,22 +80,28 @@
       "agreement": "Terms and Conditions must be accepted"
     },
     "placeholder": {
-      "name": "Name",
-      "surname": "Surname",
-      "email": "Email",
+      "name": "Name*",
+      "surname": "Surname*",
+      "email": "Email*",
       "town": "Town",
       "number": "Telephone number",
       "message": "Write here your message",
       "agreement": {
         "part1": "I have read and accept the ",
-        "part2": "Treatment of my personal data"
+        "part2": "Treatment of my personal data*"
       }
     },
     "toastMessage": {
-      "txt1": "Data has been sent correctly.",
-      "txt2": "Thanks for writing!"
+      "success": {
+        "txt1": "Data has been sent correctly.",
+        "txt2": "Thanks for writing!"
+      },
+      "error": {
+        "txt1": "Oops something went wrong. ",
+        "txt2": "Try again later!"
+      }
     },
-    "messageCv": "No file selected. Only pdf allowed."
+    "messageCv": "No file selected"
   },
   "altImages": {
     "privacyPolicies": "Beije Privacy Policy",

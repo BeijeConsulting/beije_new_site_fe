@@ -114,7 +114,7 @@ const CustomTable = (props) => {
             align={"right"}
           >
             <Link
-              to={sendToPage(item.type, item.permalink)}
+              to={sendToPage(item.type, item.id)}
             >
               {
                 state.isMobile &&
@@ -153,7 +153,9 @@ const CustomTable = (props) => {
     else {
       response = `/career/career-detail?jobOffer=${param2}`
     }
-
+    console.log("response custom table: ", response)
+    console.log("param1 ", param1)
+    console.log("param2 ", param2)
     return response
   }
 

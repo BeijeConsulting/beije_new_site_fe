@@ -14,37 +14,35 @@
       "home": "Beije – People First",
       "consulting": "Consulting – Beije People First",
       "academy": "Academy – Beije People First",
-      "academy_backend": "Master backend – Beije People First",
-      "academy_frontend": "Master frontend– Beije People First",
+      "academy_backend": "Academy backend – Beije People First",
+      "academy_frontend": "Academy frontend– Beije People First",
       "up": "Up – Beije People First",
       "whoweare": "Chi siamo – Beije People First",
-      "career": "",
-      "blog": "",
-      "community": "",
-      "contacts": "contatti beije"
+      "career": "Lavora con noi – Beije People First",
+      "blog": "Blog – Beije People First",
+      "community": "Community – Beije People First",
+      "contacts": "Contatti – Beije People First"
     },
     "meta_description": {
       "home": "Beije People First azienda leader nel settore IT è specializzata nella consulenza, formazione frontend & backend e nello sviluppo di mobile & web app mettendo al centro le esigenze del cliente.",
-      "consulting": "I nostri consulenti Beije forniscono consulenza informatica professionale per lo sviluppo di software in grado di offrire le migliori soluzioni che si adattino alle esigenze del cliente. ",
-      "academy": "Un’esperienza di formazione intensiva che ha l’obiettivo di sviluppare le competenze necessarie per diventare Software Developer attraverso lezioni frontali e progetti reali. ",
-      "academy_backend": "Master retribuito di tre mesi per diventare Java Developer.",
-      "academy_frontend": "Master retribuito di tre mesi per diventare Web Developer.",
-      "up": "Realizzazione e manutenzione di software in perfetto stile Agile attraverso l’utilizzo delle tecnologie più innovative presenti sul mercato. ",
-      "whoweare": "Chi siamo? Azienda leader nel settore IT, siamo specializzata nella consulenza, sviluppo di mobile & web app mettendo al centro le esigenze del cliente e formazione frontend & backend.",
-      "career": "",
-      "blog": "",
-      "community": "",
-      "contacts": "contatti beije"
+      "consulting": "I nostri consulenti Beije forniscono consulenza informatica professionale per lo sviluppo di software in grado di offrire le migliori soluzioni che si adattino alle esigenze del cliente.",
+      "academy": "Un’esperienza di formazione intensiva che ha l’obiettivo di sviluppare le competenze necessarie per diventare Software Developer attraverso lezioni frontali e progetti reali.",
+      "academy_backend": "Academy retribuita di tre mesi per diventare Java Developer.",
+      "academy_frontend": "Academy retribuita di tre mesi per diventare Web Developer.",
+      "up": "Realizzazione e manutenzione di software in perfetto stile Agile attraverso l’utilizzo delle tecnologie più innovative presenti sul mercato.",
+      "career": "Diventa Software Developer con Beije",
+      "blog": "Tutte le notizie e gli aggiornamenti sul settore IT, frontend & backend",
+      "community": "Tutti gli gli eventi della nostra community Beije",
+      "contacts": "Contatti Beije People First"
     },
     "keywords": {
-      "home": "IT, consulenza, formazione, frontend, backend, contatti beije, software developer, programmatore software, web developer, java developer, master, react, react native, java, database programmatore",
+      "home": "IT, consulenza, formazione, frontend, backend, contatti beije, software developer, programmatore software, web developer, java developer, academy,talent academy, react, react native, java, database programmatore, beije storia, beije valori, beije mission, beije vision, beije futuro, team di valore, people first, beije azienda",
       "consulting": "consulenza informatica, people first, valore, progetti innovativi, consulenza, consulenza react, consulenza java, consulenza react native, sviluppo frontend, sviluppo backend, consulenza frontend, consulenza backend, differenza frontend e backend, consulting Milano",
-      "academy": "master, master frontend, master backend, academy frontend, academy backend, software developer, webinar, java developer, frontend developer, web developer, backend developer, tecnologie, stage retribuito, stage, corso backend, corso frontend, corso, diventare programmatore, diventare sviluppatore, esperto react, esperto react native, esperto java, esperto backend, esperto frontend",
+      "academy": "academy, academy frontend, academy backend, software developer, webinar, java developer, frontend developer, web developer, backend developer, tecnologie, stage retribuito, stage, corso backend, corso frontend, corso, diventare programmatore, diventare sviluppatore, esperto react, esperto react native, esperto java, esperto backend, esperto frontend",
       "academy_backend": "java, fondamenti java, string builder, cvs, xml, database, linguaggio java, java per web, spring, javascript, DOM, come diventare java developer",
-      "academy_frontend": "react, react native, frontend, academy frontend, come diventare frontend developer, master frontend, master, corso, corso web, come creare una pagina web, come creare una applicazione mobile, android, iOS, come diventare esperto frontend, javascript, programmatore android, programmatore iOS",
+      "academy_frontend": "react, react native, frontend, academy frontend, come diventare frontend developer, academy frontend, academy, corso, corso web, come creare una pagina web, come creare una applicazione mobile, android, iOS, come diventare esperto frontend, javascript, programmatore android, programmatore iOS",
       "up": "agile, progettazione, implementazione, delivery, integration, application maintenance, software, frontend, backend, azienda software, IT, azienda IT, azienda Milano, consulting Milano, azienda Lissone, azienda informatica Milano",
-      "whoweare": "beije storia, beije valori, beije mission, beije vision, beije futuro, team di valore, people first, beije azienda",
-      "career": "offerte lavoro beije, stage frontend, stage backend, stage, stage milano IT, stage frontend milano, stage backend milano, master frontend, master backend, come entrare in beije, carriera beije, lavoro, academy, stipendio frontend, stipendio sviluppatore, stipendio backend",
+      "career": "offerte lavoro beije, stage frontend, stage backend, stage, stage milano IT, stage frontend milano, stage backend milano, academy frontend, academy backend, come entrare in beije, carriera beije, lavoro, academy, stipendio frontend, stipendio sviluppatore, stipendio backend",
       "blog": "",
       "community": "community, community beije, beije community, eventi beije, team beije, team, storia beije",
       "contacts": "contatti beije, sede beije, dove si trova beije, numero telefono beije, email beije"
@@ -56,7 +54,7 @@
     "downloadPwd": "Scarica la presentazione",
     "learnMore": "Scropri di più",
     "close": "Chiudi",
-    "attachCv": "Allega il tuo cv. Solo pdf ammessi.",
+    "attachCv": "Allega il tuo cv*",
     "accept": "Acconsenti"
   },
   "contactInfo": {
@@ -82,21 +80,28 @@
       "agreement": "I Termini e le Condizioni devono essere accettate"
     },
     "placeholder": {
-      "name": "Nome",
-      "surname": "Cognome",
-      "email": "Email",
+      "name": "Nome*",
+      "surname": "Cognome*",
+      "email": "Email*",
       "town": "Città",
       "number": "Numero di telefono",
       "message": "Scrivi qui il tuo messaggio",
       "agreement": {
         "part1": "Ho letto e accetto il ",
-        "part2": "Trattamento dei miei dati personali"
+        "part2": "Trattamento dei miei dati personali*"
       }
     },
     "toastMessage": {
-      "txt1": "I dati sono stati inviati correttamente.",
-      "txt2": "Grazie di averci scritto!"
-    }
+      "success": {
+        "txt1": "I dati sono stati inviati correttamente.",
+        "txt2": "Grazie di averci scritto!"
+      },
+      "error": {
+        "txt1": "Oops qualcosa è andato storto. ",
+        "txt2": "Prova più tardi!"
+      }
+    },
+    "messageCv": "Nessun file selezionato"
   },
   "altImages": {
     "privacyPolicies": "Beije Privacy Policy",

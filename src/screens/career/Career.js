@@ -22,10 +22,6 @@ import { career_empty_academy, career_empty_job } from "../../utils/properties";
 import CustomTable from "../../components/functional_components/customTable/CustomTable";
 import CustomButton from "../../components/functional_components/ui/customButton/CustomButton";
 
-
-// Remove
-import careerTrialObj from "./careerTrialObj.json"
-
 const Career = (props) => {
 
   const { t } = useTranslation();
@@ -51,11 +47,9 @@ const Career = (props) => {
   }, [])
 
   const getCareerData = async () => {
-    // let careerDataResponse = await ApiCalls.career_getList();
-    let careerDataResponse = careerTrialObj;
+    let careerDataResponse = await ApiCalls.career_getList();
     console.log("careerDataResponse in career general: ", careerDataResponse);
 
-    // careerDataResponse.map(findIf(academyElements, jobElements))
     let academyElements = careerDataResponse.find((item) => {
       return item.academy === true
     })
@@ -87,98 +81,104 @@ const Career = (props) => {
   }
 
   return (
-    <Box
-      className={"bg-dark-grey margin-top-container-screens"}
-    >
+    <>
+      <Helmet>
+        <title>{t('helmet.meta_title.career')}</title>
+        <meta name="description" content={t('helmet.meta_description.career')} />
+        <meta name="keywords" content={t('helmet.keywords.career')} />
+      </Helmet>
 
-      <Container
-        component={"section"}
-        maxWidth={"false"}
-        className={"career-first-section paddingX-container-general-pages d-flex justify-center"}
+      <Box
+        className={"bg-dark-grey margin-top-container-screens"}
       >
-        <Box
-          className="max-width-1200 width-100"
+
+        <Container
+          component={"section"}
+          maxWidth={"false"}
+          className={"career-first-section paddingX-container-general-pages d-flex justify-center"}
         >
-          <h1>Career</h1>
-          <p
-            className="career-first-section-description"
-          >
-            {t("career.description")}
-          </p>
           <Box
-            className="career-first-section-button-container"
+            className="max-width-1200 width-100"
           >
-            <CustomButton
-              type={"filter-btn"}
-              content={"Academy"}
-              classNameFilterBtn={state.buttonSelected === "academy" ? "career-selected-academy" : ""}
-              callback={showAcademy}
-            />
-            <CustomButton
-              type={"filter-btn"}
-              content={"Job Opportunities"}
-              classNameFilterBtn={state.buttonSelected === "job" ? "career-selected-job" : ""}
-              callback={showJobOpportunities}
-            />
+            <h1>Career</h1>
+            <p
+              className="career-first-section-description"
+            >
+              {t("career.description")}
+            </p>
+            <Box
+              className="career-first-section-button-container"
+            >
+              <CustomButton
+                type={"filter-btn"}
+                content={"Academy"}
+                classNameFilterBtn={state.buttonSelected === "academy" ? "career-selected-academy" : ""}
+                callback={showAcademy}
+              />
+              <CustomButton
+                type={"filter-btn"}
+                content={"Job Opportunities"}
+                classNameFilterBtn={state.buttonSelected === "job" ? "career-selected-job" : ""}
+                callback={showJobOpportunities}
+              />
+            </Box>
           </Box>
-        </Box>
 
-      </Container>
-      <Divider
-        className={"divider"}
-      />
-      <Container
-        component={"section"}
-        maxWidth={"false"}
-        className={"career-second-section paddingX-container-general-pages d-flex justify-center"}
-      >
-        <Box
-          className="max-width-1200 width-100"
+        </Container>
+        <Divider
+          className={"divider"}
+        />
+        <Container
+          component={"section"}
+          maxWidth={"false"}
+          className={"career-second-section paddingX-container-general-pages d-flex justify-center"}
         >
-          <h3>{t("career.title")}</h3>
-          {
-            !state.careerDataResponse &&
-            <Skeleton />
-          }
-          {
-            state.careerDataResponse &&
-            <CustomTable
-              isAcademy={state.buttonSelected === "academy"}
-              // obj={state.buttonSelected === "academy" ? academyObj : jobObj}
-              // obj={careerTrialObj}
-              obj={state.careerDataResponse}
-              classNameLink={state.buttonSelected === "academy" ? "career-table-academy-link" : "career-table-job-link"}
-            />
-          }
-          {
-            state.careerDataResponse && !state.academyElements && state.buttonSelected === "academy" &&
-            <div
-              className="career-empty-message-container"
-            >
-              <img
-                alt="icon for empty academy positions"
-                src={career_empty_academy}
+          <Box
+            className="max-width-1200 width-100"
+          >
+            <h3>{t("career.title")}</h3>
+            {
+              !state.careerDataResponse &&
+              <Skeleton />
+            }
+            {
+              state.careerDataResponse &&
+              <CustomTable
+                isAcademy={state.buttonSelected === "academy"}
+                obj={state.careerDataResponse}
+                classNameLink={state.buttonSelected === "academy" ? "career-table-academy-link" : "career-table-job-link"}
               />
-              <p>{t("career.messageAcademy")}</p>
-            </div>
+            }
+            {
+              state.careerDataResponse && !state.academyElements && state.buttonSelected === "academy" &&
+              <div
+                className="career-empty-message-container"
+              >
+                <img
+                  alt="icon for empty academy positions"
+                  src={career_empty_academy}
+                />
+                <p>{t("career.messageAcademy")}</p>
+              </div>
 
-          }
-          {
-            state.careerDataResponse && !state.jobElements && state.buttonSelected === "job" &&
-            <div
-              className="career-empty-message-container"
-            >
-              <img
-                alt="icon for empty academy positions"
-                src={career_empty_job}
-              />
-              <p>{t("career.messageJob")}</p>
-            </div>
-          }
-        </Box>
+            }
+            {
+              state.careerDataResponse && !state.jobElements && state.buttonSelected === "job" &&
+              <div
+                className="career-empty-message-container"
+              >
+                <img
+                  alt="icon for empty academy positions"
+                  src={career_empty_job}
+                />
+                <p>{t("career.messageJob")}</p>
+              </div>
+            }
+          </Box>
 
-      </Container>
-    </Box >
+        </Container>
+      </Box >
+    </>
   )
 }
 
