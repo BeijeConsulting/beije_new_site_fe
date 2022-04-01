@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { isEmpty } from "lodash";
+import { Helmet } from "react-helmet";
 
 // Style
 import './Blog.css';
