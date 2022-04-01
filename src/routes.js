@@ -18,8 +18,6 @@ import CommunityDetail from "./screens/community/CommunityDetail";
 import CareerDetail from "./screens/career/CareerDetail";
 import CaseStudiesDetail from "./screens/up/CaseStudiesDetail";
 
-import { useParams } from "react-router-dom";
-
 export default [
   {
     path: "/",
@@ -47,24 +45,24 @@ export default [
         element: <AcademyFrontend />
       },
       {
+        path: "/beije-talent-academy/academy-backend",
+        element: <AcademyBackend />
+      },
+      {
         path: "/blog",
         element: <Blog />
+      },
+      {
+        path: `/blog/:permalink`,
+        element: <BlogDetail />
       },
       {
         path: "/community",
         element: <Community />
       },
       {
-        path: `/blogDetail`,
-        element: <RequireBlogPermalink><BlogDetail /></RequireBlogPermalink>
-      },
-      {
-        path: `/communityDetail`,
-        element: <RequireCommunityPermalink><CommunityDetail /></RequireCommunityPermalink>
-      },
-      {
-        path: "/beije-talent-academy/academy-backend",
-        element: <AcademyBackend />
+        path: `/community/:permalink`,
+        element: <CommunityDetail />
       },
       {
         path: "/career",
@@ -83,23 +81,23 @@ export default [
   }
 ];
 
-function RequireBlogPermalink({ children }) {
-  let permalink = new URLSearchParams(location.search).get("article");
-  if (!permalink) {
-    return <Navigate to={`/blog`} />
-  }
+// function RequireBlogPermalink({ children }) {
+//   let permalink = new URLSearchParams(location.search).get("article");
+//   if (!permalink) {
+//     return <Navigate to={`/blog`} />
+//   }
 
-  return children;
-}
+//   return children;
+// }
 
-function RequireCommunityPermalink({ children }) {
-  let permalink = new URLSearchParams(location.search).get("event");
-  if (!permalink) {
-    return <Navigate to={`/community`} />
-  }
+// function RequireCommunityPermalink({ children }) {
+//   let permalink = new URLSearchParams(location.search).get("event");
+//   if (!permalink) {
+//     return <Navigate to={`/community`} />
+//   }
 
-  return children;
-}
+//   return children;
+// }
 
 function RequireCareerPermalink({ children }) {
   let permalink = new URLSearchParams(location.search).get("jobOffer");

@@ -52,8 +52,6 @@ const CaseStudiesDetail = (props) => {
     if (!caseStudiesResponse) {
       navigate(`/beije-up`);
     }
-    console.log("Detail - caseStudiesResponse", caseStudiesResponse)
-
     // let caseStudiesResponse = caseStudiesTrialObj;
 
     setState({

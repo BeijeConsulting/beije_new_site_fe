@@ -43,7 +43,6 @@ const Community = (props) => {
   const getDataCommunities = async () => {
     let communityDataResponse = communityArrayTest;
     // let communityDataResponse = await ApiCalls.community_getList(props.languageDuck.currentLanguage);
-    // console.log("communityDataResponse: ", communityDataResponse);
 
     setState({
       ...state,

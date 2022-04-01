@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useLocation, useParams, useNavigate } from "react-router-dom";
 
 // Style
 import './Blog.css';
@@ -15,7 +16,6 @@ import GoBackBtn from "../../components/functional_components/goBackBtn/GoBackBt
 import { setCurrentPage, initCurrentPage } from "../../redux/ducks/currentPageDuck";
 import { setVisibilityNavbar, initVisibilityNavbar } from "../../redux/ducks/showNavbarTopDuck";
 import { connect } from "react-redux";
-import { useLocation } from "react-router-dom";
 
 // Constants
 import { clock } from "../../utils/properties";
@@ -31,9 +31,11 @@ const Blog = (props) => {
 
   const { t } = useTranslation();
   const location = useLocation();
+  const navigate = useNavigate();
   const ref = useRef(null);
 
-  const permalink = new URLSearchParams(location.search).get("article");
+  // const permalink = new URLSearchParams(location.search).get("article");
+  const permalink = useParams();
 
   const [state, setState] = useState({
     blogData: null,
@@ -55,19 +57,15 @@ const Blog = (props) => {
 
   const getData = async () => {
     let blogDataAPI = await ApiCalls.blog_getListDetail(permalink);
-    console.log("Detail - blogDataAPI", blogDataAPI)
+    if (!blogDataAPI) {
+      navigate(`/blog`);
+    }
 
     let blogDataResponseAPI = await ApiCalls.blog_getList(props.languageDuck.currentLanguage);
-    console.log("Detail - blogDataResponseAPI", blogDataResponseAPI)
     let latestArticles = removeThisBlogFromList(blogDataResponseAPI);
-
-    // let blogData;
-    // blogData = blogArrayTest[0];
-    // let latestArticles = removeThisBlogFromList(blogArrayTest);
 
     setState({
       ...state,
-      // blogData: blogData,
       blogData: blogDataResponseAPI,
       latestArticles: latestArticles.slice(0, 4)
     })

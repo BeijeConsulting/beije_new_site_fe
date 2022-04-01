@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import Gallery from "react-grid-gallery";
+import { useParams, useNavigate } from "react-router-dom";
 
 // Style
 import './Community.css';
@@ -70,7 +71,8 @@ const CommunityDetail = (props) => {
     communityDetailDataResponse: null
   })
 
-  const permalink = new URLSearchParams(location.search).get("event");
+  // const permalink = new URLSearchParams(location.search).get("event");
+  const permalink = useParams();
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
@@ -87,7 +89,9 @@ const CommunityDetail = (props) => {
 
   const getCommunityData = async () => {
     // let communityDetailDataResponse = await ApiCalls.community_getListDetail(permalink)
-    // console.log("communityDetailDataResponse: ", communityDetailDataResponse);
+    // if (!communityDetailDataResponse) {
+    //   navigate(`/blog`);
+    // }
 
     let communityDetailDataResponse = communityArrayTest;
 

@@ -116,9 +116,7 @@ const CustomForm = (props) => {
       phone: values.number,
       privacy_check: values.agreement
     }
-    console.log("send form data: ", formData)
     let responseForm = await ApiCalls.form_sendForm(formData);
-    console.log("responseForm", responseForm)
 
     let toastShow = false;
     let toastState = null

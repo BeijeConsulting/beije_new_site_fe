@@ -25,7 +25,6 @@ const CustomCarousel = (props) => {
   const { t } = useTranslation();
   const slideRef = useRef();
   const navigate = useNavigate();
-  console.log("slideRef", slideRef)
 
   const [state, setState] = useState({
     windowWidth: window.innerWidth,
@@ -41,7 +40,6 @@ const CustomCarousel = (props) => {
   }, [])
 
   const updateDimension = () => {
-    console.log("Entro in updateDimension");
     let windowWidth = window.innerWidth;
     let windowHeight = window.innerHeight;
 

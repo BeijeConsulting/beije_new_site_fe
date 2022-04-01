@@ -49,7 +49,6 @@ const Career = (props) => {
 
   const getCareerData = async () => {
     let careerDataResponse = await ApiCalls.career_getList();
-    console.log("careerDataResponse in career general: ", careerDataResponse);
 
     let academyElements = careerDataResponse.find((item) => {
       return item.academy === true

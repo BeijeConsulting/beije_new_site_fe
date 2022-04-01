@@ -48,8 +48,6 @@ const AcademyFrontend = (props) => {
 
   const scrollToForm = () => {
     let formTop = formContainer.current.offsetTop;
-    console.log("formContainer", formContainer);
-    console.log("formTop", formTop);
 
     window.scrollTo({
       top: formTop + 800,

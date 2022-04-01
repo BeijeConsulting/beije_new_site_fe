@@ -52,7 +52,7 @@ const Up = (props) => {
 
   const getCaseStudiesData = async () => {
     let caseStudiesResponse = await ApiCalls.caseStudies_getList(props.languageDuck.currentLanguage);
-    console.log("caseStudiesResponse", caseStudiesResponse);
+
     // let caseStudiesResponse = caseStudiesTrialObj;
     setState({
       ...state,

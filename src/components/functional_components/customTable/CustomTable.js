@@ -153,9 +153,6 @@ const CustomTable = (props) => {
     else {
       response = `/career/career-detail?jobOffer=${param2}`
     }
-    console.log("response custom table: ", response)
-    console.log("param1 ", param1)
-    console.log("param2 ", param2)
     return response
   }
 

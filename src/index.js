@@ -27,7 +27,6 @@ import CustomModal from './components/hooks_components/customModal/CustomModal';
 //       pathname.includes(l)
 //     )
 //   ) {
-//     console.log(i18n.resolvedLanguage)
 //     window.location.href = "/" + i18n.resolvedLanguage + pathname + (search ? search : "");
 //   }
 //   return null;

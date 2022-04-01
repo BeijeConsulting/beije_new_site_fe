@@ -48,7 +48,6 @@ const CareerDeatil = (props) => {
   const getCareerData = async () => {
 
     let careerResponse = await ApiCalls.career_getListDetail(id, props.languageDuck.currentLanguage);
-    console.log("careerResponse: ", careerResponse);
 
     setState({
       ...state,

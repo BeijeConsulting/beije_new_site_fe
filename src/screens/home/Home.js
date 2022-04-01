@@ -55,8 +55,6 @@ const Home = (props) => {
     // const fifthSection = element.querySelector('.home-fifth-section-container-gsap');
     // const fifthSectionFinalSpan = element.querySelector('.home-fifth-section-final-span-gsap')
 
-    console.log("element ref", element);
-
     gsap.timeline({
       scrollTrigger: {
         trigger: fourthSectionP,
