@@ -430,25 +430,25 @@
         "subsection1": "React, la libreria dedicata al frontend",
         "subsection2": "React vs JQuery vs AngularJS Vs Vue",
         "subsection3": "Gestione e organizzazione del Progetto",
-        "subsection4": "Hooks & Class",
-        "subsection5": "Components, State, Props and Lifecycle events",
-        "subsection6": "Routing and Navigation",
+        "subsection4": "Hooks e Classi",
+        "subsection5": "Componenti, Stati, Props e Lifecycle events",
+        "subsection6": "Routing e Navigation",
         "subsection7": "Virtual Dom",
         "subsection8": "Redux"
       },
       "section3": {
         "title": "React Native",
         "subsection1": "React Vs React Native",
-        "subsection2": "Style and Component",
+        "subsection2": "Stili e Componenti",
         "subsection3": "Expo",
-        "subsection4": "Routing and Navigation",
-        "subsection5": "Build & pubblicazione Store Ios/Android",
+        "subsection4": "Routing e Navigation",
+        "subsection5": "Build e pubblicazione Store Ios/Android",
         "subsection6": "Redux"
       },
       "section4": {
         "title": "Approfondimenti",
         "subsection1": "Npm module custom",
-        "subsection2": "Interactive application (Ar/Vr)",
+        "subsection2": "Applicazioni interattive (Ar/Vr)",
         "subsection3": "Games"
       }
     }

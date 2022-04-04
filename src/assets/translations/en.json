@@ -436,7 +436,7 @@
         "subsection1": "React: the library dedicated to frontend",
         "subsection2": "React vs JQuery vs AngularJS Vs Vue",
         "subsection3": "Project management and organization",
-        "subsection4": "Hooks & Class",
+        "subsection4": "Hooks and Class",
         "subsection5": "Components, State, Props and Lifecycle events",
         "subsection6": "Routing and Navigation",
         "subsection7": "Virtual Dom",
@@ -448,7 +448,7 @@
         "subsection2": "Style and Component",
         "subsection3": "Expo",
         "subsection4": "Routing and Navigation",
-        "subsection5": "Build & pubblicazione Store Ios/Android",
+        "subsection5": "Build and pubblication Store Ios/Android",
         "subsection6": "Redux"
       },
       "section4": {
