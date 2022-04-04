@@ -3,6 +3,10 @@
   min-height: 400px;
 }
 
+.simple-carousel-container button {
+  margin-top: 50px;
+}
+
 .simple-carousel-content-container {
   width: 90%;
   display: -webkit-box;
@@ -52,6 +56,18 @@
 
 .simple-carousel-container button svg {
   color: var(--dark-grey);
+}
+
+@media(min-width: 400px) {
+  .simple-carousel-container button {
+    margin-top: 20px;
+  }
+}
+
+@media(min-width: 600px) {
+  .simple-carousel-container button {
+    margin-top: 10px;
+  }
 }
 
 

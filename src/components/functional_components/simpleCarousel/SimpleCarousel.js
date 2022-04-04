@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 // MUI
 import Carousel from 'react-material-ui-carousel';
@@ -14,6 +15,7 @@ import "./SimpleCarousel.css";
 import { leftArrow, rightArrow, quotationMark } from "../../../utils/properties";
 
 const SimpleCarousel = (props) => {
+  const { t } = useTranslation();
 
   const [state, setState] = useState({
     isDesktop: window.innerWidth > 768,
@@ -52,7 +54,7 @@ const SimpleCarousel = (props) => {
         <p
           className="simple-carousel-content-txt"
         >
-          {item?.content}
+          {t(item?.content)}
         </p>
         <p
           className="simple-carousel-content-sign"

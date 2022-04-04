@@ -111,11 +111,12 @@ const CustomForm = (props) => {
       lang: "it",
       message: values.message,
       name: values.name,
-      origin: "test",
+      origin: location.href,
       mail_subject: props.titlePage,
       phone: values.number,
       privacy_check: values.agreement
     }
+    console.log("formData: ", formData);
     let responseForm = await ApiCalls.form_sendForm(formData);
 
     let toastShow = false;
@@ -226,15 +227,17 @@ const CustomForm = (props) => {
               </span>
             </Alert>
           </Snackbar>
-          <form
-          // titlePage={props.titlePage}
-          >
+          <form>
 
             {/* Nome */}
             <Grid
               item
               xs={12}
             >
+              <p
+                className="form-string-required-fields"
+              >
+                {t("form.infoFields")}</p>
               <TextField
                 id="name"
                 name="name"

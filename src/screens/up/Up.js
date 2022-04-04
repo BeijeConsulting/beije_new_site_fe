@@ -113,11 +113,11 @@ const Up = (props) => {
               <div
                 className={"first-section-list-container"}
               >
-                <p>PROGETTAZIONE</p>
-                <p>IMPLEMENTAZIONE</p>
-                <p>DELIVERY</p>
-                <p>INTEGRATION SOFTWARE</p>
-                <p>APPLICATION MAINTENACE</p>
+                <p>{t("up.intro2List.planning")}</p>
+                <p>{t("up.intro2List.implementation")}</p>
+                <p>{t("up.intro2List.delivery")}</p>
+                <p>{t("up.intro2List.integrationSoftware")}</p>
+                <p>{t("up.intro2List.applicationMaintenace")}</p>
               </div>
             </div>
           </IntroSectionImgTxt>
@@ -160,7 +160,7 @@ const Up = (props) => {
                     <span
                       className="up-second-section-text-span-desktop"
                     >
-                      <strong>{t("up.desc1.part16")}</strong>
+                      <strong>{t("up.desc1.part16")}</strong>{t("up.desc1.part17")}
                     </span>
                   </p>
                   <br />
@@ -169,7 +169,7 @@ const Up = (props) => {
                 <Box
                   className="up-second-section-text-mobile-container"
                 >
-                  Vi seguiamo in ogni fase
+                  {t("up.desc1.part16")}
                 </Box>
 
                 <Box

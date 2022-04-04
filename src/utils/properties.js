@@ -527,12 +527,12 @@ export const clientComments = [
   {
     name: "Francesco Pancaro,",
     surname: "Head of Financial Planning & Control",
-    content: "Il progetto è stato seguito da un team professionale, organizzato e disponibile. Ci hanno seguiti in ogni fase del progetto arrivando sempre puntuali e offrendoci soluzioni ottimali dando un risultato ben oltre le aspettative"
+    content: "up.commentsSection.commentsClient.francescoPancaro"
   },
   {
     name: "Matteo Milione,",
     surname: "Managing Partner",
-    content: "Quella con Beije e’ stata una collaborazione super efficiente grazia alla ottima sinergia con il nostro team interno e alla condivisione della stessa visione progettuale."
+    content: "up.commentsSection.commentsClient.matteoMilione"
   }
 ]
 

@@ -54,7 +54,7 @@ const Blog = (props) => {
       props.dispatch(initCurrentPage());
       props.dispatch(initVisibilityNavbar());
     };
-  }, [])
+  }, [location.href])
 
   const getData = async () => {
     let blogDataAPI = await ApiCalls.blog_getListDetail(permalink);
@@ -78,7 +78,7 @@ const Blog = (props) => {
   const removeThisBlogFromList = (latestArticles) => {
     let value = latestArticles;
     value.splice(value.findIndex(function (i) {
-      return i.id == permalink;
+      return i.permalink == permalink;
     }), 1);
     return value;
   }

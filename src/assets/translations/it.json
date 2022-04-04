@@ -101,7 +101,8 @@
         "txt2": "Prova più tardi!"
       }
     },
-    "messageCv": "Nessun file selezionato"
+    "messageCv": "Nessun file selezionato",
+    "infoFields": "* Campi obbligatori"
   },
   "altImages": {
     "privacyPolicies": "Beije Privacy Policy",
@@ -270,16 +271,23 @@
       "part3": "frontend ",
       "part4": "& ",
       "part5": "backend ",
-      "part6": "realizzazione, ",
+      "part6": ", realizzazione ",
       "part7": "mockup ",
       "part8": "fino all’implementazione del ",
       "part9": "software ",
       "part10": "attraverso le tecnologie presenti sul mercato."
     },
+    "intro2List": {
+      "planning": "PROGETTAZIONE",
+      "implementation": "IMPLEMENTAZIONE",
+      "delivery": "DELIVERY",
+      "integrationSoftware": "INTEGRATION SOFTWARE",
+      "applicationMaintenace": "APPLICATION MAINTENACE"
+    },
     "desc1": {
       "part1": "Attraverso metodologia ",
       "part2": "Agile",
-      "part3": ", verranno definiti step di verifica e di ",
+      "part3": "verranno definiti step di verifica e di ",
       "part4": "aggiornamento ",
       "part5": "del prodotto già durante lo ",
       "part6": "sviluppo ",
@@ -292,7 +300,8 @@
       "part13": "della documentazione fino all’",
       "part14": "implementazione",
       "part15": ": ",
-      "part16": "vi seguiamo in ogni fase."
+      "part16": "vi seguiamo in ogni fase",
+      "part17": "."
     },
     "desc2": {
       "part1": "Le tecnologie utilizzate vanno dall’ecosistema ",
@@ -311,13 +320,17 @@
       "part14": "Angular",
       "part15": "e ",
       "part16": "Vue ",
-      "part17": "). For the infrastructure, we usually base ",
+      "part17": "). Per l’infrastruttura basiamo abitualmente i progetti in ",
       "part18": "cloud ",
-      "part19": "projects on ",
+      "part19": "su servizi ",
       "part20": "Amazon Web Services."
     },
     "commentsSection": {
-      "title": "Dicono di noi"
+      "title": "Dicono di noi",
+      "commentsClient": {
+        "francescoPancaro": "Il progetto è stato seguito da un team professionale, organizzato e disponibile. Ci hanno seguiti in ogni fase del progetto arrivando sempre puntuali e offrendoci soluzioni ottimali dando un risultato ben oltre le aspettative.",
+        "matteoMilione": "Quella con Beije e’ stata una collaborazione super efficiente grazia alla ottima sinergia con il nostro team interno e alla condivisione della stessa visione progettuale."
+      }
     }
   },
   "consulting": {

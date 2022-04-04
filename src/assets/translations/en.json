@@ -101,7 +101,8 @@
         "txt2": "Try again later!"
       }
     },
-    "messageCv": "No file selected"
+    "messageCv": "No file selected",
+    "infoFields": "* Required fields"
   },
   "altImages": {
     "privacyPolicies": "Beije Privacy Policy",
@@ -295,7 +296,15 @@
       "part13": "of the documentation up to the ",
       "part14": "implementation",
       "part15": ": ",
-      "part16": "we follow you in every phase."
+      "part16": "we follow you in every phase",
+      "part17": "."
+    },
+    "intro2List": {
+      "planning": "PLANNING",
+      "implementation": "IMPLEMENTATION",
+      "delivery": "DELIVERY",
+      "integrationSoftware": "INTEGRATION SOFTWARE",
+      "applicationMaintenace": "APPLICATION MAINTENACE"
     },
     "desc2": {
       "part1": "The technologies used are ",
@@ -314,13 +323,17 @@
       "part14": "Angular",
       "part15": "and ",
       "part16": "Vue ",
-      "part17": "). Per l’infrastruttura basiamo abitualmente i progetti in ",
+      "part17": "). For the infrastructure, we usually base ",
       "part18": "cloud ",
-      "part19": "su servizi ",
+      "part19": "projects on ",
       "part20": "Amazon Web Services."
     },
     "commentsSection": {
-      "title": "About us"
+      "title": "About us",
+      "commentsClient": {
+        "francescoPancaro": "The project was followed by a professional, organized and helpful team. They followed us in every phase of the project, always arriving on time and offering us optimal solutions giving a result well beyond expectations.",
+        "matteoMilione": "The collaboration with Beije has been super efficient thanks to the excellent synergy with our internal team and the sharing of the same project vision."
+      }
     },
     "form": {
       "title": "Ask for more information"
@@ -374,14 +387,14 @@
     "fourthSection": {
       "title": "About Us",
       "comments_txt": {
-        "commentsDiMonaco": "Una formazione completa, un'esperienza professionalizzante che ti lascia con delle competenze reali e applicabili nell'immediato. Alla Beije Talent Academy non si impara solo a programmare, ma a farlo con consapevolezza e ingegno.",
-        "commentsPignorio": "L’Academy di Beije è stata un’esperienza formativa davvero importante per il mio percorso di crescita. Non credevo che in soli tre mesi sarei riuscito ad apprendere tanto da poter lavorare in autonomia su progetti complessi. Sicuramente la consiglierei a tutti!",
-        "commentsEzpeleta": "Beije Accademy mi è stata molto utile per introdurmi nel mondo del lavoro con sicurezza grazie alle simulazioni in team, dove ho potuto mettere in pratica ciò che ho studiato in Accademy ed in Università.",
-        "commentsSavallo": "Beije Academy è stata un’esperienza costruttiva e stimolante: mi ha permesso di apprendere le tecnologie usate nel mondo lavorativo e mi ha incoraggiato a mettermi in gioco in ogni circostanza.",
-        "commentsZacheo": "Grazie all'Academy Java di Beije ho capito quello che differenzia l'università dal mondo del lavoro e soprattutto ho capito come gestire un progetto vero e proprio, capendo come usare le tecnologie java piu usate dalle aziende.",
-        "commentsFraioli": "Beije mi ha da subito dato un'ottima impressione e non si è smentita con il tempo. Ho avuto un contratto a tempo indeterminato dopo un breve periodo di formazione e sono entrato in un team che mi ha accolto ben oltre le mie aspettative.",
-        "commentsBusseni": "Nonostante fosse la prima Academy tutta da remoto è stata gestita ottimamente, sia nelle lezioni frontali che nella divisione dei gruppi in mini-progetti. Ritengo che l'Academy mi abbia fornito una preparazione più che adeguata per svolgere attività in ambito Java.",
-        "commentsFarina": "Nell'Academy FrontEnd di Beije ho approfondito tecnologie e nozioni nuove, mi è stato inoltre fornito supporto per entrare nel mondo del lavoro, cosa che la sola università non mi ha fornito, per questo lo reputo un percorso che rifarei volentieri."
+        "commentsDiMonaco": "A comprehensive training and professional experience that leaves you with real and immediately applicable skills. At the Beije Talent Academy you don't just learn how to programme, but how to do it with awareness and ingenuity.",
+        "commentsPignorio": "The Beije Academy has been a very important learning experience for me. I didn't think that in just three months I would have been able to learn so much to be able to work independently on complex projects. I would definitely recommend it to everyone!",
+        "commentsEzpeleta": "Beije Academy has been very useful for me to enter the world of work with confidence thanks to the team simulations, where I have been able to put into practice what I have studied in the Academy and in the University.",
+        "commentsSavallo": "Beije Academy was a constructive and challenging experience: it allowed me to learn about technologies used in the working world and encouraged me to challenge myself in all circumstances.",
+        "commentsZacheo": "Thanks to the Beije Java Academy I understood what differentiates university from the world of work and above all I understood how to manage a real project, understanding how to use the java technologies most used by companies.",
+        "commentsFraioli": "Beije made a very good impression on me right away and it has not changed with time. I got a permanent contract after a short training period and joined a team that welcomed me far beyond my expectations.",
+        "commentsBusseni": "Although it was the first Academy to be run entirely remotely, it was very well managed, both in terms of the lectures and the division of the groups into mini-projects. I think that the Academy has provided me with more than adequate preparation for working in the Java environment.",
+        "commentsFarina": "At Beije's FrontEnd Academy, I learnt about new technologies and concepts, and I was given support to enter the world of work.  I consider it a course I would gladly do again."
       }
     }
   },
