@@ -52,7 +52,7 @@
     "send": "Invia",
     "scroll": "scorri in basso",
     "downloadPwd": "Scarica la presentazione",
-    "learnMore": "Scropri di più",
+    "learnMore": "Scopri di più",
     "close": "Chiudi",
     "attachCv": "Allega il tuo cv*",
     "accept": "Acconsenti"
@@ -282,11 +282,11 @@
       "implementation": "IMPLEMENTAZIONE",
       "delivery": "DELIVERY",
       "integrationSoftware": "INTEGRATION SOFTWARE",
-      "applicationMaintenace": "APPLICATION MAINTENACE"
+      "applicationMaintenace": "APPLICATION MAINTENANCE"
     },
     "desc1": {
       "part1": "Attraverso metodologia ",
-      "part2": "Agile",
+      "part2": "Agile ",
       "part3": "verranno definiti step di verifica e di ",
       "part4": "aggiornamento ",
       "part5": "del prodotto già durante lo ",
@@ -329,7 +329,7 @@
       "title": "Dicono di noi",
       "commentsClient": {
         "francescoPancaro": "Il progetto è stato seguito da un team professionale, organizzato e disponibile. Ci hanno seguiti in ogni fase del progetto arrivando sempre puntuali e offrendoci soluzioni ottimali dando un risultato ben oltre le aspettative.",
-        "matteoMilione": "Quella con Beije e’ stata una collaborazione super efficiente grazia alla ottima sinergia con il nostro team interno e alla condivisione della stessa visione progettuale."
+        "matteoMilione": "Quella con Beije è stata una collaborazione super efficiente grazie alla ottima sinergia con il nostro team interno e alla condivisione della stessa visione progettuale."
       }
     }
   },
@@ -341,7 +341,7 @@
       "part3": "professionale per lo sviluppo di software in grado di offrire le migliori soluzioni che si adattino alle esigenze del cliente. Ci impegniamo ad ottenere i risultati migliori attraverso aggiornamenti mirati e formazione costante per la realizzazione di PROGETTI INNOVATIVI."
     },
     "firstSection": {
-      "description": "IN OTTICA PEOPLE FIRST AIUTIAMO LE AZIENDE A COSTRUIRE TEAM DI VALORE ATTRAVERSO FIGUARE ALTAMENTE SPECIALIZZATE",
+      "description": "IN OTTICA PEOPLE FIRST AIUTIAMO LE AZIENDE A COSTRUIRE TEAM DI VALORE ATTRAVERSO FIGURE ALTAMENTE SPECIALIZZATE",
       "list": {
         "element1": "ARCHITECT",
         "element2": "PROJECT MANAGER",
@@ -364,7 +364,7 @@
   },
   "academy": {
     "firstSection": {
-      "title": "Corsi specializzati",
+      "title": "Percorsi formativi",
       "subtitle": "Frontend & Backend per diventare Software Developer",
       "description": "Svilupperai le tue competenze attraverso lezioni frontali, esercitazioni, valutazioni e progetti reali."
     },
@@ -394,7 +394,7 @@
   },
   "blog": {
     "title": "Blog",
-    "description": "Appassionatə di informazioni? Scopri le news, gli aggiornate su innovazione e tecnologia e spazia dai trend del momento al digital business, scienza, ricerca e società con il Blog Beije. Segui il cambiamento!",
+    "description": "Appassionatə di informazioni? Scopri le news, gli aggiornamenti su innovazione e tecnologia e spazia dai trend del momento al digital business, scienza, ricerca e società con il Blog Beije. Segui il cambiamento!",
     "postedBy": "Pubblicato da",
     "postedOn": "il",
     "latestArticles": "Ultimi articoli"
@@ -411,14 +411,14 @@
     "table": {
       "row1Title": "Durata",
       "row3Title": "Modalità",
-      "row1Desc": "Academy di 3 mesi retribuito",
+      "row1Desc": "Academy di 3 mesi retribuita",
       "row3Desc": "Remoto"
     },
     "program": {
       "title": "Programma",
       "section1": {
-        "title": "Javascript, HTML5, CSS3",
-        "subsection1": "Javascript",
+        "title": "JavaScript, HTML5, CSS3",
+        "subsection1": "JavaScript",
         "subsection2": "HTML5",
         "subsection3": "CSS3",
         "subsection4": "ES6",
@@ -431,8 +431,8 @@
         "subsection2": "React vs JQuery vs AngularJS Vs Vue",
         "subsection3": "Gestione e organizzazione del Progetto",
         "subsection4": "Hooks & Class",
-        "subsection5": "Components, State, Props and Lifecycle events",
-        "subsection6": "Routing and Navigation",
+        "subsection5": "Components, State, Props e Lifecycle events",
+        "subsection6": "Routing e Navigation",
         "subsection7": "Virtual Dom",
         "subsection8": "Redux"
       },
@@ -461,7 +461,7 @@
     "table": {
       "row1Title": "Durata",
       "row3Title": "Modalità",
-      "row1Desc": "Academy di 3 mesi retribuito",
+      "row1Desc": "Academy di 3 mesi retribuita",
       "row3Desc": "Remoto"
     },
     "program": {
@@ -510,7 +510,7 @@
         "subsection6": "Spring JPA e Spring Security",
         "subsection7": "Web Service SOAP: implementazione di un server ed un client",
         "subsection8": "Web Service REST: il formato JSON ed implementazione di un WS REST con SpringMVC",
-        "subsection9": "DOM e Javascript",
+        "subsection9": "DOM e JavaScript",
         "subsection10": "AJAX: utilizzo del comando fetch per le chiamate asincrone"
       }
     }
