@@ -55,7 +55,9 @@
     "learnMore": "Scopri di più",
     "close": "Chiudi",
     "attachCv": "Allega il tuo cv*",
-    "accept": "Acconsenti"
+    "accept": "Acconsenti",
+    "jobTabCareer": "Opportunità di lavoro",
+    "goBack": "Indietro"
   },
   "contactInfo": {
     "location": "Dove siamo",
@@ -516,6 +518,7 @@
     }
   },
   "career": {
+    "titlePage": "Lavora con noi",
     "title": "Posizioni aperte",
     "description": "Scopri le opportunità di lavoro per diventare un Software Ninjaneer ed entra a far parte della Community Beije: un sistema People First attraverso il quale crescere insieme, formarsi e diventare professionistə del settore. Cosa aspetti? The future is now!",
     "messageJob": "Al momento non ci sono posizioni aperte, ma ti consigliamo di tenere d'occhio la pagina.",

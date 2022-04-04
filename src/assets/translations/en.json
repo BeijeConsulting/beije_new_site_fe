@@ -54,7 +54,9 @@
     "learnMore": "Learn more",
     "close": "Close",
     "attachCv": "Attach Your CV*",
-    "accept": "Accept"
+    "accept": "Accept",
+    "jobTabCareer": "Job opportunities",
+    "goBack": "Go Back"
   },
   "contactInfo": {
     "location": "Where we are",
@@ -522,6 +524,7 @@
     }
   },
   "career": {
+    "titlePage": "Career",
     "title": "Open positions",
     "description": "Discover the job opportunities to become a Software Ninjaneer and join the Beije Community: a People First system through which we can grow together, train and become a professional in the IT industry. What are you waiting for? The future is now!",
     "messageJob": "At the moment there are no open positions, but we suggest you to keep an eye on the page.",
