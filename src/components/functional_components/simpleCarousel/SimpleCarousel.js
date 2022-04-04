@@ -59,9 +59,9 @@ const SimpleCarousel = (props) => {
         <p
           className="simple-carousel-content-sign"
         >
-          <i>{item?.name} {item?.surname}</i>
+          <i>{item?.name} <br /> {item?.surname}</i>
         </p>
-      </div>
+      </div >
     )
   }
 

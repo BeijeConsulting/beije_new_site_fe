@@ -525,13 +525,13 @@ export const carouselProfile = [
 
 export const clientComments = [
   {
-    name: "Francesco Pancaro,",
-    surname: "Head of Financial Planning & Control",
+    name: "Francesco Pancaro",
+    surname: "Head of Financial Planning & Control, PININFARINA",
     content: "up.commentsSection.commentsClient.francescoPancaro"
   },
   {
-    name: "Matteo Milione,",
-    surname: "Managing Partner",
+    name: "Matteo Milione",
+    surname: "Managing Partner, YOUTHQUAKE",
     content: "up.commentsSection.commentsClient.matteoMilione"
   }
 ]

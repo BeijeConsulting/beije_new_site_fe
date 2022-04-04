@@ -99,7 +99,16 @@ const HomeLayout = (props) => {
       <div className={switchClassBgLayout()} />
       {
         props.currentPageDuck.currentPage === "" &&
-        <video className="homeLayout-video" autoPlay muted loop>
+        <video
+          className="homeLayout-video"
+          autoPlay
+          muted
+          loop
+          playsinline="true"
+          disablePictureInPicture="true"
+          type="video/mp4"
+          // poster="../../"
+        >
           <source src="https://beije-people-first.s3.eu-south-1.amazonaws.com/site/video_home.mp4" type="video/mp4" />
         </video>
       }
