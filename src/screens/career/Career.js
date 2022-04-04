@@ -100,7 +100,7 @@ const Career = (props) => {
           <Box
             className="max-width-1200 width-100"
           >
-            <h1>Career</h1>
+            <h1>{t("career.titlePage")}</h1>
             <p
               className="career-first-section-description"
             >
@@ -117,7 +117,7 @@ const Career = (props) => {
               />
               <CustomButton
                 type={"filter-btn"}
-                content={"Job Opportunities"}
+                content={t("btn.jobTabCareer")}
                 classNameFilterBtn={state.buttonSelected === "job" ? "career-selected-job" : ""}
                 callback={showJobOpportunities}
               />
