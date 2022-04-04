@@ -432,13 +432,8 @@
         "subsection1": "React, la libreria dedicata al frontend",
         "subsection2": "React vs JQuery vs AngularJS Vs Vue",
         "subsection3": "Gestione e organizzazione del Progetto",
-<<<<<<< HEAD
         "subsection4": "Hooks e Classi",
         "subsection5": "Componenti, Stati, Props e Lifecycle events",
-=======
-        "subsection4": "Hooks & Class",
-        "subsection5": "Components, State, Props e Lifecycle events",
->>>>>>> 712fc2aa0ae7ccdd9551e4d30b1e43434bb067a2
         "subsection6": "Routing e Navigation",
         "subsection7": "Virtual Dom",
         "subsection8": "Redux"
