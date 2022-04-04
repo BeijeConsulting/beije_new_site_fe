@@ -76,39 +76,39 @@ function Root() {
   }
 
   return (
-    <React.StrictMode>
-      <Provider store={store}>
-        <BrowserRouter basename={i18n.resolvedLanguage}>
-          <App />
-          <CookieConsent
-            buttonText={<span className='simple-paragraph'>{t("btn.accept")}</span>}
-          >
-            🍪 {t("cookiePolicies.message.part1")}
+    // <React.StrictMode>
+    <Provider store={store}>
+      <BrowserRouter basename={i18n.resolvedLanguage}>
+        <App />
+        <CookieConsent
+          buttonText={<span className='simple-paragraph'>{t("btn.accept")}</span>}
+        >
+          🍪 {t("cookiePolicies.message.part1")}
 
-            <CustomLink
-              linkTo="#"
-              callback={openModal}
-              content={t("cookiePolicies.message.part2")}
-            />
-            {t("cookiePolicies.message.part3")}
-          </CookieConsent>
+          <CustomLink
+            linkTo="#"
+            callback={openModal}
+            content={t("cookiePolicies.message.part2")}
+          />
+          {t("cookiePolicies.message.part3")}
+        </CookieConsent>
 
-          <CustomModal
-            stateModal={state.modalIsOpen}
-            callbackClose={closeModal}
-            modalTitle={t("cookiePolicies.title")}
-          >
-            {t("cookiePolicies.lang") === "it" ? <CookiePolicies_it /> : <CookiePolicies_en />}
-            <CookiePolicies_en />
-          </CustomModal>
-        </BrowserRouter>
-        <BrowserRouter>
-          <Routes>
-            <Route path="*" element={<RedirectToLanguage />} />
-          </Routes>
-        </BrowserRouter>
-      </Provider>
-    </React.StrictMode>
+        <CustomModal
+          stateModal={state.modalIsOpen}
+          callbackClose={closeModal}
+          modalTitle={t("cookiePolicies.title")}
+        >
+          {t("cookiePolicies.lang") === "it" ? <CookiePolicies_it /> : <CookiePolicies_en />}
+          <CookiePolicies_en />
+        </CustomModal>
+      </BrowserRouter>
+      <BrowserRouter>
+        <Routes>
+          <Route path="*" element={<RedirectToLanguage />} />
+        </Routes>
+      </BrowserRouter>
+    </Provider>
+    // </React.StrictMode>
   )
 }
 
