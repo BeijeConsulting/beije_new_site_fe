@@ -122,7 +122,7 @@
     "focusAcademy": "Focus Academy"
   },
   "footer": {
-    "privacyPolicies": "PRIVACY POLICIES",
+    "privacyPolicies": "PRIVACY POLICY",
     "legalNotes": "LEGAL NOTES",
     "vatNumber": "Beije is a People First Srl brand - VAT number 16334941008 "
   },
@@ -141,7 +141,7 @@
     },
     "tab": {
       "vision": {
-        "title": "Visione",
+        "title": "Vision",
         "content": {
           "part1": "",
           "part2": "People ",
@@ -158,7 +158,7 @@
         }
       },
       "mission": {
-        "title": "Missione",
+        "title": "Mission",
         "content": {
           "part1": "We help companies to implement ",
           "part2": "innovative projects ",
@@ -166,7 +166,7 @@
           "part4": "Valuable Teams ",
           "part5": "Our mission is to ",
           "part6": "grow up ",
-          "part7": "with our clients ed essere capable of creating a high-tech system in which ",
+          "part7": "with our clients and be capable of creating a high-tech system in which ",
           "part8": "innovation",
           "part9": ", ",
           "part10": "transparency ",
@@ -174,14 +174,14 @@
           "part12": "equity",
           "part13": "are fundamental assets in the construction of a ",
           "part14": "People First ",
-          "part15": "system oriented to the development of valuable projects"
+          "part15": "system oriented to the development of valuable projects."
         }
       },
       "history": {
-        "title": "Storia",
+        "title": "History",
         "content": {
           "part1": "At the heart of the Beije model is a ",
-          "part2": "People First Vision ",
+          "part2": "People First Vision",
           "part3": ": people at the center for the creation of a ",
           "part4": "valuable ",
           "part5": "company. From an ideal to a business: for more than 10 years we have been constantly striving to update our know-how and we are able to provide the most modern methodologies and the most ",
@@ -191,7 +191,7 @@
           "part9": "for the realization of highly ",
           "part10": "specialized",
           "part11": " ",
-          "part12": "projects"
+          "part12": "projects."
         }
       },
       "values": {
@@ -199,14 +199,14 @@
         "content": {
           "part1": "We believe in what we do and have a deep ",
           "part2": "RESPECT ",
-          "part3": "for the others ",
-          "part4": "We show ",
+          "part3": "for the others",
+          "part4": ".We show ",
           "part5": "GRATITUDE ",
-          "part6": "for the commitment we put into our work every day ",
-          "part7": "First comes the team and then the individual, ours is a ",
+          "part6": "for the commitment we put into our work every day",
+          "part7": ". First comes the team and then the individual, ours is a ",
           "part8": "TEAM ",
           "part9": "work The basis for building our community is developing a ",
-          "part10": "SENSE OF BELONGING"
+          "part10": "SENSE OF BELONGING."
         }
       }
     },
@@ -227,11 +227,11 @@
         "part5": "at the ",
         "part6": "heart ",
         "part7": "of our ",
-        "part8": "future ",
+        "part8": "future",
         "part9": ". We strive to design and deliver solutions that bring ",
         "part10": "new realities ",
         "part11": "to life and train the ",
-        "part12": "developers of tomorrow ",
+        "part12": "developers of tomorrow",
         "part13": ". It is the sharing of a common purpose, it is an “out of the box” approach, it is the relationship with the customer, it is a ",
         "part14": "People First",
         "part15": " system.",
