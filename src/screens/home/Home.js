@@ -393,7 +393,7 @@ const Home = (props) => {
               className={"home-seventh-section-box-form"}
             >
               <CustomForm
-                titlePage="Richiesta informazioni - sito Beije"
+                titlePage="Richiesta informazioni - sito Beije Home"
                 formTitle={t("form.title.contacts")}
               />
             </Box>

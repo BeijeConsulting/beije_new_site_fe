@@ -1,7 +1,7 @@
 import React from "react";
 import { replace, toNumber } from "lodash";
 import NumberFormat from "react-number-format";
-import ReactGa from 'react-ga';
+import ReactGa from 'react-ga4';
 
 // export const showError = (error) => {
 //   notification.open({
@@ -83,9 +83,9 @@ export const setGaEvent = (data) => {
       category: data.category, // String (Required)
       action: data.action, // String (Required)
       label: data.label, // String (Optional)
-      value: data.value, // Int (Optional)
-      nonInteraction: data.nonInteraction, // Bool (Optional)
-      transport: data.transport // (Optional)
+      value: data.value, // Int (Optional) must be a number
+      nonInteraction: data.nonInteraction, // Bool (Optional) true/false
+      transport: data.transport // (Optional) beacon/xhr/image
     });
   }
 }

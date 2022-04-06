@@ -97,7 +97,7 @@ const TalentAcademy = (props) => {
 
             <div className="academy-intro-section-apply-container">
               <CustomLink
-                content={"candidati"}
+                content={t("btn.apply")}
                 linkTo={"#"}
                 callback={scrollToForm}
                 typeLink={"apply"}

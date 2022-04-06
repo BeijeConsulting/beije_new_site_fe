@@ -63,7 +63,7 @@ export const dbMonth = "YYYY-MM";
 //   locale_it: localeIT,
 // }
 
-export const googleAnalyticsKey = "UA-215782182-1";
+export const googleAnalyticsKey = "G-WKEXRBRFFB";
 
 export const logo_primary_light = "https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/logos/logo_official_white.svg";
 export const logo_secondary_light = "https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/logos/logo_short_white.svg";

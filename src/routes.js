@@ -99,22 +99,22 @@ function RequireCareerPermalink({ children }) {
 function RedirectUrlNewSite({ children }) {
   let oldUrl = window.location.pathname;
   switch (oldUrl.substring(3)) {
-    case "/home/consulting":
+    case "/home/consulting/":
       location.href = "/beije-consulting";
       break;
-    case "/portfolio-articoli/academy-java":
+    case "/portfolio-articoli/academy-java/":
       location.href = "/beije-talent-academy/academy-backend";
       break;
-    case "/portfolio-articoli/stage-javascript":
+    case "/portfolio-articoli/stage-javascript/":
       location.href = "/beije-talent-academy/academy-frontend";
       break;
-    case "/home/community":
+    case "/home/community/":
       location.href = "/";
       break;
-    case "/home/up":
+    case "/home/up/":
       location.href = "/beije-up";
       break;
-    case "/home/academy":
+    case "/home/academy/":
       location.href = "/beije-talent-academy";
       break;
   }

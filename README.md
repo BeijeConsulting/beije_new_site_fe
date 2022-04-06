@@ -11,7 +11,6 @@ Library:
   Eslint - https://eslint.org/
   Number format - https://www.npmjs.com/package/react-number-format
   MUI kit [emotion, style components, SVG icons]- https://mui.com/getting-started/installation/
-  react-ga - https://www.npmjs.com/package/react-ga
   fontAwsome icons - https://fontawesome.com/v5/docs/web/use-with/react
   gsap - https://www.npmjs.com/package/gsap
   swiper - https://swiperjs.com/react
@@ -20,3 +19,4 @@ Library:
   pdf reader - https://www.npmjs.com/package/pdfreader
   material-ui-carousel - https://www.npmjs.com/package/react-material-ui-carousel
   animate.css - https://animate.style/
+  react-ga4 - https://www.npmjs.com/package/react-ga4

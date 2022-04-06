@@ -198,7 +198,7 @@ const Consulting = (props) => {
           >
             <Box>
               <CustomForm
-                titlePage="Richiesta informazioni - sito Beije"
+                titlePage="Richiesta informazioni - sito Beije Consulting"
                 formTitle={t("form.title.info")}
               />
             </Box>

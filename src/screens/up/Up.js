@@ -273,7 +273,7 @@ const Up = (props) => {
               className={"up-sixth-section-box-form"}
             >
               <CustomForm
-                titlePage="Richiesta informazioni - sito Beije"
+                titlePage="Richiesta informazioni - sito Beije Up"
                 formTitle={t("form.title.info")}
               />
             </Box>

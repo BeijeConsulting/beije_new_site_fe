@@ -56,7 +56,8 @@
     "attachCv": "Attach Your CV*",
     "accept": "Accept",
     "jobTabCareer": "Job opportunities",
-    "goBack": "Go Back"
+    "goBack": "Go Back",
+    "apply": "Apply"
   },
   "contactInfo": {
     "location": "Where we are",
@@ -320,11 +321,11 @@
       "part9": "and the main frameworks for the ",
       "part10": "frontend ",
       "part11": "(",
-      "part12": "React ",
+      "part12": "React",
       "part13": ", ",
       "part14": "Angular",
       "part15": "and ",
-      "part16": "Vue ",
+      "part16": "Vue",
       "part17": "). For the infrastructure, we usually base ",
       "part18": "cloud ",
       "part19": "projects on ",
@@ -346,10 +347,10 @@
     "intro": {
       "part1": "Our Beije consultants provide professional",
       "part2": "IT consultancy",
-      "part3": "for software development able to offer the best solutions that fit the client's needs. We are committed to obtaining the best results through targeted updates and constant training for the realization of INNOVATIVE PROJECTS."
+      "part3": "for software development able to offer the best solutions that fit the client's needs. We are committed to obtain the best results through targeted updates and constant training for the realization of INNOVATIVE PROJECTS."
     },
     "firstSection": {
-      "description": "IN A PEOPLE FIRST PERSPECTIVE WE HELP COMPANIES TO BUILD VALUE TEAMS THROUGH HIGHLY SPECIALIZED FIGURES",
+      "description": "IN A PEOPLE FIRST PERSPECTIVE WE HELP COMPANIES TO BUILD VALUABLE TEAMS THROUGH HIGHLY SPECIALIZED FIGURES",
       "list": {
         "element1": "ARCHITECT",
         "element2": "PROJECT MANAGER",
@@ -377,7 +378,7 @@
       "description": "You will develop your skills through classes, exercises, assessments, and real projects."
     },
     "secondSection": {
-      "title": "BECOME THE NEXT SOFTWARE NINJANEER!",
+      "title": "BE THE NEXT SOFTWARE NINJANEER!",
       "description1": "Come find us on Youtube: you will find the digital pills of our Frontend & Backend experts, the Webinars and much more.",
       "description2": "We are waiting for you!"
     },
@@ -390,13 +391,13 @@
       "title": "About Us",
       "comments_txt": {
         "commentsDiMonaco": "A comprehensive training and professional experience that leaves you with real and immediately applicable skills. At the Beije Talent Academy you don't just learn how to programme, but how to do it with awareness and ingenuity.",
-        "commentsPignorio": "The Beije Academy has been a very important learning experience for me. I didn't think that in just three months I would have been able to learn so much to be able to work independently on complex projects. I would definitely recommend it to everyone!",
-        "commentsEzpeleta": "Beije Academy has been very useful for me to enter the world of work with confidence thanks to the team simulations, where I have been able to put into practice what I have studied in the Academy and in the University.",
-        "commentsSavallo": "Beije Academy was a constructive and challenging experience: it allowed me to learn about technologies used in the working world and encouraged me to challenge myself in all circumstances.",
-        "commentsZacheo": "Thanks to the Beije Java Academy I understood what differentiates university from the world of work and above all I understood how to manage a real project, understanding how to use the java technologies most used by companies.",
-        "commentsFraioli": "Beije made a very good impression on me right away and it has not changed with time. I got a permanent contract after a short training period and joined a team that welcomed me far beyond my expectations.",
-        "commentsBusseni": "Although it was the first Academy to be run entirely remotely, it was very well managed, both in terms of the lectures and the division of the groups into mini-projects. I think that the Academy has provided me with more than adequate preparation for working in the Java environment.",
-        "commentsFarina": "At Beije's FrontEnd Academy, I learnt about new technologies and concepts, and I was given support to enter the world of work.  I consider it a course I would gladly do again."
+        "commentsPignorio": "The Beije Talent Academy has been a very important learning experience for me. I didn't think that in just three months I would have been able to learn so much to be able to work independently on complex projects. I would definitely recommend it to everyone!",
+        "commentsEzpeleta": "The Beije Talent Academy has been very useful for me to enter the world of work with confidence thanks to the team simulations, where I have been able to put into practice what I have studied in the Academy and in the University.",
+        "commentsSavallo": "The Beije Talent Academy was a constructive and challenging experience: it allowed me to learn about technologies used in the working world and encouraged me to challenge myself in all circumstances.",
+        "commentsZacheo": "Thanks to the Academy backend I understood what differentiates university from the world of work and above all I understood how to manage a real project, understanding how to use the java technologies most used by companies.",
+        "commentsFraioli": "Beije People First made a very good impression on me right away and it has not changed with time. I got a permanent contract after a short training period and joined a team that welcomed me far beyond my expectations.",
+        "commentsBusseni": "Although it was the first Academy to be run entirely remotely, it was very well managed, both in terms of the lectures and the division of the groups into mini-projects. I think that the Beije Talent Academy has provided me with more than adequate preparation for working in the Java environment.",
+        "commentsFarina": "At Beije's frontend Academy, I learnt about new technologies and concepts, and I was given support to enter the world of work.  I consider it a course I would gladly do again."
       }
     }
   },

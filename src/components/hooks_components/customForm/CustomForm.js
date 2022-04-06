@@ -18,7 +18,7 @@ import "./CustomForm.css";
 
 // Constants and functions
 import { googleReCaptchaKey } from "../../../utils/properties";
-import { toBase64 } from "../../../utils/utilities";
+import { toBase64, setGaEvent } from "../../../utils/utilities";
 
 // Components
 import CustomButton from "../../functional_components/ui/customButton/CustomButton";
@@ -91,7 +91,7 @@ const CustomForm = (props) => {
     onSubmit: (values) => {
       formikContacts.resetForm();
       state.captcha.reset();
-
+      setGaEvent({category: `Mail subject: ${props.titlePage}`, action:"send form"});
       sendDataForm(values);
     }
   });

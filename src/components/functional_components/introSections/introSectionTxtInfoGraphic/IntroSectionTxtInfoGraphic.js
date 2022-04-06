@@ -118,7 +118,7 @@ const IntroSectionTxtInfoGraphic = (props) => {
 
         <div className="intro-section-apply-container">
           <CustomLink
-            content={"candidati"}
+            content={t("btn.apply")}
             linkTo={"#"}
             callback={props.applyCallback}
             typeLink={"apply-secondary"}
