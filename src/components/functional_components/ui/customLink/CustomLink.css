@@ -24,6 +24,10 @@
   white-space: nowrap;
 }
 
+.link-apply-primary {
+  color: var(--lightblue) !important;
+}
+
 .link-apply-secondary {
   color: var(--yellow) !important;
 }
@@ -35,6 +39,10 @@
     right: auto;
     width: 100%;
     background-color: var(--white);
+  }
+
+  .link-apply-primary:hover::before {
+    background-color: var(--lightblue);
   }
 
   .link-apply-secondary:hover::before {

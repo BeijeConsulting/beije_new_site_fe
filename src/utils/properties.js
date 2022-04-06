@@ -523,18 +523,18 @@ export const carouselProfile = [
   }
 ]
 
-export const clientComments = [
-  {
-    name: "Francesco Pancaro",
-    surname: "Head of Financial Planning & Control, PININFARINA",
-    content: "up.commentsSection.commentsClient.francescoPancaro"
-  },
-  {
-    name: "Matteo Milione",
-    surname: "Managing Partner, YOUTHQUAKE",
-    content: "up.commentsSection.commentsClient.matteoMilione"
-  }
-]
+// export const clientComments = [
+//   {
+//     name: "Francesco Pancaro",
+//     surname: "Head of Financial Planning & Control, PININFARINA",
+//     content: "up.commentsSection.commentsClient.francescoPancaro"
+//   },
+//   {
+//     name: "Matteo Milione",
+//     surname: "Managing Partner, YOUTHQUAKE",
+//     content: "up.commentsSection.commentsClient.matteoMilione"
+//   }
+// ]
 
 export const caseStudies = [
   {
@@ -554,6 +554,19 @@ export const caseStudies = [
     subtitle: "Subtitle progetto poco più lungo, da definire",
     colorBg: "#fff",
     imgCarousel: logo_youthquake
+  }
+]
+
+export const clientComments = [
+  {
+    name: "Francesco Pancaro",
+    surname: "Head of Financial Planning & Control, PININFARINA",
+    contentPanel: "up.commentsSection.commentsClient.francescoPancaro"
+  },
+  {
+    name: "Matteo Milione",
+    surname: "Managing Partner, YOUTHQUAKE",
+    contentPanel: "up.commentsSection.commentsClient.matteoMilione"
   }
 ]
 

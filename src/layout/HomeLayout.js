@@ -104,10 +104,10 @@ const HomeLayout = (props) => {
           autoPlay
           muted
           loop
-          playsinline="true"
-          disablePictureInPicture="true"
+          playsInline={true}
+          disablePictureInPicture={true}
           type="video/mp4"
-          // poster="../../"
+        // poster="../../"
         >
           <source src="https://beije-people-first.s3.eu-south-1.amazonaws.com/site/video_home.mp4" type="video/mp4" />
         </video>

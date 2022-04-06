@@ -44,6 +44,9 @@ const Home = (props) => {
 
     loadingAnimation();
 
+  }, [state.loadingEnd])
+
+  useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     window.addEventListener("scroll", handleScroll);
     props.dispatch(setCurrentPage(""));
@@ -52,8 +55,6 @@ const Home = (props) => {
 
     const element = refDarkContainer.current;
     const fourthSectionP = element.querySelector('.home-fourth-section-p');
-    // const fifthSection = element.querySelector('.home-fifth-section-container-gsap');
-    // const fifthSectionFinalSpan = element.querySelector('.home-fifth-section-final-span-gsap')
 
     gsap.timeline({
       scrollTrigger: {
@@ -63,21 +64,12 @@ const Home = (props) => {
       },
     });
 
-    // const t1 = gsap.timeline({
-    //   scrollTrigger: {
-    //     trigger: fifthSection,
-    //     start: 'top 75%'
-    //   },
-    // });
-
-    // t1.from(fifthSectionFinalSpan, { opacity: 0, duration: 1, ease: 'power2.in' })
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
       props.dispatch(initCurrentPage());
       props.dispatch(initVisibilityNavbar());
     }
-  }, [state.loadingEnd])
+  }, [])
 
   const loadingAnimation = () => {
     setTimeout(() => {

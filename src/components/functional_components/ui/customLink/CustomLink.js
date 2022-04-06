@@ -11,6 +11,9 @@ const CustomLink = (props) => {
       case "apply":
         currentClassName = "link-default link-apply titles-level3"
         break;
+      case "apply-primary":
+        currentClassName = "link-default link-apply-primary titles-level3"
+        break;
       case "apply-secondary":
         currentClassName = "link-default link-apply-secondary titles-level3"
         break;

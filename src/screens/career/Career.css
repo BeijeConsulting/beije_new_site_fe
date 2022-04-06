@@ -89,3 +89,7 @@
   padding: 70px 7%;
   border-top: 2px solid var(--lightblue);
 }
+
+.career-detail-link-apply-container {
+  margin-bottom: 30px;
+}

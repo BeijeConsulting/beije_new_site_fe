@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import ReactMarkdown from 'react-markdown'
@@ -21,9 +21,11 @@ import "./Career.css";
 // Components
 import CustomForm from "../../components/hooks_components/customForm/CustomForm";
 import GoBackBtn from "../../components/functional_components/goBackBtn/GoBackBtn";
+import CustomLink from "../../components/functional_components/ui/customLink/CustomLink";
 
 const CareerDeatil = (props) => {
   const { t } = useTranslation();
+  const formRef = useRef();
 
   const [state, setState] = useState({
     careerResponse: null
@@ -54,6 +56,16 @@ const CareerDeatil = (props) => {
       careerResponse: careerResponse
     })
 
+  }
+
+  const scrollToForm = () => {
+    let formTop = formRef.current.offsetTop;
+
+    window.scrollTo({
+      top: formTop,
+      left: 0,
+      behavior: 'smooth'
+    });
   }
 
   return (
@@ -104,6 +116,16 @@ const CareerDeatil = (props) => {
             <Box
               className="career-detail-txt-container"
             >
+              <div
+              className="career-detail-link-apply-container"
+              >
+              <CustomLink
+                content={t("btn.apply")}
+                linkTo={"#"}
+                callback={scrollToForm}
+                typeLink={"apply-primary"}
+              />
+              </div>
 
               <ReactMarkdown
                 remarkPlugins={[remarkGfm]}
@@ -124,6 +146,7 @@ const CareerDeatil = (props) => {
       >
         <Box
           className={"academy-sixth-section-box-form"}
+          ref={formRef}
         >
           <CustomForm
             titlePage={state.careerResponse ? `Candidatura per ${state.careerResponse.title}` : "Offerta di lavoro"}

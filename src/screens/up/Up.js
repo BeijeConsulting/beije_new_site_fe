@@ -12,7 +12,7 @@ import { setVisibilityNavbar, initVisibilityNavbar } from "../../redux/ducks/sho
 import ApiCalls from "../../services/api/ApiCalls";
 
 // MUI
-import { Box, Container, Skeleton } from "@mui/material";
+import { Box, Container, Skeleton, Tab } from "@mui/material";
 
 // Style
 import "./Up.css";
@@ -22,9 +22,9 @@ import { clientComments } from "../../utils/properties";
 
 // Components
 import IntroSectionImgTxt from "../../components/functional_components/introSections/introSectionImgTxt/IntroSectionImgTxt";
-import SimpleCarousel from "../../components/functional_components/simpleCarousel/SimpleCarousel";
 import CustomCarousel from "../../components/hooks_components/customCarousel/CustomCarousel";
 import CustomForm from "../../components/hooks_components/customForm/CustomForm";
+import CustomScrollTab from "../../components/hooks_components/customScrollTab/CustomScrollTab";
 
 const Up = (props) => {
 
@@ -218,10 +218,24 @@ const Up = (props) => {
               <h2>{t("up.commentsSection.title")}</h2>
             </Box>
 
-            <Box>
+            {/* <Box>
               <SimpleCarousel
                 obj={clientComments}
               />
+            </Box> */}
+            <Box
+              className={"academy-fourth-section-tab-comments"}
+            >
+              <CustomScrollTab
+                obj={clientComments}
+              >
+                <Tab
+                  className={"scroll-tab-lables scroll-tab-lables-bg-FPancaro"}
+                />
+                <Tab
+                  className={"scroll-tab-lables scroll-tab-lables-bg-MMilione"}
+                />
+              </CustomScrollTab>
             </Box>
           </Container>
 
