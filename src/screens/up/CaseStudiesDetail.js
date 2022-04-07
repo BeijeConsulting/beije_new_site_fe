@@ -116,13 +116,11 @@ const CaseStudiesDetail = (props) => {
             <h2 className="titles-level3">
               {state.caseStudiesResponse.subtitle}
             </h2>
-            <p>
-              <ReactMarkdown
-                remarkPlugins={[remarkGfm]}
-              >
+            <div>
+              <ReactMarkdown>
                 {state.caseStudiesResponse.description}
               </ReactMarkdown>
-            </p>
+            </div>
           </Box>
         </Container>
       }

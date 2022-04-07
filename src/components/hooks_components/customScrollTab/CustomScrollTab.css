@@ -60,18 +60,6 @@
   background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/comments/farina_comments.jpg");
 }
 
-.scroll-tab-lables-bg-FPancaro {
-  background-size: contain;
-  background-color: var(--white) !important;
-  background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/case_studies/pininfarina.png");
-}
-
-.scroll-tab-lables-bg-MMilione {
-  background-size: contain;
-  background-color: var(--white) !important;
-  background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/case_studies/youthquake.png");
-}
-
 
 .scroll-tab-content-quotation-marks {
   -ms-flex-item-align: center;

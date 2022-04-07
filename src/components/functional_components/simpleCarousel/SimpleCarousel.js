@@ -43,14 +43,25 @@ const SimpleCarousel = (props) => {
         key={key}
         className="simple-carousel-content-container"
       >
-        <Box
+        {/* <Box
           className="simple-carousel-content-quotation-marks"
         >
           <img
             alt="Quotation mark icon"
             src={quotationMark}
           />
-        </Box>
+        </Box> */}
+        <Box
+          className="simple-carousel-img-container"
+          style={{
+            backgroundImage: `url(${item?.logo})`
+          }}
+        />
+        {/* <img
+            alt="Logo company"
+            src={item?.logo}
+          />
+        </Box> */}
         <p
           className="simple-carousel-content-txt"
         >

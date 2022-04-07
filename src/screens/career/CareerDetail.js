@@ -117,23 +117,20 @@ const CareerDeatil = (props) => {
               className="career-detail-txt-container"
             >
               <div
-              className="career-detail-link-apply-container"
+                className="career-detail-link-apply-container"
               >
-              <CustomLink
-                content={t("btn.apply")}
-                linkTo={"#"}
-                callback={scrollToForm}
-                typeLink={"apply-primary"}
-              />
+                <CustomLink
+                  content={t("btn.apply")}
+                  linkTo={"#"}
+                  callback={scrollToForm}
+                  typeLink={"apply-primary"}
+                />
               </div>
-
-              <ReactMarkdown
-                remarkPlugins={[remarkGfm]}
-              >
-                {state.careerResponse.description}
-
-              </ReactMarkdown>
-
+              <div>
+                <ReactMarkdown>
+                  {state.careerResponse.description}
+                </ReactMarkdown>
+              </div>
             </Box>
           </>
         }

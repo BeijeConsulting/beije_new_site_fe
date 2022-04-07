@@ -1,10 +1,10 @@
 .simple-carousel-container {
   width: 100%;
-  min-height: 400px;
+  min-height: 500px;
 }
 
 .simple-carousel-container button {
-  margin-top: 50px;
+  margin-top: 70px;
 }
 
 .simple-carousel-content-container {
@@ -18,7 +18,7 @@
   flex-direction: column;
 }
 
-.simple-carousel-content-quotation-marks {
+/* .simple-carousel-content-quotation-marks {
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
@@ -40,7 +40,21 @@
 
 .simple-carousel-content-quotation-marks img {
   width: 100%;
+} */
+
+.simple-carousel-img-container {
+  background-color: #fff;
+  margin: 30px 0 15px 0;
+  width: 100%;
+  background-position: center;
+  background-size: contain;
+  height: 150px;
+  background-repeat: no-repeat;
 }
+
+/* .simple-carousel-img-container img {
+  width: 100%;
+} */
 
 .simple-carousel-content-txt {
   margin: 10px 0;

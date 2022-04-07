@@ -24,7 +24,7 @@ import { clientComments } from "../../utils/properties";
 import IntroSectionImgTxt from "../../components/functional_components/introSections/introSectionImgTxt/IntroSectionImgTxt";
 import CustomCarousel from "../../components/hooks_components/customCarousel/CustomCarousel";
 import CustomForm from "../../components/hooks_components/customForm/CustomForm";
-import CustomScrollTab from "../../components/hooks_components/customScrollTab/CustomScrollTab";
+import SimpleCarousel from "../../components/functional_components/simpleCarousel/SimpleCarousel"
 
 const Up = (props) => {
 
@@ -218,12 +218,12 @@ const Up = (props) => {
               <h2>{t("up.commentsSection.title")}</h2>
             </Box>
 
-            {/* <Box>
+            <Box>
               <SimpleCarousel
                 obj={clientComments}
               />
-            </Box> */}
-            <Box
+            </Box>
+            {/* <Box
               className={"academy-fourth-section-tab-comments"}
             >
               <CustomScrollTab
@@ -236,7 +236,7 @@ const Up = (props) => {
                   className={"scroll-tab-lables scroll-tab-lables-bg-MMilione"}
                 />
               </CustomScrollTab>
-            </Box>
+            </Box> */}
           </Container>
 
           {/* Fourth section case studies*/}

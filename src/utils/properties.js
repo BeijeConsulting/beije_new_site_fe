@@ -523,18 +523,20 @@ export const carouselProfile = [
   }
 ]
 
-// export const clientComments = [
-//   {
-//     name: "Francesco Pancaro",
-//     surname: "Head of Financial Planning & Control, PININFARINA",
-//     content: "up.commentsSection.commentsClient.francescoPancaro"
-//   },
-//   {
-//     name: "Matteo Milione",
-//     surname: "Managing Partner, YOUTHQUAKE",
-//     content: "up.commentsSection.commentsClient.matteoMilione"
-//   }
-// ]
+export const clientComments = [
+  {
+    name: "Francesco Pancaro",
+    surname: "Head of Financial Planning & Control, PININFARINA",
+    content: "up.commentsSection.commentsClient.francescoPancaro",
+    logo: "https://beije-people-first.s3.eu-south-1.amazonaws.com/site/case_studies/pininfarina.png"
+  },
+  {
+    name: "Matteo Milione",
+    surname: "Managing Partner, YOUTHQUAKE",
+    content: "up.commentsSection.commentsClient.matteoMilione",
+    logo: "https://beije-people-first.s3.eu-south-1.amazonaws.com/site/case_studies/youthquake.png"
+  }
+]
 
 export const caseStudies = [
   {
@@ -557,18 +559,18 @@ export const caseStudies = [
   }
 ]
 
-export const clientComments = [
-  {
-    name: "Francesco Pancaro",
-    surname: "Head of Financial Planning & Control, PININFARINA",
-    contentPanel: "up.commentsSection.commentsClient.francescoPancaro"
-  },
-  {
-    name: "Matteo Milione",
-    surname: "Managing Partner, YOUTHQUAKE",
-    contentPanel: "up.commentsSection.commentsClient.matteoMilione"
-  }
-]
+// export const clientComments = [
+//   {
+//     name: "Francesco Pancaro",
+//     surname: "Head of Financial Planning & Control, PININFARINA",
+//     contentPanel: "up.commentsSection.commentsClient.francescoPancaro"
+//   },
+//   {
+//     name: "Matteo Milione",
+//     surname: "Managing Partner, YOUTHQUAKE",
+//     contentPanel: "up.commentsSection.commentsClient.matteoMilione"
+//   }
+// ]
 
 export const employeesComments = [
   {
