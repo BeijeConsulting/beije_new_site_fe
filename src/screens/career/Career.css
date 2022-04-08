@@ -13,7 +13,11 @@
 }
 
 .career-first-section-button-container {
-  padding-bottom: 30px;
+  padding-bottom: 20px;
+}
+
+.career-first-section-button-container button {
+  margin-bottom: 20px;
 }
 
 .career-first-section-button-container button:nth-child(1) {

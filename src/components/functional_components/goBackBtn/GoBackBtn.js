@@ -20,7 +20,6 @@ const GoBackBtn = (props) => {
   const navigate = useNavigate();
 
   const goBackPage = () => {
-
     navigate(-1);
   }
 

@@ -18,11 +18,11 @@ const PrivacyPolicies = () => {
         <br />
         <span>
           con il presente documento (l’“Informativa”), intendiamo rinnovarti il nostro impegno per garantire
-          che il trattamento dei dati personali raccolti attraverso il sito internet
+          che il trattamento dei dati personali raccolti attraverso il sito internet&nbsp;
         </span>
         <a href="https://beije.it/" target={"_blank"} rel="noreferrer">https://beije.it</a>
         <span>
-          (il “Sito”),effettuato con modalità sia automatizzate che manuali, avvenga nel pieno rispetto delle tutele e dei
+        &nbsp;(il “Sito”),effettuato con modalità sia automatizzate che manuali, avvenga nel pieno rispetto delle tutele e dei
           diritti riconosciuti dal Regolamento (UE) 2016/679 (“GDPR” o il “Regolamento”) e dalle ulteriori
           norme applicabili in tema di protezione dei dati personali.
         </span>
@@ -36,7 +36,7 @@ const PrivacyPolicies = () => {
           identificabile; si considera identificabile la persona fisica che può essere identificata, direttamente
           o indirettamente, con particolare riferimento a un identificativo come il nome, un numero di
           identificazione, dati relativi all’ubicazione, un identificativo online o a uno o più elementi
-          caratteristici della sua identità fisica, fisiologica, genetica, psichica, economica, culturale o sociale”
+          caratteristici della sua identità fisica, fisiologica, genetica, psichica, economica, culturale o sociale”&nbsp;
         </i>
         <span>(i “</span>
         <b>Dati Personali</b>
@@ -71,7 +71,7 @@ const PrivacyPolicies = () => {
         <span>
           Il Titolare, al fine di agevolare i rapporti con i soggetti interessati, ha provveduto a nominare un suo
         </span>
-        <i>Data Protection Officer</i>
+        <i>Data Protection Officer&nbsp;</i>
         <span>
           (il “
         </span>
@@ -84,7 +84,7 @@ const PrivacyPolicies = () => {
         <span>
           As provided for by art. 38 of the GDPR, you may freely contact the DPO for all matters relating to
           the processing of your Personal Data and/or should you wish to exercise your rights as provided for
-          in this Policy, by sending a written communication to the e-mail address:
+          in this Policy, by sending a written communication to the e-mail address:&nbsp;
         </span>
         <a href="mailto:dpo.privact@sapglegal.com">dpo.privact@sapglegal.com</a>
         <span>.</span>
@@ -270,7 +270,7 @@ const PrivacyPolicies = () => {
         <br />
         <span>
           Per esercitare i tuoi diritti, potrai rivolgendoti al Titolare alla seguente casella di posta elettronica,
-          allegando copia del documento d’identità:
+          allegando copia del documento d’identità:&nbsp;
         </span>
         <a href="mailto:job@beije.it">job@beije.it</a>
         <span>.</span>

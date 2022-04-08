@@ -99,7 +99,7 @@ function Root() {
           modalTitle={t("cookiePolicies.title")}
         >
           {t("cookiePolicies.lang") === "it" ? <CookiePolicies_it /> : <CookiePolicies_en />}
-          <CookiePolicies_en />
+
         </CustomModal>
       </BrowserRouter>
       <BrowserRouter>

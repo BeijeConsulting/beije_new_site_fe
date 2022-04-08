@@ -12,11 +12,11 @@ const LegalNotes = () => {
         <b>NOTE LEGALI</b>
         <br />
         <span>
-          Tutti i loghi e marchi presenti sul Sito
+          Tutti i loghi e marchi presenti sul Sito&nbsp;
         </span>
         <a href="https://beije.it/" target={"_blank"} rel="noreferrer">https://beije.it</a>
         <span>
-          sono di proprietà di People First S.r.l., Viale
+        &nbsp;sono di proprietà di People First S.r.l., Viale
           Giulio Cesare n. 71, 00192 - Roma, Partita IVA e C.F.:16334941008, a cui è stata formalmente
           ottenuta l’assegnazione del nome a dominio internet, secondo le metodologie e procedure vigenti al
           momento della richiesta di assegnazione.

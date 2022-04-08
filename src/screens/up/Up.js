@@ -223,20 +223,6 @@ const Up = (props) => {
                 obj={clientComments}
               />
             </Box>
-            {/* <Box
-              className={"academy-fourth-section-tab-comments"}
-            >
-              <CustomScrollTab
-                obj={clientComments}
-              >
-                <Tab
-                  className={"scroll-tab-lables scroll-tab-lables-bg-FPancaro"}
-                />
-                <Tab
-                  className={"scroll-tab-lables scroll-tab-lables-bg-MMilione"}
-                />
-              </CustomScrollTab>
-            </Box> */}
           </Container>
 
           {/* Fourth section case studies*/}
@@ -263,7 +249,6 @@ const Up = (props) => {
                   state.caseStudiesResponse && !isEmpty(state.caseStudiesResponse) &&
                   < CustomCarousel
                     upCarousel
-                    // obj={caseStudiesTrialObj}
                     obj={state.caseStudiesResponse}
                     classNameSwiperContainer={"swiper-container-up"}
                     imgCarousel

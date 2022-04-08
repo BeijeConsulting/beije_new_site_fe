@@ -58,7 +58,6 @@ const Blog = (props) => {
 
   const getData = async () => {
     let blogDataAPI = await ApiCalls.blog_getListDetail(permalink);
-    console.log("blogDataAPI", blogDataAPI);
     if (!blogDataAPI) {
       navigate(`/blog`);
     }

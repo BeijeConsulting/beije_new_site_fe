@@ -18,5 +18,4 @@ Library:
   yup - https://www.npmjs.com/package/yup
   pdf reader - https://www.npmjs.com/package/pdfreader
   material-ui-carousel - https://www.npmjs.com/package/react-material-ui-carousel
-  animate.css - https://animate.style/
   react-ga4 - https://www.npmjs.com/package/react-ga4

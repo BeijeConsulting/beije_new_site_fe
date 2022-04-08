@@ -81,7 +81,6 @@ const CustomForm = (props) => {
       surname: '',
       email: '',
       number: '',
-      town: '',
       fileName: t("form.messageCv"),
       message: '',
       agreement: false
@@ -103,7 +102,6 @@ const CustomForm = (props) => {
     })
     const formData = {
       captcha: state.captchaValue,
-      city: values.town,
       surname: values.surname,
       cv: state.base64Value,
       cv_name: state.fileName === "Nessun file selezionato" ? null : state.fileName,
@@ -116,7 +114,6 @@ const CustomForm = (props) => {
       phone: values.number,
       privacy_check: values.agreement
     }
-    console.log("formData: ", formData);
     let responseForm = await ApiCalls.form_sendForm(formData);
 
     let toastShow = false;
@@ -284,7 +281,7 @@ const CustomForm = (props) => {
             >
               <Grid
                 item
-                xs={props.cvForm ? 6 : 5}
+                xs={6}
               >
                 <TextField
                   id="email"
@@ -305,7 +302,7 @@ const CustomForm = (props) => {
 
               <Grid
                 item
-                xs={props.cvForm ? 6 : 4}
+                xs={6}
               >
                 <TextField
                   id="number"
@@ -323,7 +320,7 @@ const CustomForm = (props) => {
                 />
               </Grid>
 
-              {!props.cvForm &&
+              {/* {!props.cvForm &&
                 <Grid
                   item
                   xs={3}
@@ -343,7 +340,7 @@ const CustomForm = (props) => {
                     className="form-field"
                   />
                 </Grid>
-              }
+              } */}
 
             </Grid>
 

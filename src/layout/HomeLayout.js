@@ -24,7 +24,8 @@ import BackToTopButton from "../components/functional_components/ui/backToTopBut
 const HomeLayout = (props) => {
 
   const [state, setState] = useState({
-    isMobile: window.innerWidth < 1024
+    isMobile: window.innerWidth < 1024,
+    isLittleMobile: window.innerWidth < 700
   })
 
   useEffect(() => {
@@ -40,7 +41,8 @@ const HomeLayout = (props) => {
   const updateMedia = () => {
     setState({
       ...state,
-      isMobile: window.innerWidth < 1024
+      isMobile: window.innerWidth < 1024,
+      isLittleMobile: window.innerWidth < 700
     });
   };
 
@@ -109,7 +111,7 @@ const HomeLayout = (props) => {
           type="video/mp4"
         // poster="../../"
         >
-          <source src="https://beije-people-first.s3.eu-south-1.amazonaws.com/site/video_home.mp4" type="video/mp4" />
+          <source src={state.isLittleMobile ? "https://beije-people-first.s3.eu-south-1.amazonaws.com/site/video_home_mobile.mp4" : "https://beije-people-first.s3.eu-south-1.amazonaws.com/site/video_home.mp4"} type="video/mp4" />
         </video>
       }
 

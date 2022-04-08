@@ -1,8 +1,5 @@
 import React from "react";
 
-// Animate.css
-import "animate.css";
-
 // Style
 import "./Loading.css";
 

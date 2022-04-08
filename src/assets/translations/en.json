@@ -87,7 +87,7 @@
       "surname": "Surname*",
       "email": "Email*",
       "town": "Town",
-      "number": "Telephone number",
+      "number": "Tel. number",
       "message": "Write here your message",
       "agreement": {
         "part1": "I have read and accept the ",

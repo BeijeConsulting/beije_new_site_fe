@@ -67,8 +67,7 @@ const CustomCarousel = (props) => {
           <img
             className="carousel-img-container"
             src={item.logo}
-          >
-          </img>
+          />
         }
         <div
           className={props.classNameTxtContainer}

@@ -23,16 +23,15 @@ const CustomHeader = (props) => {
       disableGutters
       className={"header-container bg-transparent"}
     >
-      <Link
-        to=""
+      <a
+        href="/"
       >
         <img
           src={props.logoDuck.logo}
           alt="Logo Beije People First"
           className="header-container-logo"
         />
-      </Link>
-
+      </a>
       {props.showNavbarTopDuck.showNavbar &&
         <Box className={"header-navbar-container"}>
           <CustomNavbar />

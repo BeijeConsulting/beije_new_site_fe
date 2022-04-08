@@ -11,21 +11,23 @@ const CookiePolicies_en = () => {
       <p ><strong><span >Cookie Policy</span></strong></p>
       <p ><span >Dear Data Subject,&nbsp;</span></p>
       <p ><span >Italian law requires website operators, in certain cases, to inform users about cookies and other tracking methods that may be used to record certain data each time users access a website. Since our website also uses such tools, we hereby disclose the procedures we use to collect this information.</span></p>
-      <p ><span >This document is addressed to all those who interact with the web services accessible by People First S.r.l., Viale Giulio Cesare n. 71, 00192 - Rome, VAT number and tax code: 16334941008 (the &ldquo;<strong>Data Controller</strong>&rdquo;).</span></p>
+      <p ><span >This document is addressed to all those who interact with the web services accessible by People First S.r.l., Viale Giulio Cesare n. 71, 00192 - Rome, VAT number and tax code: 16334941008 (the &ldquo;<strong>Data Controller</strong>&rdquo;).</span></p><br />
+
       <p ><strong><span >WHAT ARE COOKIES, WEB BEACONS AND SIMILAR TECHNOLOGIES?</span></strong></p>
       <p ><span >Like almost all websites, we use small data files that are stored on your device (&quot;<strong>Device</strong>&quot;) to record certain data whenever you access or interact with our web services (such as: websites, mobile apps, applications and tools).</span></p>
       <p ><span >The specific names and types of cookies, web beacons and other similar technologies used may change over time. To help you better understand the Data Controller&apos;s rules and the use of these technologies, here are some terms and their definitions.</span></p>
       <ol start="1" >
         <li><u><span >Cookies</span></u><span >&nbsp;- Small text files (usually consisting of letters and numbers) that are stored in the memory of your browser or Device when you visit a site or view a message. Cookies allow a site to recognise a particular Device or browser. Cookies can be disabled or removed using the tools available in most browsers. Cookie preferences must be set separately for each browser you use, as each browser offers specific features and options. The different types of cookies are listed below.</span></li>
+
+        <ul >
+          <li><em><span >Technical cookies</span></em><span >: these types of cookies come from the website you are viewing and may be permanent or temporary; they can be used to store information that will be reused the next time you visit the site. They can be useful to make browsing websites quick and easy (for example, they help facilitate certain procedures when shopping online, when logging in to restricted areas, when recognising the language used to read information on the web). Depending on the service they are intended to provide, they may be temporary (they are removed from the computer when the browser is closed), or permanent (they remain stored on the computer even after closing the browser).</span></li>
+          <li><em><span >Profiling cookies</span></em><span >: these are designed to create profiles on the user and are used to send advertising messages in line with the preferences expressed by the user when browsing online.</span></li>
+          <li><em><span >Third-party cookies</span></em><span >: these are installed by a site other than the one you are visiting. These cookies are sent to your browser by third party companies for their own purposes such as profiling, advertising delivery or social interaction.</span></li>
+        </ul>
+        <ul>
+          <li><em><span >Third-party cookies that are independent of the Data Controller</span></em><span >: these are installed on your browser by companies and third parties that act independently of the Data Controller for their own purposes. These cookies, including social network cookies, are used by these companies to analyse the navigation, activities and preferences of users and/or to profile them independently of the needs of the services we are providing. These cookies also include cookies from companies that are members of the Interactive Advertising Bureau (IAB), the self-regulatory organisation that develops standards and represents those involved in the online advertising industry.</span></li>
+        </ul>
       </ol>
-      <ul >
-        <li><em><span >Technical cookies</span></em><span >: these types of cookies come from the website you are viewing and may be permanent or temporary; they can be used to store information that will be reused the next time you visit the site. They can be useful to make browsing websites quick and easy (for example, they help facilitate certain procedures when shopping online, when logging in to restricted areas, when recognising the language used to read information on the web). Depending on the service they are intended to provide, they may be temporary (they are removed from the computer when the browser is closed), or permanent (they remain stored on the computer even after closing the browser).</span></li>
-        <li><em><span >Profiling cookies</span></em><span >: these are designed to create profiles on the user and are used to send advertising messages in line with the preferences expressed by the user when browsing online.</span></li>
-        <li><em><span >Third-party cookies</span></em><span >: these are installed by a site other than the one you are visiting. These cookies are sent to your browser by third party companies for their own purposes such as profiling, advertising delivery or social interaction.</span></li>
-      </ul>
-      <ul>
-        <li><em><span >Third-party cookies that are independent of the Data Controller</span></em><span >: these are installed on your browser by companies and third parties that act independently of the Data Controller for their own purposes. These cookies, including social network cookies, are used by these companies to analyse the navigation, activities and preferences of users and/or to profile them independently of the needs of the services we are providing. These cookies also include cookies from companies that are members of the Interactive Advertising Bureau (IAB), the self-regulatory organisation that develops standards and represents those involved in the online advertising industry.</span></li>
-      </ul>
       <ol start="2" >
         <li><u><span >Web beacons</span></u><span >&nbsp;- Fragments of code that allow a website to transfer or collect information through the request of a graphic image; they can be used for a variety of purposes, such as analyzing website usage, monitoring and reporting on advertisements, and customizing advertisements and content.</span></li>
         <li><u><span >Similar Technologies</span></u><span >&nbsp;- Technologies that store data in the browser or Device using locally shared objects or local storage, such as flash cookies, HTML 5 cookies and other web application software methods. These technologies work in all browsers. In some cases, the use of local storage cannot be fully managed by browsers, but requires management by specific tools.</span></li>
@@ -57,7 +59,8 @@ const CookiePolicies_en = () => {
       <p ><span >These cookies are processed in an aggregate and anonymous form to monitor the most visited areas of the Site, to improve its content and to assess its correct functioning.</span></p>
       <p ><a href="https://docs.microsoft.com/en-us/clarity/cookie-list"><span >Microsoft clarity</span></a></p>
       <p ><span >The Data Controller also uses the Analyticsl analysis services of Microsoft Clarity, which are carried out by installing analytics cookies (including _clsk, _clck_ and MUID) on the visitor&apos;s browser.</span></p>
-      <p ><span >These cookies are inserted by the installation script that the Data Controller has installed to run Clarity, without allowing the Data Controller or Microsoft to uniquely identify individual visitors.&nbsp;</span></p>
+      <p ><span >These cookies are inserted by the installation script that the Data Controller has installed to run Clarity, without allowing the Data Controller or Microsoft to uniquely identify individual visitors.&nbsp;</span></p><br />
+
       <p ><strong><span >COOKIE MANAGEMENT</span></strong></p>
       <p ><span >In compliance with the directives of Legislative Decree no. 196/2003 as amended. (&quot;<strong>Privacy Code</strong>&quot;) and, in particular, its articles 13.3 and 122.1, with reference to the provision of Identification of the simplified procedures for the information and acquisition of consent for the use of cookies of 8 May 2014, you can change at any time your preferences and any consent given to the installation of cookies - profiling and advertising - directly through the CMP (&quot;<strong>Consent Management Platform</strong>&quot;) accessible at the bottom left of the screen. The CMP adopted by the Data Controller and installed on the Site complies with the &quot;<em>Linee Guida&nbsp;</em><em>sull&rsquo;utilizzo di Cookies e di altri strumenti di tracciamento</em>&quot; issued by the Italian Data Protection Authority on 10 June 2021.</span></p>
       <p ><span >The Data Controller will keep track of the User&apos;s consent by means of a specific technical cookie, considered by the Privacy Guarantor to be a &quot;not particularly invasive&quot; tool. Through the CMP, the User may deny his/her consent and/or change his/her options regarding the use of cookies by the Controller&apos;s Site at any time.&nbsp;</span></p>
@@ -66,13 +69,15 @@ const CookiePolicies_en = () => {
       <p ><a href="http://www.youronlinechoices.com/"><span >http://www.youronlinechoices.com/</span></a><span >&nbsp;</span></p>
       <p ><a href="http://www.allaboutcookies.org/"><span >http://www.allaboutcookies.org/</span></a><span >&nbsp;</span></p>
       <p ><a href="https://www.cookiechoices.org/"><span >https://www.cookiechoices.org/</span></a><span >&nbsp;</span></p>
-      <p ><a href="http://www.garanteprivacy.it/web/guest/home/docweb/-/docweb-%20display/docweb/3118884"><span >http://www.garanteprivacy.it/web/guest/home/docweb/-/docweb- display/docweb/3118884</span></a><span >&nbsp;</span></p>
+      <p ><a href="http://www.garanteprivacy.it/web/guest/home/docweb/-/docweb-%20display/docweb/3118884"><span >http://www.garanteprivacy.it/web/guest/home/docweb/-/docweb- display/docweb/3118884</span></a><span >&nbsp;</span></p><br />
+
       <p ><strong><span >YOUR RIGHTS</span></strong></p>
       <p ><span >You have the right at any time to exercise the rights recognised by Articles 15 et seq. of the GDPR and, in particular, to obtain a copy of the processed data, their updating, information on their origin, the purpose and method of processing, their rectification or integration, their cancellation, transformation into anonymous form or blocking for processing in violation of the law and to oppose for legitimate reasons the processing.</span></p>
-      <p ><span >To exercise these rights, you can contact the Data Controller at the following e-mail address:&nbsp;</span><a href="mailto:job@beije.it"><span >job@beije.it</span></a><span >.</span></p>
+      <p ><span >To exercise these rights, you can contact the Data Controller at the following e-mail address:&nbsp;</span><a href="mailto:job@beije.it"><span >job@beije.it</span></a><span >.</span></p><br />
+
       <p ><strong><span >HOW TO DISABLE/DELETE COOKIES THROUGH THE BROWSER CONFIGURATION</span></strong></p>
       <p ><span >Below, to help you manage your preferences, we report the procedures for disabling/deleting cookies through the main browsers.</span></p>
-      <p ><u><span >Google Chrome</span></u></p>
+      <p>a.&nbsp; &nbsp; &nbsp; &nbsp;<u>Google Chrome</u></p>
       <p ><span >After launching the browser, click on the menu in the browser toolbar next to the url entry window for browsing</span></p>
       <p ><span >Select Settings</span></p>
       <p ><span >Click on Show Advanced Settings</span></p>
@@ -85,7 +90,7 @@ const CookiePolicies_en = () => {
       <p ><span >Manage exceptions for certain websites</span></p>
       <p ><span >Delete one or all cookies</span></p>
       <p ><span >For more information, please visit&nbsp;</span><a href="https://support.google.com/accounts/answer/61416?hl=en"><span >this page</span></a></p>
-      <p ><u><span >Mozilla Firefox</span></u></p>
+      <p>b.&nbsp; &nbsp; &nbsp;&nbsp;<u>Mozilla Firefox</u></p>
       <p ><span >After launching the browser, click on the menu on the browser toolbar next to the url entry window for browsing</span></p>
       <p ><span >Select Options, Privacy panel and click on Show Advanced Settings</span></p>
       <p ><span >In the Privacy section click on Content Settings button</span></p>
@@ -97,16 +102,16 @@ const CookiePolicies_en = () => {
       <p ><span >Enable &quot;Use custom settings&quot; to select to accept third-party cookies (always, from the most visited sites, or never) and to keep them for a specified period (until they expire, when Firefox closes, or to ask each time)</span></p>
       <p ><span >Remove individual stored cookies</span></p>
       <p ><span >For more information, visit&nbsp;</span><a href="https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop?redirectslug=enable-and-disable-cookies-website-preferences&redirectlocale=en-US"><span >this page</span></a><span >.</span></p>
-      <p ><u><span >Safari&nbsp;</span></u></p>
+      <p>c.&nbsp; &nbsp; &nbsp; &nbsp;<u>Safari</u></p>
       <p ><span >After launching the browser, click on Safari, select Preferences and click on Privacy</span></p>
       <p ><span >In the Cookies and website data section select &apos;Block all cookies&apos; or &apos;Manage website data&apos; to see which sites have stored cookies and remove all or part of them</span></p>
       <p ><span >For more information, visit&nbsp;</span><a href="https://support.apple.com/it-it/guide/safari/sfri11471/mac"><span >this page</span></a><span >.</span></p>
-      <p ><u><span >Safari iOS (mobile devices)</span></u></p>
+      <p>d.&nbsp; &nbsp; &nbsp;&nbsp;<u>Safari iOS (dispositivi mobile)</u></p>
       <p ><span >After launching your browser, tap on Settings and then Safari</span></p>
       <p ><span >Tap on Block Cookies and choose from the options: &quot;Never&quot;, &quot;Third-party and advertisers&quot; or &quot;Always&quot;.</span></p>
       <p ><span >To clear all cookies stored by Safari, tap on Settings, then Safari and then Clear Cookies and Data</span></p>
       <p ><span >For more information, visit&nbsp;</span><a href="https://support.apple.com/en-us/HT201265"><span >this page</span></a><span >.</span></p>
-      <p ><u><span >Opera</span></u></p>
+      <p>e.&nbsp; &nbsp; &nbsp; &nbsp;<u>Opera</u></p>
       <p ><span >After launching the browser, click on Preferences, then Advanced and finally Cookie</span></p>
       <p ><span >Select one of the following options:</span></p>
       <p ><span >Accept all cookies</span></p>
@@ -114,7 +119,6 @@ const CookiePolicies_en = () => {
       <p ><span >Never accept cookies: all cookies will never be saved</span></p>
       <p ><span >For more information, please visit&nbsp;</span><a href="https://help.opera.com/en/latest/web-preferences/"><span >this page</span></a><span >.&nbsp;</span></p>
       <p ><span >&nbsp;</span></p>
-      <p><span ><br />&nbsp;</span><span ><br />&nbsp;</span><span ><br />&nbsp;</span><span ><br />&nbsp;</span><span ><br />&nbsp;</span></p>
       <p ><span >&nbsp;</span></p>
       <p ><strong><span >COOKIE USED</span></strong></p>
       <table >
