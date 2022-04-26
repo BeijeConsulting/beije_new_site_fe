@@ -19,3 +19,4 @@ Library:
   pdf reader - https://www.npmjs.com/package/pdfreader
   material-ui-carousel - https://www.npmjs.com/package/react-material-ui-carousel
   react-ga4 - https://www.npmjs.com/package/react-ga4
+  react-router-sitemap - https://www.npmjs.com/package/react-router-sitemap

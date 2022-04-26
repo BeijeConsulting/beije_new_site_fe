@@ -39,7 +39,8 @@ const CustomForm = (props) => {
     btnLoading: false,
     toastShow: false,
     modalIsOpen: false,
-    toastState: null
+    toastState: null,
+    value_cv: ''
   });
 
   const reCaptchaChange = (value) => {
@@ -90,7 +91,7 @@ const CustomForm = (props) => {
     onSubmit: (values) => {
       formikContacts.resetForm();
       state.captcha.reset();
-      setGaEvent({category: `Mail subject: ${props.titlePage}`, action:"send form"});
+      setGaEvent({ category: `Mail subject: ${props.titlePage}`, action: "send form" });
       sendDataForm(values);
     }
   });
@@ -157,11 +158,26 @@ const CustomForm = (props) => {
   }
 
   const uploadFile = async () => {
-    const file_base64 = await toBase64(uploadedFile.current.files[0]);
+    const file = uploadedFile.current.files[0]
+
+    let msg_error_cv = null
+    let value_cv = uploadedFile.current.value
+
+    if (file.size > 5000000) {
+      msg_error_cv = t("form.messageCv_errorSize")
+      value_cv = ''
+    }
+    else if (!["application/pdf", "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "application/msword"].includes(file.type)) {
+      msg_error_cv = t("form.messageCv_errorType")
+      value_cv = ''
+    }
+    const file_base64 = await toBase64(file);
+
     setState(prevState => ({
       ...prevState,
-      fileName: uploadedFile.current.files[0].name,
-      base64Value: file_base64
+      fileName: msg_error_cv === null ? file.name : msg_error_cv,
+      base64Value: file_base64,
+      value_cv: value_cv
     }));
   }
 
@@ -374,6 +390,7 @@ const CustomForm = (props) => {
               >
                 <input
                   ref={uploadedFile}
+                  accept={"application/pdf, application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/msword"}
                   type="file"
                   id="uploadCV"
                   name="uploadCV"
@@ -384,7 +401,9 @@ const CustomForm = (props) => {
                   htmlFor="uploadCV"
                   className="button-form-primary cursor-pointer"
                 >{t("btn.attachCv")}</label>
-                <span id="file-chosen">{state.fileName}</span>
+                <span id="file-chosen">
+                  {state.fileName}
+                </span>
               </Grid>
             }
 
@@ -456,7 +475,7 @@ const CustomForm = (props) => {
                 type={"btn-form-primary"}
                 content={state.btnLoading ? <CircularProgress size={24} /> : t("btn.send")}
                 callback={formikContacts.submitForm}
-                disabled={!(state.captchaCheck && formikContacts.isValid && formikContacts.dirty)}
+                disabled={!(state.captchaCheck && formikContacts.isValid && formikContacts.dirty && state.value_cv)}
               />
             </Grid>
           </form>

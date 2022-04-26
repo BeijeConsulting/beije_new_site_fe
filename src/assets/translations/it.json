@@ -105,6 +105,8 @@
       }
     },
     "messageCv": "Nessun file selezionato",
+    "messageCv_errorType": "Il file non è supportato, le estensioni consentite sono '.doc', '.docx' e '.pdf'",
+    "messageCv_errorSize": "Il file è troppo pesante, il massimo consentito è 5MB",
     "infoFields": "* Campi obbligatori"
   },
   "altImages": {
