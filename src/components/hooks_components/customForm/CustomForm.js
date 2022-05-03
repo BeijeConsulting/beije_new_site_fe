@@ -475,7 +475,7 @@ const CustomForm = (props) => {
                 type={"btn-form-primary"}
                 content={state.btnLoading ? <CircularProgress size={24} /> : t("btn.send")}
                 callback={formikContacts.submitForm}
-                disabled={!(state.captchaCheck && formikContacts.isValid && formikContacts.dirty && state.value_cv)}
+                disabled={!(state.captchaCheck && formikContacts.isValid && formikContacts.dirty && (props.cvForm ? state.value_cv : true))}
               />
             </Grid>
           </form>
