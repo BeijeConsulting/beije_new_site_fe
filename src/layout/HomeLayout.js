@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 // Redux
 import { connect } from "react-redux";
@@ -20,6 +21,7 @@ import CustomHeader from "../components/hooks_components/customHeader/CustomHead
 import CustomFooter from "../components/hooks_components/customFooter/CustomFooter";
 import HideOnScroll from "../components/functional_components/ui/hideOnScroll/HideOnScroll";
 import BackToTopButton from "../components/functional_components/ui/backToTopButton/BackToTopButton";
+import ToastMessage from "../components/hooks_components/toastMessage/ToastMessage";
 
 const HomeLayout = (props) => {
 
@@ -27,6 +29,8 @@ const HomeLayout = (props) => {
     isMobile: window.innerWidth < 1024,
     isLittleMobile: window.innerWidth < 700
   })
+
+  const { t } = useTranslation()
 
   useEffect(() => {
     window.addEventListener("resize", updateMedia);
@@ -147,6 +151,20 @@ const HomeLayout = (props) => {
       <footer>
         <CustomFooter />
       </footer>
+
+
+      <ToastMessage
+        anchorvertical="bottom"
+        anchorHorizontal="right"
+        open={props.toastMessageDuck.showToast}
+        autoHideDuration={6000}
+        severity={props.toastMessageDuck.toastState}
+        successMessage1={t("form.toastMessage.success.txt1")}
+        successMessage2={t("form.toastMessage.success.txt2")}
+        errorMessage1={t("form.toastMessage.error.txt1")}
+        errorMessage2={t("form.toastMessage.error.txt2")}
+      />
+
     </Box >
   );
 }
@@ -155,7 +173,8 @@ const mapStateToProps = state => (
   {
     burgerMenuDuck: state.burgerMenuDuck,
     colorHeaderDuck: state.colorHeaderDuck,
-    currentPageDuck: state.currentPageDuck
+    currentPageDuck: state.currentPageDuck,
+    toastMessageDuck: state.toastMessageDuck
   }
 )
 

@@ -6,12 +6,13 @@ import * as yup from 'yup';
 
 // Redux
 import { connect } from "react-redux";
+import { setToastMessage, initToastMessage } from "../../../redux/ducks/toastMessageDuck";
 
 // Api
 import ApiCalls from "../../../services/api/ApiCalls";
 
 // MUI
-import { Grid, Box, TextField, TextareaAutosize, FormControlLabel, Checkbox, CircularProgress, Snackbar, Alert } from "@mui/material";
+import { Grid, Box, TextField, TextareaAutosize, FormControlLabel, Checkbox, CircularProgress } from "@mui/material";
 
 // Style
 import "./CustomForm.css";
@@ -37,9 +38,7 @@ const CustomForm = (props) => {
     fileName: t("form.messageCv"),
     base64Value: null,
     btnLoading: false,
-    toastShow: false,
     modalIsOpen: false,
-    toastState: null,
     value_cv: ''
   });
 
@@ -68,8 +67,6 @@ const CustomForm = (props) => {
       .required(t("form.errorMessage.email")),
     number: yup
       .number(t("form.errorMessage.numberInvalid")),
-    // message: yup
-    //   .string('Enter your name'),
     agreement: yup
       .boolean()
       .oneOf([true], t("form.errorMessage.agreement"))
@@ -117,29 +114,19 @@ const CustomForm = (props) => {
     }
     let responseForm = await ApiCalls.form_sendForm(formData);
 
-    let toastShow = false;
-    let toastState = null
+    props.dispatch(initToastMessage())
 
     if (responseForm.success) {
-      toastShow = true
-      toastState = "success"
+      props.dispatch(setToastMessage(true, 'success'))
     }
     else {
-      toastState = "error"
+      props.dispatch(setToastMessage(true, 'error'))
     }
 
     setState({
       ...state,
       btnLoading: false,
       toastShow: true,
-      toastState: toastState
-    })
-  }
-
-  const handleCloseToast = () => {
-    setState({
-      ...state,
-      toastShow: false
     })
   }
 
@@ -224,22 +211,6 @@ const CustomForm = (props) => {
         md={8}
       >
         <Box >
-          <Snackbar
-            anchorOrigin={{
-              vertical: "bottom",
-              horizontal: "right"
-            }}
-            open={state.toastShow}
-            autoHideDuration={6000}
-          >
-            <Alert onClose={handleCloseToast} severity={state.toastState} sx={{ width: '100%' }}>
-              <span>
-                {state.toastState === "success" ? t("form.toastMessage.success.txt1") : t("form.toastMessage.error.txt1")}
-                <br />
-                {state.toastState === "success" ? t("form.toastMessage.success.txt2") : t("form.toastMessage.error.txt2")}
-              </span>
-            </Alert>
-          </Snackbar>
           <form>
 
             {/* Nome */}
@@ -324,7 +295,7 @@ const CustomForm = (props) => {
                   id="number"
                   name="number"
                   label={t("form.placeholder.number")}
-                  type="number"
+                  type="tel"
                   value={formikContacts.values.number}
                   error={formikContacts.touched.number && Boolean(formikContacts.errors.number)}
                   onChange={formikContacts.handleChange}
@@ -335,28 +306,6 @@ const CustomForm = (props) => {
                   className="form-field"
                 />
               </Grid>
-
-              {/* {!props.cvForm &&
-                <Grid
-                  item
-                  xs={3}
-                >
-                  <TextField
-                    id="town"
-                    name="town"
-                    label={t("form.placeholder.town")}
-                    type="text"
-                    value={formikContacts.values.town}
-                    error={formikContacts.touched.town && Boolean(formikContacts.errors.town)}
-                    onChange={formikContacts.handleChange}
-                    onBlur={formikContacts.handleBlur}
-
-                    variant="standard"
-                    size="normal"
-                    className="form-field"
-                  />
-                </Grid>
-              } */}
 
             </Grid>
 
@@ -372,7 +321,6 @@ const CustomForm = (props) => {
                   type="text"
                   placeholder={t("form.placeholder.message")}
                   value={formikContacts.values.message}
-                  // error={formikContacts.touched.message && Boolean(formikContacts.errors.message)}
                   onChange={formikContacts.handleChange}
                   onBlur={formikContacts.handleBlur}
 
