@@ -17,6 +17,7 @@ import Community from "./screens/community/Community";
 import CommunityDetail from "./screens/community/CommunityDetail";
 import CareerDetail from "./screens/career/CareerDetail";
 import CaseStudiesDetail from "./screens/up/CaseStudiesDetail";
+import TeamBeije from "./screens/teamBeije/TeamBeije";
 import ErrorPage from "./screens/ErrorPage";
 
 export default [
@@ -72,6 +73,10 @@ export default [
       {
         path: "/career/career-detail",
         element: <RequireCareerPermalink><CareerDetail /></RequireCareerPermalink>
+      },
+      {
+        path: "/team-beije",
+        element: <TeamBeije />
       },
       {
         path: "/contacts",

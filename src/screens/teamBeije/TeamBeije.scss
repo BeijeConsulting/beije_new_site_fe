@@ -1,0 +1,109 @@
+.teamBeije_grid_container {
+  display: grid;
+  width: 100%;
+  margin: 0 auto;
+  grid-template-columns: auto auto;
+  grid-gap: 20px;
+  justify-items: center;
+  justify-content: center;
+
+  .teamBeije_grid_item_text {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    span {
+      font-size: 170px;
+    }
+  }
+}
+
+.teamBeije_modal {
+  margin: auto;
+  height: 300px;
+  width: 300px;
+  position: relative;
+
+  .teamBeije_modal_content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: var(--dark-grey);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 80%;
+    border-radius: 8px;
+  }
+
+  .teamBeije_modal_header {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .teamBeije_modal_body_container {
+    padding: 0 10px;
+
+    .teamBeije_modal_body {
+      position: absolute;
+      top: 70%;
+      color: #fff;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .teamBeije_grid_container {
+    grid-template-columns: auto auto auto auto;
+
+    .teamBeije_grid_item_text {
+      grid-column-start: 2;
+      grid-column-end: 4;
+
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .modal-content {
+    padding: 0 40px;
+  }
+}
+
+@media (min-width: 900px) {
+  .teamBeije_grid_container {
+    grid-template-columns: auto auto auto auto auto auto;
+
+    .teamBeije_grid_item_text {
+      grid-column-start: 3;
+      grid-column-end: 5;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .teamBeije_grid_container {
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+
+    .teamBeije_grid_item_text {
+      grid-column-start: 4;
+      grid-column-end: 6;
+    }
+  }
+}

@@ -60,7 +60,8 @@
     "build:test": "env-cmd -f .env.test npm run-script build",
     "build:prod": "env-cmd -f .env.prod npm run-script build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "serve-json": "json-server --watch db.json --port 4000"
   },
   "eslintConfig": {
     "extends": [

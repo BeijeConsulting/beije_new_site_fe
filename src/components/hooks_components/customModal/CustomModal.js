@@ -10,8 +10,12 @@ import { Modal, Backdrop, Fade, Box } from "@mui/material";
 // Style
 import "./CustomModal.css";
 
+// Constants and assets
+import { xIcon } from "../../../utils/properties";
+
 // Components
 import CustomButton from "../../functional_components/ui/customButton/CustomButton";
+import CustomIconButton from "../../functional_components/ui/customIconButton/CustomIconButton";
 
 const CustomModal = (props) => {
   const { t } = useTranslation()
@@ -38,39 +42,58 @@ const CustomModal = (props) => {
           BackdropProps={{
             timeout: 500,
           }}
-          className={"modal-container"}
+          className={props.classNameContainer}
         >
           {/* <Fade in={props.modalDuck.modalOpen}> */}
           <Fade in={props.stateModal}>
             <Box
-              className={"modal-txt-container"}
+              className={props.classNameTxtContainer}
             >
               {/* Modal header */}
               <Box
-                className={"modal-header"}
+                className={props.classNameHeader}
               >
                 <h4>{props.modalTitle}</h4>
+                {
+                  props.closingX &&
+                  <CustomIconButton
+                    aria-label={"closing-button"}
+                    callback={heandleClose}
+                    iconFontAwsome={xIcon}
+                  />
+                }
               </Box>
               {/* Modal content */}
-              <Box className="modal-content">
+              <Box className={props.classNameChildrenContainer}>
                 {props.children}
               </Box>
 
               {/* Modal footer */}
-              <Box className="modal-footer">
-                <CustomButton
-                  type={"btn-form-primary"}
-                  content={t("modal.btn")}
-                  // callback={closeModal}
-                  callback={heandleClose}
-                />
-              </Box>
+              {props.footer &&
+                <Box className="modal-footer">
+                  <CustomButton
+                    type={"btn-form-primary"}
+                    content={t("modal.btn")}
+                    // callback={closeModal}
+                    callback={heandleClose}
+                  />
+                </Box>
+              }
             </Box>
           </Fade>
         </Modal>
       }
     </>
   )
+}
+
+CustomModal.defaultProps = {
+  classNameContainer: "modal-container",
+  classNameTxtContainer: "modal-txt-container",
+  footer: true,
+  closingX: false,
+  classNameHeader: "modal-header",
+  classNameChildrenContainer: "modal-content"
 }
 
 const mapStateToProps = state => (

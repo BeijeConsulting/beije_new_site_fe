@@ -81,6 +81,9 @@ const HomeLayout = (props) => {
       case "contacts":
         classNameBgLayout = "homeLayout-fixed-bg bg-dark-grey"
         break;
+      case "teamBeije":
+        classNameBgLayout = "homeLayout-fixed-bg bg-dark-grey"
+        break;
       case "noMatch":
         classNameBgLayout = "homeLayout-fixed-bg bg-dark-grey"
         break;

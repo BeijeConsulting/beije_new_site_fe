@@ -4,7 +4,7 @@ import 'moment/locale/it';
 // Assets
 
 import { faFacebookF, faLinkedinIn, faYoutube } from '@fortawesome/free-brands-svg-icons';
-import { faN, faArrowDownLong, faAngleLeft, faAngleRight, faPlus, faArrowLeft, faMinus, faClock } from '@fortawesome/free-solid-svg-icons';
+import { faN, faArrowDownLong, faAngleLeft, faAngleRight, faPlus, faArrowLeft, faMinus, faClock, faXmark } from '@fortawesome/free-solid-svg-icons';
 import quotation_mark from "../assets/icons/quote.svg";
 import logo_pininfarina from "../assets/images/up/caseStudies/pininfarina.jpg";
 import logo_youthquake from "../assets/images/up/caseStudies/youthquake.jpg";
@@ -85,6 +85,7 @@ export const clock = faClock;
 export const logo_fondazione_lavoro = "https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/academy/fondazione_lavoro_logo.png";
 export const career_empty_academy = empty_academy
 export const career_empty_job = empty_job
+export const xIcon = faXmark
 
 export const linkYoutube = linkYt;
 

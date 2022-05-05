@@ -31,6 +31,10 @@ const ApiCalls = {
   },
   community_getListDetail: (permalink) => {
     return get(`community/${permalink}`);
+  },
+
+  team_getList: () => {
+    return get('http://localhost:4000/teams')
   }
 }
 export default ApiCalls
