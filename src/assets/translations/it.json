@@ -411,12 +411,12 @@
   "academyFrontend": {
     "title": "Frontend",
     "titleParagraph1": "Diventa Frontend developer con noi!",
-    "paragraph1Txt": "3 mesi di crescita professionale, formazione costante attraverso progetti individuali e di gruppo, utilizzo delle tecnologie più richieste dal mercato.",
+    "paragraph1Txt": "4 mesi di crescita professionale, formazione costante attraverso progetti individuali e di gruppo, utilizzo delle tecnologie più richieste dal mercato.",
     "titleParagraph2": "Struttura",
     "table": {
       "row1Title": "Durata",
       "row3Title": "Modalità",
-      "row1Desc": "Academy di 3 mesi retribuita",
+      "row1Desc": "Academy di 4 mesi retribuita",
       "row3Desc": "Remoto"
     },
     "program": {
@@ -461,12 +461,12 @@
   "academyBackend": {
     "title": "Backend",
     "titleParagraph1": "Diventa Java developer con noi!",
-    "paragraph1Txt": "3 mesi di crescita professionale, formazione costante attraverso progetti individuali e di gruppo, utilizzo delle tecnologie più richieste dal mercato.",
+    "paragraph1Txt": "4 mesi di crescita professionale, formazione costante attraverso progetti individuali e di gruppo, utilizzo delle tecnologie più richieste dal mercato.",
     "titleParagraph2": "Struttura",
     "table": {
       "row1Title": "Durata",
       "row3Title": "Modalità",
-      "row1Desc": "Academy di 3 mesi retribuita",
+      "row1Desc": "Academy di 4 mesi retribuita",
       "row3Desc": "Remoto"
     },
     "program": {
