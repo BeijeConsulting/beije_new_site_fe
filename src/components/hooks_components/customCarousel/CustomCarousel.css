@@ -80,6 +80,10 @@
   background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/francesco_cesana_mobile.jpg");
 }
 
+.carousel-bg-giorgia-marletta {
+  background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/giorgia_marletta_mobile.jpg");
+}
+
 .carousel-bg-erica-mauro {
   background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/erica_mauro_mobile.jpg");
 }
@@ -150,6 +154,10 @@
   /* for home */
   .carousel-bg-francesco-cesana {
     background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/francesco_cesana_mobile.jpg");
+  }
+
+  .carousel-bg-giorgia-marletta {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/giorgia_marletta_tablet.jpg");
   }
 
   .carousel-bg-erica-mauro {
@@ -242,6 +250,10 @@
   /* for home */
   .carousel-bg-francesco-cesana {
     background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/francesco_cesana_desktop.jpg");
+  }
+
+  .carousel-bg-giorgia-marletta {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/giorgia_marletta_desktop.jpg");
   }
 
   .carousel-bg-erica-mauro {

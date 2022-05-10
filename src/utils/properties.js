@@ -462,6 +462,15 @@ export const carouselProfile = [
   },
   {
     id: 2,
+    name: 'Giorgia',
+    surname: 'Marletta',
+    role: 'HR Manager',
+    description: "home.fifthSection.carouselProfile.giorgia_marletta.desc",
+    alt: 'GiorgiaMarletta',
+    pictureClassName: "carousel-bg-giorgia-marletta",
+  },
+  {
+    id: 3,
     name: 'Erica',
     surname: 'Mauro',
     role: 'Sales manager',
@@ -470,7 +479,7 @@ export const carouselProfile = [
     pictureClassName: "carousel-bg-erica-mauro",
   },
   {
-    id: 3,
+    id: 4,
     name: 'Chiara',
     surname: 'Balsamini',
     role: 'Talent Consultant',
@@ -479,7 +488,7 @@ export const carouselProfile = [
     pictureClassName: "carousel-bg-chiara-balsamini",
   },
   {
-    id: 4,
+    id: 5,
     name: 'Marianna',
     surname: 'Fulginiti',
     role: 'Account Manager',
@@ -488,7 +497,7 @@ export const carouselProfile = [
     pictureClassName: "carousel-bg-marianna-fulginiti",
   },
   {
-    id: 5,
+    id: 6,
     name: 'Roberto',
     surname: 'Brogi',
     role: 'CTO & Academy Trainer',
@@ -497,7 +506,7 @@ export const carouselProfile = [
     pictureClassName: "carousel-bg-roberto-brogi",
   },
   {
-    id: 6,
+    id: 7,
     name: 'Ivo',
     surname: 'Mosca',
     role: 'CIO & Academy Trainer',
