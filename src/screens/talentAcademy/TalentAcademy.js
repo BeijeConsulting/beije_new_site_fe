@@ -32,7 +32,13 @@ const TalentAcademy = (props) => {
   const formContainer = useRef();
 
   useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
+    if (window.location.hash === '#TalentAcademy') {
+      window.scrollTo({ top: secondContainerRef.current.offsetTop, left: 0, behavior: "smooth" })
+    }
+    else {
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
+    }
+    console.log('windowlocation', window.location.hash);
     props.dispatch(setCurrentPage("academy"));
     props.dispatch(setVisibilityNavbar(true));
     return () => {

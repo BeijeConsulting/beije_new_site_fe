@@ -9,6 +9,17 @@
 
 .banner-container h2 {
   text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.banner-container-grid {
+  display: flex;
+  align-items: center;
+}
+
+.banner-container-grid-col2 {
+  display: flex;
+  flex-direction: column !important;
 }
 
 .banner-enphasis-txt {
@@ -17,6 +28,12 @@
 
 .banner-container p {
   margin: 25px 0
+}
+
+@media(min-width: 900px) {
+  .banner-container h2 {
+    margin-bottom: 30px;
+  }
 }
 
 @media(min-width: 1024px) {

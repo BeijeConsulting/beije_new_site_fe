@@ -10,6 +10,7 @@ import logo_pininfarina from "../assets/images/up/caseStudies/pininfarina.jpg";
 import logo_youthquake from "../assets/images/up/caseStudies/youthquake.jpg";
 import empty_academy from "../assets/icons/empty_academy.svg"
 import empty_job from "../assets/icons/empty_job.svg"
+import posterVideo from '../assets/images/posterVideoAcademy.jpg'
 
 // Link
 const linkFb = "https://www.facebook.com/beijepeoplefirst";
@@ -87,6 +88,7 @@ export const career_empty_academy = empty_academy
 export const career_empty_job = empty_job
 
 export const linkYoutube = linkYt;
+export const posterVideoAcademy = posterVideo;
 
 // Menu voices
 export const menu_voices = [

@@ -38,3 +38,9 @@
 .icon-btn-youtube-videos-icon-primary:hover>.icon-btn-youtube-videos-primary {
   color: var(--grey-tone-4);
 }
+
+@media(min-width:900px) {
+  .icon-btn-youtube-videos-primary {
+    align-self: flex-end;
+  }
+}
