@@ -138,15 +138,18 @@ const CustomTable = (props) => {
 
   }
 
+  // To make the acadamy list link to the existing page academy frontend and backend uncomment
   const sendToPage = (param1, param2) => {
     let response = "#";
     if (props.isAcademy) {
-      if (param1.toLowerCase() === "front-end") {
-        response = "/beije-talent-academy/academy-frontend"
-      }
-      if (param1.toLowerCase() === "back-end") {
-        response = "/beije-talent-academy/academy-backend"
-      }
+      //   if (param1.toLowerCase() === "front-end") {
+      //     response = "/beije-talent-academy/academy-frontend"
+      //   }
+      //   if (param1.toLowerCase() === "back-end") {
+      //     response = "/beije-talent-academy/academy-backend"
+      //   }
+      response = `/career/career-detail?academyOffer=${param2}`
+
     }
     else {
       response = `/career/career-detail?jobOffer=${param2}`

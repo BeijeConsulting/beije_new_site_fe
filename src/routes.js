@@ -87,8 +87,9 @@ export default [
 ];
 
 function RequireCareerPermalink({ children }) {
-  let permalink = new URLSearchParams(location.search).get("jobOffer");
-  if (!permalink) {
+  let permalink1 = new URLSearchParams(location.search).get("jobOffer");
+  let permalink2 = new URLSearchParams(location.search).get("academyOffer");
+  if (!permalink1 && !permalink2) {
     return <Navigate to={`/career`} />
   }
 
