@@ -643,5 +643,12 @@
     "shortMessage": "Error",
     "longMessage": "Sorry, an error is occured during the page loading. Please try again later!",
     "linkToHome": "Go to home"
+  },
+  "teamBeije": {
+    "title": "Beije community",
+    "description": {
+      "part1": "First of all, a community made up of people with different experiences, interests, incentive but united by one goal: the individual at the center for building a valuable system.",
+      "part2": "Discover our community: we are waiting for you, follow the change!"
+    }
   }
 }

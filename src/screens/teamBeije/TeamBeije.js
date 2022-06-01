@@ -16,8 +16,11 @@ import { setVisibilityNavbar, initVisibilityNavbar } from "../../redux/ducks/sho
 import { connect } from "react-redux";
 
 // API
-// import ApiCalls from "../../services/api/ApiCalls";
-import axios from "axios";
+import ApiCalls from "../../services/api/ApiCalls";
+// import axios from "axios";
+
+// Assets
+import { profile } from "../../utils/properties";
 
 // Components
 import CustomModal from "../../components/hooks_components/customModal/CustomModal";
@@ -45,13 +48,14 @@ const TeamBeije = (props) => {
   }, [])
 
   const getTeamData = async () => {
-    // let teamDataResponseAPI = await ApiCalls.team_getList();
-    let teamDataResponseAPI = await axios.get('http://localhost:4000/teams')
-    let teamDataResponse = teamDataResponseAPI.data;
+    let teamDataResponseAPI = await ApiCalls.team_getList();
+    console.log("teamDataResponseAPI", teamDataResponseAPI)
+    // let teamDataResponseAPI = await axios.get('http://localhost:4000/teams')
+    // let teamDataResponse = teamDataResponseAPI.data;
 
     setState({
       ...state,
-      teamDataResponse: teamDataResponse
+      teamDataResponse: teamDataResponseAPI
     })
   }
 
@@ -89,8 +93,8 @@ const TeamBeije = (props) => {
           className={"paddingX-container-general-pages blog-first-section-container d-flex justify-center"}
         >
           <Box className={"max-width-1200"}>
-            <h1>{t("blog.title")}</h1>
-            <p>{t("blog.description")}</p>
+            <h1>{t("teamBeije.title")}</h1>
+            <p>{t("teamBeije.description.part1")}<br />{t("teamBeije.description.part2")}</p>
           </Box>
         </Container>
 
@@ -131,11 +135,10 @@ const TeamBeije = (props) => {
                 <div
                   className={`teamBeije_grid_item_text`}
                 >
-                  <span>{state.teamDataResponse.length}</span>
+                  <span>{state.teamDataResponse.teamSize}</span>
                 </div>
-
                 {
-                  state.teamDataResponse.map((item, key) => (
+                  state.teamDataResponse.team.map((item, key) => (
                     <div
                       key={key}
                       className={`teamBeije_grid_items`}
@@ -143,11 +146,12 @@ const TeamBeije = (props) => {
                         width: 100,
                         height: 100,
                         margin: 5,
-                        backgroundImage: `url(${item.img})`,
+                        backgroundImage: `url(${item.picImageThumbnail ? item.picImageThumbnail : profile})`,
                         backgroundPosition: 'center',
                         backgroundSize: 'cover',
                         backgroundRepeat: 'no-repeat',
-                        borderRadius: 8
+                        borderRadius: 8,
+                        cursor: 'pointer'
                       }}
                       onClick={openCard(item)}
                     />
@@ -178,7 +182,7 @@ const TeamBeije = (props) => {
                 style={{
                   width: '100%',
                   height: '60%',
-                  backgroundImage: `url(${state.dataDetail.img})`,
+                  backgroundImage: `url(${state.dataDetail.picImage ? state.dataDetail.picImage : profile})`,
                   backgroundPosition: 'center',
                   backgroundSize: 'cover',
                   backgroundRepeat: 'no-repeat',
@@ -193,7 +197,7 @@ const TeamBeije = (props) => {
               <div
                 className="teamBeije_modal_body"
               >
-                <p>{state.dataDetail.name}</p>
+                <p>{state.dataDetail.firstName}</p>
                 <p>_{state.dataDetail.role}</p>
               </div>
             </>

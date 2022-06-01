@@ -10,6 +10,7 @@ import logo_pininfarina from "../assets/images/up/caseStudies/pininfarina.jpg";
 import logo_youthquake from "../assets/images/up/caseStudies/youthquake.jpg";
 import empty_academy from "../assets/icons/empty_academy.svg"
 import empty_job from "../assets/icons/empty_job.svg"
+import icon_profile from "../assets/icons/iconProfile.png"
 
 // Link
 const linkFb = "https://www.facebook.com/beijepeoplefirst";
@@ -86,6 +87,7 @@ export const logo_fondazione_lavoro = "https://beije-people-first.s3.eu-south-1.
 export const career_empty_academy = empty_academy
 export const career_empty_job = empty_job
 export const xIcon = faXmark
+export const profile = icon_profile;
 
 export const linkYoutube = linkYt;
 

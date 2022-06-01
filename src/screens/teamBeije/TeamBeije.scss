@@ -17,11 +17,23 @@
       font-size: 170px;
     }
   }
+
+  .teamBeije_grid_items:hover {
+    width: 100;
+    height: 100;
+    margin: 5;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 8;
+    cursor: pointer;
+    box-shadow: 0px 0px 36px -11px #fff;
+  }
 }
 
 .teamBeije_modal {
   margin: auto;
-  height: 300px;
+  height: 330px;
   width: 300px;
   position: relative;
 
@@ -62,6 +74,10 @@
       position: absolute;
       top: 70%;
       color: #fff;
+
+      p {
+        text-transform: capitalize;
+      }
     }
   }
 }
@@ -81,6 +97,10 @@
 }
 
 @media (min-width: 768px) {
+  .teamBeije_modal {
+    height: 430px;
+    width: 400px;
+  }
   .modal-content {
     padding: 0 40px;
   }
