@@ -17,7 +17,7 @@ import { connect } from "react-redux";
 
 // API
 import ApiCalls from "../../services/api/ApiCalls";
-// import axios from "axios";
+import axios from "axios";
 
 // Assets
 import { profile } from "../../utils/properties";
@@ -48,10 +48,13 @@ const TeamBeije = (props) => {
   }, [])
 
   const getTeamData = async () => {
-    let teamDataResponseAPI = await ApiCalls.team_getList();
+    // let teamDataResponseAPI = await ApiCalls.team_getList();
+    // console.log("teamDataResponseAPI", teamDataResponseAPI)
+    let teamDataResponseAPI = await axios.get('http://localhost:4000/teamBeije')
+
     console.log("teamDataResponseAPI", teamDataResponseAPI)
-    // let teamDataResponseAPI = await axios.get('http://localhost:4000/teams')
-    // let teamDataResponse = teamDataResponseAPI.data;
+
+    teamDataResponseAPI = teamDataResponseAPI.data;
 
     setState({
       ...state,
