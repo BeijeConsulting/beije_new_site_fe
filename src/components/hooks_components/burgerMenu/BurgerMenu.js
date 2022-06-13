@@ -99,6 +99,9 @@ const BurgerMenu = (props) => {
       case "blog":
         className = "burgerMenu-nav-container burgerMenu-nav-container-img burgerMenu-blog"
         break
+      case "team-beije":
+        className = "burgerMenu-nav-container burgerMenu-nav-container-img burgerMenu-community"
+        break
       case "focusAcademy":
         className = "burgerMenu-nav-container burgerMenu-nav-container-img burgerMenu-focusAcademy"
         break
