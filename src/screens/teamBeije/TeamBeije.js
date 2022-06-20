@@ -148,7 +148,7 @@ const TeamBeije = (props) => {
                         width: 100,
                         height: 100,
                         margin: 5,
-                        backgroundImage: `url(${item.picImageThumbnail ? item.picImageThumbnail : profile})`,
+                        backgroundImage: `url(${item.picImageThumbnail ? item.picImageThumbnail : item.picImage})`,
                         backgroundPosition: 'center',
                         backgroundSize: 'cover',
                         backgroundRepeat: 'no-repeat',
@@ -200,7 +200,7 @@ const TeamBeije = (props) => {
                 className="teamBeije_modal_body"
               >
                 <p>{state.dataDetail.firstName}</p>
-                <p>_{state.dataDetail.role}</p>
+                {/* <p>_{state.dataDetail.role}</p> */}
               </div>
             </>
           }
