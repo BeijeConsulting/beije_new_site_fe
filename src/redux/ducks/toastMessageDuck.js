@@ -21,7 +21,7 @@ export function initToastMessage() {
 
 const INIT_STATE = {
   showToast: false,
-  toastState: ''
+  toastState: 'info'
 }
 
 export default function toastMessageDuck(state = INIT_STATE, action) {
@@ -33,7 +33,7 @@ export default function toastMessageDuck(state = INIT_STATE, action) {
       break;
     case INIT_TOAST:
       newState.showToast = false;
-      newState.toastState = '';
+      newState.toastState = 'info';
       break;
     default:
       newState = state;

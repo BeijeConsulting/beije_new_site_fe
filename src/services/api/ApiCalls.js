@@ -34,7 +34,7 @@ const ApiCalls = {
   },
 
   team_getList: () => {
-    return get('http://localhost:4000/teams')
+    return get('team/users')
   }
 }
 export default ApiCalls

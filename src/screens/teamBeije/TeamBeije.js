@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { isEmpty } from "lodash";
 import { Helmet } from "react-helmet";
@@ -16,8 +16,11 @@ import { setVisibilityNavbar, initVisibilityNavbar } from "../../redux/ducks/sho
 import { connect } from "react-redux";
 
 // API
-// import ApiCalls from "../../services/api/ApiCalls";
-import axios from "axios";
+import ApiCalls from "../../services/api/ApiCalls";
+// import axios from "axios";
+
+// Assets
+import { profile } from "../../utils/properties";
 
 // Components
 import CustomModal from "../../components/hooks_components/customModal/CustomModal";
@@ -28,7 +31,8 @@ const TeamBeije = (props) => {
   const [state, setState] = useState({
     teamDataResponse: null,
     dataDetail: null,
-    modalIsOpen: false
+    modalIsOpen: false,
+    startNumber: 0
   })
 
   useEffect(() => {
@@ -45,14 +49,35 @@ const TeamBeije = (props) => {
   }, [])
 
   const getTeamData = async () => {
-    // let teamDataResponseAPI = await ApiCalls.team_getList();
-    let teamDataResponseAPI = await axios.get('http://localhost:4000/teams')
-    let teamDataResponse = teamDataResponseAPI.data;
+    let teamDataResponseAPI = await ApiCalls.team_getList();
+    // let teamDataResponseAPI = await axios.get('http://localhost:4000/teamBeije')
+
+    // console.log("teamDataResponseAPI", teamDataResponseAPI)
+
+    // teamDataResponseAPI = teamDataResponseAPI.data;
 
     setState({
       ...state,
-      teamDataResponse: teamDataResponse
+      teamDataResponse: teamDataResponseAPI
     })
+  }
+
+  useEffect(() => {
+    if (state.teamDataResponse?.teamSize) {
+      console.log("sono dentro");
+      incriseNumber()
+    }
+  })
+
+  const incriseNumber = () => {
+    setTimeout(() => {
+      if (state.startNumber < state.teamDataResponse.teamSize) {
+        setState({
+          ...state,
+          startNumber: state.startNumber + 1
+        })
+      }
+    }, 15)
   }
 
   const openCard = (idElement) => () => {
@@ -89,8 +114,8 @@ const TeamBeije = (props) => {
           className={"paddingX-container-general-pages blog-first-section-container d-flex justify-center"}
         >
           <Box className={"max-width-1200"}>
-            <h1>{t("blog.title")}</h1>
-            <p>{t("blog.description")}</p>
+            <h1>{t("teamBeije.title")}</h1>
+            <p>{t("teamBeije.description.part1")}<br />{t("teamBeije.description.part2")}<span className="teamBeije_animated_txt">{t("teamBeije.description.part3")}</span></p>
           </Box>
         </Container>
 
@@ -131,26 +156,31 @@ const TeamBeije = (props) => {
                 <div
                   className={`teamBeije_grid_item_text`}
                 >
-                  <span>{state.teamDataResponse.length}</span>
+                  <span>{state.startNumber}</span>
                 </div>
-
                 {
-                  state.teamDataResponse.map((item, key) => (
+                  state.teamDataResponse.team.map((item, key) => (
                     <div
                       key={key}
-                      className={`teamBeije_grid_items`}
-                      style={{
-                        width: 100,
-                        height: 100,
-                        margin: 5,
-                        backgroundImage: `url(${item.img})`,
-                        backgroundPosition: 'center',
-                        backgroundSize: 'cover',
-                        backgroundRepeat: 'no-repeat',
-                        borderRadius: 8
-                      }}
-                      onClick={openCard(item)}
-                    />
+                      className={`teamBeije_grid_items_container`}
+                    >
+                      <div
+                        className={`teamBeije_grid_items`}
+                        style={{
+                          width: 100,
+                          height: 100,
+                          margin: 5,
+                          backgroundImage: `url(${item.picImageThumbnail ? item.picImageThumbnail : item.picImage})`,
+                          backgroundPosition: 'center',
+                          backgroundSize: 'cover',
+                          backgroundRepeat: 'no-repeat',
+                          borderRadius: 8,
+                          cursor: 'pointer'
+                        }}
+                        onClick={openCard(item)}
+                      />
+                    </div>
+
                   ))
                 }
               </div>
@@ -178,7 +208,7 @@ const TeamBeije = (props) => {
                 style={{
                   width: '100%',
                   height: '60%',
-                  backgroundImage: `url(${state.dataDetail.img})`,
+                  backgroundImage: `url(${state.dataDetail.picImage ? state.dataDetail.picImage : profile})`,
                   backgroundPosition: 'center',
                   backgroundSize: 'cover',
                   backgroundRepeat: 'no-repeat',
@@ -193,8 +223,8 @@ const TeamBeije = (props) => {
               <div
                 className="teamBeije_modal_body"
               >
-                <p>{state.dataDetail.name}</p>
-                <p>_{state.dataDetail.role}</p>
+                <p>{state.dataDetail.firstName}</p>
+                {/* <p>_{state.dataDetail.role}</p> */}
               </div>
             </>
           }

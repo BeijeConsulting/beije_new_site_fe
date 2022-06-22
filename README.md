@@ -20,3 +20,8 @@ Library:
   material-ui-carousel - https://www.npmjs.com/package/react-material-ui-carousel
   react-ga4 - https://www.npmjs.com/package/react-ga4
   react-router-sitemap - https://www.npmjs.com/package/react-router-sitemap
+
+## to make work the dynamic pages using server-json
+You should open twice the command prompt in the project folder.
+In the first pannel you should run the app with the command: npm run dev
+In the second pannel you should run the API with the command: npm run serve-json

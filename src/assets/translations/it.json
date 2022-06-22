@@ -637,5 +637,13 @@
     "shortMessage": "Errore",
     "longMessage": "Ci dispiace, c'è stato un errore durante il caricamento della pagina. Ti preghiamo di riprovare più tardi!",
     "linkToHome": "Vai alla home"
+  },
+  "teamBeije": {
+    "title": "La community Beije",
+    "description": {
+      "part1": "Prima di tutto una community fatta di persone con esperienze, interessi, stimoli differenti ma uniti da un unico obiettivo: l’individuo al centro per la costruzione di un sistema di valore.",
+      "part2": "Scopri la nostra community: ",
+      "part3": "ti aspettiamo, segui il cambiamento!"
+    }
   }
 }
