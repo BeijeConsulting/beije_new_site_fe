@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { isEmpty } from "lodash";
 import { Helmet } from "react-helmet";
@@ -31,7 +31,8 @@ const TeamBeije = (props) => {
   const [state, setState] = useState({
     teamDataResponse: null,
     dataDetail: null,
-    modalIsOpen: false
+    modalIsOpen: false,
+    startNumber: 0
   })
 
   useEffect(() => {
@@ -59,6 +60,24 @@ const TeamBeije = (props) => {
       ...state,
       teamDataResponse: teamDataResponseAPI
     })
+  }
+
+  useEffect(() => {
+    if (state.teamDataResponse?.teamSize) {
+      console.log("sono dentro");
+      incriseNumber()
+    }
+  })
+
+  const incriseNumber = () => {
+    setTimeout(() => {
+      if (state.startNumber < state.teamDataResponse.teamSize) {
+        setState({
+          ...state,
+          startNumber: state.startNumber + 1
+        })
+      }
+    }, 15)
   }
 
   const openCard = (idElement) => () => {
@@ -96,7 +115,7 @@ const TeamBeije = (props) => {
         >
           <Box className={"max-width-1200"}>
             <h1>{t("teamBeije.title")}</h1>
-            <p>{t("teamBeije.description.part1")}<br />{t("teamBeije.description.part2")}</p>
+            <p>{t("teamBeije.description.part1")}<br />{t("teamBeije.description.part2")}<span className="teamBeije_animated_txt">{t("teamBeije.description.part3")}</span></p>
           </Box>
         </Container>
 
@@ -137,26 +156,31 @@ const TeamBeije = (props) => {
                 <div
                   className={`teamBeije_grid_item_text`}
                 >
-                  <span>{state.teamDataResponse.teamSize}</span>
+                  <span>{state.startNumber}</span>
                 </div>
                 {
                   state.teamDataResponse.team.map((item, key) => (
                     <div
                       key={key}
-                      className={`teamBeije_grid_items`}
-                      style={{
-                        width: 100,
-                        height: 100,
-                        margin: 5,
-                        backgroundImage: `url(${item.picImageThumbnail ? item.picImageThumbnail : item.picImage})`,
-                        backgroundPosition: 'center',
-                        backgroundSize: 'cover',
-                        backgroundRepeat: 'no-repeat',
-                        borderRadius: 8,
-                        cursor: 'pointer'
-                      }}
-                      onClick={openCard(item)}
-                    />
+                      className={`teamBeije_grid_items_container`}
+                    >
+                      <div
+                        className={`teamBeije_grid_items`}
+                        style={{
+                          width: 100,
+                          height: 100,
+                          margin: 5,
+                          backgroundImage: `url(${item.picImageThumbnail ? item.picImageThumbnail : item.picImage})`,
+                          backgroundPosition: 'center',
+                          backgroundSize: 'cover',
+                          backgroundRepeat: 'no-repeat',
+                          borderRadius: 8,
+                          cursor: 'pointer'
+                        }}
+                        onClick={openCard(item)}
+                      />
+                    </div>
+
                   ))
                 }
               </div>
