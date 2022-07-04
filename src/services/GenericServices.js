@@ -4,8 +4,8 @@ import { isEmpty } from "lodash";
 import { useNavigate } from "react-router-dom";
 
 
-// const axiosInstance = axios.create({ baseURL: ENVIRONMENT.API_REST_BE });
-const axiosInstance = axios.create({ baseURL: process.env.REACT_APP_API_REST_BE ? process.env.REACT_APP_API_REST_BE : ENVIRONMENT.API_REST_BE });
+const axiosInstance = axios.create({ baseURL: ENVIRONMENT.API_REST_BE });
+// const axiosInstance = axios.create({ baseURL: process.env.REACT_APP_API_REST_BE ? process.env.REACT_APP_API_REST_BE : ENVIRONMENT.API_REST_BE });
 
 const defaultHeaders = {
   Accept: "*/*",
@@ -33,8 +33,8 @@ export const get = async (path, obj = {}) => {
   try {
     const queryString = Object.keys(obj).map(key => key + "=" + obj[key]).join("&");
     let { data } = await axiosInstance.get(
-      // `${ENVIRONMENT.API_REST_BE}${path}${!isEmpty(queryString) ? "?" + queryString : ""}`,
-      `${process.env.REACT_APP_API_REST_BE ? process.env.REACT_APP_API_REST_BE : ENVIRONMENT.API_REST_BE}${path}${!isEmpty(queryString) ? "?" + queryString : ""}`,
+      `${ENVIRONMENT.API_REST_BE}${path}${!isEmpty(queryString) ? "?" + queryString : ""}`,
+      // `${process.env.REACT_APP_API_REST_BE ? process.env.REACT_APP_API_REST_BE : ENVIRONMENT.API_REST_BE}${path}${!isEmpty(queryString) ? "?" + queryString : ""}`,
       {
         headers: defaultHeaders,
       }
@@ -71,8 +71,8 @@ export const get = async (path, obj = {}) => {
 export const post = async (path, obj = {}) => {
   try {
     let { data } = await axiosInstance.post(
-      // ENVIRONMENT.API_REST_BE + path,
-      process.env.REACT_APP_API_REST_BE ? process.env.REACT_APP_API_REST_BE : ENVIRONMENT.API_REST_BE + path,
+      ENVIRONMENT.API_REST_BE + path,
+      // process.env.REACT_APP_API_REST_BE ? process.env.REACT_APP_API_REST_BE : ENVIRONMENT.API_REST_BE + path,
       obj,
       {
         headers: defaultHeaders
