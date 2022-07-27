@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
 import Gallery from "react-grid-gallery";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 // Style
 import './Community.css';
@@ -20,59 +19,16 @@ import GoBackBtn from "../../components/functional_components/goBackBtn/GoBackBt
 // Api
 import ApiCalls from "../../services/api/ApiCalls";
 
-// Remove
-import communityArrayTest from "../../communityArrayTest.json";
-
 const CommunityDetail = (props) => {
 
-  const IMAGES =
-    [{
-      src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
-      thumbnail: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
-      thumbnailWidth: 320,
-      thumbnailHeight: 212,
-      caption: "Prova caption 1"
-    },
-    {
-      src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-      thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-      thumbnailWidth: 320,
-      thumbnailHeight: 212,
-      caption: "Prova caption 2"
-    },
-    {
-      src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
-      thumbnail: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
-      thumbnailWidth: 320,
-      thumbnailHeight: 212
-    },
-    {
-      src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-      thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-      thumbnailWidth: 320,
-      thumbnailHeight: 212
-    },
-    {
-      src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
-      thumbnail: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
-      thumbnailWidth: 320,
-      thumbnailHeight: 212
-    },
-    {
-      src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-      thumbnail: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
-      thumbnailWidth: 320,
-      thumbnailHeight: 212
-    }]
-
-  const { t } = useTranslation();
-
   const [state, setState] = useState({
-    communityDetailDataResponse: null
+    communityDetailDataResponse: null,
+    images: [],
   })
 
+
   // const permalink = new URLSearchParams(location.search).get("event");
-  const permalink = useParams();
+  const { permalink } = useParams();
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
@@ -88,16 +44,22 @@ const CommunityDetail = (props) => {
   }, [])
 
   const getCommunityData = async () => {
-    // let communityDetailDataResponse = await ApiCalls.community_getListDetail(permalink)
-    // if (!communityDetailDataResponse) {
-    //   navigate(`/blog`);
-    // }
+    let communityDetailDataResponse = await ApiCalls.community_getListDetail(permalink);
 
-    let communityDetailDataResponse = communityArrayTest;
+
+    const ARR = communityDetailDataResponse?.images.map((img) => {
+      return {
+        src: img,
+        thumbnail: img,
+        thumbnailWidth: 320,
+        thumbnailHeight: 212
+      }
+    })
 
     setState({
       ...state,
-      communityDetailDataResponse: communityDetailDataResponse
+      communityDetailDataResponse,
+      images: ARR,
     })
   }
 
@@ -114,8 +76,8 @@ const CommunityDetail = (props) => {
           <GoBackBtn />
         </Box>
         <Box className={"max-width-1200"}>
-          <h1>{t("community.title")}</h1>
-          <p>{t("community.description")}</p>
+          <h1>{state.communityDetailDataResponse?.title}</h1>
+          <p>{state.communityDetailDataResponse?.subtitle}</p>
         </Box>
       </Container>
 
@@ -133,12 +95,12 @@ const CommunityDetail = (props) => {
             <Box className={"community-detail-second-section-image-container"}>
               <img
                 alt={"event photo"}
-                src={IMAGES[0].src}
+                src={state.communityDetailDataResponse?.cover_img}
               />
             </Box>
             <Box className={"community-detail-second-section-title-container"}>
-              <h2>CHRISTMAS EVENT</h2>
-              <p>L&apos;evento di natale più bello di sempre xD</p>
+              <h2>{state.communityDetailDataResponse?.title}</h2>
+              <p>{state.communityDetailDataResponse?.description}</p>
             </Box>
           </Box>
         </Box>
@@ -151,7 +113,7 @@ const CommunityDetail = (props) => {
       >
         <Box className={"max-width-1200 width-100 "}>
           <Gallery
-            images={IMAGES}
+            images={state.images || []}
             enableImageSelection={false}
             className={"community-gallery-container"}
           />
