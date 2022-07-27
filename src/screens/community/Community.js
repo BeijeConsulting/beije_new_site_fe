@@ -38,13 +38,11 @@ const Community = (props) => {
   }, [])
 
   const getDataCommunities = async () => {
-    // let communityDataResponse = communityArrayTest;
     let communityDataResponse = await ApiCalls.community_getList(props.languageDuck.currentLanguage.toLowerCase());
-    console.log(communityDataResponse);
 
     setState({
       ...state,
-      // communityDataResponse
+      communityDataResponse
     })
   }
 
@@ -89,7 +87,7 @@ const Community = (props) => {
                 return (
                   <div key={index} className={"blog-second-section-card-container"}>
                     <BlogCard
-                      permalink={event.id}
+                      permalink={event.permalink}
                       src={event.image}
                       title={event.title}
                       description={event.description}
