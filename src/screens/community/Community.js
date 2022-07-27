@@ -88,7 +88,7 @@ const Community = (props) => {
                   <div key={index} className={"blog-second-section-card-container"}>
                     <BlogCard
                       permalink={event.permalink}
-                      src={event.image}
+                      src={event.cover_img}
                       title={event.title}
                       description={event.description}
                       community
