@@ -120,11 +120,11 @@ export const menu_voices = [
     link_to: "/team-beije",
     key_link: "team-beije"
   },
-  // {
-  //   name: "community",
-  //   link_to: "community",
-  //   key_link: "community"
-  // },
+  {
+    name: "event",
+    link_to: "community",
+    key_link: "community"
+  },
   // {
   //   name: "focusAcademy",
   //   link_to: "#",
