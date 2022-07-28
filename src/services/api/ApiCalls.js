@@ -34,7 +34,7 @@ const ApiCalls = {
   },
 
   team_getList: () => {
-    return get('team/user')
+    return get('team/users')
   }
 }
 export default ApiCalls
