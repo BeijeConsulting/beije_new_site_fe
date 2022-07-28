@@ -55,6 +55,10 @@ const CustomTable = (props) => {
     });
   };
 
+  useEffect(()=>{
+    console.log("lingua", props.languageDuck.currentLanguage)
+  },[props.languageDuck.currentLanguage])
+
   const printTableHaed = (item, key) => {
     return (
       <TableCell
@@ -205,4 +209,4 @@ const mapStateToProps = state => (
   }
 )
 
-export default connect(mapStateToProps)(CustomTable)
+export default connect(mapStateToProps)(CustomTable);
