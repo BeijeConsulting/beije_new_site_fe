@@ -96,3 +96,9 @@ export const toBase64 = file => new Promise((resolve, reject) => {
   reader.onload = () => resolve(reader.result);
   reader.onerror = error => reject(error);
 });
+
+export const millisecsToDate = (millsecs) => {
+  const date = new Date(millsecs);
+  const dateStr = date.toString();
+  return dateStr
+}
