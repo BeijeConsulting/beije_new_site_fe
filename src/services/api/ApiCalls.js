@@ -27,14 +27,14 @@ const ApiCalls = {
   },
 
   community_getList: (lang) => {
-    return get(`communityL/${lang}`);
+    return get(`events/${lang}`);
   },
   community_getListDetail: (permalink) => {
-    return get(`community/${permalink}`);
+    return get(`event/${permalink}`);
   },
 
   team_getList: () => {
-    return get('team/users')
+    return get('team/user')
   }
 }
 export default ApiCalls
