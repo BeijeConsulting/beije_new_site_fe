@@ -181,21 +181,32 @@ const Blog = (props) => {
             <Container
               className={"blog-detail-image-container"}
             >
-              {state.blogData.images.map((item, key) => {
-                if (key === state.currentSlide) {
-                  return (
-                    <div
-                      className="blog-detail-image-single-container"
-                      key={key}
-                    >
-                      <img
-                        alt="blog image"
-                        src={item}
-                      />
-                    </div>
-                  )
-                }
-              })}
+              {state.blogData.images.length > 0 ?
+                state.blogData.images.map((item, key) => {
+                  if (key === state.currentSlide) {
+                    return (
+                      <div
+                        className="blog-detail-image-single-container"
+                        key={key}
+                      >
+                        <img
+                          alt="blog image"
+                          src={item}
+                        />
+                      </div>
+                    )
+                  }
+                })
+                :
+                <div
+                  className="blog-detail-image-single-container"
+                >
+                  <img
+                    alt="blog image"
+                    src={state.blogData.cover_img}
+                  />
+                </div>
+              }
               {
                 state.blogData.images.length > 1 &&
                 <>
