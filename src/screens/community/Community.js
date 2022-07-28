@@ -90,8 +90,11 @@ const Community = (props) => {
                       permalink={event.permalink}
                       src={event.cover_img}
                       title={event.title}
+                      subtitle={event.subtitle}
                       description={event.description}
+                      postedby={event.author}
                       community
+                      // posted={millisecsToDate(event.create_datetime)}
                     />
                   </div>
                 )
