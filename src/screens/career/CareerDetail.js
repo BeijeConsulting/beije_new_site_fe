@@ -1,15 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import ReactMarkdown from 'react-markdown'
-import remarkGfm from 'remark-gfm'
-
 // Redux
 import { setCurrentPage, initCurrentPage } from "../../redux/ducks/currentPageDuck";
 import { setVisibilityNavbar, initVisibilityNavbar } from "../../redux/ducks/showNavbarTopDuck";
 import { connect } from "react-redux";
 
-// 
+// api
 import ApiCalls from "../../services/api/ApiCalls";
 
 // MUI
@@ -22,6 +19,9 @@ import "./Career.css";
 import CustomForm from "../../components/hooks_components/customForm/CustomForm";
 import GoBackBtn from "../../components/functional_components/goBackBtn/GoBackBtn";
 import CustomLink from "../../components/functional_components/ui/customLink/CustomLink";
+
+// utils
+import { converter } from "../../utils/utilities";
 
 const CareerDeatil = (props) => {
   const { t } = useTranslation();
@@ -130,11 +130,7 @@ const CareerDeatil = (props) => {
                   typeLink={idJob ? "apply-primary" : "apply-secondary"}
                 />
               </div>
-              <div>
-                <ReactMarkdown>
-                  {state.careerResponse.description}
-                </ReactMarkdown>
-              </div>
+              <div dangerouslySetInnerHTML={{ __html: converter.makeHtml(state.careerResponse.description) }} />
             </Box>
           </>
         }

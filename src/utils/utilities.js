@@ -2,6 +2,8 @@ import React from "react";
 import { replace, toNumber } from "lodash";
 import NumberFormat from "react-number-format";
 import ReactGa from 'react-ga4';
+import { Converter } from "showdown";
+
 
 // export const showError = (error) => {
 //   notification.open({
@@ -102,3 +104,9 @@ export const millisecsToDate = (millsecs) => {
   const newDate = `${date.getDate() < 10 ? "0" + date.getDate() : date.getDate()}/${date.getMonth() < 10 ? "0" + date.getMonth() : date.getMonth()}/${date.getFullYear()}`;
   return newDate;
 }
+
+export const converter = new Converter({
+  simpleLineBreaks: true,
+  simplifiedAutoLink: true,
+  noHeaderId: true,
+});

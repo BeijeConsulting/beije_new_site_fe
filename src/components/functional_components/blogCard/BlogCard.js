@@ -1,7 +1,5 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm'
 
 // Style
 import './BlogCard.css';
@@ -16,6 +14,8 @@ import { clock } from "../../../utils/properties";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
 
+// utils
+import { converter } from "../../../utils/utilities";
 
 const BlogCard = (props) => {
 
@@ -50,12 +50,7 @@ const BlogCard = (props) => {
         }
 
         <div className={"blog-card-text-description"}>
-
-          <ReactMarkdown
-            remarkPlugins={[remarkGfm]}
-          >
-            {props.description}
-          </ReactMarkdown>
+          <div dangerouslySetInnerHTML={{ __html: converter.makeHtml(props.description) }} />
         </div>
         {
           !props.community &&

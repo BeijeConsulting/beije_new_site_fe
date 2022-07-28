@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-import ReactMarkdown from 'react-markdown'
-import remarkGfm from 'remark-gfm'
-
 // Redux
 import { setCurrentPage, initCurrentPage } from "../../redux/ducks/currentPageDuck";
 import { setVisibilityNavbar, initVisibilityNavbar } from "../../redux/ducks/showNavbarTopDuck";
@@ -20,6 +17,9 @@ import "./CaseStudiesDetail.css";
 
 // Components
 import GoBackBtn from "../../components/functional_components/goBackBtn/GoBackBtn";
+
+// utils
+import { converter } from "../../utils/utilities";
 
 const CaseStudiesDetail = (props) => {
 
@@ -116,11 +116,7 @@ const CaseStudiesDetail = (props) => {
             <h2 className="titles-level3">
               {state.caseStudiesResponse.subtitle}
             </h2>
-            <div>
-              <ReactMarkdown>
-                {state.caseStudiesResponse.description}
-              </ReactMarkdown>
-            </div>
+            <div dangerouslySetInnerHTML={{ __html: converter.makeHtml(state.caseStudiesResponse.description) }} />
           </Box>
         </Container>
       }

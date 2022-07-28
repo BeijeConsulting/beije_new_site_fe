@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
 import Gallery from "react-grid-gallery";
 import { useParams } from "react-router-dom";
 
@@ -21,13 +19,15 @@ import GoBackBtn from "../../components/functional_components/goBackBtn/GoBackBt
 // Api
 import ApiCalls from "../../services/api/ApiCalls";
 
+// utils
+import { converter } from "../../utils/utilities";
+
 const CommunityDetail = (props) => {
 
   const [state, setState] = useState({
     communityDetailDataResponse: null,
     images: [],
   })
-
 
   // const permalink = new URLSearchParams(location.search).get("event");
   const { permalink } = useParams();
@@ -105,12 +105,7 @@ const CommunityDetail = (props) => {
             </Box>
             <Box className={"community-detail-second-section-title-container"}>
               <h2>{state.communityDetailDataResponse?.title}</h2>
-
-              <ReactMarkdown
-                remarkPlugins={[remarkGfm]}
-              >
-                {state.communityDetailDataResponse?.description}
-              </ReactMarkdown>
+              <div dangerouslySetInnerHTML={{ __html: converter.makeHtml(state.communityDetailDataResponse?.description) }} />
             </Box>
           </Box>
         </Box>

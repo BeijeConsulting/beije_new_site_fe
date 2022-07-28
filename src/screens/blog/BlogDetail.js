@@ -2,9 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useParams, useNavigate } from "react-router-dom";
 
-import ReactMarkdown from 'react-markdown'
-import remarkGfm from 'remark-gfm'
-
 // Style
 import './Blog.css';
 
@@ -28,7 +25,9 @@ import BlogCard from "../../components/functional_components/blogCard/BlogCard";
 
 // API
 import ApiCalls from "../../services/api/ApiCalls";
-import { millisecsToDate } from "../../utils/utilities";
+
+// utils
+import { converter, millisecsToDate } from "../../utils/utilities";
 
 const Blog = (props) => {
 
@@ -86,16 +85,6 @@ const Blog = (props) => {
 
   const scrollCarousel = (value) => {
     ref.current.scrollLeft += value;
-  }
-
-  const checkItemApi = (param) => {
-    let datePosted = ""
-    if (param.createDateTime) {
-      if (param.createDateTime.dayOfMonth && param.createDateTime.monthValue && param.createDateTime.year) {
-        datePosted = param.createDateTime.dayOfMonth + "/" + param.createDateTime.monthValue + "/" + param.createDateTime.year
-      }
-    }
-    return datePosted
   }
 
   const prevSlide = () => {
@@ -237,11 +226,7 @@ const Blog = (props) => {
                 <FontAwesomeIcon icon={clock} className={"blog-card-clock-icon"} />{t("blog.postedBy")} {state.blogData.author} {t("blog.postedOn")} {millisecsToDate(state.blogData.create_datetime)}
               </div>
               <div>
-                <ReactMarkdown
-                  remarkPlugins={[remarkGfm]}
-                >
-                  {state.blogData.description}
-                </ReactMarkdown>
+              <div dangerouslySetInnerHTML={{ __html: converter.makeHtml(state.blogData.description) }} />
               </div>
 
               {
@@ -308,7 +293,7 @@ const Blog = (props) => {
                           subtitle={post.subtitle}
                           description={post.description}
                           postedby={post.author}
-                          posted={checkItemApi(post)}
+                          posted={millisecsToDate(post)}
                         />
                       </div>
                     )
