@@ -20,6 +20,10 @@ import { connect } from "react-redux";
 // API
 import ApiCalls from "../../services/api/ApiCalls";
 
+// utils
+import { millisecsToDate } from "../../utils/utilities";
+
+
 const Blog = (props) => {
 
   const { t } = useTranslation();
@@ -133,7 +137,7 @@ const Blog = (props) => {
                         subtitle={post.subtitle}
                         description={post.description}
                         postedby={post.author}
-                        posted={checkItemApi(post)}
+                        posted={millisecsToDate(post.create_datetime)}
                       />
                     </div>
                   )
