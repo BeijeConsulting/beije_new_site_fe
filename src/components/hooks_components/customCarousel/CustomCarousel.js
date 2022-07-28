@@ -60,7 +60,7 @@ const CustomCarousel = (props) => {
         style={{
           backgroundColor: props.upCarousel ? item.backgroundColor : ""
         }}
-        onClick={props.upCarousel ? sendToPage(item.translateCasePermalink) : null}
+        onClick={props.upCarousel ? sendToPage(item.permalink) : null}
       >
         {props.imgCarousel &&
           <img
