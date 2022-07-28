@@ -31,7 +31,8 @@ const CareerDeatil = (props) => {
     careerResponse: null
   })
 
-  const id = new URLSearchParams(location.search).get("jobOffer");
+  const idJob = new URLSearchParams(location.search).get("jobOffer");
+  const idAcademy = new URLSearchParams(location.search).get("academyOffer");
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -48,9 +49,12 @@ const CareerDeatil = (props) => {
 
   // Add async and await. Here add call to API
   const getCareerData = async () => {
+    let id = idJob ? idJob : idAcademy;
+    let careerResponse;
 
-    let careerResponse = await ApiCalls.career_getListDetail(id, props.languageDuck.currentLanguage);
-
+    if (id) {
+      careerResponse = await ApiCalls.career_getListDetail(id, props.languageDuck.currentLanguage);
+    }
     setState({
       ...state,
       careerResponse: careerResponse
@@ -72,7 +76,6 @@ const CareerDeatil = (props) => {
     <Box
       className={"bg-dark-grey margin-top-container-screens"}
     >
-
       <Container
         component={"section"}
         maxWidth={"false"}
@@ -115,6 +118,7 @@ const CareerDeatil = (props) => {
 
             <Box
               className="career-detail-txt-container"
+              style={{ borderTopColor: idJob ? '#9EC1DB' : '#feef87' }}
             >
               <div
                 className="career-detail-link-apply-container"
@@ -123,7 +127,7 @@ const CareerDeatil = (props) => {
                   content={t("btn.apply")}
                   linkTo={"#"}
                   callback={scrollToForm}
-                  typeLink={"apply-primary"}
+                  typeLink={idJob ? "apply-primary" : "apply-secondary"}
                 />
               </div>
               <div>
@@ -152,7 +156,7 @@ const CareerDeatil = (props) => {
           />
         </Box>
       </Container>
-    </Box>
+    </Box >
   )
 }
 

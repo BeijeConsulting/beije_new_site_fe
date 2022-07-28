@@ -8,9 +8,6 @@ import './Community.css';
 // MUI
 import { Box, Container, Divider, Skeleton } from "@mui/material";
 
-// Remove
-import communityArrayTest from "../../communityArrayTest.json";
-
 // Redux
 import { setCurrentPage, initCurrentPage } from "../../redux/ducks/currentPageDuck";
 import { setVisibilityNavbar, initVisibilityNavbar } from "../../redux/ducks/showNavbarTopDuck";
@@ -41,12 +38,11 @@ const Community = (props) => {
   }, [])
 
   const getDataCommunities = async () => {
-    let communityDataResponse = communityArrayTest;
-    // let communityDataResponse = await ApiCalls.community_getList(props.languageDuck.currentLanguage);
+    let communityDataResponse = await ApiCalls.community_getList(props.languageDuck.currentLanguage.toLowerCase());
 
     setState({
       ...state,
-      communityDataResponse: communityDataResponse
+      communityDataResponse
     })
   }
 
@@ -91,8 +87,8 @@ const Community = (props) => {
                 return (
                   <div key={index} className={"blog-second-section-card-container"}>
                     <BlogCard
-                      permalink={event.id}
-                      src={event.image}
+                      permalink={event.permalink}
+                      src={event.cover_img}
                       title={event.title}
                       description={event.description}
                       community

@@ -80,6 +80,10 @@
   background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/francesco_cesana_mobile.jpg");
 }
 
+.carousel-bg-giorgia-marletta {
+  background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/giorgia_marletta_mobile.jpg");
+}
+
 .carousel-bg-erica-mauro {
   background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/erica_mauro_mobile.jpg");
 }
@@ -98,6 +102,16 @@
 
 .carousel-bg-ivo-mosca {
   background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/ivo_mosca_mobile.jpg");
+}
+
+.carousel-bg-rodrigo-raminelli {
+  background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/rodrigo_ramelli_mobile.jpg");
+  background-position: initial;
+}
+
+.carousel-bg-elisa-rossi {
+  background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/elisa_rossi_mobile.jpg");
+  background-position: initial;
 }
 
 .carousel-bg-maria-rodrigez {
@@ -152,6 +166,10 @@
     background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/francesco_cesana_mobile.jpg");
   }
 
+  .carousel-bg-giorgia-marletta {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/giorgia_marletta_tablet.jpg");
+  }
+
   .carousel-bg-erica-mauro {
     background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/erica_mauro_tablet.jpg");
   }
@@ -170,6 +188,14 @@
 
   .carousel-bg-ivo-mosca {
     background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/ivo_mosca_tablet.jpg");
+  }
+
+  .carousel-bg-rodrigo-raminelli {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/rodrigo_ramelli_tablet.jpg");
+  }
+
+  .carousel-bg-elisa-rossi {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/elisa_rossi_tablet.jpg");
   }
 
   .carousel-bg-maria-rodrigez {
@@ -244,6 +270,10 @@
     background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/francesco_cesana_desktop.jpg");
   }
 
+  .carousel-bg-giorgia-marletta {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/giorgia_marletta_desktop.jpg");
+  }
+
   .carousel-bg-erica-mauro {
     background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/erica_mauro_desktop.jpg");
   }
@@ -262,6 +292,14 @@
 
   .carousel-bg-ivo-mosca {
     background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/ivo_mosca_desktop.jpg");
+  }
+
+  .carousel-bg-rodrigo-raminelli {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/rodrigo_ramelli_desktop.jpg");
+  }
+
+  .carousel-bg-elisa-rossi {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/elisa_rossi_desktop.jpg");
   }
 
   .carousel-bg-maria-rodrigez {

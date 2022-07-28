@@ -41,7 +41,7 @@ const Blog = (props) => {
   }, [])
 
   const getBlogData = async () => {
-    let blogDataResponseAPI = await ApiCalls.blog_getList(props.languageDuck.currentLanguage);
+    let blogDataResponseAPI = await ApiCalls.blog_getList(props.languageDuck.currentLanguage.toLowerCase());
     let blogDataResponse = blogDataResponseAPI;
     
     setState({

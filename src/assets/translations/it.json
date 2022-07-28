@@ -122,6 +122,7 @@
     "contacts": "Contatti",
     "blog": "Blog",
     "community": "Community",
+    "event": "Eventi",
     "focusAcademy": "Focus Academy"
   },
   "footer": {
@@ -244,6 +245,9 @@
         "francesco_cesana": {
           "desc": "Vino, arte e buon cibo: bisogna fare di necessità virtù"
         },
+        "giorgia_marletta": {
+          "desc": "Il mio superpotere? L’autoironia! Sono fermamente convinta che se puoi ridere di una cosa, puoi anche cambiarla"
+        },
         "erica_mauro": {
           "desc": "Promotrice di buon umore e di nuove scoperte: c'è sempre un buon motivo per sorridere e per imparare qualcosa di nuovo."
         },
@@ -258,6 +262,12 @@
         },
         "ivo_mosca": {
           "desc": "Make it simple."
+        },
+        "rodrigo_raminelli": {
+          "desc": "Oggi è il giorno per scoprire qualcosa di nuovo, perché fermarsi?"
+        },
+        "elisa_rossi": {
+          "desc": "Organizzatrice seriale e developer addicted: se mi cerchi e non mi trovi, sono a far volare i miei gufi."
         },
         "maria_rodrigez": {
           "desc": "Nerd sotto copertura in ambito IT, cosa potrebbe andare storto?"

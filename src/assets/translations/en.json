@@ -122,6 +122,7 @@
     "contacts": "Contacts",
     "blog": "Blog",
     "community": "Community",
+    "event": "Events",
     "focusAcademy": "Focus Academy"
   },
   "footer": {
@@ -244,6 +245,9 @@
         "francesco_cesana": {
           "desc": "Wine, art and good food: making a virtue out of necessity."
         },
+        "giorgia_marletta": {
+          "desc": "My superpower? Self-criticism! I'm committed that if you can laugh at something, you can change it."
+        },
         "erica_mauro": {
           "desc": "Promoter of good humor and new discoveries: there is always a good reason to smile and learn something new."
         },
@@ -258,6 +262,12 @@
         },
         "ivo_mosca": {
           "desc": "Make it simple."
+        },
+        "rodrigo_raminelli": {
+          "desc": "Today is the day to discover something new, so why stop?"
+        },
+        "elisa_rossi": {
+          "desc": "Serial organizer and developer addicted: if you're looking for me and can't find me, I'm flying my owls."
         },
         "maria_rodrigez": {
           "desc": "Undercover nerds in IT, what could go wrong?"

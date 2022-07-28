@@ -40,7 +40,8 @@ const Blog = (props) => {
 
   const [state, setState] = useState({
     blogData: null,
-    latestArticles: null
+    latestArticles: null,
+    currentSlide: 0
   })
 
   useEffect(() => {
@@ -94,6 +95,30 @@ const Blog = (props) => {
       }
     }
     return datePosted
+  }
+
+  const prevSlide = () => {
+    let currentSlide = state.currentSlide - 1;
+    if (currentSlide < 0) {
+      currentSlide = state.blogData.images.length - 1
+    }
+
+    setState({
+      ...state,
+      currentSlide: currentSlide
+    })
+  }
+
+  const nextSlide = () => {
+    let currentSlide = state.currentSlide + 1;
+    if (currentSlide > state.blogData.images.length - 1) {
+      currentSlide = 0
+    }
+
+    setState({
+      ...state,
+      currentSlide: currentSlide
+    })
   }
 
   return (
@@ -155,10 +180,39 @@ const Blog = (props) => {
             <Container
               className={"blog-detail-image-container"}
             >
-              <img
-                alt="blog image"
-                src={state.blogData.images[0]}
-              />
+              {state.blogData.images.map((item, key) => {
+                if (key === state.currentSlide) {
+                  return (
+                    <div
+                      className="blog-detail-image-single-container"
+                      key={key}
+                    >
+                      <img
+                        alt="blog image"
+                        src={item}
+                      />
+                    </div>
+                  )
+                }
+              })}
+              {
+                state.blogData.images.length > 1 &&
+                <>
+                  <button
+                    className={"blog-detail-latest-articles-left-button"}
+                    onClick={prevSlide}
+                  >
+                    &#8249;
+                  </button>
+                  <button
+                    className={"blog-detail-latest-articles-right-button"}
+                    onClick={nextSlide}
+                  >
+                    &#8250;
+                  </button>
+                </>
+              }
+
             </Container>
             <Box className={"blog-detail-text-container"}>
               <h1>
@@ -177,7 +231,36 @@ const Blog = (props) => {
                   {state.blogData.description}
                 </ReactMarkdown>
               </div>
+
+              {
+                state.blogData.video_path &&
+                // <video
+                //   width="100%"
+                //   height="auto"
+                //   preload="metadata"
+                //   controls={true}
+                //   controlsList="nodownload"
+                //   style={{ visibility: "visible", marginTop: "30px", objectFit: "cover" }}
+                // >
+                //   <source
+                //     src="https://www.youtube.com/watch?v=ixfz3BRlbWk"
+                //     type="video/mp4" />
+
+                // </video>
+
+                <iframe
+                  width="100%"
+                  height="500px"
+                  src={state.blogData.video_path}
+                  title="YouTube video player"
+                  style={{ marginTop: "30px", objectFit: "cover" }}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                />
+
+              }
             </Box>
+
+
           </Box>
         </Container>
       }

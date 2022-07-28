@@ -10,6 +10,7 @@ import logo_pininfarina from "../assets/images/up/caseStudies/pininfarina.jpg";
 import logo_youthquake from "../assets/images/up/caseStudies/youthquake.jpg";
 import empty_academy from "../assets/icons/empty_academy.svg"
 import empty_job from "../assets/icons/empty_job.svg"
+import posterVideo from '../assets/images/posterVideoAcademy.jpg'
 import icon_profile from "../assets/icons/iconProfile.png"
 
 // Link
@@ -90,6 +91,7 @@ export const xIcon = faXmark
 export const profile = icon_profile;
 
 export const linkYoutube = linkYt;
+export const posterVideoAcademy = posterVideo;
 
 // Menu voices
 export const menu_voices = [
@@ -118,11 +120,11 @@ export const menu_voices = [
     link_to: "/team-beije",
     key_link: "team-beije"
   },
-  // {
-  //   name: "community",
-  //   link_to: "community",
-  //   key_link: "community"
-  // },
+  {
+    name: "event",
+    link_to: "community",
+    key_link: "community"
+  },
   // {
   //   name: "focusAcademy",
   //   link_to: "#",
@@ -468,12 +470,12 @@ export const carouselProfile = [
   },
   {
     id: 2,
-    name: 'Erica',
-    surname: 'Mauro',
-    role: 'Sales manager',
-    description: "home.fifthSection.carouselProfile.erica_mauro.desc",
-    alt: 'EricaMauro',
-    pictureClassName: "carousel-bg-erica-mauro",
+    name: 'Giorgia',
+    surname: 'Marletta',
+    role: 'HR Manager',
+    description: "home.fifthSection.carouselProfile.giorgia_marletta.desc",
+    alt: 'GiorgiaMarletta',
+    pictureClassName: "carousel-bg-giorgia-marletta",
   },
   {
     id: 3,
@@ -486,33 +488,6 @@ export const carouselProfile = [
   },
   {
     id: 4,
-    name: 'Marianna',
-    surname: 'Fulginiti',
-    role: 'Account Manager',
-    description: 'home.fifthSection.carouselProfile.marianna_fulginiti.desc',
-    alt: 'MariannaFulginiti',
-    pictureClassName: "carousel-bg-marianna-fulginiti",
-  },
-  {
-    id: 5,
-    name: 'Roberto',
-    surname: 'Brogi',
-    role: 'CTO & Academy Trainer',
-    description: 'home.fifthSection.carouselProfile.roberto_brogi.desc',
-    alt: 'RobertoBrogi',
-    pictureClassName: "carousel-bg-roberto-brogi",
-  },
-  {
-    id: 6,
-    name: 'Ivo',
-    surname: 'Mosca',
-    role: 'CIO & Academy Trainer',
-    description: 'home.fifthSection.carouselProfile.ivo_mosca.desc',
-    alt: 'IvoMosca',
-    pictureClassName: "carousel-bg-ivo-mosca",
-  },
-  {
-    id: 8,
     name: 'Maria',
     surname: 'Amigo Rodrigez',
     role: 'Junior IT Recruiter',
@@ -521,13 +496,67 @@ export const carouselProfile = [
     pictureClassName: "carousel-bg-maria-rodrigez",
   },
   {
-    id: 9,
+    id: 5,
     name: 'Francesca',
     surname: 'Bellini',
     role: 'Marketing specialist',
     description: 'home.fifthSection.carouselProfile.francesca_bellini.desc',
     alt: 'FrancescaBellini',
     pictureClassName: "carousel-bg-francesca-bellini",
+  },
+  {
+    id: 6,
+    name: 'Rodrigo',
+    surname: 'Raminelli',
+    role: 'Technical Leader Backend',
+    description: 'home.fifthSection.carouselProfile.rodrigo_raminelli.desc',
+    alt: 'RodrigoRaminelli',
+    pictureClassName: "carousel-bg-rodrigo-raminelli",
+  },
+  {
+    id: 7,
+    name: 'Elisa',
+    surname: 'Rossi',
+    role: 'Technical Leader Frontend',
+    description: 'home.fifthSection.carouselProfile.elisa_rossi.desc',
+    alt: 'ElisaRossi',
+    pictureClassName: "carousel-bg-elisa-rossi",
+  },
+  {
+    id: 8,
+    name: 'Ivo',
+    surname: 'Mosca',
+    role: 'CIO & Academy Trainer',
+    description: 'home.fifthSection.carouselProfile.ivo_mosca.desc',
+    alt: 'IvoMosca',
+    pictureClassName: "carousel-bg-ivo-mosca",
+  },
+  {
+    id: 9,
+    name: 'Roberto',
+    surname: 'Brogi',
+    role: 'CTO & Academy Trainer',
+    description: 'home.fifthSection.carouselProfile.roberto_brogi.desc',
+    alt: 'RobertoBrogi',
+    pictureClassName: "carousel-bg-roberto-brogi",
+  },
+  {
+    id: 10,
+    name: 'Marianna',
+    surname: 'Fulginiti',
+    role: 'Account Manager',
+    description: 'home.fifthSection.carouselProfile.marianna_fulginiti.desc',
+    alt: 'MariannaFulginiti',
+    pictureClassName: "carousel-bg-marianna-fulginiti",
+  },
+  {
+    id: 11,
+    name: 'Erica',
+    surname: 'Mauro',
+    role: 'Sales manager',
+    description: "home.fifthSection.carouselProfile.erica_mauro.desc",
+    alt: 'EricaMauro',
+    pictureClassName: "carousel-bg-erica-mauro",
   }
 ]
 
