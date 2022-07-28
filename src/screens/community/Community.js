@@ -17,6 +17,9 @@ import BlogCard from "../../components/functional_components/blogCard/BlogCard";
 // Api
 import ApiCalls from "../../services/api/ApiCalls";
 
+// utils
+import { millisecsToDate } from "../../utils/utilities";
+
 const Community = (props) => {
   const [state, setState] = useState({
     communityDataResponse: null
@@ -94,7 +97,7 @@ const Community = (props) => {
                       description={event.description}
                       postedby={event.author}
                       community
-                      // posted={millisecsToDate(event.create_datetime)}
+                      posted={millisecsToDate(event.create_datetime)}
                     />
                   </div>
                 )
