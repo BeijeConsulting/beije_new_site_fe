@@ -1,5 +1,5 @@
 module.exports = {
   DEPLOY_ENV_NAME: 'DEVELOPMENT',
-  API_REST_BE: 'https://mgmt-test-api.beije.it/',
+  API_REST_BE: 'https://mgmt-test-api.beije.its/',
   BASE_URL: '/'
 };
