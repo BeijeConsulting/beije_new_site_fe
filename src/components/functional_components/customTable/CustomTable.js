@@ -38,6 +38,7 @@ const CustomTable = (props) => {
 
   const [state, setState] = useState({
     isMobile: window.innerWidth < 1024,
+    obj: props.obj || []
   })
 
   useEffect(() => {
@@ -54,10 +55,6 @@ const CustomTable = (props) => {
       isMobile: window.innerWidth < 1024
     });
   };
-
-  useEffect(()=>{
-    console.log("lingua", props.languageDuck.currentLanguage)
-  },[props.languageDuck.currentLanguage])
 
   const printTableHaed = (item, key) => {
     return (
@@ -191,7 +188,7 @@ const CustomTable = (props) => {
         }
 
         <TableBody>
-          {props.obj.map(printTableRows)}
+          {state.obj.map(printTableRows)}
         </TableBody>
       </Table>
     </TableContainer>
