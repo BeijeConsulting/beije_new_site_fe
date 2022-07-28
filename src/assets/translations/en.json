@@ -545,7 +545,8 @@
     "modeOffert": {
       "remote": "Remote",
       "hybrid": "Hybrid",
-      "milan": "Milan"
+      "milan": "Milan",
+      "-":"-"
     }
   },
   "privacyPolicies": {
