@@ -1,5 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm'
 
 // Style
 import './BlogCard.css';
@@ -47,7 +49,14 @@ const BlogCard = (props) => {
           <div className={"blog-card-text-subtitle"}>{props.subtitle}</div>
         }
 
-        <div className={"blog-card-text-description"}>{props.description}</div>
+        <div className={"blog-card-text-description"}>
+
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
+          >
+            {props.description}
+          </ReactMarkdown>
+        </div>
         {
           !props.community &&
           <div className={"blog-card-text-postedby"}>
