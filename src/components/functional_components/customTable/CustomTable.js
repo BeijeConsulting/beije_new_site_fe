@@ -76,7 +76,7 @@ const CustomTable = (props) => {
           <TableCell
             component={"th"}
           >
-            {props.languageDuck.currentLanguage === "it" ? item.title_it : item.title_en}
+            {props.languageDuck.currentLanguage === "IT" ? item.title_it : item.title_en}
             {
               state.isMobile &&
               <>
@@ -141,6 +141,7 @@ const CustomTable = (props) => {
 
   // To make the acadamy list link to the existing page academy frontend and backend uncomment
   const sendToPage = (param1, param2) => {
+    console.log(param1, param2)
     let response = "#";
     if (props.isAcademy) {
       //   if (param1.toLowerCase() === "front-end") {
