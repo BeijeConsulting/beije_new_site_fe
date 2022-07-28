@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import Gallery from "react-grid-gallery";
 import { useParams } from "react-router-dom";
 
@@ -93,17 +95,22 @@ const CommunityDetail = (props) => {
         <Box className={"max-width-1200 width-100"}>
           <Box className={"community-detail-second-section-container"}>
             <Box className={"community-detail-second-section-image-container"}>
-           { state.communityDetailDataResponse?.cover_img ?
-              <img
-                alt={"event photo"}
-                src={state.communityDetailDataResponse?.cover_img}
-              />
-              :
-              <Skeleton  />}
+              {state.communityDetailDataResponse?.cover_img ?
+                <img
+                  alt={"event photo"}
+                  src={state.communityDetailDataResponse?.cover_img}
+                />
+                :
+                <Skeleton />}
             </Box>
             <Box className={"community-detail-second-section-title-container"}>
               <h2>{state.communityDetailDataResponse?.title}</h2>
-              <p>{state.communityDetailDataResponse?.description}</p>
+
+              <ReactMarkdown
+                remarkPlugins={[remarkGfm]}
+              >
+                {state.communityDetailDataResponse?.description}
+              </ReactMarkdown>
             </Box>
           </Box>
         </Box>
