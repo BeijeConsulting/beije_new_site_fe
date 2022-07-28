@@ -19,19 +19,6 @@ import CookiePolicies_en from "./components/functional_components/cookiePolicies
 import CookiePolicies_it from "./components/functional_components/cookiePolicies/CookiePolicies_it"
 import CustomModal from './components/hooks_components/customModal/CustomModal';
 
-// function RedirectToLanguage() {
-//   const { pathname, search } = useLocation();
-//   const { i18n } = useTranslation();
-//   if (
-//     !["/it/", "/en/"].some((l) =>
-//       pathname.includes(l)
-//     )
-//   ) {
-//     window.location.href = "/" + i18n.resolvedLanguage + pathname + (search ? search : "");
-//   }
-//   return null;
-// }
-
 function RedirectToLanguage() {
   const { pathname, search } = useLocation();
   const { i18n } = useTranslation();
@@ -39,17 +26,18 @@ function RedirectToLanguage() {
   if (!langs.some((l) => pathname.includes(l))) {
     window.location.href =
       "/" + i18n.resolvedLanguage + pathname + (search ? search : "");
-  } else {
-    const chosenLang = langs
-      .find((l) => pathname.includes(l))
-      .replace(/\//g, "");
-    if (i18n.resolvedLanguage !== chosenLang) {
-      i18n.changeLanguage(
-        langs.find((l) => pathname.includes(l)).replace(/\//g, "")
-      );
-      window.location.reload();
-    }
-  }
+  } 
+  // else {
+  //   const chosenLang = langs
+  //     .find((l) => pathname.includes(l))
+  //     .replace(/\//g, "");
+  //   if (i18n.resolvedLanguage !== chosenLang && isArray(chosenLang)) {
+  //   i18n.changeLanguage(
+  //     langs.find((l) => pathname.includes(l)).replace(/\//g, "")
+  //   );
+  //   window.location.reload();
+  // }
+  // }
   return null;
 }
 
