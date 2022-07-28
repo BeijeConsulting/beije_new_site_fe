@@ -99,6 +99,6 @@ export const toBase64 = file => new Promise((resolve, reject) => {
 
 export const millisecsToDate = (millsecs) => {
   const date = new Date(millsecs);
-  const dateStr = date.toString();
-  return dateStr
+  const newDate = `${date.getDate() < 10 ? "0" + date.getDate() : date.getDate()}/${date.getMonth() < 10 ? "0" + date.getMonth() : date.getMonth()}/${date.getFullYear()}`;
+  return newDate;
 }

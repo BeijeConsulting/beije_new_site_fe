@@ -28,6 +28,7 @@ import BlogCard from "../../components/functional_components/blogCard/BlogCard";
 
 // API
 import ApiCalls from "../../services/api/ApiCalls";
+import { millisecsToDate } from "../../utils/utilities";
 
 const Blog = (props) => {
 
@@ -222,7 +223,7 @@ const Blog = (props) => {
                 {state.blogData.subtitle}
               </h3>
               <div className={"blog-card-text-postedby"}>
-                <FontAwesomeIcon icon={clock} className={"blog-card-clock-icon"} />{t("blog.postedBy")} {state.blogData.author} {t("blog.postedOn")} {checkItemApi(state.blogData)}
+                <FontAwesomeIcon icon={clock} className={"blog-card-clock-icon"} />{t("blog.postedBy")} {state.blogData.author} {t("blog.postedOn")} {millisecsToDate(state.blogData.create_datetime)}
               </div>
               <div>
                 <ReactMarkdown
