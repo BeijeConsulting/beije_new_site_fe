@@ -29,7 +29,7 @@ const Community = (props) => {
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
-    props.dispatch(setCurrentPage("community"));
+    props.dispatch(setCurrentPage("events"));
     props.dispatch(setVisibilityNavbar(true));
 
     getDataCommunities()

@@ -23,7 +23,7 @@ const BlogCard = (props) => {
   const navigate = useNavigate();
 
   const goToDetail = () => {
-    let route = props.community ? `/community/${props.permalink}` : `/blog/${props.permalink}`
+    let route = props.community ? `/events/${props.permalink}` : `/blog/${props.permalink}`
     navigate(route)
   }
 

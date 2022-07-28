@@ -127,8 +127,8 @@ export const menu_voices = [
   },
   {
     name: "event",
-    link_to: "community",
-    key_link: "community"
+    link_to: "events",
+    key_link: "events"
   },
   // {
   //   name: "focusAcademy",

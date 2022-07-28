@@ -59,11 +59,11 @@ export default [
         element: <BlogDetail />
       },
       {
-        path: "/community",
+        path: "/events",
         element: <Community />
       },
       {
-        path: `/community/:permalink`,
+        path: `/events/:permalink`,
         element: <CommunityDetail />
       },
       {
