@@ -111,6 +111,11 @@ export const menu_voices = [
     key_link: "academy"
   },
   {
+    name: "career",
+    link_to: "/career",
+    key_link: "career"
+  },
+  {
     name: "blog",
     link_to: "blog",
     key_link: "blog"
@@ -130,11 +135,7 @@ export const menu_voices = [
   //   link_to: "#",
   //   key_link: "focusAcademy"
   // },
-  {
-    name: "career",
-    link_to: "/career",
-    key_link: "career"
-  },
+
   {
     name: "contacts",
     link_to: "/contacts",
