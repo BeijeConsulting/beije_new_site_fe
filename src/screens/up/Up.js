@@ -12,7 +12,7 @@ import { setVisibilityNavbar, initVisibilityNavbar } from "../../redux/ducks/sho
 import ApiCalls from "../../services/api/ApiCalls";
 
 // MUI
-import { Box, Container, Skeleton, Tab } from "@mui/material";
+import { Box, Container, Skeleton } from "@mui/material";
 
 // Style
 import "./Up.css";

@@ -51,7 +51,6 @@ const CustomCarousel = (props) => {
   }
 
   const printSwiperSlides = (item, key) => {
-
     return (
       <SwiperSlide
         key={key}
@@ -61,7 +60,7 @@ const CustomCarousel = (props) => {
         style={{
           backgroundColor: props.upCarousel ? item.backgroundColor : ""
         }}
-        onClick={props.upCarousel ? sendToPage(item.permalink) : null}
+        onClick={props.upCarousel ? sendToPage(item.translateCasePermalink) : null}
       >
         {props.imgCarousel &&
           <img
