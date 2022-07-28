@@ -64,7 +64,6 @@ const TeamBeije = (props) => {
 
   useEffect(() => {
     if (state.teamDataResponse?.teamSize) {
-      console.log("sono dentro");
       incriseNumber()
     }
   })

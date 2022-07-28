@@ -38,7 +38,6 @@ const TalentAcademy = (props) => {
     else {
       window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
     }
-    console.log('windowlocation', window.location.hash);
     props.dispatch(setCurrentPage("academy"));
     props.dispatch(setVisibilityNavbar(true));
     return () => {
