@@ -54,15 +54,15 @@ const Blog = (props) => {
     })
   }
 
-  const checkItemApi = (param) => {
-    let datePosted = ""
-    if (param.createDateTime) {
-      if (param.createDateTime.dayOfMonth && param.createDateTime.monthValue && param.createDateTime.year) {
-        datePosted = param.createDateTime.dayOfMonth + "/" + param.createDateTime.monthValue + "/" + param.createDateTime.year
-      }
-    }
-    return datePosted
-  }
+  // const checkItemApi = (param) => {
+  //   let datePosted = ""
+  //   if (param.createDateTime) {
+  //     if (param.createDateTime.dayOfMonth && param.createDateTime.monthValue && param.createDateTime.year) {
+  //       datePosted = param.createDateTime.dayOfMonth + "/" + param.createDateTime.monthValue + "/" + param.createDateTime.year
+  //     }
+  //   }
+  //   return datePosted
+  // }
 
   return (
     <>
