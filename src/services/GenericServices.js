@@ -17,9 +17,9 @@ axiosInstance.interceptors.request.use(
   async (config) => {
     return config;
   },
-  (error) => {
-    Promise.reject(error);
-  }
+  // (error) => {
+  //   Promise.reject(error);
+  // }
 );
 
 // Response interceptor for API calls
@@ -44,7 +44,7 @@ export const get = async (path, obj = {}) => {
     // generally, it enters here when the call goes to "failed"
     // return { error: { messageCode: "ER000" } };
     // window.location("/error")
-    location.href = "/error"
+    // location.href = "/error"
   }
 }
 
