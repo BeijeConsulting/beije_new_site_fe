@@ -106,7 +106,7 @@ const BurgerMenu = (props) => {
         className = "burgerMenu-nav-container burgerMenu-nav-container-img burgerMenu-focusAcademy"
         break
       case "events":
-        className = "burgerMenu-nav-container burgerMenu-nav-container-img burgerMenu-event"
+        className = "burgerMenu-nav-container burgerMenu-nav-container-img burgerMenu-events"
         break
       default:
         break
