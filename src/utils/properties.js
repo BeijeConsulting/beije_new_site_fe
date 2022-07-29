@@ -122,8 +122,8 @@ export const menu_voices = [
   },
   {
     name: "community",
-    link_to: "/team-beije",
-    key_link: "team-beije"
+    link_to: "/community",
+    key_link: "community"
   },
   {
     name: "event",

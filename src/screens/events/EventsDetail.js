@@ -3,7 +3,7 @@ import Gallery from "react-grid-gallery";
 import { useParams } from "react-router-dom";
 
 // Style
-import './Community.css';
+import './Events.css';
 
 // MUI
 import { Box, Container, Divider, Skeleton } from "@mui/material";
@@ -22,7 +22,7 @@ import ApiCalls from "../../services/api/ApiCalls";
 // utils
 import { checkPermalink, converter } from "../../utils/utilities";
 
-const CommunityDetail = (props) => {
+const EventsDetail = (props) => {
 
   const [state, setState] = useState({
     communityDetailDataResponse: null,
@@ -130,4 +130,4 @@ const CommunityDetail = (props) => {
   )
 }
 
-export default connect()(CommunityDetail)
+export default connect()(EventsDetail)

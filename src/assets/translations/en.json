@@ -423,10 +423,6 @@
     "postedOn": "on",
     "latestArticles": "Latest articles"
   },
-  "community": {
-    "title": "Community",
-    "description": "All events signed Beije People First: a change to be together, know each other but fìrst of all to have fun!"
-  }, 
   "events": {
     "title": "Events",
     "description": "All events signed Beije People First: a change to be together, know each other but fìrst of all to have fun!"
@@ -662,7 +658,7 @@
     "longMessage": "Sorry, an error is occured during the page loading. Please try again later!",
     "linkToHome": "Go to home"
   },
-  "teamBeije": {
+  "community": {
     "title": "Beije community",
     "description": {
       "part1": "First of all, a community made up of people with different experiences, interests, incentive but united by one goal: the individual at the center for building a valuable system.",

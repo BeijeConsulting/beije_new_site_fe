@@ -1,7 +1,6 @@
 import React from "react";
 import { Navigate, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-// import { ENVIRONMENT } from "./utils/properties";
 import Home from "./screens/home/Home";
 import NoMatch from "./screens/NoMatch";
 import HomeLayout from "./layout/HomeLayout";
@@ -15,11 +14,11 @@ import Career from "./screens/career/Career"
 import Contacts from "./screens/contacts/Contacts";
 import BlogDetail from "./screens/blog/BlogDetail";
 import Community from "./screens/community/Community";
-import CommunityDetail from "./screens/community/CommunityDetail";
 import CareerDetail from "./screens/career/CareerDetail";
 import CaseStudiesDetail from "./screens/up/CaseStudiesDetail";
-import TeamBeije from "./screens/teamBeije/TeamBeije";
 import ErrorPage from "./screens/ErrorPage";
+import Events from "./screens/events/Events";
+import EventsDetail from "./screens/events/EventsDetail";
 
 export default [
   {
@@ -61,11 +60,11 @@ export default [
       },
       {
         path: "events",
-        element: <Community />
+        element: <Events />
       },
       {
         path: "events/:permalink",
-        element: <CommunityDetail />
+        element: <EventsDetail />
       },
       {
         path: "career",
@@ -76,8 +75,8 @@ export default [
         element: <RequireCareerPermalink><CareerDetail /></RequireCareerPermalink>
       },
       {
-        path: "team-beije",
-        element: <TeamBeije />
+        path: "community",
+        element: <Community />
       },
       {
         path: "contacts",

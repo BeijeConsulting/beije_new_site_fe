@@ -416,9 +416,9 @@
     "postedOn": "il",
     "latestArticles": "Ultimi articoli"
   },
-  "community": {
-    "title": "Community",
-    "description": "Tutti gli eventi firmati Beije People First: momenti in cui stare insieme, ritrovarsi, conoscersi ma soprattutto divertirsi!"
+  "events": {
+    "title": "Eventi",
+    "description": "Tutti gli eventi firmati Beije People First: un cambiamento per stare insieme, conoscersi ma prima di tutto divertirsi!"
   },
   "academyFrontend": {
     "title": "Frontend",
@@ -642,7 +642,7 @@
     "longMessage": "Ci dispiace, c'è stato un errore durante il caricamento della pagina. Ti preghiamo di riprovare più tardi!",
     "linkToHome": "Vai alla home"
   },
-  "teamBeije": {
+  "community": {
     "title": "La community Beije",
     "description": {
       "part1": "Prima di tutto una community fatta di persone con esperienze, interessi, stimoli differenti ma uniti da un unico obiettivo: l’individuo al centro per la costruzione di un sistema di valore.",
