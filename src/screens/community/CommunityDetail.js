@@ -43,7 +43,7 @@ const CommunityDetail = (props) => {
       props.dispatch(initCurrentPage());
       props.dispatch(initVisibilityNavbar());
     };
-  }, [])
+  }, [location.href])
 
   const getCommunityData = async () => {
     let permalinkUSed = checkPermalink(permalink);

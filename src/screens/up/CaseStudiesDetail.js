@@ -21,6 +21,7 @@ import GoBackBtn from "../../components/functional_components/goBackBtn/GoBackBt
 // utils
 import { checkPermalink, converter } from "../../utils/utilities";
 
+let permalinkUSed;
 
 const CaseStudiesDetail = (props) => {
 
@@ -42,11 +43,11 @@ const CaseStudiesDetail = (props) => {
       props.dispatch(initCurrentPage());
       props.dispatch(initVisibilityNavbar());
     };
-  }, [])
+  }, [location.href])
 
   // Add async and await. Here add call to API
   const getCaseStudiesData = async () => {
-    let permalinkUSed = checkPermalink(permalink);
+    permalinkUSed = checkPermalink(permalink);
     let caseStudiesResponse = await ApiCalls.caseStudies_getListDetail(permalinkUSed);
     if (!caseStudiesResponse) {
       navigate(`/beije-up`);
