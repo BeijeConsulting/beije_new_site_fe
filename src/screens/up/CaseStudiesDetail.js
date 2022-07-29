@@ -21,6 +21,7 @@ import GoBackBtn from "../../components/functional_components/goBackBtn/GoBackBt
 // utils
 import { converter } from "../../utils/utilities";
 
+
 const CaseStudiesDetail = (props) => {
 
   const [state, setState] = useState({
@@ -43,9 +44,24 @@ const CaseStudiesDetail = (props) => {
     };
   }, [])
 
+  function checkPermalink() {
+    let permalinkToUSe;
+    let lang = location.href.includes("/it/");
+    let isEn = permalink.includes("-en");
+
+    (lang && isEn) ?
+      permalinkToUSe = permalink.replace("-en", "-it")
+      :
+      permalinkToUSe = permalink.replace("-it", "-en")
+
+    return permalinkToUSe;
+  }
+
   // Add async and await. Here add call to API
   const getCaseStudiesData = async () => {
-    let caseStudiesResponse = await ApiCalls.caseStudies_getListDetail(permalink);
+    let permalinkUSed = checkPermalink();
+    console.log(permalinkUSed);
+    let caseStudiesResponse = await ApiCalls.caseStudies_getListDetail(permalinkUSed);
     if (!caseStudiesResponse) {
       navigate(`/beije-up`);
     }
@@ -125,4 +141,10 @@ const CaseStudiesDetail = (props) => {
   )
 }
 
-export default connect()(CaseStudiesDetail)
+const mapStateToProps = state => (
+  {
+    languageDuck: state.languageDuck,
+  }
+)
+
+export default connect(mapStateToProps)(CaseStudiesDetail)
