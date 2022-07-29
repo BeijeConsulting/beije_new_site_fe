@@ -60,7 +60,6 @@ const CaseStudiesDetail = (props) => {
   // Add async and await. Here add call to API
   const getCaseStudiesData = async () => {
     let permalinkUSed = checkPermalink();
-    console.log(permalinkUSed);
     let caseStudiesResponse = await ApiCalls.caseStudies_getListDetail(permalinkUSed);
     if (!caseStudiesResponse) {
       navigate(`/beije-up`);
