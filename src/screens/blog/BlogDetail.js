@@ -27,7 +27,7 @@ import BlogCard from "../../components/functional_components/blogCard/BlogCard";
 import ApiCalls from "../../services/api/ApiCalls";
 
 // utils
-import { converter, millisecsToDate } from "../../utils/utilities";
+import { checkPermalink, converter, millisecsToDate } from "../../utils/utilities";
 
 const Blog = (props) => {
 
@@ -58,7 +58,8 @@ const Blog = (props) => {
   }, [location.href])
 
   const getData = async () => {
-    let blogDataAPI = await ApiCalls.blog_getListDetail(permalink);
+    let permalinkUSed = checkPermalink(permalink);
+    let blogDataAPI = await ApiCalls.blog_getListDetail(permalinkUSed);
     if (!blogDataAPI) {
       navigate(`/blog`);
     }

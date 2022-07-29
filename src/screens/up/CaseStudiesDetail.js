@@ -19,7 +19,7 @@ import "./CaseStudiesDetail.css";
 import GoBackBtn from "../../components/functional_components/goBackBtn/GoBackBtn";
 
 // utils
-import { converter } from "../../utils/utilities";
+import { checkPermalink, converter } from "../../utils/utilities";
 
 
 const CaseStudiesDetail = (props) => {
@@ -43,19 +43,6 @@ const CaseStudiesDetail = (props) => {
       props.dispatch(initVisibilityNavbar());
     };
   }, [])
-
-  function checkPermalink(permalink) {
-    let permalinkToUSe;
-    let lang = location.href.includes("/it/");
-    const newParams = permalink.slice(0, -2);
-
-    lang ?
-      permalinkToUSe = newParams + "it"
-      :
-      permalinkToUSe = newParams + "en"
-
-    return permalinkToUSe;
-  }
 
   // Add async and await. Here add call to API
   const getCaseStudiesData = async () => {

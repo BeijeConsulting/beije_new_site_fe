@@ -110,3 +110,16 @@ export const converter = new Converter({
   simplifiedAutoLink: true,
   noHeaderId: true,
 });
+
+export  function checkPermalink(permalink) {
+  let permalinkToUSe;
+  let lang = location.href.includes("/it/");
+  const newParams = permalink.slice(0, -2);
+
+  lang ?
+    permalinkToUSe = newParams + "it"
+    :
+    permalinkToUSe = newParams + "en"
+
+  return permalinkToUSe;
+}

@@ -20,7 +20,7 @@ import GoBackBtn from "../../components/functional_components/goBackBtn/GoBackBt
 import ApiCalls from "../../services/api/ApiCalls";
 
 // utils
-import { converter } from "../../utils/utilities";
+import { checkPermalink, converter } from "../../utils/utilities";
 
 const CommunityDetail = (props) => {
 
@@ -46,7 +46,8 @@ const CommunityDetail = (props) => {
   }, [])
 
   const getCommunityData = async () => {
-    let communityDetailDataResponse = await ApiCalls.community_getListDetail(permalink);
+    let permalinkUSed = checkPermalink(permalink);
+    let communityDetailDataResponse = await ApiCalls.community_getListDetail(permalinkUSed);
 
 
     const ARR = communityDetailDataResponse?.images.map((img) => {
