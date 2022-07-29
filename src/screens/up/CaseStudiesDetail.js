@@ -44,22 +44,22 @@ const CaseStudiesDetail = (props) => {
     };
   }, [])
 
-  function checkPermalink() {
+  function checkPermalink(permalink) {
     let permalinkToUSe;
     let lang = location.href.includes("/it/");
-    let isEn = permalink.includes("-en");
+    const newParams = permalink.slice(0, -2);
 
-    (lang && isEn) ?
-      permalinkToUSe = permalink.replace("-en", "-it")
+    lang ?
+      permalinkToUSe = newParams + "it"
       :
-      permalinkToUSe = permalink.replace("-it", "-en")
+      permalinkToUSe = newParams + "en"
 
     return permalinkToUSe;
   }
 
   // Add async and await. Here add call to API
   const getCaseStudiesData = async () => {
-    let permalinkUSed = checkPermalink();
+    let permalinkUSed = checkPermalink(permalink);
     console.log(permalinkUSed);
     let caseStudiesResponse = await ApiCalls.caseStudies_getListDetail(permalinkUSed);
     if (!caseStudiesResponse) {
