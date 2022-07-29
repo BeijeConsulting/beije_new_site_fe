@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import './style.css';
 import App from './App';
@@ -19,30 +19,7 @@ import CookiePolicies_en from "./components/functional_components/cookiePolicies
 import CookiePolicies_it from "./components/functional_components/cookiePolicies/CookiePolicies_it"
 import CustomModal from './components/hooks_components/customModal/CustomModal';
 
-function RedirectToLanguage() {
-  const { pathname, search } = useLocation();
-  const { i18n } = useTranslation();
-  const langs = ["/it/", "/en/"];
-  if (!langs.some((l) => pathname.includes(l))) {
-    window.location.href =
-      "/" + i18n.resolvedLanguage + pathname + (search ? search : "");
-  } 
-  // else {
-  //   const chosenLang = langs
-  //     .find((l) => pathname.includes(l))
-  //     .replace(/\//g, "");
-  //   if (i18n.resolvedLanguage !== chosenLang && isArray(chosenLang)) {
-  //   i18n.changeLanguage(
-  //     langs.find((l) => pathname.includes(l)).replace(/\//g, "")
-  //   );
-  //   window.location.reload();
-  // }
-  // }
-  return null;
-}
-
 function Root() {
-  const { i18n } = useTranslation();
   const { t } = useTranslation();
 
   const [state, setState] = useState({
@@ -66,7 +43,7 @@ function Root() {
   return (
     // <React.StrictMode>
     <Provider store={store}>
-      <BrowserRouter basename={i18n.resolvedLanguage}>
+      <BrowserRouter>
         <App />
         <CookieConsent
           buttonText={<span className='simple-paragraph'>{t("btn.accept")}</span>}
@@ -90,11 +67,11 @@ function Root() {
 
         </CustomModal>
       </BrowserRouter>
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Routes>
           <Route path="*" element={<RedirectToLanguage />} />
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
     </Provider>
     // </React.StrictMode>
   )
