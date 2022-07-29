@@ -328,6 +328,12 @@
     background-image: var(--photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/community/community_burger_mobile.jpg");
   }
 
+  .burgerMenu-event {
+    background-image: var(--webkit-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/events/event_burger_mobile.jpg");
+    background-image: var(--o-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/events/event_burger_mobile.jpg");
+    background-image: var(--photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/events/event_burger_mobile.jpg");
+     }
+
   .burgerMenu-contacts {
     background-image: var(--webkit-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/contacts/contacts_burger_mobile.jpg");
     background-image: var(--o-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/contacts/contacts_burger_mobile.jpg");
@@ -371,7 +377,11 @@
       background-image: var(--o-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/community/community_burger_tablet.jpg");
       background-image: var(--photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/community/community_burger_tablet.jpg");
     }
-
+    .burgerMenu-event {
+      background-image: var(--webkit-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/events/event_burger_tablet.jpg");
+      background-image: var(--o-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/events/event_burger_tablet.jpg");
+      background-image: var(--photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/events/event_burger_tablet.jpg");
+    }
     .burgerMenu-contacts {
       background-image: var(--webkit-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/contacts/contacts_burger_desktop_Tablet.jpg");
       background-image: var(--o-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/contacts/contacts_burger_desktop_Tablet.jpg");
@@ -415,6 +425,12 @@
       background-image: var(--webkit-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/community/community_burger_desktop.jpg");
       background-image: var(--o-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/community/community_burger_desktop.jpg");
       background-image: var(--photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/community/community_burger_desktop.jpg");
+    }
+
+    .burgerMenu-event {
+      background-image: var(--webkit-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/events/event_burger_desktop.jpg");
+      background-image: var(--o-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/events/event_burger_desktop.jpg");
+      background-image: var(--photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/events/event_burger_desktop.jpg");
     }
 
     .burgerMenu-contacts {
