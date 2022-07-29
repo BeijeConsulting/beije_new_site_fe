@@ -20,6 +20,7 @@
       "career": "Career – Beije People First",
       "blog": "Blog – Beije People First",
       "community": "Community – Beije People First",
+      "events": "Events – Beije People First",
       "contacts": "Contacts – Beije People First"
     },
     "meta_description": {
@@ -31,7 +32,8 @@
       "up": "Management and development of software with the Agile method through the use of the most innovative technologies on the market.",
       "career": "Become a Software Developer with Beije",
       "blog": "All the news and updates on the IT industry, frontend & backend",
-      "community": "All the events of our community Beije",
+      "community": "All the beije community",
+      "events": "All the events of our community Beije",
       "contacts": "Contacts Beije People First"
     },
     "keywords": {
@@ -43,6 +45,7 @@
       "up": "agile, project, implementation, delivery, integration, application maintenance, software, frontend, backend, software company, IT,  IT company, company Milano, consulting Milano, company Lissone, IT company lissone, IT company Milano",
       "career": "job offers beije, stage frontend, stage backend, stage, stage milano IT, stage frontend milano, stage backend milano, academy frontend, academybackend, how to work in beije, beije career, work, academy, frontend salary, software developer salary, backend salary",
       "blog": "",
+      "events": "",
       "community": "community, community beije, beije community, beije events, team beije, team, beije story",
       "contacts": "beije contacts, beije headquarter, where is beije, beije telephone, email beije"
     }
@@ -422,6 +425,10 @@
   },
   "community": {
     "title": "Community",
+    "description": "All events signed Beije People First: a change to be together, know each other but fìrst of all to have fun!"
+  }, 
+  "events": {
+    "title": "Events",
     "description": "All events signed Beije People First: a change to be together, know each other but fìrst of all to have fun!"
   },
   "academyFrontend": {

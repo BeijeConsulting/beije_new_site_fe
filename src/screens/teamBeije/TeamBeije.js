@@ -99,8 +99,8 @@ const TeamBeije = (props) => {
   return (
     <>
       <Helmet>
-        <title>{t('helmet.meta_title.blog')}</title>
-        <meta name="description" content={t('helmet.meta_description.blog')} />
+        <title>{t('helmet.meta_title.community')}</title>
+        <meta name="description" content={t('helmet.meta_description.community')} />
         <meta name="keywords" content={t('helmet.keywords.blog')} />
       </Helmet>
 

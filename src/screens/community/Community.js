@@ -52,9 +52,9 @@ const Community = (props) => {
   return (
     <>
       <Helmet>
-        <title>{t('helmet.meta_title.community')}</title>
-        <meta name="description" content={t('helmet.meta_description.community')} />
-        <meta name="keywords" content={t('helmet.keywords.community')} />
+        <title>{t('helmet.meta_title.events')}</title>
+        <meta name="description" content={t('helmet.meta_description.events')} />
+        <meta name="keywords" content={t('helmet.keywords.events')} />
       </Helmet>
 
       <Box
@@ -66,8 +66,8 @@ const Community = (props) => {
           className={"paddingX-container-general-pages blog-first-section-container d-flex justify-center"}
         >
           <Box className={"max-width-1200"}>
-            <h1>{t("community.title")}</h1>
-            <p>{t("community.description")}</p>
+            <h1>{t("events.title")}</h1>
+            <p>{t("events.description")}</p>
           </Box>
         </Container>
 
