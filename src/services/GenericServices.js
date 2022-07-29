@@ -1,8 +1,6 @@
 import axios from "axios/index";
 import { ENVIRONMENT } from "../utils/properties";
 import { isEmpty } from "lodash";
-import { useNavigate } from "react-router-dom";
-
 
 const axiosInstance = axios.create({ baseURL: ENVIRONMENT.API_REST_BE });
 // const axiosInstance = axios.create({ baseURL: process.env.REACT_APP_API_REST_BE ? process.env.REACT_APP_API_REST_BE : ENVIRONMENT.API_REST_BE });
@@ -17,9 +15,9 @@ axiosInstance.interceptors.request.use(
   async (config) => {
     return config;
   },
-  // (error) => {
-  //   Promise.reject(error);
-  // }
+  (error) => {
+    window.Promise.reject(error);
+  }
 );
 
 // Response interceptor for API calls

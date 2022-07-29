@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 // Redux
-import { connect } from "react-redux";
+import { connect, useDispatch } from "react-redux";
 import { setLogo, initLogo } from "../redux/ducks/logoDuck";
 
 // MUI
@@ -22,15 +22,33 @@ import CustomFooter from "../components/hooks_components/customFooter/CustomFoot
 import HideOnScroll from "../components/functional_components/ui/hideOnScroll/HideOnScroll";
 import BackToTopButton from "../components/functional_components/ui/backToTopButton/BackToTopButton";
 import ToastMessage from "../components/hooks_components/toastMessage/ToastMessage";
+import { switchLang } from "../i18n/i18n-config";
+import { setLanguage } from "../redux/ducks/Language";
 
 const HomeLayout = (props) => {
-
+  const { i18n } = useTranslation();
+  const { pathname, search } = useLocation();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [state, setState] = useState({
     isMobile: window.innerWidth < 1024,
     isLittleMobile: window.innerWidth < 700
   })
 
   const { t } = useTranslation()
+
+  useEffect(() => {
+    const langs = ["/it/", "/en/"];
+    if (!langs.some((l) => pathname.includes(l))) {
+      navigate(`/${i18n.resolvedLanguage}${pathname}${search ? search : ""}`, { replace: true });
+    } else {
+      const chosenLang = langs.find((l) => pathname.includes(l)).replace(/\//g, "");
+      if (i18n.resolvedLanguage !== chosenLang) {
+        switchLang(chosenLang);
+        dispatch(setLanguage(chosenLang.toUpperCase()));
+      }
+    }
+  }, [pathname])
 
   useEffect(() => {
     window.addEventListener("resize", updateMedia);

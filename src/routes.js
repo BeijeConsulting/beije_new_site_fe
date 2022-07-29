@@ -1,4 +1,6 @@
 import React from "react";
+import { Navigate, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 // import { ENVIRONMENT } from "./utils/properties";
 import Home from "./screens/home/Home";
 import NoMatch from "./screens/NoMatch";
@@ -12,7 +14,6 @@ import AcademyBackend from "./screens/academyDetail/academyBackend/AcademyBacken
 import Career from "./screens/career/Career"
 import Contacts from "./screens/contacts/Contacts";
 import BlogDetail from "./screens/blog/BlogDetail";
-import { Navigate } from "react-router-dom";
 import Community from "./screens/community/Community";
 import CommunityDetail from "./screens/community/CommunityDetail";
 import CareerDetail from "./screens/career/CareerDetail";
@@ -22,80 +23,91 @@ import ErrorPage from "./screens/ErrorPage";
 
 export default [
   {
-    path: "/",
+    path: ":lang",
     element: <HomeLayout />,
     children: [
       { index: true, element: <Home /> },
       {
-        path: "/beije-consulting",
+        path: "beije-consulting",
         element: <Consulting />
       },
       {
-        path: "/beije-up",
+        path: "beije-up",
         element: <Up />
       },
       {
-        path: "/beije-up/:permalink",
+        path: "beije-up/:permalink",
         element: <CaseStudiesDetail />
       },
       {
-        path: "/beije-talent-academy",
+        path: "beije-talent-academy",
         element: <TalentAcademy />
       },
       {
-        path: "/beije-talent-academy/academy-frontend",
+        path: "beije-talent-academy/academy-frontend",
         element: <AcademyFrontend />
       },
       {
-        path: "/beije-talent-academy/academy-backend",
+        path: "beije-talent-academy/academy-backend",
         element: <AcademyBackend />
       },
       {
-        path: "/blog",
+        path: "blog",
         element: <Blog />
       },
       {
-        path: `/blog/:permalink`,
+        path: "blog/:permalink",
         element: <BlogDetail />
       },
       {
-        path: "/events",
+        path: "events",
         element: <Community />
       },
       {
-        path: `/events/:permalink`,
+        path: "events/:permalink",
         element: <CommunityDetail />
       },
       {
-        path: "/career",
+        path: "career",
         element: <Career />
       },
       {
-        path: "/career/career-detail",
+        path: "career/career-detail",
         element: <RequireCareerPermalink><CareerDetail /></RequireCareerPermalink>
       },
       {
-        path: "/team-beije",
+        path: "team-beije",
         element: <TeamBeije />
       },
       {
-        path: "/contacts",
+        path: "contacts",
         element: <Contacts />
       },
       {
-        path: "/error",
+        path: "error",
         element: <ErrorPage />
       },
       { path: "*", element: <RedirectUrlNewSite><NoMatch /></RedirectUrlNewSite> }
     ]
+  },
+  {
+    path: "/",
+    element: <RedirectToLanguage />,
   }
 ];
 
+function RedirectToLanguage() {
+  const { i18n } = useTranslation();
+  const { pathname, search } = useLocation();
+  return <Navigate replace to={`${i18n.resolvedLanguage}${pathname}${search ? search : ""}`} />
+}
+
 function RequireCareerPermalink({ children }) {
+  const { i18n } = useTranslation();
   let permalink1 = new URLSearchParams(location.search).get("jobOffer");
   let permalink2 = new URLSearchParams(location.search).get("academyOffer");
   if (!permalink1 && !permalink2) {
-    return <Navigate to={`/career`} />
+    return <Navigate replace to={`/${i18n.resolvedLanguage}/career`} />
   }
 
   return children;
@@ -103,26 +115,30 @@ function RequireCareerPermalink({ children }) {
 
 
 function RedirectUrlNewSite({ children }) {
+  const { i18n } = useTranslation();
   let oldUrl = window.location.pathname;
-  switch (oldUrl.substring(3)) {
+  let newUrl = "";
+  switch (oldUrl.replace(/\/it|\/en/g, "")) {
     case "/home/consulting/":
-      location.href = "/beije-consulting";
+      newUrl = "/beije-consulting";
       break;
     case "/portfolio-articoli/academy-java/":
-      location.href = "/beije-talent-academy/academy-backend";
+      newUrl = "/beije-talent-academy/academy-backend";
       break;
     case "/portfolio-articoli/stage-javascript/":
-      location.href = "/beije-talent-academy/academy-frontend";
+      newUrl = "/beije-talent-academy/academy-frontend";
       break;
     case "/home/community/":
-      location.href = "/";
+      newUrl = "/";
       break;
     case "/home/up/":
-      location.href = "/beije-up";
+      newUrl = "/beije-up";
       break;
     case "/home/academy/":
-      location.href = "/beije-talent-academy";
+      newUrl = "/beije-talent-academy";
+      break;
+    default:
       break;
   }
-  return children
+  return newUrl !== "" ? <Navigate replace to={`/${i18n.resolvedLanguage}${newUrl}`} /> : children
 }
