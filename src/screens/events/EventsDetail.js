@@ -67,66 +67,95 @@ const EventsDetail = (props) => {
   }
 
   return (
-    <Box
-      className={"bg-dark-grey margin-top-container-screens"}
-    >
-      <Container
-        component={"section"}
-        maxWidth={"false"}
-        className={"paddingX-container-general-pages blog-first-section-container d-flex items-center flex-column"}
+    <>   {
+      !state.communityDetailDataResponse &&
+      <div
+        className="d-flex flex-column items-center paddingX-container-general-pages"
       >
-        <Box className={"max-width-1200 width-100 margin-bottom-30"}>
-          <GoBackBtn />
-        </Box>
-        <Box className={"max-width-1200"}>
-          <h1>{state.communityDetailDataResponse?.title}</h1>
-          <p>{state.communityDetailDataResponse?.subtitle}</p>
-        </Box>
-      </Container>
-
-      <Divider
-        className={"divider"}
-      />
-
-      <Container
-        component={"section"}
-        maxWidth={"false"}
-        className={"paddingX-container-general-pages d-flex justify-center"}
+        <div
+          className="d-flex flex-column max-width-1200 width-100 marginY-30"
+        >
+          <Skeleton variant="rectangular" width={"100%"} height={300} animation="wave" className="marginY-30" />
+          <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+          <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+          <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+          <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+          <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+          <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+          <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+          <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+          <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+          <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+          <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+          <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+          <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+          <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+          <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+          <Skeleton variant="text" animation="wave" width={"100%"} className="marginY-30" />
+        </div>
+      </div>
+    }
+      <Box
+        className={"bg-dark-grey margin-top-container-screens"}
       >
-        <Box className={"max-width-1200 width-100"}>
-          <Box className={"community-detail-second-section-container"}>
-            <Box className={"community-detail-second-section-image-container"}>
-              {state.communityDetailDataResponse?.cover_img ?
-                <img
-                  alt={"event photo"}
-                  src={state.communityDetailDataResponse?.cover_img}
-                />
-                :
-                <Skeleton />}
-            </Box>
-            <Box className={"community-detail-second-section-title-container"}>
-              <h2>{state.communityDetailDataResponse?.title}</h2>
-              <div dangerouslySetInnerHTML={{ __html: converter.makeHtml(state.communityDetailDataResponse?.description) }} />
+        <Container
+          component={"section"}
+          maxWidth={"false"}
+          className={"paddingX-container-general-pages blog-first-section-container d-flex items-center flex-column"}
+        >
+          <Box className={"max-width-1200 width-100 margin-bottom-30"}>
+            <GoBackBtn />
+          </Box>
+          <Box className={"max-width-1200"}>
+            <h1>{state.communityDetailDataResponse?.title}</h1>
+            <p>{state.communityDetailDataResponse?.subtitle}</p>
+          </Box>
+        </Container>
+
+        <Divider
+          className={"divider"}
+        />
+
+        <Container
+          component={"section"}
+          maxWidth={"false"}
+          className={"paddingX-container-general-pages d-flex justify-center"}
+        >
+          <Box className={"max-width-1200 width-100"}>
+            <Box className={"community-detail-second-section-container"}>
+              <Box className={"community-detail-second-section-image-container"}>
+                {state.communityDetailDataResponse?.cover_img ?
+                  <img
+                    alt={"event photo"}
+                    src={state.communityDetailDataResponse?.cover_img}
+                  />
+                  :
+                  <Skeleton />}
+              </Box>
+              <Box className={"community-detail-second-section-title-container"}>
+                <h2>{state.communityDetailDataResponse?.title}</h2>
+                <div dangerouslySetInnerHTML={{ __html: converter.makeHtml(state.communityDetailDataResponse?.description) }} />
+              </Box>
             </Box>
           </Box>
-        </Box>
-      </Container>
+        </Container>
 
-      <Container
-        component={"section"}
-        maxWidth={"false"}
-        className={"paddingX-container-general-pages d-flex justify-center"}
-      >
-        <Box className={"max-width-1200 width-100 "}>
-          <Gallery
-            images={state.images || []}
-            enableImageSelection={false}
-            className={"community-gallery-container"}
-          />
-        </Box>
-      </Container>
+        <Container
+          component={"section"}
+          maxWidth={"false"}
+          className={"paddingX-container-general-pages d-flex justify-center"}
+        >
+          <Box className={"max-width-1200 width-100 "}>
+            <Gallery
+              images={state.images || []}
+              enableImageSelection={false}
+              className={"community-gallery-container"}
+            />
+          </Box>
+        </Container>
 
-    </Box>
+      </Box>
+    </>
   )
 }
 
