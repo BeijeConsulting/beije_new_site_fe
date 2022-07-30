@@ -34,15 +34,16 @@ const CustomLink = (props) => {
   }
 
   return (
-    <Link
-      to={props.linkTo}
-      className={switchClassName()}
-      onClick={handleCallback}
-      download={props.download}
-      target={props.target}
-    >
-      {props.content}
-    </Link>
+    <div className="wrapper"  onClick={handleCallback}>
+      <Link
+        to={props.linkTo}
+        className={switchClassName()}
+        download={props.download}
+        target={props.target}
+      >
+        {props.content}
+      </Link>
+    </div>
   )
 }
 
