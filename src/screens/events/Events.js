@@ -96,7 +96,6 @@ const Events = (props) => {
                       subtitle={event.subtitle}
                       description={event.description}
                       postedby={event.author}
-                      community
                       posted={millisecsToDate(event.create_datetime)}
                     />
                   </div>
