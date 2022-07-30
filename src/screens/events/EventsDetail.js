@@ -124,13 +124,10 @@ const EventsDetail = (props) => {
           <Box className={"max-width-1200 width-100"}>
             <Box className={"community-detail-second-section-container"}>
               <Box className={"community-detail-second-section-image-container"}>
-                {state.communityDetailDataResponse?.cover_img ?
-                  <img
-                    alt={"event photo"}
-                    src={state.communityDetailDataResponse?.cover_img}
-                  />
-                  :
-                  <Skeleton />}
+                <img
+                  alt={"event photo"}
+                  src={state.communityDetailDataResponse?.cover_img}
+                />
               </Box>
               <Box className={"community-detail-second-section-title-container"}>
                 <h2>{state.communityDetailDataResponse?.title}</h2>
