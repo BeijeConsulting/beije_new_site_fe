@@ -28,7 +28,7 @@ const CustomNavbar = (props) => {
         <nav className={switchClassName()}>
 
           <NavLink
-            to="/beije-consulting"
+            to="beije-consulting"
           >
             Beije Consulting
             {
@@ -38,7 +38,7 @@ const CustomNavbar = (props) => {
           </NavLink>
 
           <NavLink
-            to="/beije-up"
+            to="beije-up"
           >
             Beije Up
             {
@@ -49,7 +49,7 @@ const CustomNavbar = (props) => {
 
 
           <NavLink
-            to="/beije-talent-academy"
+            to="beije-talent-academy"
           >
             Beije Talent Academy
             {
