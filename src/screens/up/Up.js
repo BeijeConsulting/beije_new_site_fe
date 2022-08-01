@@ -45,12 +45,11 @@ const Up = (props) => {
       props.dispatch(initCurrentPage());
       props.dispatch(initVisibilityNavbar());
     };
-  }, [])
+  }, [props.languageDuck.currentLanguage])
 
   const getCaseStudiesData = async () => {
     let caseStudiesResponse = await ApiCalls.caseStudies_getList(props.languageDuck.currentLanguage);
 
-    // let caseStudiesResponse = caseStudiesTrialObj;
     setState({
       ...state,
       caseStudiesResponse: caseStudiesResponse

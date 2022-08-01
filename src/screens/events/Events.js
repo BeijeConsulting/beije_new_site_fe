@@ -38,10 +38,10 @@ const Events = (props) => {
       props.dispatch(initCurrentPage());
       props.dispatch(initVisibilityNavbar());
     };
-  }, [])
+  }, [props.languageDuck.currentLanguage])
 
   const getDataCommunities = async () => {
-    let communityDataResponse = await ApiCalls.community_getList(props.languageDuck.currentLanguage.toLowerCase());
+    let communityDataResponse = await ApiCalls.community_getList(props.languageDuck.currentLanguage);
 
     setState({
       ...state,

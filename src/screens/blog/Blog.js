@@ -42,10 +42,10 @@ const Blog = (props) => {
       props.dispatch(initCurrentPage());
       props.dispatch(initVisibilityNavbar());
     };
-  }, [])
+  }, [props.languageDuck.currentLanguage])
 
   const getBlogData = async () => {
-    let blogDataResponseAPI = await ApiCalls.blog_getList(props.languageDuck.currentLanguage.toLowerCase());
+    let blogDataResponseAPI = await ApiCalls.blog_getList(props.languageDuck.currentLanguage);
     let blogDataResponse = blogDataResponseAPI;
     
     setState({
@@ -53,16 +53,6 @@ const Blog = (props) => {
       blogDataResponse: blogDataResponse
     })
   }
-
-  // const checkItemApi = (param) => {
-  //   let datePosted = ""
-  //   if (param.createDateTime) {
-  //     if (param.createDateTime.dayOfMonth && param.createDateTime.monthValue && param.createDateTime.year) {
-  //       datePosted = param.createDateTime.dayOfMonth + "/" + param.createDateTime.monthValue + "/" + param.createDateTime.year
-  //     }
-  //   }
-  //   return datePosted
-  // }
 
   return (
     <>
