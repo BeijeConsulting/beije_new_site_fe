@@ -136,6 +136,9 @@ function RedirectUrlNewSite({ children }) {
     case "/home/academy/":
       newUrl = "/beije-talent-academy";
       break;
+    case "/team-beije":
+      newUrl = "/community";
+      break;
     default:
       break;
   }
