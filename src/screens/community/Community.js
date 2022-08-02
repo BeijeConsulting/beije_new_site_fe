@@ -208,7 +208,7 @@ const Community = (props) => {
               <div
                 style={{
                   width: '100%',
-                  height: '60%',
+                  height: '75%',
                   backgroundImage: `url(${state.dataDetail.picImage ? state.dataDetail.picImage : profile})`,
                   backgroundPosition: 'center',
                   backgroundSize: 'cover',
