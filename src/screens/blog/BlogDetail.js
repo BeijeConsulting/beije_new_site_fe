@@ -36,7 +36,7 @@ const Blog = (props) => {
   const ref = useRef(null);
 
   // const permalink = new URLSearchParams(location.search).get("article");
-  const { permalink } = useParams();
+  const { permalink, lang } = useParams();
 
   const [state, setState] = useState({
     blogData: null,
@@ -58,10 +58,14 @@ const Blog = (props) => {
   }, [location.href])
 
   const getData = async () => {
-    let permalinkUSed = checkPermalink(permalink);
-    let blogDataAPI = await ApiCalls.blog_getListDetail(permalinkUSed);
+    // let permalinkUSed = checkPermalink(permalink);
+    // let blogDataAPI = await ApiCalls.blog_getListDetail(permalinkUSed);
+    let blogDataAPI = await ApiCalls.blog_getListDetail(permalink);
+    // console.log("blogDataAPI", blogDataAPI.language, lang)
     if (!blogDataAPI) {
       navigate(`/blog`);
+    } else if (blogDataAPI.language !== lang) {
+      navigate(`/${lang}/blog/${blogDataAPI.translate_blog_permalink}`);
     }
 
     let blogDataResponseAPI = await ApiCalls.blog_getList(props.languageDuck.currentLanguage);
