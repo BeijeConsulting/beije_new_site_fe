@@ -52,7 +52,7 @@ const EventsDetail = (props) => {
 
     if (!eventsRes) {
       navigate("/events");
-    } else if (eventsRes.language !== lang) navigate(`/${lang}/events/${eventsRes.translate_blog_permalink}`);
+    } else if (eventsRes.language !== lang) navigate(`/${lang}/events/${eventsRes.translate_blog_permalink}`, {replace: true});
 
 
     if (eventsRes?.images > 0) {

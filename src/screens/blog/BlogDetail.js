@@ -64,7 +64,7 @@ const Blog = (props) => {
     if (!blogDataAPI) {
       navigate(`/blog`);
     } else if (blogDataAPI.language !== lang) {
-      navigate(`/${lang}/blog/${blogDataAPI.translate_blog_permalink}`);
+      navigate(`/${lang}/blog/${blogDataAPI.translate_blog_permalink}`, {replace: true});
     }
 
     let blogDataResponseAPI = await ApiCalls.blog_getList(props.languageDuck.currentLanguage);

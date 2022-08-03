@@ -50,7 +50,7 @@ const CaseStudiesDetail = (props) => {
     if (!caseStudiesResponse) {
       navigate(`/beije-up`);
     } else if (caseStudiesResponse.language !== lang) {
-      navigate(`/${lang}/beije-up/${caseStudiesResponse.translateCasePermalink}`);
+      navigate(`/${lang}/beije-up/${caseStudiesResponse.translateCasePermalink}`, { replace: true });
     }
 
 
@@ -96,7 +96,7 @@ const CaseStudiesDetail = (props) => {
           <Box
             className="case-studies-detail-btn-container max-width-1200 width-100"
           >
-            <GoBackBtn callback={()=> navigate(`/${lang}/beije-up`)} />
+            <GoBackBtn callback={() => navigate(`/${lang}/beije-up`)} />
           </Box>
 
           <Box
