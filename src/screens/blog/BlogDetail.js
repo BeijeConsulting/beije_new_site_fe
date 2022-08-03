@@ -27,7 +27,7 @@ import BlogCard from "../../components/functional_components/blogCard/BlogCard";
 import ApiCalls from "../../services/api/ApiCalls";
 
 // utils
-import { checkPermalink, converter, millisecsToDate } from "../../utils/utilities";
+import { converter, millisecsToDate } from "../../utils/utilities";
 
 const Blog = (props) => {
 
@@ -58,10 +58,9 @@ const Blog = (props) => {
   }, [location.href])
 
   const getData = async () => {
-    // let permalinkUSed = checkPermalink(permalink);
-    // let blogDataAPI = await ApiCalls.blog_getListDetail(permalinkUSed);
+
     let blogDataAPI = await ApiCalls.blog_getListDetail(permalink);
-    // console.log("blogDataAPI", blogDataAPI.language, lang)
+
     if (!blogDataAPI) {
       navigate(`/blog`);
     } else if (blogDataAPI.language !== lang) {
@@ -126,7 +125,7 @@ const Blog = (props) => {
         className={"paddingX-container-general-pages blog-first-section-container d-flex items-center flex-column"}
       >
         <Box className={"max-width-1200 width-100 margin-bottom-30"}>
-          <GoBackBtn />
+          <GoBackBtn callback={()=> navigate(`/${lang}/blog`)} />
         </Box>
         <Box className={"max-width-1200"}>
           <h2>{t("blog.title")}</h2>
@@ -231,7 +230,7 @@ const Blog = (props) => {
                 <FontAwesomeIcon icon={clock} className={"blog-card-clock-icon"} />{t("blog.postedBy")} {state.blogData.author} {t("blog.postedOn")} {millisecsToDate(state.blogData.create_datetime)}
               </div>
               <div>
-              <div dangerouslySetInnerHTML={{ __html: converter.makeHtml(state.blogData.description) }} />
+                <div dangerouslySetInnerHTML={{ __html: converter.makeHtml(state.blogData.description) }} />
               </div>
 
               {

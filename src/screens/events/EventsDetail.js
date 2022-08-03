@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Gallery from "react-grid-gallery";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 // Style
 import './Events.css';
@@ -20,24 +20,25 @@ import GoBackBtn from "../../components/functional_components/goBackBtn/GoBackBt
 import ApiCalls from "../../services/api/ApiCalls";
 
 // utils
-import { checkPermalink, converter } from "../../utils/utilities";
+import { converter } from "../../utils/utilities";
 
 const EventsDetail = (props) => {
 
   const [state, setState] = useState({
-    communityDetailDataResponse: null,
+    eventsRes: null,
     images: [],
   })
 
   // const permalink = new URLSearchParams(location.search).get("event");
-  const { permalink } = useParams();
+  const { permalink, lang } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
     props.dispatch(setCurrentPage("community"));
     props.dispatch(setVisibilityNavbar(true));
 
-    getCommunityData()
+    getEventsData()
 
     return () => {
       props.dispatch(initCurrentPage());
@@ -45,30 +46,36 @@ const EventsDetail = (props) => {
     };
   }, [location.href])
 
-  const getCommunityData = async () => {
-    let permalinkUSed = checkPermalink(permalink);
-    let communityDetailDataResponse = await ApiCalls.community_getListDetail(permalinkUSed);
+  const getEventsData = async () => {
+    let arr;
+    let eventsRes = await ApiCalls.community_getListDetail(permalink);
+
+    if (!eventsRes) {
+      navigate("/events");
+    } else if (eventsRes.language !== lang) navigate(`/${lang}/events/${eventsRes.translate_blog_permalink}`);
 
 
-    const ARR = communityDetailDataResponse?.images.map((img) => {
-      return {
-        src: img,
-        thumbnail: img,
-        thumbnailWidth: 320,
-        thumbnailHeight: 212
-      }
-    })
+    if (eventsRes?.images > 0) {
+      arr = eventsRes?.images.map((img) => {
+        return {
+          src: img,
+          thumbnail: img,
+          thumbnailWidth: 320,
+          thumbnailHeight: 212
+        }
+      })
+    }
 
     setState({
       ...state,
-      communityDetailDataResponse,
-      images: ARR,
+      eventsRes,
+      images: arr,
     })
   }
 
   return (
     <>   {
-      !state.communityDetailDataResponse &&
+      !state.eventsRes &&
       <div
         className="d-flex flex-column items-center paddingX-container-general-pages"
       >
@@ -104,11 +111,11 @@ const EventsDetail = (props) => {
           className={"paddingX-container-general-pages blog-first-section-container d-flex items-center flex-column"}
         >
           <Box className={"max-width-1200 width-100 margin-bottom-30"}>
-            <GoBackBtn />
+            <GoBackBtn callback={() => navigate(`/${lang}/events`)} />
           </Box>
           <Box className={"max-width-1200"}>
-            <h1>{state.communityDetailDataResponse?.title}</h1>
-            <p>{state.communityDetailDataResponse?.subtitle}</p>
+            <h1>{state.eventsRes?.title}</h1>
+            <p>{state.eventsRes?.subtitle}</p>
           </Box>
         </Container>
 
@@ -126,12 +133,12 @@ const EventsDetail = (props) => {
               <Box className={"community-detail-second-section-image-container"}>
                 <img
                   alt={"event photo"}
-                  src={state.communityDetailDataResponse?.cover_img}
+                  src={state.eventsRes?.cover_img}
                 />
               </Box>
               <Box className={"community-detail-second-section-title-container"}>
-                <h2>{state.communityDetailDataResponse?.title}</h2>
-                <div dangerouslySetInnerHTML={{ __html: converter.makeHtml(state.communityDetailDataResponse?.description) }} />
+                <h2>{state.eventsRes?.title}</h2>
+                <div dangerouslySetInnerHTML={{ __html: converter.makeHtml(state.eventsRes?.description) }} />
               </Box>
             </Box>
           </Box>
