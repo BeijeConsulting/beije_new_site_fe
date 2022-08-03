@@ -172,8 +172,18 @@ const CustomForm = (props) => {
     <Grid
       container
       spacing={2}
-      className={props.classNameContainer}
+      className={`${props.classNameContainer} ${props.formTitle === t("form.title.apply") ? 'form-message-apply-locked' : ""}`}
     >
+
+      {props.formTitle === t("form.title.apply") &&
+        <Grid
+          className="message-apply-locked">
+          <Box>
+            <p >lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem </p>
+          </Box>
+        </Grid>
+
+      }
       <Grid
         item
         xs={12}
@@ -429,6 +439,7 @@ const CustomForm = (props) => {
           </form>
         </Box>
       </Grid>
+
     </Grid >
   )
 }
