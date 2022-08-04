@@ -19,12 +19,13 @@ import "./CustomForm.css";
 
 // Constants and functions
 import { googleReCaptchaKey } from "../../../utils/properties";
-import { toBase64, setGaEvent } from "../../../utils/utilities";
+import { toBase64, setGaEvent, converter } from "../../../utils/utilities";
 
 // Components
 import CustomButton from "../../functional_components/ui/customButton/CustomButton";
 import CustomModal from "../customModal/CustomModal";
 import PrivacyPolicies from "../../functional_components/privacyPolicies/PrivacyPolicies";
+import { Converter } from "showdown";
 
 const CustomForm = (props) => {
   const { t } = useTranslation();
@@ -186,9 +187,10 @@ const CustomForm = (props) => {
 
       {props.formTitle === t("form.title.apply") && state.popUpMessage !== "" &&
         <Grid
-          className={props.academyDetail ? "message-apply-locked-reverse" : "message-apply-locked"}>
+          className="message-apply-locked">
+
           <Box>
-            <p >{window.localStorage.getItem("currentLanguage") === "IT" ? state.popUpMessage?.description_it : state.popUpMessage?.description_en} </p>
+            <p dangerouslySetInnerHTML={{ __html: converter.makeHtml(window.localStorage.getItem("currentLanguage") === "IT" ? state.popUpMessage?.description_it : state.popUpMessage?.description_en) }} />
           </Box>
         </Grid>
 
