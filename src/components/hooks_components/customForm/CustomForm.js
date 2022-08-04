@@ -186,7 +186,7 @@ const CustomForm = (props) => {
 
       {props.formTitle === t("form.title.apply") && state.popUpMessage !== "" &&
         <Grid
-          className="message-apply-locked">
+          className={props.academyDetail ? "message-apply-locked-reverse" : "message-apply-locked"}>
           <Box>
             <p >{window.localStorage.getItem("currentLanguage") === "IT" ? state.popUpMessage?.description_it : state.popUpMessage?.description_en} </p>
           </Box>

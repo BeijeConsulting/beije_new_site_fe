@@ -118,6 +118,7 @@ const AcademyBackend = (props) => {
             <CustomForm
               titlePage={'Candidatura per Academy Backend'}
               cvForm
+              academyDetail={true}
               formTitle={t("form.title.apply")}
             />
           </Container>
