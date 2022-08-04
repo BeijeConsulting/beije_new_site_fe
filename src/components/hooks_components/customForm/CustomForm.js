@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useFormik } from "formik";
@@ -39,7 +39,8 @@ const CustomForm = (props) => {
     base64Value: null,
     btnLoading: false,
     modalIsOpen: false,
-    value_cv: ''
+    value_cv: '',
+    popUpMessage: null
   });
 
   const reCaptchaChange = (value) => {
@@ -53,6 +54,14 @@ const CustomForm = (props) => {
       captchaValue: value
     }));
   }
+
+  useEffect(() => {
+    (async () => {
+      let POPUPMESSAGE = await ApiCalls.popup_message();
+      setState(prevState => ({ ...prevState, popUpMessage: POPUPMESSAGE }))
+    })()
+  }, [])
+
 
   const validationSchema = yup.object({
     name: yup
@@ -172,8 +181,18 @@ const CustomForm = (props) => {
     <Grid
       container
       spacing={2}
-      className={props.classNameContainer}
+      className={`${props.classNameContainer} ${props.formTitle === t("form.title.apply") ? 'form-message-apply-locked' : ""}`}
     >
+
+      {props.formTitle === t("form.title.apply") && state.popUpMessage !== "" &&
+        <Grid
+          className="message-apply-locked">
+          <Box>
+            <p >{window.localStorage.getItem("currentLanguage") === "IT" ? state.popUpMessage?.description_it : state.popUpMessage?.description_en} </p>
+          </Box>
+        </Grid>
+
+      }
       <Grid
         item
         xs={12}
@@ -429,6 +448,7 @@ const CustomForm = (props) => {
           </form>
         </Box>
       </Grid>
+
     </Grid >
   )
 }

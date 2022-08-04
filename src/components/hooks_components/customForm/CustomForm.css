@@ -7,6 +7,20 @@
   color: var(--dark-blue);
 }
 
+
+
+.message-apply-locked{
+  top: 0;
+  border-radius: 10px;
+  border: 3px solid rgba(0, 0, 0, 0.87);
+    padding: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    background-color: #F9F9F9;
+    margin: 0 auto 3rem;
+}
+
+
+
 .form-info-container-column {
   display: none;
 }

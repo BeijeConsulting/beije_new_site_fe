@@ -19,6 +19,10 @@ const ApiCalls = {
     return post("form", value);
   },
 
+  popup_message: () => {
+    return get(`academy`)
+  },
+
   caseStudies_getList: (lang) => {
     return get(`casestudies/${lang}`);
   },
