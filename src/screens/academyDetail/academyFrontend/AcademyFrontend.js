@@ -118,6 +118,7 @@ const AcademyFrontend = (props) => {
             <CustomForm
               titlePage="Candidatura per Academy Frontend"
               cvForm
+              PopUpExists={true}
               formTitle={t("form.title.apply")}
             />
           </Container>

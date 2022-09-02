@@ -185,7 +185,7 @@ const CustomForm = (props) => {
       className={`${props.classNameContainer} ${props.formTitle === t("form.title.apply") ? 'form-message-apply-locked' : ""}`}
     >
 
-      {props.formTitle === t("form.title.apply") && state.popUpMessage !== "" &&
+      {props.PopUpExists && state.popUpMessage !== "" &&
         <Grid
           className="message-apply-locked">
 
