@@ -25,7 +25,7 @@ import { toBase64, setGaEvent, converter } from "../../../utils/utilities";
 import CustomButton from "../../functional_components/ui/customButton/CustomButton";
 import CustomModal from "../customModal/CustomModal";
 import PrivacyPolicies from "../../functional_components/privacyPolicies/PrivacyPolicies";
-import { Converter } from "showdown";
+
 
 const CustomForm = (props) => {
   const { t } = useTranslation();

@@ -12,7 +12,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import "./SimpleCarousel.css";
 
 // Constants
-import { leftArrow, rightArrow, quotationMark } from "../../../utils/properties";
+import { leftArrow, rightArrow } from "../../../utils/properties";
 
 const SimpleCarousel = (props) => {
   const { t } = useTranslation();

@@ -140,8 +140,11 @@ const CustomTable = (props) => {
   }
 
   // To make the acadamy list link to the existing page academy frontend and backend uncomment
-  const sendToPage = (param1, param2) => {
-    let response = "#";
+  const sendToPage = (param1) => {
+
+    //param was originally(param1,param2), changing param2 with param1 and removing the starting param1, since it was not used
+
+    let response = null;
     if (props.isAcademy) {
       //   if (param1.toLowerCase() === "front-end") {
       //     response = "/beije-talent-academy/academy-frontend"
@@ -149,11 +152,11 @@ const CustomTable = (props) => {
       //   if (param1.toLowerCase() === "back-end") {
       //     response = "/beije-talent-academy/academy-backend"
       //   }
-      response = `/career/career-detail?academyOffer=${param2}`
+      response = `/career/career-detail?academyOffer=${param1}`
 
     }
     else {
-      response = `/career/career-detail?jobOffer=${param2}`
+      response = `/career/career-detail?jobOffer=${param1}`
     }
     return response
   }
