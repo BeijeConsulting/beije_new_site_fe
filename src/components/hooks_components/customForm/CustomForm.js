@@ -25,7 +25,7 @@ import { toBase64, setGaEvent, converter } from "../../../utils/utilities";
 import CustomButton from "../../functional_components/ui/customButton/CustomButton";
 import CustomModal from "../customModal/CustomModal";
 import PrivacyPolicies from "../../functional_components/privacyPolicies/PrivacyPolicies";
-import { Converter } from "showdown";
+
 
 const CustomForm = (props) => {
   const { t } = useTranslation();
@@ -185,7 +185,7 @@ const CustomForm = (props) => {
       className={`${props.classNameContainer} ${props.formTitle === t("form.title.apply") ? 'form-message-apply-locked' : ""}`}
     >
 
-      {props.formTitle === t("form.title.apply") && state.popUpMessage !== "" &&
+      {props.PopUpExists && state.popUpMessage !== "" &&
         <Grid
           className="message-apply-locked">
 
