@@ -113,7 +113,7 @@ const CustomTable = (props) => {
             align={"right"}
           >
             <Link
-              to={sendToPage(item.type, item.id)}
+              to={sendToPage(item.id)}
             >
               {
                 state.isMobile &&
