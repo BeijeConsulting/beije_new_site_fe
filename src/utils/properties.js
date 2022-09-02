@@ -21,27 +21,9 @@ const linkYt = "https://www.youtube.com/channel/UCGZdqNE152QBvg9WZ4E65Iw";
 // Captcha
 export const googleReCaptchaKey = "6Lf_gDoeAAAAAMThwX9hHIPZmULe3bAePNWxA80o";
 
-const getBaseURL = () => {
-  const env = process.env.REACT_APP_ENV;
-  let actualEnv = null;
-  switch (env) {
-    case 'development':
-      actualEnv = require('../envs/development');
-      break;
-    case 'test':
-      actualEnv = require('../envs/test');
-      break;
-    case 'production':
-      actualEnv = require('../envs/prod');
-      break;
-    default:
-      actualEnv = require('../envs/development');
-      break;
-  }
-  return actualEnv;
-}
-
-export const ENVIRONMENT = getBaseURL();
+export const ENVIRONMENT = {
+  API_REST_BE: process.env.REACT_APP_API_REST_BE,
+};
 
 export const paginationDefaults = {
   page: 1,
