@@ -47,15 +47,14 @@ const EventsDetail = (props) => {
   }, [location.href])
 
   const getEventsData = async () => {
-    let arr;
+    let arr = [];
     let eventsRes = await ApiCalls.community_getListDetail(permalink);
 
     if (!eventsRes) {
       navigate("/events");
     } else if (eventsRes.language !== lang) navigate(`/${lang}/events/${eventsRes.translate_blog_permalink}`, {replace: true});
 
-
-    if (eventsRes?.images > 0) {
+    if (eventsRes?.images.length > 0) {
       arr = eventsRes?.images.map((img) => {
         return {
           src: img,
