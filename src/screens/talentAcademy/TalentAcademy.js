@@ -234,6 +234,7 @@ const TalentAcademy = (props) => {
               <CustomForm
                 titlePage="Candidatura per Academy"
                 cvForm
+                radioTypeAcademy
                 PopUpExists={true}
                 formTitle={t("form.title.apply")}
               />

@@ -82,7 +82,8 @@
       "email": "Email obbligatoria",
       "emailInvalid": "Email invalida",
       "numberInvalid": "Numero invalido",
-      "agreement": "I Termini e le Condizioni devono essere accettate"
+      "agreement": "I Termini e le Condizioni devono essere accettate",
+      "radioBox:": "Selezionare un'opzione"
     },
     "placeholder": {
       "name": "Nome*",
@@ -94,7 +95,8 @@
       "agreement": {
         "part1": "Ho letto e accetto il ",
         "part2": "Trattamento dei miei dati personali*"
-      }
+      },
+      "type_application": "Candidatura per*"
     },
     "toastMessage": {
       "success": {

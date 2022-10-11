@@ -12,7 +12,7 @@ import { setToastMessage, initToastMessage } from "../../../redux/ducks/toastMes
 import ApiCalls from "../../../services/api/ApiCalls";
 
 // MUI
-import { Grid, Box, TextField, TextareaAutosize, FormControlLabel, Checkbox, CircularProgress } from "@mui/material";
+import { Grid, Box, TextField, TextareaAutosize, FormControlLabel, Checkbox, CircularProgress, FormControl, FormLabel, RadioGroup, Radio } from "@mui/material";
 
 // Style
 import "./CustomForm.css";
@@ -91,6 +91,7 @@ const CustomForm = (props) => {
       number: '',
       fileName: t("form.messageCv"),
       message: '',
+      typeAcademyRadio: "academyFrontend",
       agreement: false
     },
     validationSchema: validationSchema,
@@ -104,6 +105,17 @@ const CustomForm = (props) => {
   });
 
   const sendDataForm = async (values) => {
+    console.log("titlePage: ", props.titlePage);
+    console.log("formikContacts.values.typeAcademyRadio: ", formikContacts.values.typeAcademyRadio);
+    let objectEmail = props.titlePage;
+    if (props.radioTypeAcademy) {
+      if (formikContacts.values.typeAcademyRadio === "academyFrontend") {
+        objectEmail = "Candidatura per Academy Frontend"
+      }
+      else {
+        objectEmail = "Candidatura per Academy Backend"
+      }
+    }
     setState({
       ...state,
       btnLoading: true
@@ -118,7 +130,7 @@ const CustomForm = (props) => {
       message: values.message,
       name: values.name,
       origin: location.href,
-      mail_subject: props.titlePage,
+      mail_subject: objectEmail,
       phone: values.number,
       privacy_check: values.agreement
     }
@@ -351,6 +363,34 @@ const CustomForm = (props) => {
                 />
               </Grid>
             }
+
+            {
+              props.radioTypeAcademy &&
+              <FormControl className="form-radiobox-container">
+                <FormLabel id="demo-row-radio-buttons-group-label">{t("form.placeholder.type_application")}</FormLabel>
+                <RadioGroup
+                  row
+                  aria-labelledby="demo-row-radio-buttons-group-label"
+                  name="typeAcademyRadio"
+                  value={formikContacts.values.typeAcademyRadio}
+                  onChange={formikContacts.handleChange}
+                >
+                  <FormControlLabel value="academyFrontend" control={<Radio sx={{
+                    color: "#262E36",
+                    '&.Mui-checked': {
+                      color: "#262E36",
+                    },
+                  }} />} label="Academy Frontend" />
+                  <FormControlLabel value="academyBackend" control={<Radio sx={{
+                    color: "#262E36",
+                    '&.Mui-checked': {
+                      color: "#262E36",
+                    },
+                  }} />} label="Academy Backend" />
+                </RadioGroup>
+              </FormControl>
+            }
+
             {props.cvForm &&
               <Grid
                 item
@@ -460,7 +500,8 @@ CustomForm.defaultProps = {
   classNameTitleContainer: "form-title-container",
   classNameInfoColumn: "form-info-container-column",
   classNameInfoContainer: "form-info-container",
-  cvForm: false
+  cvForm: false,
+  radioTypeAcademy: false
 }
 
 export default connect()(CustomForm)
