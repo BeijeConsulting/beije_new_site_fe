@@ -105,8 +105,6 @@ const CustomForm = (props) => {
   });
 
   const sendDataForm = async (values) => {
-    console.log("titlePage: ", props.titlePage);
-    console.log("formikContacts.values.typeAcademyRadio: ", formikContacts.values.typeAcademyRadio);
     let objectEmail = props.titlePage;
     if (props.radioTypeAcademy) {
       if (formikContacts.values.typeAcademyRadio === "academyFrontend") {
