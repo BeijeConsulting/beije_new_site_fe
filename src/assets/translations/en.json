@@ -83,7 +83,8 @@
       "emailInvalid": "Email is invalid",
       "numberInvalid": "Number is invalid",
       "town": "Town is required",
-      "agreement": "Terms and Conditions must be accepted"
+      "agreement": "Terms and Conditions must be accepted",
+      "radioBox:": "Selected one option"
     },
     "placeholder": {
       "name": "Name*",
@@ -95,7 +96,8 @@
       "agreement": {
         "part1": "I have read and accept the ",
         "part2": "Treatment of my personal data*"
-      }
+      },
+      "type_application": "Application for*"
     },
     "toastMessage": {
       "success": {
@@ -549,7 +551,7 @@
       "remote": "Remote",
       "hybrid": "Hybrid",
       "milan": "Milan",
-      "-":"-"
+      "-": "-"
     }
   },
   "privacyPolicies": {

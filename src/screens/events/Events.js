@@ -96,7 +96,7 @@ const Events = (props) => {
                       subtitle={event.subtitle}
                       description={event.description}
                       postedby={event.author}
-                      posted={millisecsToDate(event.create_datetime)}
+                      posted={millisecsToDate(event.create_datetime, props.languageDuck.currentLanguage)}
                     />
                   </div>
                 )
