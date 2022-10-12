@@ -3,6 +3,7 @@ import { replace, toNumber } from "lodash";
 import NumberFormat from "react-number-format";
 import ReactGa from 'react-ga4';
 import { Converter } from "showdown";
+import moment from "moment/moment";
 
 
 // export const showError = (error) => {
@@ -99,10 +100,12 @@ export const toBase64 = file => new Promise((resolve, reject) => {
   reader.onerror = error => reject(error);
 });
 
-export const millisecsToDate = (millsecs) => {
-  const date = new Date(millsecs);
-  const newDate = `${date.getDate() < 10 ? "0" + date.getDate() : date.getDate()}/${date.getMonth() < 10 ? "0" + date.getMonth() : date.getMonth()}/${date.getFullYear()}`;
-  return newDate;
+export const millisecsToDate = (millsecs, lang) => {
+  let dateFormat = "DD/MM/YYYY";
+  if (lang === "EN") {
+    dateFormat = "YYYY/MM/DD";
+  }
+  return moment(millsecs).format(dateFormat);
 }
 
 export const converter = new Converter({

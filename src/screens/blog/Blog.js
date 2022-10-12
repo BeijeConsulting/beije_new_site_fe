@@ -127,7 +127,7 @@ const Blog = (props) => {
                         subtitle={post.subtitle}
                         description={post.description}
                         postedby={post.author}
-                        posted={millisecsToDate(post.create_datetime)}
+                        posted={millisecsToDate(post.create_datetime, props.languageDuck.currentLanguage)}
                       />
                     </div>
                   )
