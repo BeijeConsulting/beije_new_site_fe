@@ -55,6 +55,7 @@ const Events = (props) => {
         <title>{t('helmet.meta_title.events')}</title>
         <meta name="description" content={t('helmet.meta_description.events')} />
         <meta name="keywords" content={t('helmet.keywords.events')} />
+        <meta name="google" content="notranslate" />
       </Helmet>
 
       <Box

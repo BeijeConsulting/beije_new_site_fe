@@ -108,6 +108,7 @@ const Home = (props) => {
         <title>{t('helmet.meta_title.home')}</title>
         <meta name="description" content={t('helmet.meta_description.home')} />
         <meta name="keywords" content={t('helmet.keywords.home')} />
+        <meta name="google" content="notranslate" />
       </Helmet>
 
       <Loading

@@ -60,6 +60,7 @@ const Blog = (props) => {
         <title>{t('helmet.meta_title.blog')}</title>
         <meta name="description" content={t('helmet.meta_description.blog')} />
         <meta name="keywords" content={t('helmet.keywords.blog')} />
+        <meta name="google" content="notranslate" />
       </Helmet>
 
       <Box

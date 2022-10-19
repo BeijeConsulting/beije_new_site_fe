@@ -86,6 +86,7 @@ const Career = (props) => {
         <title>{t('helmet.meta_title.career')}</title>
         <meta name="description" content={t('helmet.meta_description.career')} />
         <meta name="keywords" content={t('helmet.keywords.career')} />
+        <meta name="google" content="notranslate" />
       </Helmet>
 
       <Box

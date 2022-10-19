@@ -73,6 +73,7 @@ const Up = (props) => {
         <title>{t('helmet.meta_title.up')}</title>
         <meta name="description" content={t('helmet.meta_description.up')} />
         <meta name="keywords" content={t('helmet.keywords.up')} />
+        <meta name="google" content="notranslate" />
       </Helmet>
 
 
