@@ -63,6 +63,7 @@ const AcademyFrontend = (props) => {
         <title>{t('helmet.meta_title.academy_frontend')}</title>
         <meta name="description" content={t('helmet.meta_description.academy_frontend')} />
         <meta name="keywords" content={t('helmet.keywords.academy_frontend')} />
+        <meta name="google" content="notranslate" />
       </Helmet>
 
       <Box

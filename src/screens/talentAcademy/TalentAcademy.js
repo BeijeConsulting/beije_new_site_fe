@@ -71,6 +71,7 @@ const TalentAcademy = (props) => {
         <title>{t('helmet.meta_title.academy')}</title>
         <meta name="description" content={t('helmet.meta_description.academy')} />
         <meta name="keywords" content={t('helmet.keywords.academy')} />
+        <meta name="google" content="notranslate" />
       </Helmet>
 
       <Box

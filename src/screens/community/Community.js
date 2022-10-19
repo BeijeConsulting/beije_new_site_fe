@@ -102,6 +102,7 @@ const Community = (props) => {
         <title>{t('helmet.meta_title.community')}</title>
         <meta name="description" content={t('helmet.meta_description.community')} />
         <meta name="keywords" content={t('helmet.keywords.community')} />
+        <meta name="google" content="notranslate" />
       </Helmet>
 
       <Box

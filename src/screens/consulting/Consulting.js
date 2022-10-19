@@ -90,6 +90,7 @@ const Consulting = (props) => {
         <title>{t('helmet.meta_title.consulting')}</title>
         <meta name="description" content={t('helmet.meta_description.consulting')} />
         <meta name="keywords" content={t('helmet.keywords.consulting')} />
+        <meta name="google" content="notranslate" />
       </Helmet>
 
       <Box

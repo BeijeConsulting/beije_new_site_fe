@@ -39,6 +39,7 @@ const Contacts = (props) => {
         <title>{t('helmet.meta_title.contacts')}</title>
         <meta name="description" content={t('helmet.meta_description.contacts')} />
         <meta name="keywords" content={t('helmet.keywords.contacts')} />
+        <meta name="google" content="notranslate" />
       </Helmet>
 
       <Box
