@@ -3,7 +3,7 @@ import 'moment/locale/it';
 
 // Assets
 
-import { faFacebookF, faLinkedinIn, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faLinkedinIn, faYoutube, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faN, faArrowDownLong, faAngleLeft, faAngleRight, faPlus, faArrowLeft, faMinus, faClock, faXmark } from '@fortawesome/free-solid-svg-icons';
 import quotation_mark from "../assets/icons/quote.svg";
 import logo_pininfarina from "../assets/images/up/caseStudies/pininfarina.jpg";
@@ -17,6 +17,7 @@ import icon_profile from "../assets/icons/iconProfile.png"
 const linkFb = "https://www.facebook.com/beijepeoplefirst";
 const linkIn = "https://www.linkedin.com/company/beije";
 const linkYt = "https://www.youtube.com/channel/UCGZdqNE152QBvg9WZ4E65Iw";
+const linkIg = "https://www.instagram.com/beijepeoplefirst/"
 
 // Captcha
 export const googleReCaptchaKey = "6Lf_gDoeAAAAAMThwX9hHIPZmULe3bAePNWxA80o";
@@ -139,16 +140,23 @@ export const social_list = [
     classNameIcon: "social-icon-primary"
   },
   {
-    lable: "Facebook",
+    lable: "LinkedIn",
     link_to: linkIn,
     icon: faLinkedinIn,
     type: "social-primary",
     classNameIcon: "social-icon-primary"
   },
   {
-    lable: "Facebook",
+    lable: "YouTube",
     link_to: linkYt,
     icon: faYoutube,
+    type: "social-primary",
+    classNameIcon: "social-icon-primary"
+  },
+  {
+    lable: "Instagram",
+    link_to: linkIg,
+    icon: faInstagram,
     type: "social-primary",
     classNameIcon: "social-icon-primary"
   }
