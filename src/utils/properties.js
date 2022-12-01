@@ -781,3 +781,26 @@ export const programBackendAcademy = [
       ]
   }
 ]
+
+export const advantagesBeije = [
+  {
+    title: "Smartworking",
+    paragraph: "In Beije siamo grandi fan dello smartworking, il nostro motto è “no matter where but how”, crediamo però che il valore dell’incontro vada coltivato: i nostri uffici sono sempre aperti per lavorare fianco a fianco con la Community e a seconda del cliente/progetto sul quale ci troviamo l’ufficio diventa luogo strategico di teamwork.",
+    isOpen: false
+  },
+  {
+    title: "Eventi Beije",
+    paragraph: "Far parte della Community significa anche costruire un rapporto prima di tutto tra persone: due volte all’anno ci ritroviamo tutti insieme per una festa in pieno stile Beije!",
+    isOpen: false
+  },
+  {
+    title: "Incontri Afterwork",
+    paragraph: "Almeno una volta al mese con la nostra community organizziamo aperitivi, serate giochi, eventi per goderci una serata insieme!",
+    isOpen: false
+  },
+  {
+    title: "Community Coffee Breaks",
+    paragraph: "In ufficio due cose non mancano mai: litri di caffè e momenti di chiacchiere e confronto con il team nella nostra sala break!",
+    isOpen: false
+  }
+]

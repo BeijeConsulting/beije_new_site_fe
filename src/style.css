@@ -22,12 +22,12 @@
   --sofiaPro-regular: "SofiaPro-Regular", sans-serif;
   --sofiaPro-bold: "SofiaPro-Bold", sans-serif;
 
-  --font-size-body-xs: 1rem;
-  --line-height-body-xs: 30px;
-  --font-size-h1-xs: 1.7rem;
-  --line-height-h1-xs: 40px;
-  --font-size-h3-xs: 1.25rem;
-  --font-size-more-h4-xs: 1.25rem;
+  --font-size-body-xs: 1.5rem;
+  --line-height-body-xs: 32px;
+  --font-size-h1-xs: 3.125rem;
+  --line-height-h1-xs: 57px;
+  --font-size-h3-xs: 2rem;
+  --font-size-more-h4-xs: 1.5rem;
 
   --font-size-body-md: 1.125rem;
   --line-height-body-md: 30px;
@@ -38,14 +38,14 @@
   --font-size-more-h4-md: 1.4rem;
   --line-height-more-h4-md: 30px;
 
-  --font-size-body-xl: 1.25rem;
-  --line-height-body-xl: 35px;
-  --font-size-h1-xl: 2.5rem;
-  --line-height-h1-xl: 60px;
+  --font-size-body-xl: 1.75rem;
+  --line-height-body-xl: 36px;
+  --font-size-h1-xl: 4.375rem;
+  --line-height-h1-xl: 81px;
   --font-size-h3-xl: 1.875rem;
   --line-height-h3-xl: 40px;
-  --font-size-more-h4-xl: 1.5rem;
-  --line-height-more-h4-xl: 35px;
+  --font-size-more-h4-xl: 1.75rem;
+  --line-height-more-h4-xl: 36px;
 
   --header-height-xs: 72px;
   /*xs - 320px*/
@@ -75,25 +75,25 @@
 
 @font-face {
   font-family: "Moderat-Regular";
-  src: url("./assets/font/moderat/Moderat-Regular.woff");
+  src: url("./assets/font/ginora-sans-webfont/ginra_sans_light-webfont.woff");
   font-display: swap;
 }
 
 @font-face {
   font-family: "Moderat-Bold";
-  src: url("./assets/font/moderat/Moderat-Bold.woff");
+  src: url("./assets/font/ginora-sans-webfont/ginra_sans_bold-webfont.woff");
   font-display: swap;
 }
 
 @font-face {
   font-family: "SofiaPro-Regular";
-  src: url("./assets/font/sofiaPro/SofiaPro-Regular.otf");
+  src: url("./assets/font/ginora-sans-webfont/ginra_sans_light-webfont.woff");
   font-display: swap;
 }
 
 @font-face {
   font-family: "SofiaPro-Bold";
-  src: url("./assets/font/sofiaPro/SofiaPro-Bold.otf");
+  src: url("./assets/font/ginora-sans-webfont/ginra_sans_bold-webfont.woff");
   font-display: swap;
 }
 

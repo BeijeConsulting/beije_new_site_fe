@@ -1,0 +1,20 @@
+.switch_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+  margin: 50px 0;
+}
+
+.switch_label_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 180px;
+  margin-bottom: 20px;
+}
+
+.switch_input {
+  width: 100%;
+}

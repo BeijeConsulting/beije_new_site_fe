@@ -36,6 +36,12 @@
   box-shadow: 4px 5px 15px var(--dark-grey);
 }
 
+.button-career {
+  padding: 22px 26px !important;
+  color: #fff;
+  border-radius: 37px !important;
+}
+
 @media(min-width: 1024px) {
   .button-form-primary {
     padding: 15px 50px !important;

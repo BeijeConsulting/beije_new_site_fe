@@ -101,3 +101,217 @@
 .career-detail-txt-container p {
   margin-top: 20px;
 }
+
+/* NEW CSS PAGE CAREER*/
+.bg_white {
+  background-color: #fff;
+}
+
+.career_first_section {
+  /* height: 400px; */
+  padding-top: 100px;
+  background: linear-gradient(48deg, rgba(255, 255, 255, 1) 0%, rgba(177, 32, 9, 0.2721463585434174) 100%);
+  padding-bottom: 400px;
+}
+
+.career_title_page h1 span:nth-child(1), .career_first_section h1 span:nth-child(2), .career_third_section h2 {
+  font-size: 40px;
+  font-weight: normal;
+  color: #323E48;
+}
+
+.career_third_section h2 {
+  line-height: 45px;
+}
+
+.career_title_page {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.career_title_page h1 span:nth-child(2) {
+  color: #b12009;
+}
+
+.career_title_page p {
+  font-size: 70px;
+  margin-top: 20px;
+  margin-left: 70px;
+  color: #323E48;
+}
+
+.career_intro_text p {
+  font-size: 24px;
+  line-height: 36px;
+  margin-top: 50px;
+  max-width: 800px;
+}
+
+.career_container_starting_buttons {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+}
+
+.career_container_starting_buttons button:nth-child(1) {
+  background-color: #b12009;
+  margin-bottom: 20px;
+}
+
+.career_container_starting_buttons button:nth-child(2) {
+  background-color: #323E48;
+}
+
+/* .career_container_list {
+  margin-bottom: -154px;
+} */
+
+.career_second_section {
+  background-color: transparent;
+  /* height: 700px; */
+  flex-direction: column;
+  margin-top: -340px;
+}
+
+.career_third_section {
+  margin-top: 100px;
+  flex-direction: column;
+}
+
+.career_single_paragraph p {
+  margin-top: 30px;
+}
+
+.carrer_paragraph_title {
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: bold;
+}
+
+.career_single_paragraph_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.career_single_paragraph_header button p {
+  color: #323E48;
+  font-size: 30px;
+}
+
+@media(min-width: 550px) {
+  .career_title_page p {
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .career_container_starting_buttons {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .career_container_starting_buttons button:nth-child(1) {
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+}
+
+.career_fourth_section {
+  background: linear-gradient(48deg, rgba(50, 62, 72, 1) 0%, rgba(10, 12, 14, 1) 100%);
+  width: 100%;
+  height: 500px;
+}
+
+.career_paths_images_container {
+  max-width: 1788px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 125px auto -100px;
+}
+
+.career_paths_images_container div {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 246px;
+  width: 100%;
+}
+
+.career_paths_images_container div:nth-child(1) {
+  background-image: url("../../assets/images/career/paths0.jpg");
+}
+
+.career_paths_images_container div:nth-child(2) {
+  background-image: url("../../assets/images/career/paths1.jpg");
+}
+
+
+@media(min-width: 768px) {
+  .career_title_page h1 span:nth-child(1), .career_first_section h1 span:nth-child(2), .career_third_section h2 {
+    font-size: 50px;
+  }
+
+  .career_single_paragraph {
+    margin: 60px 0;
+  }
+
+  .career_title_page p {
+    font-size: 80px;
+  }
+
+  .career_paths_images_container {
+    flex-direction: row;
+  }
+}
+
+@media(min-width: 1024px) {
+  .career_paths_images_container div {
+    height: 320px;
+  }
+}
+
+@media(min-width: 1200px) {
+  .career_title_page h1 span:nth-child(1), .career_first_section h1 span:nth-child(2), .career_third_section h2 {
+    font-size: 70px;
+    line-height: 81px;
+  }
+
+  .career_title_page p {
+    font-size: 130px;
+  }
+
+  .career_intro_text p {
+    font-size: 28px;
+    margin-top: 70px;
+  }
+
+  .career_third_section {
+    margin-top: 200px;
+  }
+
+  .career_paths_images_container {
+    margin: 125px auto -140px;
+  }
+
+  .career_paths_images_container div {
+    height: 400px;
+  }
+}
+
+@media(min-width: 1440px) {
+  .career_paths_images_container div {
+    height: 500px;
+  }
+}
+
+@media(min-width: 1700px) {
+  .career_paths_images_container div {
+    height: 600px;
+  }
+}
