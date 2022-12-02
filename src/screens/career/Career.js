@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 
@@ -12,6 +12,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // Style
 import "./Career.css";
 
+import { initCurrentPage, setCurrentPage } from "../../redux/ducks/currentPageDuck";
+import { initVisibilityNavbar, setVisibilityNavbar } from "../../redux/ducks/showNavbarTopDuck";
+
+
 import { addIcon, advantagesBeije, benefitsTeam, growthPaths, minusIcon, posterVideoCareer } from "../../utils/properties";
 
 // Components
@@ -19,13 +23,24 @@ import CustomButton from "../../components/functional_components/ui/customButton
 import JobSection from "../../components/hooks_components/jobSection/JobSection";
 
 
-const Career = () => {
+const Career = (props) => {
   const match_mobile = useMediaQuery('(max-width: 768px)');
   const [state, setState] = useState({
     advantages: advantagesBeije,
     benefits: benefitsTeam
   });
   const { t } = useTranslation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    props.dispatch(setCurrentPage("career"));
+    props.dispatch(setVisibilityNavbar(true));
+
+    return () => {
+      props.dispatch(initCurrentPage());
+      props.dispatch(initVisibilityNavbar());
+    };
+  }, [])
 
   const handleParagraphAdvantages = (key) => () => {
     let advantages = state.advantages;
@@ -45,9 +60,6 @@ const Career = () => {
     })
   }
 
-
-
-
   return (
     <>
       <Helmet>
@@ -58,7 +70,7 @@ const Career = () => {
       </Helmet>
 
       <Box
-        className={"margin-top-container-screens bg_white"}
+        className={"margin-top-container-screens bg-white"}
       >
         <section className={"career_first_section paddingX-container-general-pages d-flex justify-center"}>
           <div className="max-width-1200 width-100">
