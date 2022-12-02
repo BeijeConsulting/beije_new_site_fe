@@ -11,7 +11,8 @@ import logo_youthquake from "../assets/images/up/caseStudies/youthquake.jpg";
 import empty_academy from "../assets/icons/empty_academy.svg"
 import empty_job from "../assets/icons/empty_job.svg"
 import posterVideo from '../assets/images/posterVideoAcademy.jpg'
-import icon_profile from "../assets/icons/iconProfile.png"
+import icon_profile from "../assets/icons/iconProfile.png";
+import careerVideoPoster from "../assets/images/career/career4.jpg";
 
 // Link
 const linkFb = "https://www.facebook.com/beijepeoplefirst";
@@ -75,6 +76,8 @@ export const profile = icon_profile;
 
 export const linkYoutube = linkYt;
 export const posterVideoAcademy = posterVideo;
+
+export const posterVideoCareer = careerVideoPoster;
 
 // Menu voices
 export const menu_voices = [
@@ -801,6 +804,35 @@ export const advantagesBeije = [
   {
     title: "Community Coffee Breaks",
     paragraph: "In ufficio due cose non mancano mai: litri di caffè e momenti di chiacchiere e confronto con il team nella nostra sala break!",
+    isOpen: false
+  }
+];
+
+export const growthPaths = [
+  {
+    title: "Beije Supporter",
+    description: "La tua carriera non inizia full alone: un Supporter interno ti guiderà durante il tuo percorso professionale, aiutandoti fin dall’inizio ad integrarti nella realtà aziendale, affinché tu possa partire al meglio. Anche al di là del lavoro, ci sosteniamo a vicenda come una vera Community."
+  },
+  {
+    title: "Piani di crescita ad hoc",
+    description: "Crediamo che la nostra Community sia spazio di crescita e arricchimento: attiviamo percorsi formativi di inserimento, coach aziendale a disposizione e piani di crescita personalizzati con te con obiettivi a cadenza annuale."
+  }
+]
+
+export const benefitsTeam = [
+  {
+    title: "Formazione e-learning",
+    paragraph: "Promuoviamo la curiosità e la voglia di conoscenza: mettiamo a disposizione di ognuno l’accesso gratuito ad una piattaforma di e-learning con numerosi corsi sempre aggiornati.",
+    isOpen: false
+  },
+  {
+    title: "Formazione linguistica",
+    paragraph: "Abbattiamo i confini professionali e personali e crediamo nell’importanza di misurarsi in contesti internazionali, mettiamo a disposizione uno strumento di apprendimento linguistico online per imparare gratuitamente lingue straniere.",
+    isOpen: false
+  },
+  {
+    title: "Webinar ed event",
+    paragraph: "Poniamo le basi per una crescita professionale a 360 gradi: almeno due volte all’anno organizziamo eventi di formazione tenuti dai nostri esperti Beije e da professionisti del settore; pianifichiamo anche webinar interni online per aggiornare la Community sulle ultime tecnologie e le innovazioni più interessanti del mercato.",
     isOpen: false
   }
 ]

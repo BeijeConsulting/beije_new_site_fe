@@ -12,7 +12,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // Style
 import "./Career.css";
 
-import { addIcon, advantagesBeije, minusIcon } from "../../utils/properties";
+import { addIcon, advantagesBeije, benefitsTeam, growthPaths, minusIcon, posterVideoCareer } from "../../utils/properties";
 
 // Components
 import CustomButton from "../../components/functional_components/ui/customButton/CustomButton";
@@ -22,18 +22,29 @@ import JobSection from "../../components/hooks_components/jobSection/JobSection"
 const Career = () => {
   const match_mobile = useMediaQuery('(max-width: 768px)');
   const [state, setState] = useState({
-    paragraphs: advantagesBeije
+    advantages: advantagesBeije,
+    benefits: benefitsTeam
   });
   const { t } = useTranslation();
 
-  const handleParagraph = (key) => () => {
-    let paragraphs = state.paragraphs;
-    paragraphs[key].isOpen = !state.paragraphs[key].isOpen
-    console.log("paragraphs: ", paragraphs);
+  const handleParagraphAdvantages = (key) => () => {
+    let advantages = state.advantages;
+    advantages[key].isOpen = !state.advantages[key].isOpen
     setState({
-      paragraphs
+      ...state,
+      advantages
     })
   }
+
+  const handleParagraphBenefits = (key) => () => {
+    let benefits = state.benefits;
+    benefits[key].isOpen = !state.benefits[key].isOpen
+    setState({
+      ...state,
+      benefits
+    })
+  }
+
 
 
 
@@ -94,7 +105,7 @@ const Career = () => {
 
           <div>
             {
-              state.paragraphs.map((item, key) => {
+              state.advantages.map((item, key) => {
                 return (
                   <div
                     key={key}
@@ -102,12 +113,12 @@ const Career = () => {
                   >
 
                     <div className="career_single_paragraph_header">
-                      <p className="hightlight-txt carrer_paragraph_title">{item.title}</p>
+                      <h3 className="hightlight-txt carrer_paragraph_title">{item.title}</h3>
                       {
                         match_mobile &&
                         <CustomButton
                           content={<FontAwesomeIcon icon={item.isOpen ? minusIcon : addIcon} />}
-                          callback={handleParagraph(key)}
+                          callback={handleParagraphAdvantages(key)}
                         />
                       }
                     </div>
@@ -133,14 +144,86 @@ const Career = () => {
           <div className="paddingX-container-general-pages d-flex">
 
             <img
-
-              alt="logo beije"
+              src="https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/logos/logo_short_white.svg"
+              alt="logo Beije People First"
             />
 
+            <h2>Percorsi di <span><b>Crescita</b></span></h2>
+            <div className={"career_growth_paths_container"}>
+              {growthPaths.map((item, key) => {
+                return (
+                  <fieldset key={key} className={"career_growth_paths"}>
+                    <legend><b>{item.title}</b></legend>
+                    <p>{item.description}</p>
+                  </fieldset>
+                )
+              })}
+            </div>
           </div>
 
         </section>
 
+        <section className="career_fifth_section" />
+
+        <section className={"career_sixth_section paddingX-container-general-pages d-flex"}>
+          <h2>
+            Team <span className="hightlight-txt">Benefits</span>
+          </h2>
+
+          <div>
+            {
+              state.benefits.map((item, key) => {
+                return (
+                  <div
+                    key={key}
+                    className="career_single_paragraph"
+                  >
+
+                    <div className="career_single_paragraph_header">
+                      <h3 className="hightlight-txt carrer_paragraph_title">{item.title}</h3>
+                      {
+                        match_mobile &&
+                        <CustomButton
+                          content={<FontAwesomeIcon icon={item.isOpen ? minusIcon : addIcon} />}
+                          callback={handleParagraphBenefits(key)}
+                        />
+                      }
+                    </div>
+                    {
+                      (!match_mobile || item.isOpen) &&
+                      <p>{item.paragraph}</p>
+                    }
+
+                  </div>
+                )
+              })
+            }
+          </div>
+        </section>
+
+        <section className="career_seventh_section">
+          <div className="career_video_container">
+            <video
+              // width="100%"
+              // height="290"
+              preload="metadata"
+              controls={true}
+              controlsList="nodownload"
+              poster={posterVideoCareer}
+              style={{ visibility: "visible" }}
+            >
+              <source
+                src="https://beije-people-first.s3.eu-south-1.amazonaws.com/site/academy_video.mp4"
+                type="video/mp4" />
+
+            </video>
+          </div>
+          <div className="paddingX-container-general-pages career_title_video_container">
+            <h2>
+              Lavorare con noi è bello?<br /> Ce lo racconta la nostra <span className="hightlight-txt">Community</span>
+            </h2>
+          </div>
+        </section>
 
       </Box >
     </>

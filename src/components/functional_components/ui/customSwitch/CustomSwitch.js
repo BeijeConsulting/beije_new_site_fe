@@ -21,6 +21,10 @@ const CustomSwitch = (props) => {
         "& + .MuiSwitch-track": {
           opacity: 1,
           backgroundColor: "#b12009",
+        },
+        "& .MuiSwitch-thumb": {
+          backgroundColor: "#ffffff",
+          boxShadow: `inset -3px 0px 15px -6px #323E48`
         }
       }
     },
@@ -28,6 +32,7 @@ const CustomSwitch = (props) => {
       backgroundColor: "#b12009",
       width: 40,
       height: 40,
+      boxShadow: `inset -3px 0px 15px -6px #323E48`,
       "&:before": {
         content: "''",
         position: "absolute",
@@ -60,10 +65,9 @@ const CustomSwitch = (props) => {
         className="switch_input"
         size="lg"
         onChange={handleChange}
-        value={props.value}
-        defaultValue={false}
+        checked={props.value}
+      // defaultValue={false}
       />
-
     </div>
   )
 }
