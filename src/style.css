@@ -75,25 +75,25 @@
 
 @font-face {
   font-family: "Moderat-Regular";
-  src: url("./assets/font/ginora-sans-webfont/ginra_sans_light-webfont.woff");
+  src: url("./assets/font/ginora-sans-webfont/ginra_sans_light-webfont.woff"), url("./assets/font/ginora-sans-webfont/ginra_sans_light-webfont.woff2"), url("./assets/font/ginora-sans-webfont/ginra_sans_light-webfont.ttf");
   font-display: swap;
 }
 
 @font-face {
   font-family: "Moderat-Bold";
-  src: url("./assets/font/ginora-sans-webfont/ginra_sans_bold-webfont.woff");
+  src: url("./assets/font/ginora-sans-webfont/ginra_sans_bold-webfont.woff"), url("./assets/font/ginora-sans-webfont/ginra_sans_bold-webfont.woff2"), url("./assets/font/ginora-sans-webfont/ginra_sans_bold-webfont.ttf");
   font-display: swap;
 }
 
 @font-face {
   font-family: "SofiaPro-Regular";
-  src: url("./assets/font/ginora-sans-webfont/ginra_sans_light-webfont.woff");
+  src: url("./assets/font/ginora-sans-webfont/ginra_sans_light-webfont.woff"), url("./assets/font/ginora-sans-webfont/ginra_sans_light-webfont.woff2"), url("./assets/font/ginora-sans-webfont/ginra_sans_light-webfont.ttf");
   font-display: swap;
 }
 
 @font-face {
   font-family: "SofiaPro-Bold";
-  src: url("./assets/font/ginora-sans-webfont/ginra_sans_bold-webfont.woff");
+  src: url("./assets/font/ginora-sans-webfont/ginra_sans_bold-webfont.woff"), url("./assets/font/ginora-sans-webfont/ginra_sans_bold-webfont.woff2"), url("./assets/font/ginora-sans-webfont/ginra_sans_bold-webfont.ttf");
   font-display: swap;
 }
 
