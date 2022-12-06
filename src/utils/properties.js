@@ -836,3 +836,26 @@ export const benefitsTeam = [
     isOpen: false
   }
 ]
+
+export const manifest_values = [
+  {
+    title: "Rispetto",
+    description: "Siamo idee, pensieri, culture, interessi differenti e garantiamo un clima di rispetto che passa attraverso l’ascolto, la conoscenza delle persone e la condivisione."
+  },
+  {
+    title: "Riconoscenza",
+    description: "Crediamo in un sistema di mutua RICONOSCENZA: mostriamo gratitudine per l’impegno che ogni giorno mettiamo nel nostro lavoro."
+  },
+  {
+    title: "Connessione",
+    description: "La base per costruire la nostra Community è la CONNESSIONE, impegnarci ogni giorno per costruire un SENSO DI APPARTENENZA che ci permetta di proseguire insieme verso una visione comune."
+  },
+  {
+    title: "Passione",
+    description: "Il lavoro occupa una parte rilevante del nostro tempo, per questo crediamo nella tua passione: il modo migliore per essere soddisfatti di ciò che fai, è amare quello che stai facendo."
+  },
+  {
+    title: "Team",
+    description: "Il nostro è un lavoro di TEAM, per noi “teamwork is dreamwork”."
+  }
+]

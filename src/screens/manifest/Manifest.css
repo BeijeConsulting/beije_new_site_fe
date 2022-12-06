@@ -24,16 +24,242 @@
   height: 416px;
 }
 
+.manifest_third_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: -105px;
+}
+
+.manifest_third_section h2:nth-child(2) {
+  color: var(--dark-grey);
+}
+
+.manifest_third_section h2:nth-child(1) {
+  color: var(--red);
+}
+
+.manifest_section_ball_animated {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 1920px;
+  margin: 100px 0;
+}
+
+.manifest_ball_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.manifest_external_written {
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  /* background-color: burlywood; */
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  position: relative;
+  transform: rotate(-50deg);
+}
+
+.manifest_external_written p {
+  position: relative;
+  /* transform: translate(-10px, 0px); */
+  animation: rotateWritten 12s linear infinite
+}
+
+@keyframes rotateWritten {
+  from {
+    transform: translate(0px, 0px) rotateZ(0deg);
+  }
+
+  to {
+    transform: translate(0px, 0px) rotateZ(-360deg);
+  }
+}
+
+.manifest_external_written p span {
+  height: 150px;
+  width: 20px;
+  position: absolute;
+  top: 0;
+  left: -1px;
+  transform: rotate(7.5deg);
+  transform-origin: bottom center;
+  font-size: 30px;
+  text-align: center;
+  border: 1px solid transparent;
+}
+
+.manifest_internal_ball {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  /* background: radial-gradient(circle, rgba(50,62,72,1) 0%, rgba(0,0,0,1) 100%); */
+  background: linear-gradient(200deg, rgba(50, 62, 72, 1) 29%, rgba(0, 0, 0, 1) 85%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: rgb(0 0 0 / 67%) -58px 50px 43px -55px
+}
+
+.manifest_square_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(37deg, rgba(50, 62, 72, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  color: #fff;
+  margin-top: 100px;
+}
+
+.manifest_square_container p {
+  width: 90%;
+  margin: auto;
+  padding: 70px 0;
+}
+
+.manifest_fifth_section {
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4458158263305322) 28%, rgba(255, 255, 255, 1) 88%, rgba(255, 255, 255, 1) 100%), url("../../assets/images/career/career5.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  /* height: 416px; */
+  display: flex;
+  align-items: center;
+  /* justify-content: flex-end; */
+}
+
+.manifest_fifth_section div {
+  color: var(--dark-grey);
+  width: 90%;
+  margin: auto;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.manifest_fifth_section div h2 {
+  max-width: 854px;
+}
+
+.manifest_fifth_section h2 span {
+  border-bottom: 8px solid var(--red);
+}
+
+
+
+.manifest_sixth_section {
+  background-image: url("../../assets/images/logo_light_bg.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  /* height: 1500px; */
+}
+
+.manifest_last_text_container {
+  text-align: center;
+  margin: 110px 0;
+}
+
+.manifest_values_container {
+  background: linear-gradient(48deg, rgba(50, 62, 72, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  width: 100%;
+  /* height: 1500px; */
+  border-radius: 800px 800px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 190px;
+  color: #fff;
+  position: relative
+}
+
+.manifest_values_list_container {
+  width: 73%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* position: relative; */
+  /* display: grid;
+  justify-items: center;
+  grid-template-areas: "el";
+  grid-row-gap: 40px; */
+}
+
+.manifest_values_list_title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.manifest_values_list_title_dot {
+  width: 15px;
+  height: 15px;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  border-radius: 100%;
+  margin-right: 15px;
+}
+
+.manifest_values_list_title h4 {
+  color: #FA4A2E;
+  font-size: 2rem;
+}
+
+.manifest_values_list_single_element {
+  /* max-width: 550px; */
+  width: 100%;
+  margin: 50px 20px;
+}
+
+.manifest_values_list_container>div:last-child {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 800px;
+}
+
+.manifest_logo_gray_bg {
+  background-image: url("../../assets/images/logo_written_short_white.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  max-width: 1000px;
+  width: 100%;
+  /* aspect-ratio: 2/3; */
+  opacity: 5%;
+}
+
 @media(min-width: 768px) {
   .manifest_second_section {
     height: 500px;
   }
+
+  .manifest_values_list_container {
+    /* grid-template-areas: "el el";
+    grid-row-gap: 20px;
+    grid-column-gap: 20px; */
+  }
 }
 
 @media(min-width: 1024px) {
-  .manifest_first_section {
+  /* .manifest_first_section {
     height: 900px;
-  }
+  } */
 
   .manifest_sentence_manifest {
     color: var(--dark-grey);
@@ -41,20 +267,79 @@
     margin: 200px 0;
   }
 
-  .manifest_second_section {
+  .manifest_second_section, .manifest_fifth_section {
     height: 700px;
+  }
+
+  .manifest_section_ball_animated {
+    flex-direction: row;
+  }
+
+  .manifest_ball_container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .manifest_square_container {
+    width: 50%;
+    margin-top: 0;
+    min-height: 500px;
+  }
+
+  .manifest_square_container p {
+    width: 70%;
+  }
+
+  .manifest_external_written p span {
+    height: 200px;
+  }
+
+  .manifest_external_written {
+    width: 400px;
+    height: 400px;
+  }
+
+  .manifest_internal_ball {
+    width: 200px;
+    height: 200px;
+  }
+
+  .manifest_fifth_section {
+    justify-content: flex-end;
+  }
+
+  .manifest_fifth_section div {
+    width: 50%;
+    text-align: left;
+    margin: 0;
+    padding-right: 30px;
+  }
+
+  .manifest_values_list_single_element {
+    width: 40%;
+    max-width: 550px;
   }
 }
 
 
 @media(min-width: 1200px) {
-  .manifest_second_section {
+  .manifest_second_section, .manifest_fifth_section {
     height: 1000px;
   }
 }
 
+@media(min-width: 1300px) {
+  .manifest_square_container {
+    width: 50%;
+    margin-top: 0;
+    min-height: 600px;
+  }
+}
+
 @media(min-width: 1440px) {
-  .manifest_second_section {
+  .manifest_second_section, .manifest_fifth_section {
     height: 1280px;
   }
 }
