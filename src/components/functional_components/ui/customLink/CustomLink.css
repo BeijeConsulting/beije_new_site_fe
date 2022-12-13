@@ -1,7 +1,7 @@
 .link-default {
   color: var(--white) !important;
   text-transform: uppercase;
-  font-family: var(--moderat-bold);
+  font-family: var(--ginra-bold);
   position: relative;
   text-decoration: none;
 }

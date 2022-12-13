@@ -36,7 +36,7 @@
 
 .percentage-card-data-number {
   font-size: 40px;
-  font-family: var(--moderat-regular);
+  font-family: var(--ginra-regular);
   height: 65px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -50,7 +50,7 @@
   font-size: 14px;
   line-height: 24px;
   color: var(--lightblue);
-  font-family: var(--moderat-regular);
+  font-family: var(--ginra-regular);
 }
 
 @media (min-width: 768px) {

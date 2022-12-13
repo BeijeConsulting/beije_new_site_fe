@@ -278,8 +278,6 @@
 }
 
 .career_growth_paths_container legend {
-  font-size: 28px;
-  line-height: 36px;
   width: fit-content;
   margin-top: -40px;
   background: inherit;
@@ -309,7 +307,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 416px;
+  height: 90vh;
 }
 
 .career_sixth_section {
@@ -387,10 +385,6 @@
     padding: 0 30px;
   }
 
-  .career_fifth_section {
-    height: 500px;
-  }
-
   .career_sixth_section {
     margin-top: -100px;
   }
@@ -416,10 +410,6 @@
 
   .career_growth_paths_container p:nth-child(1) {
     font-size: 32px;
-  }
-
-  .career_fifth_section {
-    height: 700px;
   }
 
   .career_sixth_section {
@@ -497,10 +487,6 @@
   .career_growth_paths:nth-child(2) {
     margin-left: 20px;
   }
-
-  .career_fifth_section {
-    height: 1000px;
-  }
 }
 
 @media(min-width: 1440px) {
@@ -514,10 +500,6 @@
 
   .career_growth_paths:nth-child(2) {
     margin-left: 40px;
-  }
-
-  .career_fifth_section {
-    height: 1280px;
   }
 
   .career_sixth_section {

@@ -37,6 +37,7 @@
 .jobSection_single_row_container p {
   display: flex;
   align-items: center;
+  color: #fff;
 }
 
 @media(min-width: 400px) {

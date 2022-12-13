@@ -76,7 +76,7 @@ export default [
         element: <RequireCareerPermalink><CareerDetail /></RequireCareerPermalink>
       },
       {
-        path: "manifesto",
+        path: "manifest",
         element: <Manifest />
       },
       {

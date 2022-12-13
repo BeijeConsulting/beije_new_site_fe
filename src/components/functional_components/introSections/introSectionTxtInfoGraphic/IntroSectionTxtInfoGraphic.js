@@ -80,7 +80,7 @@ const IntroSectionTxtInfoGraphic = (props) => {
       >
         <GoBackBtn />
         <p
-          className={"intro-section-name titles-level-1-2 intro-section-academy-name"}
+          className={"intro-section-name h1 intro-section-academy-name"}
         >
           {props.sectionName}
         </p>

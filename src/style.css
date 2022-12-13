@@ -17,35 +17,43 @@
   --dark-blue: #323e48;
   --blue: #52798e;
 
-  --moderat-regular: "Moderat-Regular", sans-serif;
-  --moderat-bold: "Moderat-Bold", sans-serif;
-  --sofiaPro-regular: "SofiaPro-Regular", sans-serif;
-  --sofiaPro-bold: "SofiaPro-Bold", sans-serif;
+  --ginra-regular: "ginra-regular", sans-serif;
+  --ginra-bold: "ginra-bold", sans-serif;
+  --ginra-regular: "ginra-regular", sans-serif;
+  --ginra-bold: "ginra-bold", sans-serif;
 
-  --font-size-body-xs: 1.5rem;
-  --line-height-body-xs: 32px;
-  --font-size-h1-xs: 3.125rem;
-  --line-height-h1-xs: 57px;
-  --font-size-h3-xs: 2rem;
-  --font-size-more-h4-xs: 1.5rem;
+  --font-size-body-xs: 1rem;
+  --line-height-body-xs: 1.8rem;
+  --font-size-h1-xs: 3.2rem;
+  --line-height-h1-xs: 3.6rem;
+  --font-size-h2-xs: 2.4rem;
+  --line-height-h2-xs: 2.8rem;
+  --font-size-h3-xs: 1.6rem;
+  --line-height-h3-xs: 2rem;
+  --font-size-more-h4-xs: 0.95rem;
+  --line-height-more-h4-xs: 1.35rem;
 
-  --font-size-body-md: 1.125rem;
-  --line-height-body-md: 30px;
-  --font-size-h1-md: 2.1rem;
-  --line-height-h1-md: 60px;
-  --font-size-h3-md: 1.75rem;
-  --line-height-h3-md: 45px;
-  --font-size-more-h4-md: 1.4rem;
-  --line-height-more-h4-md: 30px;
+  --font-size-body-md: 1.4rem;
+  --line-height-body-md: 1.8rem;
+  --font-size-h1-md: 3.6rem;
+  --line-height-h1-md: 4rem;
+  --font-size-h2-md: 2.8rem;
+  --line-height-h2-md: 3.2rem;
+  --font-size-h3-md: 2rem;
+  --line-height-h3-md: 2.4rem;
+  --font-size-more-h4-md: 1.35rem;
+  --line-height-more-h4-md: 1.75rem;
 
-  --font-size-body-xl: 1.75rem;
-  --line-height-body-xl: 36px;
-  --font-size-h1-xl: 4.375rem;
-  --line-height-h1-xl: 81px;
-  --font-size-h3-xl: 1.875rem;
-  --line-height-h3-xl: 40px;
+  --font-size-body-xl: 1.8rem;
+  --line-height-body-xl: 2.2rem;
+  --font-size-h1-xl: 4rem;
+  --line-height-h1-xl: 4.2rem;
+  --font-size-h2-xl: 3.2rem;
+  --line-height-h2-xl: 3.4rem;
+  --font-size-h3-xl: 2.4rem;
+  --line-height-h3-xl: 2.6rem;
   --font-size-more-h4-xl: 1.75rem;
-  --line-height-more-h4-xl: 36px;
+  --line-height-more-h4-xl: 2.15rem;
 
   --header-height-xs: 72px;
   /*xs - 320px*/
@@ -74,25 +82,13 @@
 } */
 
 @font-face {
-  font-family: "Moderat-Regular";
+  font-family: "ginra-regular";
   src: url("./assets/font/ginora-sans-webfont/ginra_sans_light-webfont.woff");
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Moderat-Bold";
-  src: url("./assets/font/ginora-sans-webfont/ginra_sans_bold-webfont.woff");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "SofiaPro-Regular";
-  src: url("./assets/font/ginora-sans-webfont/ginra_sans_light-webfont.woff");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "SofiaPro-Bold";
+  font-family: "ginra-bold";
   src: url("./assets/font/ginora-sans-webfont/ginra_sans_bold-webfont.woff");
   font-display: swap;
 }
@@ -104,14 +100,15 @@ body, html {
 
 html {
   -webkit-text-size-adjust: 100%;
+  font-size: 18px;
 }
 
-body, .simple-paragraph, button p {
-  font-family: var(--moderat-regular) !important;
+body, .simple-paragraph, button p, p {
+  font-family: var(--ginra-regular) !important;
   font-size: var(--font-size-body-xs);
+  line-height: var(--line-height-body-xs);
   letter-spacing: 0px;
   color: var(--grey-tone-4);
-  line-height: var(--line-height-body-xs);
   font-weight: normal !important;
 }
 
@@ -119,19 +116,41 @@ button p {
   color: var(--white);
 }
 
-h1, h2, .titles-level-1-2 {
-  font-family: var(--sofiaPro-bold);
+h1, .h1, h1 span, .h1 span {
   font-size: var(--font-size-h1-xs);
   line-height: var(--line-height-h1-xs);
-  font-weight: 700;
 }
 
-h3, .titles-level3 {
+h1, .h1 {
+  font-family: var(--ginra-bold);
+}
+
+h1 span, .h1 span {
+  font-family: var(--ginra-regular);
+}
+
+h2, .h2, h2 span, .h2 span {
+  font-size: var(--font-size-h2-xs);
+  line-height: var(--line-height-h2-xs);
+}
+
+h2, .h2 {
+  font-family: var(--ginra-regular);
+}
+
+h2 span, .h2 span {
+  font-family: var(--ginra-bold);
+}
+
+h3, .h3 {
+  font-family: var(--ginra-regular);
   font-size: var(--font-size-h3-xs);
+  line-height: var(--line-height-h3-xs);
 }
 
 h4, h5, h6, .minor-titles {
-  font-family: var(--sofiaPro-regular);
+  font-family: var(--ginra-regular);
+  font-size: var(--font-size-more-h4-xs);
 }
 
 .uppercase {
@@ -142,45 +161,70 @@ h4, h5, h6, .minor-titles {
 
 @media (min-width: 768px) {
 
-  body, .simple-paragraph {
+  body, .simple-paragraph, button p, p {
+    font-size: var(--font-size-body-md);
     line-height: var(--line-height-body-md);
   }
 
-  h1, h2, .titles-level-1-2 {
+  h1, .h1, h1 span, .h1 span {
     font-size: var(--font-size-h1-md);
     line-height: var(--line-height-h1-md);
   }
 
-  h3, .titles-level3 {
+  h1, .h1 {
+    font-family: var(--ginra-bold);
+  }
+
+  h1 span, .h1 span {
+    font-family: var(--ginra-regular);
+  }
+
+  h2, .h2, h2 span, .h2 span {
+    font-size: var(--font-size-h2-md);
+    line-height: var(--line-height-h2-md);
+  }
+
+  h3, .h3 {
     font-size: var(--font-size-h3-md);
     line-height: var(--line-height-h3-md);
   }
 
   h4, h5, h6, .minor-titles {
     font-size: var(--font-size-more-h4-md);
-    line-height: var(--line-height-more-h4-md);
   }
 }
 
 @media (min-width: 1600px) {
-  body, .simple-paragraph {
+  body, .simple-paragraph, button p, p {
     font-size: var(--font-size-body-xl);
     line-height: var(--line-height-body-xl);
   }
 
-  h1, h2, .titles-level-1-2 {
+  h1, .h1, h1 span, .h1 span {
     font-size: var(--font-size-h1-xl);
     line-height: var(--line-height-h1-xl);
   }
 
-  h3, .titles-level3 {
+  h2, .h2, h2 span, .h2 span {
+    font-size: var(--font-size-h2-xl);
+    line-height: var(--line-height-h2-xl);
+  }
+
+  h2, .h2 {
+    font-family: var(--ginra-regular);
+  }
+
+  h2 span, .h2 span {
+    font-family: var(--ginra-bold);
+  }
+
+  h3, .h3 {
     font-size: var(--font-size-h3-xl);
     line-height: var(--line-height-h3-xl);
   }
 
   h4, h5, h6, .minor-titles {
     font-size: var(--font-size-more-h4-xl);
-    line-height: var(--line-height-more-h4-xl);
   }
 }
 
@@ -310,7 +354,7 @@ h4, h5, h6, .minor-titles {
 
 .hightlight-txt-white {
   color: var(--white);
-  font-family: var(--moderat-bold);
+  font-family: var(--ginra-bold);
 }
 
 .divider {

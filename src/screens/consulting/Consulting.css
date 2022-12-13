@@ -21,7 +21,7 @@
 
 .consulting-second-section-text-container {
   font-size: var(--font-size-h3-xs);
-  font-family: var(--moderat-regular);
+  font-family: var(--ginra-regular);
   color: var(--lightblue);
   line-height: 30px;
   max-width: 450px;
@@ -30,7 +30,7 @@
 
 .consulting-second-section-text-list-container {
   /* font-size: var(--font-size-h1-xs);
-  font-family: var(--sofiaPro-bold);*/
+  font-family: var(--ginra-bold);*/
   line-height: 50px;
   color: #FFFFFF;
   margin-top: 50px;
@@ -51,7 +51,7 @@
 .consulting-fourth-section-banner-text {
   color: #FFFFFF;
   font-size: 30px;
-  font-family: var(--sofiaPro-bold);
+  font-family: var(--ginra-bold);
   text-transform: uppercase;
   text-align: center;
   line-height: 50px;

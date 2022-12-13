@@ -116,7 +116,7 @@ const CaseStudiesDetail = (props) => {
             <h1>
               {state.caseStudiesResponse.title}
             </h1>
-            <h2 className="titles-level3">
+            <h2 className="h3">
               {state.caseStudiesResponse.subtitle}
             </h2>
             <div dangerouslySetInnerHTML={{ __html: converter.makeHtml(state.caseStudiesResponse.description) }} />
