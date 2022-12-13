@@ -58,8 +58,8 @@ const CustomSwitch = (props) => {
   return (
     <div className="switch_container">
       <div className="switch_label_container">
-        <span>ACADEMY</span>
-        <span>JOBS</span>
+        <span className={!props.value ? "bold_switch" : ""}>ACADEMY</span>
+        <span className={props.value ? "bold_switch" : ""}>JOBS</span>
       </div>
       <MaterialUISwitch
         className="switch_input"

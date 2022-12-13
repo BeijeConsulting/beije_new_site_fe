@@ -35,7 +35,7 @@
 .form-field {
   width: 100%;
   margin: 10px 0px !important;
-  font-family: var(--moderat-regular);
+  font-family: var(--ginra-regular);
   padding-left: 10px;
 }
 
@@ -44,23 +44,23 @@
 }
 
 .form-field::-webkit-input-placeholder {
-  font-family: var(--moderat-regular);
+  font-family: var(--ginra-regular);
 }
 
 .form-field::-moz-placeholder {
-  font-family: var(--moderat-regular);
+  font-family: var(--ginra-regular);
 }
 
 .form-field:-ms-input-placeholder {
-  font-family: var(--moderat-regular);
+  font-family: var(--ginra-regular);
 }
 
 .form-field::-ms-input-placeholder {
-  font-family: var(--moderat-regular);
+  font-family: var(--ginra-regular);
 }
 
 .form-field::placeholder {
-  font-family: var(--moderat-regular);
+  font-family: var(--ginra-regular);
 }
 
 .form-field label {
@@ -185,7 +185,7 @@
   }
 
   .form-info-container p:nth-child(1), .form-info-container p:nth-child(4) {
-    font-family: var(--moderat-bold);
+    font-family: var(--ginra-bold);
   }
 
   .form-info-container p:nth-child(3) {

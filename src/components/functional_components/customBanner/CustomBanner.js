@@ -17,7 +17,7 @@ const CustomBanner = (props) => {
       className={"banner-container paddingX-container-general-pages"}
     >
       <h2
-        className="titles-level3"
+        className="h3"
       >{props.title}
       </h2>
       <Grid

@@ -4,7 +4,7 @@
 
 .table-default th, .table-default th p, .table-default td {
   color: var(--white);
-  font-family: var(--moderat-regular);
+  font-family: var(--ginra-regular);
 }
 
 .table-default th {
@@ -45,7 +45,7 @@
 
 .table-default td a {
   color: var(--yellow);
-  font-family: var(--moderat-bold);
+  font-family: var(--ginra-bold);
   text-decoration: none;
 }
 

@@ -10,7 +10,7 @@
 }
 
 .percentage-container-title {
-  font-family: var(--sofiaPro-bold);
+  font-family: var(--ginra-bold);
   text-transform: uppercase;
   max-width: 300px;
 }
@@ -27,7 +27,7 @@
   font-size: 14px;
   text-transform: uppercase;
   color: var(--dark-grey);
-  font-family: var(--moderat-bold);
+  font-family: var(--ginra-bold);
   margin-bottom: 20px;
   letter-spacing: 1px;
 }

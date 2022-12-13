@@ -45,11 +45,11 @@
 
 .tab-lables h2 {
   font-size: calc(var(--font-size-h1-xs) - 3px);
-  font-family: var(--sofiaPro-regular);
+  font-family: var(--ginra-regular);
 }
 
 .tab-lables-active h3 {
-  font-family: var(--sofiaPro-bold);
+  font-family: var(--ginra-bold);
 }
 
 .tab-panels-container {
@@ -93,7 +93,7 @@
   }
 
   .hightlight-on-hover {
-    font-family: var(--moderat-bold);
+    font-family: var(--ginra-bold);
     -webkit-transition: 1.5s;
     -o-transition: 1.5s;
     transition: 1.5s;

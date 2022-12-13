@@ -18,3 +18,7 @@
 .switch_input {
   width: 100%;
 }
+
+.bold_switch {
+  font-weight: bold;
+}

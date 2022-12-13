@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
+import { useNavigate } from "react-router-dom";
 
 // Redux
 import { connect } from "react-redux";
@@ -16,7 +17,7 @@ import { initCurrentPage, setCurrentPage } from "../../redux/ducks/currentPageDu
 import { initVisibilityNavbar, setVisibilityNavbar } from "../../redux/ducks/showNavbarTopDuck";
 
 
-import { addIcon, advantagesBeije, benefitsTeam, growthPaths, minusIcon, posterVideoCareer } from "../../utils/properties";
+import { addIcon, advantagesBeije, benefitsTeam, growthPaths, logo_written_dark, minusIcon, posterVideoCareer } from "../../utils/properties";
 
 // Components
 import CustomButton from "../../components/functional_components/ui/customButton/CustomButton";
@@ -25,6 +26,8 @@ import JobSection from "../../components/hooks_components/jobSection/JobSection"
 
 const Career = (props) => {
   const match_mobile = useMediaQuery('(max-width: 768px)');
+  const navigate = useNavigate();
+  const refListJobs = useRef(null);
   const [state, setState] = useState({
     advantages: advantagesBeije,
     benefits: benefitsTeam
@@ -60,6 +63,14 @@ const Career = (props) => {
     })
   }
 
+  const goToManifest = () => {
+    navigate("/manifest")
+  }
+
+  const goToListJobs = () => {
+    refListJobs.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <>
       <Helmet>
@@ -79,7 +90,11 @@ const Career = (props) => {
               <h1>
                 <span>Careers</span><span>&nbsp;@&nbsp;</span>
               </h1>
-              <p>Beije</p>
+              <img
+                src={logo_written_dark}
+                width={200}
+                height={90}
+              />
             </div>
             <div className="career_intro_text">
               <p>Il nostro è un sistema People First, questo significa creare un luogo di lavoro in cui le persone si sentono appagate e percepiscono una reale crescita professionale</p>
@@ -90,10 +105,12 @@ const Career = (props) => {
               <CustomButton
                 type="career_btn"
                 content={"POSIZIONI APERTE"}
+                callback={goToListJobs}
               />
               <CustomButton
                 type="career_btn"
                 content={"BEIJE MANIFESTO"}
+                callback={goToManifest}
               />
             </div>
 
@@ -105,7 +122,7 @@ const Career = (props) => {
 
         <section className={"career_second_section paddingX-container-general-pages d-flex justify-center"}>
           {/* List jobs container */}
-          <div className="career_container_list">
+          <div className="career_container_list" ref={refListJobs}>
             <JobSection />
           </div>
 
@@ -165,7 +182,7 @@ const Career = (props) => {
               {growthPaths.map((item, key) => {
                 return (
                   <fieldset key={key} className={"career_growth_paths"}>
-                    <legend><b>{item.title}</b></legend>
+                    <legend className="h3"><b>{item.title}</b></legend>
                     <p>{item.description}</p>
                   </fieldset>
                 )

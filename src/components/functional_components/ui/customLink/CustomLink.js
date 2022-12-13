@@ -9,16 +9,16 @@ const CustomLink = (props) => {
     let currentClassName = null;
     switch (props.typeLink) {
       case "apply":
-        currentClassName = "link-default link-apply titles-level3"
+        currentClassName = "link-default link-apply h3"
         break;
       case "apply-primary":
-        currentClassName = "link-default link-apply-primary titles-level3"
+        currentClassName = "link-default link-apply-primary h3"
         break;
       case "apply-secondary":
-        currentClassName = "link-default link-apply-secondary titles-level3"
+        currentClassName = "link-default link-apply-secondary h3"
         break;
       case "detail-academy":
-        currentClassName = "link-default link-detail-academy titles-level-1-2"
+        currentClassName = "link-default link-detail-academy h1"
         break;
       default:
         currentClassName = "link-default"
@@ -34,7 +34,7 @@ const CustomLink = (props) => {
   }
 
   return (
-    <div className="wrapper"  onClick={handleCallback}>
+    <div className="wrapper" onClick={handleCallback}>
       <Link
         to={props.linkTo}
         className={switchClassName()}

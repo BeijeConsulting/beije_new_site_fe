@@ -13,6 +13,9 @@ import empty_job from "../assets/icons/empty_job.svg"
 import posterVideo from '../assets/images/posterVideoAcademy.jpg'
 import icon_profile from "../assets/icons/iconProfile.png";
 import careerVideoPoster from "../assets/images/career/career4.jpg";
+// import beije_short_written_dark from "/beije_written_short_dark.png";
+import beije_short_written_white from "../assets/images/logo_only_written_short_white.svg";
+import beije_short_written_dark from "../assets/images/logo_only_written_short_dark.svg";
 
 // Link
 const linkFb = "https://www.facebook.com/beijepeoplefirst";
@@ -55,6 +58,9 @@ export const logo_primary_light = "https://beije-people-first.s3.eu-south-1.amaz
 export const logo_secondary_light = "https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/logos/logo_short_white.svg";
 export const logo_secondary_grey = "https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/logos/logo_short_grey.svg";
 export const logo_secondary_transparent = "https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/logos/logo_short_transparent.svg";
+export const logo_written_white = beije_short_written_white;
+export const logo_written_dark = beije_short_written_dark;
+
 
 export const defaultIcon = faN;
 export const downArrow = faArrowDownLong;
@@ -100,6 +106,11 @@ export const menu_voices = [
     name: "career",
     link_to: "/career",
     key_link: "career"
+  },
+  {
+    name: "manifest",
+    link_to: "/manifest",
+    key_link: "manifest"
   },
   {
     name: "blog",

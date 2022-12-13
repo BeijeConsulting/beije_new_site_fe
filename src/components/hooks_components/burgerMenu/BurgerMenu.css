@@ -255,7 +255,7 @@
 .burgerMenu-nav-links-container {
   height: calc(100vh - 87px);
   margin-top: 82px;
-  font-family: var(--sofiaPro-bold);
+  font-family: var(--ginra-bold);
   padding-bottom: 60px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -499,9 +499,9 @@
     margin-top: 107px;
   }
 
-  .burgerMenu-links-voices {
+  /* .burgerMenu-links-voices {
     font-size: var(--font-size-h1-xl);
-  }
+  } */
 }
 
 @media (min-width: 1600px) {

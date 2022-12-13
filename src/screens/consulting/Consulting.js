@@ -138,7 +138,7 @@ const Consulting = (props) => {
               </Box>
 
               <Box
-                className="consulting-second-section-text-list-container up-second-section-text2-container titles-level-1-2"
+                className="consulting-second-section-text-list-container up-second-section-text2-container h1"
               >
                 <p>{t("consulting.firstSection.list.element1")}</p>
                 <p>{t("consulting.firstSection.list.element2")}</p>

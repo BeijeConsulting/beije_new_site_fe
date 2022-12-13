@@ -58,7 +58,7 @@ const ErrorPage = (props) => {
           className={"noMatch-txt-container"}
 
         >
-          <p className="titles-level-1-2">
+          <p className="h1">
             {t("errorGeneric.shortMessage")}
 
           </p>

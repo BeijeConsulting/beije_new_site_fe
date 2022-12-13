@@ -249,7 +249,7 @@ const TalentAcademy = (props) => {
             className={"academy-seventh-section-container paddingX-container-general-pages"}
           >
             <p
-              className="titles-level3"
+              className="h3"
             >
               Partner
             </p>
