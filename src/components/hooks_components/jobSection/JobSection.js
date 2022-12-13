@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 import { initCurrentPage, setCurrentPage } from "../../../redux/ducks/currentPageDuck";
 import { initVisibilityNavbar, setVisibilityNavbar } from "../../../redux/ducks/showNavbarTopDuck";
 import ApiCalls from "../../../services/api/ApiCalls";
-import CustomTable from "../../functional_components/customTable/CustomTable";
 import CustomButton from "../../functional_components/ui/customButton/CustomButton";
 import CustomSwitch from "../../functional_components/ui/customSwitch/CustomSwitch"
 import "./JobSection.css";
@@ -80,7 +79,7 @@ const JobSection = (props) => {
       response = `/career/career-detail?jobOffer=${param2}`
     }
 
-    console.log("RESPONSE: ", response);
+    // console.log("RESPONSE: ", response);
 
     navigate(response)
   }
