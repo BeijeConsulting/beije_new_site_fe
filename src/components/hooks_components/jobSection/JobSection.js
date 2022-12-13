@@ -46,7 +46,7 @@ const JobSection = (props) => {
       return item.academy === false
     })
 
-    console.log("careerDataResponse: ", careerDataResponse);
+    // console.log("careerDataResponse: ", careerDataResponse);
 
     setState({
       ...state,
@@ -65,9 +65,9 @@ const JobSection = (props) => {
 
   const sendToPage = (param1, param2) => () => {
     let response = "#";
-    console.log("SHOW JOBS: ", state.showJobs);
-    console.log("param1: ", param1);
-    console.log("param2: ", param2);
+    // console.log("SHOW JOBS: ", state.showJobs);
+    // console.log("param1: ", param1);
+    // console.log("param2: ", param2);
     if (!state.showJobs) {
       if (param1.toLowerCase() === "frontend") {
         response = "/beije-talent-academy/academy-frontend"

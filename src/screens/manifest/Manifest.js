@@ -55,8 +55,6 @@ const Manifest = (props) => {
       }
     })
 
-    console.log("match1024: ", match1024);
-
     t1_ball.to(manifest_internal_ball, 1, { width: match1024 ? 200 : 150, height: match1024 ? 200 : 150 }).to(manifest_text_ball_gsap, 1, { opacity: 1 }).to(manifest_ball_container_gsap, 1, { width: match1024 ? "50%" : "100%" }).to(manifest_square_container_gsap, 1, { display: "flex", opacity: 1 })
 
     const t2_list_values = gsap.timeline({
