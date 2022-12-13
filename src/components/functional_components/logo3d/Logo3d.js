@@ -16,6 +16,7 @@ const Logo3d = () => {
   const containerRef = useRef();
 
   useEffect(() => {
+
     (async () => {
       const containerRect = containerRef.current.getBoundingClientRect();
       const loader = new GLTFLoader();
@@ -50,12 +51,12 @@ const Logo3d = () => {
         })
       }
 
-      modelLogo.position.x -= 0.3;
-      modelLogo.position.y -= 1.9;
-      modelLogo.position.z -= 1.25;
+      modelLogo.position.x += 0.6;
+      modelLogo.position.y -= 1.3;
+      modelLogo.position.z -= 5;
 
       modelLogo.rotation.x += 0.25;
-      // modelLogo.rotation.y -= 0.2;
+      modelLogo.rotation.y -= 0.2;
       // modelLogo.rotation.z += 0.1;
 
       // modelLogo.scale(1, 1, 1)
@@ -65,6 +66,8 @@ const Logo3d = () => {
 
       camera.position.z = 5;
 
+
+
       function animate() {
         requestAnimationFrame(animate);
 
@@ -72,6 +75,19 @@ const Logo3d = () => {
       }
 
       animate();
+
+      function handleWindowResize() {
+        const { width, height } =
+          renderer.domElement.parentElement.getBoundingClientRect();
+        camera.aspect = width / height;
+        camera.updateProjectionMatrix();
+        renderer.setSize(width, height);
+      }
+      window.addEventListener("resize", handleWindowResize, false);
+      return () => {
+        window.removeEventListener("resize", handleWindowResize, false);
+      };
+
     })()
 
   }, [])
@@ -79,7 +95,7 @@ const Logo3d = () => {
   return (
     <>
       {/* 3D ELEMENT */}
-      < div ref={containerRef} id="container" style={{ width: "1234px", height: "857px", border: "1px solid red" }
+      < div ref={containerRef} id="container" style={{ width: "100%", height: "100%" }
       }>
 
       </div >
