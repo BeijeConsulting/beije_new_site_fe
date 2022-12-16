@@ -798,75 +798,77 @@ export const programBackendAcademy = [
 
 export const advantagesBeije = [
   {
-    title: "Smartworking",
-    paragraph: "In Beije siamo grandi fan dello smartworking, il nostro motto è “no matter where but how”, crediamo però che il valore dell’incontro vada coltivato: i nostri uffici sono sempre aperti per lavorare fianco a fianco con la Community e a seconda del cliente/progetto sul quale ci troviamo l’ufficio diventa luogo strategico di teamwork.",
+    title: "paragraph1.title",
+    paragraph: "paragraph1.text",
     isOpen: false
   },
   {
-    title: "Eventi Beije",
-    paragraph: "Far parte della Community significa anche costruire un rapporto prima di tutto tra persone: due volte all’anno ci ritroviamo tutti insieme per una festa in pieno stile Beije!",
+    title: "paragraph2.title",
+    paragraph: "paragraph2.text",
     isOpen: false
   },
   {
-    title: "Incontri Afterwork",
-    paragraph: "Almeno una volta al mese con la nostra community organizziamo aperitivi, serate giochi, eventi per goderci una serata insieme!",
+    title: "paragraph3.title",
+    paragraph: "paragraph3.text",
     isOpen: false
   },
   {
-    title: "Community Coffee Breaks",
-    paragraph: "In ufficio due cose non mancano mai: litri di caffè e momenti di chiacchiere e confronto con il team nella nostra sala break!",
+    title: "paragraph4.title",
+    paragraph: "paragraph4.text",
     isOpen: false
   }
 ];
 
 export const growthPaths = [
   {
-    title: "Beije Supporter",
-    description: "La tua carriera non inizia full alone: un Supporter interno ti guiderà durante il tuo percorso professionale, aiutandoti fin dall’inizio ad integrarti nella realtà aziendale, affinché tu possa partire al meglio. Anche al di là del lavoro, ci sosteniamo a vicenda come una vera Community."
+    title: "paragraph1.title",
+    description: "paragraph1.text"
   },
   {
-    title: "Piani di crescita ad hoc",
-    description: "Crediamo che la nostra Community sia spazio di crescita e arricchimento: attiviamo percorsi formativi di inserimento, coach aziendale a disposizione e piani di crescita personalizzati con te con obiettivi a cadenza annuale."
+    title: "paragraph2.title",
+    description: "paragraph2.text"
   }
 ]
 
 export const benefitsTeam = [
   {
-    title: "Formazione e-learning",
-    paragraph: "Promuoviamo la curiosità e la voglia di conoscenza: mettiamo a disposizione di ognuno l’accesso gratuito ad una piattaforma di e-learning con numerosi corsi sempre aggiornati.",
+    title: "paragraph1.title",
+    paragraph: "paragraph1.text",
     isOpen: false
   },
   {
-    title: "Formazione linguistica",
-    paragraph: "Abbattiamo i confini professionali e personali e crediamo nell’importanza di misurarsi in contesti internazionali, mettiamo a disposizione uno strumento di apprendimento linguistico online per imparare gratuitamente lingue straniere.",
+    title: "paragraph2.title",
+    paragraph: "paragraph2.text",
     isOpen: false
   },
   {
-    title: "Webinar ed event",
-    paragraph: "Poniamo le basi per una crescita professionale a 360 gradi: almeno due volte all’anno organizziamo eventi di formazione tenuti dai nostri esperti Beije e da professionisti del settore; pianifichiamo anche webinar interni online per aggiornare la Community sulle ultime tecnologie e le innovazioni più interessanti del mercato.",
+    title: "paragraph3.title",
+    paragraph: "paragraph3.text",
     isOpen: false
   }
 ]
 
+export const manifest_ball_sentence = "manifest.animated_ball_container.ball_sentence";
+
 export const manifest_values = [
   {
-    title: "Rispetto",
-    description: "Siamo idee, pensieri, culture, interessi differenti e garantiamo un clima di rispetto che passa attraverso l’ascolto, la conoscenza delle persone e la condivisione."
+    title: "paragraph1.title",
+    description: "paragraph1.text"
   },
   {
-    title: "Riconoscenza",
-    description: "Crediamo in un sistema di mutua RICONOSCENZA: mostriamo gratitudine per l’impegno che ogni giorno mettiamo nel nostro lavoro."
+    title: "paragraph2.title",
+    description: "paragraph2.text"
   },
   {
-    title: "Connessione",
-    description: "La base per costruire la nostra Community è la CONNESSIONE, impegnarci ogni giorno per costruire un SENSO DI APPARTENENZA che ci permetta di proseguire insieme verso una visione comune."
+    title: "paragraph3.title",
+    description: "paragraph3.text"
   },
   {
-    title: "Passione",
-    description: "Il lavoro occupa una parte rilevante del nostro tempo, per questo crediamo nella tua passione: il modo migliore per essere soddisfatti di ciò che fai, è amare quello che stai facendo."
+    title: "paragraph4.title",
+    description: "paragraph4.text"
   },
   {
-    title: "Team",
-    description: "Il nostro è un lavoro di TEAM, per noi “teamwork is dreamwork”."
+    title: "paragraph5.title",
+    description: "paragraph5.text"
   }
 ]

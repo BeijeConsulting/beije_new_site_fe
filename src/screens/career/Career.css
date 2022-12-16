@@ -120,6 +120,7 @@
   font-weight: normal;
   color: #323E48;
 }
+
 /* 
 .career_third_section h2 {
   line-height: 45px;
@@ -239,6 +240,7 @@
   background-image: url("../../assets/images/career/paths1.jpg");
 }
 
+
 .career_fourth_section {
   display: flex;
   justify-content: center;
@@ -301,9 +303,13 @@
   padding: 0 20px;
 }
 
+.career_growth_paths_description {
+  color: #fff;
+}
+
 .career_fifth_section {
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4458158263305322) 64%, rgba(255, 255, 255, 1) 88%, rgba(255, 255, 255, 1) 100%), url("../../assets/images/career/career3.jpg");
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;

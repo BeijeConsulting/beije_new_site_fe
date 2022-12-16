@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { initCurrentPage, setCurrentPage } from "../../../redux/ducks/currentPageDuck";
 import { initVisibilityNavbar, setVisibilityNavbar } from "../../../redux/ducks/showNavbarTopDuck";
 import ApiCalls from "../../../services/api/ApiCalls";
+import { career_empty_academy, career_empty_job } from "../../../utils/properties";
 import CustomButton from "../../functional_components/ui/customButton/CustomButton";
 import CustomSwitch from "../../functional_components/ui/customSwitch/CustomSwitch"
 import "./JobSection.css";
@@ -64,9 +65,7 @@ const JobSection = (props) => {
 
   const sendToPage = (param1, param2) => () => {
     let response = "#";
-    // console.log("SHOW JOBS: ", state.showJobs);
-    // console.log("param1: ", param1);
-    // console.log("param2: ", param2);
+
     if (!state.showJobs) {
       if (param1.toLowerCase() === "frontend") {
         response = "/beije-talent-academy/academy-frontend"
@@ -120,6 +119,31 @@ const JobSection = (props) => {
             }
 
           })
+        }
+        {
+          state.careerDataResponse && !state.academyElements && !state.showJobs &&
+          <div
+            className="jobSection-empty-message-container"
+          >
+            <img
+              alt="icon for empty academy positions"
+              src={career_empty_academy}
+            />
+            <p>{t("career.messageAcademy")}</p>
+          </div>
+
+        }
+        {
+          state.careerDataResponse && !state.jobElements && state.showJobs &&
+          <div
+            className="jobSection-empty-message-container"
+          >
+            <img
+              alt="icon for empty academy positions"
+              src={career_empty_job}
+            />
+            <p>{t("career.messageJob")}</p>
+          </div>
         }
       </div>
 

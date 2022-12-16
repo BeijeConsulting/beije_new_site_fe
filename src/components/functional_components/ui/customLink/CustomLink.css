@@ -32,6 +32,18 @@
   color: var(--yellow) !important;
 }
 
+.simple-link {
+  color: var(--dark-grey) !important;
+  white-space: nowrap;
+}
+
+.simple-link::before {
+  background-color: var(--red) !important;
+  bottom: -4px;
+  height: 5px;
+  font-weight: bold;
+}
+
 /* Hover */
 @media (hover: hover) and (pointer: fine) {
   .link-default:hover::before {
@@ -47,6 +59,10 @@
 
   .link-apply-secondary:hover::before {
     background-color: var(--yellow);
+  }
+
+  .simple_link:hover::before {
+    background-color: var(--red);
   }
 }
 

@@ -88,7 +88,7 @@ const Career = (props) => {
 
             <div className="career_title_page">
               <h1>
-                <span>Careers</span><span>&nbsp;@&nbsp;</span>
+                <span>{t("career.titlePage")}</span><span>&nbsp;@&nbsp;</span>
               </h1>
               <img
                 src={logo_written_dark}
@@ -96,8 +96,7 @@ const Career = (props) => {
                 height={90}
               />
             </div>
-            <div className="career_intro_text">
-              <p>Il nostro è un sistema People First, questo significa creare un luogo di lavoro in cui le persone si sentono appagate e percepiscono una reale crescita professionale</p>
+            <div className="career_intro_text" dangerouslySetInnerHTML={{ __html: t("career.description") }}>
             </div>
 
             {/* Buttons container */}
@@ -120,18 +119,15 @@ const Career = (props) => {
         </section>
 
 
-        <section className={"career_second_section paddingX-container-general-pages d-flex justify-center"}>
+        <section className={"career_second_section paddingX-container-general-pages d-flex justify-center"} >
           {/* List jobs container */}
           <div className="career_container_list" ref={refListJobs}>
             <JobSection />
           </div>
 
         </section>
-        <section className={"career_third_section paddingX-container-general-pages d-flex"}>
-          <h2>
-            I vantaggi della Community <span className="hightlight-txt">Beije</span>
-          </h2>
-
+        <section className={"career_third_section paddingX-container-general-pages d-flex"} >
+          <div dangerouslySetInnerHTML={{ __html: t("career.advantages.title") }} />
           <div>
             {
               state.advantages.map((item, key) => {
@@ -141,8 +137,8 @@ const Career = (props) => {
                     className="career_single_paragraph"
                   >
 
-                    <div className="career_single_paragraph_header">
-                      <h3 className="hightlight-txt carrer_paragraph_title">{item.title}</h3>
+                    <div className="career_single_paragraph_header" >
+                      <div dangerouslySetInnerHTML={{ __html: t(`career.advantages.${item.title}`) }} />
                       {
                         match_mobile &&
                         <CustomButton
@@ -153,7 +149,7 @@ const Career = (props) => {
                     </div>
                     {
                       (!match_mobile || item.isOpen) &&
-                      <p>{item.paragraph}</p>
+                      <div dangerouslySetInnerHTML={{ __html: t(`career.advantages.${item.paragraph}`) }} />
                     }
 
                   </div>
@@ -176,14 +172,14 @@ const Career = (props) => {
               src="https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/logos/logo_short_white.svg"
               alt="logo Beije People First"
             />
+            <div dangerouslySetInnerHTML={{ __html: t(`career.growth_paths.title`) }} />
 
-            <h2>Percorsi di <span><b>Crescita</b></span></h2>
             <div className={"career_growth_paths_container"}>
               {growthPaths.map((item, key) => {
                 return (
                   <fieldset key={key} className={"career_growth_paths"}>
-                    <legend className="h3"><b>{item.title}</b></legend>
-                    <p>{item.description}</p>
+                    <legend className="h3"><b>{t(`career.growth_paths.${item.title}`)}</b></legend>
+                    <div dangerouslySetInnerHTML={{ __html: t(`career.growth_paths.${item.description}`) }} />
                   </fieldset>
                 )
               })}
@@ -195,10 +191,7 @@ const Career = (props) => {
         <section className="career_fifth_section" />
 
         <section className={"career_sixth_section paddingX-container-general-pages d-flex"}>
-          <h2>
-            Team <span className="hightlight-txt">Benefits</span>
-          </h2>
-
+          <div dangerouslySetInnerHTML={{ __html: t("career.benefits.title") }} />
           <div>
             {
               state.benefits.map((item, key) => {
@@ -209,7 +202,7 @@ const Career = (props) => {
                   >
 
                     <div className="career_single_paragraph_header">
-                      <h3 className="hightlight-txt carrer_paragraph_title">{item.title}</h3>
+                      <div dangerouslySetInnerHTML={{ __html: t(`career.benefits.${item.title}`) }} />
                       {
                         match_mobile &&
                         <CustomButton
@@ -220,7 +213,7 @@ const Career = (props) => {
                     </div>
                     {
                       (!match_mobile || item.isOpen) &&
-                      <p>{item.paragraph}</p>
+                      <div dangerouslySetInnerHTML={{ __html: t(`career.benefits.${item.paragraph}`) }} />
                     }
 
                   </div>
@@ -247,11 +240,7 @@ const Career = (props) => {
 
             </video>
           </div>
-          <div className="paddingX-container-general-pages career_title_video_container">
-            <h2>
-              Lavorare con noi è bello?<br /> Ce lo racconta la nostra <span className="hightlight-txt">Community</span>
-            </h2>
-          </div>
+          <div className="paddingX-container-general-pages career_title_video_container" dangerouslySetInnerHTML={{ __html: t(`career.video_text`) }} />
         </section>
 
       </Box >

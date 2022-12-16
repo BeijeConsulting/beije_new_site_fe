@@ -3,8 +3,10 @@ import { Switch } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 import "./CustomSwitch.css";
+import { useTranslation } from "react-i18next";
 
 const CustomSwitch = (props) => {
+  const { t } = useTranslation();
 
   const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     width: 165,
@@ -58,8 +60,8 @@ const CustomSwitch = (props) => {
   return (
     <div className="switch_container">
       <div className="switch_label_container">
-        <span className={!props.value ? "bold_switch" : ""}>ACADEMY</span>
-        <span className={props.value ? "bold_switch" : ""}>JOBS</span>
+        <span className={!props.value ? "bold_switch" : ""}>{t("career.switch_academy")}</span>
+        <span className={props.value ? "bold_switch" : ""}>{t("career.switch_jobs")}</span>
       </div>
       <MaterialUISwitch
         className="switch_input"
