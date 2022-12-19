@@ -108,7 +108,8 @@ body, .simple-paragraph, button p, p {
   font-size: var(--font-size-body-xs);
   line-height: var(--line-height-body-xs);
   letter-spacing: 0px;
-  color: var(--grey-tone-4);
+  color: var(--white) !important;
+  /* color: var(--grey-tone-4); */
   font-weight: normal !important;
 }
 

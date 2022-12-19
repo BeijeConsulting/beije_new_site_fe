@@ -572,7 +572,7 @@
       "title": "<h2>Percorsi di <span><b>Crescita</b></span></h2>",
       "paragraph1": {
         "title": "Beije Supporter",
-        "text": "<p class='career_growth_paths_description'>La tua carriera <b>non inizia full alone</b>: un Supporter interno ti guiderà durante il tuo percorso professionale, aiutandoti fin dall’inizio ad integrarti nella realtà aziendale, affinché tu possa partire al meglio. Anche al di là del lavoro, <b>ci sosteniamo</b> a vicenda <b>come una vera Community</b>.</p>"
+        "text": "<p class='career_growth_paths_description'>La tua carriera <b>non inizia full alone</b>: un <b>Supporter interno</b> ti guiderà durante il tuo <b>percorso professionale</b>, aiutandoti fin dall’inizio ad integrarti nella realtà aziendale, affinché tu possa partire al meglio. Anche al di là del lavoro, <b>ci sosteniamo</b> a vicenda <b>come una vera Community</b>.</p>"
       },
       "paragraph2": {
         "title": "Piani di crescita ad hoc",
@@ -590,7 +590,7 @@
         "text": "<p>Abbattiamo i confini professionali e personali e crediamo nell’importanza di misurarsi in <b>contesti internazionali</b>, mettiamo a disposizione uno strumento di <b>apprendimento linguistico</b> online per <b>imparare gratuitamente</b> lingue straniere.</p>"
       },
       "paragraph3": {
-        "title": "<h3 class='hightlight-txt carrer_paragraph_title'>Webinar ed event</h3>",
+        "title": "<h3 class='hightlight-txt carrer_paragraph_title'>Webinar ed eventi</h3>",
         "text": "<p>Poniamo le basi per una <b>crescita professionale</b> a <b>360 gradi</b>: almeno <b>due volte all’anno</b> organizziamo <b>eventi di formazione</b> tenuti dai nostri esperti Beije e da professionisti del settore; pianifichiamo anche <b>webinar</b> interni online per aggiornare la Community sulle <b>ultime tecnologie</b> e le <b>innovazioni più interessanti</b> del <b>mercato</b>.</p>"
       }
     },
@@ -599,10 +599,10 @@
   "manifest": {
     "intro": "<h1><span>Manifesto</span></h1><p>Siamo nati con una grande ambizione: <b>mettere le persone al centro.</b></p>",
     "starting_sentence": "<h2>Oggi, dopo più di 10 anni e con una Community di oltre 100 dipendenti siamo un sistema People First.</h2>",
-    "image_text": " <h2><b>People First è l’innovazione che parte da te</b></h2><h2>People First è la passione che abbiamo per la conoscenza e l’aggiornamento costante</h2>",
+    "image_text": " <h2><b>People First è l’<span><b>innovazione</b></span> che parte da te</b></h2><h2>People First è la <span><b>passione</b></span> che abbiamo per la <span><b>conoscenza</b></span> e l’<span><b>aggiornamento</b></span> costante</h2>",
     "animated_ball_container": {
       "ball_sentence": "People first è Team, è Connessione, è Community.",
-      "box_sentence": " <p class='h2'>People First è il rispetto che abbiamo per il tuo benessere, la risposta che diamo alle tue domande.</p>"
+      "box_sentence": " <p class='h2'>People First è il <b>rispetto</b> che abbiamo per il tuo <b>benessere</b>, la <b>risposta</b> che diamo alle tue <b>domande</b>.</p>"
     },
     "second_image_text": {
       "p1": "People First è il nostro headquarter, centro strategico dove integrare la ",
@@ -611,12 +611,18 @@
       "link2": "nostra missione"
     },
     "centered_sentences": {
-      "text1": "People First è la capacità di guardare oggi al futuro e di generare un impatto positivo sulla società",
+      "text1": {
+        "p1": "People First è la capacità di ",
+        "p2": "guardare oggi al futuro ",
+        "p3": "e di generare un ",
+        "p4": "impatto positivo ",
+        "p5": "sulla società"
+      },
       "text2": {
         "p1": "People First è la ",
-        "p2": "visione d’insieme ",
+        "p2": "visione d’insieme",
         "p3": ": non vogliamo solo immaginare, vogliamo innescare un ",
-        "p4": "cambiamento positivo ",
+        "p4": "cambiamento ",
         "p5": "che duri nel tempo."
       }
     },

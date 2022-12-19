@@ -160,7 +160,13 @@ const Manifest = (props) => {
 
         <section className="manifest_sixth_section">
           <div className="paddingX-container-general-pages manifest_last_text_container">
-            <h2 className="hightlight-txt"><b>{t(`manifest.centered_sentences.text1`)}</b></h2>
+            <h2 className="hightlight-txt">
+              {t(`manifest.centered_sentences.text1.p1`)}
+              <span>{t(`manifest.centered_sentences.text1.p2`)}</span>
+              {t(`manifest.centered_sentences.text1.p3`)}
+              <span>{t(`manifest.centered_sentences.text1.p4`)}</span>
+              {t(`manifest.centered_sentences.text1.p5`)}
+            </h2>
             <br />
             <h2 className="manifest_last_text_container_title2">{t(`manifest.centered_sentences.text2.p1`)}<span>{t(`manifest.centered_sentences.text2.p2`)}</span>{t(`manifest.centered_sentences.text2.p3`)}<span>{t(`manifest.centered_sentences.text2.p4`)}</span>{t(`manifest.centered_sentences.text2.p5`)}</h2>
           </div>
