@@ -33,7 +33,9 @@
   --font-size-more-h4-xs: 0.95rem;
   --line-height-more-h4-xs: 1.35rem;
 
-  --font-size-body-md: 1.4rem;
+
+  --font-size-body-md: 1.2rem;
+  /* change from 1.4 */
   --line-height-body-md: 1.8rem;
   --font-size-h1-md: 3.6rem;
   --line-height-h1-md: 4rem;
@@ -44,7 +46,8 @@
   --font-size-more-h4-md: 1.35rem;
   --line-height-more-h4-md: 1.75rem;
 
-  --font-size-body-xl: 1.8rem;
+  --font-size-body-xl: 1.5rem;
+  /* change from 1.8 */
   --line-height-body-xl: 2.2rem;
   --font-size-h1-xl: 4rem;
   --line-height-h1-xl: 4.2rem;
@@ -108,7 +111,7 @@ body, .simple-paragraph, button p, p {
   font-size: var(--font-size-body-xs);
   line-height: var(--line-height-body-xs);
   letter-spacing: 0px;
-  color: var(--white) !important;
+  color: var(--white);
   /* color: var(--grey-tone-4); */
   font-weight: normal !important;
 }

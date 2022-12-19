@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { connect } from "react-redux";
 
 // MUI
-import { Box, useMediaQuery } from "@mui/material";
+import { Box, Drawer, useMediaQuery } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // Style
@@ -17,7 +17,7 @@ import { initCurrentPage, setCurrentPage } from "../../redux/ducks/currentPageDu
 import { initVisibilityNavbar, setVisibilityNavbar } from "../../redux/ducks/showNavbarTopDuck";
 
 
-import { addIcon, advantagesBeije, benefitsTeam, growthPaths, logo_written_dark, minusIcon, posterVideoCareer } from "../../utils/properties";
+import { addIcon, advantagesBeije, benefitsTeam, growthPaths, logo_written_dark, minusIcon, posterVideoCareer, xIcon } from "../../utils/properties";
 
 // Components
 import CustomButton from "../../components/functional_components/ui/customButton/CustomButton";
@@ -136,7 +136,6 @@ const Career = (props) => {
                     key={key}
                     className="career_single_paragraph"
                   >
-
                     <div className="career_single_paragraph_header" >
                       <div dangerouslySetInnerHTML={{ __html: t(`career.advantages.${item.title}`) }} />
                       {
@@ -148,8 +147,27 @@ const Career = (props) => {
                       }
                     </div>
                     {
-                      (!match_mobile || item.isOpen) &&
+                      (!match_mobile) &&
                       <div dangerouslySetInnerHTML={{ __html: t(`career.advantages.${item.paragraph}`) }} />
+                    }
+                    {
+                      (match_mobile && item.isOpen) &&
+                      <Drawer
+                        anchor={"bottom"}
+                        open={item.isOpen}
+                        onClose={handleParagraphAdvantages(key)}
+                      >
+
+                        <div
+                          className="career_single_paragraph_mobile_drawer"
+                        >
+                          <div dangerouslySetInnerHTML={{ __html: t(`career.advantages.${item.paragraph}`) }} />
+                          <CustomButton
+                            content={<FontAwesomeIcon icon={xIcon} />}
+                            callback={handleParagraphAdvantages(key)}
+                          />
+                        </div>
+                      </Drawer>
                     }
 
                   </div>
@@ -212,8 +230,27 @@ const Career = (props) => {
                       }
                     </div>
                     {
-                      (!match_mobile || item.isOpen) &&
+                      (!match_mobile) &&
                       <div dangerouslySetInnerHTML={{ __html: t(`career.benefits.${item.paragraph}`) }} />
+                    }
+                    {
+                      (match_mobile && item.isOpen) &&
+                      <Drawer
+                        anchor={"bottom"}
+                        open={item.isOpen}
+                        onClose={handleParagraphBenefits(key)}
+                      >
+
+                        <div
+                          className="career_single_paragraph_mobile_drawer"
+                        >
+                          <div dangerouslySetInnerHTML={{ __html: t(`career.benefits.${item.paragraph}`) }} />
+                          <CustomButton
+                            content={<FontAwesomeIcon icon={xIcon} />}
+                            callback={handleParagraphBenefits(key)}
+                          />
+                        </div>
+                      </Drawer>
                     }
 
                   </div>

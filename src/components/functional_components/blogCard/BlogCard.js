@@ -23,7 +23,7 @@ const BlogCard = (props) => {
   const navigate = useNavigate();
 
   const goToDetail = () => {
-    navigate(props.permalink);
+    navigate(`/blog/${props.permalink}`);
   }
 
   return (
