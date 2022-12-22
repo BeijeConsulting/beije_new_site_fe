@@ -4,6 +4,7 @@ import { useEffect } from "react";
 
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import logo_3d from "../../../assets/3d/logo-beije.glb";
 
 const Logo3d = () => {
@@ -18,8 +19,9 @@ const Logo3d = () => {
     (async () => {
       const containerRect = containerRef.current.getBoundingClientRect();
       const loader = new GLTFLoader();
+      const clock = new THREE.Clock();
       const scene = new THREE.Scene();
-      const camera = new THREE.PerspectiveCamera(50, containerRect.width / containerRect.height, 0.1, 1000);
+      const camera = new THREE.PerspectiveCamera(50, (containerRect.width - 100) / (containerRect.height - 100), 0.1, 1000);
       const renderer = new THREE.WebGLRenderer({ alpha: true });
       // const controls = new OrbitControls(camera, renderer.domElement);
 
@@ -55,10 +57,8 @@ const Logo3d = () => {
 
       modelLogo.rotation.x += 0.25;
       modelLogo.rotation.y -= 0.2;
-      // modelLogo.rotation.z += 0.1;
 
-      // modelLogo.scale(1, 1, 1)
-
+      modelLogo.scale.set(0.9, 0.9, 0.9)
 
       scene.add(modelLogo);
 
@@ -68,6 +68,11 @@ const Logo3d = () => {
 
       function animate() {
         requestAnimationFrame(animate);
+
+        // controls.update();
+
+        const time = clock.getElapsedTime();
+        modelLogo.position.y += (Math.cos(time) * 0.004);
 
         renderer.render(scene, camera);
       }

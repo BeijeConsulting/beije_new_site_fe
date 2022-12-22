@@ -22,13 +22,18 @@ import CustomLink from "../../components/functional_components/ui/customLink/Cus
 const Manifest = (props) => {
   const containerRef = useRef();
   const match1024 = useMediaQuery('(min-width:1024px)');
+  const match1200 = useMediaQuery('(min-width:1200px)');
   gsap.registerPlugin(ScrollTrigger);
   const { t } = useTranslation();
+
+  const logo3d = useRef();
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     props.dispatch(setCurrentPage("manifest"));
     props.dispatch(setVisibilityNavbar(true));
+
+    // let height_logo3d = 
 
     lettering(document.getElementById('text'), t(manifest_ball_sentence));
 
@@ -115,11 +120,31 @@ const Manifest = (props) => {
                 />
                 <div dangerouslySetInnerHTML={{ __html: t(`manifest.intro`) }} />
               </div>
-              <div className="manifest_logo_3d_container">
-                <Logo3d />
-              </div>
+              {
+                match1200 &&
+                <div className="manifest_logo_3d_container">
+                  <Logo3d
+                    ref={logo3d}
+                  />
+                </div>
+              }
             </div>
           </div>
+        </section>
+
+        {
+          !match1200 &&
+          <section>
+            <div className="manifest_logo_3d_container_mobile">
+              <Logo3d
+                ref={logo3d}
+              />
+            </div>
+          </section>
+        }
+
+
+        <section>
           <div className="paddingX-container-general-pages manifest_sentence_manifest" dangerouslySetInnerHTML={{ __html: t(`manifest.starting_sentence`) }} />
         </section>
 
@@ -145,13 +170,13 @@ const Manifest = (props) => {
               {t(`manifest.second_image_text.p1`)}
               <CustomLink
                 content={t(`manifest.second_image_text.link1`)}
-                linkTo={"/"}
+                linkTo={"/#tabValues"}
                 typeLink={"simple_link"}
               />
               {t(`manifest.second_image_text.p2`)}
               <CustomLink
                 content={t(`manifest.second_image_text.link2`)}
-                linkTo={"/"}
+                linkTo={"/#tabValues"}
                 typeLink={"simple_link"}
               />.
             </h2>

@@ -541,6 +541,9 @@
     "description": "<p>Il nostro è un sistema <b>People First</b>, questo significa creare un luogo di lavoro in cui le persone si sentono appagate e percepiscono una reale <b>crescita professionale</b></p>",
     "messageJob": "Al momento non ci sono posizioni aperte, ma ti consigliamo di tenere d'occhio la pagina.",
     "messageAcademy": "Al momento non ci sono posizioni aperte, ma ti consigliamo di tenere d'occhio la pagina.",
+    "open_position_btn": "Posizioni aperte",
+    "manifest_btn": "Beije Manifesto",
+    "show_more_btn": "Scopri",
     "modeOffert": {
       "remote": "Remoto",
       "hybrid": "Ibrido",
@@ -594,11 +597,11 @@
         "text": "<p>Poniamo le basi per una <b>crescita professionale</b> a <b>360 gradi</b>: almeno <b>due volte all’anno</b> organizziamo <b>eventi di formazione</b> tenuti dai nostri esperti Beije e da professionisti del settore; pianifichiamo anche <b>webinar</b> interni online per aggiornare la Community sulle <b>ultime tecnologie</b> e le <b>innovazioni più interessanti</b> del <b>mercato</b>.</p>"
       }
     },
-    "video_text": " <h2><span>Lavorare con noi è bello?</span><br /> Ce lo racconta la nostra <span class='hightlight-txt'>Community</span></h2>"
+    "video_text": " <h2><span>Lavorare con noi è bello?</span><br /> Ce lo racconta la nostra <span class='hightlight-txt'>Community!</span></h2>"
   },
   "manifest": {
     "intro": "<h1><span>Manifesto</span></h1><p>Siamo nati con una grande ambizione: <b>mettere le persone al centro.</b></p>",
-    "starting_sentence": "<h2>Oggi, dopo più di 10 anni e con una Community di oltre 100 dipendenti siamo un sistema People First.</h2>",
+    "starting_sentence": "<h2>Oggi, dopo più di 10 anni e con una Community di oltre 100 dipendenti siamo un <span class='hightlight-txt'><b>sistema People First</b></span>.</h2>",
     "image_text": " <h2><b>People First è l’<span><b>innovazione</b></span> che parte da te</b></h2><h2>People First è la <span><b>passione</b></span> che abbiamo per la <span><b>conoscenza</b></span> e l’<span><b>aggiornamento</b></span> costante</h2>",
     "animated_ball_container": {
       "ball_sentence": "People first è Team, è Connessione, è Community.",
@@ -646,7 +649,7 @@
       },
       "paragraph5": {
         "title": "Team",
-        "text": "<p>Il nostro è un lavoro di Team, per noi “<b>teamwork is dreamwork</b>”.</p>"
+        "text": "<p>Il nostro è un lavoro di Team, per noi <br/>“<b>teamwork is dreamwork</b>”.</p>"
       }
     }
   },

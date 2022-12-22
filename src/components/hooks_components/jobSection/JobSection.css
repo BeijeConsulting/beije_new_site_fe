@@ -114,12 +114,21 @@
   .jobSection_button_container button {
     background-color: #fff;
     width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .jobSection_button_container button:hover {
+    background-color: #fff;
   }
 
 
   .jobSection_button_container button p {
     color: #323E48;
-    /* font-size: 30px; */
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
   }
 
 }

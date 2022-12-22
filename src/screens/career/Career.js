@@ -103,12 +103,12 @@ const Career = (props) => {
             <div className="career_container_starting_buttons">
               <CustomButton
                 type="career_btn"
-                content={"POSIZIONI APERTE"}
+                content={t("career.open_position_btn")}
                 callback={goToListJobs}
               />
               <CustomButton
                 type="career_btn"
-                content={"BEIJE MANIFESTO"}
+                content={t("career.manifest_btn")}
                 callback={goToManifest}
               />
             </div>

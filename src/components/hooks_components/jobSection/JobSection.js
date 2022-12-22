@@ -109,7 +109,7 @@ const JobSection = (props) => {
                   <div className="jobSection_button_container">
                     <CustomButton
                       type="career_btn"
-                      content={"MORE"}
+                      content={t(`career.show_more_btn`)}
                       callback={sendToPage(item.type, item.id)}
                     />
                   </div>
