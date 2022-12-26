@@ -30,23 +30,12 @@ const CustomNavbar = (props) => {
           <NavLink
             to="beije-consulting"
           >
-            Beije Consulting
+            Consulting
             {
               props.currentPageDuck.currentPage === "consulting" &&
               <div className="navbarTop-hightlight navbarTop-hightlight-consulting"></div>
             }
           </NavLink>
-
-          <NavLink
-            to="beije-up"
-          >
-            Beije Up
-            {
-              props.currentPageDuck.currentPage === "up" &&
-              <div className="navbarTop-hightlight navbarTop-hightlight-up"></div>
-            }
-          </NavLink>
-
 
           <NavLink
             to="beije-talent-academy"
@@ -55,6 +44,16 @@ const CustomNavbar = (props) => {
             {
               props.currentPageDuck.currentPage === "academy" &&
               <div className="navbarTop-hightlight navbarTop-hightlight-academy"></div>
+            }
+          </NavLink>
+
+          <NavLink
+            to="beije-up"
+          >
+            Up
+            {
+              props.currentPageDuck.currentPage === "up" &&
+              <div className="navbarTop-hightlight navbarTop-hightlight-up"></div>
             }
           </NavLink>
 

@@ -58,7 +58,7 @@ const Logo3d = () => {
       modelLogo.rotation.x += 0.25;
       modelLogo.rotation.y -= 0.2;
 
-      modelLogo.scale.set(0.9, 0.9, 0.9)
+      modelLogo.scale.set(0.8, 0.8, 0.8)
 
       scene.add(modelLogo);
 

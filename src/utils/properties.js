@@ -845,6 +845,11 @@ export const benefitsTeam = [
     title: "paragraph3.title",
     paragraph: "paragraph3.text",
     isOpen: false
+  },
+  {
+    title: "paragraph4.title",
+    paragraph: "paragraph4.text",
+    isOpen: false
   }
 ]
 

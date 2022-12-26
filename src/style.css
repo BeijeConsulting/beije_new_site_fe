@@ -24,30 +24,40 @@
 
   --font-size-body-xs: 1rem;
   --line-height-body-xs: 1.8rem;
-  --font-size-h1-xs: 3.2rem;
-  --line-height-h1-xs: 3.6rem;
-  --font-size-h2-xs: 2.4rem;
-  --line-height-h2-xs: 2.8rem;
-  --font-size-h3-xs: 1.6rem;
-  --line-height-h3-xs: 2rem;
-  --font-size-more-h4-xs: 0.95rem;
-  --line-height-more-h4-xs: 1.35rem;
+  --font-size-h1-xs: 1.5rem;
+  --line-height-h1-xs: 1.9rem;
+  --font-size-h2-xs: 1.3rem;
+  --line-height-h2-xs: 1.7rem;
+  --font-size-h3-xs: 1.1rem;
+  --line-height-h3-xs: 1.5rem;
+  --font-size-more-h4-xs: 1rem;
+  --line-height-more-h4-xs: 1.8rem;
 
 
   --font-size-body-md: 1.2rem;
-  /* change from 1.4 */
   --line-height-body-md: 1.8rem;
-  --font-size-h1-md: 3.6rem;
-  --line-height-h1-md: 4rem;
-  --font-size-h2-md: 2.8rem;
-  --line-height-h2-md: 3.2rem;
+  --font-size-h1-md: 2.8rem;
+  --line-height-h1-md: 3.2rem;
+  --font-size-h2-md: 2.4rem;
+  --line-height-h2-md: 2.8rem;
   --font-size-h3-md: 2rem;
   --line-height-h3-md: 2.4rem;
   --font-size-more-h4-md: 1.35rem;
   --line-height-more-h4-md: 1.75rem;
 
-  --font-size-body-xl: 1.5rem;
-  /* change from 1.8 */
+  --font-size-body-xl: 1.2rem;
+  /* change from 1.4 */
+  --line-height-body-xl: 1.8rem;
+  --font-size-h1-xl: 3rem;
+  --line-height-h1-xl: 3.4rem;
+  --font-size-h2-xl: 2.8rem;
+  --line-height-h2-xl: 3.2rem;
+  --font-size-h3-xl: 2rem;
+  --line-height-h3-xl: 2.4rem;
+  --font-size-more-h4-xl: 1.35rem;
+  --line-height-more-h4-xl: 1.75rem;
+
+  /* --font-size-body-xl: 1.5rem;
   --line-height-body-xl: 2.2rem;
   --font-size-h1-xl: 4rem;
   --line-height-h1-xl: 4.2rem;
@@ -56,7 +66,7 @@
   --font-size-h3-xl: 2.4rem;
   --line-height-h3-xl: 2.6rem;
   --font-size-more-h4-xl: 1.75rem;
-  --line-height-more-h4-xl: 2.15rem;
+  --line-height-more-h4-xl: 2.15rem; */
 
   --header-height-xs: 72px;
   /*xs - 320px*/

@@ -92,7 +92,7 @@ const Up = (props) => {
             classNameBgImgDesktop="intro-section-img-up"
             classNameBgImgMobile="intro-section-img-up"
             bgIconDownload="download-btn-icon-up"
-            sectionName="Beije Up"
+            sectionName="Up"
             sectionTitle={t("up.title")}
             photoTitle="UP"
             callback={scrollToSection}

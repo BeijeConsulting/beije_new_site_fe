@@ -563,11 +563,11 @@
       "title": "<h2>The advantages of the Community <span class='hightlight-txt'>Beije</span></h2>",
       "paragraph1": {
         "title": "<h3 class='hightlight-txt carrer_paragraph_title'>Smartworking</h3>",
-        "text": "<p >At Beije we are big fans of smartworking, our motto is “<b>no matter where but how</b>”, however, we believe that the value of the meeting should be cultivated: our offices are always open to work side by side with the <b>Community</b> and depending on the client/project we are on the office becomes a strategic place of <b>teamwork</b>.</p>"
+        "text": "<p >At Beije we are big fans of smartworking, our motto is “<b>no matter where but how</b>”, however, we believe that the value of the meeting should be cultivated: our offices are always open to work side by side with the <b>Community</b> and the office becomes a strategic place of <b>teamwork</b>.</p>"
       },
       "paragraph2": {
         "title": "<h3 class='hightlight-txt carrer_paragraph_title'>Beije events</h3>",
-        "text": "<p >Being part of the <b>Community</b> also means building a <b>relationship</b> first and foremost <b>between people</b>: <b>twice a year</b> we all get together for a <b>Beije-style party</b>!</p>"
+        "text": "<p >We are a Community, we believe in the value of <b>coming together</b> and that <b>achievements</b> should be celebrated: <b>twice a year</b> we all get together for a <b>Beije</b>-style <b>party</b>!</p>"
       },
       "paragraph3": {
         "title": "<h3 class='hightlight-txt carrer_paragraph_title'>Afterwork meetings</h3>",
@@ -600,6 +600,10 @@
         "text": "<p>Breaking down professional and personal boundaries and believing in the importance of measuring oneself in <b>international contexts</b>, we provide an online <b>language learning</b> tool to <b>learn</b> foreign languages <b>for free</b>.</p"
       },
       "paragraph3": {
+        "title": "<h3 class='hightlight-txt carrer_paragraph_title'>Welfare</h3>",
+        "text": "<p >We take care of our People through a <b>welfare plan</b> to improve <b>well-being</b> and <b>worklife balance</b>.</p>"
+      },
+      "paragraph4": {
         "title": "<h3 class='hightlight-txt carrer_paragraph_title'>Webinar and events</h3>",
         "text": "<p>We lay the foundations for <b>all-round professional development</b>: at least <b>twice a year</b> we organise <b>training events</b> held by our Beije experts and industry professionals; we also plan in-house online <b>webinars</b> to update the Community on the <b>latest technologies</b> and the most <b>interesting innovations</b> in the <b>market</b>.</p"
       }
@@ -615,7 +619,7 @@
       "box_sentence": " <p class='h2'>People First is the <b>respect</b> that we have for your <b>wellbeing</b>, the  <b>answer</b> we give to your <b>questions</b>.</p>"
     },
     "second_image_text": {
-      "p1": "People First is our headquarter, strategic centre where we integrate ",
+      "p1": "People First is the strategic centre where we integrate ",
       "link1": "our vision ",
       "p2": " with ",
       "link2": "our mission"

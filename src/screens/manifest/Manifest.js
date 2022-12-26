@@ -3,6 +3,7 @@ import { Box, useMediaQuery } from "@mui/material";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import "./Manifest.css";
+import { useParams } from "react-router-dom";
 
 //import gsap
 import { gsap } from 'gsap'
@@ -21,12 +22,13 @@ import CustomLink from "../../components/functional_components/ui/customLink/Cus
 
 const Manifest = (props) => {
   const containerRef = useRef();
+  const logo3d = useRef();
+
   const match1024 = useMediaQuery('(min-width:1024px)');
   const match1200 = useMediaQuery('(min-width:1200px)');
   gsap.registerPlugin(ScrollTrigger);
   const { t } = useTranslation();
-
-  const logo3d = useRef();
+  const { lang } = useParams();
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -60,7 +62,7 @@ const Manifest = (props) => {
       }
     })
 
-    t1_ball.to(manifest_internal_ball, 1, { width: match1024 ? 200 : 150, height: match1024 ? 200 : 150 }).to(manifest_text_ball_gsap, 1, { opacity: 1 }).to(manifest_ball_container_gsap, 1, { width: match1024 ? "50%" : "100%" }).to(manifest_square_container_gsap, 1, { display: "flex", opacity: 1 })
+    t1_ball.to(manifest_internal_ball, 1, { width: match1024 ? 200 : 150, height: match1024 ? 200 : 150, duration: 0.3 }).to(manifest_text_ball_gsap, 1, { opacity: 1 }).to(manifest_ball_container_gsap, 1, { width: match1024 ? "50%" : "100%" }).to(manifest_square_container_gsap, 1, { display: "flex", opacity: 1 })
 
     const t2_list_values = gsap.timeline({
       scrollTrigger: {
@@ -122,10 +124,8 @@ const Manifest = (props) => {
               </div>
               {
                 match1200 &&
-                <div className="manifest_logo_3d_container">
-                  <Logo3d
-                    ref={logo3d}
-                  />
+                <div className="manifest_logo_3d_container" ref={logo3d}>
+                  <Logo3d />
                 </div>
               }
             </div>
@@ -135,10 +135,8 @@ const Manifest = (props) => {
         {
           !match1200 &&
           <section>
-            <div className="manifest_logo_3d_container_mobile">
-              <Logo3d
-                ref={logo3d}
-              />
+            <div className="manifest_logo_3d_container_mobile" ref={logo3d}>
+              <Logo3d />
             </div>
           </section>
         }
@@ -170,15 +168,15 @@ const Manifest = (props) => {
               {t(`manifest.second_image_text.p1`)}
               <CustomLink
                 content={t(`manifest.second_image_text.link1`)}
-                linkTo={"/#tabValues"}
+                linkTo={`/${lang}/#tabValues`}
                 typeLink={"simple_link"}
               />
               {t(`manifest.second_image_text.p2`)}
               <CustomLink
                 content={t(`manifest.second_image_text.link2`)}
-                linkTo={"/#tabValues"}
+                linkTo={`/${lang}/#tabValues`}
                 typeLink={"simple_link"}
-              />.
+              />
             </h2>
           </div>
         </section>

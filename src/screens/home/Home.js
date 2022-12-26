@@ -49,8 +49,7 @@ const Home = (props) => {
 
   useEffect(() => {
     if (window.location.hash === '#tabValues') {
-      console.log("sono qui ", window.location.hash);
-      window.scrollTo({ top: tabValues.current.offsetTop, left: 0, behavior: "smooth" })
+      window.scrollTo({ top: refDarkContainer.current.offsetTop, left: 0, behavior: "smooth" })
     }
     else {
       window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
