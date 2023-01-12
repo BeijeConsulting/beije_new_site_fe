@@ -528,7 +528,7 @@ export const carouselProfile = [
     pictureClassName: "carousel-bg-ivo-mosca",
   },
   {
-    id: 3,
+    id: 9,
     name: 'Samantha',
     surname: 'Mineman',
     role: 'Technical Leader',
@@ -537,7 +537,7 @@ export const carouselProfile = [
     pictureClassName: "carousel-bg-samantha-mineman",
   },
   {
-    id: 9,
+    id: 10,
     name: 'Roberto',
     surname: 'Brogi',
     role: 'CTO & Academy Trainer',
@@ -546,7 +546,7 @@ export const carouselProfile = [
     pictureClassName: "carousel-bg-roberto-brogi",
   },
   {
-    id: 10,
+    id: 11,
     name: 'Marianna',
     surname: 'Fulginiti',
     role: 'Account Manager',
@@ -555,7 +555,7 @@ export const carouselProfile = [
     pictureClassName: "carousel-bg-marianna-fulginiti",
   },
   {
-    id: 11,
+    id: 12,
     name: 'Erica',
     surname: 'Mauro',
     role: 'Sales manager',
