@@ -139,7 +139,7 @@ const HomeLayout = (props) => {
           type="video/mp4"
         // poster="../../"
         >
-          <source src={state.isLittleMobile ? "https://beije-people-first.s3.eu-south-1.amazonaws.com/site/video_home_mobile.mp4" : "https://beije-people-first.s3.eu-south-1.amazonaws.com/site/video_home.mp4"} type="video/mp4" />
+          <source src={state.isLittleMobile ? "https://beije-people-first.s3.eu-south-1.amazonaws.com/site/video_home_mobile2.mp4" : "https://beije-people-first.s3.eu-south-1.amazonaws.com/site/video_home2.mp4"} type="video/mp4" />
         </video>
       }
 

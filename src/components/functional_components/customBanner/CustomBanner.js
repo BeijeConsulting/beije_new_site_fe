@@ -36,7 +36,7 @@ const CustomBanner = (props) => {
             style={{ visibility: "visible" }}
           >
             <source
-              src="https://beije-people-first.s3.eu-south-1.amazonaws.com/site/academy_video.mp4"
+              src="https://beije-people-first.s3.eu-south-1.amazonaws.com/site/academy_video2.mp4"
               type="video/mp4" />
 
           </video>

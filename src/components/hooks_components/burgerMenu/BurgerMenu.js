@@ -84,6 +84,9 @@ const BurgerMenu = (props) => {
       case "consulting":
         className = "burgerMenu-nav-container burgerMenu-nav-container-img burgerMenu-consulting"
         break
+      case "manifest":
+        className = "burgerMenu-nav-container burgerMenu-nav-container-img burgerMenu-manifest"
+        break
       case "academy":
         className = "burgerMenu-nav-container burgerMenu-nav-container-img burgerMenu-academy"
         break
