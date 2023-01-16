@@ -425,17 +425,17 @@ export const tab_aboutUs = [
       },
       {
         spanContent: "home.tab.values.content.part4",
-        classNameSpan: "reduce-on-hover",
-        addHtml: ""
-      },
-      {
-        spanContent: "home.tab.values.content.part5",
         classNameSpan: "hightlight-txt-white",
         addHtml: ""
       },
       {
-        spanContent: "home.tab.values.content.part6",
+        spanContent: "home.tab.values.content.part5",
         classNameSpan: "reduce-on-hover",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.values.content.part6",
+        classNameSpan: "hightlight-txt-white",
         addHtml: ""
       },
       {
@@ -456,6 +456,81 @@ export const tab_aboutUs = [
       {
         spanContent: "home.tab.values.content.part10",
         classNameSpan: "hightlight-txt-white",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.values.content.part11",
+        classNameSpan: "reduce-on-hover",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.values.content.part12",
+        classNameSpan: "hightlight-txt-white",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.values.content.part13",
+        classNameSpan: "reduce-on-hover",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.values.content.part14",
+        classNameSpan: "hightlight-txt-white",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.values.content.part15",
+        classNameSpan: "reduce-on-hover",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.values.content.part16",
+        classNameSpan: "hightlight-txt-white",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.values.content.part17",
+        classNameSpan: "reduce-on-hover",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.values.content.part18",
+        classNameSpan: "hightlight-txt-white",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.values.content.part19",
+        classNameSpan: "reduce-on-hover",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.values.content.part20",
+        classNameSpan: "hightlight-txt-white",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.values.content.part21",
+        classNameSpan: "reduce-on-hover",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.values.content.part22",
+        classNameSpan: "hightlight-txt-white",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.values.content.part23",
+        classNameSpan: "reduce-on-hover",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.values.content.part24",
+        classNameSpan: "hightlight-txt-white",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.values.content.part25",
+        classNameSpan: "reduce-on-hover",
         addHtml: ""
       }
     ]

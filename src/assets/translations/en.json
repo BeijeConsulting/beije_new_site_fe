@@ -205,18 +205,33 @@
         }
       },
       "values": {
-        "title": "Values",
+        "title": "Valori",
         "content": {
           "part1": "We believe in what we do and have a deep ",
           "part2": "RESPECT ",
-          "part3": "for the others",
-          "part4": ".We show ",
-          "part5": "GRATITUDE ",
-          "part6": "for the commitment we put into our work every day",
-          "part7": ". First comes the team and then the individual, ours is a ",
-          "part8": "TEAM ",
-          "part9": "work The basis for building our Community is developing a ",
-          "part10": "SENSE OF BELONGING."
+          "part3": "for the ",
+          "part4": "listening",
+          "part5": ", ",
+          "part6": "ideas ",
+          "part7": "and thoughts of all of us. We believe in mutual ",
+          "part8": "ACKNOWLEDGEMENT",
+          "part9": ": we celebrate the ",
+          "part10": "successes ",
+          "part11": "achieved by the effort we put into our work every day. We believe in your ",
+          "part12": "PASSION",
+          "part13": ": the best way to be satisfied is to ",
+          "part14": "love what you are doing",
+          "part15": ". First comes the ",
+          "part16": "team ",
+          "part17": "and then the individual, ours is a ",
+          "part18": "TEAM ",
+          "part19": "effort.  The basis for building our ",
+          "part20": "Community ",
+          "part21": "is to develop a ",
+          "part22": "CONNECTION ",
+          "part23": "between skills, ideas and ",
+          "part24": "values",
+          "part25": "."
         }
       }
     },
