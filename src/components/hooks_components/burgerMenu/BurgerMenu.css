@@ -301,6 +301,7 @@
     background-image: var(--webkit-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/talentAcademy/talentAcademy_burger_mobile.jpg");
     background-image: var(--o-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/talentAcademy/talentAcademy_burger_mobile.jpg");
     background-image: var(--photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/talentAcademy/talentAcademy_burger_mobile.jpg");
+    background-position: top;
   }
 
   .burgerMenu-up {
@@ -357,6 +358,7 @@
       background-image: var(--webkit-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/talentAcademy/talentAcademy_burger_tablet.jpg");
       background-image: var(--o-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/talentAcademy/talentAcademy_burger_tablet.jpg");
       background-image: var(--photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/talentAcademy/talentAcademy_burger_tablet.jpg");
+      background-position: top;
     }
 
     .burgerMenu-up {
@@ -414,6 +416,7 @@
       background-image: var(--webkit-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/talentAcademy/talentAcademy_burger_desktop.jpg");
       background-image: var(--o-photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/talentAcademy/talentAcademy_burger_desktop.jpg");
       background-image: var(--photos-filter), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/burgerMenu/talentAcademy/talentAcademy_burger_desktop.jpg");
+      background-position: top;
     }
 
     .burgerMenu-up {
