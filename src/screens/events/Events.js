@@ -98,6 +98,7 @@ const Events = (props) => {
                       description={event.description}
                       postedby={event.author}
                       posted={millisecsToDate(event.create_datetime, props.languageDuck.currentLanguage)}
+                      events
                     />
                   </div>
                 )
