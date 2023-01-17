@@ -20,7 +20,7 @@ import beije_short_written_dark from "../assets/images/logo_only_written_short_d
 // Link
 const linkFb = "https://www.facebook.com/beijepeoplefirst";
 const linkIn = "https://www.linkedin.com/company/beije";
-const linkYt = "https://www.youtube.com/channel/UCGZdqNE152QBvg9WZ4E65Iw";
+const linkYt = "https://www.youtube.com/watch?v=gLG3aKUsYas";
 const linkIg = "https://www.instagram.com/beijepeoplefirst/"
 
 // Captcha
@@ -927,8 +927,6 @@ export const benefitsTeam = [
     isOpen: false
   }
 ]
-
-export const manifest_ball_sentence = "manifest.animated_ball_container.ball_sentence";
 
 export const manifest_values = [
   {

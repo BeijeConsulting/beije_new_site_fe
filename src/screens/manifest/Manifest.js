@@ -9,7 +9,7 @@ import { useParams } from "react-router-dom";
 import { gsap } from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import { logo_written_white, manifest_ball_sentence, manifest_values } from "../../utils/properties";
+import { logo_written_white, manifest_values } from "../../utils/properties";
 
 // Redux
 import { initCurrentPage, setCurrentPage } from "../../redux/ducks/currentPageDuck";
@@ -34,10 +34,6 @@ const Manifest = (props) => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     props.dispatch(setCurrentPage("manifest"));
     props.dispatch(setVisibilityNavbar(true));
-
-    // let height_logo3d = 
-
-    lettering(document.getElementById('text'), t(manifest_ball_sentence));
 
     // Gsap
     const element = containerRef.current;
@@ -81,6 +77,11 @@ const Manifest = (props) => {
       props.dispatch(initVisibilityNavbar());
     };
   }, [match1024])
+
+
+  useEffect(() => {
+    lettering(document.getElementById('text'), t(`manifest.animated_ball_container.ball_sentence`));
+  }, [lang, match1024])
 
   const lettering = (node, text) => {
     let str = typeof text == 'undefined'
