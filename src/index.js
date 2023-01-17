@@ -46,7 +46,7 @@ function Root() {
       <BrowserRouter>
         <App />
         <CookieConsent
-          buttonText={<span className='simple-paragraph'>{t("btn.accept")}</span>}
+          buttonText={<span className='simple-paragraph' style={{ color: "#262E36" }}>{t("btn.accept")}</span>}
         >
           🍪 {t("cookiePolicies.message.part1")}
 
