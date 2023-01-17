@@ -19,6 +19,7 @@ import CaseStudiesDetail from "./screens/up/CaseStudiesDetail";
 import ErrorPage from "./screens/ErrorPage";
 import Events from "./screens/events/Events";
 import EventsDetail from "./screens/events/EventsDetail";
+import Manifest from "./screens/manifest/Manifest";
 
 export default [
   {
@@ -73,6 +74,10 @@ export default [
       {
         path: "career/career-detail",
         element: <RequireCareerPermalink><CareerDetail /></RequireCareerPermalink>
+      },
+      {
+        path: "manifest",
+        element: <Manifest />
       },
       {
         path: "community",

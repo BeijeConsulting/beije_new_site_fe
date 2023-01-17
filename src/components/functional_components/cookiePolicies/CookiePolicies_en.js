@@ -6,8 +6,7 @@ import "./CookiePolicies.css"
 const CookiePolicies_en = () => {
   return (
     <div
-      className="cookie-policies-container"
-    >
+      className="cookie-policies-container">
       <p ><strong><span >Cookie Policy</span></strong></p>
       <p ><span >Dear Data Subject,&nbsp;</span></p>
       <p ><span >Italian law requires website operators, in certain cases, to inform users about cookies and other tracking methods that may be used to record certain data each time users access a website. Since our website also uses such tools, we hereby disclose the procedures we use to collect this information.</span></p>

@@ -5,7 +5,7 @@ import { Trans } from 'react-i18next'
 const LegalNotes = () => {
   const { t } = useTranslation();
   return (
-    <div>
+    <div style={{ color: "#262E36" }}>
       <Trans
         i18nKey={"legalNotes.txt"}
       >
@@ -16,7 +16,7 @@ const LegalNotes = () => {
         </span>
         <a href="https://beije.it/" target={"_blank"} rel="noreferrer">https://beije.it</a>
         <span>
-        &nbsp;sono di proprietà di People First S.r.l., Viale
+          &nbsp;sono di proprietà di People First S.r.l., Viale
           Giulio Cesare n. 71, 00192 - Roma, Partita IVA e C.F.:16334941008, a cui è stata formalmente
           ottenuta l’assegnazione del nome a dominio internet, secondo le metodologie e procedure vigenti al
           momento della richiesta di assegnazione.

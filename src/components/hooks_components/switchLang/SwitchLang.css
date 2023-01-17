@@ -1,9 +1,9 @@
 .switch-language-span {
-  font-family: var(--moderat-regular);
+  font-family: var(--ginra-regular);
   text-transform: uppercase;
   cursor: pointer;
 }
 
 .switch-language-span-selected {
-  font-family: var(--moderat-bold);
+  font-family: var(--ginra-bold);
 }

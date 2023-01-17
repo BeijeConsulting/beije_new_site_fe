@@ -33,6 +33,7 @@ import Loading from "../../components/functional_components/loading/Loading";
 const Home = (props) => {
   const { t } = useTranslation();
   const refDarkContainer = useRef();
+  const tabValues = useRef();
 
   const [state, setState] = useState({
     loadingEnd: false
@@ -47,7 +48,12 @@ const Home = (props) => {
   }, [state.loadingEnd])
 
   useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    if (window.location.hash === '#tabValues') {
+      window.scrollTo({ top: refDarkContainer.current.offsetTop, left: 0, behavior: "smooth" })
+    }
+    else {
+      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    }
     window.addEventListener("scroll", handleScroll);
     props.dispatch(setCurrentPage(""));
     props.dispatch(setVisibilityNavbar(false));
@@ -205,7 +211,7 @@ const Home = (props) => {
             maxWidth={"false"}
             className={"home-third-section-container paddingX-container-default"}
           >
-            <Box className={"home-third-section-tab-container d-flex"}>
+            <Box className={"home-third-section-tab-container d-flex"} ref={tabValues}>
               <CustomTab
                 obj={tab_aboutUs}
               />

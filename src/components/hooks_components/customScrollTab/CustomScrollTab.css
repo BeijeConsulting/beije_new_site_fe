@@ -86,6 +86,10 @@
   width: 85%;
 }
 
+.scroll-tab-panels-container p {
+  color: var(--dark-grey);
+}
+
 .scroll-tab-content-quotation-marks img {
   width: 100%;
 }

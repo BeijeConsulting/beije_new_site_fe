@@ -11,12 +11,16 @@ import logo_youthquake from "../assets/images/up/caseStudies/youthquake.jpg";
 import empty_academy from "../assets/icons/empty_academy.svg"
 import empty_job from "../assets/icons/empty_job.svg"
 import posterVideo from '../assets/images/posterVideoAcademy.jpg'
-import icon_profile from "../assets/icons/iconProfile.png"
+import icon_profile from "../assets/icons/iconProfile.png";
+import careerVideoPoster from "../assets/images/career/career4.jpg";
+// import beije_short_written_dark from "/beije_written_short_dark.png";
+import beije_short_written_white from "../assets/images/logo_only_written_short_white.svg";
+import beije_short_written_dark from "../assets/images/logo_only_written_short_dark.svg";
 
 // Link
 const linkFb = "https://www.facebook.com/beijepeoplefirst";
 const linkIn = "https://www.linkedin.com/company/beije";
-const linkYt = "https://www.youtube.com/channel/UCGZdqNE152QBvg9WZ4E65Iw";
+const linkYt = "https://www.youtube.com/watch?v=gLG3aKUsYas";
 const linkIg = "https://www.instagram.com/beijepeoplefirst/"
 
 // Captcha
@@ -54,6 +58,9 @@ export const logo_primary_light = "https://beije-people-first.s3.eu-south-1.amaz
 export const logo_secondary_light = "https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/logos/logo_short_white.svg";
 export const logo_secondary_grey = "https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/logos/logo_short_grey.svg";
 export const logo_secondary_transparent = "https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/logos/logo_short_transparent.svg";
+export const logo_written_white = beije_short_written_white;
+export const logo_written_dark = beije_short_written_dark;
+
 
 export const defaultIcon = faN;
 export const downArrow = faArrowDownLong;
@@ -76,6 +83,8 @@ export const profile = icon_profile;
 export const linkYoutube = linkYt;
 export const posterVideoAcademy = posterVideo;
 
+export const posterVideoCareer = careerVideoPoster;
+
 // Menu voices
 export const menu_voices = [
   {
@@ -97,6 +106,11 @@ export const menu_voices = [
     name: "career",
     link_to: "/career",
     key_link: "career"
+  },
+  {
+    name: "manifest",
+    link_to: "/manifest",
+    key_link: "manifest"
   },
   {
     name: "blog",
@@ -411,17 +425,17 @@ export const tab_aboutUs = [
       },
       {
         spanContent: "home.tab.values.content.part4",
-        classNameSpan: "reduce-on-hover",
-        addHtml: ""
-      },
-      {
-        spanContent: "home.tab.values.content.part5",
         classNameSpan: "hightlight-txt-white",
         addHtml: ""
       },
       {
-        spanContent: "home.tab.values.content.part6",
+        spanContent: "home.tab.values.content.part5",
         classNameSpan: "reduce-on-hover",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.values.content.part6",
+        classNameSpan: "hightlight-txt-white",
         addHtml: ""
       },
       {
@@ -442,6 +456,81 @@ export const tab_aboutUs = [
       {
         spanContent: "home.tab.values.content.part10",
         classNameSpan: "hightlight-txt-white",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.values.content.part11",
+        classNameSpan: "reduce-on-hover",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.values.content.part12",
+        classNameSpan: "hightlight-txt-white",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.values.content.part13",
+        classNameSpan: "reduce-on-hover",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.values.content.part14",
+        classNameSpan: "hightlight-txt-white",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.values.content.part15",
+        classNameSpan: "reduce-on-hover",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.values.content.part16",
+        classNameSpan: "hightlight-txt-white",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.values.content.part17",
+        classNameSpan: "reduce-on-hover",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.values.content.part18",
+        classNameSpan: "hightlight-txt-white",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.values.content.part19",
+        classNameSpan: "reduce-on-hover",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.values.content.part20",
+        classNameSpan: "hightlight-txt-white",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.values.content.part21",
+        classNameSpan: "reduce-on-hover",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.values.content.part22",
+        classNameSpan: "hightlight-txt-white",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.values.content.part23",
+        classNameSpan: "reduce-on-hover",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.values.content.part24",
+        classNameSpan: "hightlight-txt-white",
+        addHtml: ""
+      },
+      {
+        spanContent: "home.tab.values.content.part25",
+        classNameSpan: "reduce-on-hover",
         addHtml: ""
       }
     ]
@@ -469,19 +558,10 @@ export const carouselProfile = [
     pictureClassName: "carousel-bg-giorgia-marletta",
   },
   {
-    id: 3,
-    name: 'Chiara',
-    surname: 'Balsamini',
-    role: 'Talent Consultant',
-    description: "home.fifthSection.carouselProfile.chiara_balsamini.desc",
-    alt: 'ChiaraBalsamini',
-    pictureClassName: "carousel-bg-chiara-balsamini",
-  },
-  {
     id: 4,
     name: 'Maria',
     surname: 'Amigo Rodrigez',
-    role: 'Junior IT Recruiter',
+    role: 'Academy Coordinator',
     description: 'home.fifthSection.carouselProfile.maria_rodrigez.desc',
     alt: 'MariaAmigoRodrigez',
     pictureClassName: "carousel-bg-maria-rodrigez",
@@ -524,6 +604,15 @@ export const carouselProfile = [
   },
   {
     id: 9,
+    name: 'Samantha',
+    surname: 'Mineman',
+    role: 'Technical Leader',
+    description: "home.fifthSection.carouselProfile.samantha_mineman.desc",
+    alt: 'SamanthaMineman',
+    pictureClassName: "carousel-bg-samantha-mineman",
+  },
+  {
+    id: 10,
     name: 'Roberto',
     surname: 'Brogi',
     role: 'CTO & Academy Trainer',
@@ -532,7 +621,7 @@ export const carouselProfile = [
     pictureClassName: "carousel-bg-roberto-brogi",
   },
   {
-    id: 10,
+    id: 11,
     name: 'Marianna',
     surname: 'Fulginiti',
     role: 'Account Manager',
@@ -541,7 +630,7 @@ export const carouselProfile = [
     pictureClassName: "carousel-bg-marianna-fulginiti",
   },
   {
-    id: 11,
+    id: 12,
     name: 'Erica',
     surname: 'Mauro',
     role: 'Sales manager',
@@ -779,5 +868,85 @@ export const programBackendAcademy = [
         { p: 'academyBackend.program.section4.subsection9' },
         { p: 'academyBackend.program.section4.subsection10' }
       ]
+  }
+]
+
+export const advantagesBeije = [
+  {
+    title: "paragraph1.title",
+    paragraph: "paragraph1.text",
+    isOpen: false
+  },
+  {
+    title: "paragraph2.title",
+    paragraph: "paragraph2.text",
+    isOpen: false
+  },
+  {
+    title: "paragraph3.title",
+    paragraph: "paragraph3.text",
+    isOpen: false
+  },
+  {
+    title: "paragraph4.title",
+    paragraph: "paragraph4.text",
+    isOpen: false
+  }
+];
+
+export const growthPaths = [
+  {
+    title: "paragraph1.title",
+    description: "paragraph1.text"
+  },
+  {
+    title: "paragraph2.title",
+    description: "paragraph2.text"
+  }
+]
+
+export const benefitsTeam = [
+  {
+    title: "paragraph1.title",
+    paragraph: "paragraph1.text",
+    isOpen: false
+  },
+  {
+    title: "paragraph2.title",
+    paragraph: "paragraph2.text",
+    isOpen: false
+  },
+  {
+    title: "paragraph3.title",
+    paragraph: "paragraph3.text",
+    isOpen: false
+  },
+  {
+    title: "paragraph4.title",
+    paragraph: "paragraph4.text",
+    isOpen: false
+  }
+]
+
+export const manifest_values = [
+  {
+    title: "paragraph1.title",
+    description: "paragraph1.text"
+  },
+  {
+    title: "paragraph2.title",
+    description: "paragraph2.text"
+  },
+  {
+    title: "paragraph3.title",
+    description: "paragraph3.text"
+  },
+  {
+    title: "paragraph4.title",
+    description: "paragraph4.text"
+  },
+  {
+    title: "paragraph5.title",
+    description: "paragraph5.text"
   }
 ]

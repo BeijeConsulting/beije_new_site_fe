@@ -1,3 +1,8 @@
+.form-container-general, .form-container-general, .form-container-general span, .form-info-container p, .form-string-required-fields {
+  color: var(--grey-tone-4) !important;
+}
+
+
 .form-title-container {
   margin-bottom: 30px;
 }
@@ -12,14 +17,18 @@
 .message-apply-locked {
   top: 0;
   border-radius: 10px;
-  border: 3px solid rgba(0, 0, 0, 0.87);
+  border: 3px solid rgba(38, 46, 54, 0.87);
   padding: 1.5rem;
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  box-shadow: rgba(38, 46, 54, 0.19) 0px 10px 20px, rgba(38, 46, 54, 0.23) 0px 6px 6px;
   background-color: #F9F9F9;
   margin: 0 auto 3rem;
   font-size: 1.5rem;
   font-weight: 500;
-  color: black;
+  color: var(--dark-grey);
+}
+
+.message-apply-locked p {
+  color: var(--dark-grey);
 }
 
 
@@ -35,7 +44,7 @@
 .form-field {
   width: 100%;
   margin: 10px 0px !important;
-  font-family: var(--moderat-regular);
+  font-family: var(--ginra-regular);
   padding-left: 10px;
 }
 
@@ -44,23 +53,23 @@
 }
 
 .form-field::-webkit-input-placeholder {
-  font-family: var(--moderat-regular);
+  font-family: var(--ginra-regular);
 }
 
 .form-field::-moz-placeholder {
-  font-family: var(--moderat-regular);
+  font-family: var(--ginra-regular);
 }
 
 .form-field:-ms-input-placeholder {
-  font-family: var(--moderat-regular);
+  font-family: var(--ginra-regular);
 }
 
 .form-field::-ms-input-placeholder {
-  font-family: var(--moderat-regular);
+  font-family: var(--ginra-regular);
 }
 
 .form-field::placeholder {
-  font-family: var(--moderat-regular);
+  font-family: var(--ginra-regular);
 }
 
 .form-field label {
@@ -185,7 +194,7 @@
   }
 
   .form-info-container p:nth-child(1), .form-info-container p:nth-child(4) {
-    font-family: var(--moderat-bold);
+    font-family: var(--ginra-bold);
   }
 
   .form-info-container p:nth-child(3) {

@@ -21,7 +21,7 @@
 
 .consulting-second-section-text-container {
   font-size: var(--font-size-h3-xs);
-  font-family: var(--moderat-regular);
+  font-family: var(--ginra-regular);
   color: var(--lightblue);
   line-height: 30px;
   max-width: 450px;
@@ -30,7 +30,7 @@
 
 .consulting-second-section-text-list-container {
   /* font-size: var(--font-size-h1-xs);
-  font-family: var(--sofiaPro-bold);*/
+  font-family: var(--ginra-bold);*/
   line-height: 50px;
   color: #FFFFFF;
   margin-top: 50px;
@@ -42,7 +42,7 @@
   padding-top: 60px;
   width: 100%;
   height: 174px;
-  background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/consulting/consulting2_mobile.png");
+  background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/consulting/consulting2_mobile.jpg");
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -51,7 +51,7 @@
 .consulting-fourth-section-banner-text {
   color: #FFFFFF;
   font-size: 30px;
-  font-family: var(--sofiaPro-bold);
+  font-family: var(--ginra-bold);
   text-transform: uppercase;
   text-align: center;
   line-height: 50px;
@@ -96,7 +96,7 @@
   }
 
   .consulting-fourth-section-banner {
-    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/consulting/consulting2_tablet.png");
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/consulting/consulting2_tablet.jpg");
   }
 }
 
@@ -136,7 +136,7 @@
   }
 
   .consulting-fourth-section-banner {
-    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/consulting/consulting2_desktop.png");
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/consulting/consulting2_desktop.jpg");
   }
 
 }

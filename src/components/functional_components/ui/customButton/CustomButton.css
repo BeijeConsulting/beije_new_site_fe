@@ -12,7 +12,7 @@
 }
 
 .button-form-primary p {
-  font-family: var(--moderat-regular) !important;
+  font-family: var(--ginra-regular) !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -34,6 +34,12 @@
 .button-form-primary:hover {
   -webkit-box-shadow: 4px 5px 15px var(--dark-grey);
   box-shadow: 4px 5px 15px var(--dark-grey);
+}
+
+.button-career {
+  padding: 22px 26px !important;
+  color: #fff;
+  border-radius: 37px !important;
 }
 
 @media(min-width: 1024px) {
