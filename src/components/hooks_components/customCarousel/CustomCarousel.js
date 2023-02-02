@@ -54,13 +54,13 @@ const CustomCarousel = (props) => {
     return (
       <SwiperSlide
         key={key}
-        className={props.upCarousel ? "carousel-up-bg" : item.pictureClassName}
+        className={(props.upCarousel || props.academyCarousel) ? "carousel-up-bg" : item.pictureClassName}
         ref={slideRef}
         onMouseMove={tiltEffect()}
         style={{
-          backgroundColor: props.upCarousel ? item.backgroundColor : ""
+          backgroundColor: (props.upCarousel || props.academyCarousel) ? item.backgroundColor : ""
         }}
-        onClick={props.upCarousel ? sendToPage(item.permalink) : null}
+        onClick={(props.upCarousel || props.academyCarousel) ? sendToPage(item.permalink) : null}
       >
         {props.imgCarousel &&
           <img
@@ -78,7 +78,7 @@ const CustomCarousel = (props) => {
               <p><i>&ldquo;{t(item.description)}&rdquo;</i></p>
             </>
           }
-          {props.upCarousel &&
+          {(props.upCarousel || props.academyCarousel) &&
             <>
               <p>{item.title}</p>
               <p><i>_{item.subtitle}</i></p>
@@ -104,7 +104,13 @@ const CustomCarousel = (props) => {
   }
 
   const sendToPage = (param1) => () => {
-    let response = `/beije-up/${param1}`
+    let response = "";
+    if (props.upCarousel) {
+      response = `/beije-up/${param1}`
+    }
+    else if (props.academyCarousel) {
+      response = `/beije-talent-academy/${param1}`
+    }
     navigate(response)
   }
 

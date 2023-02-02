@@ -46,7 +46,6 @@ const CaseStudiesDetail = (props) => {
   // Add async and await. Here add call to API
   const getCaseStudiesData = async () => {
     let caseStudiesResponse = await ApiCalls.caseStudies_getListDetail(permalink);
-
     if (!caseStudiesResponse) {
       navigate(`/beije-up`);
     } else if (caseStudiesResponse.language !== lang) {

@@ -8,7 +8,7 @@ import { setVisibilityNavbar, initVisibilityNavbar } from "../../redux/ducks/sho
 import { connect } from "react-redux";
 
 // MUI
-import { Box, Container, Tab } from "@mui/material";
+import { Box, Container, Skeleton, Tab } from "@mui/material";
 
 // styles
 import './TalentAcademy.css'
@@ -23,6 +23,10 @@ import CustomLink from "../../components/functional_components/ui/customLink/Cus
 import CustomBanner from "../../components/functional_components/customBanner/CustomBanner";
 import CustomScrollTab from "../../components/hooks_components/customScrollTab/CustomScrollTab";
 import CustomIconButton from "../../components/functional_components/ui/customIconButton/CustomIconButton";
+import CustomCarousel from "../../components/hooks_components/customCarousel/CustomCarousel";
+import { isEmpty } from "lodash";
+import { useState } from "react";
+import ApiCalls from "../../services/api/ApiCalls";
 
 
 const TalentAcademy = (props) => {
@@ -30,7 +34,9 @@ const TalentAcademy = (props) => {
   const { t } = useTranslation();
   const secondContainerRef = useRef();
   const formContainer = useRef();
-
+  const [state, setState] = useState({
+    caseStudiesResponse: null
+  })
   useEffect(() => {
     if (window.location.hash === '#TalentAcademy') {
       window.scrollTo({ top: secondContainerRef.current.offsetTop, left: 0, behavior: "smooth" })
@@ -40,11 +46,22 @@ const TalentAcademy = (props) => {
     }
     props.dispatch(setCurrentPage("academy"));
     props.dispatch(setVisibilityNavbar(true));
+    getCaseStudiesData();
     return () => {
       props.dispatch(initCurrentPage());
       props.dispatch(initVisibilityNavbar());
     };
-  }, [])
+  }, [props.languageDuck.currentLanguage])
+
+  const getCaseStudiesData = async () => {
+    let caseStudiesResponse = await ApiCalls.caseStudies_getList(props.languageDuck.currentLanguage);
+
+    setState({
+      ...state,
+      caseStudiesResponse: caseStudiesResponse
+    })
+
+  }
 
   const scrollToSection = () => {
     let elementTop = secondContainerRef.current.offsetTop;
@@ -222,6 +239,43 @@ const TalentAcademy = (props) => {
             </Box>
           </Container>
 
+          {/* SECTION CAROUSEL */}
+          <Container
+            component={"section"}
+            maxWidth={"false"}
+            className={"up-fourth-section paddingX-container-general-pages position-relative"}
+          >
+            <Box>
+              <h2>Case studies</h2>
+            </Box>
+
+            <Container
+              component={"section"}
+              maxWidth={"false"}
+              className={"up-fifth-section-container d-flex justify-center"}
+            >
+              <Box className="width-100 max-width-1800">
+                {
+                  !state.caseStudiesResponse &&
+                  <Skeleton />
+                }
+                {
+                  state.caseStudiesResponse && !isEmpty(state.caseStudiesResponse) &&
+                  < CustomCarousel
+                    academyCarousel
+                    obj={state.caseStudiesResponse}
+                    classNameSwiperContainer={"swiper-container-up"}
+                    imgCarousel
+                  />
+                }
+                {
+                  isEmpty(state.caseStudiesResponse) &&
+                  <div></div>
+                }
+              </Box>
+            </Container>
+          </Container>
+
           {/* sixth section form*/}
           <Container
             component={"section"}
@@ -229,7 +283,7 @@ const TalentAcademy = (props) => {
             className={"up-sixth-section-container paddingX-container-general-pages"}
           >
             <Box
-              className={"academy-sixth-section-box-form academy-form-gsap"}
+              className={"up-sixth-section-box-form academy-form-gsap"}
               ref={formContainer}
             >
               <CustomForm
@@ -266,4 +320,11 @@ const TalentAcademy = (props) => {
   )
 }
 
-export default connect()(TalentAcademy)
+
+const mapStateToProps = state => (
+  {
+    languageDuck: state.languageDuck,
+  }
+)
+
+export default connect(mapStateToProps)(TalentAcademy)
