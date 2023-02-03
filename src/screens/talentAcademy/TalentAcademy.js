@@ -244,6 +244,7 @@ const TalentAcademy = (props) => {
             component={"section"}
             maxWidth={"false"}
             className={"up-fourth-section paddingX-container-general-pages position-relative"}
+            style={{ backgroundImage: "none" }}
           >
             <Box>
               <h2>Case studies</h2>
