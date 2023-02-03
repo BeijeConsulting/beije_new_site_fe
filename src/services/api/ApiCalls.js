@@ -23,11 +23,11 @@ const ApiCalls = {
     return get(`academy`)
   },
 
-  caseStudies_getList: (lang) => {
-    return get(`casestudies/${lang}`);
+  caseStudies_getList: (lang, type) => {
+    return get(`casestudies/${type}/${lang}`);
   },
-  caseStudies_getListDetail: (permalink) => {
-    return get(`casestudy/permalink/${permalink}`);
+  caseStudies_getListDetail: (permalink, type) => {
+    return get(`casestudy/permalink/${type}/${permalink}`);
   },
 
   community_getList: (lang) => {

@@ -54,7 +54,7 @@ const TalentAcademy = (props) => {
   }, [props.languageDuck.currentLanguage])
 
   const getCaseStudiesData = async () => {
-    let caseStudiesResponse = await ApiCalls.caseStudies_getList(props.languageDuck.currentLanguage);
+    let caseStudiesResponse = await ApiCalls.caseStudies_getList(props.languageDuck.currentLanguage, 2);
 
     setState({
       ...state,

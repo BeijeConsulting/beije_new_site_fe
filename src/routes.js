@@ -52,6 +52,10 @@ export default [
         element: <AcademyBackend />
       },
       {
+        path: "beije-talent-academy/:permalink",
+        element: <CaseStudiesDetail />
+      },
+      {
         path: "blog",
         element: <Blog />
       },

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 
 // Redux
 import { setCurrentPage, initCurrentPage } from "../../redux/ducks/currentPageDuck";
@@ -32,10 +32,15 @@ const CaseStudiesDetail = (props) => {
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-    props.dispatch(setCurrentPage("up"));
     props.dispatch(setVisibilityNavbar(true));
-
-    getCaseStudiesData();
+    if (pathname.includes("beije-up")) {
+      props.dispatch(setCurrentPage("up"));
+      getCaseStudiesDataUp();
+    }
+    else if (pathname.includes("beije-talent-academy")) {
+      props.dispatch(setCurrentPage("academy"));
+      getCaseStudiesDataAcademy();
+    }
 
     return () => {
       props.dispatch(initCurrentPage());
@@ -43,15 +48,34 @@ const CaseStudiesDetail = (props) => {
     };
   }, [location.href])
 
+  const { pathname } = useLocation();
+
   // Add async and await. Here add call to API
-  const getCaseStudiesData = async () => {
-    let caseStudiesResponse = await ApiCalls.caseStudies_getListDetail(permalink);
+  const getCaseStudiesDataUp = async () => {
+    let caseStudiesResponse = [];
+
+    caseStudiesResponse = await ApiCalls.caseStudies_getListDetail(permalink, 1);
     if (!caseStudiesResponse) {
       navigate(`/beije-up`);
+
     } else if (caseStudiesResponse.language !== lang) {
       navigate(`/${lang}/beije-up/${caseStudiesResponse.translateCasePermalink}`, { replace: true });
     }
 
+    setState({
+      ...state,
+      caseStudiesResponse: caseStudiesResponse
+    })
+  }
+
+  const getCaseStudiesDataAcademy = async () => {
+    let caseStudiesResponse = [];
+    caseStudiesResponse = await ApiCalls.caseStudies_getListDetail(permalink, 2);
+    if (!caseStudiesResponse) {
+      navigate(`/beije-talent-academy`);
+    } else if (caseStudiesResponse.language !== lang) {
+      navigate(`/${lang}/beije-talent-academy/${caseStudiesResponse.translateCasePermalink}`, { replace: true });
+    }
 
     setState({
       ...state,
