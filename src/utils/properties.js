@@ -787,6 +787,29 @@ export const programFrontendAcademy = [
       ]
   },
   {
+    sectionTitle: 'academyFrontend.program.section2_1.title',
+    description:
+      [
+        { p: 'academyFrontend.program.section2_1.subsection1' },
+        { p: 'academyFrontend.program.section2_1.subsection2' },
+        { p: 'academyFrontend.program.section2_1.subsection3' },
+        { p: 'academyFrontend.program.section2_1.subsection4' },
+        { p: 'academyFrontend.program.section2_1.subsection5' },
+        { p: 'academyFrontend.program.section2_1.subsection6' },
+        { p: 'academyFrontend.program.section2_1.subsection7' },
+        { p: 'academyFrontend.program.section2_1.subsection8' },
+        { p: 'academyFrontend.program.section2_1.subsection9' },
+        { p: 'academyFrontend.program.section2_1.subsection10' },
+        { p: 'academyFrontend.program.section2_1.subsection11' },
+        { p: 'academyFrontend.program.section2_1.subsection12' },
+        { p: 'academyFrontend.program.section2_1.subsection13' },
+        { p: 'academyFrontend.program.section2_1.subsection14' },
+        { p: 'academyFrontend.program.section2_1.subsection15' },
+        { p: 'academyFrontend.program.section2_1.subsection16' },
+        { p: 'academyFrontend.program.section2_1.subsection17' }
+      ]
+  },
+  {
     sectionTitle: 'academyFrontend.program.section3.title',
     description:
       [

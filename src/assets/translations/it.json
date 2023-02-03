@@ -474,6 +474,26 @@
         "subsection7": "Virtual Dom",
         "subsection8": "Redux"
       },
+      "section2_1": {
+        "title": "Agular",
+        "subsection1": "Differenze tra un framework ed una libreria",
+        "subsection2": "Design Patterns cosa sono e quali sono i principali",
+        "subsection3": "Creazione di un progetto Angular",
+        "subsection4": "Componenti",
+        "subsection5": "Data binding",
+        "subsection6": "Form semplici",
+        "subsection7": "Form dinamici",
+        "subsection8": "Direttive",
+        "subsection9": "Pipe transform",
+        "subsection10": "Servizi",
+        "subsection11": "Singleton",
+        "subsection12": "Observable",
+        "subsection13": "Rxjs",
+        "subsection14": "Multipart",
+        "subsection15": "Routing",
+        "subsection16": "Resolver",
+        "subsection17": "Multilingua"
+      },
       "section3": {
         "title": "React Native",
         "subsection1": "React Vs React Native",
