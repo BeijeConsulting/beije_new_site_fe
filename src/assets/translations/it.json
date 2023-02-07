@@ -131,8 +131,11 @@
     "focusAcademy": "Focus Academy"
   },
   "footer": {
-    "privacyPolicies": "PRIVACY POLICY",
-    "legalNotes": "NOTE LEGALI",
+    "primary_pages": "Pagine principali",
+    "secondary_pages": "Pagine secondarie",
+    "tertiary_pages": "Pagine terziarie",
+    "privacyPolicies": "Privacy policy",
+    "legalNotes": "Note legali",
     "vatNumber": "Beije è un marchio di People First Srl - Partita IVA 16334941008"
   },
   "home": {

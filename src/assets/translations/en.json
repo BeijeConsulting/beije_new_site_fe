@@ -132,8 +132,11 @@
     "focusAcademy": "Focus Academy"
   },
   "footer": {
-    "privacyPolicies": "PRIVACY POLICY",
-    "legalNotes": "LEGAL NOTES",
+    "primary_pages": "Primary Pages",
+    "secondary_pages": "Secondary Pages",
+    "tertiary_pages": "Tertiary Pages",
+    "privacyPolicies": "Privacy policy",
+    "legalNotes": "Legal notes",
     "vatNumber": "Beije is a People First Srl brand - VAT number 16334941008 "
   },
   "home": {

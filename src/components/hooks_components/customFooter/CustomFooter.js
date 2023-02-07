@@ -12,7 +12,7 @@ import { Box } from '@mui/material';
 import './CustomFooter.css'
 
 // Constants and functions
-import { logo_primary_light, logo_secondary_light } from "../../../utils/properties";
+import { logo_primary_light, logo_secondary_light, menu_voices } from "../../../utils/properties";
 
 // Components
 import SwitchLang from "../switchLang/SwitchLang"
@@ -84,14 +84,42 @@ const CustomFooter = (props) => {
         {/* Info */}
         <div className={"footer-info d-flex"}>
           <div>
-            <p>{t("contactInfo.location")}</p>
-            <p>Via Varese, 27/38</p>
-            <p>Lissone (MB)</p>
+            <p><b>{t("footer.primary_pages")}</b></p>
+            <div className={"footer-links-container"}>
+              {menu_voices.slice(0, 3).map((singleLink, key) => {
+                return (
+                  <Link
+                    key={key}
+                    to={singleLink.link_to}
+                    className={"footer-links"}
+                  >
+                    {t("burgerMenu." + singleLink.name)}
+                  </Link>
+                )
+              })
+              }
+            </div>
           </div>
           <div>
-            <p>{t("contactInfo.contact")}</p>
-            <p>job@beije.it</p>
-            <p>commerciale@beije.it</p>
+            <p><b>{t("footer.secondary_pages")}</b></p>
+            <div className={"footer-links-container"}>
+              {menu_voices.map((singleLink, key) => {
+                if (key !== 0 && key !== 1 && key !== 2 && key !== 6 && key !== 7) {
+                  return (
+                    <Link
+                      key={key}
+                      to={singleLink.link_to}
+                      className={"footer-links"}
+                    >
+                      {t("burgerMenu." + singleLink.name)}
+                    </Link>
+                  )
+                }
+
+              })
+              }
+            </div>
+
           </div>
         </div>
 
@@ -99,6 +127,7 @@ const CustomFooter = (props) => {
         <div
           className={"footer-policies-desktop"}
         >
+          <p><b>{t("footer.tertiary_pages")}</b></p>
           <p
             className="cursor-pointer footer-link-privacyPolicies-legalNotes"
             onClick={openModal("privacyPolicies")}
@@ -113,18 +142,18 @@ const CustomFooter = (props) => {
           </p>
         </div>
 
-        <div
+        {/* <div
           className={"footer-social-mobile"}
         >
           <SocialLinks />
-        </div>
+        </div> */}
       </div>
 
       <div
         className={"footer-vatNumber-social d-flex footer-padding-elements"}
       >
         {/* Privacy policies only mobile */}
-        <div
+        {/* <div
           className={"footer-policies-mobile"}
         >
           <span
@@ -138,19 +167,22 @@ const CustomFooter = (props) => {
             onClick={openModal("legalNotes")}
           >
             {t("footer.legalNotes")}</span>
-        </div>
+        </div> */}
+
+        <hr />
 
         {/* Vat number and social only desktop */}
-        <div
-          className={"footer-vatNumber"}
-        >
-          <p>{t("footer.vatNumber")}</p>
-        </div>
         <div
           className={"footer-social-desktop"}
         >
           <SocialLinks />
         </div>
+        <div
+          className={"footer-vatNumber"}
+        >
+          <p>{t("footer.vatNumber")}</p>
+        </div>
+
       </div>
 
       <CustomModal
