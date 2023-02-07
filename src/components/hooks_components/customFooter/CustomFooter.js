@@ -142,33 +142,11 @@ const CustomFooter = (props) => {
           </p>
         </div>
 
-        {/* <div
-          className={"footer-social-mobile"}
-        >
-          <SocialLinks />
-        </div> */}
       </div>
 
       <div
         className={"footer-vatNumber-social d-flex footer-padding-elements"}
       >
-        {/* Privacy policies only mobile */}
-        {/* <div
-          className={"footer-policies-mobile"}
-        >
-          <span
-            className="cursor-pointer footer-link-privacyPolicies-legalNotes"
-            onClick={openModal("privacyPolicies")}
-          >
-            {t("footer.privacyPolicies")} </span>
-          <span> | </span>
-          <span
-            className="cursor-pointer footer-link-privacyPolicies-legalNotes"
-            onClick={openModal("legalNotes")}
-          >
-            {t("footer.legalNotes")}</span>
-        </div> */}
-
         <hr />
 
         {/* Vat number and social only desktop */}
