@@ -113,6 +113,19 @@
   padding-top: 100px;
   background: linear-gradient(48deg, rgba(255, 255, 255, 1) 0%, rgba(177, 32, 9, 0.2721463585434174) 100%);
   padding-bottom: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.career_first_section .career_video_container {
+  margin: 90px auto 0 auto;
+  width: 90%;
+  max-width: 800px;
+  border-radius: 42px;
+}
+
+.career_first_section .career_video_container video {
+  border-radius: 42px;
 }
 
 .career_title_page h1 span:nth-child(1), .career_first_section h1 span:nth-child(2), .career_third_section h2 {

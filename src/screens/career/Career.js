@@ -112,11 +112,46 @@ const Career = (props) => {
                 callback={goToManifest}
               />
             </div>
+          </div>
 
+          <div className="career_video_container">
+            <video
+              // width="100%"
+              // height="290"
+              preload="metadata"
+              controls={true}
+              controlsList="nodownload"
+              poster={posterVideoCareer}
+              style={{ visibility: "visible" }}
+            >
+              <source
+                src="https://beije-people-first.s3.eu-south-1.amazonaws.com/site/career_video.mp4"
+                type="video/mp4" />
 
+            </video>
           </div>
 
         </section>
+
+        {/* <section className="career_seventh_section">
+          <div className="career_video_container">
+            <video
+              // width="100%"
+              // height="290"
+              preload="metadata"
+              controls={true}
+              controlsList="nodownload"
+              poster={posterVideoCareer}
+              style={{ visibility: "visible" }}
+            >
+              <source
+                src="https://beije-people-first.s3.eu-south-1.amazonaws.com/site/career_video.mp4"
+                type="video/mp4" />
+
+            </video>
+          </div>
+          <div className="paddingX-container-general-pages career_title_video_container" dangerouslySetInnerHTML={{ __html: t(`career.video_text`) }} />
+        </section> */}
 
 
         <section className={"career_second_section paddingX-container-general-pages d-flex justify-center"} >
@@ -259,27 +294,6 @@ const Career = (props) => {
             }
           </div>
         </section>
-
-        <section className="career_seventh_section">
-          <div className="career_video_container">
-            <video
-              // width="100%"
-              // height="290"
-              preload="metadata"
-              controls={true}
-              controlsList="nodownload"
-              poster={posterVideoCareer}
-              style={{ visibility: "visible" }}
-            >
-              <source
-                src="https://beije-people-first.s3.eu-south-1.amazonaws.com/site/career_video.mp4"
-                type="video/mp4" />
-
-            </video>
-          </div>
-          <div className="paddingX-container-general-pages career_title_video_container" dangerouslySetInnerHTML={{ __html: t(`career.video_text`) }} />
-        </section>
-
       </Box >
     </>
   )
