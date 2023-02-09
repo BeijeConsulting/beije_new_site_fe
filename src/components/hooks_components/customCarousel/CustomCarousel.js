@@ -54,11 +54,14 @@ const CustomCarousel = (props) => {
     return (
       <SwiperSlide
         key={key}
-        className={(props.upCarousel || props.academyCarousel) ? "carousel-up-bg" : item.pictureClassName}
+        className={(props.upCarousel || props.academyCarousel) ? "carousel-up-bg" : ""}
+
         ref={slideRef}
         onMouseMove={tiltEffect()}
         style={{
-          backgroundColor: (props.upCarousel || props.academyCarousel) ? item.backgroundColor : ""
+          backgroundColor: (props.upCarousel || props.academyCarousel) ? item.backgroundColor : "",
+          backgroundImage: props.homeCarousel ? `url(${item.pictureClassName})` : "none",
+          border: props.homeCarousel ? "1px solid red" : "none"
         }}
         onClick={(props.upCarousel || props.academyCarousel) ? sendToPage(item.permalink) : null}
       >

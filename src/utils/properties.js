@@ -12,7 +12,7 @@ import empty_academy from "../assets/icons/empty_academy.svg"
 import empty_job from "../assets/icons/empty_job.svg"
 import posterVideo from '../assets/images/posterVideoAcademy.jpg'
 import icon_profile from "../assets/icons/iconProfile.png";
-import careerVideoPoster from "../assets/images/career/career4.jpg";
+import careerVideoPoster from "../assets/images/career/career4.png";
 // import beije_short_written_dark from "/beije_written_short_dark.png";
 import beije_short_written_white from "../assets/images/logo_only_written_short_white.svg";
 import beije_short_written_dark from "../assets/images/logo_only_written_short_dark.svg";

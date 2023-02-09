@@ -39,6 +39,10 @@ const ApiCalls = {
 
   team_getList: () => {
     return get('team/users')
+  },
+
+  carouselProfile_getList: (lang) => {
+    return get(`chi_siamo/language/${lang}`)
   }
 }
 export default ApiCalls
