@@ -2,7 +2,7 @@ import { get, post } from "../GenericServices";
 
 const ApiCalls = {
   blog_getList: (lang) => {
-    return get(`blogs/${lang}`);
+    return get(`blogs/order_date/desc/${lang}`);
   },
   blog_getListDetail: (permalink) => {
     return get(`blog/${permalink}`);
@@ -31,7 +31,7 @@ const ApiCalls = {
   },
 
   community_getList: (lang) => {
-    return get(`events/${lang}`);
+    return get(`events/order_time/desc/${lang}`);
   },
   community_getListDetail: (permalink) => {
     return get(`event/${permalink}`);
