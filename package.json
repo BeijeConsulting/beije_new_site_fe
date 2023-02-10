@@ -42,7 +42,6 @@
     "react-number-format": "^4.9.1",
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.2.1",
-    "react-router-sitemap": "^1.2.0",
     "react-scripts": "^5.0.0",
     "redux": "^4.1.2",
     "sass": "^1.49.9",
@@ -63,7 +62,6 @@
     "build:prod": "env-cmd -f .env.prod npm run-script build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "sitemap": "sitemap-builder.js",
     "serve-json": "json-server --watch db.json --port 4000"
   },
   "eslintConfig": {
