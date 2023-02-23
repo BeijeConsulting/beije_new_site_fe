@@ -9,7 +9,7 @@ import { setVisibilityNavbar, initVisibilityNavbar } from "../../redux/ducks/sho
 import { setCurrentPage, initCurrentPage } from "../../redux/ducks/currentPageDuck";
 
 // MUI
-import { Container } from "@mui/material";
+import { Container, Skeleton } from "@mui/material";
 import { Box } from "@mui/system";
 
 //import gsap
@@ -29,25 +29,36 @@ import CustomTab from "../../components/hooks_components/customTab/CustomTab";
 import CustomCarousel from "../../components/hooks_components/customCarousel/CustomCarousel";
 import CustomForm from "../../components/hooks_components/customForm/CustomForm";
 import Loading from "../../components/functional_components/loading/Loading";
+import { isEmpty } from "lodash";
+import ApiCalls from "../../services/api/ApiCalls";
 
 const Home = (props) => {
   const { t } = useTranslation();
   const refDarkContainer = useRef();
+  const tabValues = useRef();
 
   const [state, setState] = useState({
     loadingEnd: false
   })
-
+  const [carouselProfileResponse, setCarouselProfileResponse] = useState(null)
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
-
     loadingAnimation();
 
   }, [state.loadingEnd])
 
   useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    getCarouselData();
+  }, [props.languageDuck.currentLanguage])
+
+  useEffect(() => {
+    if (window.location.hash === '#tabValues') {
+      window.scrollTo({ top: refDarkContainer.current.offsetTop, left: 0, behavior: "smooth" })
+    }
+    else {
+      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    }
     window.addEventListener("scroll", handleScroll);
     props.dispatch(setCurrentPage(""));
     props.dispatch(setVisibilityNavbar(false));
@@ -70,6 +81,14 @@ const Home = (props) => {
       props.dispatch(initVisibilityNavbar());
     }
   }, [])
+
+
+
+  const getCarouselData = async () => {
+    let carouselProfileResponse = await ApiCalls.carouselProfile_getList(props.languageDuck.currentLanguage, 1);
+
+    setCarouselProfileResponse(carouselProfileResponse)
+  }
 
   const loadingAnimation = () => {
     setTimeout(() => {
@@ -205,7 +224,7 @@ const Home = (props) => {
             maxWidth={"false"}
             className={"home-third-section-container paddingX-container-default"}
           >
-            <Box className={"home-third-section-tab-container d-flex"}>
+            <Box className={"home-third-section-tab-container d-flex"} ref={tabValues}>
               <CustomTab
                 obj={tab_aboutUs}
               />
@@ -368,10 +387,23 @@ const Home = (props) => {
               maxWidth={"false"}
               className={"home-sixth-section-container d-flex justify-center"}
             >
+              {console.log("D: ", carouselProfileResponse)}
               <Box className={"width-100 max-width-1800"}>
-                <CustomCarousel
-                  homeCarousel
-                />
+                {
+                  !carouselProfileResponse &&
+                  <Skeleton />
+                }
+                {
+                  carouselProfileResponse && !isEmpty(carouselProfileResponse) &&
+                  <CustomCarousel
+                    homeCarousel
+                    obj={carouselProfileResponse}
+                  />
+                }
+                {
+                  isEmpty(carouselProfileResponse) &&
+                  <div></div>
+                }
               </Box>
             </Container>
           </Container>
@@ -399,4 +431,10 @@ const Home = (props) => {
   );
 }
 
-export default connect()(Home);
+const mapStateToProps = state => (
+  {
+    languageDuck: state.languageDuck,
+  }
+)
+
+export default connect(mapStateToProps)(Home);

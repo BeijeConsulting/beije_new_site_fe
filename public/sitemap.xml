@@ -2,79 +2,91 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.beije.it/</loc>
-    <lastmod>2022-04-11</lastmod>
+    <lastmod>2023-02-10</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.beije.it/it/beije-consulting</loc>
-    <lastmod>2022-04-11</lastmod>
+    <lastmod>2023-02-10</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.beije.it/en/beije-consulting</loc>
-    <lastmod>2022-04-11</lastmod>
+    <lastmod>2023-02-10</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.beije.it/it/beije-up</loc>
-    <lastmod>2022-04-11</lastmod>
+    <lastmod>2023-02-10</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.beije.it/en/beije-up</loc>
-    <lastmod>2022-04-11</lastmod>
+    <lastmod>2023-02-10</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.beije.it/it/beije-talent-academy</loc>
-    <lastmod>2022-04-11</lastmod>
+    <lastmod>2023-02-10</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.beije.it/en/beije-talent-academy</loc>
-    <lastmod>2022-04-11</lastmod>
+    <lastmod>2023-02-10</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.beije.it/it/blog</loc>
-    <lastmod>2022-04-11</lastmod>
+    <lastmod>2023-02-10</lastmod>
     <changefreq>never</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.beije.it/en/blog</loc>
-    <lastmod>2022-04-11</lastmod>
+    <lastmod>2023-02-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.beije.it/it/career</loc>
-    <lastmod>2022-04-11</lastmod>
+    <lastmod>2023-02-10</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.beije.it/en/career</loc>
-    <lastmod>2022-04-11</lastmod>
+    <lastmod>2023-02-10</lastmod>
+    <changefreq>never</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.beije.it/it/manifest</loc>
+    <lastmod>2023-02-10</lastmod>
+    <changefreq>never</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.beije.it/en/manifest</loc>
+    <lastmod>2023-02-10</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.beije.it/it/contacts</loc>
-    <lastmod>2022-04-11</lastmod>
+    <lastmod>2023-02-10</lastmod>
     <changefreq>never</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.beije.it/en/contacts</loc>
-    <lastmod>2022-04-11</lastmod>
+    <lastmod>2023-02-10</lastmod>
     <changefreq>never</changefreq>
     <priority>0.8</priority>
   </url>

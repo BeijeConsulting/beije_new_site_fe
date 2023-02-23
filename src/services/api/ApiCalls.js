@@ -2,7 +2,7 @@ import { get, post } from "../GenericServices";
 
 const ApiCalls = {
   blog_getList: (lang) => {
-    return get(`blogs/${lang}`);
+    return get(`blogs/order_date/desc/${lang}`);
   },
   blog_getListDetail: (permalink) => {
     return get(`blog/${permalink}`);
@@ -23,15 +23,15 @@ const ApiCalls = {
     return get(`academy`)
   },
 
-  caseStudies_getList: (lang) => {
-    return get(`casestudies/${lang}`);
+  caseStudies_getList: (lang, type) => {
+    return get(`casestudies/${type}/${lang}`);
   },
-  caseStudies_getListDetail: (permalink) => {
-    return get(`casestudy/permalink/${permalink}`);
+  caseStudies_getListDetail: (permalink, type) => {
+    return get(`casestudy/permalink/${type}/${permalink}`);
   },
 
   community_getList: (lang) => {
-    return get(`events/${lang}`);
+    return get(`events/order_time/desc/${lang}`);
   },
   community_getListDetail: (permalink) => {
     return get(`event/${permalink}`);
@@ -39,6 +39,10 @@ const ApiCalls = {
 
   team_getList: () => {
     return get('team/users')
+  },
+
+  carouselProfile_getList: (lang) => {
+    return get(`chi_siamo/language/${lang}`)
   }
 }
 export default ApiCalls

@@ -14,7 +14,7 @@
   color: var(--white);
   text-decoration: none;
   text-transform: uppercase;
-  font-family: var(--moderat-bold);
+  font-family: var(--ginra-bold);
   position: relative;
 }
 
@@ -40,11 +40,11 @@
 }
 
 .navbar-container a:nth-child(2)::before {
-  background-color: var(--blue);
+  background-color: var(--yellow);
 }
 
 .navbar-container a:nth-child(3)::before {
-  background-color: var(--yellow);
+  background-color: var(--blue);
 }
 
 /* ** hover ** */
@@ -60,11 +60,11 @@
   }
 
   .navbar-container a:nth-child(2):hover {
-    color: var(--blue);
+    color: var(--yellow);
   }
 
   .navbar-container a:nth-child(3):hover {
-    color: var(--yellow);
+    color: var(--blue);
   }
 }
 
@@ -139,7 +139,7 @@
   color: var(--white);
   text-decoration: none;
   text-transform: uppercase;
-  font-family: var(--moderat-bold);
+  font-family: var(--ginra-bold);
   position: relative;
 }
 
@@ -174,11 +174,11 @@
   }
 
   .navbar-container-secondary a:nth-child(2):hover::before {
-    background-color: var(--blue);
+    background-color: var(--yellow);
   }
 
   .navbar-container-secondary a:nth-child(3):hover::before {
-    background-color: var(--yellow);
+    background-color: var(--blue);
   }
 
   .navbar-container-secondary a:nth-child(1):hover {
@@ -186,11 +186,11 @@
   }
 
   .navbar-container-secondary a:nth-child(2):hover {
-    color: var(--blue);
+    color: var(--yellow);
   }
 
   .navbar-container-secondary a:nth-child(3):hover {
-    color: var(--yellow);
+    color: var(--blue);
   }
 }
 

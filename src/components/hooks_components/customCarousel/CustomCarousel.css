@@ -122,6 +122,10 @@
   background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/francesca_bellini_mobile.jpg");
 }
 
+.carousel-bg-samantha-mineman {
+  background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/samantha_mineman_mobile.jpg");
+}
+
 /* for case studies */
 .carousel-up-bg {
   background-image: none;
@@ -204,6 +208,10 @@
 
   .carousel-bg-francesca-bellini {
     background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/francesca_bellini_tablet.jpg");
+  }
+
+  .carousel-bg-samantha-mineman {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/samantha_mineman_tablet.jpg");
   }
 }
 
@@ -310,6 +318,9 @@
     background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/francesca_bellini_desktop.jpg");
   }
 
+  .carousel-bg-samantha-mineman {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/samantha_mineman_desktop.jpg");
+  }
 }
 
 @media(min-width:1600px) {

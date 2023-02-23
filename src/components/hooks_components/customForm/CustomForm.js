@@ -3,9 +3,10 @@ import { useTranslation } from "react-i18next";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useFormik } from "formik";
 import * as yup from 'yup';
+import { get as __get } from 'lodash';
 
 // Redux
-import { connect } from "react-redux";
+import { connect, useSelector } from "react-redux";
 import { setToastMessage, initToastMessage } from "../../../redux/ducks/toastMessageDuck";
 
 // Api
@@ -29,7 +30,7 @@ import PrivacyPolicies from "../../functional_components/privacyPolicies/Privacy
 
 const CustomForm = (props) => {
   const { t } = useTranslation();
-
+  const currentLanguage = useSelector((state) => __get(state.languageDuck, 'currentLanguage', {}));
   const uploadedFile = useRef();
 
   const [state, setState] = useState({
@@ -192,18 +193,16 @@ const CustomForm = (props) => {
     <Grid
       container
       spacing={2}
-      className={`${props.classNameContainer} ${props.formTitle === t("form.title.apply") ? 'form-message-apply-locked' : ""}`}
+      className={`${props.classNameContainer} ${props.formTitle === t("form.title.apply") ? 'form-message-apply-locked' : ""} form-container-general`}
     >
 
       {props.PopUpExists && state.popUpMessage !== "" &&
         <Grid
           className="message-apply-locked">
-
           <Box>
-            <p dangerouslySetInnerHTML={{ __html: converter.makeHtml(window.localStorage.getItem("currentLanguage") === "IT" ? state.popUpMessage?.description_it : state.popUpMessage?.description_en) }} />
+            <p dangerouslySetInnerHTML={{ __html: converter.makeHtml(currentLanguage === "IT" ? state.popUpMessage?.description_it : state.popUpMessage?.description_en) }} />
           </Box>
         </Grid>
-
       }
       <Grid
         item

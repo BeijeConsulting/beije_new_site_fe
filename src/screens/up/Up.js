@@ -48,7 +48,7 @@ const Up = (props) => {
   }, [props.languageDuck.currentLanguage])
 
   const getCaseStudiesData = async () => {
-    let caseStudiesResponse = await ApiCalls.caseStudies_getList(props.languageDuck.currentLanguage);
+    let caseStudiesResponse = await ApiCalls.caseStudies_getList(props.languageDuck.currentLanguage, 1);
 
     setState({
       ...state,
@@ -92,7 +92,7 @@ const Up = (props) => {
             classNameBgImgDesktop="intro-section-img-up"
             classNameBgImgMobile="intro-section-img-up"
             bgIconDownload="download-btn-icon-up"
-            sectionName="Beije Up"
+            sectionName="Up"
             sectionTitle={t("up.title")}
             photoTitle="UP"
             callback={scrollToSection}

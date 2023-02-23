@@ -3,6 +3,10 @@
   width: 100%;
 }
 
+.cookie-policies-container p, .cookie-policies-container span {
+  color: #262E36;
+}
+
 .cookie-policies-container td, .cookie-policies-container th {
   border: 1px solid #ddd;
   padding: 8px;

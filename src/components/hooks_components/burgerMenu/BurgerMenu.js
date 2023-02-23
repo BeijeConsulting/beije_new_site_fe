@@ -51,7 +51,7 @@ const BurgerMenu = (props) => {
         key={key}
         to={item.link_to}
         onClick={handleOpenNavMenu}
-        className={"burgerMenu-links-voices titles-level3"}
+        className={"burgerMenu-links-voices h3"}
         onMouseEnter={mouseOver(key, item.key_link)}
         onMouseLeave={mouseLeave(key, item.key_link)}
       >
@@ -83,6 +83,9 @@ const BurgerMenu = (props) => {
     switch (state.keyElement) {
       case "consulting":
         className = "burgerMenu-nav-container burgerMenu-nav-container-img burgerMenu-consulting"
+        break
+      case "manifest":
+        className = "burgerMenu-nav-container burgerMenu-nav-container-img burgerMenu-manifest"
         break
       case "academy":
         className = "burgerMenu-nav-container burgerMenu-nav-container-img burgerMenu-academy"

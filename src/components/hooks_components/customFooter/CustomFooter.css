@@ -50,9 +50,6 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -66,20 +63,20 @@
   margin-bottom: 30px;
 }
 
-.footer-info div p:nth-child(1) {
-  display: none;
-}
-
-.footer-link-privacyPolicies-legalNotes {
+.footer-info a:hover, .footer-link-privacyPolicies-legalNotes:hover {
   text-decoration: underline;
 }
 
-.footer-link-privacyPolicies-legalNotes:hover {
-  text-decoration: none;
-}
-
 .footer-policies-desktop {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
 }
 
 .footer-social-mobile {
@@ -93,6 +90,14 @@
   flex-direction: column;
 }
 
+.footer-vatNumber-social hr {
+  width: 100%;
+  background-color: #1B2227;
+  border: none;
+  height: 2px;
+  margin-bottom: 20px;
+}
+
 .footer-policies-mobile {
   text-align: center;
   border-bottom: 1px solid var(--grey-tone-1);
@@ -103,10 +108,18 @@
   font-size: 1rem;
   color: var(--grey-tone-4);
   text-align: center;
+  margin-top: 20px;
 }
 
-.footer-social-desktop {
-  display: none;
+.footer-links-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-links {
+  color: #fff;
+  text-decoration: none;
 }
 
 
@@ -152,7 +165,8 @@
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
-    width: 40%;
+    width: 60%;
+    max-width: 510px;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -170,31 +184,23 @@
     display: block;
   }
 
+
   .footer-policies-desktop {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 0;
   }
+
 
   .footer-social-mobile {
     display: none;
   }
 
   .footer-vatNumber-social {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
+    flex-direction: column;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    -webkit-box-align: end;
-    -ms-flex-align: end;
-    align-items: flex-end;
+    align-items: center;
   }
 
   .footer-policies-mobile {
@@ -202,11 +208,11 @@
   }
 
   .footer-vatNumber {
-    text-align: left;
+    text-align: center;
   }
 
-  .footer-social-desktop {
-    display: block;
+  .footer-links-container {
+    align-items: flex-start;
   }
 }
 

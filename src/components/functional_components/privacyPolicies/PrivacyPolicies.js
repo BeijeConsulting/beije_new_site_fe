@@ -5,7 +5,7 @@ import { Trans } from 'react-i18next'
 const PrivacyPolicies = () => {
   const { t } = useTranslation();
   return (
-    <div>
+    <div style={{ color: "#262E36" }}>
       <Trans
         i18nKey={"privacyPolicies.txt"}
       >
@@ -22,7 +22,7 @@ const PrivacyPolicies = () => {
         </span>
         <a href="https://beije.it/" target={"_blank"} rel="noreferrer">https://beije.it</a>
         <span>
-        &nbsp;(il “Sito”),effettuato con modalità sia automatizzate che manuali, avvenga nel pieno rispetto delle tutele e dei
+          &nbsp;(il “Sito”),effettuato con modalità sia automatizzate che manuali, avvenga nel pieno rispetto delle tutele e dei
           diritti riconosciuti dal Regolamento (UE) 2016/679 (“GDPR” o il “Regolamento”) e dalle ulteriori
           norme applicabili in tema di protezione dei dati personali.
         </span>

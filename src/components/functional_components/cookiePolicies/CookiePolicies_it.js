@@ -6,8 +6,7 @@ import "./CookiePolicies.css"
 const CookiePolicies_it = () => {
   return (
     <div
-      className="cookie-policies-container"
-    >
+      className="cookie-policies-container">
       <div>
         <p><strong>Cookie Policy</strong></p><br />
         <p>Gentile Interessato,</p>

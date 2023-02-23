@@ -33,8 +33,8 @@
       "up": "Realizzazione e manutenzione di software in perfetto stile Agile attraverso l’utilizzo delle tecnologie più innovative presenti sul mercato.",
       "career": "Diventa Software Developer con Beije",
       "blog": "Tutte le notizie e gli aggiornamenti sul settore IT, frontend & backend",
-      "community": "Tutta la community beije",
-      "events": "Tutti gli gli eventi della nostra community Beije",
+      "community": "Tutta la Community beije",
+      "events": "Tutti gli gli eventi della nostra Community Beije",
       "contacts": "Contatti Beije People First"
     },
     "keywords": {
@@ -46,7 +46,7 @@
       "up": "agile, progettazione, implementazione, delivery, integration, application maintenance, software, frontend, backend, azienda software, IT, azienda IT, azienda Milano, consulting Milano, azienda Lissone, azienda informatica Milano",
       "career": "offerte lavoro beije, stage frontend, stage backend, stage, stage milano IT, stage frontend milano, stage backend milano, academy frontend, academy backend, come entrare in beije, carriera beije, lavoro, academy, stipendio frontend, stipendio sviluppatore, stipendio backend",
       "blog": "",
-      "community": "community, community beije, beije community, eventi beije, team beije, team, storia beije",
+      "community": "Community, Community beije, beije Community, eventi beije, team beije, team, storia beije",
       "contacts": "contatti beije, sede beije, dove si trova beije, numero telefono beije, email beije"
     }
   },
@@ -118,10 +118,11 @@
     "legalNotes": "Beije Legal Notes"
   },
   "burgerMenu": {
-    "consulting": "Beije Consulting",
+    "consulting": "Consulting",
     "academy": "Beije Talent Academy",
-    "up": "Beije Up",
+    "up": "Up",
     "career": "Lavora con noi",
+    "manifest": "Manifesto",
     "aboutUs": "Chi siamo",
     "contacts": "Contatti",
     "blog": "Blog",
@@ -130,8 +131,11 @@
     "focusAcademy": "Focus Academy"
   },
   "footer": {
-    "privacyPolicies": "PRIVACY POLICY",
-    "legalNotes": "NOTE LEGALI",
+    "primary_pages": "I nostri servizi",
+    "secondary_pages": "A proposito di noi",
+    "tertiary_pages": "Area legale",
+    "privacyPolicies": "Privacy policy",
+    "legalNotes": "Note legali",
     "vatNumber": "Beije è un marchio di People First Srl - Partita IVA 16334941008"
   },
   "home": {
@@ -207,14 +211,29 @@
         "content": {
           "part1": "Crediamo in quello che facciamo e abbiamo un profondo ",
           "part2": "RISPETTO ",
-          "part3": "per gli altri. ",
-          "part4": "Mostriamo ",
-          "part5": "GRATITUDINE ",
-          "part6": "per l’impegno che ogni giorno mettiamo nel nostro lavoro. ",
-          "part7": "Prima viene la squadra e poi l’individuo, il nostro è un lavoro di ",
-          "part8": "TEAM. ",
-          "part9": "La base per costruire la nostra community è sviluppare un ",
-          "part10": "SENSO DI APPARTENENZA."
+          "part3": "per l'",
+          "part4": "ascolto",
+          "part5": ", le ",
+          "part6": "idee ",
+          "part7": "ed i pensieri di tutti noi. Crediamo nella ",
+          "part8": "RICONOSCENZA ",
+          "part9": "reciproca: celebriamo i ",
+          "part10": "successi ",
+          "part11": "ottenuti dall'impegno che ogni giorno mettiamo nel nostro lavoro. Crediamo nella tua ",
+          "part12": "PASSIONE",
+          "part13": ", il modo migliore per essere soddisfatti è ",
+          "part14": "amare ciò che stai facendo",
+          "part15": ". Prima viene la ",
+          "part16": "squadra",
+          "part17": "e poi l'individuo, il nostro è un lavoro di ",
+          "part18": "TEAM",
+          "part19": ". La base per costruire la nostra ",
+          "part20": "Community ",
+          "part21": "è sviluppare una ",
+          "part22": "CONNESSIONE ",
+          "part23": "tra competenze, idee e ",
+          "part24": "valori",
+          "part25": "."
         }
       }
     },
@@ -229,7 +248,7 @@
       "title": "Chi siamo",
       "content": {
         "part1": "Siamo una ",
-        "part2": "community ",
+        "part2": "Community ",
         "part3": "di professionisti informatici, ricercatori di nuovi talenti e marketers con un obiettivo: le ",
         "part4": "persone ",
         "part5": "al ",
@@ -278,6 +297,9 @@
         },
         "francesca_bellini": {
           "desc": "Dammi tre parole: fashion, danza e carbonara."
+        },
+        "samantha_mineman": {
+          "desc": "Sono la Signora Wolf, risolvo problemi"
         }
       }
     }
@@ -455,6 +477,26 @@
         "subsection7": "Virtual Dom",
         "subsection8": "Redux"
       },
+      "section2_1": {
+        "title": "Agular",
+        "subsection1": "Differenze tra un framework ed una libreria",
+        "subsection2": "Design Patterns cosa sono e quali sono i principali",
+        "subsection3": "Creazione di un progetto Angular",
+        "subsection4": "Componenti",
+        "subsection5": "Data binding",
+        "subsection6": "Form semplici",
+        "subsection7": "Form dinamici",
+        "subsection8": "Direttive",
+        "subsection9": "Pipe transform",
+        "subsection10": "Servizi",
+        "subsection11": "Singleton",
+        "subsection12": "Observable",
+        "subsection13": "Rxjs",
+        "subsection14": "Multipart",
+        "subsection15": "Routing",
+        "subsection16": "Resolver",
+        "subsection17": "Multilingua"
+      },
       "section3": {
         "title": "React Native",
         "subsection1": "React Vs React Native",
@@ -537,14 +579,123 @@
   "career": {
     "titlePage": "Lavora con noi",
     "title": "Posizioni aperte",
-    "description": "Scopri le opportunità di lavoro per diventare un Software Ninjaneer ed entra a far parte della Community Beije: un sistema People First attraverso il quale crescere insieme, formarsi e diventare professionistə del settore. Cosa aspetti? The future is now!",
+    "description": "<p>Il nostro è un sistema <b>People First</b>, questo significa creare un luogo di lavoro in cui le persone si sentono appagate e percepiscono una reale <b>crescita professionale</b></p>",
     "messageJob": "Al momento non ci sono posizioni aperte, ma ti consigliamo di tenere d'occhio la pagina.",
     "messageAcademy": "Al momento non ci sono posizioni aperte, ma ti consigliamo di tenere d'occhio la pagina.",
+    "open_position_btn": "Posizioni aperte",
+    "manifest_btn": "Beije Manifesto",
+    "show_more_btn": "Scopri",
     "modeOffert": {
       "remote": "Remoto",
       "hybrid": "Ibrido",
       "milan": "Milano",
       "-": "-"
+    },
+    "switch_academy": "ACADEMY",
+    "switch_jobs": "JOBS",
+    "advantages": {
+      "title": "<h2>I vantaggi della Community <span class='hightlight-txt'>Beije</span></h2>",
+      "paragraph1": {
+        "title": "<h3 class='hightlight-txt carrer_paragraph_title'>Smartworking</h3>",
+        "text": "<p >In Beije siamo grandi fan dello smartworking, il nostro motto è “<b>no matter where but how</b>”, crediamo però che il valore dell’incontro vada coltivato: i nostri uffici sono sempre aperti per lavorare fianco a fianco con la <b>Community</b> e l’ufficio diventa <b>luogo strategico</b> di <b>teamwork</b>.</p>"
+      },
+      "paragraph2": {
+        "title": "<h3 class='hightlight-txt carrer_paragraph_title'>Eventi Beije</h3>",
+        "text": "<p > Siamo una Community, crediamo nel valore dell'<b>incontro</b> e che i <b>traguardi</b> raggiunti vadano celebrati: <b>due volte all’anno</b> ci ritroviamo tutti insieme per una <b>festa</b> in pieno stile <b>Beije!</b></p>"
+      },
+      "paragraph3": {
+        "title": "<h3 class='hightlight-txt carrer_paragraph_title'>Incontri Afterwork</h3>",
+        "text": "<p >Almeno una volta al mese con la nostra <b>Community</b> organizziamo <b>aperitivi</b>, <b>serate giochi</b>, <b>eventi</b> per goderci una serata insieme!</p>"
+      },
+      "paragraph4": {
+        "title": "<h3 class='hightlight-txt carrer_paragraph_title'>Community Coffee Breaks</h3>",
+        "text": "<p >In ufficio due cose non mancano mai: <b>litri di caffè</b> e momenti di <b>chiacchiere</b> e <b>confronto</b> con il <b>Team</b> nella nostra <b>sala break</b>!</p>"
+      }
+    },
+    "growth_paths": {
+      "title": "<h2>Percorsi di <span><b>Crescita</b></span></h2>",
+      "paragraph1": {
+        "title": "Beije Supporter",
+        "text": "<p class='career_growth_paths_description'>La tua carriera <b>non inizia full alone</b>: un <b>Supporter interno</b> ti guiderà durante il tuo <b>percorso professionale</b>, aiutandoti fin dall’inizio ad integrarti nella realtà aziendale, affinché tu possa partire al meglio. Anche al di là del lavoro, <b>ci sosteniamo</b> a vicenda <b>come una vera Community</b>.</p>"
+      },
+      "paragraph2": {
+        "title": "Piani di crescita ad hoc",
+        "text": "<p class='career_growth_paths_description'>Crediamo che la nostra Community sia spazio di <b>crescita</b> e <b>arricchimento</b>: attiviamo <b>percorsi formativi</b> di inserimento, <b>coach aziendale</b> a disposizione e <b>piani di crescita personalizzati</b> con te con <b>obiettivi</b> a <b>cadenza annuale</b>.</p>"
+      }
+    },
+    "benefits": {
+      "title": "<h2>Team <span class='hightlight-txt'>Benefits</span></h2>",
+      "paragraph1": {
+        "title": "<h3 class='hightlight-txt carrer_paragraph_title'>Formazione e-learning</h3>",
+        "text": "<p>Promuoviamo la <b>curiosità</b> e la voglia di <b>conoscenza</b>: mettiamo a disposizione di ognuno l’<b>accesso gratuito</b> ad una <b>piattaforma</b> di <b>e-learning</b> con numerosi corsi sempre aggiornati.</p>"
+      },
+      "paragraph2": {
+        "title": "<h3 class='hightlight-txt carrer_paragraph_title'>Formazione linguistica</h3>",
+        "text": "<p>Abbattiamo i confini professionali e personali e crediamo nell’importanza di misurarsi in <b>contesti internazionali</b>, mettiamo a disposizione uno strumento di <b>apprendimento linguistico</b> online per <b>imparare gratuitamente</b> lingue straniere.</p>"
+      },
+      "paragraph3": {
+        "title": "<h3 class='hightlight-txt carrer_paragraph_title'>Welfare</h3>",
+        "text": "<p >Ci prendiamo cura delle nostre Persone attraverso un <b>piano welfare</b> per migliorare il <b>benessere</b> e il <b>worklife balance</b>.</p>"
+      },
+      "paragraph4": {
+        "title": "<h3 class='hightlight-txt carrer_paragraph_title'>Webinar ed eventi</h3>",
+        "text": "<p>Poniamo le basi per una <b>crescita professionale</b> a <b>360 gradi</b>: almeno <b>due volte all’anno</b> organizziamo <b>eventi di formazione</b> tenuti dai nostri esperti Beije e da professionisti del settore; pianifichiamo anche <b>webinar</b> interni online per aggiornare la Community sulle <b>ultime tecnologie</b> e le <b>innovazioni più interessanti</b> del <b>mercato</b>.</p>"
+      }
+    },
+    "video_text": " <h2><span>Lavorare con noi è bello?</span><br /> Ce lo racconta la nostra <span class='hightlight-txt'>Community!</span></h2>"
+  },
+  "manifest": {
+    "intro": "<h1><span>Manifesto</span></h1><p>Siamo nati con una grande ambizione: <b>mettere le persone al centro.</b></p>",
+    "starting_sentence": "<h2>Oggi, dopo più di 10 anni e con una Community di oltre 100 dipendenti siamo un <span class='hightlight-txt'><b>sistema People First</b></span>.</h2>",
+    "image_text": " <h2><b>People First è l’<span><b>innovazione</b></span> che parte da te</b></h2><h2>People First è la <span><b>passione</b></span> che abbiamo per la <span><b>conoscenza</b></span> e l’<span><b>aggiornamento</b></span> costante</h2>",
+    "animated_ball_container": {
+      "ball_sentence": "People first è Team, è Connessione, è Community.",
+      "box_sentence": " <p class='h2'>People First è il <b>rispetto</b> che abbiamo per il tuo <b>benessere</b>, la <b>risposta</b> che diamo alle tue <b>domande</b>.</p>"
+    },
+    "second_image_text": {
+      "p1": "People First è il centro strategico dove integrare la ",
+      "link1": "nostra visione ",
+      "p2": " con la ",
+      "link2": "nostra missione"
+    },
+    "centered_sentences": {
+      "text1": {
+        "p1": "People First è la capacità di ",
+        "p2": "guardare oggi al futuro ",
+        "p3": "e di generare un ",
+        "p4": "impatto positivo ",
+        "p5": "sulla società"
+      },
+      "text2": {
+        "p1": "People First è la ",
+        "p2": "visione d’insieme",
+        "p3": ": non vogliamo solo immaginare, vogliamo innescare un ",
+        "p4": "cambiamento ",
+        "p5": "che duri nel tempo."
+      }
+    },
+    "values": {
+      "title": "I valori in cui crediamo",
+      "paragraph1": {
+        "title": "Rispetto",
+        "text": "<p>Siamo idee, pensieri, culture, interessi differenti e garantiamo un clima di rispetto che passa attraverso l’<b>ascolto</b>, la <b>conoscenza</b> delle <b>persone</b> e la <b>condivisione</b>.</p>"
+      },
+      "paragraph2": {
+        "title": "Riconoscenza",
+        "text": "<p>Crediamo in un sistema di mutua riconoscenza: mostriamo <b>gratitudine</b> per l’impegno che ogni giorno mettiamo nel nostro lavoro.</p>"
+      },
+      "paragraph3": {
+        "title": "Connessione",
+        "text": "<p>La base per costruire la nostra Community è la connessione, impegnarci ogni giorno per costruire un <b>senso di appartenenza</b> che ci permetta di proseguire insieme verso una visione comune.</p>"
+      },
+      "paragraph4": {
+        "title": "Passione",
+        "text": "<p>Il lavoro occupa una parte rilevante del nostro tempo, per questo crediamo nella tua passione: il modo migliore per essere <b>soddisfatti</b> di ciò che fai, è <b>amare quello che stai facendo</b>.</p>"
+      },
+      "paragraph5": {
+        "title": "Team",
+        "text": "<p>Il nostro è un lavoro di Team, per noi <br/>“<b>teamwork is dreamwork</b>”.</p>"
+      }
     }
   },
   "privacyPolicies": {
@@ -645,10 +796,10 @@
     "linkToHome": "Vai alla home"
   },
   "community": {
-    "title": "La community Beije",
+    "title": "La Community Beije",
     "description": {
-      "part1": "Prima di tutto una community fatta di persone con esperienze, interessi, stimoli differenti ma uniti da un unico obiettivo: l’individuo al centro per la costruzione di un sistema di valore.",
-      "part2": "Scopri la nostra community: ",
+      "part1": "Prima di tutto una Community fatta di persone con esperienze, interessi, stimoli differenti ma uniti da un unico obiettivo: l’individuo al centro per la costruzione di un sistema di valore.",
+      "part2": "Scopri la nostra Community: ",
       "part3": "ti aspettiamo, segui il cambiamento!"
     }
   }

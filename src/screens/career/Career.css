@@ -1,4 +1,4 @@
-/* First section */
+/* First section
 .career-first-section, .career-second-section {
   color: var(--white);
 }
@@ -46,7 +46,7 @@
 }
 
 /* Second section */
-.career-second-section {
+/* .career-second-section {
   padding: 50px;
 }
 
@@ -73,7 +73,7 @@
 
 .career-empty-message-container p {
   text-align: center;
-}
+} */
 
 
 /* CAREER DETAIL */
@@ -100,4 +100,481 @@
 
 .career-detail-txt-container p {
   margin-top: 20px;
+}
+
+
+/* NEW CSS PAGE CAREER*/
+.bg_white {
+  background-color: #fff;
+}
+
+.career_first_section {
+  /* height: 400px; */
+  padding-top: 100px;
+  background: linear-gradient(48deg, rgba(255, 255, 255, 1) 0%, rgba(177, 32, 9, 0.2721463585434174) 100%);
+  padding-bottom: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.career_first_section .career_video_container {
+  margin: 90px auto 0 auto;
+  width: 90%;
+  max-width: 800px;
+  border-radius: 42px;
+}
+
+.career_first_section .career_video_container video {
+  border-radius: 42px;
+}
+
+.career_title_page h1 span:nth-child(1), .career_first_section h1 span:nth-child(2), .career_third_section h2 {
+  /* font-size: 40px; */
+  font-weight: normal;
+  color: #323E48;
+}
+
+/* 
+.career_third_section h2 {
+  line-height: 45px;
+} */
+
+.career_title_page {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.career_title_page h1 span:nth-child(2) {
+  color: #b12009;
+}
+
+.career_title_page p {
+  /* font-size: 70px; */
+  margin-top: 20px;
+  margin-left: 70px;
+  color: #323E48;
+}
+
+.career_intro_text p {
+  /* font-size: 24px; */
+  /* line-height: 36px; */
+  margin-top: 50px;
+  max-width: 800px;
+  color: var(--dark-grey);
+}
+
+.career_container_starting_buttons {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+}
+
+.career_container_starting_buttons button:nth-child(1) {
+  background-color: #b12009;
+  margin-bottom: 20px;
+}
+
+.career_container_starting_buttons button:nth-child(2) {
+  background-color: #323E48;
+}
+
+/* .career_container_list {
+  margin-bottom: -154px;
+} */
+
+.career_second_section {
+  background-color: transparent;
+  /* height: 700px; */
+  flex-direction: column;
+  margin-top: -340px;
+}
+
+.career_third_section, .career_sixth_section {
+  margin-top: 100px;
+  flex-direction: column;
+}
+
+.career_single_paragraph {
+  margin-top: 30px;
+}
+
+.career_single_paragraph p, .career_sixth_section p {
+  color: var(--dark-grey);
+}
+
+.career_single_paragraph h2, .career_sixth_section h2, .career_title_video_container h2 {
+  color: #323E48;
+}
+
+.career_single_paragraph_mobile_drawer {
+  min-height: 30vh;
+  background-color: var(--dark-grey);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.career_single_paragraph_mobile_drawer button {
+  align-self: flex-end;
+}
+
+.career_single_paragraph_mobile_drawer button p {
+  color: #FA4A2E;
+  font-size: 30px;
+}
+
+/* .career_single_paragraph>div:nth-child(2) p {
+  border: 1px solid red;
+  margin-top: 0px;
+} */
+
+
+.carrer_paragraph_title {
+  /* font-size: 32px; */
+  /* line-height: 36px; */
+  font-weight: bold;
+}
+
+.career_single_paragraph_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.career_single_paragraph_header button p {
+  color: #323E48;
+  /* font-size: 30px; */
+}
+
+.career_fourth_section {
+  background: linear-gradient(48deg, rgba(50, 62, 72, 1) 0%, rgba(10, 12, 14, 1) 100%);
+  width: 100%;
+}
+
+.career_paths_images_container {
+  max-width: 1788px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 125px auto -100px;
+}
+
+.career_paths_images_container div {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 246px;
+  width: 100%;
+}
+
+.career_paths_images_container div:nth-child(1) {
+  background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/career/paths0.jpg");
+}
+
+.career_paths_images_container div:nth-child(2) {
+  background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/career/paths1.jpg");
+}
+
+
+.career_fourth_section {
+  display: flex;
+  justify-content: center;
+  padding-top: 178px;
+  padding-bottom: 150px;
+}
+
+.career_fourth_section>div {
+  flex-direction: column;
+  align-items: center;
+}
+
+.career_fourth_section>div img {
+  width: 93px;
+  height: 67px;
+  margin-bottom: 20px;
+}
+
+/* .career_fourth_section h2, .career_fourth_section span {
+  font-size: var(--font-size-h1-xs);
+} */
+
+.career_fourth_section h2 {
+  font-weight: normal;
+  color: #fff;
+  text-align: center;
+}
+
+.career_fourth_section span {
+  color: #FA4A2E;
+}
+
+.career_growth_paths_container {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+.career_growth_paths_container legend {
+  width: fit-content;
+  margin-top: -40px;
+  background: inherit;
+}
+
+.career_growth_paths {
+  display: flex;
+  padding: 20px;
+  border: 1px solid #FA4A2E;
+  text-align: center;
+  margin: 50px 0 0px;
+  max-width: 768px;
+  justify-content: center;
+}
+
+.career_growth_paths_container p:nth-child(2) {
+  text-align: left;
+}
+
+.career_growth_paths legend {
+  padding: 0 20px;
+}
+
+.career_growth_paths_description {
+  color: #fff;
+}
+
+.career_fifth_section {
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4458158263305322) 64%, rgba(255, 255, 255, 1) 88%, rgba(255, 255, 255, 1) 100%), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/career/career3_mobile.jpg");
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4458158263305322) 64%, rgba(255, 255, 255, 1) 88%, rgba(255, 255, 255, 1) 100%), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/career/career3_mobile.jpg");
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4458158263305322) 64%, rgba(255, 255, 255, 1) 88%, rgba(255, 255, 255, 1) 100%), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/career/career3_mobile.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 90vh;
+}
+
+.career_sixth_section {
+  margin-top: -80px;
+  padding-bottom: 113px;
+}
+
+.career_seventh_section {
+  display: flex;
+  flex-direction: column;
+  max-width: 1920px;
+  margin: auto;
+  padding-bottom: 70px;
+}
+
+.career_video_container {
+  width: 100%;
+  height: 262px;
+}
+
+.career_video_container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.career_title_video_container {
+  margin-top: 70px;
+}
+
+@media(min-width: 550px) {
+  .career_title_page p {
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .career_container_starting_buttons {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .career_container_starting_buttons button:nth-child(1) {
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+
+  .career_video_container {
+    height: 350px;
+  }
+}
+
+@media(min-width: 768px) {
+  /* .career_title_page h1 span:nth-child(1), .career_first_section h1 span:nth-child(2), .career_third_section h2 {
+    font-size: 50px;
+  } */
+
+  .career_single_paragraph {
+    margin: 60px 0;
+  }
+
+  /* .career_title_page p {
+    font-size: 80px;
+  } */
+
+  .career_paths_images_container {
+    flex-direction: row;
+  }
+
+
+  /* .career_fourth_section h2, .career_fourth_section span {
+    font-size: var(--font-size-h1-md);
+  } */
+
+  .career_growth_paths legend {
+    padding: 0 30px;
+  }
+
+  .career_sixth_section {
+    margin-top: -100px;
+  }
+
+  .career_video_container {
+    height: 510px;
+  }
+
+  .career_fifth_section {
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4458158263305322) 64%, rgba(255, 255, 255, 1) 88%, rgba(255, 255, 255, 1) 100%), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/career/career3_tablet.jpg");
+    background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4458158263305322) 64%, rgba(255, 255, 255, 1) 88%, rgba(255, 255, 255, 1) 100%), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/career/career3_tablet.jpg");
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4458158263305322) 64%, rgba(255, 255, 255, 1) 88%, rgba(255, 255, 255, 1) 100%), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/career/career3_tablet.jpg");
+  }
+
+}
+
+@media(min-width: 1024px) {
+  .career_paths_images_container div {
+    height: 320px;
+  }
+
+  .career_fourth_section>div img {
+    margin-bottom: 25px;
+  }
+
+  /* .career_fourth_section h2, .career_fourth_section span {
+    font-size: var(--font-size-h1-xl);
+  } */
+
+  /* .career_growth_paths_container p:nth-child(1) {
+    font-size: 32px;
+  } */
+
+  .career_sixth_section {
+    margin-top: -125px;
+  }
+
+  .career_seventh_section {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .career_video_container {
+    width: 50%;
+  }
+
+  .career_title_video_container {
+    padding: 0 !important;
+    width: 50%;
+    margin-top: 0;
+  }
+
+  .career_title_video_container h2 {
+    width: 90%;
+    margin-left: auto;
+  }
+
+  .career_fifth_section {
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4458158263305322) 64%, rgba(255, 255, 255, 1) 88%, rgba(255, 255, 255, 1) 100%), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/career/career3_desktop.jpg");
+    background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4458158263305322) 64%, rgba(255, 255, 255, 1) 88%, rgba(255, 255, 255, 1) 100%), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/career/career3_desktop.jpg");
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4458158263305322) 64%, rgba(255, 255, 255, 1) 88%, rgba(255, 255, 255, 1) 100%), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/career/career3_desktop.jpg");
+  }
+
+}
+
+@media(min-width: 1200px) {
+  /* .career_title_page h1 span:nth-child(1), .career_first_section h1 span:nth-child(2), .career_third_section h2 {
+    font-size: 70px;
+    line-height: 81px;
+  } */
+
+  /* .career_title_page p {
+    font-size: 130px;
+  } */
+
+  .career_intro_text p {
+    /* font-size: 28px; */
+    margin-top: 70px;
+  }
+
+  .career_third_section {
+    margin-top: 200px;
+  }
+
+  .career_paths_images_container {
+    margin: 125px auto -140px;
+  }
+
+  .career_paths_images_container div {
+    height: 400px;
+  }
+
+  .career_fourth_section {
+    padding-top: 210px;
+    padding-bottom: 200px;
+  }
+
+  .career_growth_paths_container {
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .career_growth_paths {
+    width: 50%;
+  }
+
+  .career_growth_paths:nth-child(1) {
+    margin-right: 20px;
+  }
+
+  .career_growth_paths:nth-child(2) {
+    margin-left: 20px;
+  }
+}
+
+@media(min-width: 1440px) {
+  .career_paths_images_container div {
+    height: 500px;
+  }
+
+  .career_growth_paths:nth-child(1) {
+    margin-right: 40px;
+  }
+
+  .career_growth_paths:nth-child(2) {
+    margin-left: 40px;
+  }
+
+  .career_sixth_section {
+    margin-top: -200px;
+  }
+
+  .career_video_container {
+    height: 628px;
+  }
+}
+
+@media(min-width: 1700px) {
+  .career_paths_images_container div {
+    height: 600px;
+  }
 }
