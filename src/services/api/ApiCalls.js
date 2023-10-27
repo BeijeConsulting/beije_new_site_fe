@@ -23,6 +23,10 @@ const ApiCalls = {
     return get(`academy`)
   },
 
+  academies_getList: () => {
+    return get(`academies`)
+  },
+
   caseStudies_getList: (lang, type) => {
     return get(`casestudies/${type}/${lang}`);
   },
