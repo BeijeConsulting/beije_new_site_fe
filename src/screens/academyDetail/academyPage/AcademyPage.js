@@ -1,6 +1,9 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
+import ApiCalls from "../../../services/api/ApiCalls";
+import { useLocation } from "react-router-dom";
+
 
 // Redux
 import { setCurrentPage, initCurrentPage } from "../../../redux/ducks/currentPageDuck";
@@ -14,20 +17,27 @@ import { Box, Container } from "@mui/material";
 import '../DetailAcademy.css';
 
 // Constants
-import { academyCourseStructure, programBackendAcademy, infoGraphicBackend } from "../../../utils/properties";
+import { infoGraphicFrontend } from "../../../utils/properties";
 
 // Components
 import IntroSectionTxtInfoGraphic from "../../../components/functional_components/introSections/introSectionTxtInfoGraphic/IntroSectionTxtInfoGraphic";
 import CustomAccordion from "../../../components/functional_components/customAccordion/CustomAccordion";
 import CustomForm from "../../../components/hooks_components/customForm/CustomForm";
 
-const AcademyBackend = (props) => {
-
+const AcademyPage = (props) => {
   const secondContainerRef = useRef();
   const { t } = useTranslation();
   const formContainer = useRef();
+  const location = useLocation();
+
+  const [state, setState] = useState({
+    academyData: []
+  })
 
   useEffect(() => {
+
+    getData()
+
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
     props.dispatch(setCurrentPage("academy"));
     props.dispatch(setVisibilityNavbar(true));
@@ -56,15 +66,72 @@ const AcademyBackend = (props) => {
     });
   }
 
+  const useQuery = () => {
+    return new URLSearchParams(location.search);
+}
+
+const getData = async () => {
+    const query = useQuery();
+    const pageId = query.get('id')
+    
+    let response = ApiCalls.academies_getList({
+      headers: {
+        'Accept-Language': 'it'
+      }
+  })
+    const item = response.data.find(obj => obj.id === parseInt(pageId));
+    setState({
+        academyData: item
+    })
+  }
+
+    const academyCourseStructure = [
+        //duration title and label
+        {
+        colMobile: 12,
+        colDesktop: 6,
+        name: "academyFrontend.table.row1Title",
+        type: "title"
+        },
+        {
+        colMobile: 12,
+        colDesktop: 6,
+        name: state.academyData.detail?.[0].duration,
+        type: ""
+        },
+        //work mode title and label
+        {
+        colMobile: 12,
+        colDesktop: 6,
+        name: "academyFrontend.table.row3Title",
+        type: "title"
+        },
+        {
+        colMobile: 12,
+        colDesktop: 6,
+        name: state.academyData.work_mode,
+        type: ""
+        }
+    ]
+
+    const academyTopics = state.academyData.topics?.map((item) => {
+        const topicSubsectionContent = item.subtopics.map((topic) => {
+            return { p: topic.title };
+        })
+        return {
+            sectionTitle: item.name,
+            description: topicSubsectionContent
+          }
+    })
+
   return (
     <>
       <Helmet>
-        <title>{t('helmet.meta_title.academy_backend')}</title>
-        <meta name="description" content={t('helmet.meta_description.academy_backend')} />
-        <meta name="keywords" content={t('helmet.keywords.academy_backend')} />
+        <title>{t('helmet.meta_title.academy_frontend')}</title>
+        <meta name="description" content={t('helmet.meta_description.academy_frontend')} />
+        <meta name="keywords" content={t('helmet.keywords.academy_frontend')} />
         <meta name="google" content="notranslate" />
       </Helmet>
-
 
       <Box
         className={"bg-dark-grey margin-top-container-screens"}
@@ -74,22 +141,21 @@ const AcademyBackend = (props) => {
         < Container
           component={"section"}
           maxWidth={"false"}
-          className={"paddingX-container-general-pages"}
+          className={"paddingX-container-general-pages "}
         >
 
           <IntroSectionTxtInfoGraphic
             typeSection="academy"
             sectionName="Beije talent academy"
-            sectionTitle={t("academyBackend.title")}
+            sectionTitle={t(state.academyData.detail?.[0].title)}
             callback={scrollToSection}
-            paragraph1Title={t("academyBackend.titleParagraph1")}
-            paragraph2Title={t("academyBackend.titleParagraph2")}
-            paragraph1Txt={t("academyBackend.paragraph1Txt")}
+            paragraph1Title={t(state.academyData.detail?.[0].subtitle)}
+            paragraph2Title={t("academyFrontend.titleParagraph2")}
+            paragraph1Txt={t(state.academyData.detail?.[0].description)}
             obj={academyCourseStructure}
-            srcImage={infoGraphicBackend}
+            srcImage={infoGraphicFrontend}
             applyCallback={scrollToForm}
           >
-
           </IntroSectionTxtInfoGraphic>
         </Container>
         <div
@@ -98,14 +164,14 @@ const AcademyBackend = (props) => {
         >
 
           {/* Second section accordion */}
-          < Container
+          <Container
             component={"section"}
             maxWidth={"false"}
             className={"detail-academy-second-section paddingX-container-general-pages"}
           >
-            <h2>{t("academyBackend.program.title")}</h2>
+            <h2>{t("academyFrontend.program.title")}</h2>
             <CustomAccordion
-              obj={programBackendAcademy}
+              obj={academyTopics}
             />
           </Container>
 
@@ -117,7 +183,7 @@ const AcademyBackend = (props) => {
             className={"detail-academy-third-section paddingX-container-general-pages top-oblique-line bg-yellow"}
           >
             <CustomForm
-              titlePage={'Candidatura per Academy Backend'}
+              titlePage="Candidatura per Academy Frontend"
               cvForm
               PopUpExists={true}
               formTitle={t("form.title.apply")}
@@ -129,4 +195,4 @@ const AcademyBackend = (props) => {
   )
 }
 
-export default connect()(AcademyBackend)
+export default connect()(AcademyPage)

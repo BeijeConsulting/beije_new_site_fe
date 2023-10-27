@@ -39,7 +39,9 @@ const CustomLink = (props) => {
   return (
     <div className="wrapper" onClick={handleCallback}>
       <Link
-        to={props.linkTo}
+        to={{ 
+          pathname: props.linkTo
+        }}
         className={switchClassName()}
         download={props.download}
         target={props.target}
