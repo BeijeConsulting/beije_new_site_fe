@@ -74,12 +74,8 @@ const getData = async () => {
     const query = useQuery();
     const pageId = query.get('id')
     
-    let response = ApiCalls.academies_getList({
-      headers: {
-        'Accept-Language': 'it'
-      }
-  })
-    const item = response.data.find(obj => obj.id === parseInt(pageId));
+    const response = await ApiCalls.academies_getList();
+    const item = response.find(obj => obj.id === parseInt(pageId));
     setState({
         academyData: item
     })

@@ -7,8 +7,8 @@ const axiosInstance = axios.create({ baseURL: ENVIRONMENT.API_REST_BE });
 
 const defaultHeaders = {
   Accept: "*/*",
-  "Content-type": "application/json; charset=UTF-8",
-  "Access-Control-Allow-Origin": "*",
+  "Content-type": "application/json",
+  "Accept-Language": "it"
 };
 // Request interceptor for API calls
 axiosInstance.interceptors.request.use(
