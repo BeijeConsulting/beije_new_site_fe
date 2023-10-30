@@ -27,14 +27,18 @@ axiosInstance.interceptors.response.use(
   }
 );
 
-export const get = async (path, obj = {}) => {
+export const get = async (path, obj = {}, headers = {}) => {
   try {
     const queryString = Object.keys(obj).map(key => key + "=" + obj[key]).join("&");
+    const combinedHeaders = {
+      ...defaultHeaders,
+      ...headers
+    };
     let { data } = await axiosInstance.get(
       `${ENVIRONMENT.API_REST_BE}${path}${!isEmpty(queryString) ? "?" + queryString : ""}`,
       // `${process.env.REACT_APP_API_REST_BE ? process.env.REACT_APP_API_REST_BE : ENVIRONMENT.API_REST_BE}${path}${!isEmpty(queryString) ? "?" + queryString : ""}`,
       {
-        headers: defaultHeaders,
+        headers: combinedHeaders,
       }
     );
     return data;

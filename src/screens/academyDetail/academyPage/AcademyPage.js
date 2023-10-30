@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import ApiCalls from "../../../services/api/ApiCalls";
-import { useLocation } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 
 
 // Redux
@@ -45,7 +45,7 @@ const AcademyPage = (props) => {
       props.dispatch(initCurrentPage());
       props.dispatch(initVisibilityNavbar());
     };
-  }, [])
+  }, [window.location.pathname])
 
   const scrollToSection = () => {
     let elementTop = secondContainerRef.current.offsetTop;
@@ -72,14 +72,17 @@ const AcademyPage = (props) => {
 
 const getData = async () => {
     const query = useQuery();
-    const pageId = query.get('id')
-    
-    const response = await ApiCalls.academies_getList();
+    const pageId = query.get('id');
+
+    const urlLanguage = localStorage.getItem('currentLanguage');
+    const response = await ApiCalls.academies_getList({ 
+      'Accept-Language': urlLanguage
+    });
     const item = response.find(obj => obj.id === parseInt(pageId));
     setState({
         academyData: item
     })
-  }
+}
 
     const academyCourseStructure = [
         //duration title and label
@@ -105,7 +108,7 @@ const getData = async () => {
         {
         colMobile: 12,
         colDesktop: 6,
-        name: state.academyData.work_mode,
+        name: state.academyData.detail?.[0].work_mode,
         type: ""
         }
     ]
@@ -119,7 +122,6 @@ const getData = async () => {
             description: topicSubsectionContent
           }
     })
-
   return (
     <>
       <Helmet>

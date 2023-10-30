@@ -59,7 +59,7 @@ const CustomForm = (props) => {
 
   useEffect(() => {
     (async () => {
-      let POPUPMESSAGE = await ApiCalls.popup_message();
+      let POPUPMESSAGE = await ApiCalls.alert_message();
       setState(prevState => ({ ...prevState, popUpMessage: POPUPMESSAGE }))
     })()
   }, [])

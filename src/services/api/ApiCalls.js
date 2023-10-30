@@ -19,12 +19,12 @@ const ApiCalls = {
     return post("form", value);
   },
 
-  popup_message: () => {
-    return get(`academy`)
+  alert_message: () => {
+    return get(`academy/show_alert`)
   },
 
-  academies_getList: () => {
-    return get(`academies`)
+  academies_getList: (headers = {}) => {
+    return get(`academies`, {}, headers)
   },
 
   caseStudies_getList: (lang, type) => {

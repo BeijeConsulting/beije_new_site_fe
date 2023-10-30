@@ -25,8 +25,12 @@ const SwitchLang = (props) => {
   const selectLanguage = (code) => async () => {
     await switchLang(code);
     dispatch(setLanguage(code));
-    navigate(`/${code.toLowerCase()}${pathname.replace(`${lang}/`, "")}`, { replace: true });
-  }
+    const currentUrl = new URL(window.location.href);
+    const segments = currentUrl.pathname.split('/');
+    segments[1] = code.toLowerCase();
+    const newPathname = segments.join('/');
+    navigate(newPathname + currentUrl.search, { replace: true });
+};
 
   return (
     <span className={props.classNameContainer}>
