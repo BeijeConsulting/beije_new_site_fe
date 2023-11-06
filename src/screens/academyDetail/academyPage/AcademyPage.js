@@ -95,7 +95,7 @@ const getData = async () => {
         {
         colMobile: 12,
         colDesktop: 6,
-        name: state.academyData.detail?.[0].duration,
+        name: state.academyData.languages?.[0].duration,
         type: ""
         },
         //work mode title and label
@@ -108,7 +108,7 @@ const getData = async () => {
         {
         colMobile: 12,
         colDesktop: 6,
-        name: state.academyData.detail?.[0].work_mode,
+        name: state.academyData.work_mode,
         type: ""
         }
     ]
