@@ -114,11 +114,11 @@ const getData = async () => {
     ]
 
     const academyTopics = state.academyData.topics?.map((item) => {
-        const topicSubsectionContent = item.subtopics.map((topic) => {
+        const topicSubsectionContent = item.topicTranslate?.[0].subtopics.map((topic) => {
             return { p: topic.title };
         })
         return {
-            sectionTitle: item.name,
+            sectionTitle: item.topicTranslate[0].name,
             description: topicSubsectionContent
           }
     })
@@ -145,11 +145,11 @@ const getData = async () => {
           <IntroSectionTxtInfoGraphic
             typeSection="academy"
             sectionName="Beije talent academy"
-            sectionTitle={t(state.academyData.detail?.[0].title)}
+            sectionTitle={t(state.academyData.title)}
             callback={scrollToSection}
-            paragraph1Title={t(state.academyData.detail?.[0].subtitle)}
+            paragraph1Title={t(state.academyData.subtitle)}
             paragraph2Title={t("academyFrontend.titleParagraph2")}
-            paragraph1Txt={t(state.academyData.detail?.[0].description)}
+            paragraph1Txt={t(state.academyData.description)}
             obj={academyCourseStructure}
             srcImage={infoGraphicFrontend}
             applyCallback={scrollToForm}

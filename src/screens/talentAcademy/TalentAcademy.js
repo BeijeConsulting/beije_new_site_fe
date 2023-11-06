@@ -180,7 +180,7 @@ import ApiCalls from "../../services/api/ApiCalls";
                     <div key={item.id}>
                       <CustomLink
                         linkTo={`/beije-talent-academy/academy?id=${item.id}`}
-                        content={t(item.academy_name)}
+                        content={t(item.languages[0].academy_name)}
                         typeLink={"detail-academy"}
                       />
                   </div>
