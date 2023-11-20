@@ -114,11 +114,11 @@ const getData = async () => {
     ]
 
     const academyTopics = state.academyData.topics?.map((item) => {
-        const topicSubsectionContent = item.topicTranslate?.[0].subtopics.map((topic) => {
+        const topicSubsectionContent = item.languages?.[0].subtopics.map((topic) => {
             return { p: topic.title };
         })
         return {
-            sectionTitle: item.topicTranslate[0].name,
+            sectionTitle: item.languages[0].name,
             description: topicSubsectionContent
           }
     })
