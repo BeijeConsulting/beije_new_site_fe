@@ -3,12 +3,14 @@ import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import ApiCalls from "../../../services/api/ApiCalls";
 import { useLocation, useParams } from "react-router-dom";
+import { get as __get } from 'lodash';
+
 
 
 // Redux
 import { setCurrentPage, initCurrentPage } from "../../../redux/ducks/currentPageDuck";
 import { setVisibilityNavbar, initVisibilityNavbar } from "../../../redux/ducks/showNavbarTopDuck";
-import { connect } from "react-redux";
+import { connect, useSelector } from "react-redux";
 
 // MUI
 import { Box, Container } from "@mui/material";
@@ -25,6 +27,7 @@ import CustomAccordion from "../../../components/functional_components/customAcc
 import CustomForm from "../../../components/hooks_components/customForm/CustomForm";
 
 const AcademyPage = (props) => {
+  const currentLanguage = useSelector((state) => __get(state.languageDuck, 'currentLanguage', {}));
   const secondContainerRef = useRef();
   const { t } = useTranslation();
   const formContainer = useRef();
@@ -74,9 +77,8 @@ const getData = async () => {
     const query = useQuery();
     const pageId = query.get('id');
 
-    const urlLanguage = localStorage.getItem('currentLanguage');
     const response = await ApiCalls.academies_getList({ 
-      'Accept-Language': urlLanguage
+      'Accept-Language': currentLanguage
     });
     const item = response.find(obj => obj.id === parseInt(pageId));
     setState({
