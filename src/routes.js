@@ -8,8 +8,6 @@ import Up from "./screens/up/Up";
 import Consulting from "./screens/consulting/Consulting";
 import TalentAcademy from "./screens/talentAcademy/TalentAcademy";
 import Blog from "./screens/blog/Blog";
-import AcademyFrontend from "./screens/academyDetail/academyFrontend/AcademyFrontend";
-import AcademyBackend from "./screens/academyDetail/academyBackend/AcademyBackend";
 import Career from "./screens/career/Career"
 import Contacts from "./screens/contacts/Contacts";
 import BlogDetail from "./screens/blog/BlogDetail";
@@ -20,6 +18,7 @@ import ErrorPage from "./screens/ErrorPage";
 import Events from "./screens/events/Events";
 import EventsDetail from "./screens/events/EventsDetail";
 import Manifest from "./screens/manifest/Manifest";
+import AcademyPage from "./screens/academyDetail/academyPage/AcademyPage";
 
 export default [
   {
@@ -44,12 +43,8 @@ export default [
         element: <TalentAcademy />
       },
       {
-        path: "beije-talent-academy/academy-frontend",
-        element: <AcademyFrontend />
-      },
-      {
-        path: "beije-talent-academy/academy-backend",
-        element: <AcademyBackend />
+        path: "beije-talent-academy/academy",
+        element: <AcademyPage />
       },
       {
         path: "beije-talent-academy/:permalink",

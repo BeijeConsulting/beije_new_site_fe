@@ -28,16 +28,19 @@ import { isEmpty } from "lodash";
 import { useState } from "react";
 import ApiCalls from "../../services/api/ApiCalls";
 
-
-const TalentAcademy = (props) => {
-
+ const TalentAcademy = (props) => {
   const { t } = useTranslation();
   const secondContainerRef = useRef();
   const formContainer = useRef();
   const [state, setState] = useState({
-    caseStudiesResponse: null
+    caseStudiesResponse: null,
+    academiesData: []
   })
+
   useEffect(() => {
+
+    getData()
+
     if (window.location.hash === '#TalentAcademy') {
       window.scrollTo({ top: secondContainerRef.current.offsetTop, left: 0, behavior: "smooth" })
     }
@@ -81,7 +84,13 @@ const TalentAcademy = (props) => {
       behavior: 'smooth'
     });
   }
-
+  const getData = async () => {
+    let response = await ApiCalls.academies_getList()
+    setState({
+      academiesData: response,
+    })
+  }
+  
   return (
     <>
       <Helmet>
@@ -166,20 +175,17 @@ const TalentAcademy = (props) => {
               <div
                 className="academy-third-section-links-container"
               >
-                <div>
-                  <CustomLink
-                    linkTo={"/beije-talent-academy/academy-frontend"}
-                    content={t("academy.thirdSection.link1")}
-                    typeLink={"detail-academy"}
-                  />
-                </div>
-                <div>
-                  <CustomLink
-                    linkTo={"/beije-talent-academy/academy-backend"}
-                    content={t("academy.thirdSection.link2")}
-                    typeLink={"detail-academy"}
-                  />
-                </div>
+                {state.academiesData && state.academiesData.length > 0 ? state.academiesData.map((item) => {
+                  return (
+                    <div key={item.id}>
+                      <CustomLink
+                        linkTo={`/beije-talent-academy/academy?id=${item.id}`}
+                        content={t(item.languages[0].academy_name)}
+                        typeLink={"detail-academy"}
+                      />
+                  </div>
+                  )
+                }) : null}
               </div>
             </Box>
 
