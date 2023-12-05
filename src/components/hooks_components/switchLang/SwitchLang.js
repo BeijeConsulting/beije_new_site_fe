@@ -5,7 +5,7 @@ import { get as __get } from 'lodash';
 import { useDispatch, useSelector } from 'react-redux';
 import { switchLang } from "../../../i18n/i18n-config";
 import { setLanguage } from "../../../redux/ducks/Language";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 // Style
 import "./SwitchLang.css";
@@ -13,10 +13,8 @@ import "./SwitchLang.css";
 const SwitchLang = (props) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const { lang } = useParams();
   const [selected, setSelected] = useState('IT');
   const currentLanguage = useSelector((state) => __get(state.languageDuck, 'currentLanguage', {}));
-  const { pathname } = useLocation();
 
   useEffect(() => {
     setSelected(currentLanguage);

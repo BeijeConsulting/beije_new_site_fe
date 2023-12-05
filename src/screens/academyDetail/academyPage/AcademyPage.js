@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import ApiCalls from "../../../services/api/ApiCalls";
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { get as __get } from 'lodash';
 
 
@@ -116,7 +116,7 @@ const getData = async () => {
     ]
 
     const academyTopics = state.academyData.topics?.map((item) => {
-        const topicSubsectionContent = item.languages?.[0].subtopics.map((topic) => {
+        const topicSubsectionContent = item.languages[0].subtopics.map((topic) => {
             return { p: topic.title };
         })
         return {
