@@ -28,10 +28,10 @@ const ApiCalls = {
   },
 
   caseStudies_getList: (lang, type) => {
-    return get(`casestudies/${type}/${lang}`);
+    return get(`case-studies/${type}/${lang}`);
   },
   caseStudies_getListDetail: (permalink, type) => {
-    return get(`casestudy/permalink/${type}/${permalink}`);
+    return get(`case-studies/permalink/${type}/${permalink}`);
   },
 
   community_getList: (lang) => {
