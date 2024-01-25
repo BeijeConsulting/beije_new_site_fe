@@ -28,11 +28,16 @@ const ApiCalls = {
   },
 
   caseStudies_getList: (lang, type) => {
-    return get(`case-studies/${type}/${lang}`);
+    return get(`case-studies/type/${type}/${lang}`);
   },
-  caseStudies_getListDetail: (permalink, type) => {
-    return get(`case-studies/permalink/${type}/${permalink}`);
+  
+  caseStudies_getListDetail: (permalink) => {
+    return get(`case-studies/permalink/${permalink}`);
   },
+
+  // caseStudies_getListDetail: (id, lang) => {
+  //   return get(`case-studies/${id}/${lang}`);
+  // },
 
   community_getList: (lang) => {
     return get(`events/order_time/desc/${lang}`);

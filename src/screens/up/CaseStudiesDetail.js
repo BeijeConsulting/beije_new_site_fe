@@ -54,7 +54,7 @@ const CaseStudiesDetail = (props) => {
   const getCaseStudiesDataUp = async () => {
     let caseStudiesResponse = [];
 
-    caseStudiesResponse = await ApiCalls.caseStudies_getListDetail(permalink, 1);
+    caseStudiesResponse = await ApiCalls.caseStudies_getListDetail(permalink);
     if (!caseStudiesResponse) {
       navigate(`/beije-up`);
 
@@ -70,7 +70,7 @@ const CaseStudiesDetail = (props) => {
 
   const getCaseStudiesDataAcademy = async () => {
     let caseStudiesResponse = [];
-    caseStudiesResponse = await ApiCalls.caseStudies_getListDetail(permalink, 2);
+    caseStudiesResponse = await ApiCalls.caseStudies_getListDetail(permalink);
     if (!caseStudiesResponse) {
       navigate(`/beije-talent-academy`);
     } else if (caseStudiesResponse.language !== lang) {
