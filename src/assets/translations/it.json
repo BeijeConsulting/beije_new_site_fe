@@ -136,6 +136,7 @@
     "tertiary_pages": "Area legale",
     "privacyPolicies": "Privacy policy",
     "legalNotes": "Note legali",
+    "paritaGenere": "Parità di Genere",
     "vatNumber": "Beije è un marchio di People First Srl - Partita IVA 16334941008"
   },
   "home": {
@@ -774,6 +775,37 @@
       },
       "li6": "in generale, l’utilizzo che causi o possa causare modifiche, danneggiamento, interruzione o limitazione di questo Sito web o di suoi Servizi;",
       "li7": "la raccolta non autorizzata, tramite il Sito web, di informazioni personali su terzi (p.e. indirizzi di posta elettronica)"
+    }
+  },
+  "paritaGenere":{
+    "quote":"  <strong>“La nostra capacità di raggiungere l'unità nella diversità sarà la bellezza e la prova della nostra civiltà.“ </strong><br> <br>- Mahatma Gandhi<br>" ,
+    "text1":" <br> Il valore fondante di People First srl è: “le Persone al centro di tutto”. <br><br> Partendo da questo presupposto la nostra organizzazione promuove una cultura aziendale fondata sul rispetto per ogni individuo e sul riconoscimento delle esigenze, aspirazioni e contributi unici di ognuno. <br> People First srl valorizza il pluralismo e le pratiche inclusive nel mondo del lavoro sia come fattore etico che come capacità di rispondere alle trasformazioni della società e dei mercati. <br><br> Adottando questa carta, <strong> People First srl intende contribuire alla lotta contro tutte le forme di discriminazione sul luogo di lavoro </strong> - identità di genere, età, disabilità, etnia, fede religiosa, orientamento sessuale - <strong> impegnandosi al contempo a valorizzare le diversità all’interno dell’organizzazione aziendale, con particolare riguardo alle pari opportunità tra uomo e donna.</strong> <br><br> In virtù di questa Carta, People First srl si impegna a contribuire al raggiungimento degli obiettivi sopra condivisi attraverso una serie di azioni concrete di seguito descritte: <br> <br>",
+    "list": {
+      "li1": "definire e attuare politiche aziendali che, a partire dal vertice, coinvolgano tutti i livelli dell’organizzazione nel rispetto del principio della pari dignità e trattamento sul lavoro;",
+      "li2": "nominare un comitato interno deputato alle pari opportunità che presidi la gestione e il monitoraggio delle tematiche legate all'inclusione, all’equità e all’integrazione e che interloquisca con le varie funzioni aziendali responsabilizzando le stesse in materia di pari opportunità;",
+      "li3": "creare una cultura aziendale inclusiva promuovendo, a tutti i livelli dell’organizzazione, la consapevolezza del valore della diversità attraverso iniziative formative e di sensibilizzazione; ",
+      "li4": "adottare il principio di parità di trattamento nelle pratiche che regolano tutte le fasi della vita professionale delle Persone affinché queste siano basate unicamente su competenze, esperienza e potenziale professionale, attraverso: ",
+      "li5": "Processi di assunzione equi:",
+      "li6": {
+        "part1": "attività e comunicazione di reclutamento orientate a garantire e trasmettere rispetto di uguaglianza e diversità; ",
+        "part2": "percorsi di selezione basati sul merito senza discriminazione di alcun genere;"
+      },
+      "li7": "Retribuzione Equa:",
+      "li8": {
+        "part1": "revisioni salariali periodiche per garantire una retribuzione equa per ruoli equivalenti;",
+        "part2": "eliminazione divario retributivo di genere attraverso e l’adesione all’equità salariale;"
+      },
+      "li9": "Possibilità di Sviluppo e Formazione Equi:",
+      "li10": {
+        "part1": "strumenti di sviluppo e formazione uguali per tutti i dipendenti.",
+        "part2": "elaborazione di piani di crescita personalizzati per favorire l’evoluzione professionale di tutte le Persone impegnate in azienda, senza alcuna differenza."
+      },
+      "li11": "individuare e fornire al personale strumenti interni a garanzia della effettiva tutela della parità di trattamento attraverso l’apertura di canali di comunicazione volti a segnalare proposte o eventuali violazioni; ",
+      "li12": "fornire strumenti concreti per favorire, ogni volta che è possibile, la conciliazione dei tempi di vita e di lavoro, favorendo l’incontro tra domanda e offerta di flessibilità aziendale e delle Persone, anche con adeguate politiche aziendali, assicurando una formazione adeguata al rientro dei congedi parentali; ",
+      "li13": "comunicare al personale, con le modalità più opportune, l’impegno assunto a favore di una cultura aziendale della pari opportunità, informandolo sui progetti intrapresi in tali ambiti e sui risultati pratici conseguiti;",
+      "li14": " gestire in maniera attenta la comunicazione verso l’esterno attraverso modalità e messaggi che mirino a valorizzare l'immagine femminile, assicurare l'inclusività e rappresentare la diversità di genere in modo equo ed equilibrato.",
+      "li15": "promuovere verso l’esterno l’impegno che l’azienda assume sulle tematiche di parità, dando testimonianza delle politiche adottate e dei progressi ottenuti in un’ottica di comunità realmente solidale e responsabile;",
+      "li16": "monitorare periodicamente l’andamento delle pari opportunità e valutare l'impatto delle buone pratiche adottate, apportando modifiche necessarie per migliorare continuamente l'uguaglianza."
     }
   },
   "cookiePolicies": {
