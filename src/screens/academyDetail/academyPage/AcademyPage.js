@@ -3,12 +3,14 @@ import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import ApiCalls from "../../../services/api/ApiCalls";
 import { useLocation } from "react-router-dom";
+import { get as __get } from 'lodash';
+
 
 
 // Redux
 import { setCurrentPage, initCurrentPage } from "../../../redux/ducks/currentPageDuck";
 import { setVisibilityNavbar, initVisibilityNavbar } from "../../../redux/ducks/showNavbarTopDuck";
-import { connect } from "react-redux";
+import { connect, useSelector } from "react-redux";
 
 // MUI
 import { Box, Container } from "@mui/material";
@@ -25,6 +27,7 @@ import CustomAccordion from "../../../components/functional_components/customAcc
 import CustomForm from "../../../components/hooks_components/customForm/CustomForm";
 
 const AcademyPage = (props) => {
+  const currentLanguage = useSelector((state) => __get(state.languageDuck, 'currentLanguage', {}));
   const secondContainerRef = useRef();
   const { t } = useTranslation();
   const formContainer = useRef();
@@ -45,7 +48,7 @@ const AcademyPage = (props) => {
       props.dispatch(initCurrentPage());
       props.dispatch(initVisibilityNavbar());
     };
-  }, [])
+  }, [window.location.pathname])
 
   const scrollToSection = () => {
     let elementTop = secondContainerRef.current.offsetTop;
@@ -72,18 +75,16 @@ const AcademyPage = (props) => {
 
 const getData = async () => {
     const query = useQuery();
-    const pageId = query.get('id')
-    
-    let response = ApiCalls.academies_getList({
-      headers: {
-        'Accept-Language': 'it'
-      }
-  })
-    const item = response.data.find(obj => obj.id === parseInt(pageId));
+    const pageId = query.get('id');
+
+    const response = await ApiCalls.academies_getList({ 
+      'Accept-Language': currentLanguage
+    });
+    const item = response.find(obj => obj.id === parseInt(pageId));
     setState({
         academyData: item
     })
-  }
+}
 
     const academyCourseStructure = [
         //duration title and label
@@ -96,7 +97,7 @@ const getData = async () => {
         {
         colMobile: 12,
         colDesktop: 6,
-        name: state.academyData.detail?.[0].duration,
+        name: state.academyData.languages?.[0].duration,
         type: ""
         },
         //work mode title and label
@@ -115,15 +116,14 @@ const getData = async () => {
     ]
 
     const academyTopics = state.academyData.topics?.map((item) => {
-        const topicSubsectionContent = item.subtopics.map((topic) => {
+        const topicSubsectionContent = item.languages[0].subtopics.map((topic) => {
             return { p: topic.title };
         })
         return {
-            sectionTitle: item.name,
+            sectionTitle: item.languages[0].name,
             description: topicSubsectionContent
           }
     })
-
   return (
     <>
       <Helmet>
@@ -147,11 +147,11 @@ const getData = async () => {
           <IntroSectionTxtInfoGraphic
             typeSection="academy"
             sectionName="Beije talent academy"
-            sectionTitle={t(state.academyData.detail?.[0].title)}
+            sectionTitle={t(state.academyData.title)}
             callback={scrollToSection}
-            paragraph1Title={t(state.academyData.detail?.[0].subtitle)}
+            paragraph1Title={t(state.academyData.subtitle)}
             paragraph2Title={t("academyFrontend.titleParagraph2")}
-            paragraph1Txt={t(state.academyData.detail?.[0].description)}
+            paragraph1Txt={t(state.academyData.description)}
             obj={academyCourseStructure}
             srcImage={infoGraphicFrontend}
             applyCallback={scrollToForm}

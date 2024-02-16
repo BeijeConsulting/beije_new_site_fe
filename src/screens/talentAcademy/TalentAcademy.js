@@ -85,16 +85,12 @@ import ApiCalls from "../../services/api/ApiCalls";
     });
   }
   const getData = async () => {
-    let response = await ApiCalls.academies_getList({
-      headers: {
-        'Accept-Language': 'it'
-      }
-  })
+    let response = await ApiCalls.academies_getList()
     setState({
-      academiesData: response.data,
+      academiesData: response,
     })
   }
-
+  
   return (
     <>
       <Helmet>
@@ -179,12 +175,12 @@ import ApiCalls from "../../services/api/ApiCalls";
               <div
                 className="academy-third-section-links-container"
               >
-                {state.academiesData.length > 0 ? state.academiesData.map((item) => {
+                {state.academiesData && state.academiesData.length > 0 ? state.academiesData.map((item) => {
                   return (
                     <div key={item.id}>
                       <CustomLink
                         linkTo={`/beije-talent-academy/academy?id=${item.id}`}
-                        content={t(item.detail[0].academy_name)}
+                        content={t(item.languages[0].academy_name)}
                         typeLink={"detail-academy"}
                       />
                   </div>
