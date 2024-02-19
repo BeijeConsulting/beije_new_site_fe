@@ -137,6 +137,7 @@
     "tertiary_pages": "Legal department",
     "privacyPolicies": "Privacy policy",
     "legalNotes": "Legal notes",
+    "paritaGenere": "Gender Equality",
     "vatNumber": "Beije is a People First Srl brand - VAT number 16334941008 "
   },
   "home": {
@@ -791,6 +792,38 @@
       "li6": "in general, use that causes or is likely to cause modification, damage, interruption or limitation of this Website or its Services;",
       "li7": "the unauthorised collection, via the Website, of personal information about third parties (e.g. email addresses)."
     }
+  },
+  "paritaGenere": {
+    "quote": " <strong> “Our ability to reach unity in diversity will be the beauty and the test of our civilization“ </strong> <br> <br> - Mahatma Gandhi <br> <br>",
+    "text1": "The founding value of People First Ltd. is: *“People at the center of everything.“* <br> <br> Based on this premise, our organization promotes a corporate culture founded on respect for each individual and recognition of each person's unique needs, aspirations and contributions. <br> People First Ltd. values pluralism and inclusive practices in the world of work both as an ethical factor and as an ability to respond to changes in society and markets. <br> By adopting this policy, People First Ltd. intends to contribute to the <strong> fight  against all forms of discrimination in the workplace </strong> - gender identity, age, disability, ethnicity, religious faith, sexual orientation - <strong> while committing itself to valuing diversity within the corporate organization, with particular regard to equal opportunities between men and women. </strong> <br> <br> Building on these principles, People First Ltd. is committed to contributing to the achievement of the goals shared above through a series of concrete actions described below: <br>",
+    "list": {
+      "li1": "Establish and implement company policies that, starting at the top, involve all levels of the organization in compliance with the principle of equal dignity and treatment at work;",
+      "li2": "Appoint an internal committee responsible for equal opportunity to preside over the management and monitoring of issues related to inclusion, equity and integration and to interact with the various corporate functions by holding them accountable for equal opportunity;",
+      "li3": "Create an inclusive corporate culture by promoting, at all levels of the organization, awareness of the value of diversity through initiatives training and awareness raising;",
+      "li4": "Adopt the principle of equal treatment in practices governing all stages of People's professional lives so that they are based solely on skills, experience and professional potential, through:",
+      "li5": "Fair hiring processes:",
+      "li6": {
+        "part1": "recruitment activities and communication oriented to ensure and convey respect for equality and diversity; ",
+        "part2": "merit-based selection paths without discrimination of any kind;"
+      },
+      "li7": "Fair Pay:",
+      "li8": {
+        "part1": "Periodic salary reviews to ensure fair pay for equivalent roles;",
+        "part2": "Elimination of gender pay gap through and adherence to pay equity;"
+      },
+      "li9": "Equitable Development and Training Opportunities:",
+      "li10": {
+        "part1": "Equal development and training tools for all employees.",
+        "part2": "Development of customized growth plans to foster the professional development of all People engaged in the company, without any difference"
+      },
+      "li11": "Identify and provide staff with internal tools to ensure the effective protection of equal treatment by opening communication channels aimed at reporting proposals or possible violations; ",
+      "li12": "To provide concrete tools to facilitate, whenever possible, the reconciliation of work and life times, by facilitating the matching of demand and supply of corporate and People's flexibility, including through appropriate corporate policies, ensuring adequate training for the return of parental leave; ",
+      "li13": "Communicate to staff, in appropriate ways, their commitment to a corporate culture of equal opportunity, informing them about projects undertaken in these areas and the practical results achieved; ",
+      "li14": "Carefully manage outward communication through modes and messages that aim to enhance women's image, ensure inclusiveness, and represent gender diversity in a fair and balanced way. ",
+      "li15": "Promote to the outside world the company's commitment to equality issues, bearing witness to the policies adopted and the progress achieved from the perspective of a truly supportive and responsible community; ",
+      "li16": "Periodically monitor equal opportunity progress and evaluate the impact of good practices adopted, making necessary changes to continuously improve equality"
+    },
+    "text2":"People First Ltd. subscribes to this commitment and reminds that equality at work is the responsibility of every member of the organization: it encourages everyone to contribute to the creation of a fair and inclusive work environment."
   },
   "cookiePolicies": {
     "title": "Cookie Policy",
