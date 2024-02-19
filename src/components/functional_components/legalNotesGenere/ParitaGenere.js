@@ -6,6 +6,12 @@ const paritaGenere = () => {
   const { t } = useTranslation()
   return (
     <div style={{ color: '#262E36' }}>
+      <Trans i18nKey={'paritaGenere.title'}>
+      CARTA PER LE PARI OPPORTUNITA’ SUL LAVORO
+
+        <br />
+        <br />
+      </Trans>
       <Trans i18nKey={'paritaGenere.quote'}>
         <b>
           &quot;La nostra capacità di raggiungere l&apos;unità nella diversità
