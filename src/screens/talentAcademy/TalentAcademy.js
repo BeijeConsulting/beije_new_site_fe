@@ -33,7 +33,7 @@ import ApiCalls from "../../services/api/ApiCalls";
   const secondContainerRef = useRef();
   const formContainer = useRef();
   const [state, setState] = useState({
-    caseStudiesResponse: null,
+    caseStudiesResponse: [],
     academiesData: []
   })
 
@@ -49,22 +49,12 @@ import ApiCalls from "../../services/api/ApiCalls";
     }
     props.dispatch(setCurrentPage("academy"));
     props.dispatch(setVisibilityNavbar(true));
-    getCaseStudiesData();
     return () => {
       props.dispatch(initCurrentPage());
       props.dispatch(initVisibilityNavbar());
     };
   }, [props.languageDuck.currentLanguage])
 
-  const getCaseStudiesData = async () => {
-    let caseStudiesResponse = await ApiCalls.caseStudies_getList(props.languageDuck.currentLanguage, 2);
-
-    setState({
-      ...state,
-      caseStudiesResponse: caseStudiesResponse
-    })
-
-  }
 
   const scrollToSection = () => {
     let elementTop = secondContainerRef.current.offsetTop;
@@ -85,9 +75,11 @@ import ApiCalls from "../../services/api/ApiCalls";
     });
   }
   const getData = async () => {
-    let response = await ApiCalls.academies_getList()
+    let caseStudiesResponse = await ApiCalls.caseStudies_getList(props.languageDuck.currentLanguage, 2);
+    let academiesResponse = await ApiCalls.academies_getList()
     setState({
-      academiesData: response,
+      caseStudiesResponse: caseStudiesResponse,
+      academiesData: academiesResponse,
     })
   }
   

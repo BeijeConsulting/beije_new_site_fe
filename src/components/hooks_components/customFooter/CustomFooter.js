@@ -20,6 +20,7 @@ import SocialLinks from "../../functional_components/socialLinks/SocialLinks";
 import CustomModal from "../customModal/CustomModal";
 import PrivacyPolicies from "../../functional_components/privacyPolicies/PrivacyPolicies";
 import LegalNotes from "../../functional_components/legalNotes/LegalNotes";
+import ParitaGenere from "../../functional_components/legalNotesGenere/ParitaGenere";
 
 const CustomFooter = (props) => {
   const { t } = useTranslation();
@@ -140,6 +141,12 @@ const CustomFooter = (props) => {
           >
             {t("footer.legalNotes")}
           </p>
+          <p
+            className="cursor-pointer footer-link-privacyPolicies-legalNotes"
+            onClick={openModal("paritaGenere")}
+          >
+            {t("footer.paritaGenere")}
+          </p>
         </div>
 
       </div>
@@ -175,6 +182,9 @@ const CustomFooter = (props) => {
         {
           state.typeModal === "legalNotes" &&
           <LegalNotes />
+        }{
+          state.typeModal === "paritaGenere" &&
+          <ParitaGenere />
         }
 
       </CustomModal>
