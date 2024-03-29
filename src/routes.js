@@ -19,6 +19,7 @@ import Events from "./screens/events/Events";
 import EventsDetail from "./screens/events/EventsDetail";
 import Manifest from "./screens/manifest/Manifest";
 import AcademyPage from "./screens/academyDetail/academyPage/AcademyPage";
+import Whistleblowing from "./screens/whistleblowing/Whistleblowing";
 
 export default [
   {
@@ -85,6 +86,10 @@ export default [
       {
         path: "contacts",
         element: <Contacts />
+      },
+      {
+        path: "whistleblowing",
+        element: <Whistleblowing />
       },
       {
         path: "error",

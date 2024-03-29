@@ -147,6 +147,16 @@ const CustomFooter = (props) => {
           >
             {t("footer.paritaGenere")}
           </p>
+          <p
+            className="cursor-pointer footer-link-privacyPolicies-legalNotes"
+          >
+            <Link
+              to={"/whistleblowing"}
+              className={"footer-links"}
+            >
+              {t("footer.whistleblowing")}
+            </Link>
+          </p>
         </div>
 
       </div>

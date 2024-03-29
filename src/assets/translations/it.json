@@ -137,7 +137,8 @@
     "privacyPolicies": "Privacy policy",
     "legalNotes": "Note legali",
     "paritaGenere": "Parità di Genere",
-    "vatNumber": "Beije è un marchio di People First Srl - Partita IVA 16334941008"
+    "vatNumber": "Beije è un marchio di People First Srl - Partita IVA 16334941008",
+    "whistleblowing": "Whistleblowing"
   },
   "home": {
     "firstSection": {
@@ -777,10 +778,10 @@
       "li7": "la raccolta non autorizzata, tramite il Sito web, di informazioni personali su terzi (p.e. indirizzi di posta elettronica)"
     }
   },
-  "paritaGenere":{
-    "title":"<strong>CARTA PER LE PARI OPPORTUNITA’ SUL LAVORO </strong><br> <br> <br>",
-    "quote":"  <strong> “La nostra capacità di raggiungere l'unità nella diversità sarà la bellezza e la prova della nostra civiltà.“ </strong><br> <br>- Mahatma Gandhi<br>" ,
-    "text1":" <br> Il valore fondante di People First srl è: “le Persone al centro di tutto”. <br><br> Partendo da questo presupposto la nostra organizzazione promuove una cultura aziendale fondata sul rispetto per ogni individuo e sul riconoscimento delle esigenze, aspirazioni e contributi unici di ognuno. <br> People First srl valorizza il pluralismo e le pratiche inclusive nel mondo del lavoro sia come fattore etico che come capacità di rispondere alle trasformazioni della società e dei mercati. <br><br> Adottando questa carta, <strong> People First srl intende contribuire alla lotta contro tutte le forme di discriminazione sul luogo di lavoro </strong> - identità di genere, età, disabilità, etnia, fede religiosa, orientamento sessuale - <strong> impegnandosi al contempo a valorizzare le diversità all’interno dell’organizzazione aziendale, con particolare riguardo alle pari opportunità tra uomo e donna.</strong> <br><br> In virtù di questa Carta, People First srl si impegna a contribuire al raggiungimento degli obiettivi sopra condivisi attraverso una serie di azioni concrete di seguito descritte: <br> <br>",
+  "paritaGenere": {
+    "title": "<strong>CARTA PER LE PARI OPPORTUNITA’ SUL LAVORO </strong><br> <br> <br>",
+    "quote": "  <strong> “La nostra capacità di raggiungere l'unità nella diversità sarà la bellezza e la prova della nostra civiltà.“ </strong><br> <br>- Mahatma Gandhi<br>",
+    "text1": " <br> Il valore fondante di People First srl è: “le Persone al centro di tutto”. <br><br> Partendo da questo presupposto la nostra organizzazione promuove una cultura aziendale fondata sul rispetto per ogni individuo e sul riconoscimento delle esigenze, aspirazioni e contributi unici di ognuno. <br> People First srl valorizza il pluralismo e le pratiche inclusive nel mondo del lavoro sia come fattore etico che come capacità di rispondere alle trasformazioni della società e dei mercati. <br><br> Adottando questa carta, <strong> People First srl intende contribuire alla lotta contro tutte le forme di discriminazione sul luogo di lavoro </strong> - identità di genere, età, disabilità, etnia, fede religiosa, orientamento sessuale - <strong> impegnandosi al contempo a valorizzare le diversità all’interno dell’organizzazione aziendale, con particolare riguardo alle pari opportunità tra uomo e donna.</strong> <br><br> In virtù di questa Carta, People First srl si impegna a contribuire al raggiungimento degli obiettivi sopra condivisi attraverso una serie di azioni concrete di seguito descritte: <br> <br>",
     "list": {
       "li1": "definire e attuare politiche aziendali che, a partire dal vertice, coinvolgano tutti i livelli dell’organizzazione nel rispetto del principio della pari dignità e trattamento sul lavoro;",
       "li2": "nominare un comitato interno deputato alle pari opportunità che presidi la gestione e il monitoraggio delle tematiche legate all'inclusione, all’equità e all’integrazione e che interloquisca con le varie funzioni aziendali responsabilizzando le stesse in materia di pari opportunità;",
@@ -835,5 +836,35 @@
       "part2": "Scopri la nostra Community: ",
       "part3": "ti aspettiamo, segui il cambiamento!"
     }
+  },
+  "whistleblowing": {
+    "title": "Canale Whistleblowing",
+    "description": "In ottemperanza a quanto disposto dal d.lgs. 24/2023 di attuazione della Direttiva UE 2019/1937, attraverso il Canale Whistleblowing di Beije People First sarà possibile segnalare comportamenti, atti od omissioni che ledono l’interesse pubblico o l’integrità di una delle società di Beije People First.",
+    "q&a": "Domande e risposte:",
+    "question1": "1. Chi può inviare la segnalazione?",
+    "answer1": "Possono effettuare una segnalazione:",
+    "answer1list1": "i dipendenti, i lavoratori autonomi, i titolari di un rapporto di collaborazione e i tirocinanti anche non retribuiti che svolgono la propria attività lavorativa presso una delle società di Beije People First;",
+    "answer1list2": "i liberi professionisti, i consulenti e i collaboratori a qualunque titolo che prestano la propria attività presso una delle società di Beije People First;",
+    "answer1list3": "in generale, chiunque venga in contatto, per qualsiasi motivo, con una delle società di Beije People First.",
+    "question2": "2. Cosa segnalare?",
+    "answer2section1": "Le segnalazioni devono riguardare fatti di cui il segnalante abbia conoscenza e devono essere effettuate tempestivamente rispetto alla conoscenza dei fatti così da poter intervenire in modo tempestivo.",
+    "answer2section2": "In particolare, possono essere oggetto di segnalazione:",
+    "answer2list1": "comportamenti illeciti o sospetti, illeciti amministrativi, contabili, civili o penali;",
+    "answer2list2": "irregolarità nelle attività aziendali;",
+    "answer2list3": "atti o fatti che possano costituire una violazione delle norme, interne ed esterne, che disciplinano l’attività di Beije People First o che ledano i principi e le regole di comportamento contenuti nel Codice Etico;",
+    "answer2list4": "illeciti che rientrano nell’ambito di applicazione degli atti dell’Unione Europea o nazionali relativi ai seguenti settori: appalti pubblici; servizi, prodotti e mercati finanziari e prevenzione del riciclaggio e del finanziamento del terrorismo; sicurezza e conformità dei prodotti; sicurezza dei trasporti; tutela dell’ambiente; radioprotezione e sicurezza nucleare; sicurezza degli alimenti e dei mangimi e salute e benessere degli animali; salute pubblica; protezione dei consumatori; tutela della vita privata e protezione dei dati personali e sicurezza delle reti e dei sistemi informativi;",
+    "answer2list5": "atti od omissioni che ledono gli interessi finanziari dell’Unione Europea;",
+    "answer2list6": "atti od omissioni riguardanti il mercato interno;",
+    "answer2list7": "atti o comportamenti che vanificano l’oggetto o la finalità delle disposizioni di cui agli atti dell’Unione Europea.",
+    "question3": "3. Cosa non si può segnalare?",
+    "answer3section1": "Non possono essere oggetto di segnalazioni: le contestazioni, rivendicazioni o richieste legate ad interesse di carattere personale che attengono esclusivamente al rapporto di lavoro o inerenti al rapporto con le figure gerarchicamente sovraordinate; le comunicazioni o i reclami relativi ad attività di natura commerciale o di servizi al pubblico.",
+    "answer3section2": "Qualora il segnalante dovesse effettuare segnalazioni mendaci o diffamatorie – ferma restando la responsabilità penale e civile in capo al segnalante – lo stesso potrà essere soggetto all’applicazione di una sanzione disciplinare da € 500 a € 2.500.",
+    "question4": "4. Come viene garantita la riservatezza del segnalante e chi gestisce la segnalazione?",
+    "answer4section1": "Beije People First garantisce l’assoluta riservatezza dell’identità del segnalante e del contenuto della segnalazione, con protocolli sicuri e strumenti di crittografia. L’identità del segnalante non è mai rivelata senza il suo consenso, ad eccezione dei casi previsti dalla normativa vigente.",
+    "answer4section2": "La segnalazione viene gestita da un apposito Comitato Whistleblowing composto da soggetti che – nel rispetto dei principi di imparzialità, riservatezza e protezione dei dati – sono dotati di autonomia e indipendenza.",
+    "policy": "Policy",
+    "act": "Atto Organizzativo",
+    "document": "Consulta i documenti",
+    "report": "Apri segnalazione"
   }
 }

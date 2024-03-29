@@ -138,7 +138,8 @@
     "privacyPolicies": "Privacy policy",
     "legalNotes": "Legal notes",
     "paritaGenere": "Gender Equality",
-    "vatNumber": "Beije is a People First Srl brand - VAT number 16334941008 "
+    "vatNumber": "Beije is a People First Srl brand - VAT number 16334941008 ",
+    "whistleblowing": "Whistleblowing"
   },
   "home": {
     "firstSection": {
@@ -794,7 +795,7 @@
     }
   },
   "paritaGenere": {
-    "title":"<strong>EQUAL EMPLOYMENT OPPORTUNITY POLICY</strong><br> <br> <br>",
+    "title": "<strong>EQUAL EMPLOYMENT OPPORTUNITY POLICY</strong><br> <br> <br>",
     "quote": " <strong>  “Our ability to reach unity in diversity will be the beauty and the test of our civilization“ </strong> <br> <br> - Mahatma Gandhi <br> <br>",
     "text1": "The founding value of People First Ltd. is: *“People at the center of everything.“* <br> <br> Based on this premise, our organization promotes a corporate culture founded on respect for each individual and recognition of each person's unique needs, aspirations and contributions. <br> People First Ltd. values pluralism and inclusive practices in the world of work both as an ethical factor and as an ability to respond to changes in society and markets. <br> By adopting this policy, People First Ltd. intends to contribute to the <strong> fight  against all forms of discrimination in the workplace </strong> - gender identity, age, disability, ethnicity, religious faith, sexual orientation - <strong> while committing itself to valuing diversity within the corporate organization, with particular regard to equal opportunities between men and women. </strong> <br> <br> Building on these principles, People First Ltd. is committed to contributing to the achievement of the goals shared above through a series of concrete actions described below: <br>",
     "list": {
@@ -824,7 +825,7 @@
       "li15": "Promote to the outside world the company's commitment to equality issues, bearing witness to the policies adopted and the progress achieved from the perspective of a truly supportive and responsible community; ",
       "li16": "Periodically monitor equal opportunity progress and evaluate the impact of good practices adopted, making necessary changes to continuously improve equality"
     },
-    "text2":"People First Ltd. subscribes to this commitment and reminds that equality at work is the responsibility of every member of the organization: it encourages everyone to contribute to the creation of a fair and inclusive work environment."
+    "text2": "People First Ltd. subscribes to this commitment and reminds that equality at work is the responsibility of every member of the organization: it encourages everyone to contribute to the creation of a fair and inclusive work environment."
   },
   "cookiePolicies": {
     "title": "Cookie Policy",
@@ -852,5 +853,35 @@
       "part2": "Discover our Community: ",
       "part3": "we are waiting for you, follow the change!"
     }
+  },
+  "whistleblowing": {
+    "title": "Whistleblowing Channel",
+    "description": "In compliance with the provisions of Legislative Decree 24/2023 implementing EU Directive 2019/1937, it will be possible to report behaviors, acts, or omissions that harm the public interest or the integrity of one of the companies within Beije People First through Beije People First's Whistleblowing Channel.",
+    "q&a": "Questions & answers:",
+    "question1": "1. Who can make a report?",
+    "answer1": "Reports can be made by:",
+    "answer1list1": "employees, freelancers, holders of a collaboration relationship, and unpaid interns working at one of the companies within Beije People First;",
+    "answer1list2": "freelancers, consultants, and collaborators of any kind providing their services to one of the companies within Beije People First;",
+    "answer1list3": "in general, anyone who comes into contact, for any reason, with one of the companies within Beije People First.",
+    "question2": "2. What can be reported?",
+    "answer2section1": "Reports must concern facts known to the reporter and must be made promptly upon becoming aware of the facts so that timely intervention can occur.",
+    "answer2section2": "In particular, the following may be subject to reporting:",
+    "answer2list1": "illegal or suspicious behaviors, administrative, accounting, civil, or criminal wrongdoings;",
+    "answer2list2": "irregularities in business activities;",
+    "answer2list3": "acts or facts that may constitute a violation of internal and external regulations governing the activities of Beije People First or that violate the principles and rules of conduct contained in the Code of Ethics;",
+    "answer2list4": "offenses falling within the scope of application of EU or national acts concerning the following sectors: public procurement; financial services, products, and markets, and prevention of money laundering and terrorist financing; product safety and compliance; transportation safety; environmental protection; radiation protection and nuclear safety; food and feed safety and animal health and welfare; public health; consumer protection; protection of privacy and personal data, and network and information system security;",
+    "answer2list5": "acts or omissions that harm the financial interests of the European Union;",
+    "answer2list6": "acts or omissions concerning the internal market;",
+    "answer2list7": "acts or behaviors that undermine the purpose or objectives of the provisions of EU acts.",
+    "question3": "3. What cannot be reported?",
+    "answer3section1": "The following cannot be reported: disputes, claims, or requests related to personal interests exclusively concerning the employment relationship or related to the relationship with hierarchically superior figures; communications or complaints related to commercial activities or services to the public.",
+    "answer3section2": "If the reporter makes false or defamatory reports—without prejudice to the criminal and civil liability of the reporter—they may be subject to disciplinary action ranging from € 500 to € 2,500.",
+    "question4": "4. How is the confidentiality of the reporter ensured and who manages the report?",
+    "answer4section1": "Beije People First guarantees absolute confidentiality of the reporter's identity and the content of the report, using secure protocols and encryption tools. The reporter's identity is never disclosed without their consent, except in cases provided for by applicable regulations.",
+    "answer4section2": "The report is managed by a dedicated Whistleblowing Committee composed of individuals who—in accordance with the principles of impartiality, confidentiality, and data protection—are endowed with autonomy and independence.",
+    "policy": "Policy",
+    "act": "Organizational Act",
+    "document": "Consult documents",
+    "report": "Open report"
   }
 }
