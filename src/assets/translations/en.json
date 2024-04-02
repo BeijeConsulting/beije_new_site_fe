@@ -882,6 +882,24 @@
     "policy": "Policy",
     "act": "Organizational Act",
     "document": "Consult documents",
-    "report": "Open report"
+    "openReport": "Open report",
+    "report": {
+      "title": "Reporting channel",
+      "description1": "Through this page, you can access the internal reporting channel, established in accordance with Legislative Decree 24/2023, by Beije People First.",
+      "description2": "As an employee or other authorized individual, you can report wrongdoing or reasonably suspect it, anonymously or confidentially.",
+      "title2": "Reporting wrongdoing",
+      "title2section1": "Through this page, you can provide information about misconduct or report actions that are immoral, illegal, or violate internal regulations. The platform should be used to bring to light issues that would not otherwise come to light.",
+      "title2section2": "Reports can be submitted confidentially by providing your name and contact information or, if preferred, completely anonymously.",
+      "title2section3": "All communications are handled securely and confidentially.",
+      "title3": "Human resources issues",
+      "title3section1": "Human resources issues cannot be reported through this system but should be discussed with your immediate superior, manager, or human resources representative.",
+      "title3section2": "From this page, you can create a new report or stay updated on an existing report.",
+      "title3section3": "You will receive an initial response to your report within 7 (seven) days and a subsequent response within 3 (three) months.",
+      "title4": "Following up on your reports can be relevant for several reasons:",
+      "title4list1": "you want to know the status of your report to ensure that action is being taken;",
+      "title4list2": "you want to provide additional information about your report;",
+      "title4list3": "the system administrator has requested additional information to help resolve the issue or take appropriate action.",
+      "newReport": "Create report"
+    }
   }
 }

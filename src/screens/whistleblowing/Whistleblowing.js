@@ -19,6 +19,11 @@ import DownloadBtn from "../../components/functional_components/downloadBtn/Down
 const Whistleblowing = (props) => {
 
     const { t } = useTranslation();
+    const navigate = useNavigate();
+
+    const goToReport = () => {
+        navigate("/whistleblowing/report")
+    }
 
     return (
         <Box
@@ -145,8 +150,8 @@ const Whistleblowing = (props) => {
                     />
                     <CustomButton
                         type="filter-btn"
-                        content={t("whistleblowing.report")}
-                    //callback={goToListJobs}
+                        content={t("whistleblowing.openReport")}
+                        callback={goToReport}
                     />
                 </Box>
             </Container>
