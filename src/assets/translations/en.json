@@ -901,5 +901,11 @@
       "title4list3": "the system administrator has requested additional information to help resolve the issue or take appropriate action.",
       "newReport": "Create report"
     }
+  },
+  "upload": {
+    "uploadFile": "Upload file",
+    "selectFile": "Select file",
+    "selectedFile": "Selected file",
+    "close": "Delete file"
   }
 }

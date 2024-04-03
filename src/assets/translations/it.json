@@ -884,5 +884,11 @@
       "title4list3": "l'amministratore di sistema ha richiesto informazioni aggiuntive per aiutare a risolvere il problema o a prendere i provvedimenti adeguati.",
       "newReport": "Crea segnalazione"
     }
+  },
+  "upload": {
+    "uploadFile": "Carica file",
+    "selectFile": "Seleziona file",
+    "selectedFile": "File selezionato",
+    "close": "Elimina file"
   }
 }

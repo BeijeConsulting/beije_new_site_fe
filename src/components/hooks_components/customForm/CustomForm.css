@@ -1,5 +1,5 @@
 .form-container-general, .form-container-general, .form-container-general span, .form-info-container p, .form-string-required-fields {
-  color: var(--grey-tone-4) !important;
+  color: var(--grey-tone-4);
 }
 
 
