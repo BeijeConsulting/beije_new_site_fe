@@ -26,7 +26,6 @@ import { toBase64, setGaEvent, converter } from "../../../utils/utilities";
 import CustomButton from "../../functional_components/ui/customButton/CustomButton";
 import CustomModal from "../customModal/CustomModal";
 import PrivacyPolicies from "../../functional_components/privacyPolicies/PrivacyPolicies";
-import FileUpload from '../../functional_components/ui/fileUpload/FileUpload';
 
 
 const CustomForm = (props) => {
