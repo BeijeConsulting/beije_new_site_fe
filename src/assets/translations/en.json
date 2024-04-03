@@ -84,7 +84,11 @@
       "numberInvalid": "Number is invalid",
       "town": "Town is required",
       "agreement": "Terms and Conditions must be accepted",
-      "radioBox:": "Selected one option"
+      "radioBox:": "Selected one option",
+      "subject": "Subject is required",
+      "description": "Description is required",
+      "category": "Category is required",
+      "nameSurname": "Name and surname are required"
     },
     "placeholder": {
       "name": "Name*",
@@ -900,6 +904,41 @@
       "title4list2": "you want to provide additional information about your report;",
       "title4list3": "the system administrator has requested additional information to help resolve the issue or take appropriate action.",
       "newReport": "Create report"
+    },
+    "new": {
+      "title": "Send a report",
+      "subject": "Subject",
+      "reportType": "Choose how you want to report",
+      "confidential": {
+        "label": "Report in confidential manner",
+        "description": "You can choose to submit a report in a confidential manner. Your identity will only be known to the personnel responsible for handling your report and will appear anonymous and confidential to others during the handling of the report. Your identity will not be disclosed to others within the organization without your consent. Consent to disclose your identity will only be requested if it is necessary for the internal processing of the report. When using the reporting platform in a confidential manner, you and your report will be logged, which means you will be protected by whistleblower protection legislation from the first contact made."
+      },
+      "anonymous": {
+        "label": "Report anonymously",
+        "description": "You can choose to submit a report anonymously if you prefer not to disclose your identity to any of the individuals involved in the reporting process. To protect anonymity, the platform offers you the option to i) distort the voice in voice messages, and ii) remove metadata from the files you send through the platform."
+      },
+      "description": "Description",
+      "category": "Select the categories associated with the report",
+      "categoryType": {
+        "officeAbuse": "Office abuse",
+        "powerAbuse": "Power abuse",
+        "behavior": "Unacceptable behavior",
+        "interest": "Conflict of interest",
+        "corruption": "Corruption",
+        "rights": "Individual rights and protections",
+        "fraud": "Fraud",
+        "procurement": "Procurement fraud",
+        "auditors": "Auditors act",
+        "competition": "Competition law",
+        "children": "Children protection",
+        "laundering": "Laundering",
+        "exploitation": "Sexual exploitation, abuse or harassment",
+        "terrorism": "Terrorism",
+        "other": "Other"
+      },
+      "nameSurname": "Name and surname",
+      "phone": "Phone number (Optional)",
+      "email": "E-mail (Optional)"
     }
   },
   "upload": {

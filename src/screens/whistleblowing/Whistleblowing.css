@@ -41,7 +41,7 @@
     letter-spacing: .5px;
 }
 
-.whistleblowing-text-container p {
+.whistleblowing-text-container > p {
     margin-bottom: 1.5em;
 }
 
