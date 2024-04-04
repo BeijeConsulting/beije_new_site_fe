@@ -8,34 +8,41 @@ import { Typography, Button, Icon } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 import Tooltip from '@mui/material/Tooltip';
 
+//UTILS
+import cloneDeep from 'lodash/cloneDeep';
+
 
 //STYLE
 import './FileUpload.css';
 
 const FileUpload = (props) => {
 
-    const [selectedFile, setSelectedFile] = useState(null);
+    const [selectedFiles, setSelectedFiles] = useState([]);
     const { t } = useTranslation();
 
     useEffect(() => {
-        if (selectedFile !== null) {
-            if (props.onFileChange) props.onFileChange(selectedFile);
+        if (selectedFiles.length > 0) {
+            if (props.onFileChange) props.onFileChange(selectedFiles);
         }
-    }, [selectedFile])
+    }, [selectedFiles])
 
     // Funzione per gestire il caricamento del file
     const handleFileChange = (event) => {
         const file = event.target.files[0];
-        setSelectedFile(file);
+        const cloneFiles = cloneDeep(selectedFiles);
+        cloneFiles.push(file);
+        setSelectedFiles(cloneFiles);
     };
 
-    const resetFile = () => {
-        setSelectedFile(null);
+    const resetFiles = (index) => {
+        const cloneFiles = cloneDeep(selectedFiles);
+        cloneFiles.splice(index, 1);
+        setSelectedFiles(cloneFiles);
     }
 
     return (
         <div style={props?.containerStyle}>
-            <Typography variant="h5">{t("upload.uploadFile")}</Typography>
+            <Typography variant="h6">{t("upload.uploadFile")}</Typography>
             <input
                 type="file"
                 onChange={handleFileChange}
@@ -47,11 +54,15 @@ const FileUpload = (props) => {
                     {t('upload.selectFile')}
                 </Button>
             </label>
-            {selectedFile && (
-                <Typography variant="body1" paragraph className="select-file-paragraph">{t('upload.selectedFile')}: {selectedFile.name}  
-                <Tooltip title={t('upload.close')}>
-                    <CloseIcon onClick={resetFile}/>
-                </Tooltip></Typography>
+            {selectedFiles.length > 0 && (
+                <div>
+                    {selectedFiles.map((file, index) => (
+                        <Typography variant="body1" paragraph key={index + Date.now()} className="select-file-paragraph">{t('upload.selectedFile')}: {file.name}
+                            <Tooltip title={t('upload.close')}>
+                                <CloseIcon onClick={() => resetFiles(index)} />
+                            </Tooltip></Typography>
+                    ))}
+                </div>
             )}
         </div>
     )
