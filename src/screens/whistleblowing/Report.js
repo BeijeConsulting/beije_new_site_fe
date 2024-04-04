@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 // Style
 import './Whistleblowing.css';
@@ -10,6 +11,8 @@ import './Whistleblowing.css';
 import { Box, Container } from "@mui/material";
 
 // Redux
+import { setCurrentPage, initCurrentPage } from "../../redux/ducks/currentPageDuck";
+import { setVisibilityNavbar, initVisibilityNavbar } from "../../redux/ducks/showNavbarTopDuck";
 import { connect } from "react-redux";
 
 // Components
@@ -20,85 +23,103 @@ const Report = (props) => {
     const { t } = useTranslation();
     const navigate = useNavigate();
 
+    useEffect(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
+        props.dispatch(setCurrentPage("whistleblowing/report"));
+        props.dispatch(setVisibilityNavbar(true));
+
+        return () => {
+            props.dispatch(initCurrentPage());
+            props.dispatch(initVisibilityNavbar());
+        };
+    }, [props.languageDuck.currentLanguage])
+
     const goToNewReport = () => {
         navigate("/whistleblowing/report/new")
     }
 
     return (
-        <Box
-            className={"bg-dark-grey whistleblowing-padding-top"}
-        >
+        <>
+            <Helmet>
+                <title>{t('helmet.meta_title.whistleblowing')}</title>
+            </Helmet>
 
-            <Container
-                className={"paddingX-container-general-pages whistleblowing-second-section-container d-flex justify-center"}
-                component={"article"}
+            <Box
+                className={"bg-dark-grey whistleblowing-padding-top"}
             >
-                <Box className={"max-width-1200"}>
-                    <Box className={"whistleblowing-text-container"}>
-                        <h2>
-                            {t("whistleblowing.report.title")}
-                        </h2>
-                        <p>
-                            {t("whistleblowing.report.description1")}
-                        </p>
-                        <p>
-                            {t("whistleblowing.report.description2")}
-                        </p>
-                        <h4>
-                            {t("whistleblowing.report.title2")}
-                        </h4>
-                        <p>
-                            {t("whistleblowing.report.title2section1")}
-                        </p>
-                        <p>
-                            {t("whistleblowing.report.title2section2")}
-                        </p>
-                        <p>
-                            {t("whistleblowing.report.title2section3")}
-                        </p>
-                        <h4>
-                            {t("whistleblowing.report.title3")}
-                        </h4>
-                        <p>
-                            {t("whistleblowing.report.title3section1")}
-                        </p>
-                        <p>
-                            {t("whistleblowing.report.title3section2")}
-                        </p>
-                        <p>
-                            {t("whistleblowing.report.title3section3")}
-                        </p>
-                        <h4>
-                            {t("whistleblowing.report.title4")}
-                        </h4>
-                        <ul>
-                            <li>
-                                {t("whistleblowing.report.title4list1")}
-                            </li>
-                            <li>
-                                {t("whistleblowing.report.title4list2")}
-                            </li>
-                            <li>
-                                {t("whistleblowing.report.title4list3")}
-                            </li>
-                        </ul>
+
+                <Container
+                    className={"paddingX-container-general-pages whistleblowing-second-section-container d-flex justify-center"}
+                    component={"article"}
+                >
+                    <Box className={"max-width-1200"}>
+                        <Box className={"whistleblowing-text-container"}>
+                            <h2>
+                                {t("whistleblowing.report.title")}
+                            </h2>
+                            <p>
+                                {t("whistleblowing.report.description1")}
+                            </p>
+                            <p>
+                                {t("whistleblowing.report.description2")}
+                            </p>
+                            <h4>
+                                {t("whistleblowing.report.title2")}
+                            </h4>
+                            <p>
+                                {t("whistleblowing.report.title2section1")}
+                            </p>
+                            <p>
+                                {t("whistleblowing.report.title2section2")}
+                            </p>
+                            <p>
+                                {t("whistleblowing.report.title2section3")}
+                            </p>
+                            <h4>
+                                {t("whistleblowing.report.title3")}
+                            </h4>
+                            <p>
+                                {t("whistleblowing.report.title3section1")}
+                            </p>
+                            <p>
+                                {t("whistleblowing.report.title3section2")}
+                            </p>
+                            <p>
+                                {t("whistleblowing.report.title3section3")}
+                            </p>
+                            <h4>
+                                {t("whistleblowing.report.title4")}
+                            </h4>
+                            <ul>
+                                <li>
+                                    {t("whistleblowing.report.title4list1")}
+                                </li>
+                                <li>
+                                    {t("whistleblowing.report.title4list2")}
+                                </li>
+                                <li>
+                                    {t("whistleblowing.report.title4list3")}
+                                </li>
+                            </ul>
+                        </Box>
                     </Box>
-                </Box>
-            </Container>
+                </Container>
 
-            <Container
-                className={"paddingX-container-general-pages whistleblowing-third-section-container d-flex justify-center"}
-                component={"article"}
-            >
-                <Box className={"whistleblowing-buttons-container width-100 max-width-1200"}>
-                    <CustomButton
-                        type="filter-btn"
-                        content={t("whistleblowing.report.newReport")}
-                        callback={goToNewReport}
-                    />
-                </Box>
-            </Container>
-        </Box>
+                <Container
+                    className={"paddingX-container-general-pages whistleblowing-third-section-container d-flex justify-center"}
+                    component={"article"}
+                >
+                    <Box className={"whistleblowing-buttons-container width-100 max-width-1200"}>
+                        <CustomButton
+                            classNameFilterBtn="button-form-primary"
+                            type="filter-btn"
+                            content={t("whistleblowing.report.newReport")}
+                            callback={goToNewReport}
+                        />
+                    </Box>
+                </Container>
+            </Box>
+        </>
     )
 }
 
