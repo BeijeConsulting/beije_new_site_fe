@@ -76,7 +76,6 @@ const NewReport = (props) => {
     }
 
     const handleTypeChange = (event) => {
-        console.log(event.target.value)
         formikReport.handleChange(event);
         setType(event.target.value);
     }
