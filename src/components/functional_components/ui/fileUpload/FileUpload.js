@@ -26,6 +26,12 @@ const FileUpload = (props) => {
         }
     }, [selectedFiles])
 
+    useEffect(() => {
+        if (props.resetAll) {
+            setSelectedFiles([]);
+        }
+    }, [props.resetAll])
+
     // Funzione per gestire il caricamento del file
     const handleFileChange = (event) => {
         const file = event.target.files[0];

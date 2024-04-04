@@ -27,6 +27,7 @@ const NewReport = (props) => {
     const navigate = useNavigate();
 
     const [type, setType] = useState('confidential');
+    const [resetFile, setResetFile] = useState(false);
 
     useEffect(() => {
         window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
@@ -75,7 +76,7 @@ const NewReport = (props) => {
             nameSurname: '',
             phone: '',
             email: '',
-            file: '',
+            file: [],
         },
         validationSchema: type === 'confidential' ? confidentialValidationSchema : anonymousValidationSchema,
         enableReinitialize: true,
@@ -88,11 +89,16 @@ const NewReport = (props) => {
     const sendData = async (values) => {
         console.log(values)
         setType('confidential');
+        setResetFile(true);
     }
 
     const handleTypeChange = (event) => {
         formikReport.handleChange(event);
         setType(event.target.value);
+    }
+
+    const handleFileChange = (event) => {
+        formikReport.setFieldValue("file", event);
     }
 
     return (
@@ -253,13 +259,16 @@ const NewReport = (props) => {
                                                 size="normal"
                                                 className="form-field" />
                                         </Grid>
-                                        <Grid item xs={12}>
-                                            <FileUpload 
-                                               containerStyle={{marginTop: '15px'}}
-                                            />
-                                        </Grid>
                                     </>
                                 }
+
+                                <Grid item xs={12}>
+                                    <FileUpload
+                                        containerStyle={{ marginTop: '15px' }}
+                                        onFileChange={handleFileChange}
+                                        resetAll={resetFile}
+                                    />
+                                </Grid>
 
                                 <Grid
                                     item
