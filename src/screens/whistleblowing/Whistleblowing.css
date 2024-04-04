@@ -50,6 +50,10 @@
     margin: 0 0 1.5em 3em;
 }
 
+.whistleblowing-policy-text{
+    color: var(--lightblue);
+}
+
 @media (min-width: 768px) {
     .whistleblowing-padding-top {
         padding-top: calc(var(--header-height-md))

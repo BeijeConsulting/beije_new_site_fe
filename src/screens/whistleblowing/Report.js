@@ -112,7 +112,7 @@ const Report = (props) => {
                     <Box className={"whistleblowing-buttons-container width-100 max-width-1200"}>
                         <CustomButton
                             classNameFilterBtn="button-form-primary"
-                            type="filter-btn"
+                            type="whistleblowing-btn"
                             content={t("whistleblowing.report.newReport")}
                             callback={goToNewReport}
                         />
