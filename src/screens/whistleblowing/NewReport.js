@@ -4,18 +4,26 @@ import { useParams, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { useFormik } from "formik";
+import ReCAPTCHA from "react-google-recaptcha";
 import * as yup from 'yup';
 
 // Style
 import './Whistleblowing.css';
 
 // MUI
-import { Box, Container, Grid, TextField, TextareaAutosize, FormControl, FormLabel, FormControlLabel, Radio, RadioGroup, Select, FormHelperText, MenuItem, InputLabel } from "@mui/material";
+import { Box, Container, Grid, TextField, CircularProgress, FormControl, FormLabel, FormControlLabel, Radio, RadioGroup, Select, FormHelperText, MenuItem, InputLabel } from "@mui/material";
 
 // Redux
 import { setCurrentPage, initCurrentPage } from "../../redux/ducks/currentPageDuck";
 import { setVisibilityNavbar, initVisibilityNavbar } from "../../redux/ducks/showNavbarTopDuck";
+import { setToastMessage, initToastMessage } from "../../redux/ducks/toastMessageDuck";
 import { connect } from "react-redux";
+
+// API
+import ApiCalls from "../../services/api/ApiCalls";
+
+// Constants and functions
+import { googleReCaptchaKey } from "../../utils/properties";
 
 // Components
 import CustomButton from "../../components/functional_components/ui/customButton/CustomButton";
@@ -28,6 +36,10 @@ const NewReport = (props) => {
 
     const [type, setType] = useState('confidential');
     const [resetFile, setResetFile] = useState(false);
+    const [captchaCheck, setCaptchaCheck] = useState(false);
+    const [captcha, setCaptcha] = useState(undefined);
+    const [captchaValue, setCaptchaValue] = useState('');
+    const [btnLoading, setBtnLoading] = useState(false);
 
     useEffect(() => {
         window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
@@ -82,12 +94,35 @@ const NewReport = (props) => {
         enableReinitialize: true,
         onSubmit: (values) => {
             formikReport.resetForm();
+            captcha.reset();
             sendData(values);
         }
     });
 
     const sendData = async (values) => {
         console.log(values)
+
+        setBtnLoading(true);
+
+        const formData = {
+            captcha: captchaValue,
+            mail_subject: values.subject,
+            description: values.description,
+            category: values.category,
+        }
+
+        let responseForm = await ApiCalls.form_sendForm(formData);
+
+        props.dispatch(initToastMessage())
+
+        if (responseForm.success) {
+            props.dispatch(setToastMessage(true, 'success'))
+        }
+        else {
+            props.dispatch(setToastMessage(true, 'error'))
+        }
+
+        setBtnLoading(false);
         setType('confidential');
         setResetFile(true);
     }
@@ -99,6 +134,16 @@ const NewReport = (props) => {
 
     const handleFileChange = (event) => {
         formikReport.setFieldValue("file", event);
+    }
+
+    const reCaptchaChange = (value) => {
+        let captchaCheck = false;
+        if (value !== null) {
+            captchaCheck = true;
+        }
+
+        setCaptchaCheck(captchaCheck);
+        setCaptchaValue(value);
     }
 
     return (
@@ -270,6 +315,14 @@ const NewReport = (props) => {
                                     />
                                 </Grid>
 
+                                <Grid item xs={12} sx={{ marginTop: '20px' }}>
+                                    <ReCAPTCHA
+                                        ref={e => setCaptcha(e)}
+                                        sitekey={googleReCaptchaKey}
+                                        onChange={reCaptchaChange}
+                                    />
+                                </Grid>
+
                                 <Grid
                                     item
                                     xs={12}
@@ -277,8 +330,9 @@ const NewReport = (props) => {
                                 >
                                     <CustomButton
                                         type={"whistleblowing-btn"}
-                                        content={t("btn.send")}
+                                        content={btnLoading ? <CircularProgress size={24} /> : t("btn.send")}
                                         callback={formikReport.submitForm}
+                                        disabled={!(captchaCheck && formikReport.isValid && formikReport.dirty)}
                                     />
                                 </Grid>
                             </form>
