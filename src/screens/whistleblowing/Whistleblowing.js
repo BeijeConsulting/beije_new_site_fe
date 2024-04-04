@@ -17,12 +17,16 @@ import { connect } from "react-redux";
 
 // Components
 import CustomButton from "../../components/functional_components/ui/customButton/CustomButton";
+import CustomModal from "../../components/hooks_components/customModal/CustomModal";
+import PrivacyPolicies from "../../components/functional_components/privacyPolicies/PrivacyPolicies";
 import DownloadBtn from "../../components/functional_components/downloadBtn/DownloadBtn";
 
 const Whistleblowing = (props) => {
 
     const { t } = useTranslation();
     const navigate = useNavigate();
+
+    const [modalIsOpen, setModalIsOpen] = useState(false);
 
     useEffect(() => {
         window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
@@ -34,6 +38,14 @@ const Whistleblowing = (props) => {
             props.dispatch(initVisibilityNavbar());
         };
     }, [props.languageDuck.currentLanguage])
+
+    const openModal = () => {
+        setModalIsOpen(true);
+    }
+
+    const closeModal = () => {
+        setModalIsOpen(false);
+    }
 
     const goToReport = () => {
         navigate("/whistleblowing/report")
@@ -140,18 +152,12 @@ const Whistleblowing = (props) => {
                                 {t("whistleblowing.answer4section2")}
                             </p>
                             <Box>
-                                <DownloadBtn
-                                    content={t("whistleblowing.policy")}
-                                    bgIconDownload="download-btn-icon-consulting"
-                                    typeSection="consulting"
-                                />
-                            </Box>
-                            <Box>
-                                <DownloadBtn
-                                    content={t("whistleblowing.act")}
-                                    bgIconDownload="download-btn-icon-consulting"
-                                    typeSection="consulting"
-                                />
+                                <p
+                                    className="cursor-pointer footer-link-privacyPolicies-legalNotes whistleblowing-policy-text"
+                                    onClick={openModal}
+                                >
+                                    {t("footer.privacyPolicies")}
+                                </p>
                             </Box>
                         </Box>
                     </Box>
@@ -163,17 +169,20 @@ const Whistleblowing = (props) => {
                 >
                     <Box className={"whistleblowing-buttons-container width-100 max-width-1200"}>
                         <CustomButton
-                            type="filter-btn"
-                            content={t("whistleblowing.document")}
-                        //callback={goToListJobs}
-                        />
-                        <CustomButton
-                            type="filter-btn"
+                            type="whistleblowing-btn"
                             content={t("whistleblowing.openReport")}
                             callback={goToReport}
                         />
                     </Box>
                 </Container>
+
+                <CustomModal
+                    stateModal={modalIsOpen}
+                    callbackClose={closeModal}
+                    modalTitle={t("footer.privacyPolicies")}
+                >
+                    <PrivacyPolicies />
+                </CustomModal>
             </Box>
         </>
     )

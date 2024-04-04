@@ -64,3 +64,16 @@
 .button-filter-primary p {
   color: var(--grey-tone-4) !important;
 }
+
+/* Whistleblowing button */
+.button-whistleblowing {
+  border: 1px solid var(--grey-tone-4) !important;
+  padding: 12px 40px !important;
+  border-radius: 0% !important;
+}
+
+.button-whistleblowing:hover {
+  -webkit-box-shadow: 4px 5px 15px var(--dark-grey) !important;
+  box-shadow: 4px 5px 15px var(--dark-grey) !important;
+  background-color: var(--grey-tone-4) !important;
+}

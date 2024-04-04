@@ -267,7 +267,7 @@ const NewReport = (props) => {
                                     className={"form-submit-btn-container position-relative"}
                                 >
                                     <CustomButton
-                                        type={"btn-form-primary"}
+                                        type={"whistleblowing-btn"}
                                         content={t("btn.send")}
                                         callback={formikReport.submitForm}
                                     />
