@@ -19,6 +19,7 @@ import { connect } from "react-redux";
 
 // Components
 import CustomButton from "../../components/functional_components/ui/customButton/CustomButton";
+import FileUpload from "../../components/functional_components/ui/fileUpload/FileUpload";
 
 const NewReport = (props) => {
 
@@ -251,6 +252,11 @@ const NewReport = (props) => {
                                                 variant="standard"
                                                 size="normal"
                                                 className="form-field" />
+                                        </Grid>
+                                        <Grid item xs={12}>
+                                            <FileUpload 
+                                               containerStyle={{marginTop: '15px'}}
+                                            />
                                         </Grid>
                                     </>
                                 }

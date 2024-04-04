@@ -34,7 +34,7 @@ const FileUpload = (props) => {
     }
 
     return (
-        <div>
+        <div style={props?.containerStyle}>
             <Typography variant="h5">{t("upload.uploadFile")}</Typography>
             <input
                 type="file"
