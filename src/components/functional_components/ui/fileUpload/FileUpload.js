@@ -26,6 +26,10 @@ const FileUpload = (props) => {
         }
     }, [selectedFiles])
 
+    useEffect(()=>{
+        console.log("props",props)
+    },[props])
+
     useEffect(() => {
         if (props.resetAll) {
             setSelectedFiles([]);
@@ -36,14 +40,17 @@ const FileUpload = (props) => {
     const handleFileChange = (event) => {
         const file = event.target.files[0];
         const cloneFiles = cloneDeep(selectedFiles);
-        cloneFiles.push(file);
-        setSelectedFiles(cloneFiles);
+        if (!props?.checkFile) {
+            cloneFiles.push(file);
+            setSelectedFiles(cloneFiles);
+        }else{
+            props?.onFileChange(file);
+        }
+
     };
 
     const resetFiles = (index) => {
-        const cloneFiles = cloneDeep(selectedFiles);
-        cloneFiles.splice(index, 1);
-        setSelectedFiles(cloneFiles);
+        props.onReset(index);
     }
 
     return (
@@ -60,9 +67,9 @@ const FileUpload = (props) => {
                     {t('upload.selectFile')}
                 </Button>
             </label>
-            {selectedFiles.length > 0 && (
+            {props?.values?.length > 0 && (
                 <div>
-                    {selectedFiles.map((file, index) => (
+                    {props?.values.map((file, index) => (
                         <Typography variant="body1" paragraph key={index + Date.now()} className="select-file-paragraph">{t('upload.selectedFile')}: {file.name}
                             <Tooltip title={t('upload.close')}>
                                 <CloseIcon onClick={() => resetFiles(index)} />

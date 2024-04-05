@@ -947,6 +947,9 @@
     "uploadFile": "Upload file",
     "selectFile": "Select file",
     "selectedFile": "Selected file",
-    "close": "Delete file"
+    "close": "Delete file",
+    "remove_metadata": "Remove metadata",
+    "metadata_paragraph": "Files may contain metadata such as your name, computer name, authors, revisions, and versions. This data can be removed automatically. Do you want to remove this data from file?",
+    "remove_metadata_confirm": "Remove metadata from the file"
   }
 }

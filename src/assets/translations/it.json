@@ -930,6 +930,9 @@
     "uploadFile": "Carica file",
     "selectFile": "Seleziona file",
     "selectedFile": "File selezionato",
-    "close": "Elimina file"
+    "close": "Elimina file",
+    "remove_metadata": "Rimuovi i metadati",
+    "metadata_paragraph": "I file possono contenere metadati come il tuo nome, il nome del tuo computer, autori, revisioni e versioni. Questi dati possono essere rimossi automaticamente. Vuoi rimuovere questi dati dal file?",
+    "remove_metadata_confirm": "Rimuovere i metadati dal file"
   }
 }

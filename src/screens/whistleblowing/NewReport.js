@@ -6,12 +6,17 @@ import { Helmet } from "react-helmet";
 import { useFormik } from "formik";
 import ReCAPTCHA from "react-google-recaptcha";
 import * as yup from 'yup';
+import cloneDeep from 'lodash/cloneDeep';
 
 // Style
 import './Whistleblowing.css';
 
 // MUI
-import { Box, Container, Grid, TextField, CircularProgress, FormControl, FormLabel, FormControlLabel, Radio, RadioGroup, Select, FormHelperText, MenuItem, InputLabel } from "@mui/material";
+import { Box, Container, Grid, TextField, CircularProgress, FormControl, FormLabel, FormControlLabel, Radio, RadioGroup, Select, FormHelperText, MenuItem, InputLabel, Fade, Modal, Backdrop, Typography, Checkbox, FormGroup, Button } from "@mui/material";
+
+//ICONS
+import CheckIcon from '@mui/icons-material/Check';
+import ClearIcon from '@mui/icons-material/Clear';
 
 // Redux
 import { setCurrentPage, initCurrentPage } from "../../redux/ducks/currentPageDuck";
@@ -25,11 +30,23 @@ import ApiCalls from "../../services/api/ApiCalls";
 // Constants and functions
 import { googleReCaptchaKey } from "../../utils/properties";
 import { toBase64 } from "../../utils/utilities";
-import { cloneDeep } from "lodash";
 
 // Components
 import CustomButton from "../../components/functional_components/ui/customButton/CustomButton";
 import FileUpload from "../../components/functional_components/ui/fileUpload/FileUpload";
+
+const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 400,
+    bgcolor: 'background.paper',
+    border: '2px solid #000',
+    boxShadow: 24,
+    p: 4,
+    color: 'black'
+};
 
 const NewReport = (props) => {
 
@@ -42,6 +59,12 @@ const NewReport = (props) => {
     const [captcha, setCaptcha] = useState(undefined);
     const [captchaValue, setCaptchaValue] = useState('');
     const [btnLoading, setBtnLoading] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    // const [currentSelectedFile, setCurrentSelectedFile] = useState(null);
+    const [finalFile, setFinalFile] = useState([]);
+    const [checked, setChecked] = useState(false);
+
+    const currentSelectedFile = useRef();
 
     useEffect(() => {
         window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
@@ -145,8 +168,9 @@ const NewReport = (props) => {
         setType(event.target.value);
     }
 
-    const handleFileChange = (event) => {
-        formikReport.setFieldValue("file", event);
+    const handleFileChange = (file) => {
+        setIsModalOpen(true);
+        currentSelectedFile.current = file;
     }
 
     const reCaptchaChange = (value) => {
@@ -157,6 +181,35 @@ const NewReport = (props) => {
 
         setCaptchaCheck(captchaCheck);
         setCaptchaValue(value);
+    }
+
+    const handleModalClose = () => {
+        setIsModalOpen(false);
+    }
+
+    const handleCheckBoxChange = (evt) => {
+        setChecked(evt?.target?.checked);
+    }
+
+    const handleRemoveMetadata = () => {
+        if (currentSelectedFile.current) {
+            if (checked) {
+                //remove metadata
+            } else {
+                const files = cloneDeep(finalFile);
+                files.push(currentSelectedFile.current);
+                formikReport.setFieldValue("file", files);
+                setFinalFile(files);
+                setIsModalOpen(false);
+            }
+
+        }
+    }
+
+    const handleReset = (index) => {
+        const cloneFiles = cloneDeep(finalFile);
+        cloneFiles.splice(index, 1);
+        setFinalFile(cloneFiles);
     }
 
     return (
@@ -342,6 +395,9 @@ const NewReport = (props) => {
                                         containerStyle={{ marginTop: '15px' }}
                                         onFileChange={handleFileChange}
                                         resetAll={resetFile}
+                                        checkFile
+                                        values={finalFile}
+                                        onReset={handleReset}
                                     />
                                 </Grid>
 
@@ -369,6 +425,39 @@ const NewReport = (props) => {
                         </Box>
                     </Box>
                 </Container>
+
+                <Modal
+                    aria-labelledby="transition-modal-title"
+                    aria-describedby="transition-modal-description"
+                    open={isModalOpen}
+                    onClose={handleModalClose}
+                    hideBackdrop
+                    closeAfterTransition
+                    slots={{ backdrop: Backdrop }}
+                    slotProps={{
+                        backdrop: {
+                            timeout: 500,
+                        },
+                    }}
+                >
+                    <Fade in={isModalOpen}>
+                        <Box sx={style}>
+                            <h4 style={{ marginBottom: '15px' }}>{t('upload.remove_metadata')}</h4>
+                            <p style={{ color: 'black', fontSize: '18px' }}>{t('upload.metadata_paragraph')}</p>
+                            <FormGroup>
+                                <FormControlLabel control={<Checkbox
+                                    checked={checked}
+                                    onChange={handleCheckBoxChange}
+                                    inputProps={{ 'aria-label': 'controlled' }}
+                                />} label={t('upload.remove_metadata_confirm')} />
+                            </FormGroup>
+                            <div style={{ display: 'flex', justifyContent: 'end', gap: '10px', marginTop: '15px' }}>
+                                <Button variant="outlined" startIcon={<ClearIcon />} onClick={() => setIsModalOpen(false)}>Annulla</Button>
+                                <Button variant="contained" startIcon={<CheckIcon />} onClick={handleRemoveMetadata}>Conferma</Button>
+                            </div>
+                        </Box>
+                    </Fade>
+                </Modal>
 
             </Box>
         </>
