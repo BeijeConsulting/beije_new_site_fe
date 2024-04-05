@@ -16,7 +16,7 @@ import ApiCalls from "../../../services/api/ApiCalls";
 import { Grid, Box, TextField, TextareaAutosize, FormControlLabel, Checkbox, CircularProgress, FormControl, FormLabel, RadioGroup, Radio } from "@mui/material";
 
 // Style
-import "./CustomForm.css";
+import "./CustomForm.scss";
 
 // Constants and functions
 import { googleReCaptchaKey } from "../../../utils/properties";

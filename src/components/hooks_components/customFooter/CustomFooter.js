@@ -9,7 +9,7 @@ import { connect } from "react-redux";
 import { Box } from '@mui/material';
 
 // style
-import './CustomFooter.css'
+import './CustomFooter.scss'
 
 // Constants and functions
 import { logo_primary_light, logo_secondary_light, menu_voices } from "../../../utils/properties";
