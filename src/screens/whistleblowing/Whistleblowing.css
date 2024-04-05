@@ -58,6 +58,11 @@
     color: white;
 }
 
+.metadata-modal .MuiBox-root{
+    border: 0px;
+    border-radius: 8px;
+}
+
 @media (min-width: 768px) {
     .whistleblowing-padding-top {
         padding-top: calc(var(--header-height-md))

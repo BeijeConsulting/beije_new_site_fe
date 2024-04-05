@@ -432,6 +432,7 @@ const NewReport = (props) => {
                     open={isModalOpen}
                     onClose={handleModalClose}
                     hideBackdrop
+                    className="metadata-modal"
                     closeAfterTransition
                     slots={{ backdrop: Backdrop }}
                     slotProps={{
