@@ -24,6 +24,8 @@ import ApiCalls from "../../services/api/ApiCalls";
 
 // Constants and functions
 import { googleReCaptchaKey } from "../../utils/properties";
+import { toBase64 } from "../../utils/utilities";
+import { cloneDeep } from "lodash";
 
 // Components
 import CustomButton from "../../components/functional_components/ui/customButton/CustomButton";
@@ -62,9 +64,12 @@ const NewReport = (props) => {
         category: yup
             .string('Enter category')
             .required(t("form.errorMessage.category")),
-        nameSurname: yup
-            .string('Enter your name and surname')
-            .required(t("form.errorMessage.nameSurname")),
+        name: yup
+            .string('Enter your name')
+            .required(t("form.errorMessage.name")),
+        surname: yup
+            .string('Enter your surname')
+            .required(t("form.errorMessage.surname")),
     });
 
     const anonymousValidationSchema = yup.object({
@@ -85,7 +90,8 @@ const NewReport = (props) => {
             typeReportRadio: 'confidential',
             description: '',
             category: '',
-            nameSurname: '',
+            name: '',
+            surname: '',
             phone: '',
             email: '',
             file: [],
@@ -109,6 +115,13 @@ const NewReport = (props) => {
             mail_subject: values.subject,
             description: values.description,
             category: values.category,
+            name: values.name,
+            surname: values.surname,
+            phone: values.phone,
+            email: values.email,
+            fileBase64: values.file,
+            lang: 'it',
+            origin: location.href,
         }
 
         let responseForm = await ApiCalls.form_sendForm(formData);
@@ -260,13 +273,30 @@ const NewReport = (props) => {
                                     <>
                                         <Grid item xs={12}>
                                             <TextField
-                                                id="nameSurname"
-                                                name="nameSurname"
-                                                label={t("whistleblowing.new.nameSurname")}
+                                                id="name"
+                                                name="name"
+                                                label={t("whistleblowing.new.name")}
                                                 type="text"
-                                                value={formikReport.values.nameSurname}
-                                                error={formikReport.touched.nameSurname && Boolean(formikReport.errors.nameSurname)}
-                                                helperText={formikReport.touched.nameSurname && formikReport.errors.nameSurname}
+                                                value={formikReport.values.name}
+                                                error={formikReport.touched.name && Boolean(formikReport.errors.name)}
+                                                helperText={formikReport.touched.name && formikReport.errors.name}
+                                                onChange={formikReport.handleChange}
+                                                onBlur={formikReport.handleBlur}
+
+                                                variant="standard"
+                                                size="normal"
+                                                className="form-field" />
+                                        </Grid>
+
+                                        <Grid item xs={12}>
+                                            <TextField
+                                                id="surname"
+                                                name="surname"
+                                                label={t("whistleblowing.new.surname")}
+                                                type="text"
+                                                value={formikReport.values.surname}
+                                                error={formikReport.touched.surname && Boolean(formikReport.errors.surname)}
+                                                helperText={formikReport.touched.surname && formikReport.errors.surname}
                                                 onChange={formikReport.handleChange}
                                                 onBlur={formikReport.handleBlur}
 

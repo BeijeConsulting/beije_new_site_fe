@@ -937,7 +937,8 @@
         "terrorism": "Terrorism",
         "other": "Other"
       },
-      "nameSurname": "Name and surname",
+      "name": "Name",
+      "surname": "Surname",
       "phone": "Phone number (Optional)",
       "email": "E-mail (Optional)"
     }

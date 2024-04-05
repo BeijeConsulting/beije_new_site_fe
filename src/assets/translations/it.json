@@ -920,7 +920,8 @@
         "terrorism": "Terrorismo",
         "other": "Altro"
       },
-      "nameSurname": "Nome e cognome",
+      "name": "Nome",
+      "surname": "Cognome",
       "phone": "Numero di telefono (Facoltativo)",
       "email": "E-mail (Facoltativo)"
     }
