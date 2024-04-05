@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 
 // Style
-import './BlogCard.css';
+import './BlogCard.scss';
 
 // MUI
 import { Box, Container } from "@mui/material";
@@ -15,7 +15,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
 
 // utils
-import { converter } from "../../../utils/utilities";
+// import { converter } from "../../../utils/utilities";
 
 const BlogCard = (props) => {
 
@@ -50,7 +50,7 @@ const BlogCard = (props) => {
         <div className={"blog-card-text-title"}>{props.title}</div>
         {
           !props.community &&
-          <div className={"blog-card-text-description"}>{props.subtitle}</div>
+          <div className={"blog-card-text-subtitle"}>{props.subtitle}</div>
         }
         {/* <div className={"blog-card-text-description"}>
           <div dangerouslySetInnerHTML={{ __html: converter.makeHtml(props.subtitle) }} />

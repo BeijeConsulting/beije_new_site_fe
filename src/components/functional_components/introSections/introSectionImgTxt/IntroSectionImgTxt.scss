@@ -70,34 +70,36 @@
 
 @media(min-width: 1024px) {
 
-  .intro-section-txt-img .intro-section-img-container {
-    width: 55%;
-    display: block;
-    position: relative;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
+  .intro-section-txt-img {
+    .intro-section-img-container {
+      width: 55%;
+      display: block;
+      position: relative;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
 
-  .intro-section-txt-img .intro-section-img-container p {
-    color: var(--grey-tone-6);
-    opacity: 16%;
-    font-size: 387px;
-    position: absolute;
-    bottom: 170px;
-    font-family: 'ginra-bold';
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    text-align: center;
-  }
+      p {
+        color: var(--grey-tone-6);
+        opacity: 16%;
+        font-size: 387px;
+        position: absolute;
+        bottom: 170px;
+        font-family: 'ginra-bold';
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+      }
+    }
 
-  .intro-section-txt-img .intro-section-txt-container {
-    width: 31.1%;
-    background-image: none;
-    background-color: transparent;
-    padding: 70px 14.2% 50px 3%;
+    .intro-section-txt-container {
+      width: 31.1%;
+      background-image: none;
+      background-color: transparent;
+      padding: 70px 14.2% 50px 3%;
+    }
   }
 
   .intro-section-scroll-down-container {
