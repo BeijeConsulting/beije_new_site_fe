@@ -5,15 +5,15 @@
   overflow: hidden;
   cursor: pointer;
   -webkit-filter: brightness(0.95);
-          filter: brightness(0.95);
+  filter: brightness(0.95);
 }
 
 .blog-card-container:hover {
   -webkit-transform: scale(1.02);
-      -ms-transform: scale(1.02);
-          transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  transform: scale(1.02);
   -webkit-filter: brightness(1);
-          filter: brightness(1);
+  filter: brightness(1);
 }
 
 .blog-card-image-container {
@@ -28,7 +28,7 @@
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .blog-card-text-container {
@@ -37,39 +37,58 @@
   background-color: rgb(101, 101, 101, 0.2);
   color: var(--white);
   font-family: var(--ginra-regular);
-  padding-top: 25px;
+  padding-top: 16px;
+  border-radius: 0 0 8px 8px;
 }
 
-.blog-card-text-title,
+.blog-card-text-title {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  line-height: 1.5rem;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.blog-card-text-postedby {
+  position: absolute;
+  bottom: 0;
+  line-height: 15px;
+  padding-right: 16px;
+}
+
+
 .blog-card-text-subtitle,
 .blog-card-text-postedby {
   font-size: 30px;
   min-height: 25px;
   display: block;
-  white-space: nowrap;
   -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
+  text-overflow: ellipsis;
   margin-bottom: 8px;
-}
-
-.blog-card-text-subtitle,
-.blog-card-text-postedby{
   overflow: hidden;
+
 }
 
 .blog-card-text-subtitle {
   font-size: 20px;
   min-height: 20px;
+  white-space: nowrap;
+
 }
 
 .blog-card-text-description {
   font-size: 16px;
   line-height: 24px;
   min-height: 46px;
-  color: #878787;
+  /* color: #878787; */
   overflow: hidden;
   -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
+  text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -88,17 +107,31 @@
 
 @media (min-width: 768px) {
 
-  .blog-card-container {
-    height: 405px;
+  .blog-card-text-description {
+    font-size: 18px;
+    min-height: 50px;
   }
 
-  .blog-card-text-description {
-    min-height: 50px;
+  .blog-card-text-title {
+    line-height: 1.8rem;
+  }
+
+  .blog-card-container {
+    height: 405px;
+    padding-top: 25px;
+  }
+
+  .blog-card-text-postedby {
+    line-height: 18px;
   }
 
 }
 
 @media (min-width: 1024px) {
+
+  .blog-card-text-title {
+    font-size: 30px;
+  }
 
   .blog-card-container {
     height: 420px;

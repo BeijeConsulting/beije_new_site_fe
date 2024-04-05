@@ -54,6 +54,10 @@
     color: var(--lightblue);
 }
 
+.whistleblowing-form-field input, .whistleblowing-form-field textarea, .whistleblowing-form-field div {
+    color: white;
+}
+
 @media (min-width: 768px) {
     .whistleblowing-padding-top {
         padding-top: calc(var(--header-height-md))
