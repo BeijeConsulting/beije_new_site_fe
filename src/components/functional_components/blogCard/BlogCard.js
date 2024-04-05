@@ -50,12 +50,11 @@ const BlogCard = (props) => {
         <div className={"blog-card-text-title"}>{props.title}</div>
         {
           !props.community &&
-          <div className={"blog-card-text-subtitle"}>{props.subtitle}</div>
+          <div className={"blog-card-text-description"}>{props.subtitle}</div>
         }
-
-        <div className={"blog-card-text-description"}>
-          <div dangerouslySetInnerHTML={{ __html: converter.makeHtml(props.description) }} />
-        </div>
+        {/* <div className={"blog-card-text-description"}>
+          <div dangerouslySetInnerHTML={{ __html: converter.makeHtml(props.subtitle) }} />
+        </div> */}
         {
           !props.community &&
           <div className={"blog-card-text-postedby"}>
