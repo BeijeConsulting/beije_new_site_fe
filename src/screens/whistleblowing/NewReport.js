@@ -179,7 +179,7 @@ const NewReport = (props) => {
                                 {t("whistleblowing.new.title")}
                             </h2>
 
-                            <form>
+                            <form className="whistleblowing-form-field">
                                 <Grid item xs={12}>
                                     <TextField
                                         id="subject"
