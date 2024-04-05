@@ -337,6 +337,14 @@ const CustomForm = (props) => {
                 />
               </Grid>
 
+
+              {/* UPLOAD FILE */}
+              <Grid
+                item
+                xs={12}
+              >
+              </Grid>
+
             </Grid>
 
             {/* Text area */}

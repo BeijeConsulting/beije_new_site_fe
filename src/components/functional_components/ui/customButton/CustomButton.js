@@ -29,6 +29,9 @@ const CustomButton = (props) => {
       case "career_btn":
         currentClassName = "button-career";
         break;
+      case "whistleblowing-btn":
+        currentClassName = "button-whistleblowing";
+        break;
       default:
         currentClassName = ""
         break;
