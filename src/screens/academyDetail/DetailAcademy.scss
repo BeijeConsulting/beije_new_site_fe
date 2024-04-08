@@ -1,0 +1,25 @@
+/* Second section */
+.detail-academy-second-section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  h2 {
+    color: var(--yellow);
+    text-transform: uppercase;
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: 1024px) {
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+}
+
+/* Third section */
+.detail-academy-third-section {
+  padding: 100px 0;
+
+  @media (min-width: 1024px) {
+    padding: 200px 0 70px 0;
+  }
+}

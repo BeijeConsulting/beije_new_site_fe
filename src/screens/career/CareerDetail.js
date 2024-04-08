@@ -13,7 +13,7 @@ import ApiCalls from "../../services/api/ApiCalls";
 import { Box, Container, Skeleton } from "@mui/material";
 
 // Style
-import "./Career.css";
+import "./Career.scss";
 
 // Components
 import CustomForm from "../../components/hooks_components/customForm/CustomForm";

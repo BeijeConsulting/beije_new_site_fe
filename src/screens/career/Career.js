@@ -11,7 +11,7 @@ import { Box, Drawer, useMediaQuery } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // Style
-import "./Career.css";
+import "./Career.scss";
 
 import { initCurrentPage, setCurrentPage } from "../../redux/ducks/currentPageDuck";
 import { initVisibilityNavbar, setVisibilityNavbar } from "../../redux/ducks/showNavbarTopDuck";

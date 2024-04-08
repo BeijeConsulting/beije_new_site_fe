@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 
 // Style
-import './Events.css';
+import './Events.scss';
 
 // MUI
 import { Box, Container, Divider, Skeleton } from "@mui/material";

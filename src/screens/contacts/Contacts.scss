@@ -1,11 +1,11 @@
 .contacts-first-section-container {
   padding: 50px 0;
-}
 
-.contacts-first-section-container h1 {
-  color: var(--white);
-  text-transform: uppercase;
-  padding-bottom: 50px;
+  h1 {
+    color: var(--white);
+    text-transform: uppercase;
+    padding-bottom: 50px;
+  }
 }
 
 .contacts-info-external-container {
@@ -17,13 +17,13 @@
 .contacts-info-container p {
   background-color: var(--grey-tone-8);
   color: var(--white);
-}
 
-.contacts-info-container p:nth-child(1),
-.contacts-info-container p:nth-child(4) {
-  color: var(--grey-tone-4);
-  text-transform: uppercase;
-  margin: 20px 0;
+  &:nth-child(1),
+  &:nth-child(4) {
+    color: var(--grey-tone-4);
+    text-transform: uppercase;
+    margin: 20px 0;
+  }
 }
 
 .contacts-links-container {
@@ -43,10 +43,10 @@
   margin: 50px 0;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-}
 
-.contacts-links-container button {
-  margin-right: 30px;
+  button {
+    margin-right: 30px;
+  }
 }
 
 .contacts-socials-container {

@@ -81,9 +81,14 @@
   padding-top: 50px;
   margin-bottom: 100px;
   color: var(--white);
+
+  h1 {
+    text-transform: uppercase;
+    padding: 50px 0 35px 0;
+  }
 }
 
-.career-detail-container h1, .career-detail-tag {
+.career-detail-tag {
   text-transform: uppercase;
   padding: 50px 0 35px 0;
 }
@@ -92,14 +97,14 @@
   background-color: var(--grey-tone-8);
   padding: 70px 7%;
   border-top: 2px solid var(--lightblue);
+
+  p {
+    margin-top: 20px;
+  }
 }
 
 .career-detail-link-apply-container {
   margin-bottom: 30px;
-}
-
-.career-detail-txt-container p {
-  margin-top: 20px;
 }
 
 
@@ -115,46 +120,56 @@
   padding-bottom: 400px;
   display: flex;
   flex-direction: column;
+
+  .career_video_container {
+    margin: 90px auto 0 auto;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 42px;
+
+    video {
+      border-radius: 42px;
+    }
+  }
 }
 
-.career_first_section .career_video_container {
-  margin: 90px auto 0 auto;
-  width: 90%;
-  max-width: 800px;
-  border-radius: 42px;
-}
+.career_third_section {
+  margin-top: 100px;
+  flex-direction: column;
 
-.career_first_section .career_video_container video {
-  border-radius: 42px;
+  h2 {
+    /* font-size: 40px; */
+    font-weight: normal;
+    color: #323E48;
+  }
 }
-
-.career_title_page h1 span:nth-child(1), .career_first_section h1 span:nth-child(2), .career_third_section h2 {
-  /* font-size: 40px; */
-  font-weight: normal;
-  color: #323E48;
-}
-
-/* 
-.career_third_section h2 {
-  line-height: 45px;
-} */
 
 .career_title_page {
   display: flex;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-}
 
-.career_title_page h1 span:nth-child(2) {
-  color: #b12009;
-}
+  h1 {
+    span {
+      font-weight: normal;
 
-.career_title_page p {
-  /* font-size: 70px; */
-  margin-top: 20px;
-  margin-left: 70px;
-  color: #323E48;
+      &:nth-child(1) {
+        color: #323E48;
+      }
+
+      &:nth-child(2) {
+        color: #b12009;
+      }
+    }
+  }
+
+  p {
+    /* font-size: 70px; */
+    margin-top: 20px;
+    margin-left: 70px;
+    color: #323E48;
+  }
 }
 
 .career_intro_text p {
@@ -169,15 +184,17 @@
   margin-top: 70px;
   display: flex;
   flex-direction: column;
-}
 
-.career_container_starting_buttons button:nth-child(1) {
-  background-color: #b12009;
-  margin-bottom: 20px;
-}
+  button {
+    &:nth-child(1) {
+      background-color: #b12009;
+      margin-bottom: 20px;
+    }
 
-.career_container_starting_buttons button:nth-child(2) {
-  background-color: #323E48;
+    &:nth-child(2) {
+      background-color: #323E48;
+    }
+  }
 }
 
 /* .career_container_list {
@@ -191,21 +208,31 @@
   margin-top: -340px;
 }
 
-.career_third_section, .career_sixth_section {
+.career_sixth_section {
   margin-top: 100px;
   flex-direction: column;
+  margin-top: -80px;
+  padding-bottom: 113px;
+
+  p {
+    color: var(--dark-grey);
+  }
+
+  h2 {
+    color: #323E48;
+  }
 }
 
 .career_single_paragraph {
   margin-top: 30px;
-}
 
-.career_single_paragraph p, .career_sixth_section p {
-  color: var(--dark-grey);
-}
+  p {
+    color: var(--dark-grey);
+  }
 
-.career_single_paragraph h2, .career_sixth_section h2, .career_title_video_container h2 {
-  color: #323E48;
+  h2 {
+    color: #323E48;
+  }
 }
 
 .career_single_paragraph_mobile_drawer {
@@ -319,12 +346,18 @@
   display: flex;
   flex-direction: column;
   color: #fff;
-}
 
-.career_growth_paths_container legend {
-  width: fit-content;
-  margin-top: -40px;
-  background: inherit;
+  legend {
+    width: fit-content;
+    margin-top: -40px;
+    background: inherit;
+  }
+
+  p {
+    &:nth-child(2) {
+      text-align: left;
+    }
+  }
 }
 
 .career_growth_paths {
@@ -335,14 +368,10 @@
   margin: 50px 0 0px;
   max-width: 768px;
   justify-content: center;
-}
 
-.career_growth_paths_container p:nth-child(2) {
-  text-align: left;
-}
-
-.career_growth_paths legend {
-  padding: 0 20px;
+  legend {
+    padding: 0 20px;
+  }
 }
 
 .career_growth_paths_description {
@@ -376,16 +405,20 @@
 .career_video_container {
   width: 100%;
   height: 262px;
-}
 
-.career_video_container video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .career_title_video_container {
   margin-top: 70px;
+
+  h2 {
+    color: #323E48;
+  }
 }
 
 @media(min-width: 550px) {

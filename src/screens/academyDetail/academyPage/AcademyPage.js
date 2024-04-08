@@ -16,7 +16,7 @@ import { connect, useSelector } from "react-redux";
 import { Box, Container } from "@mui/material";
 
 // styles
-import '../DetailAcademy.css';
+import '../DetailAcademy.scss';
 
 // Constants
 import { infoGraphicFrontend } from "../../../utils/properties";

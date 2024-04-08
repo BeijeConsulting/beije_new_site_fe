@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useParams, useNavigate } from "react-router-dom";
 
 // Style
-import './Blog.css';
+import './Blog.scss';
 
 // MUI
 import { Box, Container, Divider, Skeleton } from "@mui/material";
