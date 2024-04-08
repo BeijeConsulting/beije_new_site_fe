@@ -1,14 +1,13 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useParams, useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 // Style
 import './Whistleblowing.css';
 
 // MUI
-import { Box, Container, Divider, Skeleton } from "@mui/material";
+import { Box, Container, Divider } from "@mui/material";
 
 // Redux
 import { setCurrentPage, initCurrentPage } from "../../redux/ducks/currentPageDuck";
@@ -19,7 +18,6 @@ import { connect } from "react-redux";
 import CustomButton from "../../components/functional_components/ui/customButton/CustomButton";
 import CustomModal from "../../components/hooks_components/customModal/CustomModal";
 import PrivacyPolicies from "../../components/functional_components/privacyPolicies/PrivacyPolicies";
-import DownloadBtn from "../../components/functional_components/downloadBtn/DownloadBtn";
 
 const Whistleblowing = (props) => {
 

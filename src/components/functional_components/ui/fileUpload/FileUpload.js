@@ -26,10 +26,6 @@ const FileUpload = (props) => {
         }
     }, [selectedFiles])
 
-    // useEffect(()=>{
-    //     console.log("props",props)
-    // },[props])
-
     useEffect(() => {
         if (props?.resetAll) {
             setSelectedFiles([]);

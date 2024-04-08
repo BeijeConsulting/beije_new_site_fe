@@ -71,6 +71,10 @@
     .whistleblowing-text-container {
         padding: 20px;
     }
+
+    .whistle-padding-container{
+        padding: 60px 11% 60px !important;
+    }
 }
 
 @media (min-width: 1024px) {
