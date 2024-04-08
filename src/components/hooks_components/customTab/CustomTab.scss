@@ -8,6 +8,7 @@
   -ms-flex-direction: column;
   flex-direction: column;
   width: 100%;
+  
 }
 
 .tab-labels-container {
@@ -37,19 +38,19 @@
   text-transform: uppercase !important;
   color: var(--grey-tone-6) !important;
   border-radius: 0% !important;
+
+  h2{
+    font-size: calc(var(--font-size-h1-xs) - 3px);
+    font-family: var(--ginra-regular);
+  }
 }
 
 .tab-lables-active {
   color: var(--white) !important;
-}
 
-.tab-lables h2 {
-  font-size: calc(var(--font-size-h1-xs) - 3px);
-  font-family: var(--ginra-regular);
-}
-
-.tab-lables-active h3 {
-  font-family: var(--ginra-bold);
+  h3{
+    font-family: var(--ginra-bold);
+  }
 }
 
 .tab-panels-container {
@@ -65,6 +66,8 @@
 .tab-panels {
   color: var(--white);
 }
+
+//media query
 
 @media(min-width: 768px) {
   .tab-container {

@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import { Tabs, Box } from "@mui/material";
 
 // Style
-import "./CustomScrollTab.css";
+import "./CustomScrollTab.scss";
 
 // Constants
 import { quotationMark } from "../../../utils/properties";

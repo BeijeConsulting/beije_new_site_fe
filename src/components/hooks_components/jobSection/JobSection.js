@@ -8,8 +8,10 @@ import { initVisibilityNavbar, setVisibilityNavbar } from "../../../redux/ducks/
 import ApiCalls from "../../../services/api/ApiCalls";
 import { career_empty_academy, career_empty_job } from "../../../utils/properties";
 import CustomButton from "../../functional_components/ui/customButton/CustomButton";
-import CustomSwitch from "../../functional_components/ui/customSwitch/CustomSwitch"
-import "./JobSection.css";
+import CustomSwitch from "../../functional_components/ui/customSwitch/CustomSwitch";
+
+//style
+import "./JobSection.scss";
 
 const JobSection = (props) => {
   const { t } = useTranslation();
