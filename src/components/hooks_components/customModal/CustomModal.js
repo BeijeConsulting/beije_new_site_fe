@@ -8,7 +8,7 @@ import { connect } from "react-redux";
 import { Modal, Backdrop, Fade, Box } from "@mui/material";
 
 // Style
-import "./CustomModal.css";
+import "./CustomModal.scss";
 
 // Constants and assets
 import { xIcon } from "../../../utils/properties";

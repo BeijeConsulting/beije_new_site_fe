@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 // Style
-import "./CustomLink.css";
+import "./CustomLink.scss";
 
 const CustomLink = (props) => {
   const switchClassName = () => {

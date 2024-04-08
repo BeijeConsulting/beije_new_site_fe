@@ -7,7 +7,7 @@ import { IconButton } from "@mui/material";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 // Style
-import "./CustomIconButton.css";
+import "./CustomIconButton.scss";
 
 // Constants
 import { defaultIcon } from "../../../../utils/properties";

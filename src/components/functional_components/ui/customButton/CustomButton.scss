@@ -9,31 +9,31 @@
   -o-transition: 1s !important;
   transition: 1s !important;
   min-width: 125px !important;
-}
 
-.button-form-primary p {
-  font-family: var(--ginra-regular) !important;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
+  p {
+    font-family: var(--ginra-regular) !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
 
-.button-form-primary:disabled {
-  background-color: var(--dark-grey) !important;
-  opacity: 80%;
-}
+  &:disabled {
+    background-color: var(--dark-grey) !important;
+    opacity: 80%;
 
-.button-form-primary:disabled p {
-  background-color: var(--dark-grey) !important;
-  opacity: 50%;
-}
+    p {
+      // background-color: var(--dark-grey) !important;
+      opacity: 50%;
+    }
+  }
 
-.button-form-primary:hover {
-  -webkit-box-shadow: 4px 5px 15px var(--dark-grey);
-  box-shadow: 4px 5px 15px var(--dark-grey);
+  &:hover {
+    -webkit-box-shadow: 4px 5px 15px var(--dark-grey);
+    box-shadow: 4px 5px 15px var(--dark-grey);
+  }
 }
 
 .button-career {
@@ -59,10 +59,10 @@
   border: 1px solid var(--grey-tone-4) !important;
   padding: 12px 40px !important;
   border-radius: 0% !important;
-}
 
-.button-filter-primary p {
-  color: var(--grey-tone-4) !important;
+  p {
+    color: var(--grey-tone-4) !important;
+  }
 }
 
 /* Whistleblowing button */
@@ -70,18 +70,18 @@
   border: 1px solid var(--grey-tone-4) !important;
   padding: 12px 40px !important;
   border-radius: 0% !important;
-}
 
-.button-whistleblowing:hover {
-  -webkit-box-shadow: 4px 5px 15px var(--dark-grey) !important;
-  box-shadow: 4px 5px 15px var(--dark-grey) !important;
-  background-color: var(--grey-tone-4) !important;
-}
+  &:hover {
+    -webkit-box-shadow: 4px 5px 15px var(--dark-grey) !important;
+    box-shadow: 4px 5px 15px var(--dark-grey) !important;
+    background-color: var(--grey-tone-4) !important;
+  }
 
-.button-whistleblowing:disabled {
-  opacity: 80% !important;
-}
+  &:disabled {
+    opacity: 80% !important;
 
-.button-whistleblowing:disabled p {
-  opacity: 50% !important;
+    p {
+      opacity: 50% !important;
+    }
+  }
 }

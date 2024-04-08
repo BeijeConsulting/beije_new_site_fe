@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+// import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import logo_3d from "../../../assets/3d/logo-beije.glb";
 
 const Logo3d = () => {

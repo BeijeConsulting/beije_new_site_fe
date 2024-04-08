@@ -1,3 +1,9 @@
+.switch-lng-container{
+  &:hover{
+    cursor: pointer;
+  }
+}
+
 .switch-language-span {
   font-family: var(--ginra-regular);
   text-transform: uppercase;

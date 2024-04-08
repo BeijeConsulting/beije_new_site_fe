@@ -6,41 +6,47 @@
   border-radius: 24px;
   padding: 20px;
   box-sizing: border-box;
-}
 
-.jobSection_single_row_container {
-  width: 100%;
-  border: 2px solid #fff;
-  border-radius: 24px;
-  margin-bottom: 18px;
-  padding: 35px;
-  box-sizing: border-box;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-}
+  .jobSection_single_row_container {
+    width: 100%;
+    border: 2px solid #fff;
+    border-radius: 24px;
+    margin-bottom: 18px;
+    padding: 35px;
+    box-sizing: border-box;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
 
-.jobSection_single_row_container>div:nth-child(1) {
-  display: flex;
-  flex-direction: column;
-}
+    > div:nth-child(1){
+      display: flex;
+      flex-direction: column;
+    }
 
-.jobSection_type_mode_container {
-  display: flex;
-  flex-direction: column;
-}
+    p{
+      display: flex;
+      align-items: center;
+      color: #fff;
+    }
 
-.jobSection_button_container {
-  display: none;
-}
+    .jobSection_type_mode_container {
+      display: flex;
+      flex-direction: column;
 
-.jobSection_single_row_container p {
-  display: flex;
-  align-items: center;
-  color: #fff;
-}
+      @media (min-width: 400px){
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
 
-/* If empty state */
+    .jobSection_button_container {
+      display: none;
+    }
+    
+  }
+
+  /* If empty state */
 .jobSection-empty-message-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -56,27 +62,21 @@
   justify-content: space-around;
   max-width: 486px;
   margin: auto;
-}
 
-.jobSection-empty-message-container img {
-  width: 100%;
-  max-width: 260px;
-  height: auto;
-}
+  img{
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+  }
 
-.jobSection-empty-message-container p {
-  text-align: center;
-  color: #fff;
-}
-
-
-@media(min-width: 400px) {
-  .jobSection_type_mode_container {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  p{
+    text-align: center;
+    color: #fff;
   }
 }
+}
+
+//media query
 
 @media(min-width: 768px) {
   .jobSection_single_row_container {

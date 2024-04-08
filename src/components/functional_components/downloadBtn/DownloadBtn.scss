@@ -16,6 +16,14 @@
     font-family: var(--ginra-regular);
     font-size: var(--font-size-body-xs);
     text-transform: uppercase;
+
+    @media(min-width: 768px) {
+      font-size: var(--font-size-body-md);
+    }
+
+    @media(min-width: 1600px) {
+      font-size: var(--font-size-body-xl);
+    }
   }
 
   &.download-btn-consulting-download a {
@@ -38,14 +46,14 @@
   }
 }
 
-@media(min-width: 768px) {
-  .download-btn-container a {
-    font-size: var(--font-size-body-md);
-  }
-}
+// @media(min-width: 768px) {
+//   .download-btn-container a {
+//     font-size: var(--font-size-body-md);
+//   }
+// }
 
-@media(min-width: 1600px) {
-  .download-btn-container a {
-    font-size: var(--font-size-body-xl);
-  }
-}
+// @media(min-width: 1600px) {
+//   .download-btn-container a {
+//     font-size: var(--font-size-body-xl);
+//   }
+// }
