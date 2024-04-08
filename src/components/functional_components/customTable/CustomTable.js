@@ -12,7 +12,7 @@ import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // Style
-import "./CustomTable.css";
+import "./CustomTable.scss";
 
 // Constants
 import { addIcon } from "../../../utils/properties";

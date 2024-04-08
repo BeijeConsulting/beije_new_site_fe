@@ -8,6 +8,14 @@
   background: transparent linear-gradient(138deg, #2D2F33 0%, #272A2E 52%, #222529 100%) 0% 0% no-repeat padding-box;
   margin: 22px auto 0;
 
+  @media (min-width: 768px) {
+    margin: 30px 10px;
+  }
+
+  @media (min-width: 1024px) {
+    margin: 40px 40px 0 0;
+  }
+
   .percentage-card-icon-container {
     width: 96px;
     height: 96px;
@@ -53,18 +61,16 @@
   }
 }
 
-@media (min-width: 768px) {
+// @media (min-width: 768px) {
+//   .percentage-card-box-container {
+//     margin: 30px 10px;
+//   }
+// }
 
-  .percentage-card-box-container {
-    margin: 30px 10px;
-  }
+// @media (min-width: 1024px) {
 
-}
+//   .percentage-card-box-container {
+//     margin: 40px 40px 0 0;
+//   }
 
-@media (min-width: 1024px) {
-
-  .percentage-card-box-container {
-    margin: 40px 40px 0 0;
-  }
-
-}
+// }
