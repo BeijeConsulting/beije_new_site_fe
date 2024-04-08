@@ -9,7 +9,7 @@ import { Box } from "@mui/material";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 // Style
-import "./SimpleCarousel.css";
+import "./SimpleCarousel.scss";
 
 // Constants
 import { leftArrow, rightArrow } from "../../../utils/properties";
