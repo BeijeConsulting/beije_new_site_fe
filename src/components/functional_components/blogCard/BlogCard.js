@@ -15,7 +15,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
 
 // utils
-import { converter } from "../../../utils/utilities";
+// import { converter } from "../../../utils/utilities";
 
 const BlogCard = (props) => {
 

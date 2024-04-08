@@ -1,7 +1,7 @@
 .blog-card-container {
   height: 396px;
   width: 100%;
-  border-radius: 8px 8px 0 0;
+  border-radius: 8px 8px 8px 8px;
   overflow: hidden;
   cursor: pointer;
   -webkit-filter: brightness(0.95);
@@ -39,6 +39,26 @@
   font-family: var(--ginra-regular);
   padding-top: 16px;
   border-radius: 0 0 8px 8px;
+}
+
+.blog-card-text-title {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  line-height: 1.5rem;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.blog-card-text-postedby {
+  position: absolute;
+  bottom: 0;
+  line-height: 15px;
+  padding-right: 16px;
 }
 
 .blog-card-text-title {
