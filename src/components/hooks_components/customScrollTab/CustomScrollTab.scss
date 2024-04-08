@@ -79,19 +79,19 @@
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+
+  img{
+    width: 100%;
+  }
 }
 
 .scroll-tab-panels-container {
   margin: auto;
   width: 85%;
-}
 
-.scroll-tab-panels-container p {
-  color: var(--dark-grey);
-}
-
-.scroll-tab-content-quotation-marks img {
-  width: 100%;
+  p{
+    color: var(--dark-grey);
+  }
 }
 
 .scroll-tab-content-txt {
