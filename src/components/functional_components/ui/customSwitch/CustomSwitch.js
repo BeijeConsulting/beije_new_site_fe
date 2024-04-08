@@ -2,7 +2,7 @@ import React from "react";
 import { Switch } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
-import "./CustomSwitch.css";
+import "./CustomSwitch.scss";
 import { useTranslation } from "react-i18next";
 
 const CustomSwitch = (props) => {

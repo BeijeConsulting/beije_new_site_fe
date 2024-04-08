@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from "react-i18next";
 
 // MUI
-import { Typography, Button, Icon } from "@mui/material";
+import { Typography, Button } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 import Tooltip from '@mui/material/Tooltip';
 
@@ -13,7 +13,7 @@ import cloneDeep from 'lodash/cloneDeep';
 
 
 //STYLE
-import './FileUpload.css';
+import './FileUpload.scss';
 
 const FileUpload = (props) => {
 
@@ -26,15 +26,15 @@ const FileUpload = (props) => {
         }
     }, [selectedFiles])
 
-    useEffect(()=>{
-        console.log("props",props)
-    },[props])
+    // useEffect(()=>{
+    //     console.log("props",props)
+    // },[props])
 
     useEffect(() => {
-        if (props.resetAll) {
+        if (props?.resetAll) {
             setSelectedFiles([]);
         }
-    }, [props.resetAll])
+    }, [props?.resetAll])
 
     // Funzione per gestire il caricamento del file
     const handleFileChange = (event) => {
@@ -43,7 +43,7 @@ const FileUpload = (props) => {
         if (!props?.checkFile) {
             cloneFiles.push(file);
             setSelectedFiles(cloneFiles);
-        }else{
+        } else {
             props?.onFileChange(file);
         }
 

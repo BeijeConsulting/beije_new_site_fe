@@ -4,7 +4,7 @@ import React from "react";
 import { Button, Typography } from "@mui/material";
 
 // Style
-import "./CustomButton.css";
+import "./CustomButton.scss";
 
 const CustomButton = (props) => {
 
