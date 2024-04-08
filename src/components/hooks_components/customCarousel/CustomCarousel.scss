@@ -27,9 +27,11 @@
   box-shadow: 0px 0px 12px 0px rgb(0 0 0 / 20%);
 }
 
-.swiper-slide p {
-  color: var(--white);
-  padding-left: 10px;
+.swiper-slide {
+  p {
+    color: var(--white);
+    padding-left: 10px;
+  }
 }
 
 .swiper-slide p:nth-child(1) {
@@ -44,7 +46,8 @@
   display: none;
 }
 
-.swiper-button-prev, .swiper-button-next {
+.swiper-button-prev,
+.swiper-button-next {
   display: none;
 }
 
@@ -53,13 +56,16 @@
 }
 
 /* CSS ONLY FOR UP PAGE */
-.swiper-container-up .swiper-slide-next, .swiper-container-up .swiper-slide-prev {
+.swiper-container-up .swiper-slide-next,
+.swiper-container-up .swiper-slide-prev {
   filter: brightness(0.8);
   -webkit-filter: brightness(0.8);
 }
 
-.swiper-container-up .swiper-slide-active {
-  cursor: pointer;
+.swiper-container-up {
+  .swiper-slide-active {
+    cursor: pointer;
+  }
 }
 
 .swiper-container-up .swiper-slide p:nth-child(2) {
@@ -70,7 +76,8 @@
   background-color: rgb(38, 46, 54, 0.8);
 }
 
-.swiper-container-up .swiper-slide-next .swipe-txt-container, .swiper-container-up .swiper-slide-prev .swipe-txt-container {
+.swiper-container-up .swiper-slide-next .swipe-txt-container,
+.swiper-container-up .swiper-slide-prev .swipe-txt-container {
   display: none;
 }
 
@@ -147,7 +154,8 @@
 
 @media(min-width: 768px) {
 
-  .swiper-button-prev, .swiper-button-next {
+  .swiper-button-prev,
+  .swiper-button-next {
     color: var(--white);
     display: block;
   }

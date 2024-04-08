@@ -1,0 +1,90 @@
+.accordion-container {
+  background-color: transparent !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: none !important;
+
+  &::before {
+    display: none;
+  }
+
+  .accordion-header {
+    border-bottom: 2px solid var(--yellow);
+
+    h3 {
+      color: var(--white);
+      font-weight: normal;
+    }
+
+    .accordion-icons-container {
+      color: var(--yellow);
+    }
+
+    .expandIconWrapperMobile,
+    .collapsIconWrapperDesktop,
+    .expandIconWrapperDesktop {
+      display: none;
+    }
+
+    .Mui-expanded {
+      .expandIconWrapperMobile {
+        display: block;
+      }
+
+      .collapsIconWrapperMobile {
+        display: none;
+      }
+    }
+  }
+
+  .accordion-content {
+    background-color: var(--grey-tone-8);
+    margin-top: 15px;
+    color: var(--white);
+
+    p {
+      padding: 5px 0;
+    }
+  }
+}
+
+@media(min-width: 1024px) {
+  .accordion-container {
+    .accordion-header {
+      .MuiAccordionSummary-expandIconWrapper {
+        -webkit-transform: none !important;
+        -ms-transform: none !important;
+        transform: none !important;
+      }
+
+      .collapsIconWrapperMobile,
+      .expandIconWrapperMobile,
+      .expandIconWrapperDesktop {
+        display: none;
+      }
+
+      .collapsIconWrapperDesktop {
+        display: block;
+      }
+
+      .Mui-expanded {
+        .expandIconWrapperMobile {
+          display: none;
+        }
+
+        .expandIconWrapperDesktop {
+          display: block;
+        }
+
+        .collapsIconWrapperDesktop {
+          display: none;
+        }
+      }
+    }
+
+    .accordion-content {
+      padding-left: 90px !important;
+      padding-right: 20px !important;
+    }
+  }
+}

@@ -14,7 +14,7 @@ import 'swiper/css/effect-coverflow';
 SwiperCore.use([Navigation, Pagination, EffectCoverflow]);
 
 // Style
-import "./CustomCarousel.css";
+import "./CustomCarousel.scss";
 
 // Constants
 import { carouselProfile } from "../../../utils/properties"

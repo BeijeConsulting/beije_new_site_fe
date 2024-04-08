@@ -8,7 +8,7 @@ import { Box, Accordion, AccordionDetails, AccordionSummary } from "@mui/materia
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // Style
-import "./CustomAccordion.css";
+import "./CustomAccordion.scss";
 
 // Constants
 import { addIcon, minusIcon } from "../../../utils/properties";

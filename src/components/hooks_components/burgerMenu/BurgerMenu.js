@@ -10,7 +10,7 @@ import { setMenu, initMenu } from "../../../redux/ducks/burgerMenuDuck";
 import { Box, IconButton } from "@mui/material";
 
 // Style
-import "./BurgerMenu.css";
+import "./BurgerMenu.scss";
 
 // Constants
 import { menu_voices } from "../../../utils/properties";

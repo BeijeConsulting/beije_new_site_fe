@@ -1,7 +1,7 @@
 import React from "react";
 
 // style
-import "./CookiePolicies.css"
+import "./CookiePolicies.scss"
 
 const CookiePolicies_en = () => {
   return (
