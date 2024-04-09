@@ -61,7 +61,21 @@
   padding-right: 16px;
 }
 
-.blog-card-text-title,
+.blog-card-text-title {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  line-height: 1.5rem;
+}
+
+.blog-card-text-postedby {
+  position: absolute;
+  bottom: 0;
+  line-height: 15px;
+  padding-right: 16px;
+}
+
+
 .blog-card-text-subtitle,
 .blog-card-text-postedby {
   font-size: 30px;

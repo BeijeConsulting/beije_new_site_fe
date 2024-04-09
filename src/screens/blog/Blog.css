@@ -44,10 +44,17 @@
   z-index: -1;
 }
 
+.blog-detail-postedby{
+  font-size: 15px;
+  line-height: 18px;
+  margin-top:10px;
+  margin-bottom: 20px;
 
+}
 
 
 .blog-detail-text-container {
+  position: relative;
   background-color: var(--grey-tone-8);
   color: var(--white);
   padding: 17px;
@@ -200,6 +207,10 @@
 
   .blog-detail-text-container {
     padding: 45px;
+  }
+
+  .blog-detail-postedby{
+    font-size: 18px;
   }
 
 }
