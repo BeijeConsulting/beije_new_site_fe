@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
+//props types
+import PropTypes from 'prop-types';
+
 //TRANSLATIONS
 import { useTranslation } from "react-i18next";
 
@@ -15,6 +18,14 @@ import cloneDeep from 'lodash/cloneDeep';
 //STYLE
 import './FileUpload.scss';
 
+const propTypes = {
+    onFileChange: PropTypes.func.isRequired,
+    onReset: PropTypes.func,
+    containerStyle: PropTypes.object,
+    values: PropTypes.arrayOf(PropTypes.object).isRequired,
+  };
+  
+
 const FileUpload = (props) => {
 
     const [selectedFiles, setSelectedFiles] = useState([]);
@@ -26,11 +37,6 @@ const FileUpload = (props) => {
         }
     }, [selectedFiles])
 
-    useEffect(() => {
-        if (props?.resetAll) {
-            setSelectedFiles([]);
-        }
-    }, [props?.resetAll])
 
     // Funzione per gestire il caricamento del file
     const handleFileChange = (event) => {
@@ -76,5 +82,7 @@ const FileUpload = (props) => {
         </div>
     )
 }
+
+FileUpload.propTypes = propTypes;
 
 export default FileUpload

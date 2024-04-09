@@ -51,7 +51,7 @@ const CustomAccordion = (props) => {
   const printAccordion = (item, key) => {
     return (
       <Accordion
-        key={key}
+        key={key + Date.now()}
         className={"accordion-container"}
       >
         <AccordionSummary
