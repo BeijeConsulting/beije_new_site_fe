@@ -13,7 +13,7 @@ import ApiCalls from "../../services/api/ApiCalls";
 import { Box, Container, Skeleton } from "@mui/material";
 
 // Style
-import "./CaseStudiesDetail.css";
+import "./CaseStudiesDetail.scss";
 
 // Components
 import GoBackBtn from "../../components/functional_components/goBackBtn/GoBackBtn";

@@ -11,7 +11,7 @@ import { connect } from "react-redux";
 import { Box, Container, Skeleton, Tab } from "@mui/material";
 
 // styles
-import './TalentAcademy.css'
+import './TalentAcademy.scss'
 
 // Constants
 import { employeesComments, infoGraphicAcademy, logo_fondazione_lavoro, linkYoutube, socialYt } from "../../utils/properties";

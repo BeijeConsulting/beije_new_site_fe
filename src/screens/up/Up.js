@@ -15,7 +15,7 @@ import ApiCalls from "../../services/api/ApiCalls";
 import { Box, Container, Skeleton } from "@mui/material";
 
 // Style
-import "./Up.css";
+import "./Up.scss";
 
 // Constants
 import { clientComments } from "../../utils/properties";
