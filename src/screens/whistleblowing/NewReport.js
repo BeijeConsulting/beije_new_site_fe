@@ -7,7 +7,7 @@ import * as yup from 'yup';
 import cloneDeep from 'lodash/cloneDeep';
 
 // Style
-import './Whistleblowing.css';
+import './Whistleblowing.scss';
 
 // MUI
 import { Box, Container, Grid, TextField, CircularProgress, FormControl, FormLabel, FormControlLabel, Radio, RadioGroup, Select, FormHelperText, MenuItem, InputLabel, Fade, Modal, Backdrop, Checkbox, FormGroup, Button } from "@mui/material";

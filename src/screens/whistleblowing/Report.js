@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 // Style
-import './Whistleblowing.css';
+import './Whistleblowing.scss';
 
 // MUI
 import { Box, Container } from "@mui/material";
