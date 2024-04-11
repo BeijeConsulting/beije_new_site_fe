@@ -10,6 +10,19 @@ import "./CustomScrollTab.scss";
 // Constants
 import { quotationMark } from "../../../utils/properties";
 
+//props types
+import PropTypes from 'prop-types';
+
+const propTypes = {
+  typographyPanel: PropTypes.element,
+  classNamePanel: PropTypes.string,
+  contentPanel: PropTypes.string,
+  name: PropTypes.string,
+  surname: PropTypes.string,
+  children: PropTypes.element,
+  obj: PropTypes.object,
+};
+
 
 const trialObj = [
   {
@@ -97,6 +110,8 @@ const CustomScrollTab = (props) => {
 CustomScrollTab.defaultProps = {
   obj: trialObj
 }
+
+CustomScrollTab.propTypes = propTypes;
 
 
 export default CustomScrollTab

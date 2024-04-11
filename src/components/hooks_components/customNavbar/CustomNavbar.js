@@ -7,6 +7,13 @@ import { connect } from 'react-redux';
 // Style
 import "./CustomNavbar.scss";
 
+//props types
+import PropTypes from 'prop-types';
+
+const propTypes = {
+  type: PropTypes.string,
+};
+
 const CustomNavbar = (props) => {
 
   const switchClassName = () => {
@@ -67,6 +74,7 @@ CustomNavbar.defaultProps = {
   // activeClassName: "navbar-active-links",
   // notActiveClassName: "navbar-not-active-links"
 }
+CustomNavbar.propTypes = propTypes;
 
 const mapStateToProps = state => (
   {

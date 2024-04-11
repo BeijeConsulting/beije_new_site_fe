@@ -8,49 +8,6 @@ import { Box } from '@mui/material';
 import "./CustomTab.scss"
 import CustomButton from "../../functional_components/ui/customButton/CustomButton";
 
-// Constants
-const tabObj = [
-  {
-    labelTab: "Item 1",
-    contentPanel: [
-      {
-        spanContent: "ciccio ",
-        classNameSpan: "hightlight-txt-white"
-      },
-      {
-        spanContent: "bello",
-        classNameSpan: ""
-      }
-    ]
-  },
-  {
-    labelTab: "Item 2",
-    contentPanel: [
-      {
-        spanContent: "casa ",
-        classNameSpan: "hightlight-txt-white"
-      },
-      {
-        spanContent: "blanca",
-        classNameSpan: ""
-      }
-    ]
-  },
-  {
-    labelTab: "Item 3",
-    contentPanel: [
-      {
-        spanContent: "ciccio",
-        classNameSpan: "hightlight-txt-white"
-      },
-      {
-        spanContent: "bello",
-        classNameSpan: ""
-      }
-    ]
-  }
-]
-
 const CustomTab = (props) => {
   const { t } = useTranslation()
   const [state, setState] = useState({
@@ -143,7 +100,6 @@ CustomTab.defaultProps = {
   // classNameLabelActive: "tab-lables tab-lables-active",
   typographyPanel: "p",
   classNamePanel: "tab-panels",
-  obj: tabObj
 }
 
 export default CustomTab

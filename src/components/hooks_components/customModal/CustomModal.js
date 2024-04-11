@@ -17,14 +17,31 @@ import { xIcon } from "../../../utils/properties";
 import CustomButton from "../../functional_components/ui/customButton/CustomButton";
 import CustomIconButton from "../../functional_components/ui/customIconButton/CustomIconButton";
 
+//props types
+import PropTypes from 'prop-types';
+
+const propTypes = {
+  callbackOpen: PropTypes.func,
+  callbackClose: PropTypes.func,
+  stateModal: PropTypes.bool,
+  classNameTxtContainer: PropTypes.string,
+  classNameContainer: PropTypes.string,
+  classNameHeader: PropTypes.string,
+  modalTitle: PropTypes.string,
+  closingX: PropTypes.bool,
+  classNameChildrenContainer: PropTypes.string,
+  children: PropTypes.element,
+  footer: PropTypes.bool,
+};
+
 const CustomModal = (props) => {
   const { t } = useTranslation()
 
-  const heandleOpen = () => {
+  const handleOpen = () => {
     props.callbackOpen();
   }
 
-  const heandleClose = () => {
+  const handleClose = () => {
     props.callbackClose();
   }
 
@@ -35,8 +52,8 @@ const CustomModal = (props) => {
         <Modal
           aria-labelledby="transition-modal-title"
           aria-describedby="transition-modal-description"
-          open={heandleOpen}
-          onClose={heandleClose}
+          open={handleOpen}
+          onClose={handleClose}
           closeAfterTransition
           BackdropComponent={Backdrop}
           BackdropProps={{
@@ -58,7 +75,7 @@ const CustomModal = (props) => {
                   props.closingX &&
                   <CustomIconButton
                     aria-label={"closing-button"}
-                    callback={heandleClose}
+                    callback={handleClose}
                     iconFontAwsome={xIcon}
                   />
                 }
@@ -75,7 +92,7 @@ const CustomModal = (props) => {
                     type={"btn-form-primary"}
                     content={t("modal.btn")}
                     // callback={closeModal}
-                    callback={heandleClose}
+                    callback={handleClose}
                   />
                 </Box>
               }
@@ -95,6 +112,8 @@ CustomModal.defaultProps = {
   classNameHeader: "modal-header",
   classNameChildrenContainer: "modal-content"
 }
+
+CustomModal.propTypes = propTypes;
 
 const mapStateToProps = state => (
   {

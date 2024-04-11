@@ -27,6 +27,18 @@ import CustomButton from "../../functional_components/ui/customButton/CustomButt
 import CustomModal from "../customModal/CustomModal";
 import PrivacyPolicies from "../../functional_components/privacyPolicies/PrivacyPolicies";
 
+//props types
+import PropTypes from 'prop-types';
+
+const propTypes = {
+  radioTypeAcademy: PropTypes.bool,
+  cvForm: PropTypes.bool,
+  PopUpExists: PropTypes.bool,
+  titlePage: PropTypes.string,
+  classNameContainer: PropTypes.string,
+  formTitle: PropTypes.string,
+  classNameInfoContainer: PropTypes.string,
+};
 
 const CustomForm = (props) => {
   const { t } = useTranslation();
@@ -508,5 +520,7 @@ CustomForm.defaultProps = {
   cvForm: false,
   radioTypeAcademy: false
 }
+
+CustomForm.propTypes = propTypes;
 
 export default connect()(CustomForm)
