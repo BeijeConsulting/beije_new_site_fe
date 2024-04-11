@@ -15,6 +15,12 @@
   padding: 100px 0;
 }
 
+@media (min-width: 768px) {
+  .detail-academy-third-section {
+    padding: 150px 0 70px 0;
+  }
+}
+
 @media (min-width: 1024px) {
   .detail-academy-third-section {
     padding: 200px 0 70px 0;
