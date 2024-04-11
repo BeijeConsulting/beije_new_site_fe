@@ -23,8 +23,8 @@ const propTypes = {
     onReset: PropTypes.func,
     containerStyle: PropTypes.object,
     values: PropTypes.arrayOf(PropTypes.object).isRequired,
-  };
-  
+};
+
 
 const FileUpload = (props) => {
 

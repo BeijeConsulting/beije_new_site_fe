@@ -20,6 +20,22 @@ import "./CustomCarousel.scss";
 import { carouselProfile } from "../../../utils/properties"
 import { useNavigate } from "react-router-dom";
 
+//props types
+import PropTypes from 'prop-types';
+
+const propTypes = {
+  upCarousel: PropTypes.bool,
+  academyCarousel: PropTypes.bool,
+  homeCarousel: PropTypes.bool,
+  pictureClassName: PropTypes.string,
+  backgroundColor: PropTypes.string,
+  permalink: PropTypes.string,
+  logo: PropTypes.string,
+  classNameTxtContainer: PropTypes.string,
+  classNameSwiperContainer: PropTypes.string,
+  obj: PropTypes.object,
+};
+
 const CustomCarousel = (props) => {
 
   const { t } = useTranslation();
@@ -156,5 +172,7 @@ CustomCarousel.defaultProps = {
   classNameTxtContainer: "swipe-txt-container",
   obj: carouselProfile
 }
+
+CustomCarousel.propTypes = propTypes;
 
 export default CustomCarousel
