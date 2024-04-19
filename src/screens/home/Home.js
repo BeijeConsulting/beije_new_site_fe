@@ -387,7 +387,6 @@ const Home = (props) => {
               maxWidth={"false"}
               className={"home-sixth-section-container d-flex justify-center"}
             >
-              {console.log("D: ", carouselProfileResponse)}
               <Box className={"width-100 max-width-1800"}>
                 {
                   !carouselProfileResponse &&

@@ -59,7 +59,7 @@ const CustomCarousel = (props) => {
         ref={slideRef}
         onMouseMove={tiltEffect()}
         style={{
-          backgroundColor: (props.upCarousel || props.academyCarousel) ? item.backgroundColor : "",
+          backgroundColor: (props.upCarousel || props.academyCarousel) ? item.background_color : "",
           backgroundImage: props.homeCarousel ? `url(${item.pictureClassName})` : "none",
           border: props.homeCarousel ? "1px solid red" : "none"
         }}

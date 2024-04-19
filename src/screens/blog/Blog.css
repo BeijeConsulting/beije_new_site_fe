@@ -44,10 +44,10 @@
   z-index: -1;
 }
 
-.blog-detail-postedby{
+.blog-detail-postedby {
   font-size: 15px;
   line-height: 18px;
-  margin-top:10px;
+  margin-top: 10px;
   margin-bottom: 20px;
 
 }
@@ -209,7 +209,7 @@
     padding: 45px;
   }
 
-  .blog-detail-postedby{
+  .blog-detail-postedby {
     font-size: 18px;
   }
 

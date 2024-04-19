@@ -6,6 +6,7 @@
   cursor: pointer;
   -webkit-filter: brightness(0.95);
   filter: brightness(0.95);
+  position: relative;
 }
 
 .blog-card-container:hover {
