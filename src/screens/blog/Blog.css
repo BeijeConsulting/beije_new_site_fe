@@ -14,7 +14,6 @@
   margin: 50px 0;
   grid-template-columns: repeat(auto-fit, 100%);
   grid-gap: 60px;
-  position: relative;
 }
 
 .blog-detail-second-section-container {
