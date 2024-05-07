@@ -152,12 +152,12 @@
   padding-bottom: 100px;
   margin-bottom: 50px;
 
-  &:hover{
-    .home-fifth-section-span-strong{
+  &:hover {
+    .home-fifth-section-span-strong {
       opacity: 100% !important;
     }
 
-    .home-fifth-section-final-span{
+    .home-fifth-section-final-span {
       font-style: italic;
     }
   }
@@ -174,7 +174,7 @@
     .home-fifth-section-span {
       opacity: 60%;
     }
-    
+
     .home-fifth-section-span-strong {
       opacity: 60%;
       -webkit-transition: 1s;
@@ -198,10 +198,10 @@
   background-color: var(--white);
   padding-bottom: 80px;
   padding-top: 150px;
+}
 
-  .home-seventh-section-box-form {
-    margin-top: 150px;
-  }
+.home-seventh-section-box-form {
+  margin-top: 150px;
 }
 
 
