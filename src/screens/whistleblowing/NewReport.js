@@ -248,10 +248,7 @@ const NewReport = (props) => {
                 onBlur={formikReport.handleBlur}
                 variant="standard"
                 size="normal"
-                className="form-field"
-                InputProps={{
-                  style: { color: '--light-grey' },
-                }}
+                className="form-field white-color"
               />
             </Grid>
             <Grid item xs={12}>
@@ -285,7 +282,7 @@ const NewReport = (props) => {
 
                 variant="standard"
                 size="normal"
-                className="form-field"
+                className="form-field white-color"
               />
             </Grid>
 
@@ -305,7 +302,7 @@ const NewReport = (props) => {
                   onBlur={formikReport.handleBlur}
                   variant="standard"
                   size="normal"
-                  className="form-field"
+                  className="form-field white-color"
                 >
                   <MenuItem value={'officeAbuse'}>{t("whistleblowing.new.categoryType.officeAbuse")}</MenuItem>
                   <MenuItem value={'powerAbuse'}>{t("whistleblowing.new.categoryType.powerAbuse")}</MenuItem>
@@ -343,7 +340,7 @@ const NewReport = (props) => {
 
                     variant="standard"
                     size="normal"
-                    className="form-field" />
+                    className="form-field white-color" />
                 </Grid>
 
                 <Grid item xs={12}>
@@ -359,7 +356,7 @@ const NewReport = (props) => {
                     onBlur={formikReport.handleBlur}
                     variant="standard"
                     size="normal"
-                    className="form-field" />
+                    className="form-field white-color" />
                 </Grid>
 
                 <Grid item xs={12}>
@@ -373,7 +370,7 @@ const NewReport = (props) => {
                     onBlur={formikReport.handleBlur}
                     variant="standard"
                     size="normal"
-                    className="form-field" />
+                    className="form-field white-color" />
                 </Grid>
 
                 <Grid item xs={12}>
@@ -389,7 +386,7 @@ const NewReport = (props) => {
                     helperText={formikReport.touched.email && Boolean(formikReport.errors.email) && t("form.errorMessage.emailInvalid")}
                     variant="standard"
                     size="normal"
-                    className="form-field" />
+                    className="form-field white-color" />
                 </Grid>
               </>
             }
