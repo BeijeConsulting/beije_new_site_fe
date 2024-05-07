@@ -65,6 +65,15 @@
     border-radius: 8px;
 }
 
+.white-color{
+    color: white !important;
+
+    input,textarea{
+        color: white !important;
+    }
+
+}
+
 @media (min-width: 768px) {
     .whistleblowing-padding-top {
         padding-top: calc(var(--header-height-md)) !important;

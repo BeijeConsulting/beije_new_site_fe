@@ -226,7 +226,7 @@ const Blog = (props) => {
               <h3>
                 {state.blogData.subtitle}
               </h3>
-              <div className={"blog-card-text-postedby"}>
+              <div className={"blog-detail-postedby"}>
                 <FontAwesomeIcon icon={clock} className={"blog-card-clock-icon"} />{t("blog.postedBy")} {state.blogData.author} {t("blog.postedOn")} {millisecsToDate(state.blogData.create_datetime)}
               </div>
               <div>

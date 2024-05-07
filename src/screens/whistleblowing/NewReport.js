@@ -241,10 +241,9 @@ const NewReport = (props) => {
                                 helperText={formikReport.touched.subject && formikReport.errors.subject}
                                 onChange={formikReport.handleChange}
                                 onBlur={formikReport.handleBlur}
-
                                 variant="standard"
                                 size="normal"
-                                className="form-field"
+                                className="form-field white-color"
                             />
                         </Grid>
 
@@ -276,10 +275,9 @@ const NewReport = (props) => {
                                 helperText={formikReport.touched.description && formikReport.errors.description}
                                 onChange={formikReport.handleChange}
                                 onBlur={formikReport.handleBlur}
-
                                 variant="standard"
                                 size="normal"
-                                className="form-field"
+                                className="form-field white-color"
                             />
                         </Grid>
 
@@ -299,7 +297,7 @@ const NewReport = (props) => {
                                     onBlur={formikReport.handleBlur}
                                     variant="standard"
                                     size="normal"
-                                    className="form-field"
+                                    className="form-field white-color"
                                 >
                                     <MenuItem value={'officeAbuse'}>{t("whistleblowing.new.categoryType.officeAbuse")}</MenuItem>
                                     <MenuItem value={'powerAbuse'}>{t("whistleblowing.new.categoryType.powerAbuse")}</MenuItem>
@@ -334,10 +332,9 @@ const NewReport = (props) => {
                                         helperText={formikReport.touched.name && formikReport.errors.name}
                                         onChange={formikReport.handleChange}
                                         onBlur={formikReport.handleBlur}
-
                                         variant="standard"
                                         size="normal"
-                                        className="form-field" />
+                                        className="form-field white-color" />
                                 </Grid>
 
                                 <Grid item xs={12}>
@@ -351,10 +348,9 @@ const NewReport = (props) => {
                                         helperText={formikReport.touched.surname && formikReport.errors.surname}
                                         onChange={formikReport.handleChange}
                                         onBlur={formikReport.handleBlur}
-
                                         variant="standard"
                                         size="normal"
-                                        className="form-field" />
+                                        className="form-field white-color" />
                                 </Grid>
 
                                 <Grid item xs={12}>
@@ -366,10 +362,9 @@ const NewReport = (props) => {
                                         value={formikReport.values.phone}
                                         onChange={formikReport.handleChange}
                                         onBlur={formikReport.handleBlur}
-
                                         variant="standard"
                                         size="normal"
-                                        className="form-field" />
+                                        className="form-field white-color" />
                                 </Grid>
 
                                 <Grid item xs={12}>
@@ -381,10 +376,9 @@ const NewReport = (props) => {
                                         value={formikReport.values.email}
                                         onChange={formikReport.handleChange}
                                         onBlur={formikReport.handleBlur}
-
                                         variant="standard"
                                         size="normal"
-                                        className="form-field" />
+                                        className="form-field white-color" />
                                 </Grid>
                             </>
                         }
