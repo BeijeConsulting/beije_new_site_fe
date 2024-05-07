@@ -19,6 +19,10 @@
 .detail-academy-third-section {
   padding: 100px 0;
 
+  @media (min-width: 768px) {
+    padding: 150px 0 70px 0;
+}
+
   @media (min-width: 1024px) {
     padding: 200px 0 70px 0;
   }
