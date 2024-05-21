@@ -11,43 +11,43 @@
   },
   "helmet": {
     "meta_title": {
-      "home": "Beije – People First",
-      "consulting": "Consulting – Beije People First",
-      "academy": "Academy – Beije People First",
-      "academy_backend": "Academy backend – Beije People First",
-      "academy_frontend": "Academy frontend– Beije People First",
-      "up": "Up – Beije People First",
-      "career": "Career – Beije People First",
-      "blog": "Blog – Beije People First",
-      "community": "Community – Beije People First",
-      "events": "Events – Beije People First",
-      "contacts": "Contacts – Beije People First"
+      "home": "People First",
+      "consulting": "Consulting – People First",
+      "academy": "Academy – People First",
+      "academy_backend": "Academy backend – People First",
+      "academy_frontend": "Academy frontend– People First",
+      "up": "Up – People First",
+      "career": "Career – People First",
+      "blog": "Blog – People First",
+      "community": "Community – People First",
+      "events": "Events – People First",
+      "contacts": "Contacts – People First"
     },
     "meta_description": {
-      "home": "Beije People First leading company in the IT sector specializes in consulting, frontend & backend training and development of mobile & web apps.",
-      "consulting": "Our Beije consultants provide professional IT consultancy for software development able to offer the best solutions to adapt to the client's needs.",
+      "home": "People First leading company in the IT sector specializes in consulting, frontend & backend training and development of mobile & web apps.",
+      "consulting": "Our People First consultants provide professional IT consultancy for software development able to offer the best solutions to adapt to the client's needs.",
       "academy": "An intensive training experience that aims to develop the skills necessary to become a Software Developer through lessons and real projects.",
       "academy_backend": "Paid Academy of three months to become Java Developer.",
       "academy_frontend": "Paid Academy of three months to become Web Developer.",
       "up": "Management and development of software with the Agile method through the use of the most innovative technologies on the market.",
-      "career": "Become a Software Developer with Beije",
+      "career": "Become a Software Developer with People First",
       "blog": "All the news and updates on the IT industry, frontend & backend",
-      "community": "All the beije Community",
-      "events": "All the events of our Community Beije",
-      "contacts": "Contacts Beije People First"
+      "community": "All the People First Community",
+      "events": "All the events of our Community People First",
+      "contacts": "Contacts People First"
     },
     "keywords": {
-      "home": "IT, consulting, training, frontend, backend, beije contacts, software developer, IT developer, web developer, java developer, academy, react, react native, java, database, developer, beije story, beije values, beije mission, beije vision, beije future, valuable team, people first, company beije",
+      "home": "IT, consulting, training, frontend, backend, People First contacts, software developer, IT developer, web developer, java developer, academy, react, react native, java, database, developer, People First story, People First values, People First mission, People First vision, People First future, valuable team, people first, company People First",
       "consulting": "IT consulting, people first, values, innovative projects, consulting, react consulting, java consulting, react native consulting, frontend development, backend development, frontend consulting, backend consulting, difference frontend and backend, consulting Milano",
       "academy": "IT consulting, people first, values, innovative projects, consulting, react consulting, java consulting, react native consulting, frontend development, backend development, frontend consulting, backend consulting, difference frontend and backend, consulting Milano",
       "academy_backend": "java, fondamenti java, string builder, cvs, xml, database, linguaggio java, java per web, spring, javascript, DOM, come diventare java developer",
       "academy_frontend": "react, react native, frontend, academy frontend, how to become a frontend developer,  academy course, web course, how to create web page, how to create a web app, android, iOS, how to become a frontend expert , javascript, android developer, iOS developer",
       "up": "agile, project, implementation, delivery, integration, application maintenance, software, frontend, backend, software company, IT,  IT company, company Milano, consulting Milano, company Lissone, IT company lissone, IT company Milano",
-      "career": "job offers beije, stage frontend, stage backend, stage, stage milano IT, stage frontend milano, stage backend milano, academy frontend, academybackend, how to work in beije, beije career, work, academy, frontend salary, software developer salary, backend salary",
+      "career": "job offers People First, stage frontend, stage backend, stage, stage milano IT, stage frontend milano, stage backend milano, academy frontend, academybackend, how to work in People First, People First career, work, academy, frontend salary, software developer salary, backend salary",
       "blog": "",
       "events": "",
-      "community": "Community, Community beije, beije Community, beije events, team beije, team, beije story",
-      "contacts": "beije contacts, beije headquarter, where is beije, beije telephone, email beije"
+      "community": "Community, Community People First, People First Community, People First events, team People First, team, People First story",
+      "contacts": "People First contacts, People First headquarter, where is People First, People First telephone, email People First"
     }
   },
   "btn": {
@@ -115,12 +115,12 @@
     "infoFields": "* Required fields"
   },
   "altImages": {
-    "privacyPolicies": "Beije Privacy Policy",
-    "legalNotes": "Beije Note Legali"
+    "privacyPolicies": "People First Privacy Policy",
+    "legalNotes": "People First Note Legali"
   },
   "burgerMenu": {
     "consulting": "Consulting",
-    "academy": "Beije Talent Academy",
+    "academy": "People First Talent Academy",
     "up": "Up",
     "career": "Career",
     "manifest": "Manifest",
@@ -194,7 +194,7 @@
       "history": {
         "title": "History",
         "content": {
-          "part1": "At the heart of the Beije model is a ",
+          "part1": "At the heart of the People First model is a ",
           "part2": "People First Vision",
           "part3": ": people at the center for the creation of a ",
           "part4": "valuable ",
@@ -375,7 +375,7 @@
       "title": "About us",
       "commentsClient": {
         "francescoPancaro": "The project was followed by a professional, organized and helpful team. They followed us in every phase of the project, always arriving on time and offering us optimal solutions giving a result well beyond expectations.",
-        "matteoMilione": "The collaboration with Beije has been super efficient thanks to the excellent synergy with our internal team and the sharing of the same project vision."
+        "matteoMilione": "The collaboration with People First has been super efficient thanks to the excellent synergy with our internal team and the sharing of the same project vision."
       }
     },
     "form": {
@@ -385,7 +385,7 @@
   "consulting": {
     "title": "Valuable people for valuable projects",
     "intro": {
-      "part1": "Our Beije consultants provide professional",
+      "part1": "Our People First consultants provide professional",
       "part2": "IT consultancy",
       "part3": "for software development able to offer the best solutions that fit the client's needs. We are committed to obtain the best results through targeted updates and constant training for the realization of INNOVATIVE PROJECTS."
     },
@@ -406,7 +406,7 @@
     "cardsDescription": {
       "card1": "Believe that there is a good business climate",
       "card2": "Believe that the company pays attention to the well-being of its employees",
-      "card3": "Would recommend Beije People First"
+      "card3": "Would recommend People First"
     },
     "bannerTitle": "Follow the change!",
     "contactFormTitle": "Request more information"
@@ -430,27 +430,27 @@
     "fourthSection": {
       "title": "About Us",
       "comments_txt": {
-        "commentsDiMonaco": "A comprehensive training and professional experience that leaves you with real and immediately applicable skills. At the Beije Talent Academy you don't just learn how to programme, but how to do it with awareness and ingenuity.",
-        "commentsPignorio": "The Beije Talent Academy has been a very important learning experience for me. I didn't think that in just three months I would have been able to learn so much to be able to work independently on complex projects. I would definitely recommend it to everyone!",
-        "commentsEzpeleta": "The Beije Talent Academy has been very useful for me to enter the world of work with confidence thanks to the team simulations, where I have been able to put into practice what I have studied in the Academy and in the University.",
-        "commentsSavallo": "The Beije Talent Academy was a constructive and challenging experience: it allowed me to learn about technologies used in the working world and encouraged me to challenge myself in all circumstances.",
+        "commentsDiMonaco": "A comprehensive training and professional experience that leaves you with real and immediately applicable skills. At the People First Talent Academy you don't just learn how to programme, but how to do it with awareness and ingenuity.",
+        "commentsPignorio": "The People First Talent Academy has been a very important learning experience for me. I didn't think that in just three months I would have been able to learn so much to be able to work independently on complex projects. I would definitely recommend it to everyone!",
+        "commentsEzpeleta": "The People First Talent Academy has been very useful for me to enter the world of work with confidence thanks to the team simulations, where I have been able to put into practice what I have studied in the Academy and in the University.",
+        "commentsSavallo": "The People First Talent Academy was a constructive and challenging experience: it allowed me to learn about technologies used in the working world and encouraged me to challenge myself in all circumstances.",
         "commentsZacheo": "Thanks to the Academy backend I understood what differentiates university from the world of work and above all I understood how to manage a real project, understanding how to use the java technologies most used by companies.",
-        "commentsFraioli": "Beije People First made a very good impression on me right away and it has not changed with time. I got a permanent contract after a short training period and joined a team that welcomed me far beyond my expectations.",
-        "commentsBusseni": "Although it was the first Academy to be run entirely remotely, it was very well managed, both in terms of the lectures and the division of the groups into mini-projects. I think that the Beije Talent Academy has provided me with more than adequate preparation for working in the Java environment.",
-        "commentsFarina": "At Beije's frontend Academy, I learnt about new technologies and concepts, and I was given support to enter the world of work.  I consider it a course I would gladly do again."
+        "commentsFraioli": "People First made a very good impression on me right away and it has not changed with time. I got a permanent contract after a short training period and joined a team that welcomed me far beyond my expectations.",
+        "commentsBusseni": "Although it was the first Academy to be run entirely remotely, it was very well managed, both in terms of the lectures and the division of the groups into mini-projects. I think that the People First Talent Academy has provided me with more than adequate preparation for working in the Java environment.",
+        "commentsFarina": "At People First's frontend Academy, I learnt about new technologies and concepts, and I was given support to enter the world of work.  I consider it a course I would gladly do again."
       }
     }
   },
   "blog": {
     "title": "Blog",
-    "description": "Passionate about knowledge? Check out our news, updates on innovation and technology, the current trends from  digital business, science, research to society with the Beije Blog. Follow the change!",
+    "description": "Passionate about knowledge? Check out our news, updates on innovation and technology, the current trends from  digital business, science, research to society with the People First Blog. Follow the change!",
     "postedBy": "Posted by",
     "postedOn": "on",
     "latestArticles": "Latest articles"
   },
   "events": {
     "title": "Events",
-    "description": "All the Beije People First events: are you ready to join the party?"
+    "description": "All the People First events: are you ready to join the party?"
   },
   "academyFrontend": {
     "title": "Frontend",
@@ -486,7 +486,7 @@
         "subsection8": "Redux"
       },
       "section2_1": {
-        "title": "Agular",
+        "title": "Angular",
         "subsection1": "Differenze tra un framework ed una libreria",
         "subsection2": "Design Patterns cosa sono e quali sono i principali",
         "subsection3": "Creazione di un progetto Angular",
@@ -591,7 +591,7 @@
     "messageJob": "There are no open positions at the moment, but we recommend you keep an eye on the page.",
     "messageAcademy": "There are no open positions at the moment, but we recommend you keep an eye on the page.",
     "open_position_btn": "Open positions",
-    "manifest_btn": "Beije Manifest",
+    "manifest_btn": "People First Manifest",
     "show_more_btn": "More",
     "modeOffert": {
       "remote": "Remote",
@@ -602,14 +602,14 @@
     "switch_academy": "ACADEMY",
     "switch_jobs": "JOBS",
     "advantages": {
-      "title": "<h2>The advantages of the Community <span class='hightlight-txt'>Beije</span></h2>",
+      "title": "<h2>The advantages of the Community <span class='hightlight-txt'>People First</span></h2>",
       "paragraph1": {
         "title": "<h3 class='hightlight-txt carrer_paragraph_title'>Smartworking</h3>",
-        "text": "<p >At Beije we are big fans of smartworking, our motto is “<b>no matter where but how</b>”, however, we believe that the value of the meeting should be cultivated: our offices are always open to work side by side with the <b>Community</b> and the office becomes a strategic place of <b>teamwork</b>.</p>"
+        "text": "<p >At People First we are big fans of smartworking, our motto is “<b>no matter where but how</b>”, however, we believe that the value of the meeting should be cultivated: our offices are always open to work side by side with the <b>Community</b> and the office becomes a strategic place of <b>teamwork</b>.</p>"
       },
       "paragraph2": {
-        "title": "<h3 class='hightlight-txt carrer_paragraph_title'>Beije events</h3>",
-        "text": "<p >We are a Community, we believe in the value of <b>coming together</b> and that <b>achievements</b> should be celebrated: <b>twice a year</b> we all get together for a <b>Beije</b>-style <b>party</b>!</p>"
+        "title": "<h3 class='hightlight-txt carrer_paragraph_title'>People First events</h3>",
+        "text": "<p >We are a Community, we believe in the value of <b>coming together</b> and that <b>achievements</b> should be celebrated: <b>twice a year</b> we all get together for a <b>People First</b>-style <b>party</b>!</p>"
       },
       "paragraph3": {
         "title": "<h3 class='hightlight-txt carrer_paragraph_title'>Afterwork meetings</h3>",
@@ -623,7 +623,7 @@
     "growth_paths": {
       "title": "<h2>growth paths <span><b></b></span></h2>",
       "paragraph1": {
-        "title": "Beije Supporter",
+        "title": "People First Supporter",
         "text": "<p class='career_growth_paths_description'>Your career <b>does not start full alone</b>:an <b>internal supporter</b> will guide you on your <b>career path</b>, helping you to integrate into the company from the start, so that you can get off to the best possible start. Even beyond work, <b>we support</b> each other <b>as a true Community</b>.</p>"
       },
       "paragraph2": {
@@ -647,7 +647,7 @@
       },
       "paragraph4": {
         "title": "<h3 class='hightlight-txt carrer_paragraph_title'>Webinar and events</h3>",
-        "text": "<p>We lay the foundations for <b>all-round professional development</b>: at least <b>twice a year</b> we organise <b>training events</b> held by our Beije experts and industry professionals; we also plan in-house online <b>webinars</b> to update the Community on the <b>latest technologies</b> and the most <b>interesting innovations</b> in the <b>market</b>.</p"
+        "text": "<p>We lay the foundations for <b>all-round professional development</b>: at least <b>twice a year</b> we organise <b>training events</b> held by our People First experts and industry professionals; we also plan in-house online <b>webinars</b> to update the Community on the <b>latest technologies</b> and the most <b>interesting innovations</b> in the <b>market</b>.</p"
       }
     },
     "video_text": " <h2><span>What is it like working with us?</span><br /> Our <span class='hightlight-txt'>Community</span> tells us about it!</h2>"
@@ -757,9 +757,9 @@
     },
     "txt2": "<0/><1/><2>Contents and purpose of the Website</2><3/><4>The Contents of the Website have been designed in compliance with Italian laws and European Union directives, including those for the protection of literary and artistic works, and are intended for national and international users.</4><5/><6>The purpose of the Site is to disseminate news about Beije Consulting S.r.l. through the Internet for information and advertising purposes, as well as to provide on-line Services.</6><7/><8>People First S.r.l. specifies in particular that:</8>",
     "list2": {
-      "li1": "the area relative to “products” has the purpose of presenting, also visually, the production of Beije Consulting S.r.l;",
-      "li2": "the area relative to “projects” is aimed at highlighting some important areas of application of Beije Consulting S.r.l. products;",
-      "li3": "the “press room” area is dedicated to presenting news about Beije Consulting S.r.l. to the public."
+      "li1": "the area relative to “products” has the purpose of presenting, also visually, the production of People First Consulting S.r.l;",
+      "li2": "the area relative to “projects” is aimed at highlighting some important areas of application of People First Consulting S.r.l. products;",
+      "li3": "the “press room” area is dedicated to presenting news about People First Consulting S.r.l. to the public."
     },
     "txt3": "<0/><1>In any case, the texts, articles, photographs and documentation in electronic format present on this Site, unless otherwise expressly indicated, are the exclusive property of People First S.r.l. and are qualified as “information for the public” and cannot be distributed and/or copied without permission and express written authorisation. Any content owned by third parties shall bear an indication of its respective origin or there shall be an appropriate citation to guarantee the attribution of rights to the legitimate owners or authors.</1><2/><3/><4>People First S.r.l. confirms that:</4>",
     "list3": {
@@ -794,7 +794,7 @@
     }
   },
   "paritaGenere": {
-    "title":"<strong>EQUAL EMPLOYMENT OPPORTUNITY POLICY</strong><br> <br> <br>",
+    "title": "<strong>EQUAL EMPLOYMENT OPPORTUNITY POLICY</strong><br> <br> <br>",
     "quote": " <strong>  “Our ability to reach unity in diversity will be the beauty and the test of our civilization“ </strong> <br> <br> - Mahatma Gandhi <br> <br>",
     "text1": "The founding value of People First Ltd. is: *“People at the center of everything.“* <br> <br> Based on this premise, our organization promotes a corporate culture founded on respect for each individual and recognition of each person's unique needs, aspirations and contributions. <br> People First Ltd. values pluralism and inclusive practices in the world of work both as an ethical factor and as an ability to respond to changes in society and markets. <br> By adopting this policy, People First Ltd. intends to contribute to the <strong> fight  against all forms of discrimination in the workplace </strong> - gender identity, age, disability, ethnicity, religious faith, sexual orientation - <strong> while committing itself to valuing diversity within the corporate organization, with particular regard to equal opportunities between men and women. </strong> <br> <br> Building on these principles, People First Ltd. is committed to contributing to the achievement of the goals shared above through a series of concrete actions described below: <br>",
     "list": {
@@ -824,7 +824,7 @@
       "li15": "Promote to the outside world the company's commitment to equality issues, bearing witness to the policies adopted and the progress achieved from the perspective of a truly supportive and responsible community; ",
       "li16": "Periodically monitor equal opportunity progress and evaluate the impact of good practices adopted, making necessary changes to continuously improve equality"
     },
-    "text2":"People First Ltd. subscribes to this commitment and reminds that equality at work is the responsibility of every member of the organization: it encourages everyone to contribute to the creation of a fair and inclusive work environment."
+    "text2": "People First Ltd. subscribes to this commitment and reminds that equality at work is the responsibility of every member of the organization: it encourages everyone to contribute to the creation of a fair and inclusive work environment."
   },
   "cookiePolicies": {
     "title": "Cookie Policy",
@@ -846,7 +846,7 @@
     "linkToHome": "Go to home"
   },
   "community": {
-    "title": "Beije Community",
+    "title": "People First Community",
     "description": {
       "part1": "First of all, a Community made up of people with different experiences, interests, incentive but united by one goal: the individual at the center for building a valuable system.",
       "part2": "Discover our Community: ",
