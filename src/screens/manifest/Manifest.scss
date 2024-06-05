@@ -36,12 +36,9 @@
 }
 
 .manifest_logo_3d_container {
-  width: 100%;
-  position: absolute;
-  bottom: -37px;
-  max-width: 1200px;
+  position: relative;
   aspect-ratio: 1234 / 857;
-  margin-top: -120px;
+  margin-top: -170px;
 } 
 
 .manifest_logo_3d_container_mobile {
@@ -423,7 +420,7 @@
 @media(min-width: 1024px) {
 
   .manifest_logo_3d_container_mobile {
-    margin-top: -420px !important;
+    margin-top: -550px !important;
   }
 
   .manifest_second_section {
@@ -484,12 +481,9 @@
   }
 
   .manifest_logo_3d_container {
-    width: 100%;
-    position: absolute;
-    bottom: -37px;
-    max-width: 1200px;
+    position: relative;
     aspect-ratio: 1234 / 857;
-    margin-top: -230px;
+    margin-top: -170px;
   }
 
   .manifest_title_page_container {
@@ -517,7 +511,7 @@
   .manifest_sentence_manifest {
     color: var(--dark-grey) !important;
     text-align: center !important;
-    margin: 300px 0 100px 0 !important;
+    margin: 100px 0 100px 0 !important;
   }
 }
 
