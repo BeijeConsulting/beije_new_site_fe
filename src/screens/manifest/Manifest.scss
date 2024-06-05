@@ -35,13 +35,14 @@
   }
 }
 
-/* .manifest_logo_3d_container {
+.manifest_logo_3d_container {
   width: 100%;
   position: absolute;
   bottom: -37px;
   max-width: 1200px;
   aspect-ratio: 1234 / 857;
-} */
+  margin-top: -120px;
+} 
 
 .manifest_logo_3d_container_mobile {
   position: relative;
@@ -483,12 +484,12 @@
   }
 
   .manifest_logo_3d_container {
-    width: 80% !important;
-    max-width: 1200px !important;
-    position: absolute !important;
-    top: 135px !important;
-    left: 86px !important;
-    aspect-ratio: 1234 / 857 !important;
+    width: 100%;
+    position: absolute;
+    bottom: -37px;
+    max-width: 1200px;
+    aspect-ratio: 1234 / 857;
+    margin-top: -230px;
   }
 
   .manifest_title_page_container {
