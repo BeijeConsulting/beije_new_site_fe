@@ -16,6 +16,7 @@ import careerVideoPoster from "../assets/images/career/career4.png";
 // import beije_short_written_dark from "/beije_written_short_dark.png";
 import beije_short_written_white from "../assets/images/logo_only_written_short_white.svg";
 import beije_short_written_dark from "../assets/images/logo_only_written_short_dark.svg";
+import people_first_white from "../assets/images/PEOPLE_FIRST_white_500px.svg";
 
 // Link
 const linkFb = "https://www.facebook.com/beijepeoplefirst";
@@ -54,7 +55,8 @@ export const dbMonth = "YYYY-MM";
 
 export const googleAnalyticsKey = "G-WKEXRBRFFB";
 
-export const logo_primary_light = "https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/logos/logo_official_white.svg";
+// export const logo_primary_light = "https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/logos/logo_official_white.svg";
+export const logo_primary_light = people_first_white;
 export const logo_secondary_light = "https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/logos/logo_short_white.svg";
 export const logo_secondary_grey = "https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/logos/logo_short_grey.svg";
 export const logo_secondary_transparent = "https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/logos/logo_short_transparent.svg";
