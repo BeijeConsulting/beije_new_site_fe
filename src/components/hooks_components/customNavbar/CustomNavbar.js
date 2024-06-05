@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 // Style
-import "./CustomNavbar.css";
+import "./CustomNavbar.scss";
 
 const CustomNavbar = (props) => {
 

@@ -5,8 +5,8 @@ import { useTranslation } from "react-i18next";
 import { Box, Grid } from "@mui/material";
 
 // Style
-import "../introSectionTxtInfoGraphic/IntroSectionTxtInfoGraphic.css";
-import "../IntroSection.css";
+import "../introSectionTxtInfoGraphic/IntroSectionTxtInfoGraphic.scss";
+import "../IntroSection.scss";
 
 // Components
 import ScrollDownButton from "../../scrollDownButton/ScrollDownButton";

@@ -14,7 +14,7 @@ import 'swiper/css/effect-coverflow';
 SwiperCore.use([Navigation, Pagination, EffectCoverflow]);
 
 // Style
-import "./CustomCarousel.css";
+import "./CustomCarousel.scss";
 
 // Constants
 import { carouselProfile } from "../../../utils/properties"
@@ -60,7 +60,7 @@ const CustomCarousel = (props) => {
         onMouseMove={tiltEffect()}
         style={{
           backgroundColor: (props.upCarousel || props.academyCarousel) ? item.background_color : "",
-          backgroundImage: props.homeCarousel ? `url(${item.pictureClassName})` : "none",
+          backgroundImage: props.homeCarousel ? `url(${item.picture_class_name})` : "none",
           border: props.homeCarousel ? "1px solid red" : "none"
         }}
         onClick={(props.upCarousel || props.academyCarousel) ? sendToPage(item.permalink) : null}

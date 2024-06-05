@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 
 // Style
-import './BlogCard.css';
+import './BlogCard.scss';
 
 // MUI
 import { Box, Container } from "@mui/material";
@@ -50,7 +50,7 @@ const BlogCard = (props) => {
         <div className={"blog-card-text-title"}>{props.title}</div>
         {
           !props.community &&
-          <div className={"blog-card-text-description"}>{props.subtitle}</div>
+          <div className={"blog-card-text-subtitle"}>{props.subtitle}</div>
         }
         {/* <div className={"blog-card-text-description"}>
           <div dangerouslySetInnerHTML={{ __html: converter.makeHtml(props.subtitle) }} />

@@ -7,7 +7,7 @@ import { setVisibilityNavbar, initVisibilityNavbar } from "../redux/ducks/showNa
 import { connect } from "react-redux";
 
 // Style
-import "./NoMatch.css";
+import "./NoMatch.scss";
 
 // Assets
 import page_404 from "../assets/images/404.svg"

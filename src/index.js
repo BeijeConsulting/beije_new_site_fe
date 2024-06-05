@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import './style.css';
+import './style.scss';
 import App from './App';
 import './i18n/i18n-config';
 import { Provider } from "react-redux";

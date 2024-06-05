@@ -8,8 +8,10 @@ import { initVisibilityNavbar, setVisibilityNavbar } from "../../../redux/ducks/
 import ApiCalls from "../../../services/api/ApiCalls";
 import { career_empty_academy, career_empty_job } from "../../../utils/properties";
 import CustomButton from "../../functional_components/ui/customButton/CustomButton";
-import CustomSwitch from "../../functional_components/ui/customSwitch/CustomSwitch"
-import "./JobSection.css";
+import CustomSwitch from "../../functional_components/ui/customSwitch/CustomSwitch";
+
+//style
+import "./JobSection.scss";
 
 const JobSection = (props) => {
   const { t } = useTranslation();
@@ -102,7 +104,7 @@ const JobSection = (props) => {
                   <div>
                     <p><b>{props.languageDuck.currentLanguage === "IT" ? item.title_it : item.title_en}</b></p>
                     <div className="jobSection_type_mode_container" >
-                      <p> {item.type}</p>
+                      <p> {t(`career.type.${item.type.toLowerCase()}`)}</p>
                       <p> {t(`career.modeOffert.${item.mode.toLowerCase()}`)}</p>
                     </div>
                   </div>

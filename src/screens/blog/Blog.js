@@ -4,7 +4,7 @@ import { isEmpty } from "lodash";
 import { Helmet } from "react-helmet";
 
 // Style
-import './Blog.css';
+import './Blog.scss';
 
 // MUI
 import { Box, Container, Divider, Skeleton } from "@mui/material";

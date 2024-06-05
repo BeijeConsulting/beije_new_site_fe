@@ -6,7 +6,7 @@ import downloadUpIcon from "../../../assets/icons/upDownload.svg";
 import downloadAcademyIcon from "../../../assets/icons/academyDownload.svg";
 
 // Style
-import "./DownloadBtn.css";
+import "./DownloadBtn.scss";
 
 const DownloadBtn = (props) => {
 

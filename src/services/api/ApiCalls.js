@@ -24,13 +24,14 @@ const ApiCalls = {
   },
 
   academies_getList: (headers = {}) => {
+    console.log(headers);
     return get(`academies`, {}, headers)
   },
 
   caseStudies_getList: (lang, type) => {
-    return get(`case-studies/type/${type}/${lang}`);
+    return get(`case-studies/${type}/${lang}`);
   },
-  
+
   caseStudies_getListDetail: (permalink) => {
     return get(`case-studies/permalink/${permalink}`);
   },
@@ -51,7 +52,7 @@ const ApiCalls = {
   },
 
   carouselProfile_getList: (lang) => {
-    return get(`chi_siamo/language/${lang}`)
+    return get(`chi_siamo/ordered/${lang}`)
   }
 }
 export default ApiCalls

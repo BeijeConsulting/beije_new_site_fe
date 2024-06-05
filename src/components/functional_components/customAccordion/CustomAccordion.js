@@ -8,7 +8,7 @@ import { Box, Accordion, AccordionDetails, AccordionSummary } from "@mui/materia
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // Style
-import "./CustomAccordion.css";
+import "./CustomAccordion.scss";
 
 // Constants
 import { addIcon, minusIcon } from "../../../utils/properties";
@@ -51,7 +51,7 @@ const CustomAccordion = (props) => {
   const printAccordion = (item, key) => {
     return (
       <Accordion
-        key={key}
+        key={key + Date.now()}
         className={"accordion-container"}
       >
         <AccordionSummary

@@ -11,7 +11,7 @@ import { connect } from "react-redux";
 import { Box, Container, Skeleton, Tab } from "@mui/material";
 
 // styles
-import './TalentAcademy.css'
+import './TalentAcademy.scss'
 
 // Constants
 import { employeesComments, infoGraphicAcademy, logo_fondazione_lavoro, linkYoutube, socialYt } from "../../utils/properties";
@@ -75,8 +75,8 @@ const TalentAcademy = (props) => {
     });
   }
   const getData = async () => {
-    let caseStudiesResponse = await ApiCalls.caseStudies_getList(props.languageDuck.currentLanguage, 2);
-    let academiesResponse = await ApiCalls.academies_getList()
+    let caseStudiesResponse = await ApiCalls.caseStudies_getList(props.languageDuck.currentLanguage, 'academy');
+    let academiesResponse = await ApiCalls.academies_getList({ 'Accept-Language': props.languageDuck.currentLanguage })
     setState({
       caseStudiesResponse: caseStudiesResponse,
       academiesData: academiesResponse,
@@ -172,7 +172,7 @@ const TalentAcademy = (props) => {
                     <div key={item.id}>
                       <CustomLink
                         linkTo={`/beije-talent-academy/academy?id=${item.id}`}
-                        content={t(item.languages[0].academy_name)}
+                        content={t(item.academy_name)}
                         typeLink={"detail-academy"}
                       />
                     </div>
@@ -260,7 +260,7 @@ const TalentAcademy = (props) => {
                 }
                 {
                   state.caseStudiesResponse && !isEmpty(state.caseStudiesResponse) &&
-                  < CustomCarousel
+                  <CustomCarousel
                     academyCarousel
                     obj={state.caseStudiesResponse}
                     classNameSwiperContainer={"swiper-container-up"}

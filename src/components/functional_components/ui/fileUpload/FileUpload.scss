@@ -1,0 +1,17 @@
+.select-file-class {
+    color: white !important;
+}
+
+.select-file-paragraph {
+    color: white !important;
+    display: flex;
+    margin-top: 10px !important;
+
+    svg {
+        margin-left: 5px !important;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

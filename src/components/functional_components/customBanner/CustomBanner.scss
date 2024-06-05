@@ -1,0 +1,40 @@
+.banner-container {
+  background-color: var(--yellow);
+  padding: 50px 0;
+
+  @media(min-width: 1024px) {
+    padding: 140px 0;
+  }
+
+  h2,
+  p {
+    color: var(--dark-grey);
+  }
+
+  h2 {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+    @media(min-width: 900px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  p {
+    margin: 10px 0
+  }
+
+  .banner-container-grid {
+    display: flex;
+    align-items: center;
+  }
+
+  .banner-container-grid-col2 {
+    display: flex;
+    flex-direction: column !important;
+  }
+
+  .banner-enphasis-txt {
+    font-family: var(--ginra-bold);
+  }
+}

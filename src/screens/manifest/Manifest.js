@@ -2,7 +2,9 @@ import React, { useEffect, useRef } from "react"
 import { Box, useMediaQuery } from "@mui/material";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
-import "./Manifest.css";
+
+//STYLE
+import "./Manifest.scss";
 import { useParams } from "react-router-dom";
 
 //import gsap

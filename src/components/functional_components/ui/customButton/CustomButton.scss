@@ -1,0 +1,87 @@
+/* Form Button */
+.button-form-primary {
+  background-color: var(--dark-grey) !important;
+  text-transform: uppercase;
+  color: var(--white) !important;
+  padding: 12px 40px !important;
+  border-radius: 0% !important;
+  -webkit-transition: 1s !important;
+  -o-transition: 1s !important;
+  transition: 1s !important;
+  min-width: 125px !important;
+
+  p {
+    font-family: var(--ginra-regular) !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  &:disabled {
+    background-color: var(--dark-grey) !important;
+    opacity: 80%;
+
+    p {
+      // background-color: var(--dark-grey) !important;
+      opacity: 50%;
+    }
+  }
+
+  &:hover {
+    -webkit-box-shadow: 4px 5px 15px var(--dark-grey);
+    box-shadow: 4px 5px 15px var(--dark-grey);
+  }
+}
+
+.button-career {
+  padding: 22px 26px !important;
+  color: #fff;
+  border-radius: 37px !important;
+}
+
+@media(min-width: 1024px) {
+  .button-form-primary {
+    padding: 15px 50px !important;
+    min-width: 145px !important;
+  }
+}
+
+/* Go back button */
+.button-go-back-primary svg {
+  padding-right: 10px;
+}
+
+/* Filter Button */
+.button-filter-primary {
+  border: 1px solid var(--grey-tone-4) !important;
+  padding: 12px 40px !important;
+  border-radius: 0% !important;
+
+  p {
+    color: var(--grey-tone-4) !important;
+  }
+}
+
+/* Whistleblowing button */
+.button-whistleblowing {
+  border: 1px solid var(--grey-tone-4) !important;
+  padding: 12px 40px !important;
+  border-radius: 0% !important;
+
+  &:hover {
+    -webkit-box-shadow: 4px 5px 15px var(--dark-grey) !important;
+    box-shadow: 4px 5px 15px var(--dark-grey) !important;
+    background-color: var(--grey-tone-4) !important;
+  }
+
+  &:disabled {
+    opacity: 80% !important;
+
+    p {
+      opacity: 50% !important;
+    }
+  }
+}

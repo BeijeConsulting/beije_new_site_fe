@@ -11,7 +11,7 @@ import { connect } from "react-redux";
 import { Box, Container, Grid } from "@mui/material";
 
 // Style
-import "./Contacts.css";
+import "./Contacts.scss";
 
 // Constants
 import SocialLinks from "../../components/functional_components/socialLinks/SocialLinks";

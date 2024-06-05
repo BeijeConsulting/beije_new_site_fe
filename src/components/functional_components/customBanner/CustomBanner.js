@@ -4,7 +4,7 @@ import React from "react";
 import { Container, Grid } from "@mui/material";
 
 // Style
-import "./CustomBanner.css"
+import "./CustomBanner.scss"
 
 // constats
 import { posterVideoAcademy } from "../../../utils/properties";
