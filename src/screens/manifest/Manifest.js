@@ -125,24 +125,16 @@ const Manifest = (props) => {
                 />
                 <div dangerouslySetInnerHTML={{ __html: t(`manifest.intro`) }} />
               </div>
-              {
-                match1200 &&
-                <div className="manifest_logo_3d_container" ref={logo3d}>
-                  <Logo3d />
-                </div>
-              }
             </div>
           </div>
         </section>
 
-        {
-          !match1200 &&
-          <section>
-            <div className="manifest_logo_3d_container_mobile" ref={logo3d}>
-              <Logo3d />
-            </div>
-          </section>
-        }
+
+        <section>
+          <div className="manifest_logo_3d_container_mobile" ref={logo3d}>
+            <Logo3d />
+          </div>
+        </section>
 
 
         <section>
