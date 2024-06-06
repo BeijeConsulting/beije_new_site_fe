@@ -24,8 +24,11 @@ const ApiCalls = {
   },
 
   academies_getList: (headers = {}) => {
-    console.log(headers);
     return get(`academies`, {}, headers)
+  },
+
+  academies_getListDetail: (id, headers = {}) => {
+    return get(`academies/${id}`, {}, headers)
   },
 
   caseStudies_getList: (lang, type) => {

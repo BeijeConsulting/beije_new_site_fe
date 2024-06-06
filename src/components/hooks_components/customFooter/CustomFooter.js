@@ -145,12 +145,6 @@ const CustomFooter = (props) => {
           </p>
           <p
             className="cursor-pointer footer-link-privacyPolicies-legalNotes"
-            onClick={openModal("paritaGenere")}
-          >
-            {t("footer.paritaGenere")}
-          </p>
-          <p
-            className="cursor-pointer footer-link-privacyPolicies-legalNotes"
           >
             <Link
               to={"/whistleblowing"}
@@ -158,6 +152,12 @@ const CustomFooter = (props) => {
             >
               {t("footer.whistleblowing")}
             </Link>
+          </p>
+          <p
+            className="cursor-pointer footer-link-privacyPolicies-legalNotes"
+            onClick={openModal("paritaGenere")}
+          >
+            {t("footer.paritaGenere")}
           </p>
           <img
             src={logo_parita_di_genere}

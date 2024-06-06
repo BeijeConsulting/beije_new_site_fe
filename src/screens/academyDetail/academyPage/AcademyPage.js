@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import ApiCalls from "../../../services/api/ApiCalls";
 import { useLocation } from "react-router-dom";
-import { get as __get } from 'lodash';
+import { get as __get, find } from 'lodash';
 
 
 
@@ -77,12 +77,10 @@ const AcademyPage = (props) => {
     const query = useQuery();
     const pageId = query.get('id');
 
-    const response = await ApiCalls.academies_getList({
-      'Accept-Language': currentLanguage
-    });
-    const item = response.find(obj => obj.id === parseInt(pageId));
+    const response = await ApiCalls.academies_getListDetail(pageId, { 'Accept-Language': currentLanguage });
+    // const item = response.find(obj => obj.id === parseInt(pageId));
     setState({
-      academyData: item
+      academyData: response
     })
   }
 
@@ -97,7 +95,7 @@ const AcademyPage = (props) => {
     {
       colMobile: 12,
       colDesktop: 6,
-      name: state.academyData.languages?.[0].duration,
+      name: state.academyData.duration,
       type: ""
     },
     //work mode title and label
@@ -116,14 +114,16 @@ const AcademyPage = (props) => {
   ]
 
   const academyTopics = state.academyData.topics?.map((item) => {
-    const topicSubsectionContent = item.languages[0].subtopics.map((topic) => {
-      return { p: topic.title };
+    const topicSubsectionContent = item.subtopics.map((topic) => {
+      const title = topic.translations.find(translation => translation.language === currentLanguage.toLowerCase());
+      return { p: title.value };
     })
     return {
-      sectionTitle: item.languages[0].name,
+      sectionTitle: item.translations[0].name,
       description: topicSubsectionContent
     }
   })
+
   return (
     <>
       <Helmet>
