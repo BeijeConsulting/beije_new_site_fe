@@ -63,7 +63,8 @@
   margin-bottom: 30px;
 }
 
-.footer-info a:hover, .footer-link-privacyPolicies-legalNotes:hover {
+.footer-info a:hover,
+.footer-link-privacyPolicies-legalNotes:hover {
   text-decoration: underline;
 }
 
@@ -122,8 +123,19 @@
   text-decoration: none;
 }
 
+.footer-container-logo-parita-desktop {
+  cursor: pointer;
+  height: 65px;
+  margin-top: 5px;
+  width: auto;
+}
 
 @media (min-width: 900px) {
+
+  .footer-container-logo-parita-desktop {
+    height: 75px;
+  }
+
   .footer-section {
     padding: 1rem 8.3%;
   }
