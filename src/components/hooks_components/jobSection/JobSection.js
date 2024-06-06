@@ -104,7 +104,7 @@ const JobSection = (props) => {
                   <div>
                     <p><b>{props.languageDuck.currentLanguage === "IT" ? item.title_it : item.title_en}</b></p>
                     <div className="jobSection_type_mode_container" >
-                      <p> {item.type}</p>
+                      <p> {t(`career.type.${item.type.toLowerCase()}`)}</p>
                       <p> {t(`career.modeOffert.${item.mode.toLowerCase()}`)}</p>
                     </div>
                   </div>

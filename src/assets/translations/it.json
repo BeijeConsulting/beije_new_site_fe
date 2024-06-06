@@ -592,10 +592,17 @@
     "open_position_btn": "Posizioni aperte",
     "manifest_btn": "Beije Manifesto",
     "show_more_btn": "Scopri",
+    "type": {
+      "frontend": "Front-end",
+      "backend": "Back-end",
+      "full_stack": "Full-stack",
+      "mobile": "Mobile"
+    },
     "modeOffert": {
       "remote": "Remoto",
       "hybrid": "Ibrido",
       "milan": "Milano",
+      "on_site": "In sede",
       "-": "-"
     },
     "switch_academy": "ACADEMY",

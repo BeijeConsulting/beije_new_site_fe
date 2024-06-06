@@ -599,10 +599,17 @@
     "open_position_btn": "Open positions",
     "manifest_btn": "Beije Manifest",
     "show_more_btn": "More",
+    "type": {
+      "frontend": "Front-end",
+      "backend": "Back-end",
+      "full_stack": "Full-stack",
+      "mobile": "Mobile"
+    },
     "modeOffert": {
       "remote": "Remote",
       "hybrid": "Hybrid",
       "milan": "Milan",
+      "on_site": "On site",
       "-": "-"
     },
     "switch_academy": "ACADEMY",
