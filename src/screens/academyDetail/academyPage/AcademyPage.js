@@ -71,59 +71,59 @@ const AcademyPage = (props) => {
 
   const useQuery = () => {
     return new URLSearchParams(location.search);
-}
+  }
 
-const getData = async () => {
+  const getData = async () => {
     const query = useQuery();
     const pageId = query.get('id');
 
-    const response = await ApiCalls.academies_getList({ 
-      'Accept-Language': currentLanguage
-    });
-    const item = response.find(obj => obj.id === parseInt(pageId));
+    const response = await ApiCalls.academies_getListDetail(pageId, { 'Accept-Language': currentLanguage });
+    // const item = response.find(obj => obj.id === parseInt(pageId));
     setState({
-        academyData: item
+      academyData: response
     })
-}
+  }
 
-    const academyCourseStructure = [
-        //duration title and label
-        {
-        colMobile: 12,
-        colDesktop: 6,
-        name: "academyFrontend.table.row1Title",
-        type: "title"
-        },
-        {
-        colMobile: 12,
-        colDesktop: 6,
-        name: state.academyData.languages?.[0].duration,
-        type: ""
-        },
-        //work mode title and label
-        {
-        colMobile: 12,
-        colDesktop: 6,
-        name: "academyFrontend.table.row3Title",
-        type: "title"
-        },
-        {
-        colMobile: 12,
-        colDesktop: 6,
-        name: state.academyData.work_mode,
-        type: ""
-        }
-    ]
+  const academyCourseStructure = [
+    //duration title and label
+    {
+      colMobile: 12,
+      colDesktop: 6,
+      name: "academyFrontend.table.row1Title",
+      type: "title"
+    },
+    {
+      colMobile: 12,
+      colDesktop: 6,
+      name: state.academyData.duration,
+      type: ""
+    },
+    //work mode title and label
+    {
+      colMobile: 12,
+      colDesktop: 6,
+      name: "academyFrontend.table.row3Title",
+      type: "title"
+    },
+    {
+      colMobile: 12,
+      colDesktop: 6,
+      name: state.academyData.work_mode,
+      type: ""
+    }
+  ]
 
-    const academyTopics = state.academyData.topics?.map((item) => {
-        const topicSubsectionContent = item.languages[0].subtopics.map((topic) => {
-            return { p: topic.title };
-        })
-        return {
-            sectionTitle: item.languages[0].name,
-            description: topicSubsectionContent
-          }
+  const academyTopics = state.academyData.topics?.map((item) => {
+    const topicSubsectionContent = item.subtopics.map((topic) => {
+      const title = topic.translations.find(translations => translations.language === currentLanguage.toLowerCase());
+      return { p: title.value };
     })
+    const topic = item.translations.find(translation => translation.language === currentLanguage.toLowerCase());
+    return {
+      sectionTitle: topic.name,
+      description: topicSubsectionContent
+    }
+  })
   return (
     <>
       <Helmet>

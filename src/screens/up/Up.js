@@ -48,7 +48,7 @@ const Up = (props) => {
   }, [props.languageDuck.currentLanguage])
 
   const getCaseStudiesData = async () => {
-    let caseStudiesResponse = await ApiCalls.caseStudies_getList(props.languageDuck.currentLanguage, 1);
+    let caseStudiesResponse = await ApiCalls.caseStudies_getList(props.languageDuck.currentLanguage, 'project');
 
     setState({
       ...state,
