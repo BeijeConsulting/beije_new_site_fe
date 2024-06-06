@@ -45,14 +45,14 @@ export default [
         path: "beije-talent-academy",
         element: <TalentAcademy />
       },
-      {
-        path: "beije-talent-academy/academy",
-        element: <AcademyPage />
-      },
-      {
-        path: "beije-talent-academy/:permalink",
-        element: <CaseStudiesDetail />
-      },
+      // {
+      //   path: "beije-talent-academy/academy",
+      //   element: <AcademyPage />
+      // },
+      // {
+      //   path: "beije-talent-academy/:permalink",
+      //   element: <CaseStudiesDetail />
+      // },
       {
         path: "blog",
         element: <Blog />

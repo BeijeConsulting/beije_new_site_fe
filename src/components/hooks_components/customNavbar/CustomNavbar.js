@@ -37,7 +37,7 @@ const CustomNavbar = (props) => {
             }
           </NavLink>
 
-          <NavLink
+          {/* <NavLink
             to="beije-talent-academy"
           >
             People First Talent Academy
@@ -45,7 +45,7 @@ const CustomNavbar = (props) => {
               props.currentPageDuck.currentPage === "academy" &&
               <div className="navbarTop-hightlight navbarTop-hightlight-academy"></div>
             }
-          </NavLink>
+          </NavLink> */}
 
           <NavLink
             to="beije-up"
