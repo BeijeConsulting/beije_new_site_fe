@@ -27,7 +27,7 @@ const Manifest = (props) => {
   const logo3d = useRef();
 
   const match1024 = useMediaQuery('(min-width:1024px)');
-  const match1200 = useMediaQuery('(min-width:1200px)');
+  // const match1200 = useMediaQuery('(min-width:1200px)');
   gsap.registerPlugin(ScrollTrigger);
   const { t } = useTranslation();
   const { lang } = useParams();
