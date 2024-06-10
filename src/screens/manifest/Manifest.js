@@ -2,7 +2,9 @@ import React, { useEffect, useRef } from "react"
 import { Box, useMediaQuery } from "@mui/material";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
-import "./Manifest.css";
+
+//STYLE
+import "./Manifest.scss";
 import { useParams } from "react-router-dom";
 
 //import gsap
@@ -123,24 +125,16 @@ const Manifest = (props) => {
                 />
                 <div dangerouslySetInnerHTML={{ __html: t(`manifest.intro`) }} />
               </div>
-              {
-                match1200 &&
-                <div className="manifest_logo_3d_container" ref={logo3d}>
-                  <Logo3d />
-                </div>
-              }
             </div>
           </div>
         </section>
 
-        {
-          !match1200 &&
-          <section>
-            <div className="manifest_logo_3d_container_mobile" ref={logo3d}>
-              <Logo3d />
-            </div>
-          </section>
-        }
+
+        <section>
+          <div className="manifest_logo_3d_container_mobile" ref={logo3d}>
+            <Logo3d />
+          </div>
+        </section>
 
 
         <section>

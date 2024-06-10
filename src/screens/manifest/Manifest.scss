@@ -1,0 +1,551 @@
+.manifest_first_section {
+  background-color: #fff;
+
+  .manifest_gray_intro {
+    background: linear-gradient(48deg, rgba(50, 62, 72, 1) 0%, rgba(10, 12, 14, 1) 100%);
+    width: 100%;
+    border-radius: 0px 0px 0px 495px;
+    /* height: 60vh; */
+    position: relative;
+    padding-top: 50px;
+
+    .manifest_gray_intro_internal_container {
+      width: 90%;
+      height: 100%;
+      margin: auto;
+      max-width: 1920px;
+      position: relative;
+      padding: 50px 50px 200px 50px;
+
+      .manifest_title_page_container {
+        text-align: center;
+        color: #fff;
+        width: 90%;
+        margin: auto;
+        margin-bottom: 50px;
+
+        .manifest_title_page_container {
+          p {
+            color: #fff;
+          }
+
+        }
+      }
+    }
+  }
+}
+
+.manifest_logo_3d_container {
+  position: relative;
+  aspect-ratio: 1234 / 857;
+  margin-top: -170px;
+} 
+
+.manifest_logo_3d_container_mobile {
+  position: relative;
+  aspect-ratio: 1234 / 857;
+  margin-top: -170px;
+}
+
+.manifest_sentence_manifest {
+  color: var(--dark-grey);
+  text-align: center;
+  margin: 50px 0 50px 0;
+}
+
+.manifest_second_section {
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4458158263305322) 64%, rgba(255, 255, 255, 1) 88%, rgba(255, 255, 255, 1) 100%), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/manifest/manifest1_mobile.jpg");
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4458158263305322) 64%, rgba(255, 255, 255, 1) 88%, rgba(255, 255, 255, 1) 100%), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/manifest/manifest1_mobile.jpg");
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4458158263305322) 64%, rgba(255, 255, 255, 1) 88%, rgba(255, 255, 255, 1) 100%), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/manifest/manifest1_mobile.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 90vh;
+}
+
+.manifest_third_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: -105px;
+
+  h2:nth-child(1) {
+    color: var(--red);
+  }
+
+  h2:nth-child(2) {
+    color: var(--dark-grey);
+  }
+}
+
+.manifest_section_ball_animated {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 1920px;
+  margin: 50px auto;
+  overflow: hidden;
+
+  .manifest_ball_container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .manifest_external_written {
+      width: 300px;
+      height: 300px;
+      border-radius: 100%;
+      /* background-color: burlywood; */
+      display: flex;
+      /* align-items: center; */
+      justify-content: center;
+      position: relative;
+      transform: rotate(-50deg);
+
+      p {
+        position: relative;
+        color: var(--dark-grey) !important;
+        /* transform: translate(-10px, 0px); */
+        animation: rotateWritten 12s linear infinite;
+
+        span {
+          height: 150px;
+          width: 20px;
+          position: absolute;
+          top: 0;
+          left: -1px;
+          transform: rotate(7.5deg);
+          transform-origin: bottom center;
+          font-size: 30px;
+          text-align: center;
+          border: 1px solid transparent;
+        }
+      }
+
+      .manifest_text_ball {
+        opacity: 0;
+      }
+
+      .manifest_internal_ball {
+        /* width: 150px;
+        height: 150px; */
+        width: 0px;
+        height: 0px;
+        border-radius: 100%;
+        /* background: radial-gradient(circle, rgba(50,62,72,1) 0%, rgba(0,0,0,1) 100%); */
+        background: linear-gradient(200deg, rgba(50, 62, 72, 1) 29%, rgba(0, 0, 0, 1) 85%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: rgb(0 0 0 / 67%) -58px 50px 43px -55px;
+      }
+    }
+  }
+
+  .manifest_square_container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(37deg, rgba(50, 62, 72, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    color: #fff;
+    margin-top: 100px;
+    display: none;
+    opacity: 0;
+
+    @media (min-width: 1024px){
+      width: 50%;
+      margin-top: 0;
+      min-height: 500px;
+    }
+
+    p {
+      width: 90%;
+      margin: auto;
+      padding: 70px 0;
+      color: #fff;
+
+      @media (min-width: 1024px){
+        width: 70%;
+      }
+    }
+  }
+}
+
+
+@keyframes rotateWritten {
+  from {
+    transform: translate(0px, 0px) rotateZ(0deg);
+  }
+
+  to {
+    transform: translate(0px, 0px) rotateZ(-360deg);
+  }
+}
+
+.manifest_fifth_section {
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4458158263305322) 64%, rgba(255, 255, 255, 1) 88%, rgba(255, 255, 255, 1) 100%), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/manifest/manifest2_mobile.jpg");
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4458158263305322) 64%, rgba(255, 255, 255, 1) 88%, rgba(255, 255, 255, 1) 100%), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/manifest/manifest2_mobile.jpg");
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4458158263305322) 64%, rgba(255, 255, 255, 1) 88%, rgba(255, 255, 255, 1) 100%), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/manifest/manifest2_mobile.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  >div {
+    color: var(--dark-grey);
+    width: 90%;
+    margin: auto;
+    padding: 300px 0 50px 0;
+    text-align: center;
+  }
+
+  div {
+    h2 {
+      max-width: 854px;
+
+      span {
+        border-bottom: 8px solid var(--red);
+      }
+    }
+  }
+}
+
+.manifest_sixth_section {
+  background-image: url("../../assets/images/logo_light_bg.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  /* height: 1500px; */
+
+  .manifest_last_text_container {
+    text-align: center;
+    margin: 60px 0;
+
+    .manifest_last_text_container_title2 {
+      color: var(--dark-grey);
+    }
+  }
+
+  .manifest_values_container {
+    background: linear-gradient(48deg, rgba(50, 62, 72, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    width: 100%;
+    /* height: 1500px; */
+    border-radius: 800px 800px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 150px;
+    color: #fff;
+    position: relative;
+    opacity: 0;
+  }
+}
+
+.manifest_values_internal_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  position: relative;
+  max-width: 1920px;
+
+  /* position: relative; */
+  /* display: grid;
+  justify-items: center;
+  grid-template-areas: "el";
+  grid-row-gap: 40px; */
+  /* width: 90%; */
+  /* margin: auto; */
+
+  h3 {
+    text-align: center;
+    padding: 0 50px;
+  }
+
+  .manifest_values_list_container {
+    width: 73%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 100px;
+
+
+    >div:nth-child(5) {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      max-width: 800px;
+    }
+
+    .manifest_values_list_single_element {
+      opacity: 0;
+      max-width: 550px;
+      width: 100%;
+      margin: 50px 0;
+
+      @media (min-width: 1024px) {
+        width: 40%;
+        max-width: 550px;
+        margin: 50px 20px;
+      }
+
+      p {
+        color: #fff;
+      }
+
+      .manifest_values_list_title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 25px;
+
+        h4 {
+          color: #FA4A2E;
+          font-size: 2rem;
+        }
+
+        .manifest_values_list_title_dot {
+          width: 15px;
+          height: 15px;
+          background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 100%);
+          border-radius: 100%;
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+
+
+}
+
+.manifest_logo_gray_bg {
+  background-image: url("../../assets/images/logo_only_written_short_white.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0;
+  /* left: 0; */
+  max-width: 1000px;
+  width: 100%;
+  opacity: 5%;
+  height: 330px;
+}
+
+@media(min-width: 400px) {
+  .manifest_logo_3d_container_mobile {
+    margin-top: -220px;
+  }
+}
+
+@media(min-width: 520px) {
+  .manifest_logo_3d_container {
+    bottom: -75px;
+  }
+}
+
+@media(min-width: 680px) {
+  .manifest_logo_3d_container {
+    bottom: -152px;
+  }
+}
+
+@media(min-width: 768px) {
+
+  .manifest_values_internal_container h3 {
+    padding: 0 100px;
+  }
+
+  .manifest_logo_3d_container {
+    top: 280px;
+  }
+
+  .manifest_second_section {
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4458158263305322) 64%, rgba(255, 255, 255, 1) 88%, rgba(255, 255, 255, 1) 100%), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/manifest/manifest1_tablet.jpg");
+    background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4458158263305322) 64%, rgba(255, 255, 255, 1) 88%, rgba(255, 255, 255, 1) 100%), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/manifest/manifest1_tablet.jpg");
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4458158263305322) 64%, rgba(255, 255, 255, 1) 88%, rgba(255, 255, 255, 1) 100%), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/manifest/manifest1_tablet.jpg");
+  }
+
+  .manifest_fifth_section {
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4458158263305322) 64%, rgba(255, 255, 255, 1) 88%, rgba(255, 255, 255, 1) 100%), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/manifest/manifest2_tablet.jpg");
+    background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4458158263305322) 64%, rgba(255, 255, 255, 1) 88%, rgba(255, 255, 255, 1) 100%), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/manifest/manifest2_tablet.jpg");
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4458158263305322) 64%, rgba(255, 255, 255, 1) 88%, rgba(255, 255, 255, 1) 100%), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/manifest/manifest2_tablet.jpg");
+  }
+
+  /* .manifest_sentence_manifest {
+    margin: 200px 0 150px 0;
+  } */
+}
+
+@media(min-width: 800px) {
+
+  .manifest_sentence_manifest {
+    margin: 100px 0 150px 0 !important;
+  }
+
+  .manifest_gray_intro_internal_container {
+    padding-bottom: 300px !important;
+  }
+
+  .manifest_logo_3d_container_mobile {
+    margin-top: -360px !important;
+  }
+}
+
+@media(min-width: 950px) {
+
+  .manifest_logo_3d_container_mobile {
+    margin-top: -320px !important;
+  }
+
+  .manifest_sentence_manifest {
+    margin: 100px 0 150px 0 !important;
+  }
+}
+
+
+@media(min-width: 1024px) {
+
+  .manifest_logo_3d_container_mobile {
+    margin-top: -250px !important;
+  }
+
+  .manifest_second_section {
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4458158263305322) 64%, rgba(255, 255, 255, 1) 88%, rgba(255, 255, 255, 1) 100%), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/manifest/manifest1_desktop.jpg");
+    background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4458158263305322) 64%, rgba(255, 255, 255, 1) 88%, rgba(255, 255, 255, 1) 100%), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/manifest/manifest1_desktop.jpg");
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4458158263305322) 64%, rgba(255, 255, 255, 1) 88%, rgba(255, 255, 255, 1) 100%), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/manifest/manifest1_desktop.jpg");
+  }
+
+  .manifest_fifth_section {
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4458158263305322) 64%, rgba(255, 255, 255, 1) 88%, rgba(255, 255, 255, 1) 100%), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/manifest/manifest2_desktop.jpg");
+    background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4458158263305322) 64%, rgba(255, 255, 255, 1) 88%, rgba(255, 255, 255, 1) 100%), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/manifest/manifest2_desktop.jpg");
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4458158263305322) 64%, rgba(255, 255, 255, 1) 88%, rgba(255, 255, 255, 1) 100%), url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/manifest/manifest2_desktop.jpg");
+  }
+
+  .manifest_fifth_section {
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4458158263305322) 28%, rgba(255, 255, 255, 1) 88%, rgba(255, 255, 255, 1) 100%), url("../../assets/images/career/career5.jpg");
+  }
+
+  .manifest_fifth_section>div {
+    padding: 100px 0 !important;
+  }
+
+  .manifest_second_section,
+  .manifest_fifth_section {
+    height: 90vh !important;
+  }
+
+  .manifest_section_ball_animated {
+    flex-direction: row !important;
+    min-height: 600px !important;
+    align-items: center !important;
+  }
+
+
+  .manifest_external_written p span {
+    height: 200px !important;
+  }
+
+  .manifest_external_written {
+    width: 400px !important;
+    height: 400px !important;
+  }
+
+  .manifest_fifth_section {
+    justify-content: flex-end;
+  }
+
+
+  .manifest_gray_intro {
+    height: 75vh !important;
+  }
+}
+
+
+@media(min-width: 1200px) {
+  .manifest_gray_intro {
+    height: 500px !important;
+  }
+
+  .manifest_logo_3d_container_mobile {
+    margin-top: -350px !important;
+  }
+
+  .manifest_title_page_container {
+    display: flex !important;
+    width: 45% !important;
+    position: absolute !important;
+    left: 50% !important;
+    max-width: 819px !important;
+    top: 135px !important;
+  }
+
+  .manifest_title_page_container img {
+    margin-right: 40px !important;
+    margin-top: -30px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .manifest_title_page_container h1,
+  .manifest_title_page_container p {
+    text-align: left !important;
+  }
+
+
+
+  .manifest_sentence_manifest {
+    color: var(--dark-grey) !important;
+    text-align: center !important;
+    margin: 100px 0 100px 0 !important;
+  }
+}
+
+
+@media(min-width: 1250px) {
+  .manifest_gray_intro {
+    height: 550px !important;
+  }
+}
+
+@media(min-width: 1300px) {
+  .manifest_gray_intro {
+    height: 600px;
+  }
+
+  .manifest_square_container {
+    width: 50% !important;
+    margin-top: 0 !important;
+    min-height: 600px !important;
+  }
+}
+
+@media(min-width: 1350px) {
+  .manifest_gray_intro {
+    height: 650px !important;
+  }
+}
+
+@media(min-width: 1400px) {
+  .manifest_gray_intro {
+    height: 700px !important;
+  }
+}
+
+@media(min-width: 1700px) {
+  .manifest_gray_intro {
+    height: 750px !important;
+  }
+}

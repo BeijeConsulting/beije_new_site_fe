@@ -14,7 +14,7 @@ import ApiCalls from "../../services/api/ApiCalls";
 import { Box, Container, Divider, Skeleton } from "@mui/material";
 
 // Style
-import "./Career.css";
+import "./Career.scss";
 
 // Constants 
 import { career_empty_academy, career_empty_job } from "../../utils/properties";

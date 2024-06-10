@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import { Box } from '@mui/material';
 
 // Style
-import "./CustomTab.css"
+import "./CustomTab.scss"
 import CustomButton from "../../functional_components/ui/customButton/CustomButton";
 
 // Constants

@@ -1,7 +1,7 @@
 import React from "react";
 
 // Styles
-import './PercentageContainer.css';
+import './PercentageContainer.scss';
 
 // MUI
 import { Box } from "@mui/system";

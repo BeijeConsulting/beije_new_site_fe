@@ -9,7 +9,7 @@ import { Toolbar } from "@mui/material";
 import { Box } from "@mui/system";
 
 // Style
-import './CustomHeader.css'
+import './CustomHeader.scss'
 
 // Components
 import BurgerMenu from '../burgerMenu/BurgerMenu';

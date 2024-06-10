@@ -4,7 +4,7 @@ import React from "react";
 import { Button, Typography } from "@mui/material";
 
 // Style
-import "./CustomButton.css";
+import "./CustomButton.scss";
 
 const CustomButton = (props) => {
 
@@ -28,6 +28,9 @@ const CustomButton = (props) => {
         break;
       case "career_btn":
         currentClassName = "button-career";
+        break;
+      case "whistleblowing-btn":
+        currentClassName = "button-whistleblowing";
         break;
       default:
         currentClassName = ""

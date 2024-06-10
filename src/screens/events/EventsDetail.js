@@ -3,7 +3,7 @@ import Gallery from "react-grid-gallery";
 import { useNavigate, useParams } from "react-router-dom";
 
 // Style
-import './Events.css';
+import './Events.scss';
 
 // MUI
 import { Box, Container, Divider, Skeleton } from "@mui/material";

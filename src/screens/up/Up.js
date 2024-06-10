@@ -15,7 +15,7 @@ import ApiCalls from "../../services/api/ApiCalls";
 import { Box, Container, Skeleton } from "@mui/material";
 
 // Style
-import "./Up.css";
+import "./Up.scss";
 
 // Constants
 import { clientComments } from "../../utils/properties";
@@ -48,7 +48,7 @@ const Up = (props) => {
   }, [props.languageDuck.currentLanguage])
 
   const getCaseStudiesData = async () => {
-    let caseStudiesResponse = await ApiCalls.caseStudies_getList(props.languageDuck.currentLanguage, 1);
+    let caseStudiesResponse = await ApiCalls.caseStudies_getList(props.languageDuck.currentLanguage, 'project');
 
     setState({
       ...state,

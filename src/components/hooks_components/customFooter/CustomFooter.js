@@ -9,11 +9,11 @@ import { connect } from "react-redux";
 import { Box } from '@mui/material';
 
 // style
-import './CustomFooter.css'
+import './CustomFooter.scss'
 
 // Constants and functions
 import { logo_primary_light, logo_secondary_light, menu_voices } from "../../../utils/properties";
-import logo_parita_di_genere from "../../../assets/images/logo_parita_di_genere.png";
+import logo_parita_di_genere from '../../../assets/images/logo_parita_di_genere.png'
 
 // Components
 import SwitchLang from "../switchLang/SwitchLang"
@@ -142,6 +142,16 @@ const CustomFooter = (props) => {
             onClick={openModal("legalNotes")}
           >
             {t("footer.legalNotes")}
+          </p>
+          <p
+            className="cursor-pointer footer-link-privacyPolicies-legalNotes"
+          >
+            <Link
+              to={"/whistleblowing"}
+              className={"footer-links"}
+            >
+              {t("footer.whistleblowing")}
+            </Link>
           </p>
           <p
             className="cursor-pointer footer-link-privacyPolicies-legalNotes"

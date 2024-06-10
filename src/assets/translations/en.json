@@ -21,7 +21,8 @@
       "blog": "Blog – Beije People First",
       "community": "Community – Beije People First",
       "events": "Events – Beije People First",
-      "contacts": "Contacts – Beije People First"
+      "contacts": "Contacts – Beije People First",
+      "whistleblowing": "Whistleblowing – Beije People First"
     },
     "meta_description": {
       "home": "Beije People First leading company in the IT sector specializes in consulting, frontend & backend training and development of mobile & web apps.",
@@ -84,7 +85,11 @@
       "numberInvalid": "Number is invalid",
       "town": "Town is required",
       "agreement": "Terms and Conditions must be accepted",
-      "radioBox:": "Selected one option"
+      "radioBox:": "Selected one option",
+      "subject": "Subject is required",
+      "description": "Description is required",
+      "category": "Category is required",
+      "nameSurname": "Name and surname are required"
     },
     "placeholder": {
       "name": "Name*",
@@ -138,7 +143,8 @@
     "privacyPolicies": "Privacy policy",
     "legalNotes": "Legal notes",
     "paritaGenere": "Gender Equality",
-    "vatNumber": "Beije is a People First Srl brand - VAT number 16334941008 "
+    "vatNumber": "Beije is a People First Srl brand - VAT number 16334941008 ",
+    "whistleblowing": "Whistleblowing"
   },
   "home": {
     "firstSection": {
@@ -593,10 +599,17 @@
     "open_position_btn": "Open positions",
     "manifest_btn": "Beije Manifest",
     "show_more_btn": "More",
+    "type": {
+      "frontend": "Front-end",
+      "backend": "Back-end",
+      "full_stack": "Full-stack",
+      "mobile": "Mobile"
+    },
     "modeOffert": {
       "remote": "Remote",
       "hybrid": "Hybrid",
       "milan": "Milan",
+      "on_site": "On site",
       "-": "-"
     },
     "switch_academy": "ACADEMY",
@@ -794,7 +807,7 @@
     }
   },
   "paritaGenere": {
-    "title":"<strong>EQUAL EMPLOYMENT OPPORTUNITY POLICY</strong><br> <br> <br>",
+    "title": "<strong>EQUAL EMPLOYMENT OPPORTUNITY POLICY</strong><br> <br> <br>",
     "quote": " <strong>  “Our ability to reach unity in diversity will be the beauty and the test of our civilization“ </strong> <br> <br> - Mahatma Gandhi <br> <br>",
     "text1": "The founding value of People First Ltd. is: *“People at the center of everything.“* <br> <br> Based on this premise, our organization promotes a corporate culture founded on respect for each individual and recognition of each person's unique needs, aspirations and contributions. <br> People First Ltd. values pluralism and inclusive practices in the world of work both as an ethical factor and as an ability to respond to changes in society and markets. <br> By adopting this policy, People First Ltd. intends to contribute to the <strong> fight  against all forms of discrimination in the workplace </strong> - gender identity, age, disability, ethnicity, religious faith, sexual orientation - <strong> while committing itself to valuing diversity within the corporate organization, with particular regard to equal opportunities between men and women. </strong> <br> <br> Building on these principles, People First Ltd. is committed to contributing to the achievement of the goals shared above through a series of concrete actions described below: <br>",
     "list": {
@@ -824,7 +837,7 @@
       "li15": "Promote to the outside world the company's commitment to equality issues, bearing witness to the policies adopted and the progress achieved from the perspective of a truly supportive and responsible community; ",
       "li16": "Periodically monitor equal opportunity progress and evaluate the impact of good practices adopted, making necessary changes to continuously improve equality"
     },
-    "text2":"People First Ltd. subscribes to this commitment and reminds that equality at work is the responsibility of every member of the organization: it encourages everyone to contribute to the creation of a fair and inclusive work environment."
+    "text2": "People First Ltd. subscribes to this commitment and reminds that equality at work is the responsibility of every member of the organization: it encourages everyone to contribute to the creation of a fair and inclusive work environment."
   },
   "cookiePolicies": {
     "title": "Cookie Policy",
@@ -852,5 +865,98 @@
       "part2": "Discover our Community: ",
       "part3": "we are waiting for you, follow the change!"
     }
+  },
+  "whistleblowing": {
+    "title": "Whistleblowing Channel",
+    "description": "In compliance with the provisions of Legislative Decree 24/2023 implementing EU Directive 2019/1937, it will be possible to report behaviors, acts, or omissions that harm the public interest or the integrity of one of the companies within Beije People First through Beije People First's Whistleblowing Channel.",
+    "q&a": "Questions & answers:",
+    "question1": "1. Who can make a report?",
+    "answer1": "Reports can be made by:",
+    "answer1list1": "employees, freelancers, holders of a collaboration relationship, and unpaid interns working at one of the companies within Beije People First;",
+    "answer1list2": "freelancers, consultants, and collaborators of any kind providing their services to one of the companies within Beije People First;",
+    "answer1list3": "in general, anyone who comes into contact, for any reason, with one of the companies within Beije People First.",
+    "question2": "2. What can be reported?",
+    "answer2section1": "Reports must concern facts known to the reporter and must be made promptly upon becoming aware of the facts so that timely intervention can occur.",
+    "answer2section2": "In particular, the following may be subject to reporting:",
+    "answer2list1": "illegal or suspicious behaviors, administrative, accounting, civil, or criminal wrongdoings;",
+    "answer2list2": "irregularities in business activities;",
+    "answer2list3": "acts or facts that may constitute a violation of internal and external regulations governing the activities of Beije People First or that violate the principles and rules of conduct contained in the Code of Ethics;",
+    "answer2list4": "offenses falling within the scope of application of EU or national acts concerning the following sectors: public procurement; financial services, products, and markets, and prevention of money laundering and terrorist financing; product safety and compliance; transportation safety; environmental protection; radiation protection and nuclear safety; food and feed safety and animal health and welfare; public health; consumer protection; protection of privacy and personal data, and network and information system security;",
+    "answer2list5": "acts or omissions that harm the financial interests of the European Union;",
+    "answer2list6": "acts or omissions concerning the internal market;",
+    "answer2list7": "acts or behaviors that undermine the purpose or objectives of the provisions of EU acts.",
+    "question3": "3. What cannot be reported?",
+    "answer3section1": "The following cannot be reported: disputes, claims, or requests related to personal interests exclusively concerning the employment relationship or related to the relationship with hierarchically superior figures; communications or complaints related to commercial activities or services to the public.",
+    "answer3section2": "If the reporter makes false or defamatory reports—without prejudice to the criminal and civil liability of the reporter—they may be subject to disciplinary action ranging from € 500 to € 2,500.",
+    "question4": "4. How is the confidentiality of the reporter ensured and who manages the report?",
+    "answer4section1": "Beije People First guarantees absolute confidentiality of the reporter's identity and the content of the report, using secure protocols and encryption tools. The reporter's identity is never disclosed without their consent, except in cases provided for by applicable regulations.",
+    "answer4section2": "The report is managed by a dedicated Whistleblowing Committee composed of individuals who—in accordance with the principles of impartiality, confidentiality, and data protection—are endowed with autonomy and independence.",
+    "policy": "Policy",
+    "act": "Organizational Act",
+    "document": "Consult documents",
+    "openReport": "Open report",
+    "report": {
+      "title": "Reporting channel",
+      "description1": "Through this page, you can access the internal reporting channel, established in accordance with Legislative Decree 24/2023, by Beije People First.",
+      "description2": "As an employee or other authorized individual, you can report wrongdoing or reasonably suspect it, anonymously or confidentially.",
+      "title2": "Reporting wrongdoing",
+      "title2section1": "Through this page, you can provide information about misconduct or report actions that are immoral, illegal, or violate internal regulations. The platform should be used to bring to light issues that would not otherwise come to light.",
+      "title2section2": "Reports can be submitted confidentially by providing your name and contact information or, if preferred, completely anonymously.",
+      "title2section3": "All communications are handled securely and confidentially.",
+      "title3": "Human resources issues",
+      "title3section1": "Human resources issues cannot be reported through this system but should be discussed with your immediate superior, manager, or human resources representative.",
+      "title3section2": "From this page, you can create a new report or stay updated on an existing report.",
+      "title3section3": "You will receive an initial response to your report within 7 (seven) days and a subsequent response within 3 (three) months.",
+      "title4": "Following up on your reports can be relevant for several reasons:",
+      "title4list1": "you want to know the status of your report to ensure that action is being taken;",
+      "title4list2": "you want to provide additional information about your report;",
+      "title4list3": "the system administrator has requested additional information to help resolve the issue or take appropriate action.",
+      "newReport": "Create report"
+    },
+    "new": {
+      "title": "Send a report",
+      "subject": "Subject",
+      "reportType": "Choose how you want to report",
+      "confidential": {
+        "label": "Report in confidential manner",
+        "description": "You can choose to submit a report in a confidential manner. Your identity will only be known to the personnel responsible for handling your report and will appear anonymous and confidential to others during the handling of the report. Your identity will not be disclosed to others within the organization without your consent. Consent to disclose your identity will only be requested if it is necessary for the internal processing of the report. When using the reporting platform in a confidential manner, you and your report will be logged, which means you will be protected by whistleblower protection legislation from the first contact made."
+      },
+      "anonymous": {
+        "label": "Report anonymously",
+        "description": "You can choose to submit a report anonymously if you prefer not to disclose your identity to any of the individuals involved in the reporting process. To protect anonymity, the platform offers you the option to i) distort the voice in voice messages, and ii) remove metadata from the files you send through the platform."
+      },
+      "description": "Description",
+      "category": "Select the categories associated with the report",
+      "categoryType": {
+        "officeAbuse": "Office abuse",
+        "powerAbuse": "Power abuse",
+        "behavior": "Unacceptable behavior",
+        "interest": "Conflict of interest",
+        "corruption": "Corruption",
+        "rights": "Individual rights and protections",
+        "fraud": "Fraud",
+        "procurement": "Procurement fraud",
+        "auditors": "Auditors act",
+        "competition": "Competition law",
+        "children": "Children protection",
+        "laundering": "Laundering",
+        "exploitation": "Sexual exploitation, abuse or harassment",
+        "terrorism": "Terrorism",
+        "other": "Other"
+      },
+      "name": "Name",
+      "surname": "Surname",
+      "phone": "Phone number (Optional)",
+      "email": "E-mail (Optional)"
+    }
+  },
+  "upload": {
+    "uploadFile": "Upload file",
+    "selectFile": "Select file",
+    "selectedFile": "Selected file",
+    "close": "Delete file",
+    "remove_metadata": "Remove metadata",
+    "metadata_paragraph": "Files may contain metadata such as your name, computer name, authors, revisions, and versions. This data can be removed automatically. Do you want to remove this data from file?",
+    "remove_metadata_confirm": "Remove metadata from the file"
   }
 }

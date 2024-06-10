@@ -8,7 +8,7 @@ import { setLanguage } from "../../../redux/ducks/Language";
 import { useNavigate } from "react-router-dom";
 
 // Style
-import "./SwitchLang.css";
+import "./SwitchLang.scss";
 
 const SwitchLang = (props) => {
   const navigate = useNavigate();
@@ -31,7 +31,7 @@ const SwitchLang = (props) => {
 };
 
   return (
-    <span className={props.classNameContainer}>
+    <span className={props.classNameContainer ? props.classNameContainer : 'switch-lng-container'}>
       <span
         className={selected === 'IT' ? props.classNameSelectedLang : props.classNameUnSelectedLang}
         onClick={selectLanguage('IT')}

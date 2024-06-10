@@ -1,0 +1,374 @@
+.swiper {
+  padding: 50px 0px;
+}
+
+.swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-image: url(https://source.unsplash.com/random);
+  background-position: center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  aspect-ratio: 1 / 1;
+  -webkit-box-shadow: 0px 0px 12px 0px rgb(0 0 0 / 20%);
+  box-shadow: 0px 0px 12px 0px rgb(0 0 0 / 20%);
+
+  p {
+    color: var(--white);
+    padding-left: 10px;
+  }
+
+  p:nth-child(1) {
+    text-transform: uppercase;
+  }
+
+  p:nth-child(2) {
+    padding-bottom: 10px;
+  }
+
+  p:nth-child(3) {
+    display: none;
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: none;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--dark-grey);
+}
+
+/* CSS ONLY FOR UP PAGE */
+.swiper-container-up .swiper-slide-next,
+.swiper-container-up .swiper-slide-prev {
+  filter: brightness(0.8);
+  -webkit-filter: brightness(0.8);
+}
+
+.swiper-container-up {
+  .swiper-slide-active {
+    cursor: pointer;
+  }
+
+  .swiper-slide {
+    p:nth-child(2) {
+      padding-bottom: 20px;
+    }
+
+    .swipe-txt-container {
+      background-color: rgb(38, 46, 54, 0.8);
+    }
+  }
+
+  .swiper-slide-next .swipe-txt-container,
+  .swiper-slide-prev .swipe-txt-container {
+    display: none;
+  }
+}
+
+
+
+/* BG PICTURE */
+/* for home */
+.carousel-bg-francesco-cesana {
+  background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/francesco_cesana_mobile.jpg");
+}
+
+.carousel-bg-giorgia-marletta {
+  background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/giorgia_marletta_mobile.jpg");
+}
+
+.carousel-bg-erica-mauro {
+  background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/erica_mauro_mobile.jpg");
+}
+
+.carousel-bg-chiara-balsamini {
+  background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/chiara_balsamini_mobile.jpg");
+}
+
+.carousel-bg-marianna-fulginiti {
+  background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/marianna_fulginiti_mobile.jpg");
+}
+
+.carousel-bg-roberto-brogi {
+  background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/roberto_brogi_mobile.jpg");
+}
+
+.carousel-bg-ivo-mosca {
+  background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/ivo_mosca_mobile.jpg");
+}
+
+.carousel-bg-rodrigo-raminelli {
+  background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/rodrigo_ramelli_mobile.jpg");
+  background-position: initial;
+}
+
+.carousel-bg-elisa-rossi {
+  background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/elisa_rossi_mobile.jpg");
+  background-position: initial;
+}
+
+.carousel-bg-maria-rodrigez {
+  background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/maria_rodrigez_mobile.jpg");
+}
+
+.carousel-bg-francesca-bellini {
+  background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/francesca_bellini_mobile.jpg");
+}
+
+.carousel-bg-samantha-mineman {
+  background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/samantha_mineman_mobile.jpg");
+}
+
+/* for case studies */
+.carousel-up-bg {
+  background-image: none;
+}
+
+.carousel-img-container {
+  width: 100%;
+  /* height: 100%; */
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+@media(max-width: 600px) {
+  .swiper-slide p {
+    font-size: 0.7rem;
+  }
+}
+
+@media(min-width: 768px) {
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: var(--white);
+    display: block;
+  }
+
+  .swiper-button-prev {
+    left: 70px;
+  }
+
+  .swiper-button-next {
+    right: 70px;
+  }
+
+  .swiper-pagination-bullet {
+    display: none;
+  }
+
+  /* BG PICTURE */
+  /* for home */
+  .carousel-bg-francesco-cesana {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/francesco_cesana_mobile.jpg");
+  }
+
+  .carousel-bg-giorgia-marletta {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/giorgia_marletta_tablet.jpg");
+  }
+
+  .carousel-bg-erica-mauro {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/erica_mauro_tablet.jpg");
+  }
+
+  .carousel-bg-chiara-balsamini {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/chiara_balsamini_tablet.jpg");
+  }
+
+  .carousel-bg-marianna-fulginiti {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/marianna_fulginiti_tablet.jpg");
+  }
+
+  .carousel-bg-roberto-brogi {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/roberto_brogi_tablet.jpg");
+  }
+
+  .carousel-bg-ivo-mosca {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/ivo_mosca_tablet.jpg");
+  }
+
+  .carousel-bg-rodrigo-raminelli {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/rodrigo_ramelli_tablet.jpg");
+  }
+
+  .carousel-bg-elisa-rossi {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/elisa_rossi_tablet.jpg");
+  }
+
+  .carousel-bg-maria-rodrigez {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/maria_rodrigez_tablet.jpg");
+  }
+
+  .carousel-bg-francesca-bellini {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/francesca_bellini_tablet.jpg");
+  }
+
+  .carousel-bg-samantha-mineman {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/samantha_mineman_tablet.jpg");
+  }
+}
+
+@media(min-width: 1024px) {
+
+  .swiper-slide-active .swipe-txt-container {
+    background-color: rgb(38, 46, 54, 0.6);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: translate3d(4px, -2px, 60px);
+    transform: translate3d(4px, -2px, 60px);
+    margin: 0px 20px 20px 20px;
+  }
+
+  .swiper-container-up .swiper-slide-active .swipe-txt-container {
+    margin: 0px 20px 45px 20px;
+  }
+
+  .swiper-slide p {
+    padding-left: 30px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: translate3d(4px, -2px, 60px);
+    transform: translate3d(4px, -2px, 60px);
+    width: 90%;
+    font-size: 1rem;
+    line-height: 23px;
+  }
+
+  .swiper-slide-active p {
+    padding-left: 15px;
+  }
+
+  .swiper-slide-prev .swipe-txt-container {
+    margin: 0 30px
+  }
+
+  .swiper-slide-next .swipe-txt-container {
+    margin: 0 30px 0 -30px;
+  }
+
+  .swiper-slide-prev p {
+    -webkit-transform: translate3d(-33px, -2px, 60px);
+    transform: translate3d(-33px, -2px, 60px);
+  }
+
+  .swiper-slide-next p {
+    -webkit-transform: translate3d(33px, -2px, 60px);
+    transform: translate3d(33px, -2px, 60px);
+  }
+
+  .swiper-slide-active p:nth-child(1) {
+    padding-top: 10px;
+  }
+
+  .swiper-slide p:nth-child(3) {
+    display: block;
+    padding-bottom: 10px;
+  }
+
+  /* BG PICTURE */
+  /* for home */
+  .carousel-bg-francesco-cesana {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/francesco_cesana_desktop.jpg");
+  }
+
+  .carousel-bg-giorgia-marletta {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/giorgia_marletta_desktop.jpg");
+  }
+
+  .carousel-bg-erica-mauro {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/erica_mauro_desktop.jpg");
+  }
+
+  .carousel-bg-chiara-balsamini {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/chiara_balsamini_desktop.jpg");
+  }
+
+  .carousel-bg-marianna-fulginiti {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/marianna_fulginiti_desktop.jpg");
+  }
+
+  .carousel-bg-roberto-brogi {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/roberto_brogi_desktop.jpg");
+  }
+
+  .carousel-bg-ivo-mosca {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/ivo_mosca_desktop.jpg");
+  }
+
+  .carousel-bg-rodrigo-raminelli {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/rodrigo_ramelli_desktop.jpg");
+  }
+
+  .carousel-bg-elisa-rossi {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/elisa_rossi_desktop.jpg");
+  }
+
+  .carousel-bg-maria-rodrigez {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/maria_rodrigez_desktop.jpg");
+  }
+
+  .carousel-bg-francesca-bellini {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/francesca_bellini_desktop.jpg");
+  }
+
+  .carousel-bg-samantha-mineman {
+    background-image: url("https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/profile_picture/samantha_mineman_desktop.jpg");
+  }
+}
+
+@media(min-width:1600px) {
+  .swiper-slide-active .swipe-txt-container {
+    padding: 0 20px;
+  }
+
+  .swiper-slide p:nth-child(3) {
+    padding-bottom: 25px;
+  }
+}
+
+@supports not (aspect-ratio: 1 / 1) {
+  .swiper-slide {
+    min-height: 200px;
+  }
+
+  @media (min-width: 768px) {
+    .swiper-slide {
+      min-height: 300px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .swiper-slide {
+      min-height: 400px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .swiper-slide {
+      min-height: 500px;
+    }
+  }
+
+  @media (min-width: 1800px) {
+    .swiper-slide {
+      min-height: 650px;
+    }
+  }
+}

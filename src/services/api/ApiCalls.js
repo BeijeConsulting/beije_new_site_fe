@@ -2,10 +2,10 @@ import { get, post } from "../GenericServices";
 
 const ApiCalls = {
   blog_getList: (lang) => {
-    return get(`blogs/order_date/desc/${lang}`);
+    return get(`blogs/ordered/${lang}`);
   },
   blog_getListDetail: (permalink) => {
-    return get(`blog/${permalink}`);
+    return get(`blogs/${permalink}`);
   },
 
   career_getList: () => {
@@ -27,10 +27,14 @@ const ApiCalls = {
     return get(`academies`, {}, headers)
   },
 
-  caseStudies_getList: (lang, type) => {
-    return get(`case-studies/type/${type}/${lang}`);
+  academies_getListDetail: (id, headers = {}) => {
+    return get(`academies/${id}`, {}, headers)
   },
-  
+
+  caseStudies_getList: (lang, type) => {
+    return get(`case-studies/${type}/${lang}`);
+  },
+
   caseStudies_getListDetail: (permalink) => {
     return get(`case-studies/permalink/${permalink}`);
   },
@@ -40,10 +44,10 @@ const ApiCalls = {
   // },
 
   community_getList: (lang) => {
-    return get(`events/order_time/desc/${lang}`);
+    return get(`events/ordered/${lang}`);
   },
   community_getListDetail: (permalink) => {
-    return get(`event/${permalink}`);
+    return get(`events/${permalink}`);
   },
 
   team_getList: () => {
@@ -51,7 +55,7 @@ const ApiCalls = {
   },
 
   carouselProfile_getList: (lang) => {
-    return get(`chi_siamo/language/${lang}`)
+    return get(`chi_siamo/ordered/${lang}`)
   }
 }
 export default ApiCalls
