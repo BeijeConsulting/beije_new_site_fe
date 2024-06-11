@@ -27,7 +27,7 @@ const linkYt = "https://www.youtube.com/watch?v=gLG3aKUsYas";
 const linkIg = "https://www.instagram.com/beijepeoplefirst/"
 
 // Captcha
-export const googleReCaptchaKey = "6Lf_gDoeAAAAAMThwX9hHIPZmULe3bAePNWxA80o";
+export const googleReCaptchaKey = "6LeILPYpAAAAAEI-mpStQs10ZmRn0R4D70HVOPLd";
 
 export const ENVIRONMENT = {
   API_REST_BE: process.env.REACT_APP_API_REST_BE,
