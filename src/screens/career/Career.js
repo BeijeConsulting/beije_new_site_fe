@@ -223,7 +223,7 @@ const Career = (props) => {
 
             <img
               src="https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/logos/logo_short_white.svg"
-              alt="logo Beije People First"
+              alt="logo People First"
             />
             <div dangerouslySetInnerHTML={{ __html: t(`career.growth_paths.title`) }} />
 

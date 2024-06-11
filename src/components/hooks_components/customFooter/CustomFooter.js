@@ -62,7 +62,7 @@ const CustomFooter = (props) => {
           >
             <img
               src={logo_primary_light}
-              alt="Logo Beije People First"
+              alt="Logo People First"
               className="footer-container-logo-desktop" />
           </Link>
         </div>
@@ -72,7 +72,7 @@ const CustomFooter = (props) => {
           >
             <img
               src={logo_secondary_light}
-              alt="Logo Beije People First"
+              alt="Logo People First"
               className="footer-container-logo-mobile" />
           </Link>
         </div>

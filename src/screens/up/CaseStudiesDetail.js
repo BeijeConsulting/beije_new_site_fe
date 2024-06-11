@@ -33,7 +33,7 @@ const CaseStudiesDetail = (props) => {
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     props.dispatch(setVisibilityNavbar(true));
-    if (pathname.includes("beije-up")) {
+    if (pathname.includes("up")) {
       props.dispatch(setCurrentPage("up"));
       getCaseStudiesDataUp();
     }
@@ -119,7 +119,7 @@ const CaseStudiesDetail = (props) => {
           <Box
             className="case-studies-detail-btn-container max-width-1200 width-100"
           >
-            <GoBackBtn callback={() => navigate(`/${lang}/beije-up`)} />
+            <GoBackBtn callback={() => navigate(`/${lang}/up`)} />
           </Box>
 
           <Box

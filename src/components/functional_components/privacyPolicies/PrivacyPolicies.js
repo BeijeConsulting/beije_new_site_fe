@@ -272,7 +272,7 @@ const PrivacyPolicies = () => {
           Per esercitare i tuoi diritti, potrai rivolgendoti al Titolare alla seguente casella di posta elettronica,
           allegando copia del documento d’identità:&nbsp;
         </span>
-        <a href="mailto:job@beije.it">job@beije.it</a>
+        <a href="mailto:job@people-first.team">job@people-first.team</a>
         <span>.</span>
         <br />
         <br />

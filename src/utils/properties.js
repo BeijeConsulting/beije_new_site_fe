@@ -93,7 +93,7 @@ export const posterVideoCareer = careerVideoPoster;
 export const menu_voices = [
   {
     name: "consulting",
-    link_to: "beije-consulting",
+    link_to: "consulting",
     key_link: "consulting"
   },
   // {
@@ -103,7 +103,7 @@ export const menu_voices = [
   // },
   {
     name: "up",
-    link_to: "beije-up",
+    link_to: "up",
     key_link: "up"
   },
   {

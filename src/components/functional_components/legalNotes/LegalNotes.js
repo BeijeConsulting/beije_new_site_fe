@@ -49,7 +49,7 @@ const LegalNotes = () => {
         <br />
         <span>
           Scopo del Sito è la diffusione tramite internet, per finalità informative e pubblicitarie, di notizie
-          relative all’azienda Beije Consulting S.r.l., nonchè la fornitura di Servizi on-line.
+          relative all’azienda People First S.r.l., nonchè la fornitura di Servizi on-line.
         </span>
         <br />
         <span>
