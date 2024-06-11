@@ -14,7 +14,7 @@ const LegalNotes = () => {
         <span>
           Tutti i loghi e marchi presenti sul Sito&nbsp;
         </span>
-        <a href="https://beije.it/" target={"_blank"} rel="noreferrer">https://beije.it</a>
+        <a href="https://www.people-first.team" target={"_blank"} rel="noreferrer">https://www.people-first.team</a>
         <span>
           &nbsp;sono di proprietà di People First S.r.l., Viale
           Giulio Cesare n. 71, 00192 - Roma, Partita IVA e C.F.:16334941008, a cui è stata formalmente
@@ -28,7 +28,7 @@ const LegalNotes = () => {
 
       <ul>
         <li>{t("legalNotes.list1.li1")}</li>
-        <li>{t("legalNotes.list1.li2")} <a href="https://beije.it/" target={"_blank"} rel="noreferrer"> https://beije.it</a>;</li>
+        <li>{t("legalNotes.list1.li2")} <a href="https://www.people-first.team" target={"_blank"} rel="noreferrer"> https://www.people-first.team</a>;</li>
         <li>{t("legalNotes.list1.li3")}</li>
         <li>{t("legalNotes.list1.li4")}</li>
         <li>{t("legalNotes.list1.li5")}</li>
