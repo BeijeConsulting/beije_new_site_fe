@@ -64,7 +64,7 @@ const Blog = (props) => {
     if (!blogDataAPI) {
       navigate(`/blog`);
     } else if (blogDataAPI.language !== lang) {
-      navigate(`/${lang}/blog/${blogDataAPI.translate_blog_permalink}`, {replace: true});
+      navigate(`/${lang}/blog/${blogDataAPI.translate_blog_permalink}`, { replace: true });
     }
 
     let blogDataResponseAPI = await ApiCalls.blog_getList(props.languageDuck.currentLanguage);
@@ -125,7 +125,7 @@ const Blog = (props) => {
         className={"paddingX-container-general-pages blog-first-section-container d-flex items-center flex-column"}
       >
         <Box className={"max-width-1200 width-100 margin-bottom-30"}>
-          <GoBackBtn callback={()=> navigate(`/${lang}/blog`)} />
+          <GoBackBtn callback={() => navigate(`/${lang}/blog`)} />
         </Box>
         <Box className={"max-width-1200"}>
           <h2>{t("blog.title")}</h2>
@@ -227,8 +227,7 @@ const Blog = (props) => {
                 {state.blogData.subtitle}
               </h3>
               <div className={"blog-detail-postedby"}>
-                <FontAwesomeIcon icon={clock} className={"blog-card-clock-icon"} />{t("blog.postedBy")} {state.blogData.author} {t("blog.postedOn")} {millisecsToDate(state.blogData.create_datetime)}
-              </div>
+                <FontAwesomeIcon icon={clock} className={"blog-card-clock-icon"} />{state.blogData?.author?.length > 0 ? t("blog.postedBy") : t("blog.posted")} {state.blogData.author} {t("blog.postedOn")} {millisecsToDate(state.blogData.create_datetime)}              </div>
               <div>
                 <div dangerouslySetInnerHTML={{ __html: converter.makeHtml(state.blogData.description) }} />
               </div>
