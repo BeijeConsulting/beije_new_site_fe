@@ -20,7 +20,7 @@ const PrivacyPolicies = () => {
           con il presente documento (l’“Informativa”), intendiamo rinnovarti il nostro impegno per garantire
           che il trattamento dei dati personali raccolti attraverso il sito internet&nbsp;
         </span>
-        <a href="https://beije.it/" target={"_blank"} rel="noreferrer">https://beije.it</a>
+        <a href="https://www.people-first.team" target={"_blank"} rel="noreferrer">https://www.people-first.team</a>
         <span>
           &nbsp;(il “Sito”),effettuato con modalità sia automatizzate che manuali, avvenga nel pieno rispetto delle tutele e dei
           diritti riconosciuti dal Regolamento (UE) 2016/679 (“GDPR” o il “Regolamento”) e dalle ulteriori
