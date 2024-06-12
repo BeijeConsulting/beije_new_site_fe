@@ -11,44 +11,43 @@
   },
   "helmet": {
     "meta_title": {
-      "home": "Beije – People First",
-      "consulting": "Consulting – Beije People First",
-      "academy": "Academy – Beije People First",
-      "academy_backend": "Academy backend – Beije People First",
-      "academy_frontend": "Academy frontend– Beije People First",
-      "up": "Up – Beije People First",
-      "career": "Career – Beije People First",
-      "blog": "Blog – Beije People First",
-      "community": "Community – Beije People First",
-      "events": "Events – Beije People First",
-      "contacts": "Contacts – Beije People First",
-      "whistleblowing": "Whistleblowing – Beije People First"
+      "home": "People First",
+      "consulting": "Consulting – People First",
+      "academy": "Academy – People First",
+      "academy_backend": "Academy backend – People First",
+      "academy_frontend": "Academy frontend– People First",
+      "up": "Up – People First",
+      "career": "Career – People First",
+      "blog": "Blog – People First",
+      "community": "Community – People First",
+      "events": "Events – People First",
+      "contacts": "Contacts – People First"
     },
     "meta_description": {
-      "home": "Beije People First leading company in the IT sector specializes in consulting, frontend & backend training and development of mobile & web apps.",
-      "consulting": "Our Beije consultants provide professional IT consultancy for software development able to offer the best solutions to adapt to the client's needs.",
+      "home": "People First leading company in the IT sector specializes in consulting, frontend & backend training and development of mobile & web apps.",
+      "consulting": "Our People First consultants provide professional IT consultancy for software development able to offer the best solutions to adapt to the client's needs.",
       "academy": "An intensive training experience that aims to develop the skills necessary to become a Software Developer through lessons and real projects.",
       "academy_backend": "Paid Academy of three months to become Java Developer.",
       "academy_frontend": "Paid Academy of three months to become Web Developer.",
       "up": "Management and development of software with the Agile method through the use of the most innovative technologies on the market.",
-      "career": "Become a Software Developer with Beije",
+      "career": "Become a Software Developer with People First",
       "blog": "All the news and updates on the IT industry, frontend & backend",
-      "community": "All the beije Community",
-      "events": "All the events of our Community Beije",
-      "contacts": "Contacts Beije People First"
+      "community": "All the People First Community",
+      "events": "All the events of our Community People First",
+      "contacts": "Contacts People First"
     },
     "keywords": {
-      "home": "IT, consulting, training, frontend, backend, beije contacts, software developer, IT developer, web developer, java developer, academy, react, react native, java, database, developer, beije story, beije values, beije mission, beije vision, beije future, valuable team, people first, company beije",
+      "home": "IT, consulting, training, frontend, backend, People First contacts, software developer, IT developer, web developer, java developer, academy, react, react native, java, database, developer, People First story, People First values, People First mission, People First vision, People First future, valuable team, people first, company People First",
       "consulting": "IT consulting, people first, values, innovative projects, consulting, react consulting, java consulting, react native consulting, frontend development, backend development, frontend consulting, backend consulting, difference frontend and backend, consulting Milano",
       "academy": "IT consulting, people first, values, innovative projects, consulting, react consulting, java consulting, react native consulting, frontend development, backend development, frontend consulting, backend consulting, difference frontend and backend, consulting Milano",
       "academy_backend": "java, fondamenti java, string builder, cvs, xml, database, linguaggio java, java per web, spring, javascript, DOM, come diventare java developer",
       "academy_frontend": "react, react native, frontend, academy frontend, how to become a frontend developer,  academy course, web course, how to create web page, how to create a web app, android, iOS, how to become a frontend expert , javascript, android developer, iOS developer",
       "up": "agile, project, implementation, delivery, integration, application maintenance, software, frontend, backend, software company, IT,  IT company, company Milano, consulting Milano, company Lissone, IT company lissone, IT company Milano",
-      "career": "job offers beije, stage frontend, stage backend, stage, stage milano IT, stage frontend milano, stage backend milano, academy frontend, academybackend, how to work in beije, beije career, work, academy, frontend salary, software developer salary, backend salary",
+      "career": "job offers People First, stage frontend, stage backend, stage, stage milano IT, stage frontend milano, stage backend milano, academy frontend, academybackend, how to work in People First, People First career, work, academy, frontend salary, software developer salary, backend salary",
       "blog": "",
       "events": "",
-      "community": "Community, Community beije, beije Community, beije events, team beije, team, beije story",
-      "contacts": "beije contacts, beije headquarter, where is beije, beije telephone, email beije"
+      "community": "Community, Community People First, People First Community, People First events, team People First, team, People First story",
+      "contacts": "People First contacts, People First headquarter, where is People First, People First telephone, email People First"
     }
   },
   "btn": {
@@ -120,12 +119,12 @@
     "infoFields": "* Required fields"
   },
   "altImages": {
-    "privacyPolicies": "Beije Privacy Policy",
-    "legalNotes": "Beije Note Legali"
+    "privacyPolicies": "People First Privacy Policy",
+    "legalNotes": "People First Note Legali"
   },
   "burgerMenu": {
     "consulting": "Consulting",
-    "academy": "Beije Talent Academy",
+    "academy": "People First Talent Academy",
     "up": "Up",
     "career": "Career",
     "manifest": "Manifest",
@@ -143,7 +142,7 @@
     "privacyPolicies": "Privacy policy",
     "legalNotes": "Legal notes",
     "paritaGenere": "Gender Equality",
-    "vatNumber": "Beije is a People First Srl brand - VAT number 16334941008 ",
+    "vatNumber": "People First Srl - VAT number 16334941008 ",
     "whistleblowing": "Whistleblowing"
   },
   "home": {
@@ -200,7 +199,7 @@
       "history": {
         "title": "History",
         "content": {
-          "part1": "At the heart of the Beije model is a ",
+          "part1": "At the heart of the People First model is a ",
           "part2": "People First Vision",
           "part3": ": people at the center for the creation of a ",
           "part4": "valuable ",
@@ -381,7 +380,7 @@
       "title": "About us",
       "commentsClient": {
         "francescoPancaro": "The project was followed by a professional, organized and helpful team. They followed us in every phase of the project, always arriving on time and offering us optimal solutions giving a result well beyond expectations.",
-        "matteoMilione": "The collaboration with Beije has been super efficient thanks to the excellent synergy with our internal team and the sharing of the same project vision."
+        "matteoMilione": "The collaboration with People First has been super efficient thanks to the excellent synergy with our internal team and the sharing of the same project vision."
       }
     },
     "form": {
@@ -391,7 +390,7 @@
   "consulting": {
     "title": "Valuable people for valuable projects",
     "intro": {
-      "part1": "Our Beije consultants provide professional",
+      "part1": "Our People First consultants provide professional",
       "part2": "IT consultancy",
       "part3": "for software development able to offer the best solutions that fit the client's needs. We are committed to obtain the best results through targeted updates and constant training for the realization of INNOVATIVE PROJECTS."
     },
@@ -412,7 +411,7 @@
     "cardsDescription": {
       "card1": "Believe that there is a good business climate",
       "card2": "Believe that the company pays attention to the well-being of its employees",
-      "card3": "Would recommend Beije People First"
+      "card3": "Would recommend People First"
     },
     "bannerTitle": "Follow the change!",
     "contactFormTitle": "Request more information"
@@ -436,28 +435,29 @@
     "fourthSection": {
       "title": "About Us",
       "comments_txt": {
-        "commentsDiMonaco": "A comprehensive training and professional experience that leaves you with real and immediately applicable skills. At the Beije Talent Academy you don't just learn how to programme, but how to do it with awareness and ingenuity.",
-        "commentsPignorio": "The Beije Talent Academy has been a very important learning experience for me. I didn't think that in just three months I would have been able to learn so much to be able to work independently on complex projects. I would definitely recommend it to everyone!",
-        "commentsEzpeleta": "The Beije Talent Academy has been very useful for me to enter the world of work with confidence thanks to the team simulations, where I have been able to put into practice what I have studied in the Academy and in the University.",
-        "commentsSavallo": "The Beije Talent Academy was a constructive and challenging experience: it allowed me to learn about technologies used in the working world and encouraged me to challenge myself in all circumstances.",
+        "commentsDiMonaco": "A comprehensive training and professional experience that leaves you with real and immediately applicable skills. At the People First Talent Academy you don't just learn how to programme, but how to do it with awareness and ingenuity.",
+        "commentsPignorio": "The People First Talent Academy has been a very important learning experience for me. I didn't think that in just three months I would have been able to learn so much to be able to work independently on complex projects. I would definitely recommend it to everyone!",
+        "commentsEzpeleta": "The People First Talent Academy has been very useful for me to enter the world of work with confidence thanks to the team simulations, where I have been able to put into practice what I have studied in the Academy and in the University.",
+        "commentsSavallo": "The People First Talent Academy was a constructive and challenging experience: it allowed me to learn about technologies used in the working world and encouraged me to challenge myself in all circumstances.",
         "commentsZacheo": "Thanks to the Academy backend I understood what differentiates university from the world of work and above all I understood how to manage a real project, understanding how to use the java technologies most used by companies.",
-        "commentsFraioli": "Beije People First made a very good impression on me right away and it has not changed with time. I got a permanent contract after a short training period and joined a team that welcomed me far beyond my expectations.",
-        "commentsBusseni": "Although it was the first Academy to be run entirely remotely, it was very well managed, both in terms of the lectures and the division of the groups into mini-projects. I think that the Beije Talent Academy has provided me with more than adequate preparation for working in the Java environment.",
-        "commentsFarina": "At Beije's frontend Academy, I learnt about new technologies and concepts, and I was given support to enter the world of work.  I consider it a course I would gladly do again."
+        "commentsFraioli": "People First made a very good impression on me right away and it has not changed with time. I got a permanent contract after a short training period and joined a team that welcomed me far beyond my expectations.",
+        "commentsBusseni": "Although it was the first Academy to be run entirely remotely, it was very well managed, both in terms of the lectures and the division of the groups into mini-projects. I think that the People First Talent Academy has provided me with more than adequate preparation for working in the Java environment.",
+        "commentsFarina": "At People First's frontend Academy, I learnt about new technologies and concepts, and I was given support to enter the world of work.  I consider it a course I would gladly do again."
       }
     }
   },
   "blog": {
     "title": "Blog",
-    "description": "Passionate about knowledge? Check out our news, updates on innovation and technology, the current trends from  digital business, science, research to society with the Beije Blog. Follow the change!",
+    "description": "Passionate about knowledge? Check out our news, updates on innovation and technology, the current trends from  digital business, science, research to society with the People First Blog. Follow the change!",
     "postedBy": "Posted by",
+    "posted": "Posted",
     "postedOn": "on",
     "latestArticles": "Latest articles",
     "posted": "Posted"
   },
   "events": {
     "title": "Events",
-    "description": "All the Beije People First events: are you ready to join the party?"
+    "description": "All the People First events: are you ready to join the party?"
   },
   "academyFrontend": {
     "title": "Frontend",
@@ -493,7 +493,7 @@
         "subsection8": "Redux"
       },
       "section2_1": {
-        "title": "Agular",
+        "title": "Angular",
         "subsection1": "Differenze tra un framework ed una libreria",
         "subsection2": "Design Patterns cosa sono e quali sono i principali",
         "subsection3": "Creazione di un progetto Angular",
@@ -598,7 +598,7 @@
     "messageJob": "There are no open positions at the moment, but we recommend you keep an eye on the page.",
     "messageAcademy": "There are no open positions at the moment, but we recommend you keep an eye on the page.",
     "open_position_btn": "Open positions",
-    "manifest_btn": "Beije Manifest",
+    "manifest_btn": "People First Manifest",
     "show_more_btn": "More",
     "type": {
       "frontend": "Front-end",
@@ -616,14 +616,14 @@
     "switch_academy": "ACADEMY",
     "switch_jobs": "JOBS",
     "advantages": {
-      "title": "<h2>The advantages of the Community <span class='hightlight-txt'>Beije</span></h2>",
+      "title": "<h2>The advantages of the Community <span class='hightlight-txt'>People First</span></h2>",
       "paragraph1": {
         "title": "<h3 class='hightlight-txt carrer_paragraph_title'>Smartworking</h3>",
-        "text": "<p >At Beije we are big fans of smartworking, our motto is “<b>no matter where but how</b>”, however, we believe that the value of the meeting should be cultivated: our offices are always open to work side by side with the <b>Community</b> and the office becomes a strategic place of <b>teamwork</b>.</p>"
+        "text": "<p >At People First we are big fans of smartworking, our motto is “<b>no matter where but how</b>”, however, we believe that the value of the meeting should be cultivated: our offices are always open to work side by side with the <b>Community</b> and the office becomes a strategic place of <b>teamwork</b>.</p>"
       },
       "paragraph2": {
-        "title": "<h3 class='hightlight-txt carrer_paragraph_title'>Beije events</h3>",
-        "text": "<p >We are a Community, we believe in the value of <b>coming together</b> and that <b>achievements</b> should be celebrated: <b>twice a year</b> we all get together for a <b>Beije</b>-style <b>party</b>!</p>"
+        "title": "<h3 class='hightlight-txt carrer_paragraph_title'>People First events</h3>",
+        "text": "<p >We are a Community, we believe in the value of <b>coming together</b> and that <b>achievements</b> should be celebrated: <b>twice a year</b> we all get together for a <b>People First</b>-style <b>party</b>!</p>"
       },
       "paragraph3": {
         "title": "<h3 class='hightlight-txt carrer_paragraph_title'>Afterwork meetings</h3>",
@@ -637,7 +637,7 @@
     "growth_paths": {
       "title": "<h2>growth paths <span><b></b></span></h2>",
       "paragraph1": {
-        "title": "Beije Supporter",
+        "title": "People First Supporter",
         "text": "<p class='career_growth_paths_description'>Your career <b>does not start full alone</b>:an <b>internal supporter</b> will guide you on your <b>career path</b>, helping you to integrate into the company from the start, so that you can get off to the best possible start. Even beyond work, <b>we support</b> each other <b>as a true Community</b>.</p>"
       },
       "paragraph2": {
@@ -661,7 +661,7 @@
       },
       "paragraph4": {
         "title": "<h3 class='hightlight-txt carrer_paragraph_title'>Webinar and events</h3>",
-        "text": "<p>We lay the foundations for <b>all-round professional development</b>: at least <b>twice a year</b> we organise <b>training events</b> held by our Beije experts and industry professionals; we also plan in-house online <b>webinars</b> to update the Community on the <b>latest technologies</b> and the most <b>interesting innovations</b> in the <b>market</b>.</p"
+        "text": "<p>We lay the foundations for <b>all-round professional development</b>: at least <b>twice a year</b> we organise <b>training events</b> held by our People First experts and industry professionals; we also plan in-house online <b>webinars</b> to update the Community on the <b>latest technologies</b> and the most <b>interesting innovations</b> in the <b>market</b>.</p"
       }
     },
     "video_text": " <h2><span>What is it like working with us?</span><br /> Our <span class='hightlight-txt'>Community</span> tells us about it!</h2>"
@@ -721,7 +721,7 @@
     }
   },
   "privacyPolicies": {
-    "txt": "<0>Privacy Policy</0><1></1><2>pursuant to art. 13 Regulation EU 2016/679</2><3></3><4></4><5>Dear Data Subject,</5> <6></6><7>With this document (the “Policy”), we wish to renew our commitment to ensuring that the processing of personal data collected through the website</7> <8>https://beije.it</8> <9>(the “Site”), carried out using both automated and manual methods, is carried out in full compliance with the protections and rights recognised by Regulation EU 2016/679 (“GDPR” or the “Regulation”) and other applicable rules on the protection of personal data.</9> <10></10> <11>The term personal data refers to the definition contained in Article 4(1) of the Regulation, i.e. </11> <12>“any information relating to an identified or identifiable natural person; an identifiable person is one who can be identified, directly or indirectly, by reference in particular to an identifier such as a name, an identification number, location data, an online identifier or to one or more features of his or her physical, physiological, genetic, mental, economic, cultural or social identity”</12> <13>(the “</13> <14>Personal Data</14><15>”).</15> <16></16> <17>This Privacy Policy - drafted on the basis of the principle of transparency and including all the elements required by art. 13 of the Regulation - aims to provide you, in a simple and intuitive way, with all the useful and necessary information so that you can provide your Personal Data in a conscious and informed manner and, at any time, exercise your rights under the GDPR.</17><18 /><19 /><20>THE DATA CONTROLLER</20> <21/> <22>The company that will process your Personal Data for the purposes set out in this Policy and that, therefore, will play the role of data controller, i.e. “the natural or legal person, public authority, service or other body that, individually or jointly with others, determines the purposes and means of the processing of personal data” is People First S.r.l., with registered office in Viale Giulio Cesare n. 71, 00192 - Rome, VAT No.:16334941008 (the “</22><23>Data Controller</23><24>”).</24><25/><26/><27>DATA PROTECTION OFFICER</27><28/><29>The Data Controller, in order to facilitate relations with data subjects, has appointed a</29><30>Data Protection Officer</30> <31>(the “</31><32>DPO</32><33>”), identifying SAPG Legal Tech S.r.l. with registered office in Via Durini n. 15, 20122 - Milan (MI).</33><34/><35> As provided for by art. 38 of the GDPR, you may freely contact the DPO for all matters relating to the processing of your Personal Data and/or should you wish to exercise your rights as provided for in this Policy, by sending a written communication to the e-mail address: </35> <36>dpo.privact@sapglegal.com</36><37>.</37><38/><39/><40>PURPOSES AND LEGAL BASIS OF PROCESSING</40><41/><42>While browsing the Site, some of your Personal Data may be collected in the following ways.</42><43/><44/><45> - Navigation Data</45><46/><47>The computer systems and software procedures used to operate the Site acquire, during their normal operation, some personal data whose transmission is implicit in the use of Internet communication protocols.</47> <48/> <49>This category of data includes, by way of example: IP addresses, the type of browser used, the operating system, the domain name and addresses of websites accessed or exited from, information on the pages visited by users within the Site, access time, the length of time spent on each page, internal path analysis and other parameters relating to the user's operating system and computer environment.</49> <50/> <51>Such technical/informatics data are collected and used exclusively in an aggregate and non-identifying manner and could be used to ascertain responsibility in the event of hypothetical computer crimes to the detriment of the Site. </51> <52/> <53>The processing will be legally based on the legitimate interest of the Data Controller to improve the functioning of its systems, to optimise and improve the browsing experience, to avoid fraudulent activities and to improve the security of the Site (art. 6, paragraph 1, letter f) of the Regulations).</53><54/><55/><56> - Data provided voluntarily by the visitor</56><57/><58>This refers to all those Personal Data that the visitor freely releases on the Site, for example, to register and/or access a reserved area, download free resources, request information on a specific product or service through a form, subscribe to the newsletter service, write to an e-mail address or call a telephone number displayed on the Site to have direct contact with the company (in order, for example, to request assistance or further information on a product/service of the Data controller). Such processing shall be lawful pursuant to art. 6, paragraph 1, letter b) of the Regulation (performance of a contract or of pre-contractual measures adopted at the request of the data subject) as well as for the fulfilment of any legal obligations.</58><59/><60>In order to allow the Data Controller to carry out the processing activities for such purposes, it will be necessary to provide the Personal Data requested in the appropriate forms. If you fail to fill in even just one of the fields marked as mandatory, it may not be possible to process your Personal Data and, consequently, to provide you with the information and services requested.</60><61/><62>We do not process Personal Data relating to your health and, in general, “special” categories of personal data pursuant to art. 9 of the Regulation.</62><63/><64>In addition to the above, your Personal Data may be processed by the Controller for the following and additional purposes.</64><65/>",
+    "txt": "<0>Privacy Policy</0><1></1><2>pursuant to art. 13 Regulation EU 2016/679</2><3></3><4></4><5>Dear Data Subject,</5> <6></6><7>With this document (the “Policy”), we wish to renew our commitment to ensuring that the processing of personal data collected through the website</7> <8>https://people-first.team</8> <9>(the “Site”), carried out using both automated and manual methods, is carried out in full compliance with the protections and rights recognised by Regulation EU 2016/679 (“GDPR” or the “Regulation”) and other applicable rules on the protection of personal data.</9> <10></10> <11>The term personal data refers to the definition contained in Article 4(1) of the Regulation, i.e. </11> <12>“any information relating to an identified or identifiable natural person; an identifiable person is one who can be identified, directly or indirectly, by reference in particular to an identifier such as a name, an identification number, location data, an online identifier or to one or more features of his or her physical, physiological, genetic, mental, economic, cultural or social identity”</12> <13>(the “</13> <14>Personal Data</14><15>”).</15> <16></16> <17>This Privacy Policy - drafted on the basis of the principle of transparency and including all the elements required by art. 13 of the Regulation - aims to provide you, in a simple and intuitive way, with all the useful and necessary information so that you can provide your Personal Data in a conscious and informed manner and, at any time, exercise your rights under the GDPR.</17><18 /><19 /><20>THE DATA CONTROLLER</20> <21/> <22>The company that will process your Personal Data for the purposes set out in this Policy and that, therefore, will play the role of data controller, i.e. “the natural or legal person, public authority, service or other body that, individually or jointly with others, determines the purposes and means of the processing of personal data” is People First S.r.l., with registered office in Viale Giulio Cesare n. 71, 00192 - Rome, VAT No.:16334941008 (the “</22><23>Data Controller</23><24>”).</24><25/><26/><27>DATA PROTECTION OFFICER</27><28/><29>The Data Controller, in order to facilitate relations with data subjects, has appointed a</29><30>Data Protection Officer</30> <31>(the “</31><32>DPO</32><33>”), identifying SAPG Legal Tech S.r.l. with registered office in Via Durini n. 15, 20122 - Milan (MI).</33><34/><35> As provided for by art. 38 of the GDPR, you may freely contact the DPO for all matters relating to the processing of your Personal Data and/or should you wish to exercise your rights as provided for in this Policy, by sending a written communication to the e-mail address: </35> <36>dpo.privact@sapglegal.com</36><37>.</37><38/><39/><40>PURPOSES AND LEGAL BASIS OF PROCESSING</40><41/><42>While browsing the Site, some of your Personal Data may be collected in the following ways.</42><43/><44/><45> - Navigation Data</45><46/><47>The computer systems and software procedures used to operate the Site acquire, during their normal operation, some personal data whose transmission is implicit in the use of Internet communication protocols.</47> <48/> <49>This category of data includes, by way of example: IP addresses, the type of browser used, the operating system, the domain name and addresses of websites accessed or exited from, information on the pages visited by users within the Site, access time, the length of time spent on each page, internal path analysis and other parameters relating to the user's operating system and computer environment.</49> <50/> <51>Such technical/informatics data are collected and used exclusively in an aggregate and non-identifying manner and could be used to ascertain responsibility in the event of hypothetical computer crimes to the detriment of the Site. </51> <52/> <53>The processing will be legally based on the legitimate interest of the Data Controller to improve the functioning of its systems, to optimise and improve the browsing experience, to avoid fraudulent activities and to improve the security of the Site (art. 6, paragraph 1, letter f) of the Regulations).</53><54/><55/><56> - Data provided voluntarily by the visitor</56><57/><58>This refers to all those Personal Data that the visitor freely releases on the Site, for example, to register and/or access a reserved area, download free resources, request information on a specific product or service through a form, subscribe to the newsletter service, write to an e-mail address or call a telephone number displayed on the Site to have direct contact with the company (in order, for example, to request assistance or further information on a product/service of the Data controller). Such processing shall be lawful pursuant to art. 6, paragraph 1, letter b) of the Regulation (performance of a contract or of pre-contractual measures adopted at the request of the data subject) as well as for the fulfilment of any legal obligations.</58><59/><60>In order to allow the Data Controller to carry out the processing activities for such purposes, it will be necessary to provide the Personal Data requested in the appropriate forms. If you fail to fill in even just one of the fields marked as mandatory, it may not be possible to process your Personal Data and, consequently, to provide you with the information and services requested.</60><61/><62>We do not process Personal Data relating to your health and, in general, “special” categories of personal data pursuant to art. 9 of the Regulation.</62><63/><64>In addition to the above, your Personal Data may be processed by the Controller for the following and additional purposes.</64><65/>",
     "list1": {
       "part1": "Direct Marketing ",
       "part2": "- This term refers to the carrying out of promotional activities (using both automated and traditional methods) for products and/or services of interest to you that are sold and/or provided by the Data Controller. With regard to this direct marketing purpose, it should be noted that, by virtue of Article 6(1)(f) of the Regulation and Article 130(4) of the Privacy Code (so-called soft spam exception), the Data Controller may carry out this activity based on its legitimate interest, regardless of your explicit consent, as explained in greater detail in Recital 47 of the Regulation which states that “",
@@ -758,10 +758,10 @@
         "part3": "at any time, for reasons related to your particular situation, to the processing of your Personal Data in full compliance with applicable privacy laws."
       }
     },
-    "txt3": "<0/><1>To exercise your rights, you may contact the Data Controller at the following e-mail address, attaching a copy of your identity document:</1> <2> job@beije.it</2><3>.</3><4/><5/><6>In any case, if you believe that the processing of your Personal Data is contrary to the Privacy Regulations, you will always have the right to lodge a complaint with the competent supervisory authority (Garante per la Protezione dei Dati Personali) pursuant to art. 77 GDPR.</6><7/><8/><9>PROCESSING LOCATIONS</9><10/><11>Your Personal Data will be processed within the territory of the Italian Republic.</11><12/><13>Should your Personal Data be (for technical and/or operational reasons)transferred and/or located in countries outside the territory of the European Union, we hereby inform you that the subjects located outside the European Union will be appointed (if applicable) as Data Processors pursuant to art. 28 of the GDPR. Moreover, the transfer of your Personal Data to such entities, limited to the performance of specific processing activities, will be regulated in accordance with the provisions of Chapter V of the GDPR.</13><14/><15>Therefore, all necessary precautions will be taken in order to ensure the most complete protection of your Personal Data by basing such transfer: a) on adequacy decisions of the receiving third countries expressed by the European Commission; b) on adequate safeguards expressed by the receiving third party pursuant to article 46 of the Regulation; c) on the adoption of</15><16>binding corporate rules</16><17>; d) by adopting standard contractual clauses approved by the European Commission.</17></18><19>In any case, you may request further details from the Controller if your Personal Data has been processed outside the European Union by requesting evidence of the specific safeguards adopted.</19>"
+    "txt3": "<0/><1>To exercise your rights, you may contact the Data Controller at the following e-mail address, attaching a copy of your identity document:</1> <2> job@people-first.team</2><3>.</3><4/><5/><6>In any case, if you believe that the processing of your Personal Data is contrary to the Privacy Regulations, you will always have the right to lodge a complaint with the competent supervisory authority (Garante per la Protezione dei Dati Personali) pursuant to art. 77 GDPR.</6><7/><8/><9>PROCESSING LOCATIONS</9><10/><11>Your Personal Data will be processed within the territory of the Italian Republic.</11><12/><13>Should your Personal Data be (for technical and/or operational reasons)transferred and/or located in countries outside the territory of the European Union, we hereby inform you that the subjects located outside the European Union will be appointed (if applicable) as Data Processors pursuant to art. 28 of the GDPR. Moreover, the transfer of your Personal Data to such entities, limited to the performance of specific processing activities, will be regulated in accordance with the provisions of Chapter V of the GDPR.</13><14/><15>Therefore, all necessary precautions will be taken in order to ensure the most complete protection of your Personal Data by basing such transfer: a) on adequacy decisions of the receiving third countries expressed by the European Commission; b) on adequate safeguards expressed by the receiving third party pursuant to article 46 of the Regulation; c) on the adoption of</15><16>binding corporate rules</16><17>; d) by adopting standard contractual clauses approved by the European Commission.</17></18><19>In any case, you may request further details from the Controller if your Personal Data has been processed outside the European Union by requesting evidence of the specific safeguards adopted.</19>"
   },
   "legalNotes": {
-    "txt": "<0>LEGAL NOTES</0><1/><2>All the logos and trademarks on the Site</2> <3>https://beije.it</3> <4>are the property of People First S.r.l., with registered office in Viale Giulio Cesare n. 71, 00192 - Rome, VAT No. and Tax Code: 16334941008, to which the assignment of the Internet domain name has been formally obtained, according to the  methods and procedures in force at the time of the assignment request.</4><5/><6/><7>Definitions</7>",
+    "txt": "<0>LEGAL NOTES</0><1/><2>All the logos and trademarks on the Site</2> <3>https://people-first.team</3> <4>are the property of People First S.r.l., with registered office in Viale Giulio Cesare n. 71, 00192 - Rome, VAT No. and Tax Code: 16334941008, to which the assignment of the Internet domain name has been formally obtained, according to the  methods and procedures in force at the time of the assignment request.</4><5/><6/><7>Definitions</7>",
     "list1": {
       "li1": "“Legal Notices” means these terms and conditions;",
       "li2": "“Website” or “Site” means the web domain",
@@ -769,11 +769,11 @@
       "li4": "“Services” means all those functions, devices, applications, information or other services available through this Website;",
       "li5": "“Visitor” or “User” means any person who accesses the Website, with or without the permission of People First S.r.l., or who uses it, regardless of whether he or she has “registered”."
     },
-    "txt2": "<0/><1/><2>Contents and purpose of the Website</2><3/><4>The Contents of the Website have been designed in compliance with Italian laws and European Union directives, including those for the protection of literary and artistic works, and are intended for national and international users.</4><5/><6>The purpose of the Site is to disseminate news about Beije Consulting S.r.l. through the Internet for information and advertising purposes, as well as to provide on-line Services.</6><7/><8>People First S.r.l. specifies in particular that:</8>",
+    "txt2": "<0/><1/><2>Contents and purpose of the Website</2><3/><4>The Contents of the Website have been designed in compliance with Italian laws and European Union directives, including those for the protection of literary and artistic works, and are intended for national and international users.</4><5/><6>The purpose of the Site is to disseminate news about People First S.r.l. through the Internet for information and advertising purposes, as well as to provide on-line Services.</6><7/><8>People First S.r.l. specifies in particular that:</8>",
     "list2": {
-      "li1": "the area relative to “products” has the purpose of presenting, also visually, the production of Beije Consulting S.r.l;",
-      "li2": "the area relative to “projects” is aimed at highlighting some important areas of application of Beije Consulting S.r.l. products;",
-      "li3": "the “press room” area is dedicated to presenting news about Beije Consulting S.r.l. to the public."
+      "li1": "the area relative to “products” has the purpose of presenting, also visually, the production of People First Consulting S.r.l;",
+      "li2": "the area relative to “projects” is aimed at highlighting some important areas of application of People First Consulting S.r.l. products;",
+      "li3": "the “press room” area is dedicated to presenting news about People First Consulting S.r.l. to the public."
     },
     "txt3": "<0/><1>In any case, the texts, articles, photographs and documentation in electronic format present on this Site, unless otherwise expressly indicated, are the exclusive property of People First S.r.l. and are qualified as “information for the public” and cannot be distributed and/or copied without permission and express written authorisation. Any content owned by third parties shall bear an indication of its respective origin or there shall be an appropriate citation to guarantee the attribution of rights to the legitimate owners or authors.</1><2/><3/><4>People First S.r.l. confirms that:</4>",
     "list3": {
@@ -860,7 +860,7 @@
     "linkToHome": "Go to home"
   },
   "community": {
-    "title": "Beije Community",
+    "title": "People First Community",
     "description": {
       "part1": "First of all, a Community made up of people with different experiences, interests, incentive but united by one goal: the individual at the center for building a valuable system.",
       "part2": "Discover our Community: ",
@@ -869,36 +869,37 @@
   },
   "whistleblowing": {
     "title": "Whistleblowing Channel",
-    "description": "In compliance with the provisions of Legislative Decree 24/2023 implementing EU Directive 2019/1937, it will be possible to report behaviors, acts, or omissions that harm the public interest or the integrity of one of the companies within Beije People First through Beije People First's Whistleblowing Channel.",
+    "description": "In compliance with the provisions of Legislative Decree 24/2023 implementing EU Directive 2019/1937, it will be possible to report behaviors, acts, or omissions that harm the public interest or the integrity of one of the companies within People First Srl through People First's Whistleblowing Channel.",
     "q&a": "Questions & answers:",
-    "question1": "1. Who can make a report?",
-    "answer1": "Reports can be made by:",
-    "answer1list1": "employees, freelancers, holders of a collaboration relationship, and unpaid interns working at one of the companies within Beije People First;",
-    "answer1list2": "freelancers, consultants, and collaborators of any kind providing their services to one of the companies within Beije People First;",
-    "answer1list3": "in general, anyone who comes into contact, for any reason, with one of the companies within Beije People First.",
-    "question2": "2. What can be reported?",
-    "answer2section1": "Reports must concern facts known to the reporter and must be made promptly upon becoming aware of the facts so that timely intervention can occur.",
+    "question1": "1. Who can submit a report?",
+    "answer1": "The ability to submit a report is open to:",
+    "answer1list1": "employees, self-employed workers, contract holders, and interns, even unpaid, who operate within one of the companies belonging to the People First group;",
+    "answer1list2": "freelancers, consultants, and collaborators of any title who provide services to one of the companies of the People First group;",
+    "answer1list3": "any person who, for various reasons, comes into contact with the People First company.",
+    "question2": "2. What should be reported?",
+    "answer2section1": "Reports should be made promptly and concern events of which the reporting person is aware. They can include:",
     "answer2section2": "In particular, the following may be subject to reporting:",
-    "answer2list1": "illegal or suspicious behaviors, administrative, accounting, civil, or criminal wrongdoings;",
-    "answer2list2": "irregularities in business activities;",
-    "answer2list3": "acts or facts that may constitute a violation of internal and external regulations governing the activities of Beije People First or that violate the principles and rules of conduct contained in the Code of Ethics;",
-    "answer2list4": "offenses falling within the scope of application of EU or national acts concerning the following sectors: public procurement; financial services, products, and markets, and prevention of money laundering and terrorist financing; product safety and compliance; transportation safety; environmental protection; radiation protection and nuclear safety; food and feed safety and animal health and welfare; public health; consumer protection; protection of privacy and personal data, and network and information system security;",
-    "answer2list5": "acts or omissions that harm the financial interests of the European Union;",
-    "answer2list6": "acts or omissions concerning the internal market;",
-    "answer2list7": "acts or behaviors that undermine the purpose or objectives of the provisions of EU acts.",
+    "answer2list1": "illegal or suspicious behaviors, administrative, accounting, civil, or criminal violations;",
+    "answer2list2": "irregularities in business operations;",
+    "answer2list3": "acts or facts that violate the internal and external regulations governing the activities of People First or that contravene the principles of the Code of Ethics;",
+    "answer2list4": "offenses related to areas such as public procurement, financial services, anti-money laundering, product safety, transportation, environmental protection, radiation protection, food safety and animal welfare, public health, consumer protection, privacy protection, and information network security;",
+    "answer2list5": "acts that compromise the financial interests of the European Union;",
+    "answer2list6": "behaviors that harm the internal market or undermine the provisions of EU acts.",
     "question3": "3. What cannot be reported?",
-    "answer3section1": "The following cannot be reported: disputes, claims, or requests related to personal interests exclusively concerning the employment relationship or related to the relationship with hierarchically superior figures; communications or complaints related to commercial activities or services to the public.",
-    "answer3section2": "If the reporter makes false or defamatory reports—without prejudice to the criminal and civil liability of the reporter—they may be subject to disciplinary action ranging from € 500 to € 2,500.",
-    "question4": "4. How is the confidentiality of the reporter ensured and who manages the report?",
-    "answer4section1": "Beije People First guarantees absolute confidentiality of the reporter's identity and the content of the report, using secure protocols and encryption tools. The reporter's identity is never disclosed without their consent, except in cases provided for by applicable regulations.",
-    "answer4section2": "The report is managed by a dedicated Whistleblowing Committee composed of individuals who—in accordance with the principles of impartiality, confidentiality, and data protection—are endowed with autonomy and independence.",
+    "answer3section1": "Reports cannot include:",
+    "answer3list1": "personal disputes or claims solely related to employment relationships or relationships with superiors;",
+    "answer3list2": "communications or complaints regarding commercial activities or public services.",
+    "answer3section2": "False or defamatory reports may result in, in addition to the criminal and civil liability of the reporting person, disciplinary sanctions ranging from € 500 to € 2,500.",
+    "question4": "4. How is the confidentiality of the reporting person protected and who manages the reports?",
+    "answer4section1": "People First ensures the complete confidentiality of the reporting person’s identity and the content of the report through the use of secure internal protocols. The reporting person’s identity will not be disclosed without their consent, except as required by law.",
+    "answer4section2": "Reports are managed by an internal Whistleblowing Committee, composed of individuals who operate in compliance with the principles of impartiality, confidentiality, and data protection.",
     "policy": "Policy",
     "act": "Organizational Act",
     "document": "Consult documents",
     "openReport": "Open report",
     "report": {
       "title": "Reporting channel",
-      "description1": "Through this page, you can access the internal reporting channel, established in accordance with Legislative Decree 24/2023, by Beije People First.",
+      "description1": "Through this page, you can access the internal reporting channel, established in accordance with Legislative Decree 24/2023, by  People First Srl.",
       "description2": "As an employee or other authorized individual, you can report wrongdoing or reasonably suspect it, anonymously or confidentially.",
       "title2": "Reporting wrongdoing",
       "title2section1": "Through this page, you can provide information about misconduct or report actions that are immoral, illegal, or violate internal regulations. The platform should be used to bring to light issues that would not otherwise come to light.",

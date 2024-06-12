@@ -107,7 +107,7 @@ const TalentAcademy = (props) => {
             classNameBgImgDesktop="intro-section-img-academy"
             classNameBgImgMobile="intro-section-img-academy"
             bgIconDownload="download-btn-icon-academy"
-            sectionName="Beije talent academy"
+            sectionName="People First talent academy"
             sectionTitle={t("academy.firstSection.title")}
             callback={scrollToSection}
             download={"academy"}
@@ -141,7 +141,7 @@ const TalentAcademy = (props) => {
             className={"padding-0"}
           >
             <CustomBanner
-              ariaLabel={"Icon button link to youtube Beije channel"}
+              ariaLabel={"Icon button link to youtube People First channel"}
               title={t("academy.secondSection.title")}
               text={t("academy.secondSection.description1")}
               enphasisTxt={t("academy.secondSection.description2")}
@@ -260,7 +260,7 @@ const TalentAcademy = (props) => {
                 }
                 {
                   state.caseStudiesResponse && !isEmpty(state.caseStudiesResponse) &&
-                  < CustomCarousel
+                  <CustomCarousel
                     academyCarousel
                     obj={state.caseStudiesResponse}
                     classNameSwiperContainer={"swiper-container-up"}

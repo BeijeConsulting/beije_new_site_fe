@@ -30,29 +30,29 @@ export default [
     children: [
       { index: true, element: <Home /> },
       {
-        path: "beije-consulting",
+        path: "consulting",
         element: <Consulting />
       },
       {
-        path: "beije-up",
+        path: "up",
         element: <Up />
       },
       {
-        path: "beije-up/:permalink",
+        path: "up/:permalink",
         element: <CaseStudiesDetail />
       },
-      {
-        path: "beije-talent-academy",
-        element: <TalentAcademy />
-      },
-      {
-        path: "beije-talent-academy/academy",
-        element: <AcademyPage />
-      },
-      {
-        path: "beije-talent-academy/:permalink",
-        element: <CaseStudiesDetail />
-      },
+      // {
+      //   path: "beije-talent-academy",
+      //   element: <TalentAcademy />
+      // },
+      // {
+      //   path: "beije-talent-academy/academy",
+      //   element: <AcademyPage />
+      // },
+      // {
+      //   path: "beije-talent-academy/:permalink",
+      //   element: <CaseStudiesDetail />
+      // },
       {
         path: "blog",
         element: <Blog />
@@ -138,24 +138,24 @@ function RedirectUrlNewSite({ children }) {
   let newUrl = "";
   switch (oldUrl.replace(/\/it|\/en/g, "")) {
     case "/home/consulting/":
-      newUrl = "/beije-consulting";
+      newUrl = "/consulting";
       break;
-    case "/portfolio-articoli/academy-java/":
-      newUrl = "/beije-talent-academy/academy-backend";
-      break;
-    case "/portfolio-articoli/stage-javascript/":
-      newUrl = "/beije-talent-academy/academy-frontend";
-      break;
+    // case "/portfolio-articoli/academy-java/":
+    //   newUrl = "/beije-talent-academy/academy-backend";
+    //   break;
+    // case "/portfolio-articoli/stage-javascript/":
+    //   newUrl = "/beije-talent-academy/academy-frontend";
+    //   break;
     case "/home/community/":
       newUrl = "/";
       break;
     case "/home/up/":
-      newUrl = "/beije-up";
+      newUrl = "/up";
       break;
-    case "/home/academy/":
-      newUrl = "/beije-talent-academy";
-      break;
-    case "/team-beije":
+    // case "/home/academy/":
+    //   newUrl = "/beije-talent-academy";
+    //   break;
+    case "/team-people-first":
       newUrl = "/community";
       break;
     default:

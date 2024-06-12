@@ -67,8 +67,8 @@ const Contacts = (props) => {
                 <p>Lissone (MB)</p>
 
                 <p>{t("contactInfo.contact")}</p>
-                <p>job@beije.it</p>
-                <p>commerciale@beije.it</p>
+                <p>job@people-first.team</p>
+                <p>commerciale@people-first.team</p>
               </Box>
 
               <Box
@@ -108,7 +108,7 @@ const Contacts = (props) => {
 
           <Box>
             <CustomForm
-              titlePage="Richiesta informazioni - sito Beije Contatti"
+              titlePage="Richiesta informazioni - sito People First Contatti"
               formTitle={t("form.title.contacts")}
             />
           </Box>

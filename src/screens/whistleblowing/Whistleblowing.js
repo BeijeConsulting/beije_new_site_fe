@@ -104,9 +104,9 @@ const Whistleblowing = (props) => {
               <p>
                 {t("whistleblowing.answer2section1")}
               </p>
-              <p>
+              {/* <p>
                 {t("whistleblowing.answer2section2")}
-              </p>
+              </p> */}
               <ul>
                 <li>
                   {t("whistleblowing.answer2list1")}
@@ -126,9 +126,9 @@ const Whistleblowing = (props) => {
                 <li>
                   {t("whistleblowing.answer2list6")}
                 </li>
-                <li>
+                {/* <li>
                   {t("whistleblowing.answer2list7")}
-                </li>
+                </li> */}
               </ul>
               <h3>
                 {t("whistleblowing.question3")}
@@ -136,6 +136,14 @@ const Whistleblowing = (props) => {
               <p>
                 {t("whistleblowing.answer3section1")}
               </p>
+              <ul>
+                <li>
+                  {t("whistleblowing.answer3list1")}
+                </li>
+                <li>
+                  {t("whistleblowing.answer3list2")}
+                </li>
+              </ul>
               <p>
                 {t("whistleblowing.answer3section2")}
               </p>

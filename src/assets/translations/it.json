@@ -11,44 +11,44 @@
   },
   "helmet": {
     "meta_title": {
-      "home": "Beije – People First",
-      "consulting": "Consulting – Beije People First",
-      "academy": "Academy – Beije People First",
-      "academy_backend": "Academy backend – Beije People First",
-      "academy_frontend": "Academy frontend– Beije People First",
-      "up": "Up – Beije People First",
-      "whoweare": "Chi siamo – Beije People First",
-      "career": "Lavora con noi – Beije People First",
-      "blog": "Blog – Beije People First",
-      "community": "Community – Beije People First",
-      "events": "Eventi – Beije People First",
-      "contacts": "Contatti – Beije People First",
-      "whistleblowing": "Whistleblowing – Beije People First"
+      "home": "People First",
+      "consulting": "Consulting – People First",
+      "academy": "Academy –  People First",
+      "academy_backend": "Academy backend – People First",
+      "academy_frontend": "Academy frontend – People First",
+      "up": "Up – People First",
+      "whoweare": "Chi siamo – People First",
+      "career": "Lavora con noi – People First",
+      "blog": "Blog – People First",
+      "community": "Community – People First",
+      "events": "Eventi – People First",
+      "contacts": "Contatti – People First",
+      "whistleblowing": "Whistleblowing – People First"
     },
     "meta_description": {
-      "home": "Beije People First azienda leader nel settore IT è specializzata nella consulenza, formazione frontend & backend e nello sviluppo di mobile & web app mettendo al centro le esigenze del cliente.",
-      "consulting": "I nostri consulenti Beije forniscono consulenza informatica professionale per lo sviluppo di software in grado di offrire le migliori soluzioni che si adattino alle esigenze del cliente.",
-      "academy": "Un’esperienza di formazione intensiva che ha l’obiettivo di sviluppare le competenze necessarie per diventare Software Developer attraverso lezioni frontali e progetti reali.",
+      "home": "People First azienda leader nel settore IT è specializzata nella consulenza, formazione frontend & backend e nello sviluppo di mobile & web app mettendo al centro le esigenze del cliente.",
+      "consulting": "I nostri consulenti People First forniscono consulenza informatica professionale per lo sviluppo di software in grado di offrire le migliori soluzioni che si adattino alle esigenze del cliente.",
+      "academy": "Un’ esperienza di formazione intensiva che ha l’ obiettivo di sviluppare le competenze necessarie per diventare Software Developer attraverso lezioni frontali e progetti reali.",
       "academy_backend": "Academy retribuita di tre mesi per diventare Java Developer.",
       "academy_frontend": "Academy retribuita di tre mesi per diventare Web Developer.",
-      "up": "Realizzazione e manutenzione di software in perfetto stile Agile attraverso l’utilizzo delle tecnologie più innovative presenti sul mercato.",
-      "career": "Diventa Software Developer con Beije",
+      "up": "Realizzazione e manutenzione di software in perfetto stile Agile attraverso l’ utilizzo delle tecnologie più innovative presenti sul mercato.",
+      "career": "Diventa Software Developer con People First",
       "blog": "Tutte le notizie e gli aggiornamenti sul settore IT, frontend & backend",
-      "community": "Tutta la Community beije",
-      "events": "Tutti gli gli eventi della nostra Community Beije",
-      "contacts": "Contatti Beije People First"
+      "community": "Tutta la Community People First",
+      "events": "Tutti gli gli eventi della nostra Community People First",
+      "contacts": "Contatti People First"
     },
     "keywords": {
-      "home": "IT, consulenza, formazione, frontend, backend, contatti beije, software developer, programmatore software, web developer, java developer, academy,talent academy, react, react native, java, database programmatore, beije storia, beije valori, beije mission, beije vision, beije futuro, team di valore, people first, beije azienda",
+      "home": "IT, consulenza, formazione, frontend, backend, contatti People First, software developer, programmatore software, web developer, java developer, academy,talent academy, react, react native, java, database programmatore, People First storia, People First valori, People First mission, People First vision, People First futuro, team di valore, people first, People First azienda",
       "consulting": "consulenza informatica, people first, valore, progetti innovativi, consulenza, consulenza react, consulenza java, consulenza react native, sviluppo frontend, sviluppo backend, consulenza frontend, consulenza backend, differenza frontend e backend, consulting Milano",
       "academy": "academy, academy frontend, academy backend, software developer, webinar, java developer, frontend developer, web developer, backend developer, tecnologie, stage retribuito, stage, corso backend, corso frontend, corso, diventare programmatore, diventare sviluppatore, esperto react, esperto react native, esperto java, esperto backend, esperto frontend",
       "academy_backend": "java, fondamenti java, string builder, cvs, xml, database, linguaggio java, java per web, spring, javascript, DOM, come diventare java developer",
       "academy_frontend": "react, react native, frontend, academy frontend, come diventare frontend developer, academy frontend, academy, corso, corso web, come creare una pagina web, come creare una applicazione mobile, android, iOS, come diventare esperto frontend, javascript, programmatore android, programmatore iOS",
       "up": "agile, progettazione, implementazione, delivery, integration, application maintenance, software, frontend, backend, azienda software, IT, azienda IT, azienda Milano, consulting Milano, azienda Lissone, azienda informatica Milano",
-      "career": "offerte lavoro beije, stage frontend, stage backend, stage, stage milano IT, stage frontend milano, stage backend milano, academy frontend, academy backend, come entrare in beije, carriera beije, lavoro, academy, stipendio frontend, stipendio sviluppatore, stipendio backend",
+      "career": "offerte lavoro People First, stage frontend, stage backend, stage, stage milano IT, stage frontend milano, stage backend milano, academy frontend, academy backend, come entrare in People First, carriera People First, lavoro, academy, stipendio frontend, stipendio sviluppatore, stipendio backend",
       "blog": "",
-      "community": "Community, Community beije, beije Community, eventi beije, team beije, team, storia beije",
-      "contacts": "contatti beije, sede beije, dove si trova beije, numero telefono beije, email beije"
+      "community": "Community, Community People First, People First Community, eventi People First, team People First, team, storia People First",
+      "contacts": "contatti People First, sede People First, dove si trova People First, numero telefono People First, email People First"
     }
   },
   "btn": {
@@ -119,12 +119,12 @@
     "infoFields": "* Campi obbligatori"
   },
   "altImages": {
-    "privacyPolicies": "Beije Privacy Policy",
-    "legalNotes": "Beije Legal Notes"
+    "privacyPolicies": "People First Privacy Policy",
+    "legalNotes": "People First Legal Notes"
   },
   "burgerMenu": {
     "consulting": "Consulting",
-    "academy": "Beije Talent Academy",
+    "academy": "People First Talent Academy",
     "up": "Up",
     "career": "Lavora con noi",
     "manifest": "Manifesto",
@@ -142,7 +142,7 @@
     "privacyPolicies": "Privacy policy",
     "legalNotes": "Note legali",
     "paritaGenere": "Parità di Genere",
-    "vatNumber": "Beije è un marchio di People First Srl - Partita IVA 16334941008",
+    "vatNumber": "People First Srl - Partita IVA 16334941008",
     "whistleblowing": "Whistleblowing"
   },
   "home": {
@@ -199,7 +199,7 @@
       "history": {
         "title": "Storia",
         "content": {
-          "part1": "Al centro del modello Beije c’è una ",
+          "part1": "Al centro del modello People First c’è una ",
           "part2": "vision People First",
           "part3": ": le persone al centro per la creazione di un’azienda di ",
           "part4": "valore. ",
@@ -377,14 +377,14 @@
       "title": "Dicono di noi",
       "commentsClient": {
         "francescoPancaro": "Il progetto è stato seguito da un team professionale, organizzato e disponibile. Ci hanno seguiti in ogni fase del progetto arrivando sempre puntuali e offrendoci soluzioni ottimali dando un risultato ben oltre le aspettative.",
-        "matteoMilione": "Quella con Beije è stata una collaborazione super efficiente grazie alla ottima sinergia con il nostro team interno e alla condivisione della stessa visione progettuale."
+        "matteoMilione": "Quella con People First è stata una collaborazione super efficiente grazie alla ottima sinergia con il nostro team interno e alla condivisione della stessa visione progettuale."
       }
     }
   },
   "consulting": {
     "title": "Persone di valore per progetti di valore",
     "intro": {
-      "part1": "I nostri consulenti Beije forniscono",
+      "part1": "I nostri consulenti People First forniscono",
       "part2": "consulenza informatica",
       "part3": "professionale per lo sviluppo di software in grado di offrire le migliori soluzioni che si adattino alle esigenze del cliente. Ci impegniamo ad ottenere i risultati migliori attraverso aggiornamenti mirati e formazione costante per la realizzazione di PROGETTI INNOVATIVI."
     },
@@ -405,7 +405,7 @@
     "cardsDescription": {
       "card1": "Ritiene che ci sia un buon clima aziendale",
       "card2": "Ritiene che l'azienda sia attenta al benessere dei dipendenti",
-      "card3": "Raccomanderebbe Beije People First"
+      "card3": "Raccomanderebbe People First People First"
     },
     "bannerTitle": "Segui il cambiamento!",
     "contactFormTitle": "Richiedi maggiori informazioni"
@@ -429,20 +429,20 @@
     "fourthSection": {
       "title": "Dicono di noi",
       "comments_txt": {
-        "commentsDiMonaco": "Una formazione completa, un'esperienza professionalizzante che ti lascia con delle competenze reali e applicabili nell'immediato. Alla Beije Talent Academy non si impara solo a programmare, ma a farlo con consapevolezza e ingegno.",
-        "commentsPignorio": "La Beije Talent Academy è stata un’esperienza formativa davvero importante per il mio percorso di crescita. Non credevo che in soli tre mesi sarei riuscito ad apprendere tanto da poter lavorare in autonomia su progetti complessi. Sicuramente la consiglierei a tutti!",
-        "commentsEzpeleta": "La Beije Talent Academy mi è stata molto utile per introdurmi nel mondo del lavoro con sicurezza grazie alle simulazioni in team, dove ho potuto mettere in pratica ciò che ho studiato in Accademy ed in Università.",
-        "commentsSavallo": "La Beije Talent Academy è stata un’esperienza costruttiva e stimolante: mi ha permesso di apprendere le tecnologie usate nel mondo lavorativo e mi ha incoraggiato a mettermi in gioco in ogni circostanza.",
+        "commentsDiMonaco": "Una formazione completa, un'esperienza professionalizzante che ti lascia con delle competenze reali e applicabili nell'immediato. Alla People First Talent Academy non si impara solo a programmare, ma a farlo con consapevolezza e ingegno.",
+        "commentsPignorio": "La People First Talent Academy è stata un’esperienza formativa davvero importante per il mio percorso di crescita. Non credevo che in soli tre mesi sarei riuscito ad apprendere tanto da poter lavorare in autonomia su progetti complessi. Sicuramente la consiglierei a tutti!",
+        "commentsEzpeleta": "La People First Talent Academy mi è stata molto utile per introdurmi nel mondo del lavoro con sicurezza grazie alle simulazioni in team, dove ho potuto mettere in pratica ciò che ho studiato in Accademy ed in Università.",
+        "commentsSavallo": "La People First Talent Academy è stata un’esperienza costruttiva e stimolante: mi ha permesso di apprendere le tecnologie usate nel mondo lavorativo e mi ha incoraggiato a mettermi in gioco in ogni circostanza.",
         "commentsZacheo": "Grazie all'Academy backend ho capito quello che differenzia l'università dal mondo del lavoro e soprattutto ho capito come gestire un progetto vero e proprio, capendo come usare le tecnologie java piu usate dalle aziende.",
-        "commentsFraioli": "Beije People First mi ha da subito dato un'ottima impressione e non si è smentita con il tempo. Ho avuto un contratto a tempo indeterminato dopo un breve periodo di formazione e sono entrato in un team che mi ha accolto ben oltre le mie aspettative.",
-        "commentsBusseni": "Nonostante fosse la prima Academy tutta da remoto è stata gestita ottimamente, sia nelle lezioni frontali che nella divisione dei gruppi in mini-progetti. Ritengo che la Beije Talent Academy mi abbia fornito una preparazione più che adeguata per svolgere attività in ambito Java.",
-        "commentsFarina": "Nell'Academy frontend di Beije ho approfondito tecnologie e nozioni nuove, mi è stato inoltre fornito supporto per entrare nel mondo del lavoro, cosa che la sola università non mi ha fornito, per questo lo reputo un percorso che rifarei volentieri."
+        "commentsFraioli": "People First People First mi ha da subito dato un'ottima impressione e non si è smentita con il tempo. Ho avuto un contratto a tempo indeterminato dopo un breve periodo di formazione e sono entrato in un team che mi ha accolto ben oltre le mie aspettative.",
+        "commentsBusseni": "Nonostante fosse la prima Academy tutta da remoto è stata gestita ottimamente, sia nelle lezioni frontali che nella divisione dei gruppi in mini-progetti. Ritengo che la People First Talent Academy mi abbia fornito una preparazione più che adeguata per svolgere attività in ambito Java.",
+        "commentsFarina": "Nell'Academy frontend di People First ho approfondito tecnologie e nozioni nuove, mi è stato inoltre fornito supporto per entrare nel mondo del lavoro, cosa che la sola università non mi ha fornito, per questo lo reputo un percorso che rifarei volentieri."
       }
     }
   },
   "blog": {
     "title": "Blog",
-    "description": "Appassionatə di informazioni? Scopri le news, gli aggiornamenti su innovazione e tecnologia e spazia dai trend del momento al digital business, scienza, ricerca e società con il Blog Beije. Segui il cambiamento!",
+    "description": "Appassionatə di informazioni? Scopri le news, gli aggiornamenti su innovazione e tecnologia e spazia dai trend del momento al digital business, scienza, ricerca e società con il Blog People First. Segui il cambiamento!",
     "postedBy": "Pubblicato da",
     "postedOn": "il",
     "latestArticles": "Ultimi articoli",
@@ -450,7 +450,7 @@
   },
   "events": {
     "title": "Eventi",
-    "description": "Tutti gli eventi Beije People First: are you ready to join the party?"
+    "description": "Tutti gli eventi People First: are you ready to join the party?"
   },
   "academyFrontend": {
     "title": "Frontend",
@@ -591,7 +591,7 @@
     "messageJob": "Al momento non ci sono posizioni aperte, ma ti consigliamo di tenere d'occhio la pagina.",
     "messageAcademy": "Al momento non ci sono posizioni aperte, ma ti consigliamo di tenere d'occhio la pagina.",
     "open_position_btn": "Posizioni aperte",
-    "manifest_btn": "Beije Manifesto",
+    "manifest_btn": "People First Manifesto",
     "show_more_btn": "Scopri",
     "type": {
       "frontend": "Front-end",
@@ -609,14 +609,14 @@
     "switch_academy": "ACADEMY",
     "switch_jobs": "JOBS",
     "advantages": {
-      "title": "<h2>I vantaggi della Community <span class='hightlight-txt'>Beije</span></h2>",
+      "title": "<h2>I vantaggi della Community <span class='hightlight-txt'>People First</span></h2>",
       "paragraph1": {
         "title": "<h3 class='hightlight-txt carrer_paragraph_title'>Smartworking</h3>",
-        "text": "<p >In Beije siamo grandi fan dello smartworking, il nostro motto è “<b>no matter where but how</b>”, crediamo però che il valore dell’incontro vada coltivato: i nostri uffici sono sempre aperti per lavorare fianco a fianco con la <b>Community</b> e l’ufficio diventa <b>luogo strategico</b> di <b>teamwork</b>.</p>"
+        "text": "<p >In People First siamo grandi fan dello smartworking, il nostro motto è “<b>no matter where but how</b>”, crediamo però che il valore dell’incontro vada coltivato: i nostri uffici sono sempre aperti per lavorare fianco a fianco con la <b>Community</b> e l’ufficio diventa <b>luogo strategico</b> di <b>teamwork</b>.</p>"
       },
       "paragraph2": {
-        "title": "<h3 class='hightlight-txt carrer_paragraph_title'>Eventi Beije</h3>",
-        "text": "<p > Siamo una Community, crediamo nel valore dell'<b>incontro</b> e che i <b>traguardi</b> raggiunti vadano celebrati: <b>due volte all’anno</b> ci ritroviamo tutti insieme per una <b>festa</b> in pieno stile <b>Beije!</b></p>"
+        "title": "<h3 class='hightlight-txt carrer_paragraph_title'>Eventi People First</h3>",
+        "text": "<p > Siamo una Community, crediamo nel valore dell'<b>incontro</b> e che i <b>traguardi</b> raggiunti vadano celebrati: <b>due volte all’anno</b> ci ritroviamo tutti insieme per una <b>festa</b> in pieno stile <b>People First!</b></p>"
       },
       "paragraph3": {
         "title": "<h3 class='hightlight-txt carrer_paragraph_title'>Incontri Afterwork</h3>",
@@ -630,7 +630,7 @@
     "growth_paths": {
       "title": "<h2>Percorsi di <span><b>Crescita</b></span></h2>",
       "paragraph1": {
-        "title": "Beije Supporter",
+        "title": "People First Supporter",
         "text": "<p class='career_growth_paths_description'>La tua carriera <b>non inizia full alone</b>: un <b>Supporter interno</b> ti guiderà durante il tuo <b>percorso professionale</b>, aiutandoti fin dall’inizio ad integrarti nella realtà aziendale, affinché tu possa partire al meglio. Anche al di là del lavoro, <b>ci sosteniamo</b> a vicenda <b>come una vera Community</b>.</p>"
       },
       "paragraph2": {
@@ -654,7 +654,7 @@
       },
       "paragraph4": {
         "title": "<h3 class='hightlight-txt carrer_paragraph_title'>Webinar ed eventi</h3>",
-        "text": "<p>Poniamo le basi per una <b>crescita professionale</b> a <b>360 gradi</b>: almeno <b>due volte all’anno</b> organizziamo <b>eventi di formazione</b> tenuti dai nostri esperti Beije e da professionisti del settore; pianifichiamo anche <b>webinar</b> interni online per aggiornare la Community sulle <b>ultime tecnologie</b> e le <b>innovazioni più interessanti</b> del <b>mercato</b>.</p>"
+        "text": "<p>Poniamo le basi per una <b>crescita professionale</b> a <b>360 gradi</b>: almeno <b>due volte all’anno</b> organizziamo <b>eventi di formazione</b> tenuti dai nostri esperti People First e da professionisti del settore; pianifichiamo anche <b>webinar</b> interni online per aggiornare la Community sulle <b>ultime tecnologie</b> e le <b>innovazioni più interessanti</b> del <b>mercato</b>.</p>"
       }
     },
     "video_text": " <h2><span>Lavorare con noi è bello?</span><br /> Ce lo racconta la nostra <span class='hightlight-txt'>Community!</span></h2>"
@@ -759,9 +759,9 @@
       "li5": "per “Visitatore” o “Utente” si intende qualsiasi persona che acceda al Sito web, con o senza il permesso di People First S.r.l., o che lo utilizzi, indipendentemente dall’essersi “registrato”."
     },
     "list2": {
-      "li1": "l’area relativa ai “prodotti” ha lo scopo di presentare, anche visualmente, la produzione di Beije Consulting S.r.l.;",
-      "li2": "l’area relativa ai “progetti” ha lo scopo di segnalare alcune rilevanti aree di applicazione dei prodotti di Beije Consulting S.r.l.;",
-      "li3": "l’area “press room” è dedicata alla presentazione al pubblico di notizie su Beije Consulting S.r.l."
+      "li1": "l’area relativa ai “prodotti” ha lo scopo di presentare, anche visualmente, la produzione di People First Consulting S.r.l.;",
+      "li2": "l’area relativa ai “progetti” ha lo scopo di segnalare alcune rilevanti aree di applicazione dei prodotti di People First Consulting S.r.l.;",
+      "li3": "l’area “press room” è dedicata alla presentazione al pubblico di notizie su People First Consulting S.r.l."
     },
     "list3": {
       "li1": " adotta idonee procedure per garantire standard di accuratezza, completezza, adeguatezza, aggiornamento, tempestività delle informazioni contenute nel Sito web;",
@@ -843,7 +843,7 @@
     "linkToHome": "Vai alla home"
   },
   "community": {
-    "title": "La Community Beije",
+    "title": "La Community  ",
     "description": {
       "part1": "Prima di tutto una Community fatta di persone con esperienze, interessi, stimoli differenti ma uniti da un unico obiettivo: l’individuo al centro per la costruzione di un sistema di valore.",
       "part2": "Scopri la nostra Community: ",
@@ -852,36 +852,36 @@
   },
   "whistleblowing": {
     "title": "Canale Whistleblowing",
-    "description": "In ottemperanza a quanto disposto dal d.lgs. 24/2023 di attuazione della Direttiva UE 2019/1937, attraverso il Canale Whistleblowing di Beije People First sarà possibile segnalare comportamenti, atti od omissioni che ledono l’interesse pubblico o l’integrità di una delle società di Beije People First.",
+    "description": "In ottemperanza a quanto disposto dal d.lgs. 24/2023 di attuazione della Direttiva UE 2019/1937, attraverso il Canale Whistleblowing di People First Srl sarà possibile segnalare comportamenti, atti od omissioni che ledono l’interesse pubblico o l’integrità di una delle società di People First Srl.",
     "q&a": "Domande e risposte:",
-    "question1": "1. Chi può inviare la segnalazione?",
-    "answer1": "Possono effettuare una segnalazione:",
-    "answer1list1": "i dipendenti, i lavoratori autonomi, i titolari di un rapporto di collaborazione e i tirocinanti anche non retribuiti che svolgono la propria attività lavorativa presso una delle società di Beije People First;",
-    "answer1list2": "i liberi professionisti, i consulenti e i collaboratori a qualunque titolo che prestano la propria attività presso una delle società di Beije People First;",
-    "answer1list3": "in generale, chiunque venga in contatto, per qualsiasi motivo, con una delle società di Beije People First.",
-    "question2": "2. Cosa segnalare?",
-    "answer2section1": "Le segnalazioni devono riguardare fatti di cui il segnalante abbia conoscenza e devono essere effettuate tempestivamente rispetto alla conoscenza dei fatti così da poter intervenire in modo tempestivo.",
-    "answer2section2": "In particolare, possono essere oggetto di segnalazione:",
-    "answer2list1": "comportamenti illeciti o sospetti, illeciti amministrativi, contabili, civili o penali;",
-    "answer2list2": "irregolarità nelle attività aziendali;",
-    "answer2list3": "atti o fatti che possano costituire una violazione delle norme, interne ed esterne, che disciplinano l’attività di Beije People First o che ledano i principi e le regole di comportamento contenuti nel Codice Etico;",
-    "answer2list4": "illeciti che rientrano nell’ambito di applicazione degli atti dell’Unione Europea o nazionali relativi ai seguenti settori: appalti pubblici; servizi, prodotti e mercati finanziari e prevenzione del riciclaggio e del finanziamento del terrorismo; sicurezza e conformità dei prodotti; sicurezza dei trasporti; tutela dell’ambiente; radioprotezione e sicurezza nucleare; sicurezza degli alimenti e dei mangimi e salute e benessere degli animali; salute pubblica; protezione dei consumatori; tutela della vita privata e protezione dei dati personali e sicurezza delle reti e dei sistemi informativi;",
-    "answer2list5": "atti od omissioni che ledono gli interessi finanziari dell’Unione Europea;",
-    "answer2list6": "atti od omissioni riguardanti il mercato interno;",
-    "answer2list7": "atti o comportamenti che vanificano l’oggetto o la finalità delle disposizioni di cui agli atti dell’Unione Europea.",
-    "question3": "3. Cosa non si può segnalare?",
-    "answer3section1": "Non possono essere oggetto di segnalazioni: le contestazioni, rivendicazioni o richieste legate ad interesse di carattere personale che attengono esclusivamente al rapporto di lavoro o inerenti al rapporto con le figure gerarchicamente sovraordinate; le comunicazioni o i reclami relativi ad attività di natura commerciale o di servizi al pubblico.",
-    "answer3section2": "Qualora il segnalante dovesse effettuare segnalazioni mendaci o diffamatorie – ferma restando la responsabilità penale e civile in capo al segnalante – lo stesso potrà essere soggetto all’applicazione di una sanzione disciplinare da € 500 a € 2.500.",
-    "question4": "4. Come viene garantita la riservatezza del segnalante e chi gestisce la segnalazione?",
-    "answer4section1": "Beije People First garantisce l’assoluta riservatezza dell’identità del segnalante e del contenuto della segnalazione, con protocolli sicuri e strumenti di crittografia. L’identità del segnalante non è mai rivelata senza il suo consenso, ad eccezione dei casi previsti dalla normativa vigente.",
-    "answer4section2": "La segnalazione viene gestita da un apposito Comitato Whistleblowing composto da soggetti che – nel rispetto dei principi di imparzialità, riservatezza e protezione dei dati – sono dotati di autonomia e indipendenza.",
+    "question1": "1. Chi può presentare una segnalazione?",
+    "answer1": "La possibilità di presentare una segnalazione è aperta a:",
+    "answer1list1": "dipendenti, lavoratori autonomi, titolari di contratti di collaborazione e stagisti, anche non retribuiti, che operano all'interno di una delle società appartenenti al gruppo People First;",
+    "answer1list2": "liberi professionisti, consulenti e collaboratori di qualsiasi titolo che prestano servizio presso una delle società del gruppo People First;",
+    "answer1list3": "qualsiasi persona che, per vari motivi, entri in contatto con la società People First.",
+    "question2": "2. Quali fatti devono essere segnalati? ",
+    "answer2section1": "Le segnalazioni devono essere fatte prontamente e riguardare eventi di cui la persona segnalante sia a conoscenza. Possono includere:",
+    "answer2list1": "comportamenti illeciti o sospetti, violazioni amministrative, contabili, civili o penali;",
+    "answer2list2": "irregolarità nelle operazioni aziendali;",
+    "answer2list3": "atti o fatti che violano le norme interne ed esterne che regolano l'attività di People First o che contravvengono ai principi del Codice Etico;",
+    "answer2list4": "illeciti relativi a settori come appalti pubblici, servizi finanziari, prevenzione del riciclaggio, sicurezza dei prodotti, trasporti, tutela ambientale, radioprotezione, sicurezza alimentare e benessere animale, salute pubblica, protezione dei consumatori, tutela della privacy e sicurezza delle reti informatiche;",
+    "answer2list5": "atti che compromettono gli interessi finanziari dell'Unione Europea;",
+    "answer2list6": "comportamenti che danneggiano il mercato interno o che vanificano le disposizioni degli atti dell'Unione Europea;",
+    "question3": "3. Quali fatti non possono essere segnalati?",
+    "answer3section1": "Non sono accettate segnalazioni relative a:",
+    "answer3list1": "contestazioni o rivendicazioni personali legate esclusivamente al rapporto di lavoro o alle relazioni con i superiori;",
+    "answer3list2": "comunicazioni o reclami riguardanti attività commerciali o di servizi al pubblico.",
+    "answer3section2": "Segnalazioni false o diffamatorie possono comportare, oltre alla responsabilità penale e civile della persona segnalante, sanzioni disciplinari che vanno da € 500 a € 2.500.",
+    "question4": "4. Come viene protetta la riservatezza della persona segnalante e chi gestisce le segnalazioni?",
+    "answer4section1": "People First garantisce la completa riservatezza dell'identità della persona segnalante e del contenuto della segnalaione tramite l'uso di protocolli sicuri.L'identità della persona segnalante non verrà rivelata senza il suo consenso, ecctto nei casi previsti dalla legge.",
+    "answer4section2": "Le segnalazioni sono gestite da un Comitato Whistleblowing interno, composto da persone che operano rispettando i principi di imparzialità, riservatezza e protezione dei dati.",
     "policy": "Policy",
     "act": "Atto Organizzativo",
     "document": "Consulta i documenti",
     "openReport": "Apri segnalazione",
     "report": {
       "title": "Canale di segnalazione",
-      "description1": "Attraverso questa pagina puoi accedere al canale di segnalazione interno, predisposto ai sensi del D.Lgs. 24/2023, di Beije People First.",
+      "description1": "Attraverso questa pagina puoi accedere al canale di segnalazione interno, predisposto ai sensi del D.Lgs. 24/2023, di People First.",
       "description2": "In qualità di dipendente o altro soggetto legittimato, puoi segnalare illeciti o affermare di averne il ragionevole sospetto, in forma anonima o confidenziale.",
       "title2": "Segnalazione di illeciti",
       "title2section1": "Attraverso questa pagina, puoi inviare informazioni su comportamenti scorretti o segnalare azioni che sono immorali, illegali o che violano normative interne. La piattaforma deve essere utilizzata per portare alla luce questioni che altrimenti non sarebbero venute alla luce.",

@@ -120,8 +120,8 @@ const Manifest = (props) => {
               <div className="manifest_title_page_container">
                 <img
                   src={logo_written_white}
-                  width={247}
-                  height={98}
+                  width={310}
+                  height={110}
                 />
                 <div dangerouslySetInnerHTML={{ __html: t(`manifest.intro`) }} />
               </div>
