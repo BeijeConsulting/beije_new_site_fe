@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import ApiCalls from "../../../services/api/ApiCalls";
 import { useLocation } from "react-router-dom";
-import { get as __get, find } from 'lodash';
+import { get as __get } from 'lodash';
 
 
 
@@ -79,42 +79,12 @@ const AcademyPage = (props) => {
 
     const response = await ApiCalls.academies_getListDetail(pageId, { 'Accept-Language': currentLanguage });
     // const item = response.find(obj => obj.id === parseInt(pageId));
-    const response = await ApiCalls.academies_getListDetail(pageId, { 'Accept-Language': currentLanguage });
-    // const item = response.find(obj => obj.id === parseInt(pageId));
+
     setState({
-      academyData: response
       academyData: response
     })
   }
 
-  const academyCourseStructure = [
-    //duration title and label
-    {
-      colMobile: 12,
-      colDesktop: 6,
-      name: "academyFrontend.table.row1Title",
-      type: "title"
-    },
-    {
-      colMobile: 12,
-      colDesktop: 6,
-      name: state.academyData.duration,
-      type: ""
-    },
-    //work mode title and label
-    {
-      colMobile: 12,
-      colDesktop: 6,
-      name: "academyFrontend.table.row3Title",
-      type: "title"
-    },
-    {
-      colMobile: 12,
-      colDesktop: 6,
-      name: state.academyData.work_mode,
-      type: ""
-    }
-  ]
   const academyCourseStructure = [
     //duration title and label
     {
