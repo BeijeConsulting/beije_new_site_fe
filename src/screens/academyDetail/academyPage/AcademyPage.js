@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import ApiCalls from "../../../services/api/ApiCalls";
 import { useLocation } from "react-router-dom";
-import { get as __get, find } from 'lodash';
+import { get as __get } from 'lodash';
 
 
 
@@ -79,6 +79,7 @@ const AcademyPage = (props) => {
 
     const response = await ApiCalls.academies_getListDetail(pageId, { 'Accept-Language': currentLanguage });
     // const item = response.find(obj => obj.id === parseInt(pageId));
+
     setState({
       academyData: response
     })
@@ -115,15 +116,15 @@ const AcademyPage = (props) => {
 
   const academyTopics = state.academyData.topics?.map((item) => {
     const topicSubsectionContent = item.subtopics.map((topic) => {
-      const title = topic.translations.find(translation => translation.language === currentLanguage.toLowerCase());
+      const title = topic.translations.find(translations => translations.language === currentLanguage.toLowerCase());
       return { p: title.value };
     })
+    const topic = item.translations.find(translation => translation.language === currentLanguage.toLowerCase());
     return {
-      sectionTitle: item.translations[0].name,
+      sectionTitle: topic.name,
       description: topicSubsectionContent
     }
   })
-
   return (
     <>
       <Helmet>

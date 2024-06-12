@@ -27,7 +27,7 @@ const Manifest = (props) => {
   const logo3d = useRef();
 
   const match1024 = useMediaQuery('(min-width:1024px)');
-  const match1400 = useMediaQuery('(min-width:1400px)');
+  // const match1200 = useMediaQuery('(min-width:1200px)');
   gsap.registerPlugin(ScrollTrigger);
   const { t } = useTranslation();
   const { lang } = useParams();
@@ -111,7 +111,7 @@ const Manifest = (props) => {
       </Helmet>
 
       <Box
-        className={"margin-top-container-screens bg-white"}  
+        className={"margin-top-container-screens bg-white"}
         ref={containerRef}
       >
         <section className="manifest_first_section">
@@ -128,11 +128,14 @@ const Manifest = (props) => {
             </div>
           </div>
         </section>
-          <section>
-            <div className="manifest_logo_3d_container_mobile" ref={logo3d}>
-              <Logo3d />
-            </div>
-          </section>
+
+
+        <section>
+          <div className="manifest_logo_3d_container_mobile" ref={logo3d}>
+            <Logo3d />
+          </div>
+        </section>
+
 
         <section>
           <div className="paddingX-container-general-pages manifest_sentence_manifest" dangerouslySetInnerHTML={{ __html: t(`manifest.starting_sentence`) }} />

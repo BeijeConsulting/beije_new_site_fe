@@ -452,7 +452,8 @@
     "postedBy": "Posted by",
     "posted": "Posted",
     "postedOn": "on",
-    "latestArticles": "Latest articles"
+    "latestArticles": "Latest articles",
+    "posted": "Posted"
   },
   "events": {
     "title": "Events",
