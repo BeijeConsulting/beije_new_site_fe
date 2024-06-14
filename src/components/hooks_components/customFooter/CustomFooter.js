@@ -162,20 +162,19 @@ const CustomFooter = (props) => {
           </p>
           <div>
             <img
+              src={happyindex_at_work}
+              alt="Happy index"
+              className="footer-container-logo-parita-desktop"
+            />
+            <img
               src={logo_parita_di_genere}
               alt="Logo Paritá di Genere"
               className="footer-container-logo-parita-desktop"
               onClick={() => navigate('blog/people-first-srl-si-certifica-per-la-parit-di-genere')}
-            />
-            <img
-              src={happyindex_at_work}
-              alt="Happy index"
-              className="footer-container-logo-parita-desktop"
-              style={{ marginLeft: '10px' }}
+              style={{ marginLeft: '10px', cursor: 'pointer' }}
             />
           </div>
         </div>
-
       </div>
 
       <div
