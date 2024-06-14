@@ -38,7 +38,7 @@ const HomeLayout = (props) => {
   const { t } = useTranslation()
 
   useEffect(() => {
-    const langs = ["/it/", "/en/"];
+    const langs = ["/it", "/en"];
     if (!langs.some((l) => pathname.includes(l))) {
       navigate(`/${i18n.resolvedLanguage}${pathname}${search ? search : ""}`, { replace: true });
     } else {
