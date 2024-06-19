@@ -13,7 +13,7 @@ import './CustomFooter.scss'
 
 // Constants and functions
 import { logo_primary_light, logo_secondary_light, menu_voices } from "../../../utils/properties";
-import logo_parita_di_genere from '../../../assets/images/logo_parita_di_genere.png'
+import logo_parita_di_genere from '../../../assets/images/UNI.svg'
 import happyindex_at_work from '../../../assets/images/happyindex_at_work_75px.svg';
 
 // Components
