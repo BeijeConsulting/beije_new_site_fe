@@ -157,7 +157,7 @@ const TalentAcademy = (props) => {
           </Container> */}
 
           {/* Third section */}
-          {/* <Container
+          <Container
             component={"section"}
             maxWidth={"false"}
             className={"academy-third-section-container paddingX-container-general-pages"}
@@ -190,7 +190,7 @@ const TalentAcademy = (props) => {
               />
             </Box>
 
-          </Container> */}
+          </Container>
 
           {/* Fourth section */}
 
