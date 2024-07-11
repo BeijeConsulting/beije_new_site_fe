@@ -6,7 +6,7 @@ import NoMatch from "./screens/NoMatch";
 import HomeLayout from "./layout/HomeLayout";
 import Up from "./screens/up/Up";
 import Consulting from "./screens/consulting/Consulting";
-// import TalentAcademy from "./screens/talentAcademy/TalentAcademy";
+import TalentAcademy from "./screens/talentAcademy/TalentAcademy";
 import Blog from "./screens/blog/Blog";
 import Career from "./screens/career/Career"
 import Contacts from "./screens/contacts/Contacts";
@@ -41,12 +41,12 @@ export default [
         path: "up/:permalink",
         element: <CaseStudiesDetail />
       },
+      {
+        path: "people-first-talent-academy",
+        element: <TalentAcademy />
+      },
       // {
-      //   path: "beije-talent-academy",
-      //   element: <TalentAcademy />
-      // },
-      // {
-      //   path: "beije-talent-academy/academy",
+      //   path: "people-first-talent-academy/academy",
       //   element: <AcademyPage />
       // },
       // {
@@ -152,9 +152,9 @@ function RedirectUrlNewSite({ children }) {
     case "/home/up/":
       newUrl = "/up";
       break;
-    // case "/home/academy/":
-    //   newUrl = "/beije-talent-academy";
-    //   break;
+    case "/home/academy/":
+      newUrl = "/people-first-talent-academy";
+      break;
     case "/team-people-first":
       newUrl = "/community";
       break;

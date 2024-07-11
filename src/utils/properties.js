@@ -96,11 +96,11 @@ export const menu_voices = [
     link_to: "consulting",
     key_link: "consulting"
   },
-  // {
-  //   name: "academy",
-  //   link_to: "beije-talent-academy",
-  //   key_link: "academy"
-  // },
+  {
+    name: "academy",
+    link_to: "people-first-talent-academy",
+    key_link: "academy"
+  },
   {
     name: "up",
     link_to: "up",

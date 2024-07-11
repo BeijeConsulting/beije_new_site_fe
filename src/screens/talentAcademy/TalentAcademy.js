@@ -135,7 +135,7 @@ const TalentAcademy = (props) => {
           ref={secondContainerRef}
         >
           {/* Second section */}
-          <Container
+          {/* <Container
             component={"section"}
             maxWidth={"false"}
             className={"padding-0"}
@@ -154,10 +154,10 @@ const TalentAcademy = (props) => {
                 classNameIcon={"youtube-videos-icon-primary"}
               />
             </CustomBanner>
-          </Container>
+          </Container> */}
 
           {/* Third section */}
-          <Container
+          {/* <Container
             component={"section"}
             maxWidth={"false"}
             className={"academy-third-section-container paddingX-container-general-pages"}
@@ -190,7 +190,7 @@ const TalentAcademy = (props) => {
               />
             </Box>
 
-          </Container>
+          </Container> */}
 
           {/* Fourth section */}
 
@@ -238,7 +238,7 @@ const TalentAcademy = (props) => {
           </Container>
 
           {/* SECTION CAROUSEL */}
-          <Container
+          {/* <Container
             component={"section"}
             maxWidth={"false"}
             className={"up-fourth-section paddingX-container-general-pages position-relative"}
@@ -273,7 +273,7 @@ const TalentAcademy = (props) => {
                 }
               </Box>
             </Container>
-          </Container>
+          </Container> */}
 
           {/* sixth section form*/}
           <Container
