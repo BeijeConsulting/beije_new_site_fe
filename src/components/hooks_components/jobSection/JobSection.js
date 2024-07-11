@@ -70,10 +70,10 @@ const JobSection = (props) => {
 
     if (!state.showJobs) {
       if (param1.toLowerCase() === "frontend") {
-        response = "/beije-talent-academy/academy-frontend"
+        response = "/people-first-talent-academy/academy-frontend"
       }
       if (param1.toLowerCase() === "backend") {
-        response = "/beije-talent-academy/academy-backend"
+        response = "/people-first-talent-academy/academy-backend"
       }
     }
     else {

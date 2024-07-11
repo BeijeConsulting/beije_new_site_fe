@@ -18,7 +18,7 @@ import ErrorPage from "./screens/ErrorPage";
 import Events from "./screens/events/Events";
 import EventsDetail from "./screens/events/EventsDetail";
 import Manifest from "./screens/manifest/Manifest";
-// import AcademyPage from "./screens/academyDetail/academyPage/AcademyPage";
+import AcademyPage from "./screens/academyDetail/academyPage/AcademyPage";
 import Whistleblowing from "./screens/whistleblowing/Whistleblowing";
 import Report from "./screens/whistleblowing/Report";
 import NewReport from "./screens/whistleblowing/NewReport";
@@ -45,10 +45,10 @@ export default [
         path: "people-first-talent-academy",
         element: <TalentAcademy />
       },
-      // {
-      //   path: "people-first-talent-academy/academy",
-      //   element: <AcademyPage />
-      // },
+      {
+        path: "people-first-talent-academy/academy",
+        element: <AcademyPage />
+      },
       // {
       //   path: "beije-talent-academy/:permalink",
       //   element: <CaseStudiesDetail />

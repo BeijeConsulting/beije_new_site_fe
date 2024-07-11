@@ -171,7 +171,7 @@ const TalentAcademy = (props) => {
                   return (
                     <div key={item.id}>
                       <CustomLink
-                        linkTo={`/beije-talent-academy/academy?id=${item.id}`}
+                        linkTo={`/people-first-talent-academy/academy?id=${item.id}`}
                         content={t(item.academy_name)}
                         typeLink={"detail-academy"}
                       />
