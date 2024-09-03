@@ -66,13 +66,13 @@ const IntroSectionImgTxt = (props) => {
 
         {props.children}
 
-        <Box className="intro-section-download-container">
+        {/* <Box className="intro-section-download-container">
           <DownloadBtn
             content={t("btn.downloadPwd")}
             bgIconDownload={props.bgIconDownload}
             typeSection={props.typeSection}
           />
-        </Box>
+        </Box> */}
 
       </div>
     </Box >
