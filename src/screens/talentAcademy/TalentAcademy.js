@@ -28,7 +28,7 @@ import { isEmpty } from "lodash";
 import { useState } from "react";
 import ApiCalls from "../../services/api/ApiCalls";
 
- const TalentAcademy = (props) => {
+const TalentAcademy = (props) => {
   const { t } = useTranslation();
   const secondContainerRef = useRef();
   const formContainer = useRef();
@@ -75,14 +75,14 @@ import ApiCalls from "../../services/api/ApiCalls";
     });
   }
   const getData = async () => {
-    let caseStudiesResponse = await ApiCalls.caseStudies_getList(props.languageDuck.currentLanguage, 2);
-    let academiesResponse = await ApiCalls.academies_getList()
+    let caseStudiesResponse = await ApiCalls.caseStudies_getList(props.languageDuck.currentLanguage, 'academy');
+    let academiesResponse = await ApiCalls.academies_getList({ 'Accept-Language': props.languageDuck.currentLanguage })
     setState({
       caseStudiesResponse: caseStudiesResponse,
       academiesData: academiesResponse,
     })
   }
-  
+
   return (
     <>
       <Helmet>
@@ -107,7 +107,7 @@ import ApiCalls from "../../services/api/ApiCalls";
             classNameBgImgDesktop="intro-section-img-academy"
             classNameBgImgMobile="intro-section-img-academy"
             bgIconDownload="download-btn-icon-academy"
-            sectionName="Beije talent academy"
+            sectionName="People First talent academy"
             sectionTitle={t("academy.firstSection.title")}
             callback={scrollToSection}
             download={"academy"}
@@ -141,7 +141,7 @@ import ApiCalls from "../../services/api/ApiCalls";
             className={"padding-0"}
           >
             <CustomBanner
-              ariaLabel={"Icon button link to youtube Beije channel"}
+              ariaLabel={"Icon button link to youtube People First channel"}
               title={t("academy.secondSection.title")}
               text={t("academy.secondSection.description1")}
               enphasisTxt={t("academy.secondSection.description2")}
@@ -172,10 +172,10 @@ import ApiCalls from "../../services/api/ApiCalls";
                     <div key={item.id}>
                       <CustomLink
                         linkTo={`/beije-talent-academy/academy?id=${item.id}`}
-                        content={t(item.languages[0].academy_name)}
+                        content={t(item.academy_name)}
                         typeLink={"detail-academy"}
                       />
-                  </div>
+                    </div>
                   )
                 }) : null}
               </div>
@@ -260,7 +260,7 @@ import ApiCalls from "../../services/api/ApiCalls";
                 }
                 {
                   state.caseStudiesResponse && !isEmpty(state.caseStudiesResponse) &&
-                  < CustomCarousel
+                  <CustomCarousel
                     academyCarousel
                     obj={state.caseStudiesResponse}
                     classNameSwiperContainer={"swiper-container-up"}

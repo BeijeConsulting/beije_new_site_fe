@@ -27,7 +27,7 @@ const Manifest = (props) => {
   const logo3d = useRef();
 
   const match1024 = useMediaQuery('(min-width:1024px)');
-  const match1200 = useMediaQuery('(min-width:1200px)');
+  // const match1200 = useMediaQuery('(min-width:1200px)');
   gsap.registerPlugin(ScrollTrigger);
   const { t } = useTranslation();
   const { lang } = useParams();
@@ -120,29 +120,21 @@ const Manifest = (props) => {
               <div className="manifest_title_page_container">
                 <img
                   src={logo_written_white}
-                  width={247}
-                  height={98}
+                  width={310}
+                  height={110}
                 />
                 <div dangerouslySetInnerHTML={{ __html: t(`manifest.intro`) }} />
               </div>
-              {
-                match1200 &&
-                <div className="manifest_logo_3d_container" ref={logo3d}>
-                  <Logo3d />
-                </div>
-              }
             </div>
           </div>
         </section>
 
-        {
-          !match1200 &&
-          <section>
-            <div className="manifest_logo_3d_container_mobile" ref={logo3d}>
-              <Logo3d />
-            </div>
-          </section>
-        }
+
+        <section>
+          <div className="manifest_logo_3d_container_mobile" ref={logo3d}>
+            <Logo3d />
+          </div>
+        </section>
 
 
         <section>

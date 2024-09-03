@@ -17,7 +17,7 @@ import { initCurrentPage, setCurrentPage } from "../../redux/ducks/currentPageDu
 import { initVisibilityNavbar, setVisibilityNavbar } from "../../redux/ducks/showNavbarTopDuck";
 
 
-import { addIcon, advantagesBeije, benefitsTeam, growthPaths, logo_written_dark, minusIcon, posterVideoCareer, xIcon } from "../../utils/properties";
+import { addIcon, advantagesBeije, benefitsTeam, growthPaths, logo_written_dark, minusIcon, xIcon } from "../../utils/properties";
 
 // Components
 import CustomButton from "../../components/functional_components/ui/customButton/CustomButton";
@@ -114,7 +114,7 @@ const Career = (props) => {
             </div>
           </div>
 
-          <div className="career_video_container">
+          {/* <div className="career_video_container">
             <video
               // width="100%"
               // height="290"
@@ -129,7 +129,7 @@ const Career = (props) => {
                 type="video/mp4" />
 
             </video>
-          </div>
+          </div> */}
 
         </section>
 
@@ -223,7 +223,7 @@ const Career = (props) => {
 
             <img
               src="https://beije-people-first.s3.eu-south-1.amazonaws.com/site/images/logos/logo_short_white.svg"
-              alt="logo Beije People First"
+              alt="logo People First"
             />
             <div dangerouslySetInnerHTML={{ __html: t(`career.growth_paths.title`) }} />
 

@@ -60,7 +60,7 @@ const CustomCarousel = (props) => {
         onMouseMove={tiltEffect()}
         style={{
           backgroundColor: (props.upCarousel || props.academyCarousel) ? item.background_color : "",
-          backgroundImage: props.homeCarousel ? `url(${item.pictureClassName})` : "none",
+          backgroundImage: props.homeCarousel ? `url(${item.picture_class_name})` : "none",
           border: props.homeCarousel ? "1px solid red" : "none"
         }}
         onClick={(props.upCarousel || props.academyCarousel) ? sendToPage(item.permalink) : null}
@@ -109,10 +109,10 @@ const CustomCarousel = (props) => {
   const sendToPage = (param1) => () => {
     let response = "";
     if (props.upCarousel) {
-      response = `/beije-up/${param1}`
+      response = `/up/${param1}`
     }
     else if (props.academyCarousel) {
-      response = `/beije-talent-academy/${param1}`
+      response = `/talent-academy/${param1}`
     }
     navigate(response)
   }

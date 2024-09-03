@@ -6,7 +6,7 @@ import NoMatch from "./screens/NoMatch";
 import HomeLayout from "./layout/HomeLayout";
 import Up from "./screens/up/Up";
 import Consulting from "./screens/consulting/Consulting";
-import TalentAcademy from "./screens/talentAcademy/TalentAcademy";
+// import TalentAcademy from "./screens/talentAcademy/TalentAcademy";
 import Blog from "./screens/blog/Blog";
 import Career from "./screens/career/Career"
 import Contacts from "./screens/contacts/Contacts";
@@ -18,7 +18,7 @@ import ErrorPage from "./screens/ErrorPage";
 import Events from "./screens/events/Events";
 import EventsDetail from "./screens/events/EventsDetail";
 import Manifest from "./screens/manifest/Manifest";
-import AcademyPage from "./screens/academyDetail/academyPage/AcademyPage";
+// import AcademyPage from "./screens/academyDetail/academyPage/AcademyPage";
 import Whistleblowing from "./screens/whistleblowing/Whistleblowing";
 import Report from "./screens/whistleblowing/Report";
 import NewReport from "./screens/whistleblowing/NewReport";
@@ -30,29 +30,29 @@ export default [
     children: [
       { index: true, element: <Home /> },
       {
-        path: "beije-consulting",
+        path: "consulting",
         element: <Consulting />
       },
       {
-        path: "beije-up",
+        path: "up",
         element: <Up />
       },
       {
-        path: "beije-up/:permalink",
+        path: "up/:permalink",
         element: <CaseStudiesDetail />
       },
-      {
-        path: "beije-talent-academy",
-        element: <TalentAcademy />
-      },
-      {
-        path: "beije-talent-academy/academy",
-        element: <AcademyPage />
-      },
-      {
-        path: "beije-talent-academy/:permalink",
-        element: <CaseStudiesDetail />
-      },
+      // {
+      //   path: "beije-talent-academy",
+      //   element: <TalentAcademy />
+      // },
+      // {
+      //   path: "beije-talent-academy/academy",
+      //   element: <AcademyPage />
+      // },
+      // {
+      //   path: "beije-talent-academy/:permalink",
+      //   element: <CaseStudiesDetail />
+      // },
       {
         path: "blog",
         element: <Blog />
@@ -138,24 +138,24 @@ function RedirectUrlNewSite({ children }) {
   let newUrl = "";
   switch (oldUrl.replace(/\/it|\/en/g, "")) {
     case "/home/consulting/":
-      newUrl = "/beije-consulting";
+      newUrl = "/consulting";
       break;
-    case "/portfolio-articoli/academy-java/":
-      newUrl = "/beije-talent-academy/academy-backend";
-      break;
-    case "/portfolio-articoli/stage-javascript/":
-      newUrl = "/beije-talent-academy/academy-frontend";
-      break;
+    // case "/portfolio-articoli/academy-java/":
+    //   newUrl = "/beije-talent-academy/academy-backend";
+    //   break;
+    // case "/portfolio-articoli/stage-javascript/":
+    //   newUrl = "/beije-talent-academy/academy-frontend";
+    //   break;
     case "/home/community/":
       newUrl = "/";
       break;
     case "/home/up/":
-      newUrl = "/beije-up";
+      newUrl = "/up";
       break;
-    case "/home/academy/":
-      newUrl = "/beije-talent-academy";
-      break;
-    case "/team-beije":
+    // case "/home/academy/":
+    //   newUrl = "/beije-talent-academy";
+    //   break;
+    case "/team-people-first":
       newUrl = "/community";
       break;
     default:

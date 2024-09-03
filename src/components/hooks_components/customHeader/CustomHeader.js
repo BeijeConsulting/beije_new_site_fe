@@ -28,7 +28,7 @@ const CustomHeader = (props) => {
       >
         <img
           src={props.logoDuck.logo}
-          alt="Logo Beije People First"
+          alt="Logo People First"
           className="header-container-logo"
         />
       </a>

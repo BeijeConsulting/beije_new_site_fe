@@ -48,7 +48,7 @@ const Up = (props) => {
   }, [props.languageDuck.currentLanguage])
 
   const getCaseStudiesData = async () => {
-    let caseStudiesResponse = await ApiCalls.caseStudies_getList(props.languageDuck.currentLanguage, 1);
+    let caseStudiesResponse = await ApiCalls.caseStudies_getList(props.languageDuck.currentLanguage, 'project');
 
     setState({
       ...state,
@@ -272,7 +272,7 @@ const Up = (props) => {
               className={"up-sixth-section-box-form"}
             >
               <CustomForm
-                titlePage="Richiesta informazioni - sito Beije Up"
+                titlePage="Richiesta informazioni - sito People First Up"
                 formTitle={t("form.title.info")}
               />
             </Box>
