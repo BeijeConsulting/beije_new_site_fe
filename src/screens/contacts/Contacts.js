@@ -67,8 +67,8 @@ const Contacts = (props) => {
                 <p>Lissone (MB)</p>
 
                 <p>{t("contactInfo.contact")}</p>
-                <p>job@people-first.team</p>
-                <p>commerciale@people-first.team</p>
+                <p>job@peoplefirst.ws</p>
+                <p>commerciale@peoplefirst.ws</p>
               </Box>
 
               <Box

@@ -72,7 +72,7 @@ const CookiePolicies_en = () => {
 
       <p ><strong><span >YOUR RIGHTS</span></strong></p>
       <p ><span >You have the right at any time to exercise the rights recognised by Articles 15 et seq. of the GDPR and, in particular, to obtain a copy of the processed data, their updating, information on their origin, the purpose and method of processing, their rectification or integration, their cancellation, transformation into anonymous form or blocking for processing in violation of the law and to oppose for legitimate reasons the processing.</span></p>
-      <p ><span >To exercise these rights, you can contact the Data Controller at the following e-mail address:&nbsp;</span><a href="mailto:job@people-first.team"><span >job@people-first.team</span></a><span >.</span></p><br />
+      <p ><span >To exercise these rights, you can contact the Data Controller at the following e-mail address:&nbsp;</span><a href="mailto:job@peoplefirst.ws"><span >job@peoplefirst.ws</span></a><span >.</span></p><br />
 
       <p ><strong><span >HOW TO DISABLE/DELETE COOKIES THROUGH THE BROWSER CONFIGURATION</span></strong></p>
       <p ><span >Below, to help you manage your preferences, we report the procedures for disabling/deleting cookies through the main browsers.</span></p>
