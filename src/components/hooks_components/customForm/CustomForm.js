@@ -230,9 +230,7 @@ const CustomForm = (props) => {
           <p>Lissone (MB)</p>
 
           <p>{t("contactInfo.contact")}</p>
-          <p>job@beije.it</p>
-          <p>commerciale@beije.it</p>
-
+          <p>selezione@people-first.team</p>
         </Box>
       </Grid>
       <Grid

@@ -58,7 +58,8 @@ const BlogCard = (props) => {
         {
           !props.community &&
           <div className={"blog-card-text-postedby"}>
-            <FontAwesomeIcon icon={clock} className={"blog-card-clock-icon"} />{props.postedby?.length > 0 ? t("blog.postedBy") : t("blog.posted")} {props.postedby} {t("blog.postedOn")} {props.posted}          </div>
+            <FontAwesomeIcon icon={clock} className={"blog-card-clock-icon"} />{props.postedby?.length > 0 ? t("blog.postedBy") : t("blog.posted")} {props.postedby} {t("blog.postedOn")} {props.posted}
+          </div>
         }
 
       </Container>

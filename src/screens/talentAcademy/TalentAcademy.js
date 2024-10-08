@@ -107,7 +107,7 @@ const TalentAcademy = (props) => {
             classNameBgImgDesktop="intro-section-img-academy"
             classNameBgImgMobile="intro-section-img-academy"
             bgIconDownload="download-btn-icon-academy"
-            sectionName="Beije talent academy"
+            sectionName="People First talent academy"
             sectionTitle={t("academy.firstSection.title")}
             callback={scrollToSection}
             download={"academy"}
@@ -135,13 +135,13 @@ const TalentAcademy = (props) => {
           ref={secondContainerRef}
         >
           {/* Second section */}
-          <Container
+          {/* <Container
             component={"section"}
             maxWidth={"false"}
             className={"padding-0"}
           >
             <CustomBanner
-              ariaLabel={"Icon button link to youtube Beije channel"}
+              ariaLabel={"Icon button link to youtube People First channel"}
               title={t("academy.secondSection.title")}
               text={t("academy.secondSection.description1")}
               enphasisTxt={t("academy.secondSection.description2")}
@@ -154,7 +154,7 @@ const TalentAcademy = (props) => {
                 classNameIcon={"youtube-videos-icon-primary"}
               />
             </CustomBanner>
-          </Container>
+          </Container> */}
 
           {/* Third section */}
           <Container
@@ -171,7 +171,7 @@ const TalentAcademy = (props) => {
                   return (
                     <div key={item.id}>
                       <CustomLink
-                        linkTo={`/beije-talent-academy/academy?id=${item.id}`}
+                        linkTo={`/people-first-talent-academy/academy?id=${item.id}`}
                         content={t(item.academy_name)}
                         typeLink={"detail-academy"}
                       />
@@ -238,7 +238,7 @@ const TalentAcademy = (props) => {
           </Container>
 
           {/* SECTION CAROUSEL */}
-          <Container
+          {/* <Container
             component={"section"}
             maxWidth={"false"}
             className={"up-fourth-section paddingX-container-general-pages position-relative"}
@@ -260,7 +260,7 @@ const TalentAcademy = (props) => {
                 }
                 {
                   state.caseStudiesResponse && !isEmpty(state.caseStudiesResponse) &&
-                  < CustomCarousel
+                  <CustomCarousel
                     academyCarousel
                     obj={state.caseStudiesResponse}
                     classNameSwiperContainer={"swiper-container-up"}
@@ -273,7 +273,7 @@ const TalentAcademy = (props) => {
                 }
               </Box>
             </Container>
-          </Container>
+          </Container> */}
 
           {/* sixth section form*/}
           <Container

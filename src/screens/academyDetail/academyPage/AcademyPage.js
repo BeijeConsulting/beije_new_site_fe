@@ -79,6 +79,7 @@ const AcademyPage = (props) => {
 
     const response = await ApiCalls.academies_getListDetail(pageId, { 'Accept-Language': currentLanguage });
     // const item = response.find(obj => obj.id === parseInt(pageId));
+
     setState({
       academyData: response
     })
@@ -146,7 +147,7 @@ const AcademyPage = (props) => {
 
           <IntroSectionTxtInfoGraphic
             typeSection="academy"
-            sectionName="Beije talent academy"
+            sectionName="People First talent academy"
             sectionTitle={t(state.academyData.title)}
             callback={scrollToSection}
             paragraph1Title={t(state.academyData.subtitle)}

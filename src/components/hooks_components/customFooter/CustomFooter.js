@@ -13,7 +13,8 @@ import './CustomFooter.scss'
 
 // Constants and functions
 import { logo_primary_light, logo_secondary_light, menu_voices } from "../../../utils/properties";
-import logo_parita_di_genere from '../../../assets/images/logo_parita_di_genere.png'
+import logo_parita_di_genere from '../../../assets/images/UNI.svg'
+import happyindex_at_work from '../../../assets/images/happyindex_at_work_75px.svg';
 
 // Components
 import SwitchLang from "../switchLang/SwitchLang"
@@ -62,7 +63,7 @@ const CustomFooter = (props) => {
           >
             <img
               src={logo_primary_light}
-              alt="Logo Beije People First"
+              alt="Logo People First"
               className="footer-container-logo-desktop" />
           </Link>
         </div>
@@ -72,7 +73,7 @@ const CustomFooter = (props) => {
           >
             <img
               src={logo_secondary_light}
-              alt="Logo Beije People First"
+              alt="Logo People First"
               className="footer-container-logo-mobile" />
           </Link>
         </div>
@@ -159,14 +160,21 @@ const CustomFooter = (props) => {
           >
             {t("footer.paritaGenere")}
           </p>
-          <img
-            src={logo_parita_di_genere}
-            alt="Logo Paritá di Genere"
-            className="footer-container-logo-parita-desktop"
-            onClick={() => navigate('blog/people-first-srl-si-certifica-per-la-parit-di-genere')}
-          />
+          <div>
+            <img
+              src={happyindex_at_work}
+              alt="Happy index"
+              className="footer-container-logo-parita-desktop"
+            />
+            <img
+              src={logo_parita_di_genere}
+              alt="Logo Paritá di Genere"
+              className="footer-container-logo-parita-desktop"
+              onClick={() => navigate('blog/people-first-srl-si-certifica-per-la-parit-di-genere')}
+              style={{ marginLeft: '10px', cursor: 'pointer' }}
+            />
+          </div>
         </div>
-
       </div>
 
       <div

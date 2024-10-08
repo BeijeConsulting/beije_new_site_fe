@@ -66,7 +66,7 @@ const CookiePolicies_it = () => {
 
         <p><strong>I TUOI DIRITTI</strong></p>
         <p>Hai la facolt&agrave; in qualsiasi momento di esercitare i diritti riconosciuti dagli artt. 15 e ss. del GDPR e, in particolare, di ottenere copia dei dati trattati, il loro aggiornamento, informazioni circa la loro origine, la finalit&agrave; e la modalit&agrave; del trattamento, la loro rettifica o integrazione, la loro cancellazione, la trasformazione in forma anonima o il blocco per i trattamenti in violazione di legge e di opporsi per motivi legittimi al trattamento.</p>
-        <p>Per esercitare tali diritti, puoi rivolgerti al Titolare del trattamento contattabile al seguente indirizzo e-mail:&nbsp;<a href="mailto:job@beije.it">job@beije.it</a>.</p><br />
+        <p>Per esercitare tali diritti, puoi rivolgerti al Titolare del trattamento contattabile al seguente indirizzo e-mail:&nbsp;<a href="mailto:job@people-first.team">job@people-first.team</a>.</p><br />
 
         <p><strong>COME DISABILITARE/CANCELLARE I COOKIE MEDIANTE LA CONFIGURAZIONE DEL BROWSER</strong></p>
         <p>Di seguito, per supportarti nella gestione delle tue preferenze, riportiamo le procedure per disabilitare/cancellare i cookie attraverso i principali browser.</p>

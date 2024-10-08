@@ -109,10 +109,10 @@ const CustomCarousel = (props) => {
   const sendToPage = (param1) => () => {
     let response = "";
     if (props.upCarousel) {
-      response = `/beije-up/${param1}`
+      response = `/up/${param1}`
     }
     else if (props.academyCarousel) {
-      response = `/beije-talent-academy/${param1}`
+      response = `/talent-academy/${param1}`
     }
     navigate(response)
   }
